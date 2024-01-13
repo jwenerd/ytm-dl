@@ -1,0 +1,9 @@
+lib/
+output/
+__pycache__
+
+pyvenv.cfg
+bin
+
+oauth.json
+.DS_Store
