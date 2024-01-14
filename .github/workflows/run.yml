@@ -1,0 +1,48 @@
+name: run
+
+on:
+  push:
+    branches: main
+  schedule:
+    - cron:  '20 */3 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Secrets 🔒 🤫
+        env:
+          YTM_OAUTH: ${{ secrets.YTM_OAUTH }}
+        run: |
+          echo "$YTM_OAUTH" > oauth.json
+      - name: Checkout Output
+        run: |
+          git fetch origin
+          git checkout origin/main-output output
+      - name: Run 🎶
+        run: |
+          python ./ytm-dl.py
+      - name: Commit Changes
+        env:
+          GITHUB_JOB: ${{ github.job }}
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "<>"
+          cd output/
+          git checkout main-output
+          git add -f .
+          git diff-index --quiet HEAD || git commit --message="🎵 🤠 job=$GITHUB_JOB run_number=$GITHUB_RUN_NUMBER"
+          git push origin main-output
