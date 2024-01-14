@@ -1,4 +1,11 @@
 title,artist,album,inLibrary,likeStatus,played,duration,duration_seconds,link
+Brown Eyed Girl,Van Morrison,Blowin' Your Mind!,False,INDIFFERENT,Today,3:04,184,https://music.youtube.com/watch?v=yZ-VUnIehi8
+Summer Breeze,Seals and Crofts,Summer Breeze,False,INDIFFERENT,Today,3:26,206,https://music.youtube.com/watch?v=ywL6tMQdG4c
+Escape (The Pina Colada Song),Rupert Holmes,Partners In Crime,False,INDIFFERENT,Today,4:37,277,https://music.youtube.com/watch?v=Xb6l38eP-4w
+Superstition,Stevie Wonder,Talking Book,False,INDIFFERENT,Today,4:28,268,https://music.youtube.com/watch?v=egqv1mtos6A
+Southern Nights,Glen Campbell,Southern Nights,False,LIKE,Today,3:01,181,https://music.youtube.com/watch?v=X6-sU7pVJ3k
+Dancing in the Moonlight,King Harvest,Dancing in the Moonlight,False,INDIFFERENT,Today,3:02,182,https://music.youtube.com/watch?v=0eHBLHVHjWg
+This Must Be the Place (Naive Melody) [2005 Remaster],Talking Heads,Speaking in Tongues (Deluxe Version),False,INDIFFERENT,Today,4:57,297,https://music.youtube.com/watch?v=fsccjsW8bSY
 Brandy (You're a Fine Girl),Looking Glass,Looking Glass,False,INDIFFERENT,Today,3:07,187,https://music.youtube.com/watch?v=CFhFyvk0yS8
 Stuck In The Middle With You,Stealers Wheel,Stealers Wheel,False,INDIFFERENT,Today,3:29,209,https://music.youtube.com/watch?v=ln7Vn_WKkWU
 You Make My Dreams (Come True),Daryl Hall & John Oates,Voices,False,INDIFFERENT,Today,3:11,191,https://music.youtube.com/watch?v=E4CZuj7solw
@@ -78,7 +85,7 @@ Get Up And Go,Tom Paxton,Where Have All The Flowers Gone: The Songs Of Pete Seeg
 Good Time,Esther Rose,How Many Times,False,INDIFFERENT,Yesterday,3:15,195,https://music.youtube.com/watch?v=OC9nvO2Y94Q
 My Melancholy Baby,ProleteR,Rookie EP,False,INDIFFERENT,Yesterday,3:57,237,https://music.youtube.com/watch?v=_59V9y317vg
 Under the Double Eagle,Tommy Allsup & The Raiders,American County Pioneers,,LIKE,Yesterday,2:20,140,https://music.youtube.com/watch?v=Sn5M99TCvUE
-Sweet Jane (Full Length Version) [2015 Remastered],The Velvet Underground,Loaded,False,INDIFFERENT,Yesterday,4:07,247,https://music.youtube.com/watch?v=hUcwNwMKAWs
+Sweet Jane (Full Length Version) (Full Length Version; 2015 Remaster),The Velvet Underground,Loaded,False,INDIFFERENT,Yesterday,4:07,247,https://music.youtube.com/watch?v=hUcwNwMKAWs
 Richland Woman Blues,Muireann Bradley,Richland Woman Blues,False,INDIFFERENT,Yesterday,4:27,267,https://music.youtube.com/watch?v=ktmO8YG29pA
 Something In The Water,Pokey LaFarge,Something In The Water,False,INDIFFERENT,Yesterday,3:24,204,https://music.youtube.com/watch?v=eOJIBXMPcf0
 Are You Washed in the Blood?,Ernest V Stoneman & His Dixie Mountaineers,American County Pioneers,,LIKE,Yesterday,3:21,201,https://music.youtube.com/watch?v=5HyKrmybEMU
@@ -192,10 +199,3 @@ Passing Through,Cisco Houston,"The Folkways Years, 1944-1961",False,INDIFFERENT,
 Bridges,Bill Staines,Bridges,False,INDIFFERENT,Last week,2:59,179,https://music.youtube.com/watch?v=nNd3hIl1sfM
 The Farmer is the Man (Who Feeds Us All),Pete Seeger,American Industrial Ballads,False,INDIFFERENT,Last week,1:43,103,https://music.youtube.com/watch?v=_XFojiOqB3o
 Whistle Punk Pete,Buzz Martin,Where There Walks a Logger There Walks a Man/A Loggers Reward,False,INDIFFERENT,Last week,2:23,143,https://music.youtube.com/watch?v=U_Th3zHf6a0
-Subterranean Homesick Blues,Tim O'Brien,Red On Blonde,,INDIFFERENT,Last week,2:42,162,https://music.youtube.com/watch?v=Uj5lk8mpxpc
-River,Bill Staines,The Whistle of the Jay,False,INDIFFERENT,Last week,4:30,270,https://music.youtube.com/watch?v=_nKjO0lvoLc
-Ettrick,"Archie Fisher, Garnet Rogers",The Flooers o' the Forest,False,INDIFFERENT,Last week,2:18,138,https://music.youtube.com/watch?v=e2TP-8HlsFM
-God And Man,"Sonny Terry, Brownie McGhee",Sonny & Brownie,False,INDIFFERENT,Last week,3:51,231,https://music.youtube.com/watch?v=bSEp9MiMqVw
-Winter Cows,John Gorka,I Know,False,INDIFFERENT,Last week,2:21,141,https://music.youtube.com/watch?v=rgtYIKpNSak
-Strong Winds and Widow Makers,Buzz Martin,Where There Walks a Logger There Walks a Man/A Loggers Reward,False,INDIFFERENT,Last week,2:34,154,https://music.youtube.com/watch?v=qbh1mmKyqII
-Prairie Love Song,"Jay Ungar, Molly Mason",The Lovers' Waltz,False,INDIFFERENT,Last week,3:02,182,https://music.youtube.com/watch?v=elk00X2-Uk0
