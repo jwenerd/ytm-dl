@@ -1,5 +1,8 @@
 from ytmusicapi import YTMusic
-ytmusic = YTMusic("oauth.json")
+
+def get_api_client():
+	ytmusic = YTMusic("oauth.json")
+	return ytmusic
 
 def get_artists_value(artists_lists):
 	artists = list(map(lambda t: t['name'], artists_lists))
@@ -32,7 +35,7 @@ def map_playlist_songs(songs, otherCols = []):
 
 def map_generic(items, cols):
 	if 'browseId' in cols:
-		cols.append('browseId')
+		cols.append('link')
 	rows = [cols]
 	for item in items:
 		row = []
