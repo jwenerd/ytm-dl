@@ -28,10 +28,10 @@ def write_files(name, rows, meta = {}):
 	with open('output/.' + name + '_meta', 'w', newline='') as metafile:
 		metafile.writelines("fetched=" + str(len(rows) - 1) + "\n")
 		metafile.writelines("file_created=" + datetime.now().isoformat() + "\n")
-		for key in list(meta.keys()):
+		keys = list(meta.keys())
+		keys.sort()
+		for key in keys:
 			value = meta.get(key,'')
-			if isinstance(value,list) or isinstance(value,dict):
-				continue 
 			metafile.writelines(key + "=" + str(value) + "\n")
 
 	print('wrote ' + name + ' with ' + str(len(rows) - 1) + ' rows')

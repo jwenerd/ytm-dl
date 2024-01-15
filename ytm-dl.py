@@ -1,75 +1,57 @@
 import sys
-from src.api import get_api_client, map_playlist_songs, map_generic
+from src.api import get_api_client
 from src.file import write_files
+from src.mapping import Mapping
 import concurrent.futures
 import threading
 
 thread_local = threading.local()
 
-def ytmusic():
+def ytmusic_to_file(file):
+	api_method = 'get_' + file
 	if not hasattr(thread_local, "ytmusic"):
 			thread_local.ytmusic = get_api_client()
-	return thread_local.ytmusic
 
-def write_liked():
-	print('start liked')
-	liked_songs = ytmusic().get_liked_songs(limit=2500)
-	rows = map_playlist_songs(liked_songs['tracks'])
-	write_files('liked', rows, liked_songs)
-	return 'liked'
+	api_args = {
+		'get_history': {},
+		'get_liked_songs': { 'limit': 2500 }
+	}.get(api_method, { 'limit': 2500, 'order': 'recently_added' })
+	
+	api_fn = getattr(thread_local.ytmusic, api_method)
+	response = api_fn(**api_args)
 
-def write_recent_songs():
-	print('start recent')
-	recent_songs = ytmusic().get_library_songs(limit=2500, order='recently_added')
-	rows = map_playlist_songs(recent_songs)
-	write_files('recent_songs', rows)
-	return 'recent_songs'
+	meta = {}
+	if isinstance(response, dict) and 'tracks' in response.keys():
+		meta = {}
+		for k in list(response.keys()):
+			v = response[k]
+			if (not isinstance(v,list) and not isinstance(v,dict)):
+				meta[k]=v
 
-def write_history():
-	print('start history')
-	history = ytmusic().get_history()
-	rows = map_playlist_songs(history, ['inLibrary', 'likeStatus', 'played'])
-	write_files('history', rows)
-	return 'history'
+		records = response['tracks']
+	else:
+		records = response
+		
 
-def write_subscribed_artists():
-	print('start sub artist')
-	artists = ytmusic().get_library_subscriptions(limit=2500, order='recently_added')
-	rows = map_generic(artists, ['artist', 'browseId'])
-	write_files('subscribed_artists', rows)
-	return 'subscribed_artists'
+	rows = Mapping(file, records).get_rows()
+	write_files(file, rows, meta)
 
-def write_library_artists():
-	print('start lib artists')
-	artists = ytmusic().get_library_artists(limit=2500, order='recently_added')
-	rows = map_generic(artists, ['artist', 'browseId'])
-	write_files('library_artists', rows)
-	return 'library_artists'
-
-def write_library_albums():
-	print('start lib albums')
-	albums = ytmusic().get_library_albums(limit=2500, order='recently_added')
-	rows = map_generic(albums, ['artists', 'title', 'type', 'year', 'browseId'])
-	write_files('library_albums', rows)
-	return 'library_albums'
-
-
-def main(option):
+def do_updates(option):
 	if not option in ['all', 'frequent']:
 		print('Option must be all or frequent')
 		print('  given: ' + str(option))
 		sys.exit(1)
 
-	fns = [write_liked, write_recent_songs, write_history]
+	files = ['liked_songs', 'library_songs', 'history']
 	if option == 'all':
-		fns = fns +  [write_subscribed_artists, write_library_artists, write_library_albums]
+		files = files +  ['library_subscriptions', 'library_artists', 'library_albums']
 
 	with concurrent.futures.ThreadPoolExecutor() as executor:
-		results = list(executor.map(lambda x: x(), fns))
-	print(results)
+		list(executor.map(lambda file: ytmusic_to_file(file), files))
 
-option = ''
-if len(sys.argv) >= 2:
-	option =sys. argv[1]
+if __name__ == "__main__":
+		option = ''
+		if len(sys.argv) >= 2:
+			option = sys.argv[1]
 
-main(option)
+		do_updates(option)
