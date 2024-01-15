@@ -1,3 +1,4 @@
+from sys import argv
 from src.api import ytmusic, map_playlist_songs, map_generic
 from src.file import write_files
 
@@ -32,12 +33,21 @@ def write_library_albums():
 	write_files('library_albums', rows)
 
 
-def main():
-	write_liked()
-	write_recent_songs()
-	write_history()
-	write_subscribed_artists()
-	write_library_artists()
-	write_library_albums()
+def main(option):
+	if option in ['all', 'frequent']:
+		write_liked()
+		write_recent_songs()
+		write_history()
+	if option in ['all']:
+		write_subscribed_artists()
+		write_library_artists()
+		write_library_albums()
+	if not option in ['all', 'frequent']:
+		print('Option must be all or frequent')
+		print('  given: ' + str(option))
 
-main()
+option = ''
+if len(argv) >= 2:
+	option = argv[1]
+
+main(option)

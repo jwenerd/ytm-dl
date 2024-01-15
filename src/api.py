@@ -2,7 +2,9 @@ from ytmusicapi import YTMusic
 ytmusic = YTMusic("oauth.json")
 
 def get_artists_value(artists_lists):
-	return ", ".join(list(map(lambda t: t['name'], artists_lists)))
+	artists = list(map(lambda t: t['name'], artists_lists))
+	artists.sort()
+	return ", ".join(artists)
 
 def map_playlist_songs(songs, otherCols = []):
 	headers = ['title', 'artist', 'album'] + otherCols + ['duration', 'duration_seconds', 'link']
@@ -12,9 +14,9 @@ def map_playlist_songs(songs, otherCols = []):
 		artist = get_artists_value(song['artists'])
 		album = song['album']
 		album = album['name'] if (album != None) else ""
-		
+
 		otherVals = [song.get(col, '') for col in otherCols]
-		
+
 		duration = song['duration']
 		duration_s = str(song['duration_seconds'])
 		link = 'https://music.youtube.com/watch?v=' + song['videoId']
