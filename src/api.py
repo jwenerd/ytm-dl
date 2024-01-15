@@ -7,7 +7,7 @@ def get_artists_value(artists_lists):
 	return ", ".join(artists)
 
 def map_playlist_songs(songs, otherCols = []):
-	headers = ['title', 'artist', 'album'] + otherCols + ['duration', 'duration_seconds', 'link']
+	headers = ['title', 'artist', 'album'] + otherCols + ['duration', 'duration_seconds', 'video_id']
 	rows = [headers]
 	for song in songs:
 		title = song['title']
@@ -19,20 +19,20 @@ def map_playlist_songs(songs, otherCols = []):
 
 		duration = song['duration']
 		duration_s = str(song['duration_seconds'])
-		link = 'https://music.youtube.com/watch?v=' + song['videoId']
+		video_id = song['videoId']
 
 
 		row =  []
 		row += [title,artist,album]
 		row += otherVals
-		row += [duration, duration_s,link]
+		row += [duration, duration_s,video_id]
 		rows.append(row)
 
 	return rows
 
 def map_generic(items, cols):
 	if 'browseId' in cols:
-		cols.append('link')
+		cols.append('browseId')
 	rows = [cols]
 	for item in items:
 		row = []

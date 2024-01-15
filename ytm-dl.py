@@ -19,12 +19,12 @@ def write_history():
 
 def write_subscribed_artists():
 	artists = ytmusic.get_library_subscriptions(limit=2500, order='recently_added')
-	rows = map_generic(artists, ['artist', 'subscribers', 'browseId'])
+	rows = map_generic(artists, ['artist', 'browseId'])
 	write_files('subscribed_artists', rows)
 
 def write_library_artists():
 	artists = ytmusic.get_library_artists(limit=2500, order='recently_added')
-	rows = map_generic(artists, ['artist', 'subscribers', 'browseId'])
+	rows = map_generic(artists, ['artist', 'browseId'])
 	write_files('library_artists', rows)
 
 def write_library_albums():

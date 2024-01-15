@@ -7,3 +7,6 @@ bin
 oauth.json
 .DS_Store
 cron.log
+
+output/*
+!output/.keep
