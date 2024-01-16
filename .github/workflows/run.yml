@@ -30,7 +30,6 @@ env:
 permissions:
   contents: write
 
-
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -60,8 +59,6 @@ jobs:
           [[ -n $INPUT_RUN_OPTION ]] && RUN_OPTION=$INPUT_RUN_OPTION
 
           python ./ytm-dl.py $RUN_OPTION
-
-          printenv
       - name: Commit Changes
         run: |
           git config --global user.name "GitHub Actions"
@@ -69,5 +66,13 @@ jobs:
           cd output/
           git checkout main-output
           git add -f .
-          git diff-index --quiet HEAD || git commit --message="🎵 🤠 job=$GITHUB_JOB run_number=$GITHUB_RUN_NUMBER"
-          git push origin main-output
+          rm .keep
+          if ! git diff-index --quiet HEAD; then
+            # get random emojis
+            curl -s https://gist.githubusercontent.com/jwenerd/1679dda15c44739b4781cb946533381b/raw/e3286925ef590cabc6567c0ffaf25d0dfba20f38/emoji_list > emoji_list
+            num_lines=$(wc -l < emoji_list)
+            message=$(awk -v num_lines="$num_lines" 'BEGIN {srand()} {a[NR]=$0} END{for(i=1;i<=3;i++){x=int(rand()*num_lines);print a[x]}}   ' emoji_list | tr '\n' '  ')
+
+            git commit --message="$message"
+            git push origin main-output
+          fi
