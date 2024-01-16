@@ -15,18 +15,6 @@ on:
     - cron: '19 0,6,9,12,15,18,21 * * *'
     - cron: '19 3 * * *'
 
-env:
-  GITHUB_JOB: ${{ github.job }}
-  GITHUB_RUN_NUMBER: ${{ github.run_number }}
-  GITHUB_RUN_ID: ${{ github.run_id }}
-  GITHUB_SHA: ${{ github.sha }}
-  GITHUB_WORKFLOW: ${{ github.workflow }}
-  GITHUB_EVENT_NAME: ${{ github.event_name }}
-  GITHUB_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-  RUN_OPTION: all
-  INPUT_RUN_OPTION: ${{ inputs.run_option }}
-  SCHEDULE_RUN_OPTION: ${{ github.event.schedule != '19 3 * * *' && 'frequent' || 'all' }}
-
 permissions:
   contents: write
 
@@ -53,8 +41,12 @@ jobs:
           git fetch origin
           git checkout origin/main-output output
       - name: Run 🎶
+        env:
+          INPUT_RUN_OPTION: ${{ inputs.run_option }}
+          SCHEDULE_RUN_OPTION: ${{ github.event.schedule != '19 3 * * *' && 'frequent' || 'all' }}
         run: |
           echo '🎶 here we go...'
+          RUN_OPTION='all'
           [[ -n $SCHEDULE_RUN_OPTION ]] && RUN_OPTION=$SCHEDULE_RUN_OPTION
           [[ -n $INPUT_RUN_OPTION ]] && RUN_OPTION=$INPUT_RUN_OPTION
 
@@ -66,7 +58,7 @@ jobs:
           cd output/
           git checkout main-output
           git add -f .
-          rm .keep
+          rm -f .keep
           if ! git diff-index --quiet HEAD; then
             # get random emojis
             curl -s https://gist.githubusercontent.com/jwenerd/1679dda15c44739b4781cb946533381b/raw/e3286925ef590cabc6567c0ffaf25d0dfba20f38/emoji_list > emoji_list
