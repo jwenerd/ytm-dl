@@ -50,7 +50,7 @@ jobs:
           [[ -n $SCHEDULE_RUN_OPTION ]] && RUN_OPTION=$SCHEDULE_RUN_OPTION
           [[ -n $INPUT_RUN_OPTION ]] && RUN_OPTION=$INPUT_RUN_OPTION
 
-          python ./ytm-dl.py $RUN_OPTION
+          python ytm-dl.py $RUN_OPTION
       - name: Commit Changes
         run: |
           git config --global user.name "GitHub Actions"
