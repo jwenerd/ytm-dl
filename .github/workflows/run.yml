@@ -55,10 +55,13 @@ jobs:
           git checkout origin/main-output output
       - name: Run 🎶
         run: |
+          echo '🎶 here we go...'
           [[ -n $SCHEDULE_RUN_OPTION ]] && RUN_OPTION=$SCHEDULE_RUN_OPTION
           [[ -n $INPUT_RUN_OPTION ]] && RUN_OPTION=$INPUT_RUN_OPTION
 
           python ./ytm-dl.py $RUN_OPTION
+
+          printenv
       - name: Commit Changes
         run: |
           git config --global user.name "GitHub Actions"
