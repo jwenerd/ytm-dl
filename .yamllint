@@ -1,0 +1,5 @@
+---
+extends: relaxed
+rules:
+  new-lines: disable
+  line-length: disable
