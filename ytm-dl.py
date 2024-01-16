@@ -1,9 +1,30 @@
 import sys
+import os
+import concurrent.futures
+import threading
+from datetime import datetime
+
 from src.api import get_api_client
 from src.file import write_files
 from src.mapping import Mapping
-import concurrent.futures
-import threading
+
+def get_gh_meta():
+	keep = ['actor', 'event_name', 'job', 'ref_name', 'run_attempt', 'repository', 'run_id', 'run_number', 'sha', 'workflow']
+	keep = ['github_' + v for v in keep]
+	return {k: v for k, v in os.environ.items() if k.lower() in keep}
+
+def get_records(response):
+	meta = {}
+	if isinstance(response, dict) and 'tracks' in response.keys():
+		merge = {k: v for k, v in response.items() if isinstance(v, (str, int, float, bool))}
+		meta.update(merge)
+		records = response['tracks']
+	else:
+		records = response
+
+	meta.update(get_gh_meta())
+	meta.update({ 'fetched': len(records), 'time':  datetime.now().isoformat() })
+	return [records, meta]
 
 thread_local = threading.local()
 
@@ -18,21 +39,7 @@ def ytmusic_to_file(file):
 	}.get(api_method, { 'limit': 2500, 'order': 'recently_added' })
 	
 	api_fn = getattr(thread_local.ytmusic, api_method)
-	response = api_fn(**api_args)
-
-	meta = {}
-	if isinstance(response, dict) and 'tracks' in response.keys():
-		meta = {}
-		for k in list(response.keys()):
-			v = response[k]
-			if (not isinstance(v,list) and not isinstance(v,dict)):
-				meta[k]=v
-
-		records = response['tracks']
-	else:
-		records = response
-		
-
+	records, meta = get_records(api_fn(**api_args))
 	rows = Mapping(file, records).get_rows()
 	write_files(file, rows, meta)
 

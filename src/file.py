@@ -1,7 +1,7 @@
 import csv
-from datetime import datetime
 import os.path
 import hashlib
+import itertools
 
 def file_hash(file):
 	hash = ''
@@ -26,8 +26,6 @@ def write_files(name, rows, meta = {}):
 		return
 
 	with open('output/.' + name + '_meta', 'w', newline='') as metafile:
-		metafile.writelines("fetched=" + str(len(rows) - 1) + "\n")
-		metafile.writelines("file_created=" + datetime.now().isoformat() + "\n")
 		keys = list(meta.keys())
 		keys.sort()
 		for key in keys:

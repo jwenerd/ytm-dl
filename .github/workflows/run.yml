@@ -16,6 +16,13 @@ on:
     - cron: '19 3 * * *'
 
 env:
+  GITHUB_JOB: ${{ github.job }}
+  GITHUB_RUN_NUMBER: ${{ github.run_number }}
+  GITHUB_RUN_ID: ${{ github.run_id }}
+  GITHUB_SHA: ${{ github.sha }}
+  GITHUB_WORKFLOW: ${{ github.workflow }}
+  GITHUB_EVENT_NAME: ${{ github.event_name }}
+  GITHUB_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
   RUN_OPTION: all
   INPUT_RUN_OPTION: ${{ inputs.run_option }}
   SCHEDULE_RUN_OPTION: ${{ github.event.schedule != '19 3 * * *' && 'frequent' || 'all' }}
@@ -52,9 +59,6 @@ jobs:
 
           python ./ytm-dl.py $RUN_OPTION
       - name: Commit Changes
-        env:
-          GITHUB_JOB: ${{ github.job }}
-          GITHUB_RUN_NUMBER: ${{ github.run_number }}
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "<>"
