@@ -1,3 +1,4 @@
 *
-!output/*
-output/.keep
+!output
+!output/meta
+.DS_Store
