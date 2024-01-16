@@ -74,7 +74,7 @@ class Output:
 			self._log_write()
 
 	def _write_meta(self):
-		write_file('output/.' + self.file + '_meta', self.meta)
+		write_file('output/meta/' + self.file, self.meta)
 		self._write_readme()
 
 	def _write_readme(self):
