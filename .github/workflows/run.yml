@@ -58,15 +58,17 @@ jobs:
           git config --global core.autocrlf input
       - name: 😝 🎲 ⚙️
         run: |
-          curl -s https://gist.githubusercontent.com/jwenerd/1679dda15c44739b4781cb946533381b/raw/e3286925ef590cabc6567c0ffaf25d0dfba20f38/emoji_list > $HOME/emoji_list
-          _num_lines=$(wc -l < $HOME/emoji_list)
-          YTM_RANDOM_EMOJI=$(awk -v num_lines="$num_lines" 'BEGIN {srand()} {a[NR]=$0} END{for(i=1;i<=3;i++){x=int(rand()*num_lines);print a[x]}}   ' emoji_list | tr '\n' '  ')
+          emoji_list=$HOME/emoji_list
+          curl -s https://gist.githubusercontent.com/jwenerd/1679dda15c44739b4781cb946533381b/raw/e3286925ef590cabc6567c0ffaf25d0dfba20f38/emoji_list > $emoji_list
+          _num_lines=$(wc -l < $emoji_list)
+          export YTM_RANDOM_EMOJI=$(awk -v num_lines="$_num_lines" 'BEGIN {srand()} {a[NR]=$0} END{for(i=1;i<=3;i++){x=int(rand()*num_lines);print a[x]}}   ' $emoji_list | tr '\n' '  ' | xargs)
+          echo $YTM_RANDOM_EMOJI > $HOME/random_commit_emoji
       - name: Commit Changes
         run: |
           cd output/
           git checkout main-output
           git add -f .
           if ! git diff-index --quiet HEAD; then
-            git commit --message="$YTM_RANDOM_EMOJI"
+            git commit --message="$(less $HOME/random_commit_emoji)"
             git push origin main-output
           fi

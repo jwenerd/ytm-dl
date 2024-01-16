@@ -1,13 +1,3 @@
-lib/
-__pycache__
-.vscode
-
-pyvenv.cfg
-bin
-
-oauth.json
-.DS_Store
-cron.log
-
-output/*
-!output/.keep
+*
+!output/*
+output/.keep
