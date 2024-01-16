@@ -47,6 +47,7 @@ def do_updates(option):
 	if option == 'all':
 		files = files +  ['library_subscriptions', 'library_artists', 'library_albums']
 
+	print('starting ' + option + ' updates')
 	with concurrent.futures.ThreadPoolExecutor() as executor:
 		list(executor.map(lambda file: ytmusic_to_file(file), files))
 
