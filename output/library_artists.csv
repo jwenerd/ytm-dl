@@ -151,7 +151,6 @@ Isaac Chambers,MPLAUC-m4_oNBYaTWB1eiNmY3_3g
 The Andrews Sisters,MPLAUCDhi6EimU5G6PONDuepo3ig
 Wynonie Harris,MPLAUCOvqTAdam4RvQyHhJ1d3gnw
 Nouvelle Vague,MPLAUC53hOAvsD51G0HfWaPmS8FA
-Fred Pallem,MPLAUCOjctJlhmAZOjwXB2y1TRGQ
 Le Sacre du tympan,MPLAUCnW1nrmjXez8zM34_3IA58Q
 Fred Pallem Et Le Sacre Du Tympan,MPLAUCx1vCwtRtqIn2hddC9pkiXw
 Randy Newman,MPLAUCpXXBsB1exs7tMZUyw0T0FA
@@ -729,6 +728,7 @@ Emapea,MPLAUCbaPGz2367Bjt0s2UXZ0A8g
 Bruno Pernadas,MPLAUCKEqXXcbf9eyTRzpWVFLsJg
 Joaquín Cornejo,MPLAUCW-n4NLTYs6lkx9czqoVkAQ
 El Michels Affair,MPLAUCkT-SJm24vsK5gGcYzg8MRQ
+Djuma Soundsystem,MPLAUCwrMQoPSGKiZPrMa_x_e5Wg
 Jokke Ilsøe,MPLAUCncEAANiuXYMQaTGIuh4osA
 Mathias Schaffhäuser,MPLAUCIJuhDPifXmE062M5oLWGUw
 Blue Foundation,MPLAUCnrU5JKYhkbHKDi1hnJM2rA
@@ -738,7 +738,6 @@ Klovn,MPLAUCUAw2RV87FdpHReSjL1qsBQ
 Trentemøller,MPLAUCVKQD_Paj5SopCxS-qudbHg
 The Knife,MPLAUCis1bLqVozucj8JQo1bLHHg
 Sharon Phillips,MPLAUC7LrdbiMpQXsAt25ZW7H7rA
-Djuma Soundsystem,MPLAUCwrMQoPSGKiZPrMa_x_e5Wg
 Filur,MPLAUCSpvzqKobsvp3QCeuSTXsMA
 Robert Walter,MPLAUCKmTkR_j15a2hI59_3rf8eA
 The Crawdiddies,MPLAUCKS8VVmaAZ3fsLMXYYJjQ3g
@@ -790,6 +789,8 @@ Cafe Accordion Orchestra,MPLAUCVvXsA-PVozTrYG1aq2Dcmg
 Shpongle,MPLAUCcN7KaN9M7ne22klvNUB7Mw
 Eat Static,MPLAUCWt6ad08bK9wSbf0oBylaAA
 Simon Posford,MPLAUCMiqb0R1n4fnqZQkKmseLgA
+Sir Georg Solti,MPLAUCsDbNBR16laCO0E-G1l9ydQ
+Vladimir Ashkenazy,MPLAUCeLZmV6xQqHvAWQ9vXgIZNg
 Chicago Symphony Orchestra,MPLAUC-mN_-K-WyFuYCSPHaj-Zng
 Carl Smith,MPLAUCly-fcvkspCudDgrHyTHSZQ
 Husky,MPLAUCd93NEvcg_M-Y8RmEcZY0tg
@@ -972,7 +973,6 @@ Max Cooper,MPLAUCrF_AxlDCcXbMBFuaA1nuYA
 Wiener Symphoniker,MPLAUClwCWuJRwBj7y7HvuizQMCw
 Elly Ameling,MPLAUCn-8MA1htF4i-Fv-KfCmNRw
 Zubin Mehta,MPLAUC7NlNK0i2CkJ2dAcK2JdoQg
-Vladimir Ashkenazy,MPLAUCeLZmV6xQqHvAWQ9vXgIZNg
 London Symphony Orchestra,MPLAUCIOVBy9xHtGgdw485ZrK04Q
 András Schiff,MPLAUCFqSbqAAG4GClS7Y6XANUow
 Peter Schreier,MPLAUCzfbkQTz_1sAvp62bXkwscw
@@ -1076,7 +1076,6 @@ The Wood Brothers,MPLAUCBnF5LMfF5gdatQL0E5ZpBg
 The Appleseed Collective,MPLAUCxj04Bdb_tEiQtxY2ffmvdw
 First Aid Kit,MPLAUC5Ziwoo7xz2i-vKsgKcm-kQ
 Desmond Dekker,MPLAUCVd_prnc36r8qw6Y9tn63rg
-Melanie Safka,MPLAUCs4-_vT3dp8K1ginMWeJMLA
 Dr. Hook And The Medicine Show,MPLAUCYDWtgeChGox9JV0x0QbOXg
 Feed Me,MPLAUC9UlsJH0D1uZ3hA1LNKEV0w
 Prince Buster,MPLAUCe2Sx3ai_PA23zR-wadYkiA
@@ -1564,6 +1563,7 @@ The Hot Spell,MPLAUCvN8O-sYbSn0pGkvTJbGEbQ
 Tetsu Inoue,MPLAUCE0KhQyztOb_DVHD2L3YQow
 Mary Schneider,MPLAUCFMD-qHZE-cH9VGrnxnkdgg
 Pérez Prado,MPLAUC_TU8ycSWbSVbaI30_tU1LA
+Beth Hirsch,MPLAUCm7DzO5bklG5d6KmsPQJf2A
 David Raksin,MPLAUC_DbeIz1Nlj6An50pvehKvg
 C.K. Mann Big Band,MPLAUCi1j6W2sDjLdhpOGOVnlodg
 Ebo Taylor,MPLAUCvcAqb_cNpJMlmLRicvJiKg
@@ -1818,6 +1818,7 @@ John Zorn,MPLAUCvFo485rYVgZOXMDNnMEdcw
 Sonny Sharrock,MPLAUCF52xDDwcMXZeJyb9WxLc3Q
 Derek Bailey,MPLAUCDQYdcGwLbGfNTK0q4hoK1g
 Bill Laswell,MPLAUCL_QG03aHXvLCuNpGnDdGfQ
+Bonnie Raitt,MPLAUCt3dWNI94rZKmfzuwZyD5Fw
 Scott Bradlee's Postmodern Jukebox,MPLAUCyFFkOUbrDLpigb56-3koEw
 Ruth Willis,MPLAUC46rXtQzdGTBwPiPatncuhQ
 Blind Willie McTell,MPLAUCeeVehlv3IgwMwZjkSwk2kA
@@ -1861,18 +1862,17 @@ The Paragons,MPLAUC2rL--PGNPCOTyn7BoTZu6A
 Justin Hinds,MPLAUCvPcBLOc378PGqoqNHT4QTA
 Errol Dunkley,MPLAUChiYUrAH9mqj_x7BvnhFGig
 The Tennors,MPLAUCCfgycMO7g5bGWlxE7bpbyw
+Marguerita,MPLAUCfxQ4nArtT3jNJA9IGj3pHg
 Paulette Williams,MPLAUCA2ARi8lZDp-pPenkqQfIaQ
 The Soulettes,MPLAUC1Oxarfy01uVuQRf-1l1ABg
 Barbara Jones,MPLAUCUNH-G1EdrlHJDexuofvOEw
-Supersonics,MPLAUChfsZFg_-n8T6tqCUWQtsOQ
 Dawn Penn,MPLAUCSxj40JpaO3XVil-wxO1wfw
 Nora Dean,MPLAUCjtCu8yJmI7rH_6w9dho6pg
 Merlene Webber,MPLAUCLXN5u7vL9SxBP0-FMVePIw
 Rita Marley,MPLAUCPUhAnVkpUtsTbJcSflgbug
-The Baba Brooks Band,MPLAUCQKdNIXXTmfx__tAVvgw10g
 Cynthia Richards,MPLAUCXCAJD6qq5_R3V9jCy8ro_w
+Baba Brooks & His Band,MPLAUCBbn-oxSTKkd_pzKBF_Z_Nw
 Sharon Forrester,MPLAUCVoup9rvK8sHonfX7wnCdqg
-Dreamlets,MPLAUC_Q7KOq_7hn1xDYBQ5lc06w
 The Gaylettes,MPLAUCtFbT6wJ9KVFZoNUwiakVcA
 Hortense Ellis,MPLAUCqokfTnFnC0So3liuSmrc7Q
 Sir Harry,MPLAUCzH07m_ltlOvbKbk3utmcUA
