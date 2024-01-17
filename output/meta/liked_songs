@@ -2,10 +2,10 @@ API:
   method: get_liked_songs
   method_args:
     limit: 2500
-  records_length: 1398
-  response_time: 1.6689300537109375e-06
+  records_length: 1400
+  response_time: 4.5299530029296875e-06
 CSV File:
-  lines: 1399
+  lines: 1401
   size: 120K
 GitHub:
   actor: jwenerd
@@ -14,15 +14,15 @@ GitHub:
   ref_name: main
   repository: jwenerd/ytm-dl
   run_attempt: '1'
-  run_id: '7557995671'
-  run_number: '118'
+  run_id: '7560214530'
+  run_number: '119'
   sha: 0810a0969be584caa48649d2acd1474032b48745
   workflow: run
 Tracks:
   description: Music you like in any YouTube app will show here. You can change this
     in Settings.
   duration: null
-  duration_seconds: 674984
+  duration_seconds: 675503
   id: LM
   privacy: PUBLIC
   related: []
@@ -37,5 +37,5 @@ Tracks:
     url: https://www.gstatic.com/youtube/media/ytm/images/pbg/liked-music-@1200.png
     width: 1200
   title: Liked Music
-  trackCount: 1443
+  trackCount: 1445
   views: null
