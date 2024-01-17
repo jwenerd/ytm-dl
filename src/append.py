@@ -26,8 +26,9 @@ def get_existing_ids(csv_file):
     existing_ids.pop(0) # remove the header
   return existing_ids
 
-def filter_based_on_existing(csv_file, new_rows):
+def new_rows_for_file(csv_file, new_rows):
   new_ids = [new[len(new)-1] for new in new_rows]
   start_index = find_start_index(csv_file, new_ids)
   if start_index is not None:
     return new_rows[0:start_index]
+  return []

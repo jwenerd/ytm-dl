@@ -1,12 +1,8 @@
 import os
 import hashlib
-from functools import lru_cache
-
-
-OUTPUT_DIR = 'output'
 
 def output_path(file):
-	return f'{OUTPUT_DIR}/{file}'
+	return f'output/{file}'
 
 def file_hash(file):
 	file = output_path(file)
@@ -19,26 +15,19 @@ def file_hash(file):
 	return hash
 
 def write_file(file, content):
-	output = content
-
-	if isinstance(content, dict):
-		keys = list(content)
-		keys.sort()
-		output = ""
-		for key in keys:
-			output += key + "=" + str(content.get(key,'')) + "\n"
-
-	print('write')
-	print(output_path(file))
-	print(file)
 	with open(output_path(file), 'w') as f:
-		f.write(output)
+		f.write(str(content))
 
-GITHUB_META_KEYS = ['actor', 'event_name', 'job', 'ref_name', 'run_attempt', 'repository', 'run_id', 'run_number', 'sha', 'workflow']
-GITHUB_META_KEYS = tuple(['github_' + v for v in GITHUB_META_KEYS])
+def deep_merge(dict1, dict2):
+	for key, value in dict2.items():
+		if isinstance(value, dict) and key in dict1:
+				deep_merge(dict1[key], value)
+		else:
+				dict1[key] = value
 
-def github_meta():
-	return {k.lower(): v for k, v in os.environ.items() if k.lower() in GITHUB_META_KEYS}
-
-def is_github():
-	return 'GITHUB_REPOSITORY' in os.environ
+def deep_sort_keys(d):
+	if isinstance(d, dict):
+		sorted_keys = sorted(d.keys())
+		return {key: deep_sort_keys(d[key]) for key in sorted_keys}
+	else:
+		return d
