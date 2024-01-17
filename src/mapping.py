@@ -25,21 +25,22 @@ class Mapping:
 			self.records = records
 			self.columns = Mapping.FILE_COLUMNS.get(self.file, [])
 
-			song_mapping =  'history' in self.file or '_songs' in self.file
-			if song_mapping:
+			song_records =  'history' in self.file or '_songs' in self.file
+			if song_records:
 				self.columns = ['title', 'artists', 'album'] + self.columns + ['duration', 'duration_seconds', 'videoId']
 
 	def get_rows(self):
-		rows = []
-		for item in self.records:
-			row = []
-			for c in self.columns:
-				value = item.get(c, '')
-				if isinstance(value, dict) and 'name' in value.keys():
-					value = value['name'] # for song albuem
-				if c == 'artists' and isinstance(value,list):
-					value = join_list_value(value)
-				row.append(value)
+		return [ fullrow(record, self.columns) for record in self.records ]
 
-			rows.append(row)
-		return rows
+def fullrow(record,columns):
+	return [ colval(record, col) for col in columns ]
+
+def colval(record, col):
+	value = record.get(col, '')
+	if isinstance(value, dict) and 'name' in value.keys():
+		value = value['name'] # for song albuem
+	if col == 'artists' and isinstance(value,list):
+		value = join_list_value(value)
+	if isinstance(value, str):
+		value = value.strip()
+	return value

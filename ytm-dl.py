@@ -1,22 +1,21 @@
 import sys
-import os
+import time
 import concurrent.futures
 import threading
 from datetime import datetime
 
 from src.api import get_api_client
-from src.file import Output
+from src.output import Output
 
 def get_records(response):
 	meta = {}
 	if isinstance(response, dict) and 'tracks' in response.keys():
-		merge = {k: v for k, v in response.items() if isinstance(v, (str, int, float, bool))}
-		meta.update(merge)
 		records = response['tracks']
+		del response['tracks']
+		meta['Tracks'] = response
 	else:
 		records = response
 
-	meta.update({ 'fetched': len(records), 'time':  datetime.now().isoformat() })
 	return [records, meta]
 
 thread_local = threading.local()
@@ -31,8 +30,18 @@ def ytmusic_to_file(file):
 		'get_liked_songs': { 'limit': 2500 }
 	}.get(api_method, { 'limit': 2500, 'order': 'recently_added' })
 
+	start_time = time.time()
 	api_fn = getattr(thread_local.ytmusic, api_method)
-	records, meta = get_records(api_fn(**api_args))
+	elapsed_time = time.time() - start_time
+
+	records, records_meta = get_records(api_fn(**api_args))
+
+	meta = {}
+	meta.update(records_meta)
+	meta['API'] = {
+		'records_length': len(records), 'method': api_method,
+		'method_args': api_args, 'response_time': elapsed_time
+	}
 
 	output = Output(file, records, meta)
 	output.write_files()
