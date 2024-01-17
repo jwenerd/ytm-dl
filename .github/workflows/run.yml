@@ -44,13 +44,32 @@ jobs:
         env:
           INPUT_RUN_OPTION: ${{ inputs.run_option }}
           SCHEDULE_RUN_OPTION: ${{ github.event.schedule != '19 3 * * *' && 'frequent' || 'all' }}
+          GITHUB_EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: |
-          echo '🎶 here we go...'
+          true || 🚀
+          echo "::group::RUN_OPTION"
+
           RUN_OPTION='all'
           [[ -n $SCHEDULE_RUN_OPTION ]] && RUN_OPTION=$SCHEDULE_RUN_OPTION
           [[ -n $INPUT_RUN_OPTION ]] && RUN_OPTION=$INPUT_RUN_OPTION
+          echo "github.event.schedule = $GITHUB_EVENT_SCHEDULE"
+          echo "RUN_OPTION = $RUN_OPTION"
+          echo "INPUT_RUN_OPTION = $INPUT_RUN_OPTION"
+          echo "SCHEDULE_RUN_OPTION = $SCHEDULE_RUN_OPTION"
 
-          python ytm-dl.py $RUN_OPTION
+          echo "::endgroup::"
+
+          echo "::group::python ytm-dl.py $RUN_OPTION"
+          python ytm-dl.py $RUN_OPTION > $HOME/run_output
+          cat $HOME/run_output
+          echo "::endgroup::"
+
+          echo "### ⚙️ python ytm-dl.py $RUN_OPTION" >> $GITHUB_STEP_SUMMARY
+          echo ""
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          cat $HOME/run_output  >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
       - name: git config
         run: |
           git config --global user.name "GitHub Actions"
@@ -65,10 +84,28 @@ jobs:
           echo $YTM_RANDOM_EMOJI > $HOME/random_commit_emoji
       - name: Commit Changes
         run: |
+          true || 👨‍💻
+          echo "::group::git checkout main-output"
           cd output/
           git checkout main-output
           git add -f .
+          echo "::endgroup::"
+
           if ! git diff-index --quiet HEAD; then
+            echo "::group::commit & push"
             git commit --message="$(less $HOME/random_commit_emoji)"
             git push origin main-output
+
+            commit_url="https://github.com/$GITHUB_REPOSITORY/commit/$(git rev-parse HEAD)"
+            echo "### ± [Output Commit]($commit_url)" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo ""
+
+            echo "::endgroup::"
+
+            echo "::group::tag latest-output"
+            git fetch --tags --force
+            git tag --force latest-output
+            git push --force --tags
+            echo  "::endgroup::"
           fi
