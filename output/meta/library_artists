@@ -1,16 +1,21 @@
-fetch_time=2024-01-17T03:27:41.577218
-fetched=1959
-fetched_length=1959
-file_lines=1960
-file_size=88K
-github_actor=jwenerd
-github_event_name=schedule
-github_job=run
-github_ref_name=main
-github_repository=jwenerd/ytm-dl
-github_run_attempt=1
-github_run_id=7550655016
-github_run_number=113
-github_sha=13b60d5fda5890e0742d6555638ebdd6ba365e66
-github_workflow=run
-time=2024-01-17T03:27:41.564958
+API:
+  method: get_library_artists
+  method_args:
+    limit: 2500
+    order: recently_added
+  records_length: 1959
+  response_time: 2.1457672119140625e-06
+CSV File:
+  lines: 1960
+  size: 88K
+GitHub:
+  actor: jwenerd
+  event_name: workflow_dispatch
+  job: run
+  ref_name: main
+  repository: jwenerd/ytm-dl
+  run_attempt: '1'
+  run_id: '7555389090'
+  run_number: '116'
+  sha: 0810a0969be584caa48649d2acd1474032b48745
+  workflow: run

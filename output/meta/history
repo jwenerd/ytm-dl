@@ -1,16 +1,20 @@
-fetch_time=2024-01-17T09:27:34.093889
-fetched=200
-fetched_length=200
-file_lines=430
-file_size=44K
-github_actor=jwenerd
-github_event_name=schedule
-github_job=run
-github_ref_name=main
-github_repository=jwenerd/ytm-dl
-github_run_attempt=1
-github_run_id=7553629398
-github_run_number=115
-github_sha=b0afb18bc05df5f844f6110ba6f93e163976b2f8
-github_workflow=run
-time=2024-01-17T09:27:34.084475
+API:
+  method: get_history
+  method_args: {}
+  records_length: 200
+  response_time: 2.6226043701171875e-06
+CSV File:
+  lines: 441
+  lines_added: 11
+  size: 44K
+GitHub:
+  actor: jwenerd
+  event_name: workflow_dispatch
+  job: run
+  ref_name: main
+  repository: jwenerd/ytm-dl
+  run_attempt: '1'
+  run_id: '7555389090'
+  run_number: '116'
+  sha: 0810a0969be584caa48649d2acd1474032b48745
+  workflow: run
