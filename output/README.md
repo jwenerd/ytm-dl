@@ -1,1 +1,1 @@
-## ⚙️ [Action](https://github.com/jwenerd/ytm-dl/actions/runs/7549842360)
+## ⚙️ [Action](https://github.com/jwenerd/ytm-dl/actions/runs/7550655016)
