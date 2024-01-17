@@ -1,16 +1,21 @@
-fetch_time=2024-01-17T03:27:26.289124
-fetched=2520
-fetched_length=2520
-file_lines=2521
-file_size=216K
-github_actor=jwenerd
-github_event_name=schedule
-github_job=run
-github_ref_name=main
-github_repository=jwenerd/ytm-dl
-github_run_attempt=1
-github_run_id=7550655016
-github_run_number=113
-github_sha=13b60d5fda5890e0742d6555638ebdd6ba365e66
-github_workflow=run
-time=2024-01-17T03:27:26.264311
+API:
+  method: get_library_songs
+  method_args:
+    limit: 2500
+    order: recently_added
+  records_length: 2520
+  response_time: 1.9073486328125e-06
+CSV File:
+  lines: 2521
+  size: 216K
+GitHub:
+  actor: jwenerd
+  event_name: workflow_dispatch
+  job: run
+  ref_name: main
+  repository: jwenerd/ytm-dl
+  run_attempt: '1'
+  run_id: '7555389090'
+  run_number: '116'
+  sha: 0810a0969be584caa48649d2acd1474032b48745
+  workflow: run

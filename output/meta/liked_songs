@@ -1,22 +1,41 @@
-description=Music you like in any YouTube app will show here. You can change this in Settings.
-duration_seconds=674984
-fetch_time=2024-01-17T09:27:41.059991
-fetched=1398
-fetched_length=1398
-file_lines=1399
-file_size=120K
-github_actor=jwenerd
-github_event_name=schedule
-github_job=run
-github_ref_name=main
-github_repository=jwenerd/ytm-dl
-github_run_attempt=1
-github_run_id=7553629398
-github_run_number=115
-github_sha=b0afb18bc05df5f844f6110ba6f93e163976b2f8
-github_workflow=run
-id=LM
-privacy=PUBLIC
-time=2024-01-17T09:27:41.037826
-title=Liked Music
-trackCount=1443
+API:
+  method: get_liked_songs
+  method_args:
+    limit: 2500
+  records_length: 1398
+  response_time: 1.9073486328125e-06
+CSV File:
+  lines: 1399
+  size: 120K
+GitHub:
+  actor: jwenerd
+  event_name: workflow_dispatch
+  job: run
+  ref_name: main
+  repository: jwenerd/ytm-dl
+  run_attempt: '1'
+  run_id: '7555389090'
+  run_number: '116'
+  sha: 0810a0969be584caa48649d2acd1474032b48745
+  workflow: run
+Tracks:
+  description: Music you like in any YouTube app will show here. You can change this
+    in Settings.
+  duration: null
+  duration_seconds: 674984
+  id: LM
+  privacy: PUBLIC
+  related: []
+  thumbnails:
+  - height: 192
+    url: https://www.gstatic.com/youtube/media/ytm/images/pbg/liked-music-@192.png
+    width: 192
+  - height: 576
+    url: https://www.gstatic.com/youtube/media/ytm/images/pbg/liked-music-@576.png
+    width: 576
+  - height: 1200
+    url: https://www.gstatic.com/youtube/media/ytm/images/pbg/liked-music-@1200.png
+    width: 1200
+  title: Liked Music
+  trackCount: 1443
+  views: null
