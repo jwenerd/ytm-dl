@@ -1,8 +1,10 @@
 import os
 import hashlib
 
-def output_path(file):
-	return f'output/{file}'
+def output_path(file=''):
+	if len(file) > 0:
+		file = f'/{file}'
+	return f'output{file}'
 
 def file_hash(file):
 	file = output_path(file)
