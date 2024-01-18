@@ -4,10 +4,10 @@ API:
     limit: 2500
     order: recently_added
   records_length: 2536
-  response_time: 1.9073486328125e-06
+  response_time: 3.5762786865234375e-06
 CSV File:
   lines: 2537
-  size: 220K
+  size: 224K
 GitHub:
   actor: jwenerd
   event_name: schedule
@@ -15,7 +15,7 @@ GitHub:
   ref_name: main
   repository: jwenerd/ytm-dl
   run_attempt: '1'
-  run_id: '7566242554'
-  run_number: '125'
+  run_id: '7567911625'
+  run_number: '126'
   sha: fb531a850147eac3fdd6ac6dbb355962da311bdb
   workflow: run
