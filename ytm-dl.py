@@ -6,6 +6,7 @@ from datetime import datetime
 
 from src.api import get_api_client
 from src.output import Output
+from src.meta import write_readme
 
 def get_records(response):
 	meta = {}
@@ -44,7 +45,7 @@ def ytmusic_to_file(file):
 	}
 
 	output = Output(file, records, meta)
-	output.write_files()
+	return output.write_files()
 
 def do_updates(option):
 	if not option in ['all', 'frequent']:
@@ -58,7 +59,11 @@ def do_updates(option):
 
 	print('starting ' + option + ' updates')
 	with concurrent.futures.ThreadPoolExecutor() as executor:
-		list(executor.map(lambda file: ytmusic_to_file(file), files))
+		files_written = list(executor.map(lambda file: ytmusic_to_file(file), files))
+
+	files_written = set(filter(None, files_written))
+	if len(files_written) > 0:
+		write_readme()
 
 if __name__ == "__main__":
 		option = ''

@@ -38,8 +38,7 @@ class Output:
 		# mode so starts at the end of the file
 		with open(prev_file, 'r') as old_file, open(self.csv_file_with_path , 'a+') as new_file:
 			for index, line in enumerate(old_file):
-				if index == 0: 
-					continue
+				if index == 0: continue
 				new_file.write(line)
 
 		# lastly - delete the old data
@@ -65,3 +64,5 @@ class Output:
 
 		log = f'added {length_rows} to {self.file}' if self.append else f'created {self.file} with {length_rows} rows'
 		print(log)
+
+		return self.file
