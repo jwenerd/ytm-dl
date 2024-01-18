@@ -3,19 +3,19 @@ API:
   method_args:
     limit: 2500
     order: recently_added
-  records_length: 62
-  response_time: 2.384185791015625e-06
+  records_length: 61
+  response_time: 1.430511474609375e-06
 CSV File:
-  lines: 63
+  lines: 62
   size: 4.0K
 GitHub:
   actor: jwenerd
-  event_name: workflow_dispatch
+  event_name: schedule
   job: run
   ref_name: main
   repository: jwenerd/ytm-dl
   run_attempt: '1'
-  run_id: '7561854484'
-  run_number: '120'
-  sha: 23935bb4228c14a0e5b7c04dfa11765195fd1382
+  run_id: '7564931683'
+  run_number: '124'
+  sha: fb531a850147eac3fdd6ac6dbb355962da311bdb
   workflow: run
