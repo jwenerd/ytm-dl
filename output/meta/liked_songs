@@ -3,20 +3,20 @@ API:
   method_args:
     limit: 2500
   records_length: 1402
-  response_time: 1.6689300537109375e-06
+  response_time: 1.9073486328125e-06
 CSV File:
   lines: 1403
   size: 124K
 GitHub:
   actor: jwenerd
-  event_name: workflow_dispatch
+  event_name: schedule
   job: run
   ref_name: main
   repository: jwenerd/ytm-dl
   run_attempt: '1'
-  run_id: '7561854484'
-  run_number: '120'
-  sha: 23935bb4228c14a0e5b7c04dfa11765195fd1382
+  run_id: '7564098813'
+  run_number: '123'
+  sha: fb531a850147eac3fdd6ac6dbb355962da311bdb
   workflow: run
 Tracks:
   description: Music you like in any YouTube app will show here. You can change this
