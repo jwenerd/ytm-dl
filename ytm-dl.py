@@ -2,7 +2,8 @@ import sys
 import time
 import concurrent.futures
 import threading
-from datetime import datetime
+import yaml
+import time
 
 from src.api import get_api_client
 from src.output import Output
@@ -19,6 +20,13 @@ def get_records(response):
 
 	return [records, meta]
 
+def save_api_results():
+	timestr = time.strftime("%Y_%m_%d_%H_%M")
+	with open(f'api_results_{timestr}.yaml', 'w') as f:
+		f.write(yaml.dump(save_api_results.store))
+
+save_api_results.store = {}
+
 thread_local = threading.local()
 
 def ytmusic_to_file(file):
@@ -33,19 +41,22 @@ def ytmusic_to_file(file):
 
 	start_time = time.time()
 	api_fn = getattr(thread_local.ytmusic, api_method)
-	elapsed_time = time.time() - start_time
+	elapsed_time = round(time.time() - start_time, 2)
 
-	records, records_meta = get_records(api_fn(**api_args))
+	api_results = api_fn(**api_args)
+	records, meta = get_records(api_results.copy())
 
-	meta = {}
-	meta.update(records_meta)
 	meta['API'] = {
 		'records_length': len(records), 'method': api_method,
 		'method_args': api_args, 'response_time': elapsed_time
 	}
 
-	output = Output(file, records, meta)
-	return output.write_files()
+	result = Output(file, records, meta).write_files()
+	if result is None:
+		return
+
+	save_api_results.store[api_method] = api_results
+	return result
 
 def do_updates(option):
 	if not option in ['all', 'frequent']:
@@ -64,6 +75,7 @@ def do_updates(option):
 	files_written = set(filter(None, files_written))
 	if len(files_written) > 0:
 		write_readme()
+		save_api_results()
 
 if __name__ == "__main__":
 		option = ''

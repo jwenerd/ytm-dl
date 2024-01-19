@@ -11,3 +11,6 @@ cron.log
 
 output/*
 !output/.keep
+
+# used for artifact
+api_results*
