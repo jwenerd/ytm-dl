@@ -75,6 +75,11 @@ jobs:
           cat $HOME/run_output  >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: api_results
+          path: api_results_*
+          if-no-files-found: ignore
       - name: git config
         run: |
           git config --global user.name "GitHub Actions"

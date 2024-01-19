@@ -58,7 +58,7 @@ def write_readme():
 	rm = ['# 📝  output ']
 	if IS_GITHUB:
 		href = f"https://github.com/{GITHUB_META['repository']}/actions/runs/{GITHUB_META['run_id']}"
-		rm += [f'## ⚙️ [{GITHUB_META['job']} #{GITHUB_META['run_number']}]({href})']
+		rm += [f'## ⚙️ [{GITHUB_META["job"]} #{GITHUB_META["run_number"]}]({href})']
 
 	# file table
 	to_link = lambda file: f'[{quote(file)} ]({file})'
