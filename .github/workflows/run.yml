@@ -20,6 +20,7 @@ permissions:
 
 jobs:
   run:
+    name: ${{ github.event_name }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
