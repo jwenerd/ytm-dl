@@ -45,6 +45,7 @@ jobs:
           INPUT_RUN_OPTION: ${{ inputs.run_option }}
           SCHEDULE_RUN_OPTION: ${{ github.event.schedule != '19 3 * * *' && 'frequent' || 'all' }}
           GITHUB_EVENT_SCHEDULE: ${{ github.event.schedule }}
+          GH_TOKEN: ${{ secrets.YTM_GITHUB_TOKEN }}
         run: |
           true || 🚀
           echo "::group::RUN_OPTION"
@@ -62,6 +63,10 @@ jobs:
           echo "::group::python ytm-dl.py $RUN_OPTION"
           python ytm-dl.py $RUN_OPTION > $HOME/run_output
           cat $HOME/run_output
+          echo "::endgroup::"
+
+          echo "::group::python update secret"
+          gh secret set YTM_OAUTH < oauth.json
           echo "::endgroup::"
 
           echo "### ⚙️ python ytm-dl.py $RUN_OPTION" >> $GITHUB_STEP_SUMMARY
