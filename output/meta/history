@@ -4,9 +4,9 @@ API:
   records_length: 200
   response_time: 0.0
 CSV File:
-  bytes: '70241'
-  lines: 698
-  lines_added: 2
+  bytes: '72490'
+  lines: 719
+  lines_added: 21
   size: 72K
 GitHub:
   event_name: schedule
@@ -15,7 +15,7 @@ GitHub:
   ref_name: main
   repository: jwenerd/ytm-dl
   run_attempt: '1'
-  run_id: '7589362269'
-  run_number: '146'
+  run_id: '7591238071'
+  run_number: '147'
   sha: c5106a6b008335d23dec919dbe68cf62b7c07c1c
   workflow: run
