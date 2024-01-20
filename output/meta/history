@@ -4,9 +4,9 @@ API:
   records_length: 200
   response_time: 0.0
 CSV File:
-  bytes: '75637'
-  lines: 740
-  lines_added: 1
+  bytes: '76257'
+  lines: 744
+  lines_added: 4
   size: 76K
 GitHub:
   event_name: workflow_dispatch
@@ -15,7 +15,7 @@ GitHub:
   ref_name: main
   repository: jwenerd/ytm-dl
   run_attempt: '1'
-  run_id: '7591657604'
-  run_number: '149'
+  run_id: '7591699574'
+  run_number: '150'
   sha: cae29f0042b4681ac78d939417b023524845d45f
   workflow: run
