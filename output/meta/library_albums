@@ -4,9 +4,9 @@ API:
     limit: 2500
     order: recently_added
   records_length: 932
-  response_time: 1.9073486328125e-06
+  response_time: 0.0
 CSV File:
-  bytes: '65177'
+  bytes: '65179'
   lines: 933
   size: 64K
 GitHub:
@@ -16,7 +16,7 @@ GitHub:
   ref_name: main
   repository: jwenerd/ytm-dl
   run_attempt: '1'
-  run_id: '7580705460'
-  run_number: '136'
-  sha: c408bb262b899d016afb918032545d9c8bb1927c
+  run_id: '7591634888'
+  run_number: '148'
+  sha: ad2d34364827b7d931b39a1d04051bb0931adf1b
   workflow: run
