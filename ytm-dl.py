@@ -39,12 +39,13 @@ def ytmusic_to_file(file):
 		'get_liked_songs': { 'limit': 2500 }
 	}.get(api_method, { 'limit': 2500, 'order': 'recently_added' })
 
-	start_time = time.time()
-	api_fn = getattr(thread_local.ytmusic, api_method)
-	elapsed_time = round(time.time() - start_time, 2)
 
+	api_fn = getattr(thread_local.ytmusic, api_method)
+
+	start_time = time.time()
 	api_results = api_fn(**api_args)
 	records, meta = get_records(api_results.copy())
+	elapsed_time = round(time.time() - start_time, 3)
 
 	meta['API'] = {
 		'records_length': len(records), 'method': api_method,
