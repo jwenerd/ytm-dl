@@ -54,11 +54,12 @@ jobs:
           RUN_OPTION='all'
           [[ -n $SCHEDULE_RUN_OPTION ]] && RUN_OPTION=$SCHEDULE_RUN_OPTION
           [[ -n $INPUT_RUN_OPTION ]] && RUN_OPTION=$INPUT_RUN_OPTION
+
           echo "github.event.schedule = $GITHUB_EVENT_SCHEDULE"
           echo "RUN_OPTION = $RUN_OPTION"
           echo "INPUT_RUN_OPTION = $INPUT_RUN_OPTION"
           echo "SCHEDULE_RUN_OPTION = $SCHEDULE_RUN_OPTION"
-
+          echo "RUN_OPTION=$RUN_OPTION" >> $GITHUB_ENV
           echo "::endgroup::"
 
           echo "::group::python ytm-dl.py $RUN_OPTION"
@@ -68,9 +69,7 @@ jobs:
 
           echo "::group::update oauth secret"
           gh secret set YTM_OAUTH < oauth.json
-          expires_at=$(cat oauth.json | jq .expires_at)
-          expires_at=$(date -d "@$expires_at")
-          echo "Updated secret.\nNew token expires at $expires_at"
+          echo "Updated secret."
           echo "::endgroup::"
 
           echo "### ⚙️ python ytm-dl.py $RUN_OPTION" >> $GITHUB_STEP_SUMMARY
@@ -84,11 +83,6 @@ jobs:
           name: api_results
           path: api_results_*
           if-no-files-found: ignore
-      - name: git config
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "<>"
-          git config --global core.autocrlf input
       - name: Commit Changes
         run: |
           true || 👨‍💻
@@ -113,7 +107,7 @@ jobs:
             echo "::endgroup::"
 
             echo "::group::commit & push"
-            git commit --message="$GITHUB_JOB $GITHUB_EVENT_NAME #$GITHUB_RUN_NUMBER $RANDOM_EMOJI"
+            git commit --message="$GITHUB_JOB($RUN_OPTION) $GITHUB_EVENT_NAME #$GITHUB_RUN_NUMBER $RANDOM_EMOJI"
             git push origin main-output
 
             commit_url="https://github.com/$GITHUB_REPOSITORY/commit/$(git rev-parse HEAD)"
