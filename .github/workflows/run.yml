@@ -88,6 +88,7 @@ jobs:
           true || 👨‍💻
           echo "::group::git checkout main-output"
           cd output/
+          git config --global core.autocrlf input
           git checkout main-output
           git add -f .
           echo "::endgroup::"
@@ -103,7 +104,6 @@ jobs:
             echo "::group::git config for update"
             git config --global user.name "GitHub Actions"
             git config --global user.email "<>"
-            git config --global core.autocrlf input
             echo "::endgroup::"
 
             echo "::group::commit & push"
