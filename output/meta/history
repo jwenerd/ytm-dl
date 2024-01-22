@@ -2,20 +2,9 @@ API:
   method: get_history
   method_args: {}
   records_length: 200
-  response_time: 1.559
+  response_time: 0.893
 CSV File:
-  bytes: '90232'
-  lines: 883
-  lines_added: 78
+  bytes: '90425'
+  lines: 885
+  lines_added: 80
   size: 92K
-GitHub:
-  event_name: workflow_dispatch
-  event_schedule: ''
-  job: run
-  ref_name: main
-  repository: jwenerd/ytm-dl
-  run_attempt: '1'
-  run_id: '7605779401'
-  run_number: '170'
-  sha: c63eecb9b46251cdff7075d4ef0b4cd7fa588593
-  workflow: run
