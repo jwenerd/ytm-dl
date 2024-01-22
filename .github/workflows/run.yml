@@ -72,6 +72,7 @@ jobs:
           echo "Updated secret."
           echo "::endgroup::"
 
+          echo "::group::github step summary"
           echo "### ⚙️ python ytm-dl.py $RUN_OPTION" >> $GITHUB_STEP_SUMMARY
           echo ""
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
@@ -82,6 +83,7 @@ jobs:
             cat $file >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
           done
+          echo "::endgroup::"
       - uses: actions/upload-artifact@v4
         with:
           name: api_results
@@ -98,11 +100,9 @@ jobs:
           echo "::endgroup::"
 
           if ! git diff-index --quiet HEAD; then
-            echo "::group::sparkles"
-            emoji_list=$HOME/emoji_list
-            curl -s https://gist.githubusercontent.com/jwenerd/1679dda15c44739b4781cb946533381b/raw/e3286925ef590cabc6567c0ffaf25d0dfba20f38/emoji_list > $emoji_list
-            _num_lines=$(wc -l < $emoji_list)
-            RANDOM_EMOJI=$(awk -v num_lines="$_num_lines" 'BEGIN {srand()} {a[NR]=$0} END{for(i=1;i<=3;i++){x=int(rand()*num_lines);print a[x]}}   ' $emoji_list | tr '\n' '  ' | xargs)
+            echo "::group::emoji sparkles"
+            curl -s https://gist.githubusercontent.com/jwenerd/1679dda15c44739b4781cb946533381b/raw/ef35475552d2dfa2e5bb7ae49f542b39aaaa7b45/random_emoji.sh | bash -s
+            RANDOM_EMOJI=$(cat /tmp/jw_rand_emoji)
             echo "::endgroup::"
 
             echo "::group::git config for update"
