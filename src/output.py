@@ -15,7 +15,7 @@ class Output:
 		self.csv_file = self.file + '.csv'
 		self.csv_file_with_path = output_path(self.csv_file)
 
-		self.append = file == 'history'
+		self.append = file in ['history', 'liked_songs', 'library_songs']
 
 		self.mapping = Mapping(file, records)
 		self.hash_before = file_hash(self.csv_file)
@@ -52,7 +52,8 @@ class Output:
 			self.meta.add_meta('CSV File', { 'lines_added': len(self.rows) })
 			# todo: if doing other files need to pass different look aahead
 			# todo: need some thing here for if starting brand new file
-			self.append_to_csv()
+			if len(self.rows) > 0:
+				self.append_to_csv()
 		else:
 			self.write_csv()
 
