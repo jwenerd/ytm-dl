@@ -3,20 +3,9 @@ API:
     limit: 2500
     order: recently_added
   method: get_library_artists
-  records_length: 1997
-  time: 47.022
+  records_length: 1999
+  time: 32.5
 CSV File:
-  bytes: '90599'
-  lines: 1998
+  bytes: 90676
+  lines: 2000
   size: 92K
-GitHub:
-  event_name: workflow_dispatch
-  event_schedule: ''
-  job: run
-  ref_name: main
-  repository: jwenerd/ytm-dl
-  run_attempt: '1'
-  run_id: '7610427918'
-  run_number: '180'
-  sha: 78955f146e9b1e13d7d167a1ce0f937d60437f38
-  workflow: run
