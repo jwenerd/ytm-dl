@@ -4,19 +4,8 @@ API:
     order: recently_added
   method: get_library_albums
   records_length: 931
-  time: 6.982
+  time: 7.9
 CSV File:
-  bytes: '65129'
+  bytes: 65018
   lines: 932
   size: 64K
-GitHub:
-  event_name: workflow_dispatch
-  event_schedule: ''
-  job: run
-  ref_name: main
-  repository: jwenerd/ytm-dl
-  run_attempt: '1'
-  run_id: '7609898230'
-  run_number: '179'
-  sha: c2dc350314519cf67e911070820946ffdb048835
-  workflow: run
