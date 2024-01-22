@@ -1,22 +1,22 @@
 API:
-  method: get_library_subscriptions
-  method_args:
+  args:
     limit: 2500
     order: recently_added
-  records_length: 65
-  response_time: 1.985
+  method: get_library_subscriptions
+  records_length: 64
+  time: 2.661
 CSV File:
-  bytes: '2662'
-  lines: 66
+  bytes: '2623'
+  lines: 65
   size: 4.0K
 GitHub:
-  event_name: schedule
-  event_schedule: 19 3 * * *
+  event_name: workflow_dispatch
+  event_schedule: ''
   job: run
   ref_name: main
   repository: jwenerd/ytm-dl
   run_attempt: '1'
-  run_id: '7606089071'
-  run_number: '171'
-  sha: 7cc2b1bd910a52c2c5b4a4f43cf6ee7ec85c2c7c
+  run_id: '7610510790'
+  run_number: '181'
+  sha: 2baa7574de7f50cf24903b184b7227024cbd6633
   workflow: run
