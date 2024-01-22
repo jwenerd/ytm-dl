@@ -1,10 +1,14 @@
 import csv
 import os.path
 import shutil
+import yaml
 from .mapping import Mapping
 from .prepend import prepend_rows_for_file
-from .util import file_hash, output_path
+from .util import file_hash, output_path, write_output_file
 from .meta import MetaOutput
+
+def write_output_yaml(file, records):
+	write_output_file(f'{file}.yaml', yaml.dump(records))
 
 # todo: rename this output
 class Output:
