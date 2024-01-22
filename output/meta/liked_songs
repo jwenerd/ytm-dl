@@ -1,29 +1,19 @@
 API:
   method: get_liked_songs
   method_args:
-    limit: 2500
-  records_length: 1412
-  response_time: 9.623
+    limit: 200
+  records_length: 300
+  response_time: 2.661
 CSV File:
-  bytes: '123932'
+  bytes: '122522'
   lines: 1413
-  size: 124K
-GitHub:
-  event_name: workflow_dispatch
-  event_schedule: ''
-  job: run
-  ref_name: main
-  repository: jwenerd/ytm-dl
-  run_attempt: '1'
-  run_id: '7605779401'
-  run_number: '170'
-  sha: c63eecb9b46251cdff7075d4ef0b4cd7fa588593
-  workflow: run
+  lines_added: 2
+  size: 120K
 Tracks:
   description: Music you like in any YouTube app will show here. You can change this
     in Settings.
   duration: null
-  duration_seconds: 680757
+  duration_seconds: 135393
   id: LM
   privacy: PUBLIC
   related: []
