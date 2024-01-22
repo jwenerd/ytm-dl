@@ -1,60 +1,16 @@
 import sys
-import time
 import concurrent.futures
-import threading
-import yaml
-import time
+import resource
 
-from src.api import get_api_client
+from src.api import ApiMethod
 from src.output import Output
-from src.meta import write_readme
-
-def get_records(response):
-	meta = {}
-	if isinstance(response, dict) and 'tracks' in response.keys():
-		records = response['tracks']
-		del response['tracks']
-		meta['Tracks'] = response
-	else:
-		records = response
-
-	return [records, meta]
-
-def save_api_results():
-	time_str = time.strftime("%Y_%m_%d_%H_%M")
-	with open(f'api_results_{time_str}.yaml', 'w') as f:
-		f.write(yaml.dump(save_api_results.store))
-
-save_api_results.store = {}
-
-thread_local = threading.local()
+from src.meta import write_meta
 
 def ytmusic_to_file(file):
-	api_method = 'get_' + file
-	if not hasattr(thread_local, "ytmusic"):
-			thread_local.ytmusic = get_api_client()
-
-	api_args = {
-		'get_history': {},
-		'get_liked_songs': { 'limit': 200 },
-		'get_library_songs': { 'limit': 200, 'order': 'recently_added' }
-	}.get(api_method, { 'limit': 2500, 'order': 'recently_added' })
-
-	start_time = time.time()
-	api_results = getattr(thread_local.ytmusic, api_method)(**api_args)
-	records, meta = get_records(api_results.copy())
-	elapsed_time = round(time.time() - start_time, 3)
-
-	meta['API'] = {
-		'records_length': len(records), 'method': api_method,
-		'method_args': api_args, 'response_time': elapsed_time
-	}
-
+	records, meta = ApiMethod(f'get_{file}').perform()
 	result = Output(file, records, meta).write_files()
 	if result is None:
 		return
-
-	save_api_results.store[api_method] = api_results
 	return result
 
 def do_updates(option):
@@ -72,9 +28,11 @@ def do_updates(option):
 		files_written = list(executor.map(lambda file: ytmusic_to_file(file), files))
 
 	files_written = set(filter(None, files_written))
-	if len(files_written) > 0:
-		write_readme()
-		save_api_results()
+	output_updates = len(files_written) > 0
+
+	ApiMethod.save_api_artifact()
+	write_meta(output_updates)
+
 
 if __name__ == "__main__":
 		option = ''

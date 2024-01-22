@@ -3,7 +3,7 @@ import os
 import subprocess
 from types import MappingProxyType
 import yaml
-from .util import output_path, write_file, deep_merge, deep_sort_keys
+from .util import output_path, write_file, write_output_file, deep_merge, deep_sort_keys
 from .markdown import md_expand, md_lines, md_table
 
 GITHUB_META_KEYS = ['event_name', 'event_schedule', 'job', 'ref_name', 'run_attempt', 'repository', 'run_id', 'run_number', 'sha', 'workflow']
@@ -37,7 +37,7 @@ class MetaOutput:
 	def write_files(self):
 		self.update_file_meta()
 		self.clean_up_meta()
-		write_file(f'meta/{self.file}', yaml.dump(self.meta_dict))
+		write_output_file(f'meta/{self.file}', yaml.dump(self.meta_dict))
 
 def file_sizes(file):
 	cmds = ' && '.join([f'wc -l {file}',
@@ -72,4 +72,35 @@ def write_readme():
 		md_expand('### 📁 Files',
 		md_table(data)),
 	]
-	write_file('README.md', md_lines(rm))
+	write_output_file('README.md', md_lines(rm))
+
+def write_api_meta():
+	data = list(MetaStore.get('api').data.values())
+	md = md_lines('### 🤖 API Info', md_table(data))
+	write_file('tmp/step_output/api_info.md', md)
+
+def write_meta(updated = False):
+	if updated:
+		write_readme()
+
+	if updated and IS_GITHUB:
+		url = f"https://github.com/{GITHUB_META['repository']}/commit/__OUTPUTCOMMIT__"
+		write_file('tmp/commit_link.md', f"### ± [Output Commit]({url})" + "\n\n")
+
+	write_api_meta()
+
+class MetaStore:
+	instances = {}
+
+	@staticmethod
+	def get(name):
+		if MetaStore.instances.get(name,None) is None:
+			MetaStore.instances[name] = MetaStore(name)
+		return MetaStore.instances[name]
+
+	def __init__(self, name):
+		self.name = name
+		self.data = {}
+
+	def add(self, key, value):
+		self.data[key] = value
