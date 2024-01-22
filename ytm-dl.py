@@ -21,8 +21,8 @@ def get_records(response):
 	return [records, meta]
 
 def save_api_results():
-	timestr = time.strftime("%Y_%m_%d_%H_%M")
-	with open(f'api_results_{timestr}.yaml', 'w') as f:
+	time_str = time.strftime("%Y_%m_%d_%H_%M")
+	with open(f'api_results_{time_str}.yaml', 'w') as f:
 		f.write(yaml.dump(save_api_results.store))
 
 save_api_results.store = {}
@@ -36,14 +36,12 @@ def ytmusic_to_file(file):
 
 	api_args = {
 		'get_history': {},
-		'get_liked_songs': { 'limit': 2500 }
+		'get_liked_songs': { 'limit': 200 },
+		'get_library_songs': { 'limit': 200, 'order': 'recently_added' }
 	}.get(api_method, { 'limit': 2500, 'order': 'recently_added' })
 
-
-	api_fn = getattr(thread_local.ytmusic, api_method)
-
 	start_time = time.time()
-	api_results = api_fn(**api_args)
+	api_results = getattr(thread_local.ytmusic, api_method)(**api_args)
 	records, meta = get_records(api_results.copy())
 	elapsed_time = round(time.time() - start_time, 3)
 
