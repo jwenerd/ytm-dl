@@ -42,6 +42,7 @@ jobs:
           git fetch origin
           git checkout origin/main-output output
       - name: Run 🎶
+        id: run
         env:
           INPUT_RUN_OPTION: ${{ inputs.run_option }}
           SCHEDULE_RUN_OPTION: ${{ github.event.schedule != '19 3 * * *' && 'frequent' || 'all' }}
@@ -84,12 +85,18 @@ jobs:
             echo "" >> $GITHUB_STEP_SUMMARY
           done
           echo "::endgroup::"
+
+          echo "::group::determine if need to commit to output"
+          git diff-index --quiet origin/main-output output/ || echo "DOCOMMIT=1" >> "$GITHUB_OUTPUT"
+          echo "::endgroup::"
       - uses: actions/upload-artifact@v4
         with:
           name: api_results
           path: artifacts/api_results_*
           if-no-files-found: ignore
       - name: Commit Changes
+        id: commit
+        if: ${{ steps.run.outputs.DOCOMMIT == '1' }}
         run: |
           true || 👨‍💻
           echo "::group::git checkout main-output"
