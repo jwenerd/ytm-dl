@@ -19,8 +19,6 @@ class MetaOutput:
 
 	def get_default_meta(self, existing_meta):
 		meta = {}
-		if IS_GITHUB:
-			meta['GitHub'] = dict(GITHUB_META)
 		deep_merge(meta, existing_meta)
 		return meta
 
@@ -46,7 +44,7 @@ def file_sizes(file):
 	file_meta_cmd = f"({cmds}) | xargs -n2 | cut -d ' ' -f 1"
 	lines, size, size_bytes = subprocess.check_output([file_meta_cmd], shell=True).decode().split()
 
-	return { 'lines': int(lines), 'size': size, 'bytes': size_bytes }
+	return { 'lines': int(lines), 'size': size, 'bytes': int(size_bytes) }
 
 OUTPUT_PATH = output_path()
 
