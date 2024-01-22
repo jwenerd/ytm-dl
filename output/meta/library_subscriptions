@@ -3,11 +3,12 @@ API:
     limit: 2500
     order: recently_added
   method: get_library_subscriptions
-  records_length: 64
-  time: 1.669
+  records_length: 62
+  time: 1.69
 CSV File:
-  bytes: '2617'
-  lines: 65
+  bytes: '2598'
+  lines: 66
+  lines_added: 1
   size: 4.0K
 GitHub:
   event_name: workflow_dispatch
@@ -16,7 +17,7 @@ GitHub:
   ref_name: main
   repository: jwenerd/ytm-dl
   run_attempt: '1'
-  run_id: '7610942545'
-  run_number: '182'
-  sha: 72ec2e72f99c180675c28c342cc531fccf72561c
+  run_id: '7611778266'
+  run_number: '185'
+  sha: 78985df55c2b7e413628eb15bbd66155d0981b06
   workflow: run
