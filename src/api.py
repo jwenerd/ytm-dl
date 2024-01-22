@@ -1,5 +1,5 @@
 from ytmusicapi import YTMusic
-from .util import write_file
+from .util import write_file, make_dict_readonly
 from .meta import MetaStore
 import yaml
 import time
@@ -21,6 +21,17 @@ def get_thread_client():
 			thread_local.ytmusic = YTMusic("oauth.json")
 	return thread_local.ytmusic
 
+
+API_ARGUMENTS = {
+	'get_history': {},
+	'get_liked_songs': { 'limit': 500 },
+	'get_library_songs': { 'limit': 500, 'order': 'recently_added' },
+	'get_library_subscriptions': { 'limit': 25, 'order': 'recently_added' }
+}
+DEFAULT_ARGUMENTS = { 'limit': 2500, 'order': 'recently_added' }
+make_dict_readonly(DEFAULT_ARGUMENTS)
+make_dict_readonly(API_ARGUMENTS)
+
 class ApiMethod:
 
 	all_api_results = {}
@@ -37,22 +48,25 @@ class ApiMethod:
 		self.client = get_thread_client()
 		self.method = method
 		self.methodfn = getattr(self.client, method)
-		self.method_args = {
-			'get_history': {},
-			'get_liked_songs': { 'limit': 500 },
-			'get_library_songs': { 'limit': 500, 'order': 'recently_added' }
-		}.get(method, { 'limit': 2500, 'order': 'recently_added' })
+		self.method_args = dict(API_ARGUMENTS.get(method, DEFAULT_ARGUMENTS))
 
 	def perform(self):
 		start_time = time.time()
 		api_results = self.methodfn(**self.method_args)
-		elapsed_time = round(time.time() - start_time, 3)
+		self.elapsed_time = round(time.time() - start_time, 2)
 
-		records, meta = records_from_response(api_results.copy())
-		meta['API'] = {
-			'method': self.method, 'args': self.method_args,
-			'records_length': len(records), 'time': elapsed_time
-		}
+		self.records, meta = records_from_response(api_results.copy())
+		meta['API'] = self.api_meta
+
 		MetaStore.get('api_results').add(self.method, api_results)
 		MetaStore.get('api').add(self.method, meta['API'])
-		return [records, meta]
+		return [self.records, meta]
+
+	@property
+	def api_meta(self):
+		return  {
+			'method': self.method,
+			'args': self.method_args,
+			'records_length': len(self.records),
+			'time': self.elapsed_time
+		}
