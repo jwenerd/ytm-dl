@@ -78,10 +78,14 @@ jobs:
           cat $HOME/run_output  >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
+          for file in ./tmp/step_output/*.md; do
+            cat $file >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+          done
       - uses: actions/upload-artifact@v4
         with:
           name: api_results
-          path: api_results_*
+          path: artifacts/api_results_*
           if-no-files-found: ignore
       - name: Commit Changes
         run: |
@@ -110,11 +114,14 @@ jobs:
             git commit --message="$GITHUB_JOB($RUN_OPTION) $GITHUB_EVENT_NAME #$GITHUB_RUN_NUMBER $RANDOM_EMOJI"
             git push origin main-output
 
-            commit_url="https://github.com/$GITHUB_REPOSITORY/commit/$(git rev-parse HEAD)"
-            echo "### ± [Output Commit]($commit_url)" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo ""
+            cat ../tmp/commit_link.md | awk '{if (match($0, "__OUTPUTCOMMIT__")) {cmd="git rev-parse HEAD"; cmd | getline output; close(cmd); gsub("__OUTPUTCOMMIT__", output)} print}' >> $GITHUB_STEP_SUMMARY
+            cat ../tmp/commit_link.md | awk '{if (match($0, "__OUTPUTCOMMIT__")) {cmd="git rev-parse HEAD"; cmd | getline output; close(cmd); gsub("__OUTPUTCOMMIT__", output)} print}'
 
+            git gc
+            echo "##### ∑ git count-objects" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            git count-objects -vH | head -5 >> $GITHUB_STEP_SUMMARY >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
             echo "::endgroup::"
 
             echo "::group::tag latest-output"

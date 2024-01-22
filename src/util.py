@@ -1,6 +1,10 @@
 import os
 import hashlib
 
+def create_directory(path):
+	if not os.path.exists(path):
+		os.makedirs(path)
+
 def output_path(file=''):
 	if len(file) > 0:
 		file = f'/{file}'
@@ -17,8 +21,12 @@ def file_hash(file):
 	return hash
 
 def write_file(file, content):
-	with open(output_path(file), 'w') as f:
+	create_directory(os.path.dirname(file))
+	with open(file, 'w') as f:
 		f.write(str(content))
+
+def write_output_file(file, content):
+	write_file(output_path(file), content)
 
 def deep_merge(dict1, dict2):
 	for key, value in dict2.items():
