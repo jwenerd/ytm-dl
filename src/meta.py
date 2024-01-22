@@ -1,14 +1,14 @@
 import glob
 import os
 import subprocess
-from types import MappingProxyType
 import yaml
-from .util import output_path, write_file, write_output_file, deep_merge, deep_sort_keys
+from .util import output_path, write_file, write_output_file, deep_merge, deep_sort_keys, make_dict_readonly
 from .markdown import md_expand, md_lines, md_table
 
 GITHUB_META_KEYS = ['event_name', 'event_schedule', 'job', 'ref_name', 'run_attempt', 'repository', 'run_id', 'run_number', 'sha', 'workflow']
 GITHUB_META_KEYS = tuple(['github_' + v for v in GITHUB_META_KEYS])
-GITHUB_META = MappingProxyType({k.lower().replace('github_',''): v for k, v in os.environ.items() if k.lower() in GITHUB_META_KEYS})
+GITHUB_META = {k.lower().replace('github_',''): v for k, v in os.environ.items() if k.lower() in GITHUB_META_KEYS}
+make_dict_readonly(GITHUB_META)
 IS_GITHUB = len(GITHUB_META) > 0
 
 class MetaOutput:
@@ -84,7 +84,7 @@ def write_meta(updated = False):
 		write_readme()
 
 	if updated and IS_GITHUB:
-		url = f"https://github.com/{GITHUB_META['repository']}/commit/__OUTPUTCOMMIT__"
+		url = f"https://github.com/{GITHUB_META['repository']}/commit/__OUTPUTCOMMIT__?diff=unified&w=1"
 		write_file('tmp/commit_link.md', f"### ± [Output Commit]({url})" + "\n\n")
 
 	write_api_meta()

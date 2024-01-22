@@ -1,5 +1,6 @@
 import os
 import hashlib
+from types import MappingProxyType
 
 def create_directory(path):
 	if not os.path.exists(path):
@@ -34,6 +35,14 @@ def deep_merge(dict1, dict2):
 				deep_merge(dict1[key], value)
 		else:
 				dict1[key] = value
+
+
+
+def make_dict_readonly(d):
+	for k, v in d.items():
+		if isinstance(v, dict):
+			make_dict_readonly(v)
+			d[k] = MappingProxyType(v)
 
 def deep_sort_keys(d):
 	if isinstance(d, dict):
