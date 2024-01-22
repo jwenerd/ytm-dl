@@ -1,23 +1,12 @@
 API:
-  method: get_library_songs
-  method_args:
-    limit: 200
+  args:
+    limit: 500
     order: recently_added
-  records_length: 225
-  response_time: 2.765
+  method: get_library_songs
+  records_length: 525
+  time: 3.7
 CSV File:
-  bytes: '224430'
-  lines: 2542
-  lines_added: 3
+  bytes: 224490
+  lines: 2543
+  lines_added: 1
   size: 220K
-GitHub:
-  event_name: schedule
-  event_schedule: 19 0,6,9,12,15,18,21 * * *
-  job: run
-  ref_name: main
-  repository: jwenerd/ytm-dl
-  run_attempt: '1'
-  run_id: '7607373269'
-  run_number: '172'
-  sha: 8ff45f7427ad435e89480c39d2ff304ff6fa38ac
-  workflow: run
