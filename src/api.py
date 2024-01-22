@@ -32,6 +32,10 @@ DEFAULT_ARGUMENTS = { 'limit': 2500, 'order': 'recently_added' }
 make_dict_readonly(DEFAULT_ARGUMENTS)
 make_dict_readonly(API_ARGUMENTS)
 
+
+def suggest_search(search):
+	return [search, get_thread_client().get_search_suggestions(search)]
+
 class ApiMethod:
 
 	all_api_results = {}
@@ -49,6 +53,7 @@ class ApiMethod:
 		self.method = method
 		self.methodfn = getattr(self.client, method)
 		self.method_args = dict(API_ARGUMENTS.get(method, DEFAULT_ARGUMENTS))
+
 
 	def perform(self):
 		start_time = time.time()
