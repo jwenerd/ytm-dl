@@ -2,20 +2,20 @@ API:
   method: get_history
   method_args: {}
   records_length: 200
-  response_time: 1.492
+  response_time: 1.116
 CSV File:
-  bytes: '90433'
-  lines: 886
-  lines_added: 1
+  bytes: '94100'
+  lines: 923
+  lines_added: 37
   size: 92K
 GitHub:
   event_name: schedule
-  event_schedule: 19 3 * * *
+  event_schedule: 19 0,6,9,12,15,18,21 * * *
   job: run
   ref_name: main
   repository: jwenerd/ytm-dl
   run_attempt: '1'
-  run_id: '7606089071'
-  run_number: '171'
-  sha: 7cc2b1bd910a52c2c5b4a4f43cf6ee7ec85c2c7c
+  run_id: '7607373269'
+  run_number: '172'
+  sha: 8ff45f7427ad435e89480c39d2ff304ff6fa38ac
   workflow: run
