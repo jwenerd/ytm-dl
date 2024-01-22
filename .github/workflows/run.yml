@@ -1,6 +1,10 @@
 name: run
 
 on:
+  repository_dispatch:
+    types:
+      - all
+      - frequent
   workflow_dispatch:
     inputs:
       run_option:
