@@ -4,9 +4,9 @@ API:
     order: recently_added
   method: get_library_artists
   records_length: 1997
-  time: 32.013
+  time: 47.022
 CSV File:
-  bytes: '90605'
+  bytes: '90599'
   lines: 1998
   size: 92K
 GitHub:
@@ -16,7 +16,7 @@ GitHub:
   ref_name: main
   repository: jwenerd/ytm-dl
   run_attempt: '1'
-  run_id: '7609898230'
-  run_number: '179'
-  sha: c2dc350314519cf67e911070820946ffdb048835
+  run_id: '7610427918'
+  run_number: '180'
+  sha: 78955f146e9b1e13d7d167a1ce0f937d60437f38
   workflow: run
