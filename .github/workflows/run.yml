@@ -127,17 +127,21 @@ jobs:
 
             cat ../tmp/commit_link.md | awk '{if (match($0, "__OUTPUTCOMMIT__")) {cmd="git rev-parse HEAD"; cmd | getline output; close(cmd); gsub("__OUTPUTCOMMIT__", output)} print}' >> $GITHUB_STEP_SUMMARY
             cat ../tmp/commit_link.md | awk '{if (match($0, "__OUTPUTCOMMIT__")) {cmd="git rev-parse HEAD"; cmd | getline output; close(cmd); gsub("__OUTPUTCOMMIT__", output)} print}'
-
-            git gc
-            echo "##### ∑ git count-objects" >> $GITHUB_STEP_SUMMARY
-            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
-            git count-objects -vH | head -5 >> $GITHUB_STEP_SUMMARY >> $GITHUB_STEP_SUMMARY
-            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
-            echo "::endgroup::"
+            echo  "::endgroup::"
 
             echo "::group::tag latest-output"
             git fetch --tags --force
             git tag --force latest-output
             git push --force --tags
             echo  "::endgroup::"
+
+            echo "::group::tag git count-objects"
+            cd ..
+            git fetch --all
+            git gc
+            echo "##### ∑ git count-objects" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            git count-objects -vH | head -5 >> $GITHUB_STEP_SUMMARY >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            echo "::endgroup::"
           fi
