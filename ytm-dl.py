@@ -5,10 +5,8 @@ import string
 import yaml
 
 from src.api import ApiMethod, suggest_search
-from src.output import Output, write_output_yaml
+from src.output import Output, update_search_suggestions
 from src.meta import write_meta
-from src.util import write_output_file
-
 
 def ytmusic_to_file(file):
 	records, meta = ApiMethod(f'get_{file}').perform()
@@ -17,12 +15,11 @@ def ytmusic_to_file(file):
 		return
 	return result
 
-def write_search_suggest():
+def do_search_suggestions():
 	with concurrent.futures.ThreadPoolExecutor() as executor:
 		search_results = list(executor.map(lambda l: suggest_search(l), list(string.ascii_lowercase)))
-	write_output_yaml('search/suggest_by_letter', {row[0]: row[1] for row in search_results})
-	print('created suggest_by_letter')
-	return 'search/suggest_by_letter'
+	search_results =  {row[0]: row[1] for row in search_results}
+	return update_search_suggestions(search_results)
 
 def do_updates(option):
 	if not option in ['all', 'frequent']:
@@ -39,7 +36,7 @@ def do_updates(option):
 		files_written += list(executor.map(lambda file: ytmusic_to_file(file), files))
 
 	if option == 'all':
-		files_written += write_search_suggest()
+		files_written += do_search_suggestions()
 
 	files_written = set(filter(None, files_written))
 	output_updates = len(files_written) > 0

@@ -2,7 +2,7 @@ from ytmusicapi import YTMusic
 from .util import write_file, make_dict_readonly
 from .meta import MetaStore
 import yaml
-import time
+from time import time, strftime
 import threading
 
 def records_from_response(response):
@@ -45,7 +45,7 @@ class ApiMethod:
 		data = MetaStore.get('api_results').data
 		if len(data) == 0:
 			return
-		time_str = time.strftime("%Y_%m_%d_%H_%M")
+		time_str = strftime("%Y_%m_%d_%H_%M")
 		write_file(f'artifacts/api_results_{time_str}.yaml', yaml.dump(data))
 
 	def __init__(self, method):
@@ -56,9 +56,9 @@ class ApiMethod:
 
 
 	def perform(self):
-		start_time = time.time()
+		start_time = time()
 		api_results = self.methodfn(**self.method_args)
-		self.elapsed_time = round(time.time() - start_time, 2)
+		self.elapsed_time = round(time() - start_time, 2)
 
 		self.records, meta = records_from_response(api_results.copy())
 		meta['API'] = self.api_meta
