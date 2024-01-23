@@ -2,9 +2,9 @@ API:
   args: {}
   method: get_history
   records_length: 200
-  time: 1.27
+  time: 1.37
 CSV File:
-  bytes: 106371
-  lines: 1078
-  lines_added: 26
-  size: 104K
+  bytes: 108024
+  lines: 1093
+  lines_added: 15
+  size: 108K
