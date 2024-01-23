@@ -111,17 +111,14 @@ jobs:
           echo "::endgroup::"
 
           if ! git diff-index --quiet HEAD; then
-            echo "::group::emoji sparkles"
+            echo "::group::commit & push"
+
             curl -s https://gist.githubusercontent.com/jwenerd/1679dda15c44739b4781cb946533381b/raw/ef35475552d2dfa2e5bb7ae49f542b39aaaa7b45/random_emoji.sh | bash -s
             RANDOM_EMOJI=$(cat /tmp/jw_rand_emoji)
-            echo "::endgroup::"
 
-            echo "::group::git config for update"
             git config --global user.name "GitHub Actions"
             git config --global user.email "<>"
-            echo "::endgroup::"
 
-            echo "::group::commit & push"
             git commit --message="$GITHUB_JOB($RUN_OPTION) $GITHUB_EVENT_NAME #$GITHUB_RUN_NUMBER $RANDOM_EMOJI"
             git push origin main-output
 
@@ -135,13 +132,13 @@ jobs:
             git push --force --tags
             echo  "::endgroup::"
 
-            echo "::group::tag git count-objects"
+            echo "::group::git count-objects"
             cd ..
             git fetch --all
             git gc
+            du -h -d 0 .git
             echo "##### ∑ git count-objects" >> $GITHUB_STEP_SUMMARY
-            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
-            git count-objects -vH | head -5 >> $GITHUB_STEP_SUMMARY >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`$(git count-objects -vH | head -5)\n\`\`\`" >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
             echo "::endgroup::"
           fi

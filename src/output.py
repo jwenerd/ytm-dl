@@ -76,10 +76,13 @@ def update_search_suggestions(search_results):
 	data = read_output_yaml(output_file)
 	if data is None: data = {}
 
-	for key, value in search_results.items():
-		search_results[key] = list(set(data.get(key, []) + value))
+	added_count = 0
+	for key, data_new in search_results.items():
+		data_before = data.get(key, [])
+		search_results[key] = list(set(data_before + data_new))
 		search_results[key].sort()
+		added_count += len(search_results[key]) - len(data_before)
 
 	write_output_yaml(output_file, search_results)
-	print('updated search/suggest_by_letter')
+	print(f'added {added_count} to search/suggest_by_letter')
 	return 'search/suggest_by_letter'

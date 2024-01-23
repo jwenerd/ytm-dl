@@ -37,9 +37,6 @@ def suggest_search(search):
 	return [search, get_thread_client().get_search_suggestions(search)]
 
 class ApiMethod:
-
-	all_api_results = {}
-
 	@staticmethod
 	def save_api_artifact():
 		data = MetaStore.get('api_results').data
