@@ -1,6 +1,7 @@
 import os
 import hashlib
 from types import MappingProxyType
+import yaml
 
 def create_directory(path):
 	if not os.path.exists(path):
@@ -25,6 +26,17 @@ def write_file(file, content):
 	create_directory(os.path.dirname(file))
 	with open(file, 'w') as f:
 		f.write(str(content))
+
+def write_output_yaml(file, records):
+	write_output_file(f'{file}', yaml.dump(records))
+
+def read_output_yaml(file):
+	try:
+		with open(output_path(file), 'r') as f:
+			data = yaml.safe_load(f)
+		return data
+	except OSError as e:
+		return
 
 def write_output_file(file, content):
 	write_file(output_path(file), content)

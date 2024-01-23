@@ -4,11 +4,8 @@ import shutil
 import yaml
 from .mapping import Mapping
 from .prepend import prepend_rows_for_file
-from .util import file_hash, output_path, write_output_file
+from .util import file_hash, output_path, read_output_yaml, write_output_yaml
 from .meta import MetaOutput
-
-def write_output_yaml(file, records):
-	write_output_file(f'{file}.yaml', yaml.dump(records))
 
 # todo: rename this output
 class Output:
@@ -73,3 +70,16 @@ class Output:
 		print(log)
 
 		return self.file
+
+def update_search_suggestions(search_results):
+	output_file = 'search/suggest_by_letter.yaml'
+	data = read_output_yaml(output_file)
+	if data is None: data = {}
+
+	for key, value in search_results.items():
+		search_results[key] = list(set(data.get(key, []) + value))
+		search_results[key].sort()
+
+	write_output_yaml(output_file, search_results)
+	print('updated search/suggest_by_letter')
+	return 'search/suggest_by_letter'
