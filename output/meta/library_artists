@@ -3,9 +3,9 @@ API:
     limit: 2500
     order: recently_added
   method: get_library_artists
-  records_length: 2005
-  time: 28.73
+  records_length: 2006
+  time: 37.55
 CSV File:
-  bytes: 90918
-  lines: 2006
+  bytes: 90954
+  lines: 2007
   size: 92K
