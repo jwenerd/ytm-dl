@@ -1,6 +1,6 @@
 # 📝  output 
 
-## ⚙️ [run #254](https://github.com/jwenerd/ytm-dl/actions/runs/7705858510)
+## ⚙️ [run #259](https://github.com/jwenerd/ytm-dl/actions/runs/7715788734)
 
 <details>
 
@@ -16,7 +16,7 @@
 |[`output/library_songs.csv` ](output/library_songs.csv)                |2915 |248K|250603|
 |[`output/liked_songs.csv` ](output/liked_songs.csv)                    |1452 |124K|126170|
 |[`output/library_artists.csv` ](output/library_artists.csv)            |2030 |92K |92134 |
-|[`output/history.csv` ](output/history.csv)                            |1816 |176K|177809|
+|[`output/history.csv` ](output/history.csv)                            |1844 |180K|180327|
 |[`output/library_subscriptions.csv` ](output/library_subscriptions.csv)|68   |4.0K|2670  |
 
 </details>
