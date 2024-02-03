@@ -12,7 +12,7 @@
 
 |                                                                       |lines|size|bytes |
 |-----------------------------------------------------------------------|-----|----|------|
-|[`output/history.csv` ](output/history.csv)                            |2113 |204K|206128|
+|[`output/history.csv` ](output/history.csv)                            |2123 |204K|208361|
 |[`output/library_albums.csv` ](output/library_albums.csv)              |950  |68K |66387 |
 |[`output/library_songs.csv` ](output/library_songs.csv)                |3000 |252K|257311|
 |[`output/library_artists.csv` ](output/library_artists.csv)            |2111 |96K |95798 |
