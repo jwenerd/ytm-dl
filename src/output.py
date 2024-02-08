@@ -6,6 +6,7 @@ from .mapping import Mapping
 from .prepend import prepend_rows_for_file
 from .util import file_hash, output_path, read_output_yaml, write_output_yaml
 from .meta import MetaOutput
+import random
 
 # todo: rename this output
 class Output:
@@ -71,10 +72,24 @@ class Output:
 
 		return self.file
 
+def read_search_suggestions():
+	output_file = 'search/suggest_by_letter.yaml'
+	data = read_output_yaml(output_file)
+	if data is None: data = {}
+	return data
+
+def get_words_from_suggestions(size_gt = 3):
+	data = read_search_suggestions()
+	words = [' '.join(i).split() for i in list(data.values())]
+	words = [w for l in words for w in l]
+	words = [word for word in set(words) if len(word) > size_gt]
+	return words
+
 def update_search_suggestions(search_results):
 	output_file = 'search/suggest_by_letter.yaml'
 	data = read_output_yaml(output_file)
 	if data is None: data = {}
+	data = read_search_suggestions()
 
 	added_count = 0
 	for key, data_new in search_results.items():

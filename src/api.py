@@ -32,7 +32,6 @@ DEFAULT_ARGUMENTS = { 'limit': 2500, 'order': 'recently_added' }
 make_dict_readonly(DEFAULT_ARGUMENTS)
 make_dict_readonly(API_ARGUMENTS)
 
-
 def suggest_search(search):
 	return [search, get_thread_client().get_search_suggestions(search)]
 
