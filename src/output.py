@@ -4,10 +4,14 @@ import shutil
 import yaml
 from .mapping import Mapping
 from .prepend import prepend_rows_for_file
-from .util import file_hash, output_path, read_output_yaml, write_output_yaml
+from .util import file_hash, file_exists, output_path, read_output_yaml, write_output_yaml
 from .meta import MetaOutput
 import random
 
+PREPEND_FILES = [
+	'history', 'liked_songs', 'library_songs', 'library_subscriptions',
+	'library_upload_songs', 'library_upload_artists', 'library_upload_albums'
+]
 # todo: rename this output
 class Output:
 	readme_written = False
@@ -16,8 +20,9 @@ class Output:
 		self.file = file
 		self.csv_file = self.file + '.csv'
 		self.csv_file_with_path = output_path(self.csv_file)
+		self.file_exists = file_exists(self.csv_file_with_path)
 
-		self.prepend = file in ['history', 'liked_songs', 'library_songs', 'library_subscriptions']
+		self.prepend = file in PREPEND_FILES
 		self.by_key = file in ['library_subscriptions']
 
 		self.mapping = Mapping(file, records)
@@ -48,16 +53,21 @@ class Output:
 		# lastly - delete the old data
 		os.unlink(prev_file)
 
+	def update_rows_for_prepend(self):
+		self.rows = prepend_rows_for_file(self.csv_file_with_path, self.rows, self.by_key)
+
 	def write_files(self):
 		self.rows = self.mapping.get_rows()
 
-		if self.prepend or self.by_key:
-			self.rows = prepend_rows_for_file(self.csv_file_with_path, self.rows, self.by_key)
-			self.meta.add_meta('CSV File', { 'lines_added': len(self.rows) })
+		use_prepend = self.file_exists and (self.prepend or self.by_key)
+
+		if use_prepend:
+			self.update_rows_for_prepend()
+			new_rows_count = len(self.rows)
+			self.meta.add_meta('CSV File', { 'lines_added': new_rows_count })
+
 			# todo: if doing other files need to pass different look aahead
-			# todo: need some thing here for if starting brand new file
-			if len(self.rows) > 0:
-				self.prepend_to_csv()
+			if new_rows_count > 0: self.prepend_to_csv()
 		else:
 			self.write_csv()
 
