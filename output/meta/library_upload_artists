@@ -1,0 +1,11 @@
+API:
+  args:
+    limit: null
+    order: recently_added
+  method: get_library_upload_artists
+  records_length: 1725
+  time: 13.21
+CSV File:
+  bytes: 193441
+  lines: 1726
+  size: 192K
