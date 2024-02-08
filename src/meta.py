@@ -1,4 +1,4 @@
-import glob
+from glob import glob
 import os
 import subprocess
 import yaml
@@ -42,21 +42,21 @@ def file_sizes(file):
 									f'du -h {file}',
 									f'wc -c {file}'])
 	file_meta_cmd = f"({cmds}) | xargs -n2 | cut -d ' ' -f 1"
-	lines, size, size_bytes = subprocess.check_output([file_meta_cmd], shell=True).decode().split()
+	lines, size, _size_bytes = subprocess.check_output([file_meta_cmd], shell=True).decode().split()
 
-	return { 'lines': int(lines), 'size': size, 'bytes': int(size_bytes) }
-
-OUTPUT_PATH = output_path()
+	return { 'lines': int(lines), 'size': size }
 
 def file_list():
-	csv_files = glob.glob(f'{OUTPUT_PATH}/**/*.csv', recursive = True)
+	path = output_path()
+	csv_files = glob(f'{path}/**/*.csv', recursive = True)
+	csv_files.sort()
 	return [ { 'file': f, **(file_sizes(f))  } for f in csv_files ]
 
 def write_readme():
-	rm = ['# 📝  output ']
+	markdown = ['# 📝  output ']
 	if IS_GITHUB:
 		href = f"https://github.com/{GITHUB_META['repository']}/actions/runs/{GITHUB_META['run_id']}"
-		rm += [f'## ⚙️ [{GITHUB_META["job"]} #{GITHUB_META["run_number"]}]({href})']
+		markdown += [f'## ⚙️ [{GITHUB_META["job"]} #{GITHUB_META["run_number"]}]({href})']
 
 	# file table
 	to_link = lambda file: f'[{quote(file)} ]({file})'
@@ -66,11 +66,8 @@ def write_readme():
 	data = [{k: fmt_file(v) if k == 'file' else v for k, v in d.items()} for d in file_list()]
 	data = [{'' if k == 'file' else k: v for k, v in d.items()} for d in data]
 
-	rm += [
-		md_expand('### 📁 Files',
-		md_table(data)),
-	]
-	write_output_file('README.md', md_lines(rm))
+	markdown += ['### 📁 Files', md_table(data)]
+	write_output_file('README.md', md_lines(markdown))
 
 def write_api_meta():
 	data = list(MetaStore.get('api').data.values())
