@@ -1,8 +1,6 @@
 import sys
 import concurrent.futures
-import resource
 import string
-import yaml
 
 from src.api import ApiMethod, suggest_search
 from src.output import Output, update_search_suggestions
@@ -22,14 +20,19 @@ def do_search_suggestions():
 	return update_search_suggestions(search_results)
 
 def do_updates(option):
-	if not option in ['all', 'frequent']:
-		print('Option must be all or frequent')
+	if not option in ['all', 'all-weekly', 'frequent']:
+		print('Option must be all, all-weekly, or frequent')
 		print('  given: ' + str(option))
 		sys.exit(1)
 
 	files = ['liked_songs', 'library_songs', 'history']
 	if option == 'all':
-		files = files +  ['library_subscriptions', 'library_artists', 'library_albums']
+		files += ['library_subscriptions', 'library_artists', 'library_albums']
+
+	if option == 'all-weekly': # todo: schedule this in action
+		# make all-* behave like all
+		# all possibly renamed to 'daily', this renmaed to weekly?
+		files += ['library_upload_songs', 'library_upload_artists', 'library_upload_albums']
 
 	files_written = []
 	with concurrent.futures.ThreadPoolExecutor() as executor:

@@ -3,6 +3,8 @@ import hashlib
 from types import MappingProxyType
 import yaml
 
+# todo output file class
+
 def create_directory(path):
 	if not os.path.exists(path):
 		os.makedirs(path)
@@ -12,9 +14,15 @@ def output_path(file=''):
 		file = f'/{file}'
 	return f'output{file}'
 
+def file_exists(file):
+	return os.path.isfile(file)
+
+def new_file(file):
+	return not file_exists(file)
+
 def file_hash(file):
 	file = output_path(file)
-	if not os.path.isfile(file):
+	if not file_exists(file):
 		return ''
 
 	with open(file) as f:

@@ -1,6 +1,7 @@
 
 def join_list_value(values, key='name'):
 	plucked = list(map(lambda t: t[key], values))
+	plucked = list(set(plucked)) # uniq
 	plucked.sort()
 	return ", ".join(plucked)
 
@@ -17,6 +18,12 @@ class Mapping:
 		],
 		'library_albums': [
 			'artists', 'title', 'type', 'year', 'browseId'
+		],
+		'library_upload_albums': [
+			'artists', 'title', 'year', 'browseId'
+		],
+		'library_upload_artists': [
+			'artist', 'browseId'
 		]
 	}
 
