@@ -1,7 +1,7 @@
 import csv
 
 
-def find_start_index(csv_file, new_ids):
+def find_start_index(csv_file, new_ids, tolerance = 2):
     existing_ids = get_existing_ids(csv_file, 200)
     for index, new_id in enumerate(new_ids):
         if new_id == existing_ids[0]:
@@ -16,7 +16,7 @@ def find_start_index(csv_file, new_ids):
                 return index
 
             difference = set(next_in_new) - set(next_in_existing)
-            if len(difference) <= 2:
+            if len(difference) <= tolerance:
                 # close enough match - could have had removals from
                 #  playlist or whatever
                 return index
@@ -44,7 +44,6 @@ def prepend_rows_for_file(csv_file, new_rows, by_key):
     new_ids = [lastof(new) for new in new_rows]
     if not by_key:
         start_index = find_start_index(csv_file, new_ids)
-        print(start_index)
         if start_index is None:
             return new_rows
         if start_index is not None:
