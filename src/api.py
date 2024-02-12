@@ -23,13 +23,14 @@ def get_thread_client():
 
 
 API_ARGUMENTS = {
-	'get_history': {},
-	'get_liked_songs': { 'limit': 500 },
-	'get_library_songs': { 'limit': 500, 'order': 'recently_added' },
-	'get_library_subscriptions': { 'limit': 25, 'order': 'recently_added' },
-	'get_library_upload_songs': { 'limit': 500, 'order': 'recently_added' },
-	'get_library_upload_artists': { 'limit': 50, 'order': 'recently_added' },
-	'get_library_upload_albums': { 'limit': 50, 'order': 'recently_added' },
+    "get_history": {},
+    "get_liked_songs": {"limit": 500},
+    "get_library_songs": {"limit": 500, "order": "recently_added"},
+    "get_library_subscriptions": {"limit": 25, "order": "recently_added"},
+    "get_library_upload_songs": {"limit": 500, "order": "recently_added"},
+    "get_library_upload_artists": {"limit": 50, "order": "recently_added"},
+    "get_library_upload_albums": {"limit": 50, "order": "recently_added"},
+    "get_library_artists": {"limit": 50, "order": "recently_added"},
 }
 DEFAULT_ARGUMENTS = { 'limit': 2500, 'order': 'recently_added' }
 make_dict_readonly(DEFAULT_ARGUMENTS)
