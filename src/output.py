@@ -6,11 +6,11 @@ from .mapping import Mapping
 from .prepend import prepend_rows_for_file
 from .util import file_hash, file_exists, output_path, read_output_yaml, write_output_yaml
 from .meta import MetaOutput
-import random
 
 PREPEND_FILES = [
 	'history', 'liked_songs', 'library_songs', 'library_subscriptions',
-	'library_upload_songs', 'library_upload_artists', 'library_upload_albums'
+	'library_upload_songs', 'library_upload_artists', 'library_upload_albums',
+	'library_albums'
 ]
 
 BY_KEY = ["library_subscriptions", "library_upload_artists", "library_artists"]
