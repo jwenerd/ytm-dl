@@ -10,6 +10,7 @@ pyvenv.cfg
 
 oauth.json
 .DS_Store
+.env
 cron.log
 
 output/*
