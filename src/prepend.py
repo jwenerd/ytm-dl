@@ -1,6 +1,5 @@
 import csv
 
-
 def find_start_index(csv_file, new_ids, tolerance = 2):
     existing_ids = get_existing_ids(csv_file, 200)
     for index, new_id in enumerate(new_ids):
@@ -23,7 +22,6 @@ def find_start_index(csv_file, new_ids, tolerance = 2):
 
     return None
 
-
 def get_existing_ids(csv_file, limit=float("inf")):  # default get all
     existing_ids = []
     with open(csv_file, "r") as f:
@@ -38,7 +36,6 @@ def get_existing_ids(csv_file, limit=float("inf")):  # default get all
 def lastof(row):
     # always he last
     return row[len(row) - 1]
-
 
 def prepend_rows_for_file(csv_file, new_rows, by_key):
     new_ids = [lastof(new) for new in new_rows]
