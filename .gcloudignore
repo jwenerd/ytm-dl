@@ -1,2 +1,3 @@
 *
-!src/cloud_functions.py
+!src/cloud_functions/
+src/cloud_functions/.env
