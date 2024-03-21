@@ -1,0 +1,3 @@
+*
+!src/cloud_functions/
+src/cloud_functions/.env
