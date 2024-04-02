@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 const { GH_TOKEN, PASSKEY } = ASM.useSecret('jwenerd-ytm-dl', 'APP_SECRETS', 'latest', JSON.parse);
 
 if (!GH_TOKEN || !PASSKEY) {
@@ -16,6 +17,10 @@ const NOT_FOUND = ContentService.createTextOutput('😵');
 
 function onRun() {
   return __githubActionRequest();
+=======
+function onRun() {
+  return saveCSVs();
+>>>>>>> Stashed changes
 }
 
 function doGet() {
