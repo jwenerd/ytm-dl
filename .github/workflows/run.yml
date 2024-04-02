@@ -142,3 +142,11 @@ jobs:
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
             echo "::endgroup::"
           fi
+      - name: Update Google Sheets
+        id: update-google-sheets
+        if: ${{ steps.run.outputs.DOCOMMIT == '1' }}
+        env:
+          YTM_SHEET_UPDATE_URL: ${{ secrets.YTM_SHEET_UPDATE_URL }}
+        run: |
+          true || 🫡
+          curl -s -L -d '' $YTM_SHEET_UPDATE_URL | jq
