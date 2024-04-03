@@ -4,7 +4,7 @@ charset-normalizer==3.3.2
 dill==0.3.8
 idna==3.6
 isort==5.13.2
-marshmallow==3.21.0
+marshmallow==3.21.1
 mccabe==0.7.0
 packaging==23.2
 platformdirs==4.2.0
@@ -15,4 +15,4 @@ PyYAML==6.0.1
 requests==2.31.0
 tomlkit==0.12.4
 urllib3==2.2.1
-ytmusicapi==1.5.3
+ytmusicapi==1.6.0
