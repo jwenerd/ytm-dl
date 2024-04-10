@@ -3,16 +3,16 @@ API:
     limit: 500
   method: get_liked_songs
   records_length: 600
-  time: 3.64
+  time: 3.65
 CSV File:
-  lines: 1664
+  lines: 1665
   lines_added: 1
-  size: 140K
+  size: 144K
 Tracks:
   description: Music you like in any YouTube app will show here. You can change this
     in Settings.
   duration: null
-  duration_seconds: 282832
+  duration_seconds: 282875
   id: LM
   owned: false
   privacy: PUBLIC
@@ -28,5 +28,5 @@ Tracks:
     url: https://www.gstatic.com/youtube/media/ytm/images/pbg/liked-music-@1200.png
     width: 1200
   title: Liked Music
-  trackCount: 1707
+  trackCount: 1708
   views: null
