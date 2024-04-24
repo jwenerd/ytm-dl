@@ -4,8 +4,8 @@ API:
     order: recently_added
   method: get_library_songs
   records_length: 515
-  time: 4.4
+  time: 3.54
 CSV File:
-  lines: 5497
-  lines_added: 15
+  lines: 5498
+  lines_added: 1
   size: 460K
