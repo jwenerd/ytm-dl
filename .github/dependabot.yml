@@ -10,22 +10,18 @@ updates:
     schedule:
       interval: "weekly"
     groups:
-       version-updates:
+      version-updates:
           applies-to: version-updates
           patterns:
             - "*"
-      version-updates-minor:
+      version-updates-minor-and-patch:
           applies-to: version-updates
-          update-types: minor
-          patterns:
-            - "*"
-      version-updates-patch:
-          applies-to: version-updates
-          update-types: patch
+          update-types: 
+            - "minor"
+            - "patch"
           patterns:
             - "*"
        security-updates:
           applies-to: security-updates
           patterns:
             - "*" 
-
