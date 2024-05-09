@@ -1,6 +1,5 @@
 certifi==2024.2.2
 charset-normalizer==3.3.2
-dill==0.3.8
 idna==3.7
 isort==5.13.2
 marshmallow==3.21.2
@@ -8,6 +7,5 @@ platformdirs==4.2.1
 py-markdown-table==0.4.0
 PyYAML==6.0.1
 requests==2.31.0
-tomlkit==0.12.5
 urllib3==2.2.1
 ytmusicapi==1.7.0
