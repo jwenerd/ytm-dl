@@ -6,6 +6,26 @@
 version: 2
 updates:
   - package-ecosystem: "pip"
-    directory: "/" # Location of package manifests
+    directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+       version-updates:
+          applies-to: version-updates
+          patterns:
+            - "*"
+      version-updates-minor:
+          applies-to: version-updates
+          update-types: minor
+          patterns:
+            - "*"
+      version-updates-patch:
+          applies-to: version-updates
+          update-types: patch
+          patterns:
+            - "*"
+       security-updates:
+          applies-to: security-updates
+          patterns:
+            - "*" 
+
