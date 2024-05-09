@@ -15,4 +15,4 @@ PyYAML==6.0.1
 requests==2.31.0
 tomlkit==0.12.4
 urllib3==2.2.1
-ytmusicapi==1.6.0
+ytmusicapi==1.7.0
