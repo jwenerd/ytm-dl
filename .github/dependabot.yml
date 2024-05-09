@@ -2,26 +2,25 @@
 # package ecosystems to update and where the package manifests are located.
 # Please see the documentation for all configuration options:
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
-
 version: 2
 updates:
-  - package-ecosystem: "pip"
-    directory: "/"
+  - package-ecosystem: pip
+    directory: /
     schedule:
-      interval: "weekly"
+      interval: weekly
     groups:
       version-updates:
-          applies-to: version-updates
-          patterns:
-            - "*"
+        applies-to: version-updates
+        patterns:
+          - "*"
       version-updates-minor-and-patch:
-          applies-to: version-updates
-          update-types: 
-            - "minor"
-            - "patch"
-          patterns:
-            - "*"
-       security-updates:
-          applies-to: security-updates
-          patterns:
-            - "*" 
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
+        patterns:
+          - "*"
+      security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
