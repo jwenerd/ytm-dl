@@ -24,3 +24,23 @@ updates:
         applies-to: security-updates
         patterns:
           - "*"
+  - package-ecosystem: pip
+    directory: /src/cloud_functions/
+    schedule:
+      interval: weekly
+    groups:
+      version-updates:
+        applies-to: version-updates
+        patterns:
+          - "*"
+      version-updates-minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
+        patterns:
+          - "*"
+      security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
