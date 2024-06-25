@@ -4,6 +4,6 @@ API:
   records_length: 200
   time: 0.91
 CSV File:
-  lines: 10524
-  lines_added: 3
-  size: 996K
+  lines: 10560
+  lines_added: 36
+  size: 1000K
