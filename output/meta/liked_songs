@@ -3,22 +3,22 @@ API:
     limit: 500
   method: get_liked_songs
   records_length: 600
-  time: 4.19
+  time: 4.0
 CSV File:
-  lines: 1761
-  lines_added: 1
+  lines: 1764
+  lines_added: 3
   size: 152K
 Tracks:
   artists: []
   description: Music you like in any YouTube app will show here. You can change this
     in Settings.
-  duration: 23+ hours
-  duration_seconds: 297525
+  duration: 20+ hours
+  duration_seconds: 297532
   id: LM
   owned: false
   privacy: PUBLIC
   related: []
   title: Liked Music
-  trackCount: 1803
+  trackCount: 1806
   views: null
   year: '2024'
