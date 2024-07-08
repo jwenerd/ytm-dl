@@ -4,8 +4,8 @@ idna==3.7
 isort==5.13.2
 marshmallow==3.21.3
 platformdirs==4.2.2
-py-markdown-table==0.4.0
+py-markdown-table==1.0.0
 PyYAML==6.0.1
 requests==2.32.3
 urllib3==2.2.2
-ytmusicapi==1.7.3
+ytmusicapi==1.7.4
