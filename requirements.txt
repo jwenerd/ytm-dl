@@ -8,4 +8,4 @@ py-markdown-table==1.1.0
 PyYAML==6.0.1
 requests==2.32.3
 urllib3==2.2.2
-ytmusicapi==1.7.5
+ytmusicapi==1.8.0
