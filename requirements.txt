@@ -1,11 +1,11 @@
 certifi==2024.8.30
 charset-normalizer==3.3.2
-idna==3.8
+idna==3.10
 isort==5.13.2
 marshmallow==3.22.0
-platformdirs==4.2.2
+platformdirs==4.3.3
 py-markdown-table==1.1.0
 PyYAML==6.0.2
 requests==2.32.3
-urllib3==2.2.2
+urllib3==2.2.3
 ytmusicapi==1.8.1
