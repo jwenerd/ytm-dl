@@ -3,7 +3,7 @@ charset-normalizer==3.3.2
 idna==3.10
 isort==5.13.2
 marshmallow==3.22.0
-platformdirs==4.3.3
+platformdirs==4.3.6
 py-markdown-table==1.1.0
 PyYAML==6.0.2
 requests==2.32.3
