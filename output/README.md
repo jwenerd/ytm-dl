@@ -1,15 +1,15 @@
 # 📝  output 
 
-## ⚙️ [run #2391](https://github.com/jwenerd/ytm-dl/actions/runs/11190095646)
+## ⚙️ [run #2392](https://github.com/jwenerd/ytm-dl/actions/runs/11191180309)
 
 ### 📁 Files
 
 |                                                                         |lines|size|
 |-------------------------------------------------------------------------|-----|----|
-|[`output/history.csv` ](output/history.csv)                              |17133|1.6M|
+|[`output/history.csv` ](output/history.csv)                              |17153|1.6M|
 |[`output/library_albums.csv` ](output/library_albums.csv)                |1088 |76K |
 |[`output/library_artists.csv` ](output/library_artists.csv)              |2370 |104K|
-|[`output/library_songs.csv` ](output/library_songs.csv)                  |6207 |520K|
+|[`output/library_songs.csv` ](output/library_songs.csv)                  |6208 |520K|
 |[`output/library_subscriptions.csv` ](output/library_subscriptions.csv)  |120  |8.0K|
 |[`output/library_upload_albums.csv` ](output/library_upload_albums.csv)  |1321 |192K|
 |[`output/library_upload_artists.csv` ](output/library_upload_artists.csv)|1748 |192K|
