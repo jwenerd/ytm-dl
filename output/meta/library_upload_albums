@@ -4,8 +4,8 @@ API:
     order: recently_added
   method: get_library_upload_albums
   records_length: 75
-  time: 2.14
+  time: 1.76
 CSV File:
-  lines: 1324
+  lines: 1326
   lines_added: 2
   size: 192K
