@@ -22,7 +22,7 @@ thread_local = threading.local()
 
 def get_thread_client():
     if not hasattr(thread_local, "ytmusic"):
-        thread_local.ytmusic = YTMusic("oauth.json")
+        thread_local.ytmusic = YTMusic("browser.json")
     return thread_local.ytmusic
 
 

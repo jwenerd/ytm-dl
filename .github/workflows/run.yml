@@ -38,9 +38,9 @@ jobs:
         run: pip install -r requirements.txt
       - name: Secrets 🔒 🤫
         env:
-          YTM_OAUTH: ${{ secrets.YTM_OAUTH }}
+          YTM_BROWSER_AUTH: ${{ secrets.BROWSER_AUTH_JSON }}
         run: |
-          echo "$YTM_OAUTH" > oauth.json
+          echo "$YTM_BROWSER_AUTH" | base64 --decode > browser.json
       - name: Checkout Output
         run: |
           git fetch origin
@@ -70,11 +70,6 @@ jobs:
           echo "::group::python ytm-dl.py $RUN_OPTION"
           python ytm-dl.py $RUN_OPTION > $HOME/run_output
           cat $HOME/run_output
-          echo "::endgroup::"
-
-          echo "::group::update oauth secret"
-          gh secret set YTM_OAUTH < oauth.json
-          echo "Updated secret."
           echo "::endgroup::"
 
           echo "::group::github step summary"
