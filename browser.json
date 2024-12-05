@@ -1,0 +1,14 @@
+{
+    "accept": "*/*",
+    "accept-encoding": "gzip, deflate",
+    "accept-language": "en-US,en;q=0.9",
+    "authorization": "SAPISIDHASH 1731964058_f67554960621775b114d5a1ac4863d93de6f03cc_u",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "cookie": "SIDCC=AKEyXzWITi1CG6za1wS9FBtbHFkDyC2HC8CSbeoYpoJz1t-zDf_QG0cj4CU4SG2z2ReFe1yE4w; __Secure-1PSIDCC=AKEyXzXMQaiOqttp9NB51cbK___T5ZCA_v04OEZJSNkGJdQnVIEqKze7_IoMKOT-Dwtf34L-; __Secure-3PSIDCC=AKEyXzUlnvmT0cqJzV5cXTt_-LtYchPvRbl7ll03HNShXMjx9Ex6OD1TdP5auKciBOlbjnPnpA; _gcl_au=1.1.204063098.1733375204; PREF=repeat=NONE; APISID=U6VKeVy3fFK-5_Z8/ARAN5YWMNLQZw-dmu; HSID=AJqbP4wqX5eFEOGNA; LOGIN_INFO=AFmmF2swRgIhAJ3GqId0iUR69-vUgTpBAs-kuZM5jS2zddTlCeWrI3luAiEA9BUyzscSkZVWsRTLCIJz7UZDY_ff6YE1xE98F6_EJJw:QUQ3MjNmel9NdjVQdWJ6NGJ2RjllRW1XN0JsdnQ4OFplbWJxa3hPMXk1NXVzWmU0RU1nYWNnWXVFa1VHQ3l2anJ1NnYwenVMYURxSHpVMjhDSWVRWEgyVlFjZnNPRFJ6RHlOWmNyV2xJbVpqZTAzdHp2Mlh3RlpibC0xMnlMNlF5TDhMM1E1UGdzc2RpSkR3WTNiZTJlMHRpa0hlVlYtNkFR; SAPISID=ZP8-_lazpAD01a9b/AgaHtC_lvkRrEIl_U; SID=g.a000rAiP8wlG2mCI5FAmbIpb7zMsMV2vTWGj5ZSi8Gpysp6NbXno-Io85HHHC69WeoafHjLmZgACgYKAZMSARUSFQHGX2Mih_9qncfV6ijBM3g7SmW09BoVAUF8yKq51jCZOgLO8DXUJ30LOh6b0076; SSID=AuPIsKuGhq2VqF2YK; __Secure-1PAPISID=ZP8-_lazpAD01a9b/AgaHtC_lvkRrEIl_U; __Secure-1PSID=g.a000rAiP8wlG2mCI5FAmbIpb7zMsMV2vTWGj5ZSi8Gpysp6NbXnovjlKQaExo2ieVMmUdGp0wQACgYKAYESARUSFQHGX2Mis8UDlfD-_uhjqrrjwYcvKxoVAUF8yKqekNdrpQV75j4pv18HhMRL0076; __Secure-1PSIDTS=sidts-CjIBQT4rXw-bWxcMSoI1ddL3vg2KSMhzVApH3pdK59ArDC4xN3koN5oFQ-7CZiibs8nAdRAA; __Secure-3PAPISID=ZP8-_lazpAD01a9b/AgaHtC_lvkRrEIl_U; __Secure-3PSID=g.a000rAiP8wlG2mCI5FAmbIpb7zMsMV2vTWGj5ZSi8Gpysp6NbXnohnGzidIAAYTPrWGKGs-t0gACgYKAXkSARUSFQHGX2MiYbD1nw2Ree_q4iHPL8aodhoVAUF8yKpt-6LPzgNyKF7IrvrRoyQi0076; __Secure-3PSIDTS=sidts-CjIBQT4rXw-bWxcMSoI1ddL3vg2KSMhzVApH3pdK59ArDC4xN3koN5oFQ-7CZiibs8nAdRAA; VISITOR_INFO1_LIVE=8I3s7coAaso; VISITOR_PRIVACY_METADATA=CgJVUxIEGgAgKQ%3D%3D; YSC=PG8oDZwEdaE",
+    "dnt": "1",
+    "origin": "https://music.youtube.com",
+    "priority": "u=1, i",
+    "referer": "https://music.youtube.com/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0"
+}
