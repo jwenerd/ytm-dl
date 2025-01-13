@@ -2,7 +2,7 @@ certifi==2024.12.14
 charset-normalizer==3.4.1
 idna==3.10
 isort==5.13.2
-marshmallow==3.23.3
+marshmallow==3.25.1
 platformdirs==4.3.6
 py-markdown-table==1.2.0
 PyYAML==6.0.2
