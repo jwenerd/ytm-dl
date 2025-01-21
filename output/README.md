@@ -1,6 +1,6 @@
 # 📝  output 
 
-## ⚙️ [run #3259](https://github.com/jwenerd/ytm-dl/actions/runs/12860492290)
+## ⚙️ [run #3267](https://github.com/jwenerd/ytm-dl/actions/runs/12879598334)
 
 ### 📁 Files
 
