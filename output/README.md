@@ -1,17 +1,17 @@
 # 📝  output 
 
-## ⚙️ [run #3435](https://github.com/jwenerd/ytm-dl/actions/runs/13248020214)
+## ⚙️ [run #3436](https://github.com/jwenerd/ytm-dl/actions/runs/13250467427)
 
 ### 📁 Files
 
 |                                                                         |lines|size|
 |-------------------------------------------------------------------------|-----|----|
-|[`output/history.csv` ](output/history.csv)                              |22135|2.1M|
+|[`output/history.csv` ](output/history.csv)                              |22163|2.1M|
 |[`output/library_albums.csv` ](output/library_albums.csv)                |1132 |76K |
-|[`output/library_artists.csv` ](output/library_artists.csv)              |2468 |108K|
-|[`output/library_songs.csv` ](output/library_songs.csv)                  |6803 |576K|
+|[`output/library_artists.csv` ](output/library_artists.csv)              |2469 |108K|
+|[`output/library_songs.csv` ](output/library_songs.csv)                  |6804 |576K|
 |[`output/library_subscriptions.csv` ](output/library_subscriptions.csv)  |132  |8.0K|
 |[`output/library_upload_albums.csv` ](output/library_upload_albums.csv)  |1346 |196K|
 |[`output/library_upload_artists.csv` ](output/library_upload_artists.csv)|1828 |200K|
 |[`output/library_upload_songs.csv` ](output/library_upload_songs.csv)    |18151|1.4M|
-|[`output/liked_songs.csv` ](output/liked_songs.csv)                      |4399 |368K|
+|[`output/liked_songs.csv` ](output/liked_songs.csv)                      |4400 |368K|
