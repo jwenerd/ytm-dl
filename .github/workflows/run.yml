@@ -38,9 +38,9 @@ jobs:
         run: pip install -r requirements.txt
       - name: Secrets 🔒 🤫
         env:
-          YTM_BROWSER_AUTH: ${{ secrets.BROWSER_AUTH_JSON }}
+          YTM_OAUTH: ${{ secrets.YTM_OAUTH }}
         run: |
-          echo "$YTM_BROWSER_AUTH" | base64 --decode > browser.json
+          echo "$YTM_OAUTH" > oauth.json
       - name: Checkout Output
         run: |
           git fetch origin
@@ -52,6 +52,8 @@ jobs:
           SCHEDULE_RUN_OPTION: ${{ github.event.schedule != '19 3 * * *' && 'frequent' || 'all' }}
           GITHUB_EVENT_SCHEDULE: ${{ github.event.schedule }}
           GH_TOKEN: ${{ secrets.YTM_GITHUB_TOKEN }}
+          OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
+          OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
         run: |
           true || 🚀
           echo "::group::RUN_OPTION"
@@ -70,6 +72,11 @@ jobs:
           echo "::group::python ytm-dl.py $RUN_OPTION"
           python ytm-dl.py $RUN_OPTION > $HOME/run_output
           cat $HOME/run_output
+          echo "::endgroup::"
+
+          echo "::group::update oauth secret"
+          gh secret set YTM_OAUTH < oauth.json
+          echo "Updated secret."
           echo "::endgroup::"
 
           echo "::group::github step summary"
