@@ -15,4 +15,3 @@ cron.log
 
 output/*
 !output/.keep
-browser.json

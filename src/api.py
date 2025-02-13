@@ -1,10 +1,13 @@
-from ytmusicapi import YTMusic
+from ytmusicapi import YTMusic, OAuthCredentials
 from .util import write_file, make_dict_readonly
 from .meta import MetaStore
 import yaml
 from time import time, strftime
 import threading
+import os
 
+OAUTH_CLIENT_ID = os.environ['OAUTH_CLIENT_ID']
+OAUTH_CLIENT_SECRET = os.environ['OAUTH_CLIENT_SECRET']
 
 def records_from_response(response):
     meta = {}
@@ -22,7 +25,7 @@ thread_local = threading.local()
 
 def get_thread_client():
     if not hasattr(thread_local, "ytmusic"):
-        thread_local.ytmusic = YTMusic("browser.json")
+        thread_local.ytmusic = YTMusic("oauth.json", oauth_credentials=OAuthCredentials(client_id=OAUTH_CLIENT_ID, client_secret=OAUTH_CLIENT_SECRET))
     return thread_local.ytmusic
 
 
