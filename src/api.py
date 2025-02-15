@@ -91,6 +91,8 @@ class ApiMethod:
         self.method = method
         self.methodfn = getattr(self.client, method)
         self.method_args = API_ARGUMENTS.get(method, DEFAULT_ARGUMENTS)
+        if isinstance(self.method_args, MappingProxyType):
+            self.method_args = dict(self.method_args)
 
 
     def perform(self):
@@ -109,8 +111,8 @@ class ApiMethod:
         return [self.records, meta]
 
     def api_results(self):
-        if isinstance(self.method_args, MappingProxyType):
-            return self.methodfn(**dict(self.method_args))
+        if isinstance(self.method_args, dict):
+            return self.methodfn(**(self.method_args))
         return self.methodfn(self.method_args)
 
     @property
