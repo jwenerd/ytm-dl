@@ -2,6 +2,7 @@ from ytmusicapi import YTMusic, OAuthCredentials
 from .util import write_file, make_dict_readonly
 from .meta import MetaStore
 import yaml
+from types import MappingProxyType
 from time import time, strftime
 import threading
 import os
@@ -31,7 +32,7 @@ def get_thread_client():
 
 API_ARGUMENTS = {
     "get_history": {},
-    "get_home": {},
+    "get_home": 9,
     "get_liked_songs": {"limit": 500},
     "get_library_songs": {"limit": 500, "order": "recently_added"},
     "get_library_subscriptions": {"limit": 25, "order": "recently_added"},
@@ -66,6 +67,12 @@ def build_home_records(records):
                 row['type'] = 'Artist'
             row['home'] = home_title
             row['home_index'] = i
+            row['id'] = row.get('browseId')
+            if not row['id']:
+                row['id'] = row.get('playlistId')
+            if not row['id']:
+                row['id'] = row.get('videoId')
+
             rows.append(row)
     return rows
 
@@ -83,23 +90,28 @@ class ApiMethod:
         self.client = get_thread_client()
         self.method = method
         self.methodfn = getattr(self.client, method)
-        self.method_args = dict(API_ARGUMENTS.get(method, DEFAULT_ARGUMENTS))
+        self.method_args = API_ARGUMENTS.get(method, DEFAULT_ARGUMENTS)
+
 
     def perform(self):
         start_time = time()
-        api_results = self.methodfn(**self.method_args)
+        api_results = self.api_results()
         self.elapsed_time = round(time() - start_time, 2)
 
         self.records, meta = records_from_response(api_results.copy())
-        meta["API"] = self.api_meta
-
         if self.method == "get_home":
             self.records = build_home_records(self.records)
-            meta["API"]["records_length"] = len(self.records)
+
+        meta["API"] = self.api_meta
 
         MetaStore.get("api_results").add(self.method, api_results)
         MetaStore.get("api").add(self.method, meta["API"])
         return [self.records, meta]
+
+    def api_results(self):
+        if isinstance(self.method_args, MappingProxyType):
+            return self.methodfn(**dict(self.method_args))
+        return self.methodfn(self.method_args)
 
     @property
     def api_meta(self):

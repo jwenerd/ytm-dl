@@ -76,6 +76,7 @@ class HomeSchema(BaseSchema):
     title = fields.Str()
     artists = ExtractNameStr()
     description = fields.Str()
+    id = fields.Str()
 
 SCHEMA_MAPPING = {
     "home": HomeSchema,
