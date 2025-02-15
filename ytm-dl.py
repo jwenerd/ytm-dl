@@ -31,7 +31,7 @@ def do_updates(option):
         print("  given: " + str(option))
         sys.exit(1)
 
-    files = ["liked_songs", "library_songs", "history"]
+    files = ["liked_songs", "library_songs", "history", "home"]
     if option == "all":
         files += ["library_subscriptions", "library_artists", "library_albums"]
         files += ["library_upload_songs", "library_upload_artists", "library_upload_albums"]

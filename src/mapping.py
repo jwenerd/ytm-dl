@@ -7,6 +7,14 @@ class BaseSchema(Schema):
         return list(self.declared_fields.keys())
 
 
+# class HomeType(fields.String):
+#     def _serialize(self, value, attr, data, **kwargs) -> str | None:
+#         key = "name"
+#         if not value and data.get("playlistId"):
+#             value = "playlist"
+#         value = str(value).lower()
+#         return super()._serialize(value, attr, data, **kwargs)
+
 class ExtractNameStr(fields.String):
     def _serialize(self, value, attr, data, **kwargs) -> str | None:
         key = "name"
@@ -61,8 +69,16 @@ class AlbumSchema(BaseSchema):
     year = fields.Str()
     browseId = fields.Str()
 
+class HomeSchema(BaseSchema):
+    home = fields.Str()
+    home_index = fields.Str()
+    type = fields.Str()
+    title = fields.Str()
+    artists = ExtractNameStr()
+    description = fields.Str()
 
 SCHEMA_MAPPING = {
+    "home": HomeSchema,
     "history": HistorySchema,
     "library_subscriptions": ArtistSchema,
     "_songs": SongSchema,
