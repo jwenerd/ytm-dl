@@ -13,6 +13,7 @@ from .util import (
 from .meta import MetaOutput
 
 PREPEND_FILES = [
+    "home",
     "history",
     "liked_songs",
     "library_songs",
