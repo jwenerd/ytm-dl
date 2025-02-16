@@ -2,8 +2,8 @@ API:
   args: 9
   method: get_home
   records_length: 110
-  time: 2.59
+  time: 2.56
 CSV File:
-  lines: 260
+  lines: 370
   lines_added: 110
-  size: 24K
+  size: 36K
