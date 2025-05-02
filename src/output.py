@@ -79,6 +79,13 @@ class Output:
     def write_files(self):
         self.rows = self.mapping.get_rows()
 
+        if self.file == 'history':
+            # remove the sleep noise tracks i use
+            problems = [
+                'Sv0LwXYAVVg', 'dMEp0pl-hhE', 'yOk_XMB6_vs', 'sE0ypPpvbNQ', 'xu2b6YVlQoU', 'C8KGOXqrDyU'
+            ]
+            self.rows = [row for row in self.rows if row[-1] not in problems]
+
         use_prepend = self.file_exists and (self.prepend or self.by_key)
 
         if use_prepend:
