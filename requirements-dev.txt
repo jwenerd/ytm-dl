@@ -1,5 +1,5 @@
 astroid==3.3.8
 mccabe==0.7.0
 packaging==25.0
-pylint==3.3.6
+pylint==3.3.7
 pylint-venv>=3.0.4
