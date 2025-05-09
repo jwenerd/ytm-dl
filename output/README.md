@@ -1,12 +1,12 @@
 # 📝  output 
 
-## ⚙️ [run #4165](https://github.com/jwenerd/ytm-dl/actions/runs/14923113049)
+## ⚙️ [run #4166](https://github.com/jwenerd/ytm-dl/actions/runs/14925990573)
 
 ### 📁 Files
 
 |                                                                         |lines|size|
 |-------------------------------------------------------------------------|-----|----|
-|[`output/history.csv` ](output/history.csv)                              |26537|2.5M|
+|[`output/history.csv` ](output/history.csv)                              |26540|2.5M|
 |[`output/home.csv` ](output/home.csv)                                    |4172 |380K|
 |[`output/library_albums.csv` ](output/library_albums.csv)                |1166 |80K |
 |[`output/library_artists.csv` ](output/library_artists.csv)              |2573 |112K|
