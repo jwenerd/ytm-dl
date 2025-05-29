@@ -3,9 +3,9 @@ API:
     limit: 500
   method: get_liked_songs
   records_length: 600
-  time: 4.44
+  time: 3.95
 CSV File:
-  lines: 4511
+  lines: 4512
   lines_added: 1
   size: 380K
 Tracks:
@@ -29,6 +29,6 @@ Tracks:
     url: https://www.gstatic.com/youtube/media/ytm/images/pbg/liked-music-@1200.png
     width: 1200
   title: Liked Music
-  trackCount: 2150
+  trackCount: 2151
   views: null
   year: '2025'
