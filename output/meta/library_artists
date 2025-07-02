@@ -4,8 +4,8 @@ API:
     order: recently_added
   method: get_library_artists
   records_length: 75
-  time: 1.5
+  time: 1.2
 CSV File:
-  lines: 2670
-  lines_added: 1
+  lines: 2679
+  lines_added: 9
   size: 116K
