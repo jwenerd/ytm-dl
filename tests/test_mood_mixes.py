@@ -249,8 +249,8 @@ def test_discover_home_core_mixes():
 
 
 def test_merge_catalog_tracks():
-    existing_catalog = {
-        "vid1": {
+    existing_rows = [
+        {
             "videoId": "vid1",
             "title": "Song One",
             "artists": "Artist One",
@@ -263,27 +263,42 @@ def test_merge_catalog_tracks():
             "latest_position": "10",
             "likeStatus": "INDIFFERENT",
             "inLibrary": "False",
-        }
-    }
+        },
+        {
+            "videoId": "vid2",
+            "title": "Song Two",
+            "artists": "Artist Two",
+            "album": "Album Two",
+            "duration": "2:50",
+            "duration_seconds": "170",
+            "first_seen": "2026-09-01T00:00:00Z",
+            "last_seen": "2026-09-01T00:00:00Z",
+            "times_recommended": "1",
+            "latest_position": "11",
+            "likeStatus": "INDIFFERENT",
+            "inLibrary": "False",
+        },
+    ]
+    existing_lookup = {r["videoId"]: r for r in existing_rows}
 
     new_batch = [
         {
-            "videoId": "vid2",
-            "title": "Song Two (New)",
-            "artists": [{"name": "Artist Two", "id": "A2"}],
-            "album": {"name": "Album Two", "id": "AL2"},
+            "videoId": "vid_new",
+            "title": "Song New (Brand New)",
+            "artists": [{"name": "Artist New", "id": "AN"}],
+            "album": {"name": "Album New", "id": "ALN"},
             "duration": "4:00",
             "duration_seconds": 240,
             "likeStatus": "LIKE",
             "inLibrary": True,
         },
         {
-            "videoId": "vid1",
-            "title": "Song One",
-            "artists": [{"name": "Artist One", "id": "A1"}],
-            "album": {"name": "Album One", "id": "AL1"},
-            "duration": "3:00",
-            "duration_seconds": 180,
+            "videoId": "vid2",
+            "title": "Song Two",
+            "artists": [{"name": "Artist Two", "id": "A2"}],
+            "album": {"name": "Album Two", "id": "AL2"},
+            "duration": "2:50",
+            "duration_seconds": 170,
             "likeStatus": "LIKE",
             "inLibrary": True,
         },
@@ -291,30 +306,29 @@ def test_merge_catalog_tracks():
 
     timestamp_run2 = "2026-09-12T04:30:00Z"
     merged, new_count, updated_count = merge_catalog_tracks(
-        existing_catalog, new_batch, timestamp_run2
+        existing_rows, existing_lookup, new_batch, timestamp_run2
     )
 
-    assert len(merged) == 2
+    assert len(merged) == 3
     assert new_count == 1
     assert updated_count == 1
 
-    # vid1 should have updated counts, updated timestamps, updated like status
-    vid1_data = next(t for t in merged if t["videoId"] == "vid1")
-    assert vid1_data["first_seen"] == "2026-09-01T00:00:00Z"
-    assert vid1_data["last_seen"] == timestamp_run2
-    assert vid1_data["times_recommended"] == "2"
-    assert vid1_data["latest_position"] == "2"
-    assert vid1_data["likeStatus"] == "LIKE"
-    assert vid1_data["inLibrary"] == "True"
+    # 1. New song MUST be prepended at the very top (index 0)
+    assert merged[0]["videoId"] == "vid_new"
+    assert merged[0]["first_seen"] == timestamp_run2
+    assert merged[0]["last_seen"] == timestamp_run2
+    assert merged[0]["times_recommended"] == "1"
+    assert merged[0]["latest_position"] == "1"
 
-    # vid2 should be newly added with times_recommended = 1
-    vid2_data = next(t for t in merged if t["videoId"] == "vid2")
-    assert vid2_data["first_seen"] == timestamp_run2
-    assert vid2_data["last_seen"] == timestamp_run2
-    assert vid2_data["times_recommended"] == "1"
-    assert vid2_data["latest_position"] == "1"
-    assert vid2_data["artists"] == "Artist Two"
-    assert vid2_data["album"] == "Album Two"
+    # 2. Existing songs maintain their exact relative index order (vid1 at index 1, vid2 at index 2)
+    assert merged[1]["videoId"] == "vid1"
+    assert merged[1]["times_recommended"] == "1"  # Not in new batch, unchanged
+
+    assert merged[2]["videoId"] == "vid2"
+    assert merged[2]["times_recommended"] == "2"  # In new batch, incremented
+    assert merged[2]["last_seen"] == timestamp_run2
+    assert merged[2]["latest_position"] == "2"
+    assert merged[2]["likeStatus"] == "LIKE"
 
 
 def test_read_existing_catalog_and_roundtrip():
@@ -328,8 +342,9 @@ def test_read_existing_catalog_and_roundtrip():
                 "v123,Track Title,Artist A,Album A,3:30,210,2026-09-01T00:00:00Z,2026-09-08T00:00:00Z,3,5,LIKE,True\n"
             )
 
-        catalog = read_existing_catalog(csv_path)
-        assert len(catalog) == 1
-        assert "v123" in catalog
-        assert catalog["v123"]["title"] == "Track Title"
-        assert catalog["v123"]["times_recommended"] == "3"
+        rows, lookup = read_existing_catalog(csv_path)
+        assert len(rows) == 1
+        assert "v123" in lookup
+        assert lookup["v123"]["title"] == "Track Title"
+        assert lookup["v123"]["times_recommended"] == "3"
+        assert rows[0]["videoId"] == "v123"

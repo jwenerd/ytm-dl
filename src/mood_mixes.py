@@ -182,11 +182,12 @@ def discover_all_supermixes(client) -> list[dict]:
     return all_mixes
 
 
-def read_existing_catalog(csv_path: str) -> dict[str, dict]:
-    """Reads existing catalog CSV into a dict keyed by videoId."""
-    catalog = {}
+def read_existing_catalog(csv_path: str) -> tuple[list[dict], dict[str, dict]]:
+    """Reads existing catalog CSV into a list of ordered rows and a dict keyed by videoId."""
+    rows = []
+    lookup = {}
     if not file_exists(csv_path):
-        return catalog
+        return rows, lookup
 
     try:
         with open(csv_path, encoding="utf-8") as f:
@@ -194,30 +195,37 @@ def read_existing_catalog(csv_path: str) -> dict[str, dict]:
             for row in reader:
                 vid = row.get("videoId")
                 if vid:
-                    catalog[vid] = dict(row)
+                    row_dict = dict(row)
+                    rows.append(row_dict)
+                    lookup[vid] = row_dict
     except Exception as e:
         print(f"Warning: Failed to read existing catalog at {csv_path}: {e}")
-    return catalog
+    return rows, lookup
 
 
 def merge_catalog_tracks(
-    existing_catalog: dict[str, dict],
+    existing_rows: list[dict],
+    existing_lookup: dict[str, dict],
     new_tracks: list[dict],
     captured_at: str,
 ) -> tuple[list[dict], int, int]:
     """
-    Merges newly fetched tracks into existing cumulative catalog.
-    Returns: (sorted_catalog_rows, new_count, updated_count)
+    Merges newly fetched tracks into existing cumulative catalog:
+    - Brand new songs are prepended at the top.
+    - Existing songs stay in their exact row positions and update in-place.
+    Returns: (final_ordered_rows, new_count, updated_count)
     """
-    catalog = dict(existing_catalog)
     extractor = ExtractNameStr()
+    new_rows = []
     new_count = 0
     updated_count = 0
+    seen_in_new_batch = set()
 
     for idx, t in enumerate(new_tracks):
         vid = t.get("videoId")
-        if not vid:
+        if not vid or vid in seen_in_new_batch:
             continue
+        seen_in_new_batch.add(vid)
 
         pos = idx + 1
         title = t.get("title", "")
@@ -228,9 +236,9 @@ def merge_catalog_tracks(
         like_status = t.get("likeStatus", "INDIFFERENT")
         in_library = str(t.get("inLibrary", False))
 
-        if vid in catalog:
-            # Update existing track
-            row = catalog[vid]
+        if vid in existing_lookup:
+            # Update existing track in-place
+            row = existing_lookup[vid]
             row["last_seen"] = captured_at
             row["times_recommended"] = str(int(row.get("times_recommended") or 1) + 1)
             row["latest_position"] = str(pos)
@@ -243,8 +251,8 @@ def merge_catalog_tracks(
                 row["album"] = album
             updated_count += 1
         else:
-            # Add brand new track
-            catalog[vid] = {
+            # Prepend new track at the top
+            new_row = {
                 "videoId": vid,
                 "title": title,
                 "artists": artists,
@@ -258,19 +266,11 @@ def merge_catalog_tracks(
                 "likeStatus": like_status,
                 "inLibrary": in_library,
             }
+            new_rows.append(new_row)
             new_count += 1
 
-    def sort_key(item):
-        last_seen = item.get("last_seen", "")
-        times_rec = int(item.get("times_recommended") or 0)
-        try:
-            latest_pos = int(item.get("latest_position") or 9999)
-        except ValueError:
-            latest_pos = 9999
-        return (last_seen, times_rec, -latest_pos)
-
-    sorted_tracks = sorted(catalog.values(), key=sort_key, reverse=True)
-    return sorted_tracks, new_count, updated_count
+    final_rows = new_rows + existing_rows
+    return final_rows, new_count, updated_count
 
 
 def fetch_and_merge_mix(
@@ -295,9 +295,9 @@ def fetch_and_merge_mix(
     csv_path = os.path.join(output_base_dir, f"{mix_slug}.csv")
     yaml_path = os.path.join(output_base_dir, f"{mix_slug}.yaml")
 
-    existing_catalog = read_existing_catalog(csv_path)
+    existing_rows, existing_lookup = read_existing_catalog(csv_path)
     merged_tracks, new_count, updated_count = merge_catalog_tracks(
-        existing_catalog, raw_tracks, captured_at
+        existing_rows, existing_lookup, raw_tracks, captured_at
     )
 
     schema = MoodMixTrackSchema()
