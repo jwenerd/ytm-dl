@@ -2,12 +2,11 @@ title: Feel Good Supermix
 mood_chip: Feel good
 playlist_id: RDTMAK5uy_nuKPeaybq-IRcrMnaR-5TIfvKxB7fVJu0
 description: ''
-featured_artists: Grateful Dead, Ween, Bob Wills & His Texas Playboys, Peter, Paul
-  & Mary
+featured_artists: Hank Williams, Willie Nelson, Ween, Bob Wills & His Texas Playboys
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 662
-new_tracks_latest_run: 63
+total_unique_tracks: 727
+new_tracks_latest_run: 65
 latest_batch_size: 500
-last_updated: '2026-09-12T11:03:22Z'
-run_id: local_20260912_110322
+last_updated: '2026-09-12T11:05:11Z'
+run_id: gh-6760

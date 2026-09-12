@@ -3,11 +3,11 @@ mood_chip: Energize
 playlist_id: RDTMAK5uy_kskEGBYLWbdi3Z9IdjDoDEI8hEBvHEreM
 description: Get a boost with this mix of high-energy songs that span all your tastes.
   Always updating.
-featured_artists: Angine de Poitrine, Justice, Daft Punk, Hallucinogen
+featured_artists: Justice, Daft Punk, Hallucinogen, Ritmo
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 674
-new_tracks_latest_run: 68
+total_unique_tracks: 728
+new_tracks_latest_run: 54
 latest_batch_size: 500
-last_updated: '2026-09-12T11:03:22Z'
-run_id: local_20260912_110322
+last_updated: '2026-09-12T11:05:11Z'
+run_id: gh-6760
