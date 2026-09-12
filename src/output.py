@@ -15,7 +15,6 @@ from .util import (
 )
 
 PREPEND_FILES = [
-    "home",
     "history",
     "liked_songs",
     "library_songs",

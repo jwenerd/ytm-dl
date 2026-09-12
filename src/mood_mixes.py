@@ -1,15 +1,19 @@
 import concurrent.futures
-import csv
 import os
-import re
 from datetime import UTC, datetime
 
-import yaml
+from ytmusicapi.continuations import get_continuations
 from ytmusicapi.navigation import SECTION_LIST, SINGLE_COLUMN_TAB, nav
 
 from .api import get_thread_client
+from .catalog import (
+    merge_catalog_items,
+    read_catalog,
+    write_catalog_csv,
+    write_catalog_yaml,
+)
 from .mapping import ExtractNameStr, MoodMixTrackSchema, get_run_id
-from .util import file_exists, output_path, write_file
+from .util import output_path, slugify
 
 CORE_HOME_MIX_TITLES = {
     "my supermix",
@@ -18,13 +22,6 @@ CORE_HOME_MIX_TITLES = {
     "replay mix",
     "archive mix",
 }
-
-
-def slugify(text: str) -> str:
-    """Converts display names to clean snake_case filenames."""
-    text = text.strip().lower()
-    text = re.sub(r"[^a-z0-9]+", "_", text)
-    return text.strip("_")
 
 
 def is_supermix_or_core_mix(title: str) -> bool:
@@ -65,13 +62,26 @@ def discover_mood_chips(client) -> list[tuple[str, str]]:
 
 
 def discover_chip_supermixes(client, chip_name: str, chip_params: str) -> list[dict]:
-    """Finds the Supermix in 'Mixed for you' section under a specific mood chip."""
+    """Finds Supermixes under a specific mood chip."""
     supermixes = []
     try:
         chip_raw = client._send_request(
             "browse", {"browseId": "FEmusic_home", "params": chip_params}
         )
-        section_list = nav(chip_raw, SINGLE_COLUMN_TAB + SECTION_LIST)
+        section_list = list(nav(chip_raw, SINGLE_COLUMN_TAB + SECTION_LIST, True) or [])
+        sec_list_rend = nav(chip_raw, [*SINGLE_COLUMN_TAB, "sectionListRenderer"], True) or {}
+        if "continuations" in sec_list_rend:
+
+            def req_fn(additionalParams):
+                return client._send_request(
+                    "browse", {"browseId": "FEmusic_home", "params": chip_params}, additionalParams
+                )
+
+            cont_secs = get_continuations(
+                sec_list_rend, "sectionListContinuation", 10, req_fn, lambda x: x
+            )
+            section_list.extend(cont_secs)
+
         for sec in section_list:
             for key in [
                 "musicCarouselShelfRenderer",
@@ -79,52 +89,40 @@ def discover_chip_supermixes(client, chip_name: str, chip_params: str) -> list[d
                 "gridRenderer",
             ]:
                 if key in sec:
-                    header = sec[key].get("header", {})
-                    title_runs = (
-                        header.get("musicCarouselShelfBasicHeaderRenderer", {})
-                        .get("title", {})
-                        .get("runs", [])
-                    )
-                    if not title_runs:
-                        title_runs = (
-                            header.get("gridHeaderRenderer", {}).get("title", {}).get("runs", [])
-                        )
-                    sec_title = "".join([r.get("text", "") for r in title_runs])
-                    if sec_title == "Mixed for you":
-                        for item in sec[key].get("contents", []):
-                            for r_type in [
-                                "musicTwoRowItemRenderer",
-                                "musicResponsiveListItemRenderer",
-                            ]:
-                                if r_type in item:
-                                    rend = item[r_type]
-                                    t = "".join(
-                                        [
-                                            r.get("text", "")
-                                            for r in rend.get("title", {}).get("runs", [])
-                                        ]
+                    for item in sec[key].get("contents", []):
+                        for r_type in [
+                            "musicTwoRowItemRenderer",
+                            "musicResponsiveListItemRenderer",
+                        ]:
+                            if r_type in item:
+                                rend = item[r_type]
+                                t = "".join(
+                                    [
+                                        r.get("text", "")
+                                        for r in rend.get("title", {}).get("runs", [])
+                                    ]
+                                )
+                                sub = "".join(
+                                    [
+                                        r.get("text", "")
+                                        for r in rend.get("subtitle", {}).get("runs", [])
+                                    ]
+                                )
+                                nav_ep = rend.get("navigationEndpoint", {})
+                                b_ep = nav_ep.get("browseEndpoint", {})
+                                w_ep = nav_ep.get("watchEndpoint", {})
+                                p_id = w_ep.get("playlistId") or b_ep.get("browseId")
+                                if p_id and p_id.startswith("VL"):
+                                    p_id = p_id[2:]
+                                if p_id and is_supermix_or_core_mix(t):
+                                    supermixes.append(
+                                        {
+                                            "title": t,
+                                            "mood_chip": chip_name,
+                                            "playlist_id": p_id,
+                                            "featured_artists": sub,
+                                        }
                                     )
-                                    sub = "".join(
-                                        [
-                                            r.get("text", "")
-                                            for r in rend.get("subtitle", {}).get("runs", [])
-                                        ]
-                                    )
-                                    nav_ep = rend.get("navigationEndpoint", {})
-                                    b_ep = nav_ep.get("browseEndpoint", {})
-                                    w_ep = nav_ep.get("watchEndpoint", {})
-                                    p_id = w_ep.get("playlistId") or b_ep.get("browseId")
-                                    if p_id and p_id.startswith("VL"):
-                                        p_id = p_id[2:]
-                                    if p_id and is_supermix_or_core_mix(t):
-                                        supermixes.append(
-                                            {
-                                                "title": t,
-                                                "mood_chip": chip_name,
-                                                "playlist_id": p_id,
-                                                "featured_artists": sub,
-                                            }
-                                        )
     except Exception as e:
         print(f"Warning: Failed to discover mixes for chip '{chip_name}': {e}")
     return supermixes
@@ -134,25 +132,23 @@ def discover_home_core_mixes(client) -> list[dict]:
     """Finds My Supermix and core algorithmic mixes (Discover, Replay, etc.) on Home."""
     home_mixes = []
     try:
-        home_sections = client.get_home(limit=25)
+        home_sections = client.get_home(limit=50)
         for sec in home_sections:
-            sec_title = sec.get("title", "")
-            if sec_title in ["Mixed for you", "Fresh finds, old favorites"]:
-                for item in sec.get("contents", []):
-                    title = item.get("title", "")
-                    p_id = item.get("playlistId") or item.get("browseId")
-                    if p_id and p_id.startswith("VL"):
-                        p_id = p_id[2:]
-                    if p_id and is_supermix_or_core_mix(title):
-                        desc = item.get("description", "")
-                        home_mixes.append(
-                            {
-                                "title": title,
-                                "mood_chip": "Home",
-                                "playlist_id": p_id,
-                                "featured_artists": desc,
-                            }
-                        )
+            for item in sec.get("contents", []):
+                title = item.get("title", "")
+                p_id = item.get("playlistId") or item.get("browseId")
+                if p_id and p_id.startswith("VL"):
+                    p_id = p_id[2:]
+                if p_id and is_supermix_or_core_mix(title):
+                    desc = item.get("description", "")
+                    home_mixes.append(
+                        {
+                            "title": title,
+                            "mood_chip": "Home",
+                            "playlist_id": p_id,
+                            "featured_artists": desc,
+                        }
+                    )
     except Exception as e:
         print(f"Warning: Failed to discover home mixes: {e}")
     return home_mixes
@@ -184,23 +180,47 @@ def discover_all_supermixes(client) -> list[dict]:
 
 def read_existing_catalog(csv_path: str) -> tuple[list[dict], dict[str, dict]]:
     """Reads existing catalog CSV into a list of ordered rows and a dict keyed by videoId."""
-    rows = []
-    lookup = {}
-    if not file_exists(csv_path):
-        return rows, lookup
+    return read_catalog(csv_path, key_field="videoId")
 
-    try:
-        with open(csv_path, encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                vid = row.get("videoId")
-                if vid:
-                    row_dict = dict(row)
-                    rows.append(row_dict)
-                    lookup[vid] = row_dict
-    except Exception as e:
-        print(f"Warning: Failed to read existing catalog at {csv_path}: {e}")
-    return rows, lookup
+
+def _make_mix_track_row(t: dict, pos: int, captured_at: str) -> dict:
+    extractor = ExtractNameStr()
+    title = t.get("title", "")
+    artists = extractor._serialize(t.get("artists", []), None, None) or ""
+    album = extractor._serialize(t.get("album", {}), None, None) or ""
+    duration = t.get("duration", "")
+    duration_sec = t.get("duration_seconds") or 0
+    like_status = t.get("likeStatus", "INDIFFERENT")
+    in_library = str(t.get("inLibrary", False))
+
+    return {
+        "videoId": t.get("videoId"),
+        "title": title,
+        "artists": artists,
+        "album": album,
+        "duration": duration,
+        "duration_seconds": str(duration_sec),
+        "first_seen": captured_at,
+        "last_seen": captured_at,
+        "times_recommended": "1",
+        "latest_position": str(pos),
+        "likeStatus": like_status,
+        "inLibrary": in_library,
+    }
+
+
+def _update_mix_track_row(row: dict, t: dict) -> None:
+    extractor = ExtractNameStr()
+    duration = t.get("duration", "")
+    duration_sec = t.get("duration_seconds") or 0
+    album = extractor._serialize(t.get("album", {}), None, None) or ""
+    row["likeStatus"] = t.get("likeStatus", "INDIFFERENT")
+    row["inLibrary"] = str(t.get("inLibrary", False))
+    if duration and not row.get("duration"):
+        row["duration"] = duration
+        row["duration_seconds"] = str(duration_sec)
+    if album and not row.get("album"):
+        row["album"] = album
 
 
 def merge_catalog_tracks(
@@ -215,62 +235,24 @@ def merge_catalog_tracks(
     - Existing songs stay in their exact row positions and update in-place.
     Returns: (final_ordered_rows, new_count, updated_count)
     """
-    extractor = ExtractNameStr()
-    new_rows = []
-    new_count = 0
-    updated_count = 0
-    seen_in_new_batch = set()
-
-    for idx, t in enumerate(new_tracks):
+    # Deduplicate within new_tracks batch while preserving order
+    seen_in_batch = set()
+    deduped_new_tracks = []
+    for t in new_tracks:
         vid = t.get("videoId")
-        if not vid or vid in seen_in_new_batch:
-            continue
-        seen_in_new_batch.add(vid)
+        if vid and vid not in seen_in_batch:
+            seen_in_batch.add(vid)
+            deduped_new_tracks.append(t)
 
-        pos = idx + 1
-        title = t.get("title", "")
-        artists = extractor._serialize(t.get("artists", []), None, None) or ""
-        album = extractor._serialize(t.get("album", {}), None, None) or ""
-        duration = t.get("duration", "")
-        duration_sec = t.get("duration_seconds") or 0
-        like_status = t.get("likeStatus", "INDIFFERENT")
-        in_library = str(t.get("inLibrary", False))
-
-        if vid in existing_lookup:
-            # Update existing track in-place
-            row = existing_lookup[vid]
-            row["last_seen"] = captured_at
-            row["times_recommended"] = str(int(row.get("times_recommended") or 1) + 1)
-            row["latest_position"] = str(pos)
-            row["likeStatus"] = like_status
-            row["inLibrary"] = in_library
-            if duration and not row.get("duration"):
-                row["duration"] = duration
-                row["duration_seconds"] = str(duration_sec)
-            if album and not row.get("album"):
-                row["album"] = album
-            updated_count += 1
-        else:
-            # Prepend new track at the top
-            new_row = {
-                "videoId": vid,
-                "title": title,
-                "artists": artists,
-                "album": album,
-                "duration": duration,
-                "duration_seconds": str(duration_sec),
-                "first_seen": captured_at,
-                "last_seen": captured_at,
-                "times_recommended": "1",
-                "latest_position": str(pos),
-                "likeStatus": like_status,
-                "inLibrary": in_library,
-            }
-            new_rows.append(new_row)
-            new_count += 1
-
-    final_rows = new_rows + existing_rows
-    return final_rows, new_count, updated_count
+    return merge_catalog_items(
+        existing_rows=existing_rows,
+        existing_lookup=existing_lookup,
+        new_items=deduped_new_tracks,
+        key_field="videoId",
+        now_iso=captured_at,
+        make_new_row_fn=_make_mix_track_row,
+        update_existing_fn=_update_mix_track_row,
+    )
 
 
 def fetch_and_merge_mix(
@@ -303,13 +285,8 @@ def fetch_and_merge_mix(
     schema = MoodMixTrackSchema()
     columns = schema.keys
 
-    # Write CSV
-    os.makedirs(output_base_dir, exist_ok=True)
-    with open(csv_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=columns)
-        writer.writeheader()
-        for track in merged_tracks:
-            writer.writerow({col: track.get(col, "") for col in columns})
+    # Write CSV using shared catalog engine
+    write_catalog_csv(csv_path, columns, merged_tracks)
 
     author = res.get("author")
     if isinstance(author, dict):
@@ -330,7 +307,7 @@ def fetch_and_merge_mix(
         "run_id": run_id,
     }
 
-    write_file(yaml_path, yaml.dump(metadata, sort_keys=False))
+    write_catalog_yaml(yaml_path, metadata)
 
     return {
         "title": metadata["title"],

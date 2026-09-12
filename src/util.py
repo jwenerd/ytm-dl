@@ -1,15 +1,25 @@
 import hashlib
 import os
+import re
 from types import MappingProxyType
 
 import yaml
+
+
+def slugify(text: str) -> str:
+    """Converts display names to clean snake_case filenames."""
+    text = text.strip().lower()
+    text = text.replace("'", "").replace("’", "")
+    text = re.sub(r"[^a-z0-9]+", "_", text)
+    return text.strip("_")
+
 
 # todo output file class
 
 
 def create_directory(path):
-    if not os.path.exists(path):
-        os.makedirs(path)
+    if path and not os.path.exists(path):
+        os.makedirs(path, exist_ok=True)
 
 
 def output_path(file=""):

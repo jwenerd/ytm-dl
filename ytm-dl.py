@@ -4,6 +4,7 @@ import string
 import sys
 
 from src.api import ApiMethod, suggest_search
+from src.home_catalog import sync_all_home_shelves
 from src.meta import write_meta
 from src.mood_mixes import sync_all_mood_mixes
 from src.output import Output, update_search_suggestions
@@ -25,8 +26,8 @@ def do_search_suggestions():
 
 
 def do_updates(option):
-    if option not in ["all", "frequent", "mixes"]:
-        print("Option must be all, frequent, or mixes")
+    if option not in ["all", "frequent", "mixes", "home"]:
+        print("Option must be all, frequent, mixes, or home")
         print("  given: " + str(option))
         sys.exit(1)
 
@@ -35,9 +36,13 @@ def do_updates(option):
         ApiMethod.save_api_artifact()
         return
 
+    if option == "home":
+        sync_all_home_shelves()
+        ApiMethod.save_api_artifact()
+        return
+
     files = ["liked_songs", "library_songs", "history"]
     if option == "all":
-        files += ["home"]
         files += ["library_subscriptions", "library_artists", "library_albums"]
         files += ["library_upload_songs", "library_upload_artists", "library_upload_albums"]
 
@@ -50,6 +55,7 @@ def do_updates(option):
         if search_res:
             files_written.append(search_res)
         sync_all_mood_mixes()
+        sync_all_home_shelves()
 
     files_written = set(filter(None, files_written))
     output_updates = len(files_written) > 0

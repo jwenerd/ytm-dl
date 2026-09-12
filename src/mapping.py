@@ -106,6 +106,34 @@ class HomeSchema(BaseSchema):
     run_id = fields.Str()
 
 
+class HomeCatalogItemSchema(BaseSchema):
+    primary_key = "id"
+
+    id = fields.Str()
+    type = fields.Str()
+    title = fields.Str()
+    artists = ExtractNameStr()
+    description = fields.Str()
+    first_seen = fields.Str()
+    last_seen = fields.Str()
+    times_recommended = fields.Int()
+    latest_position = fields.Int()
+
+    @property
+    def keys(self):
+        return [
+            "id",
+            "type",
+            "title",
+            "artists",
+            "description",
+            "first_seen",
+            "last_seen",
+            "times_recommended",
+            "latest_position",
+        ]
+
+
 class MoodMixTrackSchema(SongSchema):
     primary_key = "videoId"
 
@@ -136,6 +164,7 @@ class MoodMixTrackSchema(SongSchema):
 
 SCHEMA_MAPPING = {
     "home": HomeSchema,
+    "home_catalog_item": HomeCatalogItemSchema,
     "history": HistorySchema,
     "liked_songs": LikedSongSchema,
     "library_subscriptions": ArtistSchema,
