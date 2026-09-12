@@ -3,7 +3,13 @@ import concurrent.futures
 import string
 import sys
 
-from src.api import ApiMethod, suggest_search
+from src.api import (
+    ApiMethod,
+    AuthenticationExpiredError,
+    report_auth_failure,
+    suggest_search,
+    validate_auth,
+)
 from src.home_catalog import sync_all_home_shelves
 from src.meta import write_meta
 from src.mood_mixes import sync_all_mood_mixes
@@ -26,10 +32,28 @@ def do_search_suggestions():
 
 
 def do_updates(option):
-    if option not in ["all", "frequent", "mixes", "home"]:
-        print("Option must be all, frequent, mixes, or home")
+    if option not in ["all", "frequent", "mixes", "home", "auth"]:
+        print("Option must be all, frequent, mixes, home, or auth")
         print("  given: " + str(option))
         sys.exit(1)
+
+    try:
+        auth_info = validate_auth()
+    except AuthenticationExpiredError as e:
+        report_auth_failure(e)
+        sys.exit(1)
+
+    if option == "auth":
+        captured = auth_info.get("captured_at", "Unknown")
+        age = auth_info.get("age", "Unknown")
+        auth_type = auth_info.get("auth_type", "browser.json")
+        sample = auth_info.get("sample_count", 0)
+        print("✓ YouTube Music authentication is valid!")
+        print(f"  Auth Mode:        {auth_type}")
+        if "captured_at" in auth_info:
+            print(f"  Session Captured: {captured} ({age})")
+        print(f"  Probe Result:     Successfully verified {sample} liked track sample.")
+        return
 
     if option == "mixes":
         sync_all_mood_mixes()
