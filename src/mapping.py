@@ -99,28 +99,78 @@ SCHEMA_MAPPING = {
 }
 
 
-def parse_duration_seconds(record):
-    """Extract or parse duration_seconds from a record dict."""
-    duration = record.get("duration_seconds")
-    if duration is not None and isinstance(duration, (int, float)) and duration > 0:
-        return int(duration)
-    d_str = record.get("duration")
-    if d_str and isinstance(d_str, str) and ":" in d_str:
-        parts = d_str.split(":")
-        try:
-            if len(parts) == 2:
-                return int(parts[0]) * 60 + int(parts[1])
-            elif len(parts) == 3:
-                return int(parts[0]) * 3600 + int(parts[1]) * 60 + int(parts[2])
-        except ValueError:
-            pass
-    return None
+MONTH_NAMES = {
+    "january": 1, "jan": 1,
+    "february": 2, "feb": 2,
+    "march": 3, "mar": 3,
+    "april": 4, "apr": 4,
+    "may": 5,
+    "june": 6, "jun": 6,
+    "july": 7, "jul": 7,
+    "august": 8, "aug": 8,
+    "september": 9, "sep": 9, "sept": 9,
+    "october": 10, "oct": 10,
+    "november": 11, "nov": 11,
+    "december": 12, "dec": 12,
+}
+
+
+def snap_relative_played_at(played_str, run_time=None):
+    """
+    Snaps a relative 'played' string from YouTube Music (e.g. 'Today', 'Yesterday',
+    'This week', 'Last week', 'August 2026') to a clean UTC midnight ISO timestamp.
+    """
+    if run_time is None:
+        run_time = datetime.now(timezone.utc)
+
+    ref_date = run_time.date() if isinstance(run_time, datetime) else run_time
+
+    if not played_str or not isinstance(played_str, str):
+        return f"{ref_date.isoformat()}T00:00:00Z"
+
+    cleaned = played_str.strip().lower()
+
+    if cleaned == "today":
+        return f"{ref_date.isoformat()}T00:00:00Z"
+
+    if cleaned == "yesterday":
+        target_date = ref_date - timedelta(days=1)
+        return f"{target_date.isoformat()}T00:00:00Z"
+
+    if cleaned == "this week":
+        # Snap to Monday (start) of current week
+        target_date = ref_date - timedelta(days=ref_date.weekday())
+        return f"{target_date.isoformat()}T00:00:00Z"
+
+    if cleaned == "last week":
+        # Snap to Monday (start) of previous week
+        target_date = ref_date - timedelta(days=ref_date.weekday() + 7)
+        return f"{target_date.isoformat()}T00:00:00Z"
+
+    # Check for "<Month> <Year>" (e.g. "August 2026" or "Feb 2025")
+    parts = cleaned.split()
+    if len(parts) == 2:
+        month_part, year_part = parts[0], parts[1]
+        if month_part in MONTH_NAMES and year_part.isdigit() and len(year_part) == 4:
+            month = MONTH_NAMES[month_part]
+            year = int(year_part)
+            return f"{year:04d}-{month:02d}-01T00:00:00Z"
+
+    # Try parsing standard ISO date if passed
+    try:
+        dt = datetime.fromisoformat(played_str.strip())
+        return f"{dt.date().isoformat()}T00:00:00Z"
+    except Exception:
+        pass
+
+    # Default fallback: snap to run_time date at midnight
+    return f"{ref_date.isoformat()}T00:00:00Z"
 
 
 def enrich_history_records(records, run_time=None, run_id=None):
     """
-    Project playback timestamps backwards from run_time using duration_seconds
-    and assign run_id for provenance tracking.
+    Snaps playback timestamps to relative midnight boundaries based on YTM's 'played' field
+    and assigns run_id for provenance tracking.
     """
     if not records:
         return records
@@ -134,17 +184,12 @@ def enrich_history_records(records, run_time=None, run_id=None):
         else:
             run_id = f"local_{run_time.strftime('%Y%m%d_%H%M%S')}"
 
-    current_time = run_time
     for record in records:
         if not isinstance(record, dict):
             continue
-        duration = parse_duration_seconds(record)
         if "played_at" not in record or not record["played_at"]:
-            if duration and duration > 0:
-                current_time = current_time - timedelta(seconds=duration)
-                record["played_at"] = current_time.strftime("%Y-%m-%dT%H:%M:%SZ")
-            else:
-                record["played_at"] = ""
+            played_raw = record.get("played", "")
+            record["played_at"] = snap_relative_played_at(played_raw, run_time)
         if "run_id" not in record or not record["run_id"]:
             record["run_id"] = run_id
 

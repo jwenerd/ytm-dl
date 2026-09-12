@@ -56,22 +56,58 @@ def test_parse_duration_seconds():
     assert parse_duration_seconds("invalid", "invalid") is None
 
 
+from src.mapping import (
+    snap_relative_played_at,
+    enrich_history_records,
+    HistorySchema,
+    Mapping,
+)
+
+
+def test_snap_relative_played_at():
+    # Saturday, Sep 12, 2026
+    ref_time = datetime(2026, 9, 12, 14, 30, 0, tzinfo=timezone.utc)
+
+    # Today
+    assert snap_relative_played_at("Today", ref_time) == "2026-09-12T00:00:00Z"
+    assert snap_relative_played_at("today", ref_time) == "2026-09-12T00:00:00Z"
+
+    # Yesterday
+    assert snap_relative_played_at("Yesterday", ref_time) == "2026-09-11T00:00:00Z"
+
+    # This week (Monday of current week was Sep 7, 2026)
+    assert snap_relative_played_at("This week", ref_time) == "2026-09-07T00:00:00Z"
+
+    # Last week (Monday of last week was Aug 31, 2026)
+    assert snap_relative_played_at("Last week", ref_time) == "2026-08-31T00:00:00Z"
+
+    # Month Year
+    assert snap_relative_played_at("August 2026", ref_time) == "2026-08-01T00:00:00Z"
+    assert snap_relative_played_at("Feb 2025", ref_time) == "2025-02-01T00:00:00Z"
+
+    # Empty / Fallback
+    assert snap_relative_played_at("", ref_time) == "2026-09-12T00:00:00Z"
+    assert snap_relative_played_at(None, ref_time) == "2026-09-12T00:00:00Z"
+
+
 def test_enrich_history_records():
     run_time = datetime(2026, 9, 12, 12, 0, 0, tzinfo=timezone.utc)
     records = [
-        {"title": "Song A", "duration_seconds": 180, "videoId": "vidA"},
-        {"title": "Song B", "duration_seconds": 120, "videoId": "vidB"},
-        {"title": "Song C", "duration_seconds": 0, "videoId": "vidC"},
+        {"title": "Song A", "played": "Today", "videoId": "vidA"},
+        {"title": "Song B", "played": "Yesterday", "videoId": "vidB"},
+        {"title": "Song C", "played": "August 2026", "videoId": "vidC"},
+        {"title": "Song D", "videoId": "vidD"},
     ]
     enriched = enrich_history_records(records, run_time=run_time, run_id="gh-1234")
 
-    assert enriched[0]["played_at"] == "2026-09-12T11:57:00Z"
+    assert enriched[0]["played_at"] == "2026-09-12T00:00:00Z"
     assert enriched[0]["run_id"] == "gh-1234"
-    assert enriched[1]["played_at"] == "2026-09-12T11:55:00Z"
+    assert enriched[1]["played_at"] == "2026-09-11T00:00:00Z"
     assert enriched[1]["run_id"] == "gh-1234"
-    # Song C with 0 duration leaves played_at empty
-    assert enriched[2]["played_at"] == ""
+    assert enriched[2]["played_at"] == "2026-08-01T00:00:00Z"
     assert enriched[2]["run_id"] == "gh-1234"
+    assert enriched[3]["played_at"] == "2026-09-12T00:00:00Z"
+    assert enriched[3]["run_id"] == "gh-1234"
 
 
 def test_history_schema_columns():
