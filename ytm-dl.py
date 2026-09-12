@@ -46,7 +46,9 @@ def do_updates(option):
         files_written += list(executor.map(lambda file: ytmusic_to_file(file), files))
 
     if option == "all":
-        files_written += do_search_suggestions()
+        search_res = do_search_suggestions()
+        if search_res:
+            files_written.append(search_res)
         sync_all_mood_mixes()
 
     files_written = set(filter(None, files_written))

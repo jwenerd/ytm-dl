@@ -29,6 +29,30 @@ PREPEND_FILES = [
 BY_KEY = ["library_subscriptions", "library_upload_artists", "library_artists"]
 
 
+FILE_DISPLAY: dict[str, tuple[str, str]] = {
+    "history": ("🕒", "History"),
+    "liked_songs": ("❤️", "Liked Songs"),
+    "home": ("🏠", "Home Feed"),
+    "library_songs": ("🎵", "Library Songs"),
+    "library_albums": ("💿", "Library Albums"),
+    "library_artists": ("👤", "Library Artists"),
+    "library_subscriptions": ("🔔", "Subscriptions"),
+    "library_upload_songs": ("☁️", "Uploaded Songs"),
+    "library_upload_artists": ("☁️", "Uploaded Artists"),
+    "library_upload_albums": ("☁️", "Uploaded Albums"),
+    "search/suggest_by_letter": ("🔤", "Search Suggestions"),
+    "search/suggest_by_letter.yaml": ("🔤", "Search Suggestions"),
+}
+
+
+def get_file_display(file_name: str) -> tuple[str, str]:
+    """Returns (emoji, human_readable_title) for a given output file name."""
+    if file_name in FILE_DISPLAY:
+        return FILE_DISPLAY[file_name]
+    clean_name = file_name.replace("search/", "").replace("library_", "").replace("_", " ").title()
+    return "📄", clean_name
+
+
 # todo: rename this output
 class Output:
     readme_written = False
@@ -116,8 +140,10 @@ class Output:
         else:
             self.write_csv()
 
+        emoji, label = get_file_display(self.file)
         if self.hash_before == file_hash(self.csv_file):
-            return print("no updates to " + self.file)
+            print(f"{emoji} {label}: ☕ Up to date")
+            return None
 
         if self.file == "history":
             played_at_idx = (
@@ -137,13 +163,17 @@ class Output:
             )
 
         self.meta.write_files()
-        length_rows = str(len(self.rows))
+        length_rows = len(self.rows)
 
-        log = (
-            f"added {length_rows} to {self.file}"
-            if self.prepend
-            else f"created {self.file} with {length_rows} rows"
-        )
+        if self.prepend:
+            if self.file == "home":
+                log = f"{emoji} {label}: ✨ +{length_rows} items captured"
+            elif self.file == "history":
+                log = f"{emoji} {label}: ✨ +{length_rows} plays added"
+            else:
+                log = f"{emoji} {label}: ✨ +{length_rows} added"
+        else:
+            log = f"{emoji} {label}: 🆕 Created with {length_rows} rows"
         print(log)
 
         return self.file
@@ -167,9 +197,6 @@ def get_words_from_suggestions(size_gt=3):
 
 def update_search_suggestions(search_results):
     output_file = "search/suggest_by_letter.yaml"
-    data = read_output_yaml(output_file)
-    if data is None:
-        data = {}
     data = read_search_suggestions()
 
     added_count = 0
@@ -180,5 +207,10 @@ def update_search_suggestions(search_results):
         added_count += len(search_results[key]) - len(data_before)
 
     write_output_yaml(output_file, search_results)
-    print(f"added {added_count} to search/suggest_by_letter")
-    return "search/suggest_by_letter"
+    emoji, label = get_file_display(output_file)
+    if added_count > 0:
+        print(f"{emoji} {label}: ✨ +{added_count} new terms")
+        return "search/suggest_by_letter"
+    else:
+        print(f"{emoji} {label}: ☕ Up to date")
+        return None
