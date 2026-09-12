@@ -3,11 +3,12 @@ mood_chip: Focus
 playlist_id: RDTMAK5uy_l3TXw3uC_sIHl4m6RMGqCyKKd2D2_pv28
 description: Get in the zone with this mix of songs that span all your tastes. Always
   updating.
-featured_artists: "Hermanos Guti\xE9rrez, Skinshape, Yehezkel Raz, Oscar Kowalski"
+featured_artists: "El Michels Affair, Skinshape, Hermanos Guti\xE9rrez, Super Guitar\
+  \ Bros"
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 835
-new_tracks_latest_run: 17
+total_unique_tracks: 914
+new_tracks_latest_run: 79
 latest_batch_size: 500
-last_updated: '2026-09-12T11:25:40Z'
-run_id: gh-6763
+last_updated: '2026-09-12T19:29:28Z'
+run_id: gh-6768
