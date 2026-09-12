@@ -1,477 +1,407 @@
 position,title,artists,album,duration,duration_seconds,videoId,likeStatus,inLibrary
 1,Chittlin’ Cookin’ Time In Cheatham County,Sierra Ferrell,Trail Of Flowers,3:02,182,7p2-TKipaME,LIKE,False
-2,Lonely in Person,Charley Crockett,Lil G.L. Presents: Jukebox Charley,2:55,175,RKKJf0s0vE8,INDIFFERENT,False
-3,Dancing In the Moonlight,King Harvest,Dancing in the Moonlight,2:55,175,otXKTDinWBw,INDIFFERENT,False
-4,Southern Nights,Glen Campbell,Southern Nights,3:01,181,X6-sU7pVJ3k,LIKE,False
-5,It's Getting So (That a Man Can't Go into Town Just to Have Him a Drink),Colter Wall,Memories and Empties,2:48,168,IqE0J8q2fos,INDIFFERENT,False
-6,You Can Have the Crown,Sturgill Simpson,High Top Mountain,2:51,171,OeV6rWurSkg,INDIFFERENT,False
-7,Ding Dong Daddy,Nick Shoulders,"Okay, Crawdad",2:31,151,jxvw7GeWEp4,INDIFFERENT,False
-8,Skin & Bones.,RAYE,THIS MUSIC MAY CONTAIN HOPE.,3:15,195,J7f7evuZJ8A,INDIFFERENT,False
-9,Willie Nelson's Wall,Vincent Neil Emerson,Fried Chicken & Evil Women,2:42,162,-6j39409k3E,INDIFFERENT,False
-10,Carry On,Jungle,Carry On,2:49,169,HqMRbHy1q7w,INDIFFERENT,False
-11,Last Call,49 Winchester,Fortune Favors the Bold,3:29,209,s2X1KJmGlpg,INDIFFERENT,False
-12,Tramp Like Me,Benjamin Tod,Shooting Star,2:45,165,IalR0finS4Q,INDIFFERENT,False
-13,Rich Girl,Daryl Hall & John Oates,Bigger Than Both Of Us,2:23,143,IL_LiGCV82g,INDIFFERENT,False
-14,Dust Under My Rug,Brent Cobb,Keep 'Em on They Toes,3:23,203,ehBw4HnMbrA,INDIFFERENT,False
-15,Gypsy,Fleetwood Mac,Mirage,4:28,268,_9FGx0hjmC8,INDIFFERENT,False
-16,Sometimes,Luke Bell,Luke Bell,4:08,248,17GtrA32HPM,INDIFFERENT,False
-17,Frontline (feat. The Wizards),Mo'kalamity,Freedom of the Soul,4:04,244,-n3HNVvezbY,INDIFFERENT,False
-18,Chains Are Broken,The Devil Makes Three,Chains Are Broken,3:19,199,3MSYrswhAvg,INDIFFERENT,False
-19,Way of the Triune God (Hallelujah Version),Tyler Childers,Can I Take My Hounds to Heaven?,3:29,209,YYC4scj5rXY,INDIFFERENT,False
-20,Dance In The Desert,Daniel Donato,Reflector,3:55,235,phF5hak8Bvw,INDIFFERENT,False
-21,Time For Love,Mayer Hawthorne,Party Of One,3:35,215,iHzpg03jvJ8,INDIFFERENT,False
-22,I Ain't Drunk,Whitey Morgan and the 78's,Whitey Morgan and the 78's,3:01,181,btaHkGi_CY0,INDIFFERENT,False
-23,Are You Ready for the Country,Waylon Jennings,Are You Ready For The Country,3:13,193,yGvOI1qRXdU,INDIFFERENT,False
-24,50 Ways to Leave Your Lover,Paul Simon,Still Crazy After All These Years,3:38,218,B1V1varByWI,INDIFFERENT,False
-25,"So Long Honeybee, Goodbye",Pokey LaFarge,Middle of Everywhere,3:07,187,nfyIMuH-P08,INDIFFERENT,False
-26,Bored,Waxahatchee,Tigers Blood,2:56,176,-T3qT4ezviY,INDIFFERENT,False
+2,I Am Not Afraid,Charley Crockett,In the Night,2:45,165,d4PkdBTgE1c,INDIFFERENT,False
+3,It's Getting So (That a Man Can't Go into Town Just to Have Him a Drink),Colter Wall,Memories and Empties,2:48,168,IqE0J8q2fos,INDIFFERENT,False
+4,Dancing In the Moonlight,King Harvest,Dancing in the Moonlight,2:55,175,otXKTDinWBw,INDIFFERENT,False
+5,You Can Have the Crown,Sturgill Simpson,High Top Mountain,2:51,171,OeV6rWurSkg,INDIFFERENT,False
+6,Long Hard Life,49 Winchester,III,3:22,202,1aoqQZii34s,INDIFFERENT,False
+7,Southern Nights,Glen Campbell,Southern Nights,3:01,181,X6-sU7pVJ3k,LIKE,False
+8,Gypsy,Fleetwood Mac,Mirage,4:28,268,_9FGx0hjmC8,INDIFFERENT,False
+9,Way of the Triune God (Hallelujah Version),Tyler Childers,Can I Take My Hounds to Heaven?,3:29,209,YYC4scj5rXY,INDIFFERENT,False
+10,Skin & Bones.,RAYE,THIS MUSIC MAY CONTAIN HOPE.,3:15,195,J7f7evuZJ8A,INDIFFERENT,False
+11,Dance In The Desert,Daniel Donato,Reflector,3:55,235,phF5hak8Bvw,INDIFFERENT,False
+12,Ding Dong Daddy,Nick Shoulders,"Okay, Crawdad",2:31,151,jxvw7GeWEp4,INDIFFERENT,False
+13,54-46 Was My Number,Toots & The Maytals,In The Dark,3:25,205,wNxNwvjzGM0,INDIFFERENT,False
+14,Carry On,Jungle,Carry On,2:49,169,HqMRbHy1q7w,INDIFFERENT,False
+15,Willie Nelson's Wall,Vincent Neil Emerson,Fried Chicken & Evil Women,2:42,162,-6j39409k3E,INDIFFERENT,False
+16,Frontline (feat. The Wizards),Mo'kalamity,Freedom of the Soul,4:04,244,-n3HNVvezbY,INDIFFERENT,False
+17,Rich Girl,Daryl Hall & John Oates,Bigger Than Both Of Us,2:23,143,IL_LiGCV82g,INDIFFERENT,False
+18,Bettina,"Skinshape, The Horus All Stars",Skinshape X Horus,3:44,224,z-7YjIkEKKg,LIKE,False
+19,Jah Give Us Life to Live,The Wailing Souls,Love Round the Corner,3:23,203,ikYgXDuKKOs,INDIFFERENT,False
+20,"If You're Gonna Be Dumb, You Gotta Be Tough (from jackass: best and last)",Billy Strings,"If You're Gonna Be Dumb, You Gotta Be Tough (from jackass: best and last)",3:01,181,Cq-LlC51qbU,INDIFFERENT,False
+21,Dust Under My Rug,Brent Cobb,Keep 'Em on They Toes,3:23,203,ehBw4HnMbrA,INDIFFERENT,False
+22,Tramp Like Me,Benjamin Tod,Shooting Star,2:45,165,IalR0finS4Q,INDIFFERENT,False
+23,Chains Are Broken,The Devil Makes Three,Chains Are Broken,3:19,199,3MSYrswhAvg,INDIFFERENT,False
+24,Where Do Ya Want It?,Whitey Morgan and the 78's,Whitey Morgan and the 78's,2:46,166,Bzvv-F7V3Bw,INDIFFERENT,False
+25,50 Ways to Leave Your Lover,Paul Simon,Still Crazy After All These Years,3:38,218,B1V1varByWI,INDIFFERENT,False
+26,Are You Ready for the Country,Waylon Jennings,Are You Ready For The Country,3:13,193,yGvOI1qRXdU,INDIFFERENT,False
 27,House Of My Soul (You Light The Rooms),Langhorne Slim,Lost At Last Vol. 1,2:54,174,qGvzLn8CV1s,INDIFFERENT,False
-28,Don't Go Breaking My Heart,"Elton John, Kiki Dee",Rock Of The Westies,4:36,276,VHK5k2ieudc,INDIFFERENT,False
-29,Ole Virginia,The Jack Wharff Band,Ole Virginia,2:17,137,AZMAtB7noSU,INDIFFERENT,False
-30,Badfish,Sublime,Jah Won't Pay The Bills,3:09,189,2jj-wO7L2V8,INDIFFERENT,False
-31,Let It Roll,Flatland Cavalry,Wandering Star,3:19,199,eJfQT3ChWPQ,INDIFFERENT,False
-32,Sounds Like the Radio,Zach Top,Cold Beer & Country Music,3:39,219,V_R4iVA6Nts,INDIFFERENT,False
-33,Sister Golden Hair,America,Hearts,3:20,200,exiyXAV-aVQ,INDIFFERENT,False
-34,Bitter with the Sweet,Carole King,Rhymes & Reasons,2:28,148,OLAr4TSYLy0,INDIFFERENT,False
-35,Smoke! Smoke! Smoke! (That Cigarette),Tex Williams,Smoke Smoke Smoke,2:44,164,7FuvjlmXgHk,INDIFFERENT,False
-36,Still the One,Orleans,Waking & Dreaming,3:55,235,Nf87bzucZIc,INDIFFERENT,False
-37,Islands In the Stream,"Dolly Parton, Kenny Rogers",Greatest Hits,4:12,252,Cvq6lHDatNs,LIKE,True
-38,I'd Really Love to See You Tonight,England Dan & John Ford Coley,Nights Are Forever,2:40,160,P8RShs00yR0,INDIFFERENT,False
-39,Idaho Hippies,Kenny Feidler,Idaho Hippies,4:48,288,fp3YOZ4kx78,INDIFFERENT,False
-40,Cold Beer Calling My Name,"Jameson Rodgers, Luke Combs",Bet You're from a Small Town,3:31,211,LVQZ5aybpRw,INDIFFERENT,False
-41,Going up the Country,Kitty Daisy & Lewis,"Kitty, Daisy & Lewis",3:18,198,7s5cXYAfumE,INDIFFERENT,False
-42,Uncle John's Band,Grateful Dead,Workingman's Dead,4:45,285,yD1naKNQuF4,INDIFFERENT,False
-43,Radio (feat. Sharon Van Etten),Margo Price,Strays,2:50,170,rXTTT0Qe4vw,INDIFFERENT,False
-44,Long Train Runnin',The Doobie Brothers,The Captain and Me,3:28,208,CVsLEI-hCXw,INDIFFERENT,False
-45,Lola (2020 Stereo Remaster),The Kinks,"Lola Versus Powerman and the Moneygoround, Pt. 1",4:02,242,SJPCeUAV23I,INDIFFERENT,False
-46,Mr. Blue Sky,Electric Light Orchestra,Out of the Blue,5:04,304,bJ8Sz8CJY5g,INDIFFERENT,False
-47,Nothing to Lose,Colby Acuff,Honky Tonk Heaven,3:28,208,VF6sNJ4E6MU,INDIFFERENT,False
-48,Love Grows (Where My Rosemary Goes),Edison Lighthouse,Love Grows (Where My Rosemary Goes) & Other Gems,2:55,175,HFwsONQdthI,INDIFFERENT,False
-49,Wicked Fascinations,Circus Contraption,Grand American Traveling Dime Museum,3:29,209,0PzxkQU3Xqg,INDIFFERENT,False
-50,Who You Are,"Mike Sabath, The Moongirls",Who You Are,3:57,237,jgEfXlPg9bw,INDIFFERENT,False
-51,Sushi and Coca-Cola,St. Paul & The Broken Bones,Sushi and Coca-Cola,2:38,158,rv095IprpW4,INDIFFERENT,False
-52,16 Tons,Dirty Rotten Vipers,16 Tons,4:22,262,hcFupGbHAPY,INDIFFERENT,False
-53,Jamming,Bob Marley & The Wailers,Exodus,3:31,211,7kyg6F-E4fg,INDIFFERENT,False
-54,BEYOND THE SEA,Young Original,BEYOND THE SEA,3:10,190,B5WK3sZA0PA,INDIFFERENT,False
-55,Ride Like the Wind,Christopher Cross,Christopher Cross,4:36,276,uhixxFaW4n0,INDIFFERENT,False
-56,Biff,Huntertones,Biff,4:03,243,-sUB6EFBOvI,INDIFFERENT,False
-57,Crabbuckit,Good Lovelies,Let The Rain Fall,2:22,142,rJ5kEcLW7cY,INDIFFERENT,False
-58,How Sweet It Is (To Be Loved By You),James Taylor,Gorilla,3:37,217,bdxXEERZO20,INDIFFERENT,False
-59,Johnny B. Goode (2002 Remaster),Peter Tosh,Mama Africa,4:05,245,B7KLIi2AALo,INDIFFERENT,False
-60,I Say a Little Prayer,Aretha Franklin,Aretha Now,3:37,217,2t5VNI0XlwY,INDIFFERENT,False
-61,You Can't Hurry Love,The Supremes,The Supremes A' Go-Go (Expanded Edition),2:48,168,uZj032MNIx4,INDIFFERENT,False
-62,Lido Shuffle (2023 Remaster),Boz Scaggs,Silk Degrees (2023 Remaster),3:44,224,6mj-p6rITBw,INDIFFERENT,False
-63,Saturday in the Park (2002 Remaster),Chicago,Chicago V (Expanded & Remastered),3:56,236,JPOF31V-Xwg,INDIFFERENT,False
+28,Sometimes,Luke Bell,Luke Bell,4:08,248,17GtrA32HPM,INDIFFERENT,False
+29,Russian Lullaby,Jerry Garcia,Garcia (Compliments) (Expanded),3:08,188,xTqwW29WT5w,INDIFFERENT,False
+30,"So Long Honeybee, Goodbye",Pokey LaFarge,Middle of Everywhere,3:07,187,nfyIMuH-P08,INDIFFERENT,False
+31,Sister Golden Hair,America,Hearts,3:20,200,exiyXAV-aVQ,INDIFFERENT,False
+32,Lola (2020 Stereo Remaster),The Kinks,"Lola Versus Powerman and the Moneygoround, Pt. 1",4:02,242,SJPCeUAV23I,INDIFFERENT,False
+33,Bored,Waxahatchee,Tigers Blood,2:56,176,-T3qT4ezviY,INDIFFERENT,False
+34,Uptown Top Ranking (Remastered 2001),Althea & Donna,Uptown Top Ranking,3:50,230,VE-A5JULvRM,INDIFFERENT,False
+35,Islands In the Stream,"Dolly Parton, Kenny Rogers",Greatest Hits,4:12,252,Cvq6lHDatNs,LIKE,True
+36,No One's Watching Me (feat. Olivia Dean),Ezra Collective,"Dance, No One's Watching",4:23,263,g0aySWmckhs,INDIFFERENT,False
+37,Sandy,Allah-Las,Allah-Las,2:45,165,OpeaILsddHc,INDIFFERENT,False
+38,Bitter with the Sweet,Carole King,Rhymes & Reasons,2:28,148,OLAr4TSYLy0,INDIFFERENT,False
+39,Ole Virginia,The Jack Wharff Band,Ole Virginia,2:17,137,AZMAtB7noSU,INDIFFERENT,False
+40,Uncle John's Band,Grateful Dead,Workingman's Dead,4:45,285,yD1naKNQuF4,INDIFFERENT,False
+41,Dance with Me,Orleans,Let There Be Music,3:21,201,PdBmVjsJXlk,INDIFFERENT,False
+42,So Much Trouble In The World,Bob Marley & The Wailers,Survival,4:01,241,Az11r3EKmbg,INDIFFERENT,False
+43,You Make Me Feel Like Dancing,Leo Sayer,Endless Flight,3:40,220,bJ0f2hIiysU,INDIFFERENT,False
+44,Paradise,Stick Figure,Paradise,4:11,251,Jn4QCvxzsqw,INDIFFERENT,False
+45,Sounds Like the Radio,Zach Top,Cold Beer & Country Music,3:39,219,V_R4iVA6Nts,INDIFFERENT,False
+46,Badfish,Sublime,Jah Won't Pay The Bills,3:09,189,2jj-wO7L2V8,INDIFFERENT,False
+47,Fall Moon,St. Paul & The Broken Bones,Fall Moon,3:17,197,trlqa_9UVbk,INDIFFERENT,False
+48,Good Times (Roll On),Fortunate Youth,Good Times (Roll On),3:46,226,gC69p4eLS0E,INDIFFERENT,False
+49,Who You Are,"Mike Sabath, The Moongirls",Who You Are,3:57,237,jgEfXlPg9bw,INDIFFERENT,False
+50,Abilene,Kacey Musgraves,Middle of Nowhere,2:49,169,ib-JIOopNBg,INDIFFERENT,False
+51,Don't Go Breaking My Heart,"Elton John, Kiki Dee",Rock Of The Westies,4:36,276,VHK5k2ieudc,INDIFFERENT,False
+52,Let It Roll,Flatland Cavalry,Wandering Star,3:19,199,eJfQT3ChWPQ,INDIFFERENT,False
+53,Biff,Huntertones,Biff,4:03,243,-sUB6EFBOvI,INDIFFERENT,False
+54,Nothing to Lose,Colby Acuff,Honky Tonk Heaven,3:28,208,VF6sNJ4E6MU,INDIFFERENT,False
+55,Idaho Hippies,Kenny Feidler,Idaho Hippies,4:48,288,fp3YOZ4kx78,INDIFFERENT,False
+56,Love Grows (Where My Rosemary Goes),Edison Lighthouse,Love Grows (Where My Rosemary Goes) & Other Gems,2:55,175,HFwsONQdthI,INDIFFERENT,False
+57,It Runs Through Me (feat. De La Soul),"De La Soul, Tom Misch",Geography,4:22,262,aJwkmg3_6Lo,INDIFFERENT,False
+58,Ride Like the Wind,Christopher Cross,Christopher Cross,4:36,276,uhixxFaW4n0,INDIFFERENT,False
+59,Color Your Night,"ATLUS Sound Team, Azumi Takahashi, Lotus Juice",Persona 3 Reload Original Soundtrack,3:48,228,j9Sn1nFGQQ8,INDIFFERENT,False
+60,Cakewalk into Town,Taj Mahal,Recycling the Blues & Other Related Stuff,2:33,153,WU764hR3I7Q,INDIFFERENT,False
+61,Long Train Runnin',The Doobie Brothers,The Captain and Me,3:28,208,CVsLEI-hCXw,INDIFFERENT,False
+62,I'd Really Love to See You Tonight,England Dan & John Ford Coley,Nights Are Forever,2:40,160,P8RShs00yR0,INDIFFERENT,False
+63,Oh Jah Jah,Eddie Murphy,Oh Jah Jah,3:53,233,KwnwDMei36c,INDIFFERENT,False
 64,Stuck In The Middle With You,Stealers Wheel,Stealers Wheel,3:29,209,ln7Vn_WKkWU,INDIFFERENT,False
-65,You Make Me Feel Like Dancing,Leo Sayer,Endless Flight,3:40,220,bJ0f2hIiysU,INDIFFERENT,False
-66,Raindrops Keep Fallin' on My Head (Rerecorded),B.J. Thomas,B.J. Thomas,3:00,180,eKm2asQL1ME,INDIFFERENT,False
-67,Reminiscing,Little River Band,Greatest Hits,4:12,252,NAhL_9iXaTw,INDIFFERENT,False
-68,American Kids,Kenny Chesney,The Big Revival,3:03,183,U0jcdVHbgcM,INDIFFERENT,False
-69,Come and Get Your Love (Re-Record),Redbone,Come And Get Your Love,2:57,177,7Q6KbHqqhd0,INDIFFERENT,False
-70,Right Back Where We Started From,Maxine Nightingale,Right Back Where We Started From,3:13,193,JoI7MLxGRjQ,INDIFFERENT,False
-71,September,"Earth, Wind & Fire","The Best Of Earth, Wind & Fire Vol. 1",3:36,216,3cKtSlsYVEU,INDIFFERENT,False
-72,Abilene,Kacey Musgraves,Middle of Nowhere,2:49,169,ib-JIOopNBg,INDIFFERENT,False
-73,Brandy (You're a Fine Girl),Looking Glass,Looking Glass,3:07,187,CFhFyvk0yS8,INDIFFERENT,False
-74,Boogie Shoes (2004 Remaster),KC & The Sunshine Band,KC & the Sunshine Band,2:13,133,Ia0zeuZMJbo,INDIFFERENT,False
-75,Room On The Porch (feat. Ruby Amanfu),"Keb' Mo', Taj Mahal",Room On The Porch,4:06,246,xxTZ5q0h2Y0,INDIFFERENT,False
-76,My Life,Billy Joel,52nd Street,4:44,284,NlvU-EHk4Nc,INDIFFERENT,False
-77,Here Comes The Sun (2019 Mix),The Beatles,Abbey Road (Super Deluxe Edition),3:06,186,GKdl-GCsNJ0,INDIFFERENT,False
-78,Lovely Day (Studio Rio Version),"Bill Withers, Studio Rio",Studio Rio Presents: The Brazil Connection,3:58,238,vHLmx2Psrws,INDIFFERENT,False
-79,You Proof,Morgan Wallen,One Thing At A Time,2:38,158,nz_aXAHKeTM,INDIFFERENT,False
-80,Rasta Love Feat. Ky-Mani Marley (feat. Ky-Mani Marley),"Ky-Mani Marley, Protoje",The Seven Year Itch,3:06,186,0bctXoFpO3c,INDIFFERENT,False
-81,All That She Wants,Ace of Base,Happy Nation,3:32,212,FpkawF5GWMI,INDIFFERENT,False
-82,Peach Fuzz,Caamp,Peach Fuzz,3:45,225,zdk7JbqdNDM,INDIFFERENT,False
-83,Low Rider,War,21 Grams (Original Motion Picture Soundtrack),3:09,189,tTuoLdIZsrk,INDIFFERENT,False
-84,On My Soul,Bruno Mars,The Romantic,2:55,175,f6GnPGk5hEQ,INDIFFERENT,False
-85,Cold as Ice,Foreigner,Foreigner (Expanded),3:24,204,a0T4nyB9k88,INDIFFERENT,False
-86,In the Summertime,Mungo Jerry,In the Summertime,3:36,216,wVI9iEbqFyo,INDIFFERENT,False
-87,Jessie's Girl,Rick Springfield,Working Class Dog,3:15,195,mI1sxQi7USA,INDIFFERENT,False
-88,Starman,David Bowie,The Rise and Fall of Ziggy Stardust and the Spiders from Mars,4:15,255,aBKEt3MhNMM,INDIFFERENT,False
-89,We Made It (feat. Celisse),Sammy Rae & The Friends,We Made It,2:25,145,L3Gv99wrmOk,INDIFFERENT,False
-90,Wherever I Go (feat. Lawrence & Michael McDonald),Jacob Collier,Djesse Vol. 4,2:46,166,gJvXUZwNByE,INDIFFERENT,False
-91,Already Gone,Eagles,On the Border,4:16,256,yJD8ABf5jbY,INDIFFERENT,False
-92,Reelin' In The Years,Steely Dan,Can't Buy A Thrill,4:36,276,GaH25Sghoqc,INDIFFERENT,False
-93,"More Than A Woman (From ""Saturday Night Fever"" Soundtrack)",Bee Gees,Saturday Night Fever (The Original Movie Soundtrack Deluxe Edition),3:17,197,zwyKQnbDJRg,INDIFFERENT,False
-94,Jerk It Out,Caesars,Love For The Streets,3:16,196,QPXQyks5d2Q,INDIFFERENT,False
-95,My Sweet Lord,George Harrison,All Things Must Pass,4:42,282,6wHBsMoHFWs,INDIFFERENT,False
+65,Right Back Where We Started From,Maxine Nightingale,Right Back Where We Started From,3:13,193,JoI7MLxGRjQ,INDIFFERENT,False
+66,Radio (feat. Sharon Van Etten),Margo Price,Strays,2:50,170,rXTTT0Qe4vw,INDIFFERENT,False
+67,1865 (96º In The Shade),Third World,96 Degrees In The Shade,4:28,268,UwlUY3AQd2Q,INDIFFERENT,False
+68,Going up the Country,Kitty Daisy & Lewis,"Kitty, Daisy & Lewis",3:18,198,7s5cXYAfumE,INDIFFERENT,False
+69,Crabbuckit,Good Lovelies,Let The Rain Fall,2:22,142,rJ5kEcLW7cY,INDIFFERENT,False
+70,Ticket To Ride (Remastered 2009),The Beatles,Help!,3:10,190,acxfOgPWUls,INDIFFERENT,False
+71,2am,Slightly Stoopid,Chronchitis,5:00,300,Deh1Hxdm720,INDIFFERENT,False
+72,Mr. Blue Sky,Electric Light Orchestra,Out of the Blue,5:04,304,bJ8Sz8CJY5g,INDIFFERENT,False
+73,Johnny B. Goode (2002 Remaster),Peter Tosh,Mama Africa,4:05,245,B7KLIi2AALo,INDIFFERENT,False
+74,Come and Get Your Love,Redbone,Wovoka,5:01,301,DzXEos0xIQM,INDIFFERENT,False
+75,Lido Shuffle (2023 Remaster),Boz Scaggs,Silk Degrees (2023 Remaster),3:44,224,6mj-p6rITBw,INDIFFERENT,False
+76,I Say a Little Prayer,Aretha Franklin,Aretha Now,3:37,217,2t5VNI0XlwY,INDIFFERENT,False
+77,Reminiscing,Little River Band,Greatest Hits,4:12,252,NAhL_9iXaTw,INDIFFERENT,False
+78,Can't Stand Losing You,The Police,Outlandos D'Amour (Remastered 2003),2:59,179,AbcHbAFxUHI,INDIFFERENT,False
+79,Boogie Shoes (2004 Remaster),KC & The Sunshine Band,KC & the Sunshine Band,2:13,133,Ia0zeuZMJbo,INDIFFERENT,False
+80,Peach Fuzz,Caamp,Peach Fuzz,3:45,225,zdk7JbqdNDM,INDIFFERENT,False
+81,Brandy (You're a Fine Girl),Looking Glass,Looking Glass,3:07,187,CFhFyvk0yS8,INDIFFERENT,False
+82,Lovely Day (Studio Rio Version),"Bill Withers, Studio Rio",Studio Rio Presents: The Brazil Connection,3:58,238,vHLmx2Psrws,INDIFFERENT,False
+83,Raindrops Keep Fallin' on My Head (Rerecorded),B.J. Thomas,B.J. Thomas,3:00,180,eKm2asQL1ME,INDIFFERENT,False
+84,"More Than A Woman (From ""Saturday Night Fever"" Soundtrack)",Bee Gees,Saturday Night Fever (The Original Movie Soundtrack Deluxe Edition),3:17,197,zwyKQnbDJRg,INDIFFERENT,False
+85,On My Soul,Bruno Mars,The Romantic,2:55,175,f6GnPGk5hEQ,INDIFFERENT,False
+86,How Sweet It Is (To Be Loved By You),James Taylor,Gorilla,3:37,217,bdxXEERZO20,INDIFFERENT,False
+87,Saturday in the Park (2002 Remaster),Chicago,Chicago V (Expanded & Remastered),3:56,236,JPOF31V-Xwg,INDIFFERENT,False
+88,16 Tons,Dirty Rotten Vipers,16 Tons,4:22,262,hcFupGbHAPY,INDIFFERENT,False
+89,Jerusalem (2010 Remastered Edition),"Alpha Blondy, The Wailers",Jerusalem (2010 Remastered Edition),7:50,470,osCPSKIti80,INDIFFERENT,False
+90,BEYOND THE SEA,Young Original,BEYOND THE SEA,3:10,190,B5WK3sZA0PA,INDIFFERENT,False
+91,You Can't Hurry Love,The Supremes,The Supremes A' Go-Go (Expanded Edition),2:48,168,uZj032MNIx4,INDIFFERENT,False
+92,Cold as Ice,Foreigner,Foreigner (Expanded),3:24,204,a0T4nyB9k88,INDIFFERENT,False
+93,Jessie's Girl,Rick Springfield,Working Class Dog,3:15,195,mI1sxQi7USA,INDIFFERENT,False
+94,My Life,Billy Joel,52nd Street,4:44,284,NlvU-EHk4Nc,INDIFFERENT,False
+95,Wherever I Go (feat. Lawrence & Michael McDonald),Jacob Collier,Djesse Vol. 4,2:46,166,gJvXUZwNByE,INDIFFERENT,False
 96,Band On The Run,"Paul McCartney, Wings",Band On The Run,5:14,314,RjlvdcBAKdg,INDIFFERENT,False
-97,Somebody's Baby,Jackson Browne,The Next Voice You Hear - The Best Of Jackson Browne,4:23,263,KMeQ3LxA30k,INDIFFERENT,False
-98,Upside Down,Jack Johnson,Upside Down,3:30,210,e2vLWbaOITw,INDIFFERENT,False
-99,Wouldn't It Be Nice (Mono),The Beach Boys,Pet Sounds (Original Mono & Stereo Mix),2:26,146,3y44BJgkdZs,INDIFFERENT,False
-100,Mississippi Lady,Jim Croce,The Original Albums…Plus,3:56,236,aDCGYTGni8M,INDIFFERENT,False
-101,When It Snows In Texas,"Chaparelle, Sierra Ferrell",When It Snows In Texas,2:47,167,OrgNR04JtDY,INDIFFERENT,False
-102,Downtrodden Man,Charley Crockett,In the Night,3:05,185,9q3cfI4pthQ,INDIFFERENT,False
-103,Black Star,Nick Shoulders,Lonely Like Me,2:43,163,v7uEv_J1sp0,INDIFFERENT,False
-104,When They Ring Them Golden Bells,Tuba Skinny,Hot Town,4:29,269,zjQZJk4J-FU,INDIFFERENT,False
-105,Wanton Way of Loving,Esther Rose,This Time Last Night,3:27,207,WnX0NyK0EBw,INDIFFERENT,False
+97,Low Rider,War,21 Grams (Original Motion Picture Soundtrack),3:09,189,tTuoLdIZsrk,INDIFFERENT,False
+98,Rasta Love Feat. Ky-Mani Marley (feat. Ky-Mani Marley),"Ky-Mani Marley, Protoje",The Seven Year Itch,3:06,186,0bctXoFpO3c,INDIFFERENT,False
+99,September,"Earth, Wind & Fire",September (sped up + slowed),3:37,217,OBM0DO8Xt1c,INDIFFERENT,False
+100,Get Down On It,Kool & The Gang,Something Special,4:54,294,1AVxBedMP4I,INDIFFERENT,False
+101,March Wind's Gonna Blow My Blues All Away,Charley Crockett,A Stolen Jewel,2:25,145,YttFJmXsDDg,INDIFFERENT,False
+102,I’ll Come Off The Mountain,Sierra Ferrell,Trail Of Flowers,1:45,105,CuJH8d5w5ZM,INDIFFERENT,False
+103,When They Ring Them Golden Bells,Tuba Skinny,Hot Town,4:29,269,zjQZJk4J-FU,INDIFFERENT,False
+104,Wanton Way of Loving,Esther Rose,This Time Last Night,3:27,207,WnX0NyK0EBw,INDIFFERENT,False
+105,Like the Hills,Colter Wall,Memories and Empties,2:25,145,ftHV6mLHOCY,INDIFFERENT,False
 106,Everywhere,Fleetwood Mac,Tango in the Night,3:47,227,wLSUDSNqLgQ,INDIFFERENT,False
-107,In the Mornin',Emily Nenni,In the Mornin',2:42,162,UdwLKk5yKgI,INDIFFERENT,False
-108,Like the Hills,Colter Wall,Memories and Empties,2:25,145,ftHV6mLHOCY,INDIFFERENT,False
-109,Everybody Wants to Go to Heaven,The Local Honeys,The Gospel,4:04,244,N5SGg7Q9aIk,INDIFFERENT,False
-110,I Hate The Way I Look Today.,RAYE,THIS MUSIC MAY CONTAIN HOPE.,3:29,209,BjqAX_cCNwY,LIKE,False
-111,Cactus Blossom Special,Vincent Neil Emerson,Fried Chicken & Evil Women,4:22,262,uA9XcGZxWdM,LIKE,False
-112,Where Do Ya Want It?,Whitey Morgan and the 78's,Whitey Morgan and the 78's,2:46,166,Bzvv-F7V3Bw,INDIFFERENT,False
-113,You Can Call Me Al,Paul Simon,Graceland (25th Anniversary Deluxe Edition),4:40,280,OMbfT3Wppjo,INDIFFERENT,False
-114,Crocodile Rock,Elton John,Don't Shoot Me I'm Only The Piano Player,3:56,236,75r0nQu-hMs,INDIFFERENT,False
-115,Soapbox (feat. Nikki Lane),Brent Cobb,Keep 'Em on They Toes,4:03,243,FseoDJsdaAU,INDIFFERENT,False
-116,Spirits,The Devil Makes Three,Spirits,3:39,219,UEG-HP1IjmU,INDIFFERENT,False
-117,Long Hard Life,49 Winchester,III,3:22,202,1aoqQZii34s,INDIFFERENT,False
-118,I Swear (To God),Tyler Childers,Purgatory,3:21,201,MC8_AqSd9tc,INDIFFERENT,False
-119,You Make My Dreams (Come True),Daryl Hall & John Oates,Voices,3:11,191,E4CZuj7solw,INDIFFERENT,False
-120,Brown Eyed Girl,Van Morrison,Blowin' Your Mind!,3:07,187,nEQmbFWnQeE,INDIFFERENT,False
-121,Satisfy My Soul,"Bob Marley, The Wailers",Kaya,4:31,271,jAdBJu7qWwQ,INDIFFERENT,False
-122,Long Gone Love,Luke Bell,The King Is Back,2:41,161,8HXnO_QZQ84,INDIFFERENT,False
-123,Love's Gonna Live Here,Daniel Donato,Cosmic Country & Western Songs,3:08,188,3E383obC7VQ,INDIFFERENT,False
-124,Dance with Me,Orleans,Let There Be Music,3:21,201,PdBmVjsJXlk,INDIFFERENT,False
-125,Ain't No Mountain High Enough,"Marvin Gaye, Tammi Terrell",United,2:32,152,oB9JIz72BoM,INDIFFERENT,False
-126,Happy Together,The Turtles,Happy Together,2:57,177,BqZ6sRHpWIk,INDIFFERENT,False
-127,Call Me,Blondie,Call Me,3:33,213,tykf2xYPNdc,INDIFFERENT,False
-128,Evil Woman,Electric Light Orchestra,Face the Music,4:30,270,wWNNDbSNYUI,INDIFFERENT,False
-129,You're So Vain,Carly Simon,No Secrets,4:19,259,cleCtBP0o5Y,INDIFFERENT,False
-130,Ventura Highway,America,Homecoming,3:32,212,tnV7dTXlXxs,INDIFFERENT,False
-131,Sugar Sugar,The Archies,Everything's Archie,2:48,168,C7T4aQMxTTM,INDIFFERENT,False
-132,Mercury in Retrograde,Sturgill Simpson,SOUND & FURY,4:32,272,wy1GKXqt66k,INDIFFERENT,False
-133,Listen to the Music,The Doobie Brothers,Toulouse Street,3:48,228,S3ta4T9tIUM,INDIFFERENT,False
-134,Video Killed The Radio Star,The Buggles,The Age Of Plastic,4:14,254,qGBohd0V2Mo,INDIFFERENT,False
-135,I Want You Back,Jackson 5,Diana Ross Presents The Jackson 5,2:57,177,UvynvnxZJ3Q,INDIFFERENT,False
+107,Everybody Wants to Go to Heaven,The Local Honeys,The Gospel,4:04,244,N5SGg7Q9aIk,INDIFFERENT,False
+108,Lonely Like Me,Nick Shoulders,Lonely Like Me,3:10,190,YnZHdMxwlSQ,INDIFFERENT,False
+109,I Hate The Way I Look Today.,RAYE,THIS MUSIC MAY CONTAIN HOPE.,3:29,209,BjqAX_cCNwY,LIKE,False
+110,In the Mornin',Emily Nenni,In the Mornin',2:42,162,UdwLKk5yKgI,INDIFFERENT,False
+111,You Can Call Me Al,Paul Simon,Graceland (25th Anniversary Deluxe Edition),4:40,280,OMbfT3Wppjo,INDIFFERENT,False
+112,Soapbox (feat. Nikki Lane),Brent Cobb,Keep 'Em on They Toes,4:03,243,FseoDJsdaAU,INDIFFERENT,False
+113,Satisfy My Soul,"Bob Marley, The Wailers",Kaya,4:31,271,jAdBJu7qWwQ,INDIFFERENT,False
+114,Cactus Blossom Special,Vincent Neil Emerson,Fried Chicken & Evil Women,4:22,262,uA9XcGZxWdM,LIKE,False
+115,Spirits,The Devil Makes Three,Spirits,3:39,219,UEG-HP1IjmU,INDIFFERENT,False
+116,Crocodile Rock,Elton John,Don't Shoot Me I'm Only The Piano Player,3:56,236,75r0nQu-hMs,INDIFFERENT,False
+117,Darlin' Cory,Daniel Donato,Cosmic Country & Western Songs,3:11,191,GLnosST-jQw,INDIFFERENT,False
+118,"Hello, Goodbye (Remastered 2009)",The Beatles,Magical Mystery Tour,3:29,209,ywZqBGHDTlA,INDIFFERENT,False
+119,Long Gone Love,Luke Bell,The King Is Back,2:41,161,8HXnO_QZQ84,INDIFFERENT,False
+120,You Make My Dreams (Come True),Daryl Hall & John Oates,Voices,3:11,191,E4CZuj7solw,INDIFFERENT,False
+121,Going Home (Live),Tyler Childers,Live on Mountain Stage: Outlaws and Outliers,4:03,243,b5tYUmZoRQk,INDIFFERENT,False
+122,Last Call,49 Winchester,Fortune Favors the Bold,3:29,209,s2X1KJmGlpg,INDIFFERENT,False
+123,Starman,David Bowie,The Rise and Fall of Ziggy Stardust and the Spiders from Mars,4:15,255,aBKEt3MhNMM,INDIFFERENT,False
+124,In the Summertime,Mungo Jerry,In the Summertime,3:36,216,wVI9iEbqFyo,INDIFFERENT,False
+125,Sushi and Coca-Cola,St. Paul & The Broken Bones,Sushi and Coca-Cola,2:38,158,rv095IprpW4,INDIFFERENT,False
+126,Spill The Wine,"Eric Burdon, WAR",Eric Burdon Declares War,4:55,295,uE1NSGUkhQI,INDIFFERENT,False
+127,Happy Together,The Turtles,Happy Together,2:57,177,BqZ6sRHpWIk,INDIFFERENT,False
+128,Brown Eyed Girl,Van Morrison,Blowin' Your Mind!,3:07,187,nEQmbFWnQeE,INDIFFERENT,False
+129,Ain't No Mountain High Enough,"Marvin Gaye, Tammi Terrell",United,2:32,152,oB9JIz72BoM,INDIFFERENT,False
+130,Listen to the Music,The Doobie Brothers,Toulouse Street,3:48,228,S3ta4T9tIUM,INDIFFERENT,False
+131,I Ain't Drunk,Whitey Morgan and the 78's,Whitey Morgan and the 78's,3:01,181,btaHkGi_CY0,INDIFFERENT,False
+132,You're So Vain,Carly Simon,No Secrets,4:19,259,cleCtBP0o5Y,INDIFFERENT,False
+133,Still the One,Orleans,Waking & Dreaming,3:55,235,Nf87bzucZIc,INDIFFERENT,False
+134,Ventura Highway,America,Homecoming,3:32,212,tnV7dTXlXxs,INDIFFERENT,False
+135,Dancing in the Moonlight 2 (Olcott Version),King Harvest,Dancing in the Moonlight 2 (Olcott Version),3:05,185,vVyK4y8wc9w,INDIFFERENT,False
 136,Brush,Caamp,Copper Changes Color,2:26,146,emUurTmoQQk,INDIFFERENT,False
-137,Got My Mind Set on You,George Harrison,Cloud Nine,3:55,235,lQuln0tbgDA,INDIFFERENT,False
-138,Dancing in the Moonlight 2 (Olcott Version),King Harvest,Dancing in the Moonlight 2 (Olcott Version),3:05,185,vVyK4y8wc9w,INDIFFERENT,False
-139,Pumped Up Kicks,Foster The People,Torches,4:00,240,rnO-MflYxCw,INDIFFERENT,False
-140,Steppin' Out,Joe Jackson,Night And Day,4:29,269,OH4r2adqw3s,INDIFFERENT,False
-141,Something Serious,Bruno Mars,The Romantic,2:47,167,cXuJade1TKc,INDIFFERENT,False
-142,Every Little Thing She Does Is Magic,The Police,Ghost In The Machine (Remastered 2003),4:21,261,5WEjz2YoH80,INDIFFERENT,False
-143,Africa,Toto,Toto IV,4:56,296,QAo_Ycocl1E,INDIFFERENT,False
-144,Twin Flames,American Aquarium,Twin Flames,3:02,182,M2sPZRT3EeQ,INDIFFERENT,False
-145,Super Freak,Rick James,Street Songs (Expanded Edition),3:25,205,wnKc4zi0MLA,INDIFFERENT,False
-146,Only the Good Die Young,Billy Joel,The Stranger,3:56,236,ZQ_m236f_eM,INDIFFERENT,False
-147,Loneliest Girl,Kacey Musgraves,Middle of Nowhere,4:17,257,QHtAKpkOtYg,INDIFFERENT,False
-148,Break My Stride,Matthew Wilder,I Don't Speak The Language,3:05,185,UhLDA4Wr2GU,INDIFFERENT,False
-149,Disco Snails,Vulfmon & Zachary Barker,Dot,3:14,194,dHdwS5rvXKY,INDIFFERENT,False
-150,"Whenever I Call You ""Friend"" (feat. Stevie Nicks)",Kenny Loggins,Nightwatch,3:58,238,cmR6xV-OJBI,INDIFFERENT,False
-151,Cherry Bomb,John Mellencamp,The Lonesome Jubilee,4:48,288,KQoQyakbp48,INDIFFERENT,False
-152,Beds Are Burning,Midnight Oil,Diesel And Dust,4:16,256,9t5OWixuUI8,INDIFFERENT,False
-153,Let's Groove,"Earth, Wind & Fire",Raise!,5:40,340,ltjio4AM2uw,INDIFFERENT,False
-154,Come On Eileen,Dexys Midnight Runners,Too Rye Ay,4:48,288,GbpnAGajyMc,INDIFFERENT,False
-155,Get Down On It,Kool & The Gang,Something Special,4:54,294,1AVxBedMP4I,INDIFFERENT,False
-156,Opalite,Taylor Swift,The Life of a Showgirl,3:56,236,JCcUifiu3UU,INDIFFERENT,False
-157,Serendipity Bop,"Bug Hunter, Jam Mechanics, The Narcissist Cookbook",Serendipity Bop,2:26,146,uYYbW2H7_zA,INDIFFERENT,False
-158,Clavar La Espada,Shiro SAGISU,TV Animation BLEACH Original Soundtrack 3,3:40,220,Z9Onb_z0XPI,INDIFFERENT,False
-159,My Sharona,The Knack,Get the Knack,4:56,296,ZR-3r5Z9kqw,INDIFFERENT,False
-160,Stomp!,The Brothers Johnson,Light Up The Night,6:21,381,TFY1_zZ5Nc4,INDIFFERENT,False
-161,ARROWS,Joe McLeod,ARROWS,3:29,209,-OIJfNy9p7w,INDIFFERENT,False
-162,Country Girl (Shake It For Me),Luke Bryan,Tailgates & Tanlines,3:46,226,r7A0Sjiu2zg,INDIFFERENT,False
-163,Carry on Wayward Son,Kansas,Leftoverture (Expanded Edition),5:23,323,tz6u9suVNlY,INDIFFERENT,False
-164,I Remember Carolina,Margo Cilker,Valley Of Heart's Delight,4:55,295,NyxzTWWgtlo,LIKE,False
-165,I Am Not Afraid,Charley Crockett,In the Night,2:45,165,d4PkdBTgE1c,INDIFFERENT,False
-166,I’ll Come Off The Mountain,Sierra Ferrell,Trail Of Flowers,1:45,105,CuJH8d5w5ZM,INDIFFERENT,False
-167,Happier Times Ahead.,RAYE,THIS MUSIC MAY CONTAIN HOPE.,4:31,271,jC3UtqgDK-w,INDIFFERENT,False
-168,Lonely Like Me,Nick Shoulders,Lonely Like Me,3:10,190,YnZHdMxwlSQ,INDIFFERENT,False
-169,Say You Love Me,Fleetwood Mac,Fleetwood Mac,4:10,250,qrU1Zg0wugE,INDIFFERENT,False
-170,Born Again,Tyler Childers,Purgatory,3:29,209,hXRmU2U2YBg,INDIFFERENT,False
-171,Three Little Birds,Bob Marley & The Wailers,Exodus,3:01,181,MUNNRAdizz0,INDIFFERENT,False
-172,Darlin' Cory,Daniel Donato,Cosmic Country & Western Songs,3:11,191,GLnosST-jQw,INDIFFERENT,False
-173,Dark House Of Fools,Luke Bell,The King Is Back,3:05,185,iYpD-W8_eKg,INDIFFERENT,False
-174,Ain't No Mountain High Enough,"Marvin Gaye, Tammi Terrell",Greatest Hits,2:28,148,Gq-Ufl_dNwk,INDIFFERENT,False
-175,Livin' Thing,Electric Light Orchestra,A New World Record,3:33,213,Zl9o1QWHXko,INDIFFERENT,False
-176,Kiss on My List,Daryl Hall & John Oates,Voices,4:25,265,0pIHILw_ekA,INDIFFERENT,False
-177,Rosanna,Toto,Toto IV,5:32,332,SGtVZgCYVgk,INDIFFERENT,False
-178,"I'm Alright (Theme from ""Caddyshack"")",Kenny Loggins,Caddyshack,3:47,227,e2eRRkw62y0,INDIFFERENT,False
-179,Uptown Girl,Billy Joel,An Innocent Man,3:18,198,H6M0EulApMM,INDIFFERENT,False
-180,Ain't Got No Time to Lose,Charley Crockett,In the Night,2:34,154,gLo1HvS3Suk,INDIFFERENT,False
-181,Why’d Ya Do It,Sierra Ferrell,Long Time Coming,3:38,218,jqwGzhBgUxE,INDIFFERENT,False
-182,"Genesis, pt. iii",RAYE,Genesis.,2:23,143,VWKlgSURWYs,INDIFFERENT,False
-183,I Just Might,Bruno Mars,The Romantic,3:33,213,8_C6lXoGB5Y,INDIFFERENT,False
-184,You Make Loving Fun (2004 Remaster),Fleetwood Mac,Rumours,3:34,214,RqjXn2NflqU,INDIFFERENT,False
-185,Going Home (Live),Tyler Childers,Live on Mountain Stage: Outlaws and Outliers,4:03,243,b5tYUmZoRQk,INDIFFERENT,False
-186,Could You Be Loved,Bob Marley,Uprising,3:57,237,zBqW6yKz8WA,INDIFFERENT,False
-187,Rather Low,Nick Shoulders,"Okay, Crawdad",3:01,181,wj4yGwsgPFE,INDIFFERENT,False
-188,Don't Bring Me Down,Electric Light Orchestra,Discovery,4:04,244,kW0HZy8J0v0,INDIFFERENT,False
-189,Private Eyes,Daryl Hall & John Oates,Private Eyes (Expanded Edition),3:38,218,zxFxl5NjBzc,INDIFFERENT,False
-190,Lots of Luck,Charley Crockett,Lil G.L.'s Blue Bonanza,2:47,167,KANmwnCSVEk,INDIFFERENT,False
-191,At The End Of The Rainbow,Sierra Ferrell,Long Time Coming,3:41,221,pzXRmFsYXpE,INDIFFERENT,False
-192,Fly Me to the Moon,RAYE,Fly Me to the Moon,3:12,192,fCMHa0J8eBk,INDIFFERENT,False
-193,Hold Me,Fleetwood Mac,Mirage,3:46,226,yaGFwKIJR7c,INDIFFERENT,False
-194,Bitin' List,Tyler Childers,Snipe Hunter,2:57,177,78iG-ZN5110,INDIFFERENT,False
-195,Is This Love (Kaya 40 Mix),"Bob Marley, The Wailers",Kaya (40th Anniversary Edition),3:54,234,WjGiUVrQEB0,INDIFFERENT,False
-196,Welcome to Hard Times (Live from the Ryman),Charley Crockett,Live from the Ryman,2:51,171,MI0I-j_gKbI,INDIFFERENT,False
-197,Shit Kicked In,"Old Crow Medicine Show, Sierra Ferrell",Jubilee,3:38,218,ADq-nxTqPAA,INDIFFERENT,False
-198,Beware.. The South London Lover Boy.,RAYE,THIS MUSIC MAY CONTAIN HOPE.,3:27,207,RKCUiEpaahI,INDIFFERENT,False
-199,Don't Stop (2004 Remaster),Fleetwood Mac,Rumours (Deluxe Edition),3:14,194,vCSaDQJtblA,INDIFFERENT,False
-200,March Wind's Gonna Blow My Blues All Away,Charley Crockett,A Stolen Jewel,2:25,145,YttFJmXsDDg,INDIFFERENT,False
-201,The Sea,Sierra Ferrell,Long Time Coming,3:33,213,-SZW7sk-UpY,INDIFFERENT,False
-202,I'm Workin',Charley Crockett,In the Night,2:33,153,l5GT00Sw3fw,INDIFFERENT,False
-203,A Lesson In Leavin’,"Nikki Lane, Sierra Ferrell",A Lesson In Leavin',3:25,205,OrPKQ3n3k8o,INDIFFERENT,False
-204,Hot Together,The Pointer Sisters,Hot Together (Expanded Edition),4:14,254,-NnMl7NUmS8,INDIFFERENT,False
-205,Murine Corps,Kristofer Maddigan,Cuphead (Original Soundtrack),4:10,250,zhqMfAKLjuE,INDIFFERENT,False
-206,Cantina Band,"John Williams, London Symphony Orchestra",Star Wars: A New Hope (Original Motion Picture Soundtrack),2:45,165,EsvfptdFXf4,INDIFFERENT,False
-207,It's Been Wrong,The Lostines,The Lostines EP,3:28,208,7VcTN8lG0_4,INDIFFERENT,False
-208,Coyote,Rattlesnake Milk,Chicken Fried Snake,2:50,170,27ndczL67i0,INDIFFERENT,False
-209,"Empty Yodel, No. 0",Nick Shoulders,Lonely Like Me,2:28,148,BKWxQATOD4E,INDIFFERENT,False
-210,Travelin' Man (Live At The American Legion Post 82),"Billy Strings, Bryan Sutton",Live At The Legion,3:18,198,vA-aqXGIFLk,INDIFFERENT,False
-211,All I Have To Do Is Dream,The Osborne Brothers,From Rocky Top to Muddy Bottom: The Songs of Boudleaux and Felice Bryant,2:43,163,NfAVXMet7nE,INDIFFERENT,False
-212,Southbound,The Travelin' McCourys,The Travelin' Mccourys,3:04,184,7idYYbf6y6Q,INDIFFERENT,False
-213,Miles On My Shoes,Jarrod Walker,Nighthawk,2:36,156,0Aj0BgiJCc4,INDIFFERENT,False
-214,Long White Line,Sturgill Simpson,Cuttin' Grass - Vol. 1 (Butcher Shoppe Sessions),2:22,142,0y9VuiPAi1w,INDIFFERENT,False
-215,Thunderbird Will Do Just Fine,Eleven Hundred Springs,Bandwagon,2:36,156,TxAnlNawP4U,INDIFFERENT,False
+137,Mercury in Retrograde,Sturgill Simpson,SOUND & FURY,4:32,272,wy1GKXqt66k,INDIFFERENT,False
+138,Call Me,Blondie,Call Me,3:33,213,tykf2xYPNdc,INDIFFERENT,False
+139,Room On The Porch (feat. Ruby Amanfu),"Keb' Mo', Taj Mahal",Room On The Porch,4:06,246,xxTZ5q0h2Y0,INDIFFERENT,False
+140,Upside Down,Jack Johnson,Upside Down,3:30,210,e2vLWbaOITw,INDIFFERENT,False
+141,Wouldn't It Be Nice (Mono),The Beach Boys,Pet Sounds (Original Mono & Stereo Mix),2:26,146,3y44BJgkdZs,INDIFFERENT,False
+142,Mississippi Lady,Jim Croce,The Original Albums…Plus,3:56,236,aDCGYTGni8M,INDIFFERENT,False
+143,My Sweet Lord,George Harrison,All Things Must Pass,4:42,282,6wHBsMoHFWs,INDIFFERENT,False
+144,Pumped Up Kicks,Foster The People,Torches,4:00,240,rnO-MflYxCw,INDIFFERENT,False
+145,Already Gone,Eagles,On the Border,4:16,256,yJD8ABf5jbY,INDIFFERENT,False
+146,Don't Bring Me Down,Electric Light Orchestra,Discovery,4:04,244,kW0HZy8J0v0,INDIFFERENT,False
+147,Reelin' In The Years,Steely Dan,Can't Buy A Thrill,4:36,276,GaH25Sghoqc,INDIFFERENT,False
+148,Only the Good Die Young,Billy Joel,The Stranger,3:56,236,ZQ_m236f_eM,INDIFFERENT,False
+149,Somebody's Baby,Jackson Browne,The Next Voice You Hear - The Best Of Jackson Browne,4:23,263,KMeQ3LxA30k,INDIFFERENT,False
+150,I Want You Back,Jackson 5,Diana Ross Presents The Jackson 5,2:57,177,UvynvnxZJ3Q,INDIFFERENT,False
+151,Steppin' Out,Joe Jackson,Night And Day,4:29,269,OH4r2adqw3s,INDIFFERENT,False
+152,Africa,Toto,Toto IV,4:56,296,QAo_Ycocl1E,INDIFFERENT,False
+153,Every Little Thing She Does Is Magic,The Police,Ghost In The Machine (Remastered 2003),4:21,261,5WEjz2YoH80,INDIFFERENT,False
+154,Super Freak,Rick James,Street Songs (Expanded Edition),3:25,205,wnKc4zi0MLA,INDIFFERENT,False
+155,Hot Together,The Pointer Sisters,Hot Together (Expanded Edition),4:14,254,-NnMl7NUmS8,INDIFFERENT,False
+156,Something Serious,Bruno Mars,The Romantic,2:47,167,cXuJade1TKc,INDIFFERENT,False
+157,Loneliest Girl,Kacey Musgraves,Middle of Nowhere,4:17,257,QHtAKpkOtYg,INDIFFERENT,False
+158,Break My Stride,Matthew Wilder,I Don't Speak The Language,3:05,185,UhLDA4Wr2GU,INDIFFERENT,False
+159,Centerfold,The J. Geils Band,Freeze Frame,3:37,217,zjcmeLEik0Q,INDIFFERENT,False
+160,"Whenever I Call You ""Friend"" (feat. Stevie Nicks)",Kenny Loggins,Nightwatch,3:58,238,cmR6xV-OJBI,INDIFFERENT,False
+161,Big Modern!,Goose,BIG MODERN!,6:29,389,Dp33HRatAJ8,INDIFFERENT,False
+162,Disco Snails,Vulfmon & Zachary Barker,Dot,3:14,194,dHdwS5rvXKY,INDIFFERENT,False
+163,Opalite,Taylor Swift,The Life of a Showgirl,3:56,236,JCcUifiu3UU,INDIFFERENT,False
+164,Cherry Bomb,John Mellencamp,The Lonesome Jubilee,4:48,288,KQoQyakbp48,INDIFFERENT,False
+165,Step Into The Sun,Slightly Stoopid,Step Into The Sun,4:01,241,Hs0U1wyxF4Y,INDIFFERENT,False
+166,Clavar La Espada,Shiro SAGISU,TV Animation BLEACH Original Soundtrack 3,3:40,220,Z9Onb_z0XPI,INDIFFERENT,False
+167,Carry on Wayward Son,Kansas,Leftoverture (Expanded Edition),5:23,323,tz6u9suVNlY,INDIFFERENT,False
+168,It's Been Wrong,The Lostines,The Lostines EP,3:28,208,7VcTN8lG0_4,INDIFFERENT,False
+169,I Remember Carolina,Margo Cilker,Valley Of Heart's Delight,4:55,295,NyxzTWWgtlo,LIKE,False
+170,When It Snows In Texas,"Chaparelle, Sierra Ferrell",When It Snows In Texas,2:47,167,OrgNR04JtDY,INDIFFERENT,False
+171,Ain't Got No Time to Lose,Charley Crockett,In the Night,2:34,154,gLo1HvS3Suk,INDIFFERENT,False
+172,Black Star,Nick Shoulders,Lonely Like Me,2:43,163,v7uEv_J1sp0,INDIFFERENT,False
+173,Happier Times Ahead.,RAYE,THIS MUSIC MAY CONTAIN HOPE.,4:31,271,jC3UtqgDK-w,INDIFFERENT,False
+174,Little Lies,Fleetwood Mac,Tango in the Night,3:42,222,ZWuViMR_A1o,INDIFFERENT,False
+175,Jamming,Bob Marley & The Wailers,Exodus,3:31,211,7kyg6F-E4fg,INDIFFERENT,False
+176,Love's Gonna Live Here,Daniel Donato,Cosmic Country & Western Songs,3:08,188,3E383obC7VQ,INDIFFERENT,False
+177,Here Comes The Sun (2019 Mix),The Beatles,Abbey Road (Super Deluxe Edition),3:06,186,GKdl-GCsNJ0,INDIFFERENT,False
+178,Dark House Of Fools,Luke Bell,The King Is Back,3:05,185,iYpD-W8_eKg,INDIFFERENT,False
+179,Born Again,Tyler Childers,Purgatory,3:29,209,hXRmU2U2YBg,INDIFFERENT,False
+180,Ain't No Mountain High Enough,"Marvin Gaye, Tammi Terrell",Greatest Hits,2:28,148,Gq-Ufl_dNwk,INDIFFERENT,False
+181,Kiss on My List,Daryl Hall & John Oates,Voices,4:25,265,0pIHILw_ekA,INDIFFERENT,False
+182,Modern Love,David Bowie,Let's Dance,4:49,289,YhVctfNeTgU,INDIFFERENT,False
+183,Evil Woman,Electric Light Orchestra,Face the Music,4:30,270,wWNNDbSNYUI,INDIFFERENT,False
+184,Rosanna,Toto,Toto IV,5:32,332,SGtVZgCYVgk,INDIFFERENT,False
+185,Why’d Ya Do It,Sierra Ferrell,Long Time Coming,3:38,218,jqwGzhBgUxE,INDIFFERENT,False
+186,Wasted Days and Wasted Nights,Charley Crockett,In the Night,2:19,139,xujD6kGrmUE,INDIFFERENT,False
+187,After Hours,Nick Shoulders,Lonely Like Me,3:45,225,c9sGxzR8_KY,INDIFFERENT,False
+188,Fly Me to the Moon,RAYE,Fly Me to the Moon,3:12,192,fCMHa0J8eBk,INDIFFERENT,False
+189,You Make Loving Fun (2004 Remaster),Fleetwood Mac,Rumours,3:34,214,RqjXn2NflqU,INDIFFERENT,False
+190,Could You Be Loved,Bob Marley,Uprising,3:57,237,zBqW6yKz8WA,INDIFFERENT,False
+191,Uptown Girl,Billy Joel,An Innocent Man,3:18,198,H6M0EulApMM,INDIFFERENT,False
+192,"I'm Alright (Theme from ""Caddyshack"")",Kenny Loggins,Caddyshack,3:47,227,e2eRRkw62y0,INDIFFERENT,False
+193,Echo of a Rose,Goose,Chain Yer Dragon,6:27,387,NB5jywon2W0,INDIFFERENT,False
+194,I Swear (To God),Tyler Childers,Purgatory,3:21,201,MC8_AqSd9tc,INDIFFERENT,False
+195,I Just Might,Bruno Mars,The Romantic,3:33,213,8_C6lXoGB5Y,INDIFFERENT,False
+196,Private Eyes,Daryl Hall & John Oates,Private Eyes (Expanded Edition),3:38,218,zxFxl5NjBzc,INDIFFERENT,False
+197,Livin' Thing,Electric Light Orchestra,A New World Record,3:33,213,Zl9o1QWHXko,INDIFFERENT,False
+198,At The End Of The Rainbow,Sierra Ferrell,Long Time Coming,3:41,221,pzXRmFsYXpE,INDIFFERENT,False
+199,Drivin' Nails in My Coffin,Charley Crockett,A Stolen Jewel,2:37,157,ABXoSOipoLc,INDIFFERENT,False
+200,"Genesis, pt. iii",RAYE,Genesis.,2:23,143,VWKlgSURWYs,INDIFFERENT,False
+201,Say You Love Me,Fleetwood Mac,Fleetwood Mac,4:10,250,qrU1Zg0wugE,INDIFFERENT,False
+202,Silver Dagger,Charley Crockett,In the Night,2:27,147,n-odtha0f8g,INDIFFERENT,False
+203,Shit Kicked In,"Old Crow Medicine Show, Sierra Ferrell",Jubilee,3:38,218,ADq-nxTqPAA,INDIFFERENT,False
+204,Don't Stop (2004 Remaster),Fleetwood Mac,Rumours (Deluxe Edition),3:14,194,vCSaDQJtblA,INDIFFERENT,False
+205,Is This Love (Kaya 40 Mix),"Bob Marley, The Wailers",Kaya (40th Anniversary Edition),3:54,234,WjGiUVrQEB0,INDIFFERENT,False
+206,Beware.. The South London Lover Boy.,RAYE,THIS MUSIC MAY CONTAIN HOPE.,3:27,207,RKCUiEpaahI,INDIFFERENT,False
+207,Bitin' List,Tyler Childers,Snipe Hunter,2:57,177,78iG-ZN5110,INDIFFERENT,False
+208,"KOMM, SUSSER TOD (M-10 Director's Edit Version)",Arianne,Evangelion Finally,7:47,467,rQiHzcdUPAU,INDIFFERENT,False
+209,Rather Low,Nick Shoulders,"Okay, Crawdad",3:01,181,wj4yGwsgPFE,INDIFFERENT,False
+210,Coyote,Rattlesnake Milk,Chicken Fried Snake,2:50,170,27ndczL67i0,INDIFFERENT,False
+211,Cornbread and Butterbeans,Carolina Chocolate Drops,Genuine Negro Jig,3:11,191,dxqF023UIt0,INDIFFERENT,False
+212,Side Saddle (feat. Gillian Welch),"Golden Highway, Molly Tuttle",Crooked Tree,2:45,165,c9vninLhMzI,INDIFFERENT,False
+213,All I Have To Do Is Dream,The Osborne Brothers,From Rocky Top to Muddy Bottom: The Songs of Boudleaux and Felice Bryant,2:43,163,NfAVXMet7nE,INDIFFERENT,False
+214,So Doggone Lonesome,Johnny Cash,Johnny Cash with His Hot and Blue Guitar (2017 Definitive Expanded Remastered Edition),2:35,155,51u5tqDXF3k,INDIFFERENT,False
+215,The Plank,The Devil Makes Three,The Devil Makes Three,2:27,147,P05Gk08osdM,INDIFFERENT,False
 216,Southern Star,Brent Cobb,Southern Star,3:07,187,lQJyChiuuqs,INDIFFERENT,False
-217,Side Saddle (feat. Gillian Welch),"Golden Highway, Molly Tuttle",Crooked Tree,2:45,165,c9vninLhMzI,INDIFFERENT,False
-218,So Doggone Lonesome,Johnny Cash,Johnny Cash with His Hot and Blue Guitar (2017 Definitive Expanded Remastered Edition),2:35,155,51u5tqDXF3k,INDIFFERENT,False
-219,Durward,Muscadine Bloodline,... And What Was Left Behind,2:11,131,K1IbNhKcl4w,INDIFFERENT,False
-220,Texas Moon,Vincent Neil Emerson,Texas Moon,3:26,206,1fkALB4-MCU,INDIFFERENT,False
-221,The Plank,The Devil Makes Three,The Devil Makes Three,2:27,147,P05Gk08osdM,INDIFFERENT,False
-222,These Boots Are Made for Walkin',Nancy Sinatra,Boots,2:48,168,ICjlGNXwjkE,INDIFFERENT,False
-223,Little While,The Wooks,Little While,4:19,259,IyVZAWodycw,INDIFFERENT,False
-224,And When She Smiles (She Makes the Sun Shine),Matthews Southern Comfort,Later That Same Year,2:14,134,JgaObOlFB2g,INDIFFERENT,False
-225,Johnny Boy's Bones (feat. The Dead South),Colter Wall,Imaginary Appalachia,2:57,177,eoJlKDdXArI,INDIFFERENT,False
-226,Mary Could You,Benjamin Tod,Mary Could You,2:39,159,npbqj2UCk0o,INDIFFERENT,False
-227,A Bank Robber's Nursery Rhyme,"Goodnight, Texas",A Bank Robber's Nursery Rhyme,2:46,166,ATfleYOT4wo,INDIFFERENT,False
-228,Bring Back Someday,Lost Dog Street Band,Weight of a Trigger,3:21,201,G7q1sqh2izg,INDIFFERENT,False
-229,Do You Think About Me At All,Bella White,Just Like Leaving,3:17,197,Vk3OEp9DyYY,INDIFFERENT,False
-230,Oldsmobile,Hogslop String Band & Sierra Ferrell,Oldsmobile,4:22,262,YrB1__ApBYc,INDIFFERENT,False
-231,Leavin' Town,Trey Hedrick,"Sing, Appalachia",3:00,180,Vvy0K7OE_sQ,INDIFFERENT,False
-232,Feelin’ good,South Texas Tweek,Feelin’ good,3:17,197,miNl_dJk2RU,INDIFFERENT,False
-233,The Lonesome Blues,Shannon Slaughter,The Lonesome Blues,2:59,179,oh0hzeXvmb4,INDIFFERENT,False
-234,Fire On the Mountain,Iron Horse,Ridin' Out The Storm,3:19,199,1xEyds9Z4II,INDIFFERENT,False
-235,Back to the Mountains,The Po' Ramblin' Boys,Back to the Mountains,2:33,153,2Lb5QpzRSuE,INDIFFERENT,False
-236,Lawdog,Town Mountain,Leave the Bottle,4:49,289,WB9NP0U67V4,INDIFFERENT,False
-237,No Business Mountain,Lonesome River Band,No Business Mountain,3:30,210,yafFDT4xoSY,INDIFFERENT,False
-238,It'll Be Alright,The Infamous Stringdusters,Things That Fly,3:22,202,UU_rwkp35mQ,INDIFFERENT,False
-239,Roughest Neck Around,Corb Lund,Five Dollar Bill,3:13,193,5-VbwDUPtQI,INDIFFERENT,False
-240,Silver Wave,The Brudi Brothers,Dark and Stormy,3:14,194,GzwJGu1vVos,INDIFFERENT,False
-241,If I Was the Last Man,Ryan Necci and The Buffalo Gospel,If I Was the Last Man,2:34,154,S6KW0lkP6EU,INDIFFERENT,False
+217,Gild the Lily,Billy Strings,Highway Prayers,5:06,306,JFK36ok9Bg8,INDIFFERENT,False
+218,Thunderbird Will Do Just Fine,Eleven Hundred Springs,Bandwagon,2:36,156,TxAnlNawP4U,INDIFFERENT,False
+219,Dark and Stormy,The Brudi Brothers,Dark and Stormy,3:08,188,6pC0nhqtmqU,INDIFFERENT,False
+220,Fire On the Mountain,Iron Horse,Ridin' Out The Storm,3:19,199,1xEyds9Z4II,INDIFFERENT,False
+221,"Bad, Bad Leroy Brown",Jim Croce,Life & Times,3:03,183,01pQgdIfhAM,INDIFFERENT,False
+222,25 & Wastin' Time,Vincent Neil Emerson,Fried Chicken & Evil Women,2:58,178,qNxFqo7VIiE,LIKE,False
+223,No Business Mountain,Lonesome River Band,No Business Mountain,3:30,210,yafFDT4xoSY,INDIFFERENT,False
+224,Johnny Boy's Bones (feat. The Dead South),Colter Wall,Imaginary Appalachia,2:57,177,eoJlKDdXArI,INDIFFERENT,False
+225,I'm Chasin' Old Memories Down,Junior Sisk,Lost & Alone,2:59,179,V5w4z3ckaY4,INDIFFERENT,False
+226,Breakers Roar,Sturgill Simpson,Cuttin' Grass - Vol. 1 (Butcher Shoppe Sessions),2:30,150,6kwKTqpQ5k8,INDIFFERENT,False
+227,Roughest Neck Around,Corb Lund,Five Dollar Bill,3:13,193,5-VbwDUPtQI,INDIFFERENT,False
+228,Blue Eyes Dancing,Matt Heckler,After the Flood,3:17,197,I5CYO4BR7iw,INDIFFERENT,False
+229,East Due West Blues,East Nash Grass,Last Chance to Win,3:03,183,bILzUKKLGM4,INDIFFERENT,False
+230,Flyin' High,The Wooks,Flyin' High,3:40,220,x_3saitKKWE,INDIFFERENT,False
+231,Feelin’ good,South Texas Tweek,Feelin’ good,3:17,197,miNl_dJk2RU,INDIFFERENT,False
+232,table for two,aron!,Jazz para cocinar,1:52,112,RWACmdpqxHA,INDIFFERENT,False
+233,Hand to Hold,Luke Bell,The King Is Back,2:40,160,D0qTQtC9F1M,INDIFFERENT,False
+234,Do You Think About Me At All,Bella White,Just Like Leaving,3:17,197,Vk3OEp9DyYY,INDIFFERENT,False
+235,Southbound,The Travelin' McCourys,The Travelin' Mccourys,3:04,184,7idYYbf6y6Q,INDIFFERENT,False
+236,Nobody Dies From Weed,Hayes & The Heathens,Nobody Dies From Weed,3:19,199,WBhxBiHHrxI,INDIFFERENT,False
+237,Between The Lightning And The Thunder (feat. Dan Tyminski),Justin Moses,Between The Lightning And The Thunder,2:28,148,gDrA4ha5vfU,INDIFFERENT,False
+238,Can't Remember,Tejon Street Corner Thieves,Juxtaposition,4:20,260,WSZ0dhDWLsA,INDIFFERENT,False
+239,If I Was the Last Man,Ryan Necci and The Buffalo Gospel,If I Was the Last Man,2:34,154,S6KW0lkP6EU,INDIFFERENT,False
+240,You Got Gold,John Prine,The Missing Years,4:39,279,rgiYjSQ3EWU,INDIFFERENT,False
+241,Box of Rain,Grateful Dead,American Beauty,5:19,319,nxjvo4BRf-Y,INDIFFERENT,False
 242,On My Knees,The Red Clay Strays,Made by These Moments,3:25,205,mf4_7q849Ec,INDIFFERENT,False
-243,Hear The Willow Cry,The SteelDrivers,The SteelDrivers,3:00,180,k0vqpZWG3FI,INDIFFERENT,False
-244,eggs in the morning,aron!,cozy you (and other nice songs),2:28,148,PVgDmI4Bvr8,INDIFFERENT,False
-245,Hand to Hold,Luke Bell,The King Is Back,2:40,160,D0qTQtC9F1M,INDIFFERENT,False
-246,East Due West Blues,East Nash Grass,Last Chance to Win,3:03,183,bILzUKKLGM4,INDIFFERENT,False
-247,Nobody Dies From Weed,Hayes & The Heathens,Nobody Dies From Weed,3:19,199,WBhxBiHHrxI,INDIFFERENT,False
-248,I'm Chasin' Old Memories Down,Junior Sisk,Lost & Alone,2:59,179,V5w4z3ckaY4,INDIFFERENT,False
-249,A Reasonable Man (Killdozer),Bowregard,Arrows,3:38,218,24HcO-KfYO0,INDIFFERENT,False
-250,Cheap Cocaine,Willi Carlisle,Too Nice to Mean Much,3:34,214,fsuq8pKVjkg,INDIFFERENT,False
-251,Take 'Em Away,Old Crow Medicine Show,O.C.M.S.,3:35,215,wfqm-rP_kFY,INDIFFERENT,False
-252,Baby 1-2-3,Charley Crockett,In the Night,2:11,131,1SU4XLLgloA,INDIFFERENT,False
-253,Botanic Panic,Kristofer Maddigan,Cuphead (Original Soundtrack),4:02,242,ToR93aj9U7w,INDIFFERENT,False
-254,Years,Sierra Ferrell,Years,3:00,180,vg4sGkehWBw,INDIFFERENT,False
-255,"The World Needs Sissies, Too",Nick Shoulders,"Okay, Crawdad",3:07,187,yKc6RKUW8fE,INDIFFERENT,False
-256,Little Cabin Home On The Hill,Billy Strings,Me / And / Dad,3:23,203,cDHFOdlN4Fs,INDIFFERENT,False
-257,Sea Stories,Sturgill Simpson,Cuttin' Grass - Vol. 2 (Cowboy Arms Sessions),3:12,192,sXapEUwww0k,INDIFFERENT,False
+243,LONG HAULING BLUES,Colby Acuff,HANDMADE HORSEPOWER,2:42,162,fVEKEgrKSM0,INDIFFERENT,False
+244,Miles On My Shoes,Jarrod Walker,Nighthawk,2:36,156,0Aj0BgiJCc4,INDIFFERENT,False
+245,"Don't Think Twice, It's All Right",The Infamous Stringdusters,Undercover,4:26,266,Wewb33DJSz0,LIKE,False
+246,Back to the Mountains,The Po' Ramblin' Boys,Back to the Mountains,2:33,153,2Lb5QpzRSuE,INDIFFERENT,False
+247,Oldsmobile,Hogslop String Band & Sierra Ferrell,Oldsmobile,4:22,262,YrB1__ApBYc,INDIFFERENT,False
+248,A Bank Robber's Nursery Rhyme,"Goodnight, Texas",A Bank Robber's Nursery Rhyme,2:46,166,ATfleYOT4wo,INDIFFERENT,False
+249,The Lonesome Blues,Shannon Slaughter,The Lonesome Blues,2:59,179,oh0hzeXvmb4,INDIFFERENT,False
+250,Look What You Done,Charley Crockett,In the Night,1:59,119,z_7uYsd7HuM,INDIFFERENT,False
+251,Hold Me,Fleetwood Mac,Mirage,3:46,226,yaGFwKIJR7c,INDIFFERENT,False
+252,The Sea,Sierra Ferrell,Long Time Coming,3:33,213,-SZW7sk-UpY,INDIFFERENT,False
+253,Bound and Determined,Nick Shoulders,"Okay, Crawdad",3:19,199,zHA1AA3rTNA,INDIFFERENT,False
+254,Travelin' Man (Live At The American Legion Post 82),"Billy Strings, Bryan Sutton",Live At The Legion,3:18,198,vA-aqXGIFLk,INDIFFERENT,False
+255,Long White Line,Sturgill Simpson,Cuttin' Grass - Vol. 1 (Butcher Shoppe Sessions),2:22,142,0y9VuiPAi1w,INDIFFERENT,False
+256,Texas Moon,Vincent Neil Emerson,Texas Moon,3:26,206,1fkALB4-MCU,INDIFFERENT,False
+257,Happy Reunion,Colter Wall,Colter Wall & The Scary Prairie Boys,2:54,174,J8Wp5BcHnJM,INDIFFERENT,False
 258,Long Haired Tattooed Hippie Freaks,Eleven Hundred Springs,Bandwagon,3:29,209,PMjKq7UK2YA,INDIFFERENT,False
-259,"Lonesome, On'ry and Mean",The Travelin' McCourys,The Travelin' Mccourys,5:13,313,xAdlgszxzzA,INDIFFERENT,False
-260,Nighthawk,Jarrod Walker,Nighthawk,2:49,169,GLS4e2ov_ic,INDIFFERENT,False
-261,Dark and Stormy,The Brudi Brothers,Dark and Stormy,3:08,188,6pC0nhqtmqU,INDIFFERENT,False
-262,Let It Ride,The Wooks,Glory Bound,4:02,242,xtl80FWOueY,INDIFFERENT,False
-263,Happy Reunion,Colter Wall,Colter Wall & The Scary Prairie Boys,2:54,174,J8Wp5BcHnJM,INDIFFERENT,False
-264,"Don't Think Twice, It's All Right",The Infamous Stringdusters,Undercover,4:26,266,Wewb33DJSz0,LIKE,False
-265,deja vu,"Joe la panic, aron!",deja vu,2:44,164,ulhc9yJwJqM,INDIFFERENT,False
-266,Diggin' Holes,Brent Cobb,Shine On Rainy Day,2:53,173,NCkBGKdCKrg,INDIFFERENT,False
-267,In the Night,Charley Crockett,In the Night,3:57,237,aLQYk-j0YdA,INDIFFERENT,False
-268,East Kentucky Home,The SteelDrivers,The SteelDrivers,2:40,160,3UlAeD_sFFw,INDIFFERENT,False
-269,Why Haven’t You Loved Me Yet,Sierra Ferrell,Trail Of Flowers,2:16,136,Gp7NDHjgYJM,LIKE,False
-270,"Honey, Let's Stay In",Nick Shoulders,"Okay, Crawdad",3:22,202,-YTSzkWyqyM,INDIFFERENT,False
-271,Gild the Lily,Billy Strings,Highway Prayers,5:06,306,JFK36ok9Bg8,INDIFFERENT,False
-272,Shamrock,Sturgill Simpson,The Ballad of Dood & Juanita,4:41,281,HbFCyEluX0E,INDIFFERENT,False
-273,table for two,aron!,Jazz para cocinar,1:52,112,RWACmdpqxHA,INDIFFERENT,False
-274,I'm Just a Clown,Charley Crockett,The Man from Waco,4:14,254,Ua1vbOeZZp0,INDIFFERENT,False
-275,Money Train,Sierra Ferrell,Trail Of Flowers,2:41,161,UEDkBtt9590,LIKE,False
-276,Hank's Checkout Line,Nick Shoulders,"Okay, Crawdad",3:35,215,YC3urP7nUHA,INDIFFERENT,False
-277,Things to Do (Live) (feat. Billy Strings),Zach Top,Me & Billy,2:53,173,M15h6lzhBYk,INDIFFERENT,False
-278,Breakers Roar,Sturgill Simpson,Cuttin' Grass - Vol. 1 (Butcher Shoppe Sessions),2:30,150,6kwKTqpQ5k8,INDIFFERENT,False
-279,Honky Tonk Man,Charley Crockett,Lil G.L.'s Honky Tonk Jubilee,2:13,133,Z7oIHa3N3WE,INDIFFERENT,False
-280,Fox Hunt,Sierra Ferrell,Trail Of Flowers,3:18,198,cIznomQuQlg,INDIFFERENT,False
-281,Bound and Determined,Nick Shoulders,"Okay, Crawdad",3:19,199,zHA1AA3rTNA,INDIFFERENT,False
-282,"Richard Petty (Live at State Farm Arena, Atlanta, GA 3/1/24)",Billy Strings,Live Vol. 1,2:12,132,LdQHW8Kanek,INDIFFERENT,False
-283,All the Pretty Colors,Sturgill Simpson,Cuttin' Grass - Vol. 1 (Butcher Shoppe Sessions),2:19,139,RldpO2Al248,INDIFFERENT,False
-284,Servant of Love,Charley Crockett,Lil G.L.'s Blue Bonanza,1:51,111,ai8lrw2GGoc,INDIFFERENT,False
-285,Belle Meade Cockfight,"Old Crow Medicine Show, Sierra Ferrell",Jubilee,2:54,174,iF8OnesdZds,INDIFFERENT,False
-286,Blue Endless Highway,Nick Shoulders,All Bad,3:30,210,0_fxZ3Dz7hw,LIKE,False
-287,Railroad of Sin,Sturgill Simpson,High Top Mountain,2:05,125,XEEQ1pbGakM,INDIFFERENT,False
-288,Big Gold Mine,Charley Crockett,The Valley,2:17,137,krwSd-zKaVs,INDIFFERENT,False
-289,Tears Stupid Tears,Nick Shoulders,Lonely Like Me,3:26,206,ejlRrtETp68,INDIFFERENT,False
-290,Look What You Done,Charley Crockett,In the Night,1:59,119,z_7uYsd7HuM,INDIFFERENT,False
-291,Snakes and Waterfalls,Nick Shoulders,Lonely Like Me,4:03,243,-qmRj2I7KWg,INDIFFERENT,False
-292,Silver Dagger,Charley Crockett,In the Night,2:27,147,n-odtha0f8g,INDIFFERENT,False
-293,A Lesson In Leavin’,"Nikki Lane, Sierra Ferrell",A Lesson In Leavin',3:25,205,OrPKQ3n3k8o,INDIFFERENT,False
-294,All I Have To Do Is Dream,The Osborne Brothers,From Rocky Top to Muddy Bottom: The Songs of Boudleaux and Felice Bryant,2:43,163,NfAVXMet7nE,INDIFFERENT,False
-295,Side Saddle (feat. Gillian Welch),"Golden Highway, Molly Tuttle",Crooked Tree,2:45,165,c9vninLhMzI,INDIFFERENT,False
-296,Dark and Stormy,The Brudi Brothers,Dark and Stormy,3:08,188,6pC0nhqtmqU,INDIFFERENT,False
-297,Thunderbird Will Do Just Fine,Eleven Hundred Springs,Bandwagon,2:36,156,TxAnlNawP4U,INDIFFERENT,False
-298,Bound and Determined,Nick Shoulders,"Okay, Crawdad",3:19,199,zHA1AA3rTNA,INDIFFERENT,False
-299,The Plank,The Devil Makes Three,The Devil Makes Three,2:27,147,P05Gk08osdM,INDIFFERENT,False
-300,It's Been Wrong,The Lostines,The Lostines EP,3:28,208,7VcTN8lG0_4,INDIFFERENT,False
-301,So Doggone Lonesome,Johnny Cash,Johnny Cash with His Hot and Blue Guitar (2017 Definitive Expanded Remastered Edition),2:35,155,51u5tqDXF3k,INDIFFERENT,False
-302,Southern Star,Brent Cobb,Southern Star,3:07,187,lQJyChiuuqs,INDIFFERENT,False
-303,Happy Reunion,Colter Wall,Colter Wall & The Scary Prairie Boys,2:54,174,J8Wp5BcHnJM,INDIFFERENT,False
-304,Railroad of Sin,Sturgill Simpson,High Top Mountain,2:05,125,XEEQ1pbGakM,INDIFFERENT,False
-305,These Boots Are Made for Walkin',Nancy Sinatra,Boots,2:48,168,ICjlGNXwjkE,INDIFFERENT,False
-306,LONG HAULING BLUES,Colby Acuff,HANDMADE HORSEPOWER,2:42,162,fVEKEgrKSM0,INDIFFERENT,False
-307,Coyote,Rattlesnake Milk,Chicken Fried Snake,2:50,170,27ndczL67i0,INDIFFERENT,False
-308,Travelin' Man (Live At The American Legion Post 82),"Billy Strings, Bryan Sutton",Live At The Legion,3:18,198,vA-aqXGIFLk,INDIFFERENT,False
-309,Miles On My Shoes,Jarrod Walker,Nighthawk,2:36,156,0Aj0BgiJCc4,INDIFFERENT,False
-310,Little While,The Wooks,Little While,4:19,259,IyVZAWodycw,INDIFFERENT,False
-311,Southbound,The Travelin' McCourys,The Travelin' Mccourys,3:04,184,7idYYbf6y6Q,INDIFFERENT,False
-312,Oldsmobile,Hogslop String Band & Sierra Ferrell,Oldsmobile,4:22,262,YrB1__ApBYc,INDIFFERENT,False
-313,Durward,Muscadine Bloodline,... And What Was Left Behind,2:11,131,K1IbNhKcl4w,INDIFFERENT,False
-314,Leavin' Town,Trey Hedrick,"Sing, Appalachia",3:00,180,Vvy0K7OE_sQ,INDIFFERENT,False
-315,Texas Moon,Vincent Neil Emerson,Texas Moon,3:26,206,1fkALB4-MCU,INDIFFERENT,False
-316,"Bad, Bad Leroy Brown",Jim Croce,Life & Times,3:03,183,01pQgdIfhAM,INDIFFERENT,False
-317,Back to the Mountains,The Po' Ramblin' Boys,Back to the Mountains,2:33,153,2Lb5QpzRSuE,INDIFFERENT,False
-318,No Business Mountain,Lonesome River Band,No Business Mountain,3:30,210,yafFDT4xoSY,INDIFFERENT,False
-319,Mary Could You,Benjamin Tod,Mary Could You,2:39,159,npbqj2UCk0o,INDIFFERENT,False
-320,Between The Lightning And The Thunder (feat. Dan Tyminski),Justin Moses,Between The Lightning And The Thunder,2:28,148,gDrA4ha5vfU,INDIFFERENT,False
-321,Roughest Neck Around,Corb Lund,Five Dollar Bill,3:13,193,5-VbwDUPtQI,INDIFFERENT,False
-322,East Due West Blues,East Nash Grass,Last Chance to Win,3:03,183,bILzUKKLGM4,INDIFFERENT,False
-323,"Don't Think Twice, It's All Right",The Infamous Stringdusters,Undercover,4:26,266,Wewb33DJSz0,LIKE,False
-324,East Kentucky Home,The SteelDrivers,The SteelDrivers,2:40,160,3UlAeD_sFFw,INDIFFERENT,False
-325,A Bank Robber's Nursery Rhyme,"Goodnight, Texas",A Bank Robber's Nursery Rhyme,2:46,166,ATfleYOT4wo,INDIFFERENT,False
-326,Feelin’ good,South Texas Tweek,Feelin’ good,3:17,197,miNl_dJk2RU,INDIFFERENT,False
-327,Do You Think About Me At All,Bella White,Just Like Leaving,3:17,197,Vk3OEp9DyYY,INDIFFERENT,False
-328,On My Knees,The Red Clay Strays,Made by These Moments,3:25,205,mf4_7q849Ec,INDIFFERENT,False
-329,Fire On the Mountain,Iron Horse,Ridin' Out The Storm,3:19,199,1xEyds9Z4II,INDIFFERENT,False
-330,Country Squire,Tyler Childers,Country Squire,3:22,202,KYIav77fPsA,LIKE,False
-331,Puff of Smoke,The Wood Brothers,Puff of Smoke,3:42,222,uLuZRJRW1vk,INDIFFERENT,False
-332,Blue Eyes Dancing,Matt Heckler,After the Flood,3:17,197,I5CYO4BR7iw,INDIFFERENT,False
-333,Hand to Hold,Luke Bell,The King Is Back,2:40,160,D0qTQtC9F1M,INDIFFERENT,False
-334,If I Was the Last Man,Ryan Necci and The Buffalo Gospel,If I Was the Last Man,2:34,154,S6KW0lkP6EU,INDIFFERENT,False
-335,Better Class of Losers,The Caleb Daugherty Band,Better Class of Losers,2:41,161,W8rlW-DBDrc,INDIFFERENT,False
-336,eggs in the morning,aron!,cozy you (and other nice songs),2:28,148,PVgDmI4Bvr8,INDIFFERENT,False
-337,Take 'Em Away,Old Crow Medicine Show,O.C.M.S.,3:35,215,wfqm-rP_kFY,INDIFFERENT,False
-338,A Reasonable Man (Killdozer),Bowregard,Arrows,3:38,218,24HcO-KfYO0,INDIFFERENT,False
-339,Lawdog,Town Mountain,Leave the Bottle,4:49,289,WB9NP0U67V4,INDIFFERENT,False
-340,God Only Knows (Mono),The Beach Boys,Pet Sounds (Original Mono & Stereo Mix),2:54,174,CWPo5SC3zik,INDIFFERENT,False
-341,And When She Smiles (She Makes the Sun Shine),Matthews Southern Comfort,Later That Same Year,2:14,134,JgaObOlFB2g,INDIFFERENT,False
-342,Bring Back Someday,Lost Dog Street Band,Weight of a Trigger,3:21,201,G7q1sqh2izg,INDIFFERENT,False
-343,The Race is On,Charley Crockett,Lil G.L.'s Blue Bonanza,2:08,128,LpFf6thJ93Q,INDIFFERENT,False
-344,Money Train,Sierra Ferrell,Trail Of Flowers,2:41,161,UEDkBtt9590,LIKE,False
-345,"Empty Yodel, No. 0",Nick Shoulders,Lonely Like Me,2:28,148,BKWxQATOD4E,INDIFFERENT,False
-346,Long Haired Tattooed Hippie Freaks,Eleven Hundred Springs,Bandwagon,3:29,209,PMjKq7UK2YA,INDIFFERENT,False
-347,Johnny Boy's Bones (feat. The Dead South),Colter Wall,Imaginary Appalachia,2:57,177,eoJlKDdXArI,INDIFFERENT,False
-348,Gild the Lily,Billy Strings,Highway Prayers,5:06,306,JFK36ok9Bg8,INDIFFERENT,False
-349,Long White Line,Sturgill Simpson,Cuttin' Grass - Vol. 1 (Butcher Shoppe Sessions),2:22,142,0y9VuiPAi1w,INDIFFERENT,False
-350,"Lonesome, On'ry and Mean",The Travelin' McCourys,The Travelin' Mccourys,5:13,313,xAdlgszxzzA,INDIFFERENT,False
-351,Nighthawk,Jarrod Walker,Nighthawk,2:49,169,GLS4e2ov_ic,INDIFFERENT,False
-352,Silver Wave,The Brudi Brothers,Dark and Stormy,3:14,194,GzwJGu1vVos,INDIFFERENT,False
-353,Hear The Willow Cry,The SteelDrivers,The SteelDrivers,3:00,180,k0vqpZWG3FI,INDIFFERENT,False
-354,Flyin' High,The Wooks,Flyin' High,3:40,220,x_3saitKKWE,INDIFFERENT,False
-355,25 & Wastin' Time,Vincent Neil Emerson,Fried Chicken & Evil Women,2:58,178,qNxFqo7VIiE,LIKE,False
-356,table for two,aron!,Jazz para cocinar,1:52,112,RWACmdpqxHA,INDIFFERENT,False
-357,Purgatory,Tyler Childers,Purgatory,2:47,167,0GdNWn99gMg,INDIFFERENT,False
-358,Six Foot Under,Charley Crockett,Lil G.L. Presents: Jukebox Charley,2:25,145,3fTnGe52F6I,INDIFFERENT,False
-359,Why Haven’t You Loved Me Yet,Sierra Ferrell,Trail Of Flowers,2:16,136,Gp7NDHjgYJM,LIKE,False
-360,Hank's Checkout Line,Nick Shoulders,"Okay, Crawdad",3:35,215,YC3urP7nUHA,INDIFFERENT,False
-361,Diggin' Holes,Brent Cobb,Shine On Rainy Day,2:53,173,NCkBGKdCKrg,INDIFFERENT,False
-362,It'll Be Alright,The Infamous Stringdusters,Things That Fly,3:22,202,UU_rwkp35mQ,INDIFFERENT,False
-363,Little Cabin Home On The Hill,Billy Strings,Me / And / Dad,3:23,203,cDHFOdlN4Fs,INDIFFERENT,False
-364,All the Pretty Colors,Sturgill Simpson,Cuttin' Grass - Vol. 1 (Butcher Shoppe Sessions),2:19,139,RldpO2Al248,INDIFFERENT,False
-365,I'm Workin',Charley Crockett,In the Night,2:33,153,l5GT00Sw3fw,INDIFFERENT,False
-366,Years,Sierra Ferrell,Years,3:00,180,vg4sGkehWBw,INDIFFERENT,False
-367,Tears Stupid Tears,Nick Shoulders,Lonely Like Me,3:26,206,ejlRrtETp68,INDIFFERENT,False
-368,"Richard Petty (Live at State Farm Arena, Atlanta, GA 3/1/24)",Billy Strings,Live Vol. 1,2:12,132,LdQHW8Kanek,INDIFFERENT,False
-369,Breakers Roar,Sturgill Simpson,Cuttin' Grass - Vol. 1 (Butcher Shoppe Sessions),2:30,150,6kwKTqpQ5k8,INDIFFERENT,False
-370,The Way I'm Livin' (Santa Rosa),Charley Crockett,The Valley,2:35,155,RZ_jhtm9uxo,INDIFFERENT,False
-371,Fox Hunt,Sierra Ferrell,Trail Of Flowers,3:18,198,cIznomQuQlg,INDIFFERENT,False
-372,"The World Needs Sissies, Too",Nick Shoulders,"Okay, Crawdad",3:07,187,yKc6RKUW8fE,INDIFFERENT,False
-373,Sea Stories,Sturgill Simpson,Cuttin' Grass - Vol. 2 (Cowboy Arms Sessions),3:12,192,sXapEUwww0k,INDIFFERENT,False
-374,Honky Tonkin,Charley Crockett,Lil G.L.'s Honky Tonk Jubilee,2:57,177,nAz_3m0m3e8,INDIFFERENT,False
-375,Belle Meade Cockfight,"Old Crow Medicine Show, Sierra Ferrell",Jubilee,2:54,174,iF8OnesdZds,INDIFFERENT,False
-376,Blue Endless Highway,Nick Shoulders,All Bad,3:30,210,0_fxZ3Dz7hw,LIKE,False
-377,Shamrock,Sturgill Simpson,The Ballad of Dood & Juanita,4:41,281,HbFCyEluX0E,INDIFFERENT,False
-378,I Can Help,Charley Crockett,I Can Help,3:39,219,cO2dG8gZKZQ,INDIFFERENT,False
-379,Snakes and Waterfalls,Nick Shoulders,Lonely Like Me,4:03,243,-qmRj2I7KWg,INDIFFERENT,False
-380,A Dime at a Time,Charley Crockett,Lil G.L.'s Blue Bonanza,2:07,127,gdc57om_Qb4,INDIFFERENT,False
-381,"Honey, Let's Stay In",Nick Shoulders,"Okay, Crawdad",3:22,202,-YTSzkWyqyM,INDIFFERENT,False
-382,Servant of Love,Charley Crockett,Lil G.L.'s Blue Bonanza,1:51,111,ai8lrw2GGoc,INDIFFERENT,False
-383,I'm Just a Clown,Charley Crockett,The Man from Waco,4:14,254,Ua1vbOeZZp0,INDIFFERENT,False
-384,"KOMM, SUSSER TOD (M-10 Director's Edit Version)",Arianne,Evangelion Finally,7:47,467,rQiHzcdUPAU,INDIFFERENT,False
-385,Hot Together,The Pointer Sisters,Hot Together (Expanded Edition),4:14,254,-NnMl7NUmS8,INDIFFERENT,False
-386,Cheap Cocaine,Willi Carlisle,Too Nice to Mean Much,3:34,214,fsuq8pKVjkg,INDIFFERENT,False
-387,Things to Do (Live) (feat. Billy Strings),Zach Top,Me & Billy,2:53,173,M15h6lzhBYk,INDIFFERENT,False
-388,I've Got the Right to Know,East Nash Grass,East Nash Grass,2:55,175,V1kz-mHKIsQ,INDIFFERENT,False
-389,The Lonesome Blues,Shannon Slaughter,The Lonesome Blues,2:59,179,oh0hzeXvmb4,INDIFFERENT,False
-390,Nobody Dies From Weed,Hayes & The Heathens,Nobody Dies From Weed,3:19,199,WBhxBiHHrxI,INDIFFERENT,False
-391,Fox on the Run,Daniel Donato,Cosmic Country & Western Songs,3:22,202,ZOcbWsFQVnQ,INDIFFERENT,False
-392,I'm Chasin' Old Memories Down,Junior Sisk,Lost & Alone,2:59,179,V5w4z3ckaY4,INDIFFERENT,False
-393,The Heartline Special,Dick Curless,The Long Lonesome Road,2:53,173,hdOOvYNbigM,INDIFFERENT,False
-394,Can't Remember,Tejon Street Corner Thieves,Juxtaposition,4:20,260,WSZ0dhDWLsA,INDIFFERENT,False
-395,Long Way Down,The Steeldrivers,The Muscle Shoals Recordings,3:45,225,SSoN4CIj1fE,INDIFFERENT,False
-396,Let It Ride,The Wooks,Glory Bound,4:02,242,xtl80FWOueY,INDIFFERENT,False
-397,Glory of True Love,John Prine,Fair and Square,4:13,253,Jk34tdkp_F8,INDIFFERENT,False
-398,A Lie Agreed Upon,Turnpike Troubadours,The Price of Admission,3:50,230,X-cfGuMJ_MU,INDIFFERENT,False
-399,deja vu,"Joe la panic, aron!",deja vu,2:44,164,ulhc9yJwJqM,INDIFFERENT,False
-400,Touch of Grey,Grateful Dead,In the Dark,5:51,351,Ht_BfhweF4I,INDIFFERENT,False
-401,Indian War Whoop,John Hartford,"O Brother, Where Art Thou? (Original Motion Picture Soundtrack)",1:31,91,2xb0cuWTYAQ,INDIFFERENT,False
-402,In The Gravel Yard,Blue Highway,"It's A Long, Long Road",3:06,186,UjBdwlKRcFo,INDIFFERENT,False
-403,Sexy After Dark,Joshua Ray Walker,See You Next Time,3:51,231,-skWbxOuV4Y,INDIFFERENT,False
-404,Brighter Shade,Lost Dog Street Band,SURVIVED,3:05,185,yJVRjunioQA,INDIFFERENT,False
-405,Let Her Go,The Travelin' McCourys,The Travelin' Mccourys,4:52,292,KEcw2oQDlHE,INDIFFERENT,False
-406,Too Many Places,The Brothers Comatose,Too Many Places,3:24,204,9U-p-NKUQlY,INDIFFERENT,False
-407,Poachers,Tyler Childers,Snipe Hunter,4:10,250,xZiyk3TH658,INDIFFERENT,False
-408,I Am A Man Of Constant Sorrow (With Band) (feat. Dan Tyminski),The Soggy Bottom Boys,"O Brother, Where Art Thou? (Original Motion Picture Soundtrack)",4:17,257,zHamgwlQ1yo,INDIFFERENT,False
-409,Margaritaville,Jimmy Buffett,"Changes In Latitudes, Changes In Attitudes",4:11,251,ohDqjRGqpIU,INDIFFERENT,False
-410,Ain't No Use in Tryin',Trampled By Turtles,Songs from a Ghost Town,3:15,195,0sWIjxvmw68,INDIFFERENT,False
-411,Mountain Song,The Kay Brothers,The Kay Brothers,6:11,371,493m_6ZMWno,INDIFFERENT,False
-412,Sweet Niobrara,The Wildwoods,Sweet Niobrara,3:30,210,70VEfXd5E_4,INDIFFERENT,False
-413,Before It Disappears,Colton Bowlin,Songs From The Holler,3:03,183,m-PX9j0IUlU,INDIFFERENT,False
-414,Vengeance and Grace,Benjamin Tod,Vengeance and Grace,3:16,196,viXbphiqibc,INDIFFERENT,False
-415,Wagon Wheel,Old Crow Medicine Show,O.C.M.S.,3:53,233,Oe5hm0v67zM,INDIFFERENT,False
-416,When I Come Around,Water Tower,When I Come Around,2:41,161,I_E_iuoQ26M,INDIFFERENT,False
-417,Appalachian Smoke,Mountain Grass Unit,Mountain Grass Unit,3:25,205,SVE98UUVU5g,INDIFFERENT,False
-418,Movin',Colby Acuff,Movin',2:42,162,vrlfErGN0as,INDIFFERENT,False
-419,Ramblin' Man,The Allman Brothers Band,Brothers And Sisters (Super Deluxe),4:49,289,A-bSe0i69yA,INDIFFERENT,False
-420,Someone Like You (feat. The Travelin' McCourys & Sierra Ferrell),Lukas Nelson,Someone Like You,5:02,302,MwkanjhLCUg,INDIFFERENT,False
-421,Friday Night Fever,George Strait,Strait Country,2:30,150,J_xumPRwjxA,INDIFFERENT,False
-422,Life I Left Behind,Balsam Range,Life I Left Behind,3:37,217,hTMhCx8-O80,INDIFFERENT,False
-423,Tennessee,The Creekers,River Rat,3:52,232,vrj3q9bIOP8,INDIFFERENT,False
-424,Jumpin' Jack Flash,The Rolling Stones,70s Classic Rock,3:43,223,bkk6SHPOVWY,INDIFFERENT,False
-425,Hooked On A Feeling,"Björn Skifs, Blue Swede",Pinewood Rally,2:53,173,7Z3uhIRkBNw,INDIFFERENT,False
-426,Gold on the Ceiling,The Black Keys,El Camino,3:45,225,8tPsaSPraks,INDIFFERENT,False
-427,Chattahoochee (Extended Mix),Alan Jackson,The Greatest Hits Collection,3:57,237,Vd42XxDrAj8,INDIFFERENT,False
-428,Rivers and Creeks,Zach Bryan,With Heaven On Top,3:36,216,lGlzB3xQpGg,INDIFFERENT,False
-429,All It Cost Me Was Everything,Cody Jinks,Mercy,3:51,231,H6NH-D61ZiA,INDIFFERENT,False
-430,It's Still Rock and Roll to Me,Billy Joel,Glass Houses,2:57,177,lvlPoBduEe4,INDIFFERENT,False
-431,A Horse with No Name,America,America,4:13,253,mSZXWdKSQNM,INDIFFERENT,False
-432,Authority Song,John Mellencamp,Uh-HUH!,3:50,230,JVUCBsywI10,INDIFFERENT,False
-433,"Foggy Mountain Breakdown (feat. Vince Gill, Steve Martin, Albert Lee & Glen Duncan)",Earl Scruggs,Earl Scruggs And Friends,4:50,290,cKw38eqVyNI,INDIFFERENT,False
-434,New Year's Day,Charlie Robison,Good Times,3:55,235,qGXAKYAk35I,INDIFFERENT,False
-435,Take It Easy,Eagles,Eagles,3:32,212,32Oc2d_3yEk,INDIFFERENT,False
-436,Big Bear,Steak,Feasting on Famine,2:41,161,gZ7poFTDkeY,INDIFFERENT,False
-437,Catfish,Late Night Blues,Catfish,3:25,205,ctl3hCG8lpQ,INDIFFERENT,False
-438,Send Me On My Way,Rusted Root,When I Woke,4:24,264,ZS4m67ElJzU,INDIFFERENT,False
-439,Run-Around,Blues Traveler,Four,4:40,280,7Lk5ByPl9Zo,INDIFFERENT,False
-440,Song of the South,Alabama,Southern Star,3:12,192,AneYVYWd7N8,INDIFFERENT,False
-441,She Thinks My Tractor's Sexy,Kenny Chesney,Everywhere We Go,4:09,249,zQg_ikNf7Gs,INDIFFERENT,False
-442,Yearnin' For You,49 Winchester,Leavin' This Holler,3:36,216,TDFKZvhJ2OY,INDIFFERENT,False
-443,I'm Country,The Rw Music Connection,I'm Country,1:56,116,GA_O_MjtTKU,INDIFFERENT,False
-444,Down Under,Men At Work,Business As Usual,3:43,223,hfmxO-HQ5rU,INDIFFERENT,False
-445,Dust On The Bottle,David Lee Murphy,Out With A Bang,3:45,225,XhWvFRNIfag,INDIFFERENT,False
-446,What Was I Thinkin',Dierks Bentley,Dierks Bentley,4:21,261,iuYmH2yLaHA,INDIFFERENT,False
-447,Snow (Hey Oh),Red Hot Chili Peppers,Stadium Arcadium,5:35,335,s6GIT4RhFv0,INDIFFERENT,False
-448,Drink In My Hand,Eric Church,Chief,3:12,192,2C6yk3YEYws,INDIFFERENT,False
-449,Red Dirt Road,Brooks & Dunn,Red Dirt Road,4:21,261,VHn3Ye2sGTE,INDIFFERENT,False
-450,Do I Ever Cross Your Mind,"Chet Atkins, Dolly Parton",Best of Chet Atkins and Friends,2:40,160,Mz_eTswlAvM,INDIFFERENT,False
-451,Back To The Hills Of Home,Carson Peters and Iron Mountain,Gotta Lotta Lonesome,3:01,181,MsgDog5caSY,INDIFFERENT,False
-452,Black Sedan (Live from the Ryman),Charley Crockett,Live from the Ryman,3:12,192,EnM1AoeRkBI,INDIFFERENT,False
-453,The Devil Plies His Trade (Sn 6 Ep 3),Turnpike Troubadours,The Price of Admission,4:17,257,L74klubpUQg,INDIFFERENT,False
-454,I Choose You,The Steeldrivers,Bad For You,3:06,186,jH68IJb3fr8,INDIFFERENT,False
-455,Son Of Tennessee,Lost Dog Street Band,Survived,3:18,198,MA3kfvBQM7U,INDIFFERENT,False
-456,Percheron Mules,Tyler Childers,Rustin' In The Rain,4:31,271,PjCjp7_28RQ,INDIFFERENT,False
-457,Ain't It Strange,Old Crow Medicine Show,Let’s Go Dancing Vol. 3: Said the Falling Rain to the Open Flame,3:17,197,QVuuDrrN8xQ,INDIFFERENT,False
-458,Born Runnin' Outta Time,Lukas Nelson,Born Runnin' Outta Time,3:19,199,-XdAU9CTgPs,INDIFFERENT,False
-459,Outlaw Shit (feat. Shooter Jennings),Benjamin Tod,Outlaw Shit,4:06,246,8E49Jpm7yMc,INDIFFERENT,False
-460,Enjoy the Ride,Colby Acuff,Enjoy the Ride,3:09,189,cwMDyv2PeD8,INDIFFERENT,False
-461,It's Five O'Clock Somewhere,"Alan Jackson, Jimmy Buffett",Greatest Hits Volume II,3:50,230,umkixNb1Q1k,INDIFFERENT,False
-462,Write This Down,George Strait,Always Never The Same,3:40,220,8ZY68GXwIos,INDIFFERENT,False
-463,The Zephyr Song,Red Hot Chili Peppers,By the Way (Deluxe Edition),3:52,232,ZHLNudYcQ0c,INDIFFERENT,False
-464,When the Sun Goes Down,"Kenny Chesney, Uncle Kracker",When The Sun Goes Down (Deluxe Version),4:51,291,WZihn6Q1fYE,INDIFFERENT,False
-465,Baby 1-2-3,Charley Crockett,In the Night,2:11,131,1SU4XLLgloA,INDIFFERENT,False
-466,A Tornado Warning,Turnpike Troubadours,A Long Way from Your Heart,3:44,224,Jff620V8QUQ,INDIFFERENT,False
-467,Gemini,Tyler Childers,Country Squire,2:33,153,_H3KzIO1RDY,INDIFFERENT,False
-468,Night Train to Memphis,Charley Crockett,Lil G.L.'s Honky Tonk Jubilee,2:20,140,LuTVNMu9prw,INDIFFERENT,False
-469,Ruby Ann,Turnpike Troubadours,The Price of Admission,3:11,191,n9A1FlIP2GU,INDIFFERENT,False
-470,Rustin' In The Rain,Tyler Childers,Rustin' In The Rain,3:37,217,v3yXiQdAy-s,INDIFFERENT,False
-471,Brothers of a Bottle,Charley Crockett,Lil G.L.'s Honky Tonk Jubilee,2:48,168,AZ23HvlNMFA,INDIFFERENT,False
-472,Be Here,Turnpike Troubadours,The Price of Admission,4:58,298,EeyuibMh6_I,INDIFFERENT,False
-473,Feathered Indians,Tyler Childers,Purgatory,3:45,225,j-lwWgYLb68,INDIFFERENT,False
-474,Wasted Days and Wasted Nights,Charley Crockett,In the Night,2:19,139,xujD6kGrmUE,INDIFFERENT,False
-475,Leaving Town (Woody Guthrie Festival),Turnpike Troubadours,The Price of Admission,4:18,258,FlRkJzrl4H0,INDIFFERENT,False
-476,Look What You Done,Charley Crockett,In the Night,1:59,119,z_7uYsd7HuM,INDIFFERENT,False
+259,Country Squire,Tyler Childers,Country Squire,3:22,202,KYIav77fPsA,LIKE,False
+260,Take 'Em Away,Old Crow Medicine Show,O.C.M.S.,3:35,215,wfqm-rP_kFY,INDIFFERENT,False
+261,Silver Wave,The Brudi Brothers,Dark and Stormy,3:14,194,GzwJGu1vVos,INDIFFERENT,False
+262,Little While,The Wooks,Little While,4:19,259,IyVZAWodycw,INDIFFERENT,False
+263,"Lonesome, On'ry and Mean",The Travelin' McCourys,The Travelin' Mccourys,5:13,313,xAdlgszxzzA,INDIFFERENT,False
+264,It'll Be Alright,The Infamous Stringdusters,Things That Fly,3:22,202,UU_rwkp35mQ,INDIFFERENT,False
+265,A Dime at a Time,Charley Crockett,Lil G.L.'s Blue Bonanza,2:07,127,gdc57om_Qb4,INDIFFERENT,False
+266,Nighthawk,Jarrod Walker,Nighthawk,2:49,169,GLS4e2ov_ic,INDIFFERENT,False
+267,A Lesson In Leavin’,"Nikki Lane, Sierra Ferrell",A Lesson In Leavin',3:25,205,OrPKQ3n3k8o,INDIFFERENT,False
+268,"Empty Yodel, No. 0",Nick Shoulders,Lonely Like Me,2:28,148,BKWxQATOD4E,INDIFFERENT,False
+269,Little Cabin Home On The Hill,Billy Strings,Me / And / Dad,3:23,203,cDHFOdlN4Fs,INDIFFERENT,False
+270,Sea Stories,Sturgill Simpson,Cuttin' Grass - Vol. 2 (Cowboy Arms Sessions),3:12,192,sXapEUwww0k,INDIFFERENT,False
+271,The Race is On,Charley Crockett,Lil G.L.'s Blue Bonanza,2:08,128,LpFf6thJ93Q,INDIFFERENT,False
+272,Money Train,Sierra Ferrell,Trail Of Flowers,2:41,161,UEDkBtt9590,LIKE,False
+273,Blue Endless Highway,Nick Shoulders,All Bad,3:30,210,0_fxZ3Dz7hw,LIKE,False
+274,Things to Do (Live) (feat. Billy Strings),Zach Top,Me & Billy,2:53,173,M15h6lzhBYk,INDIFFERENT,False
+275,All the Pretty Colors,Sturgill Simpson,Cuttin' Grass - Vol. 1 (Butcher Shoppe Sessions),2:19,139,RldpO2Al248,INDIFFERENT,False
+276,Lots of Luck,Charley Crockett,Lil G.L.'s Blue Bonanza,2:47,167,KANmwnCSVEk,INDIFFERENT,False
+277,Why Haven’t You Loved Me Yet,Sierra Ferrell,Trail Of Flowers,2:16,136,Gp7NDHjgYJM,LIKE,False
+278,"The World Needs Sissies, Too",Nick Shoulders,"Okay, Crawdad",3:07,187,yKc6RKUW8fE,INDIFFERENT,False
+279,Railroad of Sin,Sturgill Simpson,High Top Mountain,2:05,125,XEEQ1pbGakM,INDIFFERENT,False
+280,I'm Just a Clown,Charley Crockett,The Man from Waco,4:14,254,Ua1vbOeZZp0,INDIFFERENT,False
+281,Years,Sierra Ferrell,Years,3:00,180,vg4sGkehWBw,INDIFFERENT,False
+282,Tears Stupid Tears,Nick Shoulders,Lonely Like Me,3:26,206,ejlRrtETp68,INDIFFERENT,False
+283,Shamrock,Sturgill Simpson,The Ballad of Dood & Juanita,4:41,281,HbFCyEluX0E,INDIFFERENT,False
+284,Honky Tonk Man,Charley Crockett,Lil G.L.'s Honky Tonk Jubilee,2:13,133,Z7oIHa3N3WE,INDIFFERENT,False
+285,Fox Hunt,Sierra Ferrell,Trail Of Flowers,3:18,198,cIznomQuQlg,INDIFFERENT,False
+286,Hank's Checkout Line,Nick Shoulders,"Okay, Crawdad",3:35,215,YC3urP7nUHA,INDIFFERENT,False
+287,Servant of Love,Charley Crockett,Lil G.L.'s Blue Bonanza,1:51,111,ai8lrw2GGoc,INDIFFERENT,False
+288,Belle Meade Cockfight,"Old Crow Medicine Show, Sierra Ferrell",Jubilee,2:54,174,iF8OnesdZds,INDIFFERENT,False
+289,Snakes and Waterfalls,Nick Shoulders,Lonely Like Me,4:03,243,-qmRj2I7KWg,INDIFFERENT,False
+290,I'm Workin',Charley Crockett,In the Night,2:33,153,l5GT00Sw3fw,INDIFFERENT,False
+291,"Honey, Let's Stay In",Nick Shoulders,"Okay, Crawdad",3:22,202,-YTSzkWyqyM,INDIFFERENT,False
+292,Downtrodden Man,Charley Crockett,In the Night,3:05,185,9q3cfI4pthQ,INDIFFERENT,False
+293,Don't Tell Me That,Charley Crockett,10 for Slim: Charley Crockett Sings James Hand,2:46,166,SPLe7IvxQ40,INDIFFERENT,False
+294,If I Let You,The Womack Sisters,If I Let You,3:59,239,l_6P503OkTU,INDIFFERENT,False
+295,Leavin' Town,Trey Hedrick,"Sing, Appalachia",3:00,180,Vvy0K7OE_sQ,INDIFFERENT,False
+296,Durward,Muscadine Bloodline,... And What Was Left Behind,2:11,131,K1IbNhKcl4w,INDIFFERENT,False
+297,Mary Could You,Benjamin Tod,Mary Could You,2:39,159,npbqj2UCk0o,INDIFFERENT,False
+298,Better Class of Losers,The Caleb Daugherty Band,Better Class of Losers,2:41,161,W8rlW-DBDrc,INDIFFERENT,False
+299,Bring Back Someday,Lost Dog Street Band,Weight of a Trigger,3:21,201,G7q1sqh2izg,INDIFFERENT,False
+300,I've Got the Right to Know,East Nash Grass,East Nash Grass,2:55,175,V1kz-mHKIsQ,INDIFFERENT,False
+301,Fox on the Run,Daniel Donato,Cosmic Country & Western Songs,3:22,202,ZOcbWsFQVnQ,INDIFFERENT,False
+302,Purgatory,Tyler Childers,Purgatory,2:47,167,0GdNWn99gMg,INDIFFERENT,False
+303,Touch of Grey,Grateful Dead,In the Dark,5:51,351,Ht_BfhweF4I,INDIFFERENT,False
+304,East Kentucky Home,The SteelDrivers,The SteelDrivers,2:40,160,3UlAeD_sFFw,INDIFFERENT,False
+305,"Richard Petty (Live at State Farm Arena, Atlanta, GA 3/1/24)",Billy Strings,Live Vol. 1,2:12,132,LdQHW8Kanek,INDIFFERENT,False
+306,Ramblin' Man,The Allman Brothers Band,Brothers And Sisters (Super Deluxe),4:49,289,A-bSe0i69yA,INDIFFERENT,False
+307,Glory of True Love,John Prine,Fair and Square,4:13,253,Jk34tdkp_F8,INDIFFERENT,False
+308,I Am A Man Of Constant Sorrow (With Band) (feat. Dan Tyminski),The Soggy Bottom Boys,"O Brother, Where Art Thou? (Original Motion Picture Soundtrack)",4:17,257,zHamgwlQ1yo,INDIFFERENT,False
+309,When I Come Around,Water Tower,When I Come Around,2:41,161,I_E_iuoQ26M,INDIFFERENT,False
+310,Sexy After Dark,Joshua Ray Walker,See You Next Time,3:51,231,-skWbxOuV4Y,INDIFFERENT,False
+311,El Paso,Marty Robbins,Gunfighter Ballads And Trail Songs,4:39,279,5Q9bAWGEkcE,INDIFFERENT,False
+312,Lawdog,Town Mountain,Leave the Bottle,4:49,289,WB9NP0U67V4,INDIFFERENT,False
+313,Cheap Cocaine,Willi Carlisle,Too Nice to Mean Much,3:34,214,fsuq8pKVjkg,INDIFFERENT,False
+314,Too Many Places,The Brothers Comatose,Too Many Places,3:24,204,9U-p-NKUQlY,INDIFFERENT,False
+315,Ain't It Strange,Old Crow Medicine Show,Let’s Go Dancing Vol. 3: Said the Falling Rain to the Open Flame,3:17,197,QVuuDrrN8xQ,INDIFFERENT,False
+316,A Lie Agreed Upon,Turnpike Troubadours,The Price of Admission,3:50,230,X-cfGuMJ_MU,INDIFFERENT,False
+317,Margaritaville,Jimmy Buffett,"Changes In Latitudes, Changes In Attitudes",4:11,251,ohDqjRGqpIU,INDIFFERENT,False
+318,Indian War Whoop,John Hartford,"O Brother, Where Art Thou? (Original Motion Picture Soundtrack)",1:31,91,2xb0cuWTYAQ,INDIFFERENT,False
+319,Let It Ride,The Wooks,Glory Bound,4:02,242,xtl80FWOueY,INDIFFERENT,False
+320,Diggin' Holes,Brent Cobb,Shine On Rainy Day,2:53,173,NCkBGKdCKrg,INDIFFERENT,False
+321,A Reasonable Man (Killdozer),Bowregard,Arrows,3:38,218,24HcO-KfYO0,INDIFFERENT,False
+322,It's Still Rock and Roll to Me,Billy Joel,Glass Houses,2:57,177,lvlPoBduEe4,INDIFFERENT,False
+323,Let Her Go,The Travelin' McCourys,The Travelin' Mccourys,4:52,292,KEcw2oQDlHE,INDIFFERENT,False
+324,Puff of Smoke,The Wood Brothers,Puff of Smoke,3:42,222,uLuZRJRW1vk,INDIFFERENT,False
+325,Hooked On A Feeling,"Björn Skifs, Blue Swede",Pinewood Rally,2:53,173,7Z3uhIRkBNw,INDIFFERENT,False
+326,All It Cost Me Was Everything,Cody Jinks,Mercy,3:51,231,H6NH-D61ZiA,INDIFFERENT,False
+327,Someone Like You (feat. The Travelin' McCourys & Sierra Ferrell),Lukas Nelson,Someone Like You,5:02,302,MwkanjhLCUg,INDIFFERENT,False
+328,Ain't No Use in Tryin',Trampled By Turtles,Songs from a Ghost Town,3:15,195,0sWIjxvmw68,INDIFFERENT,False
+329,Gold on the Ceiling,The Black Keys,El Camino,3:45,225,8tPsaSPraks,INDIFFERENT,False
+330,Before It Disappears,Colton Bowlin,Songs From The Holler,3:03,183,m-PX9j0IUlU,INDIFFERENT,False
+331,Sweet Niobrara,The Wildwoods,Sweet Niobrara,3:30,210,70VEfXd5E_4,INDIFFERENT,False
+332,Friday Night Fever,George Strait,Strait Country,2:30,150,J_xumPRwjxA,INDIFFERENT,False
+333,Take It Easy,Eagles,Eagles,3:32,212,32Oc2d_3yEk,INDIFFERENT,False
+334,Spirits In The Material World,The Police,Ghost In The Machine (Remastered 2003),3:00,180,9Q73LMKKxbc,INDIFFERENT,False
+335,Jumpin' Jack Flash,The Rolling Stones,70s Classic Rock,3:43,223,bkk6SHPOVWY,INDIFFERENT,False
+336,A Horse with No Name,America,America,4:13,253,mSZXWdKSQNM,INDIFFERENT,False
+337,Enjoy the Ride,Colby Acuff,Enjoy the Ride,3:09,189,cwMDyv2PeD8,INDIFFERENT,False
+338,You Wreck Me,Tom Petty,Wildflowers,3:23,203,eyi-LOVfvd8,INDIFFERENT,False
+339,Tennessee,The Creekers,River Rat,3:52,232,vrj3q9bIOP8,INDIFFERENT,False
+340,Rivers and Creeks,Zach Bryan,With Heaven On Top,3:36,216,lGlzB3xQpGg,INDIFFERENT,False
+341,Mountain Song,The Kay Brothers,The Kay Brothers,6:11,371,493m_6ZMWno,INDIFFERENT,False
+342,Run-Around,Blues Traveler,Four,4:40,280,7Lk5ByPl9Zo,INDIFFERENT,False
+343,Catfish,Late Night Blues,Catfish,3:25,205,ctl3hCG8lpQ,INDIFFERENT,False
+344,Appalachian Smoke,Mountain Grass Unit,Mountain Grass Unit,3:25,205,SVE98UUVU5g,INDIFFERENT,False
+345,Down Under,Men At Work,Business As Usual,3:43,223,hfmxO-HQ5rU,INDIFFERENT,False
+346,Yearnin' For You,49 Winchester,Leavin' This Holler,3:36,216,TDFKZvhJ2OY,INDIFFERENT,False
+347,New Year's Day,Charlie Robison,Good Times,3:55,235,qGXAKYAk35I,INDIFFERENT,False
+348,Authority Song,John Mellencamp,Uh-HUH!,3:50,230,JVUCBsywI10,INDIFFERENT,False
+349,Walk of Life,Dire Straits,Brothers in Arms,4:13,253,hylE_GwLFCM,INDIFFERENT,False
+350,"Foggy Mountain Breakdown (feat. Vince Gill, Steve Martin, Albert Lee & Glen Duncan)",Earl Scruggs,Earl Scruggs And Friends,4:50,290,cKw38eqVyNI,INDIFFERENT,False
+351,Big Bear,Steak,Feasting on Famine,2:41,161,gZ7poFTDkeY,INDIFFERENT,False
+352,Sangria Wine,Jerry Jeff Walker,Viva Terlingua,4:28,268,kPnNqBeH1LU,INDIFFERENT,False
+353,Send Me On My Way,Rusted Root,When I Woke,4:24,264,ZS4m67ElJzU,INDIFFERENT,False
+354,Juniper & Gin,Jamestown Revival,Juniper & Gin,3:14,194,6ZqCcRrP4b8,INDIFFERENT,False
+355,Dust On The Bottle,David Lee Murphy,Out With A Bang,3:45,225,XhWvFRNIfag,INDIFFERENT,False
+356,The Zephyr Song,Red Hot Chili Peppers,By the Way (Deluxe Edition),3:52,232,ZHLNudYcQ0c,INDIFFERENT,False
+357,Do I Ever Cross Your Mind,"Chet Atkins, Dolly Parton",Best of Chet Atkins and Friends,2:40,160,Mz_eTswlAvM,INDIFFERENT,False
+358,Back To The Hills Of Home,Carson Peters and Iron Mountain,Gotta Lotta Lonesome,3:01,181,MsgDog5caSY,INDIFFERENT,False
+359,Welcome to Hard Times (Live from the Ryman),Charley Crockett,Live from the Ryman,2:51,171,MI0I-j_gKbI,INDIFFERENT,False
+360,Hear The Willow Cry,The SteelDrivers,The SteelDrivers,3:00,180,k0vqpZWG3FI,INDIFFERENT,False
+361,Gemini,Tyler Childers,Country Squire,2:33,153,_H3KzIO1RDY,INDIFFERENT,False
+362,Son Of Tennessee,Lost Dog Street Band,Survived,3:18,198,MA3kfvBQM7U,INDIFFERENT,False
+363,Truckin',Grateful Dead,American Beauty,5:07,307,48eW3VL-95g,INDIFFERENT,False
+364,Wagon Wheel,Old Crow Medicine Show,O.C.M.S.,3:53,233,Oe5hm0v67zM,INDIFFERENT,False
+365,A Tornado Warning,Turnpike Troubadours,A Long Way from Your Heart,3:44,224,Jff620V8QUQ,INDIFFERENT,False
+366,Outlaw Shit (feat. Shooter Jennings),Benjamin Tod,Outlaw Shit,4:06,246,8E49Jpm7yMc,INDIFFERENT,False
+367,Born Runnin' Outta Time,Lukas Nelson,Born Runnin' Outta Time,3:19,199,-XdAU9CTgPs,INDIFFERENT,False
+368,Movin',Colby Acuff,Movin',2:42,162,vrlfErGN0as,INDIFFERENT,False
+369,Snow (Hey Oh),Red Hot Chili Peppers,Stadium Arcadium,5:35,335,s6GIT4RhFv0,INDIFFERENT,False
+370,Trinity River,Charley Crockett,A Stolen Jewel,3:56,236,DUN2Lmwi4AY,INDIFFERENT,False
+371,Long Way Down,The Steeldrivers,The Muscle Shoals Recordings,3:45,225,SSoN4CIj1fE,INDIFFERENT,False
+372,Percheron Mules,Tyler Childers,Rustin' In The Rain,4:31,271,PjCjp7_28RQ,INDIFFERENT,False
+373,Brighter Shade,Lost Dog Street Band,SURVIVED,3:05,185,yJVRjunioQA,INDIFFERENT,False
+374,Ruby Ann,Turnpike Troubadours,The Price of Admission,3:11,191,n9A1FlIP2GU,INDIFFERENT,False
+375,Vengeance and Grace,Benjamin Tod,Vengeance and Grace,3:16,196,viXbphiqibc,INDIFFERENT,False
+376,Night Train to Memphis,Charley Crockett,Lil G.L.'s Honky Tonk Jubilee,2:20,140,LuTVNMu9prw,INDIFFERENT,False
+377,I Choose You,The Steeldrivers,Bad For You,3:06,186,jH68IJb3fr8,INDIFFERENT,False
+378,Rustin' In The Rain,Tyler Childers,Rustin' In The Rain,3:37,217,v3yXiQdAy-s,INDIFFERENT,False
+379,The Devil Plies His Trade (Sn 6 Ep 3),Turnpike Troubadours,The Price of Admission,4:17,257,L74klubpUQg,INDIFFERENT,False
+380,Brothers of a Bottle,Charley Crockett,Lil G.L.'s Honky Tonk Jubilee,2:48,168,AZ23HvlNMFA,INDIFFERENT,False
+381,Poachers,Tyler Childers,Snipe Hunter,4:10,250,xZiyk3TH658,INDIFFERENT,False
+382,Leaving Town (Woody Guthrie Festival),Turnpike Troubadours,The Price of Admission,4:18,258,FlRkJzrl4H0,INDIFFERENT,False
+383,Lonely in Person,Charley Crockett,Lil G.L. Presents: Jukebox Charley,2:55,175,RKKJf0s0vE8,INDIFFERENT,False
+384,Feathered Indians,Tyler Childers,Purgatory,3:45,225,j-lwWgYLb68,INDIFFERENT,False
+385,Be Here,Turnpike Troubadours,The Price of Admission,4:58,298,EeyuibMh6_I,INDIFFERENT,False
+386,Baby 1-2-3,Charley Crockett,In the Night,2:11,131,1SU4XLLgloA,INDIFFERENT,False
+387,Lil' Girl's Name,Charley Crockett,Lonesome as a Shadow,2:02,122,fD13l3DgnXQ,INDIFFERENT,False
+388,Big Gold Mine,Charley Crockett,The Valley,2:17,137,krwSd-zKaVs,INDIFFERENT,False
+389,Saturday Satan Sunday Saint,Charley Crockett,Lil G.L.'s Blue Bonanza,2:46,166,FZhxzKVJAdU,INDIFFERENT,False
+390,You Must Be Drunk Again,Charley Crockett,Lil G.L.'s Honky Tonk Jubilee,2:24,144,W2sRRXR5J8w,INDIFFERENT,False
+391,The Way I'm Livin' (Santa Rosa),Charley Crockett,The Valley,2:35,155,RZ_jhtm9uxo,INDIFFERENT,False
+392,In the Night,Charley Crockett,In the Night,3:57,237,aLQYk-j0YdA,INDIFFERENT,False
+393,Black Sedan (Live from the Ryman),Charley Crockett,Live from the Ryman,3:12,192,EnM1AoeRkBI,INDIFFERENT,False
+394,Make Way for a Better Man,Charley Crockett,Lil G.L. Presents: Jukebox Charley,2:39,159,7TLLfNMpoH4,INDIFFERENT,False
+395,Six Foot Under,Charley Crockett,Lil G.L. Presents: Jukebox Charley,2:25,145,3fTnGe52F6I,INDIFFERENT,False
+396,Music City USA,Charley Crockett,Music City USA,3:03,183,jNHVJMx_qf8,INDIFFERENT,False
+397,Fool Somebody Else,Charley Crockett,Welcome to Hard Times,3:59,239,j2BI6T0ue_g,INDIFFERENT,False
+398,I Can Help,Charley Crockett,I Can Help,3:39,219,cO2dG8gZKZQ,INDIFFERENT,False
+399,In the Corner,Charley Crockett,10 for Slim: Charley Crockett Sings James Hand,3:11,191,8meUxiP65S8,INDIFFERENT,False
+400,Battle with the Bottle,Charley Crockett,Lil G.L. Presents: Jukebox Charley,2:50,170,xOInLdDXYog,INDIFFERENT,False
+401,Don't Take Your Guns,Charley Crockett,Clovis,3:43,223,8QMJ2G28K3E,INDIFFERENT,False
+402,A Stolen Jewel,Charley Crockett,A Stolen Jewel,3:45,225,pFHN3bsekTo,INDIFFERENT,False
+403,Cowboy Candy (Live from the Ryman),Charley Crockett,Live from the Ryman,4:01,241,FelTbX9eqXY,INDIFFERENT,False
+404,Me & Shooter,Charley Crockett,Age of the Ram,3:13,193,GVbsYbrCq3M,INDIFFERENT,False
+405,Paint It Blue (Live from the Ryman),Charley Crockett,Live from the Ryman,4:21,261,Vz7TzN6USnE,INDIFFERENT,False
+406,How Low Can You Go,Charley Crockett,Visions of Dallas,2:56,176,-xKFvw1RhQw,INDIFFERENT,False

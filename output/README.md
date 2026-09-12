@@ -1,6 +1,6 @@
 # 📝  output 
 
-## ⚙️ [run #6756](https://github.com/jwenerd/ytm-dl/actions/runs/34687924049)
+## ⚙️ [run #6757](https://github.com/jwenerd/ytm-dl/actions/runs/34687994498)
 
 ### 📁 Files
 
@@ -29,8 +29,8 @@
 |[`history/2026-06.csv` ](history/2026-06.csv)                                                                                                                |5666 |740K|
 |[`history/2026-07.csv` ](history/2026-07.csv)                                                                                                                |8461 |1.1M|
 |[`history/2026-08.csv` ](history/2026-08.csv)                                                                                                                |5921 |772K|
-|[`history/2026-09.csv` ](history/2026-09.csv)                                                                                                                |3257 |440K|
-|[`home.csv` ](home.csv)                                                                                                                                      |330  |40K |
+|[`history/2026-09.csv` ](history/2026-09.csv)                                                                                                                |3257 |436K|
+|[`home.csv` ](home.csv)                                                                                                                                      |450  |52K |
 |[`library_albums.csv` ](library_albums.csv)                                                                                                                  |1329 |92K |
 |[`library_artists.csv` ](library_artists.csv)                                                                                                                |2619 |116K|
 |[`library_songs.csv` ](library_songs.csv)                                                                                                                    |8369 |736K|
@@ -44,8 +44,8 @@
 |[`mixes/current/energize/energy_mix_3.csv` ](mixes/current/energize/energy_mix_3.csv)                                                                        |401  |40K |
 |[`mixes/current/energize/energy_supermix.csv` ](mixes/current/energize/energy_supermix.csv)                                                                  |401  |40K |
 |[`mixes/current/feel_good/feel_good_mix_1.csv` ](mixes/current/feel_good/feel_good_mix_1.csv)                                                                |401  |44K |
-|[`mixes/current/feel_good/feel_good_mix_2.csv` ](mixes/current/feel_good/feel_good_mix_2.csv)                                                                |477  |48K |
-|[`mixes/current/feel_good/feel_good_mix_3.csv` ](mixes/current/feel_good/feel_good_mix_3.csv)                                                                |421  |44K |
+|[`mixes/current/feel_good/feel_good_mix_2.csv` ](mixes/current/feel_good/feel_good_mix_2.csv)                                                                |407  |40K |
+|[`mixes/current/feel_good/feel_good_mix_3.csv` ](mixes/current/feel_good/feel_good_mix_3.csv)                                                                |412  |44K |
 |[`mixes/current/feel_good/feel_good_supermix.csv` ](mixes/current/feel_good/feel_good_supermix.csv)                                                          |401  |44K |
 |[`mixes/current/focus/focus_mix_1.csv` ](mixes/current/focus/focus_mix_1.csv)                                                                                |401  |36K |
 |[`mixes/current/focus/focus_mix_2.csv` ](mixes/current/focus/focus_mix_2.csv)                                                                                |401  |40K |
@@ -61,7 +61,7 @@
 |[`mixes/current/home/roots_reels_and_roadside_grooves.csv` ](mixes/current/home/roots_reels_and_roadside_grooves.csv)                                        |401  |44K |
 |[`mixes/current/home/soulful_rhythms_and_dusty_vinyl_finds.csv` ](mixes/current/home/soulful_rhythms_and_dusty_vinyl_finds.csv)                              |401  |40K |
 |[`mixes/current/home/theatrical_energy_and_high_octane_anthems.csv` ](mixes/current/home/theatrical_energy_and_high_octane_anthems.csv)                      |401  |52K |
-|[`mixes/current/home/timeless_romantic_melodies.csv` ](mixes/current/home/timeless_romantic_melodies.csv)                                                    |415  |44K |
+|[`mixes/current/home/timeless_romantic_melodies.csv` ](mixes/current/home/timeless_romantic_melodies.csv)                                                    |418  |44K |
 |[`mixes/current/party/party_mix_1.csv` ](mixes/current/party/party_mix_1.csv)                                                                                |401  |40K |
 |[`mixes/current/party/party_mix_2.csv` ](mixes/current/party/party_mix_2.csv)                                                                                |401  |40K |
 |[`mixes/current/party/party_mix_3.csv` ](mixes/current/party/party_mix_3.csv)                                                                                |401  |36K |
@@ -70,7 +70,7 @@
 |[`mixes/current/relax/chill_mix_2.csv` ](mixes/current/relax/chill_mix_2.csv)                                                                                |401  |44K |
 |[`mixes/current/relax/chill_mix_3.csv` ](mixes/current/relax/chill_mix_3.csv)                                                                                |401  |36K |
 |[`mixes/current/relax/chill_supermix.csv` ](mixes/current/relax/chill_supermix.csv)                                                                          |401  |40K |
-|[`mixes/current/romance/romantic_mix_1.csv` ](mixes/current/romance/romantic_mix_1.csv)                                                                      |419  |44K |
+|[`mixes/current/romance/romantic_mix_1.csv` ](mixes/current/romance/romantic_mix_1.csv)                                                                      |406  |44K |
 |[`mixes/current/romance/romantic_mix_2.csv` ](mixes/current/romance/romantic_mix_2.csv)                                                                      |401  |44K |
 |[`mixes/current/romance/romantic_mix_3.csv` ](mixes/current/romance/romantic_mix_3.csv)                                                                      |401  |36K |
 |[`mixes/current/romance/romantic_supermix.csv` ](mixes/current/romance/romantic_supermix.csv)                                                                |401  |40K |
@@ -81,8 +81,8 @@
 |[`mixes/current/sleep/sleep_mix_1.csv` ](mixes/current/sleep/sleep_mix_1.csv)                                                                                |401  |40K |
 |[`mixes/current/sleep/sleep_mix_2.csv` ](mixes/current/sleep/sleep_mix_2.csv)                                                                                |401  |36K |
 |[`mixes/current/sleep/sleep_mix_3.csv` ](mixes/current/sleep/sleep_mix_3.csv)                                                                                |401  |44K |
-|[`mixes/current/sleep/sleep_supermix.csv` ](mixes/current/sleep/sleep_supermix.csv)                                                                          |401  |40K |
-|[`mixes/current/workout/workout_mix_1.csv` ](mixes/current/workout/workout_mix_1.csv)                                                                        |401  |40K |
+|[`mixes/current/sleep/sleep_supermix.csv` ](mixes/current/sleep/sleep_supermix.csv)                                                                          |401  |44K |
+|[`mixes/current/workout/workout_mix_1.csv` ](mixes/current/workout/workout_mix_1.csv)                                                                        |406  |40K |
 |[`mixes/current/workout/workout_mix_2.csv` ](mixes/current/workout/workout_mix_2.csv)                                                                        |401  |40K |
 |[`mixes/current/workout/workout_mix_3.csv` ](mixes/current/workout/workout_mix_3.csv)                                                                        |401  |36K |
 |[`mixes/current/workout/workout_supermix.csv` ](mixes/current/workout/workout_supermix.csv)                                                                  |401  |40K |
@@ -102,14 +102,14 @@
 |[`mixes/history/2026_09_07/home/atmospheric_textures_and_ambient_drift.csv` ](mixes/history/2026_09_07/home/atmospheric_textures_and_ambient_drift.csv)      |401  |40K |
 |[`mixes/history/2026_09_07/home/discover_mix.csv` ](mixes/history/2026_09_07/home/discover_mix.csv)                                                          |401  |40K |
 |[`mixes/history/2026_09_07/home/midnight_chill_and_global_beats.csv` ](mixes/history/2026_09_07/home/midnight_chill_and_global_beats.csv)                    |401  |36K |
-|[`mixes/history/2026_09_07/home/modern_pop_melodies_and_heartfelt_hooks.csv` ](mixes/history/2026_09_07/home/modern_pop_melodies_and_heartfelt_hooks.csv)    |401  |40K |
+|[`mixes/history/2026_09_07/home/modern_pop_melodies_and_heartfelt_hooks.csv` ](mixes/history/2026_09_07/home/modern_pop_melodies_and_heartfelt_hooks.csv)    |401  |36K |
 |[`mixes/history/2026_09_07/home/my_supermix.csv` ](mixes/history/2026_09_07/home/my_supermix.csv)                                                            |401  |40K |
 |[`mixes/history/2026_09_07/home/replay_mix.csv` ](mixes/history/2026_09_07/home/replay_mix.csv)                                                              |401  |40K |
 |[`mixes/history/2026_09_07/home/roots_reels_and_roadside_grooves.csv` ](mixes/history/2026_09_07/home/roots_reels_and_roadside_grooves.csv)                  |401  |44K |
 |[`mixes/history/2026_09_07/home/soulful_rhythms_and_dusty_vinyl_finds.csv` ](mixes/history/2026_09_07/home/soulful_rhythms_and_dusty_vinyl_finds.csv)        |401  |40K |
 |[`mixes/history/2026_09_07/home/theatrical_energy_and_high_octane_anthems.csv` ](mixes/history/2026_09_07/home/theatrical_energy_and_high_octane_anthems.csv)|401  |52K |
 |[`mixes/history/2026_09_07/home/timeless_romantic_melodies.csv` ](mixes/history/2026_09_07/home/timeless_romantic_melodies.csv)                              |415  |44K |
-|[`mixes/history/2026_09_07/party/party_mix_1.csv` ](mixes/history/2026_09_07/party/party_mix_1.csv)                                                          |401  |40K |
+|[`mixes/history/2026_09_07/party/party_mix_1.csv` ](mixes/history/2026_09_07/party/party_mix_1.csv)                                                          |401  |36K |
 |[`mixes/history/2026_09_07/party/party_mix_2.csv` ](mixes/history/2026_09_07/party/party_mix_2.csv)                                                          |401  |40K |
 |[`mixes/history/2026_09_07/party/party_mix_3.csv` ](mixes/history/2026_09_07/party/party_mix_3.csv)                                                          |401  |36K |
 |[`mixes/history/2026_09_07/party/party_supermix.csv` ](mixes/history/2026_09_07/party/party_supermix.csv)                                                    |401  |40K |
@@ -123,7 +123,7 @@
 |[`mixes/history/2026_09_07/romance/romantic_supermix.csv` ](mixes/history/2026_09_07/romance/romantic_supermix.csv)                                          |401  |40K |
 |[`mixes/history/2026_09_07/sad/sad_songs_mix_1.csv` ](mixes/history/2026_09_07/sad/sad_songs_mix_1.csv)                                                      |401  |40K |
 |[`mixes/history/2026_09_07/sad/sad_songs_mix_2.csv` ](mixes/history/2026_09_07/sad/sad_songs_mix_2.csv)                                                      |401  |44K |
-|[`mixes/history/2026_09_07/sad/sad_songs_mix_3.csv` ](mixes/history/2026_09_07/sad/sad_songs_mix_3.csv)                                                      |401  |40K |
+|[`mixes/history/2026_09_07/sad/sad_songs_mix_3.csv` ](mixes/history/2026_09_07/sad/sad_songs_mix_3.csv)                                                      |401  |36K |
 |[`mixes/history/2026_09_07/sad/sad_songs_supermix.csv` ](mixes/history/2026_09_07/sad/sad_songs_supermix.csv)                                                |401  |40K |
 |[`mixes/history/2026_09_07/sleep/sleep_mix_1.csv` ](mixes/history/2026_09_07/sleep/sleep_mix_1.csv)                                                          |401  |40K |
 |[`mixes/history/2026_09_07/sleep/sleep_mix_2.csv` ](mixes/history/2026_09_07/sleep/sleep_mix_2.csv)                                                          |401  |36K |
