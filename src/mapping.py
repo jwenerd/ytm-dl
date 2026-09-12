@@ -2,18 +2,12 @@ from marshmallow import Schema, fields
 import operator
 
 class BaseSchema(Schema):
+    primary_key: str = "id"
+
     @property
     def keys(self):
         return list(self.declared_fields.keys())
 
-
-# class HomeType(fields.String):
-#     def _serialize(self, value, attr, data, **kwargs) -> str | None:
-#         key = "name"
-#         if not value and data.get("playlistId"):
-#             value = "playlist"
-#         value = str(value).lower()
-#         return super()._serialize(value, attr, data, **kwargs)
 
 class ExtractNameStr(fields.String):
     def _serialize(self, value, attr, data, **kwargs) -> str | None:
@@ -30,6 +24,8 @@ class ExtractNameStr(fields.String):
 
 
 class SongSchema(BaseSchema):
+    primary_key = "videoId"
+
     title = fields.Str()
     artists = ExtractNameStr()
     album = ExtractNameStr()
@@ -45,6 +41,8 @@ class SongSchema(BaseSchema):
 
 
 class HistorySchema(SongSchema):
+    primary_key = "videoId"
+
     inLibrary = fields.Str()
     likeStatus = fields.Str()
 
@@ -58,18 +56,25 @@ class HistorySchema(SongSchema):
 
 
 class ArtistSchema(BaseSchema):
+    primary_key = "browseId"
+
     artist = fields.Str()
     browseId = fields.Str()
 
 
 class AlbumSchema(BaseSchema):
+    primary_key = "browseId"
+
     artists = ExtractNameStr()
     title = fields.Str()
     type = fields.Str()
     year = fields.Str()
     browseId = fields.Str()
 
+
 class HomeSchema(BaseSchema):
+    primary_key = "id"
+
     home = fields.Str()
     home_index = fields.Str()
     type = fields.Str()
@@ -77,6 +82,7 @@ class HomeSchema(BaseSchema):
     artists = ExtractNameStr()
     description = fields.Str()
     id = fields.Str()
+
 
 SCHEMA_MAPPING = {
     "home": HomeSchema,
@@ -98,6 +104,17 @@ class Mapping:
     @property
     def columns(self):
         return self.schema.keys
+
+    @property
+    def primary_key(self):
+        return getattr(self.schema, "primary_key", "id")
+
+    @property
+    def key_index(self):
+        pk = self.primary_key
+        if pk in self.columns:
+            return self.columns.index(pk)
+        return len(self.columns) - 1
 
     def _find_schema(self) -> BaseSchema:
         schema = SCHEMA_MAPPING.get(self.file, None)

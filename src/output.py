@@ -72,19 +72,32 @@ class Output:
         os.unlink(prev_file)
 
     def update_rows_for_prepend(self):
+        is_history = self.file == "history"
         self.rows = prepend_rows_for_file(
-            self.csv_file_with_path, self.rows, self.by_key
+            self.csv_file_with_path,
+            self.rows,
+            is_history=is_history,
+            key_index=self.mapping.key_index,
+            by_key=self.by_key,
         )
 
     def write_files(self):
         self.rows = self.mapping.get_rows()
 
-        if self.file == 'history':
+        if self.file == "history":
             # remove the sleep noise tracks i use
-            problems = [
-                'Sv0LwXYAVVg', 'dMEp0pl-hhE', 'yOk_XMB6_vs', 'sE0ypPpvbNQ', 'xu2b6YVlQoU', 'C8KGOXqrDyU'
+            problems = {
+                "Sv0LwXYAVVg",
+                "dMEp0pl-hhE",
+                "yOk_XMB6_vs",
+                "sE0ypPpvbNQ",
+                "xu2b6YVlQoU",
+                "C8KGOXqrDyU",
+            }
+            key_idx = self.mapping.key_index
+            self.rows = [
+                row for row in self.rows if len(row) > key_idx and row[key_idx] not in problems
             ]
-            self.rows = [row for row in self.rows if row[-1] not in problems]
 
         use_prepend = self.file_exists and (self.prepend or self.by_key)
 
