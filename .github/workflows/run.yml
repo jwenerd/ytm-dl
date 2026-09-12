@@ -19,6 +19,10 @@ on:
     - cron: '19 0,6,9,12,15,18,21 * * *'
     - cron: '19 3 * * *'
 
+concurrency:
+  group: ytm-output-sync
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -29,7 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          fetch-depth: 0
+          fetch-depth: 1
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
@@ -46,10 +50,14 @@ jobs:
           elif [ -n "$YTM_OAUTH" ]; then
             echo "$YTM_OAUTH" > oauth.json
           fi
-      - name: Checkout Output
+      - name: Setup Output Worktree
         run: |
-          git fetch origin
-          git checkout origin/main-output output
+          echo "::group::Setup main-output worktree"
+          git fetch origin main-output:main-output --depth=1
+          rm -rf output
+          git worktree add ../output-worktree main-output
+          ln -s ../output-worktree/output output
+          echo "::endgroup::"
       - name: Run 🎶
         id: run
         env:
@@ -88,19 +96,25 @@ jobs:
 
           echo "::group::github step summary"
           echo "### ⚙️ python ytm-dl.py $RUN_OPTION" >> $GITHUB_STEP_SUMMARY
-          echo ""
+          echo "" >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           cat $HOME/run_output  >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           for file in ./tmp/step_output/*.md; do
-            cat $file >> $GITHUB_STEP_SUMMARY
+            [ -e "$file" ] || continue
+            cat "$file" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
           done
           echo "::endgroup::"
 
           echo "::group::determine if need to commit to output"
-          git diff-index --quiet origin/main-output output/ || echo "DOCOMMIT=1" >> "$GITHUB_OUTPUT"
+          if [ -n "$(git -C ../output-worktree status --porcelain output/)" ]; then
+            echo "DOCOMMIT=1" >> "$GITHUB_OUTPUT"
+            echo "Changes detected in output/ - will commit."
+          else
+            echo "No changes detected in output/."
+          fi
           echo "::endgroup::"
       - uses: actions/upload-artifact@v7
         with:
@@ -112,45 +126,33 @@ jobs:
         if: ${{ steps.run.outputs.DOCOMMIT == '1' }}
         run: |
           true || 👨‍💻
-          echo "::group::git checkout main-output"
-          cd output/
+          echo "::group::commit & push main-output"
+          cd ../output-worktree
+
           git config --global core.autocrlf input
-          git checkout main-output
-          git add -f .
-          echo "::endgroup::"
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "<>"
 
-          if ! git diff-index --quiet HEAD; then
-            echo "::group::commit & push"
+          git add -A output/
+          if ! git diff-index --quiet HEAD output/; then
+            RANDOM_EMOJIS=$(python3 -c "import random; emojis=['🎵','🎶','🎧','📻','🎷','🎸','🎹','🎺','🎻','🥁','💿','📀','🔥','✨','🚀','🎉','⚡','🕺','💃','🤠','🥑','🥐','☕','🍕','🪩','🏖️','🛸','🏄‍♂️','👾']; print(' '.join(random.sample(emojis, 3)))")
 
-            curl -s https://gist.githubusercontent.com/jwenerd/1679dda15c44739b4781cb946533381b/raw/ef35475552d2dfa2e5bb7ae49f542b39aaaa7b45/random_emoji.sh | bash -s
-            RANDOM_EMOJI=$(cat /tmp/jw_rand_emoji)
-
-            git config --global user.name "GitHub Actions"
-            git config --global user.email "<>"
-
-            git commit --message="$GITHUB_JOB($RUN_OPTION) $GITHUB_EVENT_NAME #$GITHUB_RUN_NUMBER $RANDOM_EMOJI"
+            git commit --message="$GITHUB_JOB($RUN_OPTION) $GITHUB_EVENT_NAME #$GITHUB_RUN_NUMBER $RANDOM_EMOJIS"
+            git pull --rebase origin main-output || true
             git push origin main-output
 
-            cat ../tmp/commit_link.md | awk '{if (match($0, "__OUTPUTCOMMIT__")) {cmd="git rev-parse HEAD"; cmd | getline output; close(cmd); gsub("__OUTPUTCOMMIT__", output)} print}' >> $GITHUB_STEP_SUMMARY
-            cat ../tmp/commit_link.md | awk '{if (match($0, "__OUTPUTCOMMIT__")) {cmd="git rev-parse HEAD"; cmd | getline output; close(cmd); gsub("__OUTPUTCOMMIT__", output)} print}'
-            echo  "::endgroup::"
-
-            echo "::group::tag latest-output"
-            git fetch --tags --force
-            git tag --force latest-output
-            git push --force --tags
-            echo  "::endgroup::"
-
-            echo "::group::git count-objects"
-            cd ..
-            git fetch --all
-            git gc
-            du -h -d 0 .git
-            echo "##### ∑ git count-objects" >> $GITHUB_STEP_SUMMARY
-            echo "\`\`\`$(git count-objects -vH | head -5)" >> $GITHUB_STEP_SUMMARY
-            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
-            echo "::endgroup::"
+            OUTPUT_COMMIT=$(git rev-parse HEAD)
+            if [ -f "$GITHUB_WORKSPACE/tmp/commit_link.md" ]; then
+              sed "s/__OUTPUTCOMMIT__/$OUTPUT_COMMIT/g" "$GITHUB_WORKSPACE/tmp/commit_link.md" >> $GITHUB_STEP_SUMMARY
+              sed "s/__OUTPUTCOMMIT__/$OUTPUT_COMMIT/g" "$GITHUB_WORKSPACE/tmp/commit_link.md"
+            fi
           fi
+          echo "::endgroup::"
+
+          echo "::group::tag latest-output"
+          git tag --force latest-output
+          git push --force origin latest-output
+          echo "::endgroup::"
       - name: Update Google Sheets
         id: update-google-sheets
         if: ${{ steps.run.outputs.DOCOMMIT == '1' }}
