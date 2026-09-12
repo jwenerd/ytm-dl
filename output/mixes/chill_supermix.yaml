@@ -3,12 +3,11 @@ mood_chip: Relax
 playlist_id: RDTMAK5uy_nzfwl2UYv7htL7wDoxbX8Pp6UAFBd92cQ
 description: Relax and let go with this mix of songs that span all your tastes. Always
   updating.
-featured_artists: "The Horus All Stars, Hermanos Guti\xE9rrez, Super Guitar Bros,\
-  \ The Olympians"
+featured_artists: "Skinshape, Merle Watson, Blind Blake, Hermanos Guti\xE9rrez"
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1108
-new_tracks_latest_run: 91
+total_unique_tracks: 1174
+new_tracks_latest_run: 66
 latest_batch_size: 500
-last_updated: '2026-09-12T19:46:51Z'
-run_id: gh-6769
+last_updated: '2026-09-12T19:59:58Z'
+run_id: gh-6771

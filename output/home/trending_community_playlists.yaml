@@ -4,9 +4,9 @@ slug: trending_community_playlists
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 10
-new_items_latest_run: 0
+total_items: 11
+new_items_latest_run: 1
 latest_batch_size: 10
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-09-12T19:47:15Z'
-run_id: gh-6769
+last_captured: '2026-09-12T20:00:29Z'
+run_id: gh-6771

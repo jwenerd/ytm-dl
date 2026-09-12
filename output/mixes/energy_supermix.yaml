@@ -3,11 +3,11 @@ mood_chip: Energize
 playlist_id: RDTMAK5uy_kskEGBYLWbdi3Z9IdjDoDEI8hEBvHEreM
 description: Get a boost with this mix of high-energy songs that span all your tastes.
   Always updating.
-featured_artists: Hallucinogen, Daft Punk, Captain Hook, Shpongle
+featured_artists: Hallucinogen, Daft Punk, Captain Hook, Justice
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 963
+total_unique_tracks: 997
 new_tracks_latest_run: 34
 latest_batch_size: 500
-last_updated: '2026-09-12T19:46:51Z'
-run_id: gh-6769
+last_updated: '2026-09-12T19:59:58Z'
+run_id: gh-6771
