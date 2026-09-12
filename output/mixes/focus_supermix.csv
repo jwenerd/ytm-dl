@@ -1,383 +1,482 @@
 videoId,title,artists,album,duration,duration_seconds,first_seen,last_seen,times_recommended,latest_position,likeStatus,inLibrary
-Up0wYsESdkc,Stornoway,Skinshape,Stornoway,4:11,251,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,1,INDIFFERENT,False
-Nv7vpffOqB0,Paraiso,Gizmo Varillas,El Dorado,1:44,104,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,2,INDIFFERENT,False
-BduOkcEPIfg,Ghost Groove (Instrumental),Dojo Cuts,A World Away EP,3:10,190,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,3,INDIFFERENT,False
-t4Gyct3jBqM,Midnight Movement,The Olympians,Midnight Movement / The Rain Song,3:29,209,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,4,INDIFFERENT,False
-wTj7UZq_hjg,Beaming Above,richard houghten,Sun Lifter,2:05,125,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,5,INDIFFERENT,False
-8yNN4A_pyRA,Skylark,James Quinn,Skylark,1:26,86,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,6,INDIFFERENT,False
-OQGuKXo6jRk,Altiplano,"Erlend Øye, La Comitiva",Valdivia,3:25,205,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,7,INDIFFERENT,False
-SuvVK76HAPE,Got Caught in Amsterdam,Arc De Soleil,The Thief in Marrakesh Got Caught in Amsterdam Trying to Escape,2:51,171,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,8,INDIFFERENT,False
-bINJy0n0rx8,The Lone Pistolero,Tommy Guerrero,No Mans Land,3:21,201,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,9,INDIFFERENT,False
-sNfhhzvnR58,Aurora,Kupla,All Natural,2:28,148,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,10,INDIFFERENT,False
-cjjEiKJjxGU,Dub for Cascadia,loscil,Endless Falls,6:07,367,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,11,LIKE,False
-s1GOI3vC4tE,Vale,Maribou State,Kingdoms In Colour,4:08,248,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,12,INDIFFERENT,False
+wTj7UZq_hjg,Beaming Above,richard houghten,Sun Lifter,2:05,125,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,301,INDIFFERENT,False
+6F7VMcPs6r4,Sheik,Super Guitar Bros,Ocarina of Time,1:23,83,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,302,INDIFFERENT,False
+Up0wYsESdkc,Stornoway,Skinshape,Stornoway,4:11,251,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,304,INDIFFERENT,False
+_396y7Vk9NA,Breathe (In the Air),Pink Floyd,The Dark Side of the Moon,2:50,170,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,310,INDIFFERENT,False
+HCDG91aUBlA,Italiana,Opez,Social Limbo,3:38,218,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,311,INDIFFERENT,False
+GsanQTBD4lQ,Totem Transport,Arc De Soleil,No Cardigan in Michigan Please (Prologue),3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,312,INDIFFERENT,False
+Cbo_HRtcSOU,Gubèlyé,Mulatu Astatke,Ethio Jazz,4:41,281,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,313,INDIFFERENT,False
+3lY6lTejA6s,Summersurf,Löwenzahnhonig,Summersurf,1:51,111,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,314,INDIFFERENT,False
+OVxKvxUwcVY,There Will Be Rain,Million Eyes,In the Wind,2:03,123,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,316,INDIFFERENT,False
+DNrfL6hs0yQ,Stopover Bombay (feat. Pharoah Sanders),Alice Coltrane,Journey in Satchidananda,2:53,173,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,317,INDIFFERENT,False
+rvjFKme0tt4,Present,Lloyd Vaan,Lens Flare,2:26,146,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,323,INDIFFERENT,False
+eAKMuxB1ynU,Call Your Mom,Delvon Lamarr Organ Trio,I Told You So,4:00,240,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,324,INDIFFERENT,False
+QDasjmCz1do,ETOH,The Avalanches,Since I Left You (20th Anniversary Deluxe Edition),5:04,304,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,327,INDIFFERENT,False
+BduOkcEPIfg,Ghost Groove (Instrumental),Dojo Cuts,A World Away EP,3:10,190,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,328,INDIFFERENT,False
+XMfwG_BfafA,Breezin,Boris Garbiner Happening,"Beach Diggin', Vol. 4",3:35,215,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,329,INDIFFERENT,False
+zrLXBIc6F8E,Lost My Mind,Will Van Horn,Pedal Steel Guitar,3:50,230,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,330,INDIFFERENT,False
+WVRCq7rP0XM,Lost,vibessmusic,Lost,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,332,INDIFFERENT,False
+sNNktFpVv7o,Famagusta Port,BALTHVS,Famagusta Port,1:59,119,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,333,INDIFFERENT,False
+BDJ7W15hFF4,Manhattan,"Gerhard Trede, THE GERHARD TREDE FILM ORCHESTRA","Archival, Vol. 5: Newsreel 2",1:23,83,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,334,INDIFFERENT,False
+7cXYRB5AnK0,Simply Beautiful,Acoustic Guitar Poet,"Guitar Sketches for Rest and Relaxation, Vol. 2",1:56,116,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,337,INDIFFERENT,False
+zLdT_0YfPLk,Serenade of Water,Men I Trust,Untourable Album,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,341,INDIFFERENT,False
+lV9DePcyEpU,L'autre Valse D'amélie,Frédéric Schubert,Pop Ballads on Piano,1:06,66,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,343,INDIFFERENT,False
+guQ_Sy7uAEI,retire (final),Alvedon,hurry up mixtape,3:35,215,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,344,INDIFFERENT,False
+16SyKsFb7Yg,The Other Side,The Sure Fire Soul Ensemble,Step Down,3:39,219,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,345,INDIFFERENT,False
+iuTk8x410mk,LesAlpx,Floating Points,Crush,4:43,283,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,348,INDIFFERENT,False
+XKPalrELh5s,Jupiter Jazz,Haruki,Jupiter Jazz,3:20,200,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,350,INDIFFERENT,False
+d3emBxjLAgw,It Rains Love (Instrumental),Lee Fields & The Expressions,It Rains Love (Instrumentals),3:56,236,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,352,INDIFFERENT,False
+9BDQpKuTWQI,Mulberry Mouse,Alan Gogoll,Mulberry Mouse,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,355,INDIFFERENT,False
+ZYq1jWvG2o8,Oscar (feat. Anna Clementi),Tosca,Dehli 9,5:21,321,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,356,INDIFFERENT,False
+wpbACnaChsE,Autumn Mountain,The Folks,Autumn Mountain,2:36,156,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,357,INDIFFERENT,False
+G16UIMwpA9o,Stillness & Solace,FableForte,Stillness & Solace,1:28,88,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,358,INDIFFERENT,False
+XLBVuHo0YVI,Slow And Steady,Shawn Lee,Shawn Lee's Soulscapes,2:05,125,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,359,INDIFFERENT,False
+YafP9rG7Ews,Sétima Regra,BADBADNOTGOOD,Mid Spiral: Order,5:32,332,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,360,INDIFFERENT,False
+CPvj4moLBvA,Chasing Cloud Nine,LUCHS,Chasing Cloud Nine,2:42,162,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,361,INDIFFERENT,False
+EdifTs5NX84,Aquarius,Cal Tjader,The Prophet,3:41,221,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,362,INDIFFERENT,False
+QWOvw77vPMk,"Chopin: Waltz No. 19 in A Minor, KK IVb (Arr. for Cello and Piano by C. Thomas)","Camille Thomas, Frédéric Chopin, Julien Brocal",The Chopin Project : Trilogy,2:23,143,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,363,INDIFFERENT,False
+ICPdJholEmA,Always on My Mind,Marbert Rocel,In the Beginning,4:24,264,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,365,INDIFFERENT,False
+_EElynJ712s,Serpentine,Polyrhythmics,Life from Below,4:45,285,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,367,INDIFFERENT,False
+syNT-7udqpQ,Deja Vu (Instrumental) (feat. Cold Diamond & Mink),Bobby Oroza,This Love (Instrumentals),4:43,283,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,370,INDIFFERENT,False
+oQaXp16OC0c,Current,inola,Channel,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,373,INDIFFERENT,False
+uXTKZryD8yY,Là-haut,L'Impératrice,Matahari,3:52,232,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,375,INDIFFERENT,False
+_8y3xjuA3Ng,"its okay, you can rest now.",Raiun,"its okay, you can rest now.",1:35,95,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,377,INDIFFERENT,False
+DfViwmUc4BU,One Percent,Gorillaz,The Now Now,2:22,142,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,381,INDIFFERENT,False
+hE0jTTPQl-U,"Beethoven: String Quartet No. 14 in C-Sharp Minor, Op. 131: 6. Adagio quasi un poco andante","Lindsay String Quartet, Ludwig van Beethoven","Beethoven: String Quartet in C-Sharp Minor, Op. 131 (Lindsay String Quartet: The Complete Beethoven String Quartets Vol. 9)",2:22,142,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,382,INDIFFERENT,False
+zvUC8Ka3cZA,green to blue,Aurenth,green to blue,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,383,INDIFFERENT,False
+yXHOpDF_pj4,Silky Spring,Yuuf,Silky Spring,3:45,225,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,384,INDIFFERENT,False
+v3kHI_lgaCo,Waltz of Cecilia,Teesa,Peaceful Solitude,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,385,INDIFFERENT,False
+alUNFofyIHg,Basilisk,Orgone,Basilisk,4:30,270,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,387,LIKE,False
+KBkhmmLj7-M,Sunshine Drive,Lavaros,Sunshine Drive,3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,388,INDIFFERENT,False
+1mcx9OdEZXo,Tillbaka,Stilhed,Tillbaka,2:04,124,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,390,INDIFFERENT,False
+sGecDxUouCo,U.s. Saloon Props 41/59,Porn Sword Tobacco,New Exclusive Olympic Heights,2:22,142,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,394,INDIFFERENT,False
+fvlbJt_H_xU,Costa del Sol,José Méndez,Caminos,1:22,82,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,404,INDIFFERENT,False
+Uy3bzQyvaOY,Stars,Brian Eno,Apollo: Atmospheres And Soundtracks (Extended Edition),8:03,483,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,406,INDIFFERENT,False
+_MYFPQSKzQI,Shades of Man,Khruangbin,Con Todo El Mundo,3:48,228,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,407,INDIFFERENT,False
+cwTWLfIfTJY,Dawn Chorus,Jon Hopkins,Dawn Chorus,3:29,209,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,411,INDIFFERENT,False
+5Qnz5ZWRNR4,Swell,Kino,Swell,2:53,173,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,417,INDIFFERENT,False
+qlYoC2LRAVM,Etude n°16,Vanessa Wagner,Study of the Invisible,4:53,293,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,420,INDIFFERENT,False
+4Fwlu7pN7DY,Your Way,Old Futures,Your Way,2:43,163,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,421,INDIFFERENT,False
+SJfF7FgAAHk,Autumn,Smoky,Minimal Sounds,3:46,226,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,423,INDIFFERENT,False
+ciIZ_vgU6sU,What the Funk,Robohands,Dusk,4:09,249,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,430,INDIFFERENT,False
+eAtXB67MJoo,I Miss You,Kim Moongo,I Miss You,2:12,132,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,436,INDIFFERENT,False
+i5lM491mrLg,Jumpstart,Duke Boara,Jumpstart,3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,443,INDIFFERENT,False
+yqXti_pVy3Y,Olancha Farewell,Harold Budd,Lovely Thunder,2:19,139,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,450,INDIFFERENT,False
+TuwJBZEoWzw,Old Room,Pencil Legs,Pencil Legs,2:36,156,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,452,INDIFFERENT,False
+4C_hhw49fdQ,Love Theme From Spartacus (Remastered 2023),Yusef Lateef,Eastern Sounds (Remastered 2023),4:16,256,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,463,INDIFFERENT,False
+Of5l0KuT2xU,Sensitive Kind,J.J. Cale,Live,4:06,246,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,468,INDIFFERENT,False
+GpVEkOUj2ZQ,Reflections,Toshifumi Hinata,Hitotsubu No Umi,2:11,131,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,476,INDIFFERENT,False
+WxV8aHg-FeQ,Satellite,Stellardrone,Echoes,3:18,198,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,479,INDIFFERENT,False
+uvwjfBFciRU,Carnival of the Animals: The Swan (Arranged for Cello and Harp by Miriam Keogh),"Camille Saint-Saëns, Miriam Keogh, Sebastian Comberti",Romance,2:55,175,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,484,INDIFFERENT,False
+cGcQPH4KyxA,Melodica,Rival Consoles,Articulation,3:40,220,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,497,INDIFFERENT,False
+Nv7vpffOqB0,Paraiso,Gizmo Varillas,El Dorado,1:44,104,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,1,INDIFFERENT,False
+X6IW-YSJ_z0,"Locatelli: Violin Concerto in G Minor, Op. 3 No. 6: IIIa. Vivace","Elizabeth Wallfisch, Nicholas Kraemer, Pietro Locatelli, Raglan Baroque Players","Locatelli: L'Arte del Violino – 12 Concertos, Op. 3",2:59,179,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,2,INDIFFERENT,False
+cQPdXcLVWU8,Swell,Offthewally,Surfari,3:59,239,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,3,INDIFFERENT,False
+sdY83BOwLYs,Cloud Bath,Ljoma Portova,Cloud Bath,2:35,155,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,4,INDIFFERENT,False
+8ZNucRs1hf8,Denna,Finnegan Tui,"Lost Tales, Vol. 1",3:31,211,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,5,INDIFFERENT,False
+SuvVK76HAPE,Got Caught in Amsterdam,Arc De Soleil,The Thief in Marrakesh Got Caught in Amsterdam Trying to Escape,2:51,171,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,6,INDIFFERENT,False
+sNfhhzvnR58,Aurora,Kupla,All Natural,2:28,148,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,7,INDIFFERENT,False
+o8g5Omp0Tas,Small Memory,Jon Hopkins,Insides,1:41,101,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,9,INDIFFERENT,False
+IDZK13iPreA,In a Bubble,"Chalart58, Matah",Geomètric Dub,3:20,200,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,10,INDIFFERENT,False
+NXA5whKj6go,Cracked Pepper,Polyrhythmics,Fondue Party,4:35,275,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,11,INDIFFERENT,False
+4c3WSCpwnog,Wavy (feat. The Soul Surfers),Janko Nilovic,Maze Of Sounds,3:12,192,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,12,INDIFFERENT,False
+yWiX1CRQeJY,Where Roses Bloom (Voice Memo Clip),Teesa,Where Roses Bloom (Voice Memo Clip),1:16,76,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,13,INDIFFERENT,False
+seyuHkQsquo,Tiger Trot,Leroi Conroy,Tiger Trot,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,14,INDIFFERENT,False
+bINJy0n0rx8,The Lone Pistolero,Tommy Guerrero,No Mans Land,3:21,201,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,16,INDIFFERENT,False
+s1GOI3vC4tE,Vale,Maribou State,Kingdoms In Colour,4:08,248,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,17,INDIFFERENT,False
+cjjEiKJjxGU,Dub for Cascadia,loscil,Endless Falls,6:07,367,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,18,LIKE,False
+J8ljVYAussA,Home,Murphy Cooper,Home,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,19,INDIFFERENT,False
+w_a5mRbwr-o,Sicily' Box (feat. Rocco Palladino),"Venna, Yussef Dayes, & Marco Bernardis",Sicily' Box,4:06,246,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,20,INDIFFERENT,False
+JgI6z6aQhEA,Velocities,Sleepy Fish,Velocities,3:12,192,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,21,INDIFFERENT,False
+3bSGH0xEJSQ,The Shame,"Holy Hive, El Michels Affair, & Fleet Foxes",Big Crown Vaults Vol. 3 - Holy Hive,2:56,176,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,22,INDIFFERENT,False
+1rTNWzuTeBQ,Time To Rebuild,The Sure Fire Soul Ensemble,Step Down,3:03,183,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,23,INDIFFERENT,False
+8eqBSlAShyg,Los Navegantes,Hermanos Gutiérrez,Sonido Cósmico,4:13,253,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,24,INDIFFERENT,False
+Mu95lNZpyaM,To The Moon,"King Canyon, Otis McDonald, Eric Krasno, and Mike Chiavaro",King Canyon,3:43,223,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,25,INDIFFERENT,False
+Z31FVFDNxyQ,Soul Wire,Vibrasphere,Lime Structure,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,26,INDIFFERENT,False
+fL9s3jgo7Pg,Wait A Minute / Praying For A Jeepbeat (Smokers Delight Original Version),Nightmares On Wax,Smokers Delight,2:45,165,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,27,INDIFFERENT,False
+bNw9N74L3P0,Rio Grande,Ikebe Shakedown,Stone by Stone,3:51,231,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,28,INDIFFERENT,False
+RGqxSSgy4Pw,A1 Bakery Pledge of Allegiance,Surprise Chef,Education & Recreation,3:20,200,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,29,INDIFFERENT,False
+thFRjY9al4w,Minor Blues,Joscho Stephan,Django Forever,3:14,194,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,30,INDIFFERENT,False
+bDj3_B51f-U,Ballerina,Yehezkel Raz,"Preludes, Book 1 - Streams",1:12,72,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,31,INDIFFERENT,False
+Sz9d01L8X5U,El Camino de Mallorca,Luca Stavos,El Camino de Mallorca,2:20,140,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,32,INDIFFERENT,False
+QNHraCYv8Gg,Time Travel,Antologie,Time Travel,3:05,185,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,33,INDIFFERENT,False
+y8B7SbwEegc,"Pomegranate (feat. Bijan Chemirani, Redi Hasa & Rami Khalife)",L'Antidote,Pomegranate,4:46,286,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,34,INDIFFERENT,False
+0pHR4_cyIuA,Bleached,Video Days,sungazing,1:24,84,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,36,INDIFFERENT,False
+JzYI-_hLguE,Glass: Études: No. 6,"Philip Glass, Yuja Wang",Glass: Études: No. 6,2:47,167,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,37,INDIFFERENT,False
+Xu2eELq1lzU,Get With It,Orgone,Get With It,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,38,INDIFFERENT,False
+i431cs0bUBA,Nature's Ratio,Slowly Rolling Camera,Juniper,1:58,118,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,39,INDIFFERENT,False
+Fa_ovff8r-w,Frigate Bay,Dana and Alden,"Coyote, You're My Star",3:38,218,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,40,INDIFFERENT,False
+QpA2Gx8MHRc,Lights,Alex Banks,Illuminate,4:15,255,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,41,INDIFFERENT,False
+-lLf6zTGBOg,Just A Simple Thing,HomeGrown Ed,Acoustic Guitar Tales,2:02,122,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,42,INDIFFERENT,False
+SQQ5yo9NSus,Nocturno de Moriana,Lucas Brar,Nocturno de Moriana,3:21,201,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,43,INDIFFERENT,False
+oj8glZ0IrIY,Rugged Walk,The Rugged Nuggets,Rugged Walk,2:58,178,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,44,INDIFFERENT,False
+1Gly6GjOMYo,Sound Vagabond,Eric Hilton,Sound Vagabond,3:05,185,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,45,INDIFFERENT,False
+DX6QHjx_RYw,The Mercy of the Wind,Million Eyes,In the Wind,1:46,106,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,46,INDIFFERENT,False
+mdUG4JgPflw,Inner Dance,Dylan John Sparkes,Noon Dance,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,47,INDIFFERENT,False
+g68DUGTWzlA,Night Aïr,Yuuf,Mt. Sava,3:14,194,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,48,INDIFFERENT,False
+C9UN0Ak9Z0c,Departure,Pierre Tardiveau,Departure,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,50,INDIFFERENT,False
+h3lj2-J2Ze0,My October,The Folks,My October,2:05,125,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,51,INDIFFERENT,False
+6izGOqVKnXY,Slippery Eel (feat. Chris Thile & Billy Strings),Béla Fleck,My Bluegrass Heart,4:24,264,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,52,INDIFFERENT,False
+yarFH8myBvo,Between the Buttons,French 79,Angel,5:18,318,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,53,INDIFFERENT,False
+cILn2-o56d0,Rainbow Delay,Richard Houghten,Rainbow Delay,3:12,192,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,54,INDIFFERENT,False
+GkW-WpU_35Q,Umbra,Opez,Social Limbo,3:43,223,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,55,INDIFFERENT,False
+8yNN4A_pyRA,Skylark,James Quinn,Skylark,1:26,86,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,56,INDIFFERENT,False
+a0IsicIJOn8,Hong Sau,In Motion Collective,Hong Sau / Elephant Walk,3:24,204,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,57,INDIFFERENT,False
+42pZAwRBMJs,Heart to Heart,David Versace,Eye to Eye,2:45,165,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,58,INDIFFERENT,False
+JdaJM4RZppw,White Light,BADBADNOTGOOD,Mid Spiral: Growth,3:24,204,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,59,INDIFFERENT,False
+Mnf1yfYOwUE,North Cormorant Obscurity,Rykard,Arrive The Radio Beacon,3:18,198,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,61,INDIFFERENT,False
+jdfRKqkgGDA,Sun Rise Swell,Santino Surfers,"Copenhagen 2020, Vol. 2",6:18,378,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,62,INDIFFERENT,False
+Byzhrg7oW58,Mahal,Glass Beams,Mahal,3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,63,INDIFFERENT,False
+C0ElqNDOAiA,A New Kind Of Love (pt. 1),Ghost Funk Orchestra,A New Kind Of Love,4:35,275,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,64,INDIFFERENT,False
+JnKhDj3r81A,Oleander (Phutureprimitive Symbiotic Remix),Bluetech,Digital Singles Vol.1,7:36,456,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,66,INDIFFERENT,False
+HQkK8NcVLR0,SLIDECANCEL,Carlos Jr,SLIDECANCEL,1:29,89,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,67,INDIFFERENT,False
+qbfFSXQB-gw,Karaindrou: Eternity and a Day: II. By The Sea,Eleni Karaindrou,Eternity and a Day,1:47,107,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,68,INDIFFERENT,False
+tj9IN4LXtos,El Pueblo,José Méndez,El Pueblo,1:39,99,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,69,INDIFFERENT,False
+8XabjqbkjCs,Germination,"Shpongle, Simon Posford",Flux & Contemplation - Portrait of an Artist in Isolation,2:14,134,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,70,INDIFFERENT,False
+5rOnW3AD1Ww,Soft Summer,Lowtone Music,Soft Summer,1:48,108,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,71,INDIFFERENT,False
+pA4FiJU5weM,Calm Rivers,La Reve,Wings of Glass,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,72,INDIFFERENT,False
+z_gOuPipiT4,Fireflies (feat. Neal Francis),Adrian Quesada,Jaguar Sound,3:24,204,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,73,INDIFFERENT,False
+0u_VXqY-VrE,Noctilune No. 1,Claudio Constantini,Fragile,2:45,165,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,75,INDIFFERENT,False
+VcpnDfAQFJ8,Lebanese Blonde,Thievery Corporation,Mirror Conspiracy,4:49,289,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,76,INDIFFERENT,False
+uYd6YCZtSpg,Chimes,Duponte et Duponte,Chimes,2:44,164,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,77,INDIFFERENT,False
+ikAPCpbK8u0,La Parisienne,"Alexander IV, Feiertag",La Parisienne,3:33,213,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,78,INDIFFERENT,False
+cTFDk3j9r0I,Start Line,Yuki Matsui,Passage of Time,1:31,91,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,79,INDIFFERENT,False
+p4wmAhqaIx4,Urmel,okuma,Urmel / Kalkutta,7:50,470,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,80,LIKE,False
+rsgxEtvgZ-4,Stay Soft,Melodiesinfonie,Stay Soft,3:20,200,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,81,INDIFFERENT,False
+CO8t-l3CdC4,Sweet Instability,Suso Sáiz,Resonant Bodies,3:54,234,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,82,INDIFFERENT,False
+1z_w_9lGdeQ,Sunlit Silhouette,"Harold Budd, John Foxx",Translucence + Drift Music,3:16,196,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,83,INDIFFERENT,False
+hSzmR10T1hs,Hohenbol,Feldgeister,Between Camerae,3:20,200,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,84,INDIFFERENT,False
+5RZr27pjkWc,Aviators,Sun Creatures,Aviators,3:09,189,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,86,INDIFFERENT,False
+5Mcj_YtQhbQ,So Easy,Röyksopp,Melody A.M.,4:10,250,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,87,INDIFFERENT,False
+Ty6DDvQivuw,Classical Cello Solo,Rafael Krux,Classical Cello Solo,1:44,104,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,88,INDIFFERENT,False
+HeQE-OgzgRI,Sylvan Echoes,Jacob LaVallee,Sylvan Echoes,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,89,INDIFFERENT,False
+U0mENXVrQA8,Leaves in the Wind,HATAMITSUNAMI,Leaves in the Wind,2:54,174,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,90,INDIFFERENT,False
+6hUkyKBsGtQ,Paradise Circus (feat. Hope Sandoval),Massive Attack,Heligoland,4:58,298,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,92,INDIFFERENT,False
+7N4_mlT5CtA,Fly,Art Music,Fly,2:20,140,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,93,INDIFFERENT,False
+7KGGweahz3o,Satin Curtains,Molly Lewis,The Forgotten Edge,2:39,159,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,95,INDIFFERENT,False
+Z0TfdZBc7L8,Strange Seed,Emapea,"Seeds, Roots & Fruits",3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,96,LIKE,False
+ZZmXTGysai8,I'm Confessin' (That I Love You),Thelonious Monk,Solo Monk (Expanded Edition),2:38,158,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,97,INDIFFERENT,False
+MmU-xbpK85Y,Dreamcore,Imxone,Dreamcore,1:47,107,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,98,INDIFFERENT,False
+4XHTB2M6H_k,The Forest,Trentemøller,The Trentemøller Chronicles,5:46,346,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,99,INDIFFERENT,False
+k8fv9ZIo3FA,Moewe,Löwenzahnhonig,Moewe,3:39,219,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,102,INDIFFERENT,False
+iRHo9cz2wFc,Nightvision,Daft Punk,Discovery,1:45,105,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,109,INDIFFERENT,False
+gqEtDOWbMB4,La Colombiana,José Méndez,Lejanía,1:08,68,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,110,INDIFFERENT,False
+CJtcWyh_orA,Different Light,"44th Move, Alfa Mist, Richard Spaven",Anthem,1:26,86,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,112,INDIFFERENT,False
+2RNaWOyoquQ,Oro,Opez,Social Limbo,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,115,INDIFFERENT,False
+RKfQT6O2ta0,Another Year,Andrew Gialanella,Another Year,2:08,128,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,118,INDIFFERENT,False
+t4Gyct3jBqM,Midnight Movement,The Olympians,Midnight Movement / The Rain Song,3:29,209,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,123,INDIFFERENT,False
+CVAtWPTiw0Y,Asmarina,"Feqadu Amde-mesqel, Mulatu Astatke",Ethio Jazz,4:59,299,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,124,INDIFFERENT,False
+H_kvg5fV6mw,Maria También,Khruangbin,Con Todo El Mundo,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,125,INDIFFERENT,False
+Sdh6U945PI0,Slow Roll,Tommy Guerrero,Road to Knowhere,3:12,192,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,126,INDIFFERENT,False
+jg2FFAbYUco,A Menina Dança ? #1,Dead Combo,Vol. 2 - Quando a Alma Não é Pequena,2:58,178,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,128,INDIFFERENT,False
+wcV_4lUx144,Waterworks,Bernth,Waterworks,2:03,123,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,129,INDIFFERENT,False
+tt_7P9xsuGM,Air Swim,Arc De Soleil,Underwater Ranch,2:53,173,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,130,INDIFFERENT,False
+0WhrFbBzkjc,Manea,Psyché,Psyché,4:44,284,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,132,INDIFFERENT,False
+5-jnZBr8i04,Olson (Version 3),Boards of Canada,Peel Session,2:32,152,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,134,INDIFFERENT,False
+OQGuKXo6jRk,Altiplano,"Erlend Øye, La Comitiva",Valdivia,3:25,205,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,136,INDIFFERENT,False
+dhrXE9ALSv8,Yo Todo Tu Yo,The Rugged Nuggets,Yo Todo Tu Yo,3:00,180,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,137,INDIFFERENT,False
+TlObLAPJ0_I,Pillars,Bill Laurance,Affinity,4:23,263,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,139,INDIFFERENT,False
+AGgB5EnM9Vc,Little Sparrow,Paul Alan Morris,Little Sparrow,1:35,95,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,141,INDIFFERENT,False
+xUWWz0EFJ1A,Footsteps In The Dark,Karate Boogaloo,KB's Mixtape No. 1,3:41,221,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,142,INDIFFERENT,False
+nAIZlOtfKE0,Umbel,Loscil,Umbel,6:38,398,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,144,INDIFFERENT,False
+Jarhu94B-yM,Sendero del Viento,David Albornoz,Sendero del Viento,1:34,94,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,145,INDIFFERENT,False
+4xsqQwyEm1Y,A Stream With Bright Fish (2005 Digital Remaster),"Brian Eno, Harold Budd",The Pearl,3:57,237,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,146,INDIFFERENT,False
+ge1MmOwL848,Bliss,Ferran Pancho,Bliss,2:33,153,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,147,INDIFFERENT,False
+bBzlV2E3KrE,Menuet,Toshifumi Hinata,Hitotsubu No Umi,1:47,107,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,148,INDIFFERENT,False
+UgLEeINmXBk,Ala Vida,El Michels Affair,Yeti Season (Deluxe Version),3:53,233,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,149,INDIFFERENT,False
+EqDk4xzEuso,"limerence but ur in a magical forest (slowed and reverb, birds, sparkles) ｡⋆ ✧∘* ೃ ⋆｡˚",lily,,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,150,INDIFFERENT,False
+WXyO4-Jbntg,Daze of Flow,HATAMITSUNAMI,Leaves in the Wind,2:56,176,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,151,INDIFFERENT,False
+KupPxov9Fd8,Light Footsteps,Lunng Fern,An Uncommon Bloom,1:59,119,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,152,INDIFFERENT,False
+9yz6eSr1TI8,realization,FutureVille,realization,1:42,102,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,153,INDIFFERENT,False
+hCcQG8EGB5M,Afro Golden Line,Amir Bresler,Afro Golden Line,4:00,240,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,156,INDIFFERENT,False
+hOyx5g-6-7E,My June,The Folks,My June,2:11,131,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,157,INDIFFERENT,False
+H_YQ_HRrldA,Goodnight Mr. Racoon,Santino Surfers,Goodnight Mr. Racoon,4:02,242,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,158,INDIFFERENT,False
+64zp0wtAqj4,Opening Titles,The Sorcerers,In Search of the Lost City of the Monkey God,4:50,290,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,159,INDIFFERENT,False
+TkUwzj-I7_M,People On Sunday,Domenique Dumont,People on Sunday,3:46,226,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,160,INDIFFERENT,False
+98fLD-wGHIo,Day Dream (feat. Marcus Finnie & Nate Clark),Charlie Hunter,AM Clock Radio,4:34,274,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,161,INDIFFERENT,False
+-476mGZVl8I,Orb,Glass Beams,Mahal,4:54,294,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,162,LIKE,False
+iamEJE1cC14,Jungle,Jimi Hendrix,Both Sides of the Sky,3:29,209,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,163,INDIFFERENT,False
+dUbnvxB7WtA,Let Your Body Fly,MAISON ROYALE,Let Your Body Fly,3:25,205,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,164,INDIFFERENT,False
+yIR_rU1pbcU,Prelude to a Soul,Sebastian Plano,Save Me Not,2:47,167,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,165,INDIFFERENT,False
+0i7vySnJOKQ,Fallen Down,Ricky Cheng,Fallen Down,1:07,67,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,166,INDIFFERENT,False
+PSffezqR_XA,Orchestral Intro (feat. sinfonia ViVA),Gorillaz,Plastic Beach,1:10,70,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,167,INDIFFERENT,False
+mzVlT-qkblk,Moon in Reverse,La Luz,News of the Universe,2:01,121,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,168,INDIFFERENT,False
+SyFeI_yxMhs,Como É Grande o Meu Amor por Você - Violão Solo,Israel Albino,Arranjos Populares para Violão Solo Vol. I,2:15,135,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,169,INDIFFERENT,False
+bGoaGYo8-ZI,恋だね - You're in Love,Joe Hisaishi,Howl's Moving Castle Soundtrack,1:12,72,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,170,INDIFFERENT,False
+LIJEmC91inA,Borderlands,Tim Hecker,An Imaginary Country,4:47,287,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,171,INDIFFERENT,False
+sui_6WqFZTk,Parasols,Orgone,Chimera,3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,173,INDIFFERENT,False
+dUzXCkhorog,Temporal,Aukai,Temporal,3:05,185,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,174,INDIFFERENT,False
+fi-DGhHGu1Y,Come Right Back (pt. 2),"Leroi Conroy, Wesley Bright",Come Right Back (pt 1 and pt 2),3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,175,INDIFFERENT,False
+MCwR6R3VhpI,Fly Me To The Moon,John Mendizabal,"A Journey to Classical Guitar, Vol. One",1:45,105,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,176,INDIFFERENT,False
+xUi0mM6-PJ0,"Concerto Grosso for Strings ""Palladio"": No. I, Allegretto","Metamorphose String Orchestra, Pavel Lyubomudrov","Concerto Grosso for Strings ""Palladio"": I. Allegretto",2:34,154,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,177,INDIFFERENT,False
+XqOx9Lx6Wjg,The Fog,Realizer,The Fog,1:30,90,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,178,INDIFFERENT,False
+GEGaUF436cI,La Belle Époque,Brosky TSW,La Belle Époque,1:10,70,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,179,INDIFFERENT,False
+ZTotij07RHc,Recado,Original Paris Swing,Midnight in Paris (Music from the Motion Picture),4:08,248,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,180,INDIFFERENT,False
+3Gq1DJrwEnQ,"Amélie - Comptine d’un autre été, l’après-midi (reimagined)",Andrea Vanzo,"Amélie - Comptine d’un autre été, l’après-midi (reimagined)",3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,181,INDIFFERENT,False
+VI8zhRZn89k,Just Give Me One More Day,Alej,Just Give Me One More Day,2:12,132,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,182,INDIFFERENT,False
+q_WH6lHZVMg,A Whole New Way of Looking At the Day,Abakus,That Much Closer to the Sun,3:33,213,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,183,INDIFFERENT,False
+e3n4fRYTc94,Any Colour You Like,Pink Floyd,The Dark Side of the Moon,3:27,207,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,184,INDIFFERENT,False
+5CG72ouw3j0,Laszlo (feat. The Vernon Spring),Ideophone,Laszlo,4:20,260,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,185,INDIFFERENT,False
+oLLZgTV3bHw,In Lust,BALTHVS,Cause & Effect,3:14,194,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,186,INDIFFERENT,False
+I6PsdPYBpyk,Bean,Orions Belte,Bean,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,187,INDIFFERENT,False
+xlyeGkDlgKM,Main Theme from 'Succession',L'Orchestra Nazionale di Mendoni & Michele Mariotti,Main Theme from 'Succession',1:54,114,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,188,INDIFFERENT,False
+qGVMBirxwWc,Forest Lake Walk,No Spirit,Reminiscing,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,189,INDIFFERENT,False
+eKO0BOAXw70,Hiking,Elgafar,Hiking,1:44,104,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,190,INDIFFERENT,False
+2DXSAv-yjCk,Road Song,Ikebe Shakedown,The Beast / Road Song,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,192,INDIFFERENT,False
+4i5sgYI14Jg,Prelude,Jordi Savall,Les Voix Humaines,2:44,164,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,193,INDIFFERENT,False
+i7f67CcgWi8,From Home,Vivian Roost,From Home,3:23,203,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,194,INDIFFERENT,False
+4uMfiO2N1mk,Beautiful,"Ben Böhmer, Malou",Beautiful,3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,195,INDIFFERENT,False
+n4rldQkOutY,"Sibelius: 13 Pieces for Piano, Op. 76: No. 2, Etude (Arr. Sandquist for Cello & Piano)","Göran Söllscher, Jean Sibelius, Jian Wang",Reverie,2:49,169,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,196,INDIFFERENT,False
+_8I4Dki8KC4,Dust Bunny,Ryan James Carr,Electric Glow,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,197,INDIFFERENT,False
+gfL-AuNCtVk,Cast in Lemon & Sand,Heathered Pearls,Body Complex,1:45,105,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,198,INDIFFERENT,False
+MWoe2wgYidg,Valentine,Justice,Cross,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,200,INDIFFERENT,False
+j4ZSIlp261g,Baia do Sol,José Méndez,Baia do Sol,1:41,101,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,213,INDIFFERENT,False
+5uKc4C9T5ZQ,Starry Nights (feat. Neal Francis),Adrian Quesada,Jaguar Sound,3:26,206,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,225,LIKE,False
+iGjUdw0XEhQ,Lesser Heaven,"Brian Eno, Jon Hopkins, Leo Abrahams",Small Craft On A Milk Sea,3:21,201,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,228,INDIFFERENT,False
+OsR87w8eT6w,A Mother's Love,Gabriel Latchin Trio,A Mother's Love,4:56,296,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,236,INDIFFERENT,False
+H0ZpXSf3C0Y,Broken,Robohands,Green,4:23,263,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,247,INDIFFERENT,False
+JDqjkIVgcr8,Unite (Origin 2007) (2022 Remaster),Solar Fields,Origin # 01 (2022 Remaster),9:24,564,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,249,INDIFFERENT,False
+551zeteeYHA,"Vivaldi: L'estro armonico, Violin Concerto in A Minor, RV 356, Op. 3 No. 6: III. Presto","Antonio Vivaldi, Simon Standage, The English Concert, Trevor Pinnock",Vivaldi: L'estro armonico Op.3,2:23,143,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,251,INDIFFERENT,False
+x8kMzAmfNEk,Haul (Radio Edit) (feat. Mohna),Christian Löffler,Haul,3:38,218,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,255,INDIFFERENT,False
+RhAUL-uQTCs,tiredminds - how to never stop being sad (instrumental) [slowed + reverb],tiredminds,,3:16,196,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,257,INDIFFERENT,False
+2SvTeJrAlV0,Turquoise Hexagon Sun,Boards of Canada,Music Has The Right To Children,5:08,308,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,259,INDIFFERENT,False
+jcJPq0OaBoA,Que Diablos,Sullivan Fortner,Que Diablos,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,261,INDIFFERENT,False
+gD68IWwJOi4,Keep Breathing,Smoky,It Sounds a Bit Like Heaven,3:02,182,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,262,INDIFFERENT,False
+7E_bYFk5h7g,Nocturne P 2 No. 8 in C minor,Serkmusic,Chopin Nocturne Album,3:10,190,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,265,INDIFFERENT,False
+NyguMxVh6z0,Outside In,We Dream of Eden,Innerspace,3:09,189,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,267,INDIFFERENT,False
+6jdKMs3zgnQ,Take Me Into Your Skin,Trentemøller,The Last Resort,7:31,451,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,271,INDIFFERENT,False
+DVDiOMoW0wU,A Dream,Flatsound,"Somewhere in the Distance, Somewhere Toward the Mountains",2:51,171,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,274,INDIFFERENT,False
+UDvfDy_I4vM,3 am walk,daniel.mp3,3 am walk,3:03,183,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,276,INDIFFERENT,False
+3Tb0NWTVtqE,Butterflies (Piano Sonata),Tony Anderson,Butterflies (Snowfall Remixes),4:00,240,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,279,INDIFFERENT,False
+mfEn-6FtQ8E,Tune Down,Chris Joss,Sticks,4:41,281,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,281,LIKE,False
+sWcLccMuCA8,Xtal,Aphex Twin,Selected Ambient Works 85-92,4:54,294,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,284,INDIFFERENT,False
+Ijx6qgW_-ZM,Forms,Cardamom,Forms,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,287,INDIFFERENT,False
+ixz2lx0kenQ,Irreplaceable,Chad Lawson,Irreplaceable,4:28,268,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,288,INDIFFERENT,False
+5nAa_jVbg9w,Can't Help It,Shtriker Big Band,Shtriker Big Band,2:24,144,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,290,INDIFFERENT,False
+euQ9NiXKIZ8,not ready to let go,GAKHED,not ready to let go,1:57,117,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,294,INDIFFERENT,False
+R4RgrkzBH-U,Rudeboy Riddim,Stick Figure,Free Flow Sessions,2:16,136,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,296,INDIFFERENT,False
+z42Up1OIxUQ,In Motion,Ann Annie,Wander Into,3:58,238,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,297,INDIFFERENT,False
+bgsmr7t8zGE,15 Step,Radiohead,In Rainbows,3:58,238,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,298,INDIFFERENT,False
+hXDxDNhe8Qs,Declarations,Heartbeat Sirens,Thoughts in a Chest,3:33,213,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,300,INDIFFERENT,False
+YavwEs9KCqc,Agua Morena (feat. Tommy Guerrero & Josh Lippi),Los Days,Singing Sands,2:52,172,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,305,INDIFFERENT,False
+MPOdHqynJ8I,Anther,Offthewally,Pollination,2:58,178,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,307,INDIFFERENT,False
+d2-0JfJl4pA,time off,Sebastian Jautschus,time off,2:53,173,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,308,INDIFFERENT,False
+SWh6FEq6hQk,Follow the Sun (Reimagined Instrumental),Gizmo Varillas,Follow the Sun (Reimagined),3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,309,INDIFFERENT,False
+I11HC7m0iXQ,La grande cascade,René Aubry,Plaisirs d'amour,4:29,269,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,315,INDIFFERENT,False
+3h-JYx76QNM,Teardrop (feat. Elizabeth Fraser),Massive Attack,Mezzanine,5:31,331,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,321,INDIFFERENT,False
+W76Tf2OJrWE,Dusk Gale,Loscil,Umbel,7:36,456,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,325,INDIFFERENT,False
+N8l8sqvmFiw,Long Gone,Emancipator,Dusk to Dawn (Deluxe Anniversary Edition),5:52,352,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,331,INDIFFERENT,False
+QqqYVMlsBns,True North,Chequerboard,Souvenir,5:10,310,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,336,LIKE,False
+cqxLnjRYqXs,Serenidade,Vincenzo Crimaco,Serenidade,3:08,188,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,351,INDIFFERENT,False
+yMiIrAxQhFA,Goth,Sidewalks and Skeletons,White Light,3:28,208,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,368,INDIFFERENT,False
+UPa7BUF8btU,Prelude II,Jordi Savall,Les Voix Humaines,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,374,INDIFFERENT,False
+5HzZ3zMLQHI,Phase 09 - Sombrero (2021 Remaster),Solar Fields,Until We Meet The Sky (2021 Remaster),5:44,344,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,376,INDIFFERENT,False
+eRaddYhTpcU,Rainy Day Lady,Menahan Street Band,The Exciting Sounds of Menahan Street Band,3:19,199,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,386,INDIFFERENT,False
+FpQp6xK1ER8,Ineffable,Hammock,Ineffable,3:02,182,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,391,INDIFFERENT,False
+P1u9vSnMf2c,Dreamer,Kiefer,Dreamer,4:38,278,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,3,395,INDIFFERENT,False
+nB2ibgPnb4c,let me show you,kintsugi,let me show you,4:22,262,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,398,INDIFFERENT,False
+NQnMAyzn5Hs,Close to the Morning,Aukai,Close to the Morning,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,400,INDIFFERENT,False
+lQditr-GdEw,Until We Meet Again,Hermanos Gutiérrez,Sonido Cósmico,3:02,182,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,3,402,LIKE,False
+bHhet-GCZzw,Live Jam in Polynesia,Arc De Soleil,Libertalia,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,408,INDIFFERENT,False
+22KjxF3T2Vc,Interpreters of Forest,Minami Deutsch,Fortune Goodies,5:10,310,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,409,INDIFFERENT,False
+F-OeFm6y384,Tired of Fighting,Menahan Street Band,Make the Road By Walking,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,413,INDIFFERENT,False
+5F95d7Eu_ic,Into the Night,Offthewally,Pollination,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,414,INDIFFERENT,False
+HXPU0t2mBHw,Horizon (Japan CD),Daft Punk,Random Access Memories (10th Anniversary Edition),4:23,263,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,418,INDIFFERENT,False
+13TFBHPcPrg,Blue Nile,Mulatu Astatke / The Heliocentrics,Inspiration Information 3,3:13,193,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,419,INDIFFERENT,False
+PO9bcVTbRcg,Miss You,Trentemøller,The Last Resort,4:08,248,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,424,INDIFFERENT,False
+oIdNLsttpbQ,Donna Lira,Opez,Social Limbo,3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,425,INDIFFERENT,False
+5PBuGYsyQs8,The Queen Of All Everything,Ott,Skylon,7:53,473,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,426,INDIFFERENT,False
+8YjBWbeZPCM,One And The Same (Instrumental),"Julien Marchal, Lissom, Lowswimmer",One And The Same,2:58,178,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,427,INDIFFERENT,False
+xMV6l2y67rk,Intro,The xx,xx,2:08,128,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,429,INDIFFERENT,False
+Ciap0srNiiU,Poinciana,Cal Tjader,Breeze From The East,3:27,207,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,431,INDIFFERENT,False
+e-3z40QzJT0,The French Library,Franz Gordon,The French Library,3:00,180,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,432,INDIFFERENT,False
+quQ479xMNfs,Flesh and Soul,BALTHVS,Flesh and Soul,3:33,213,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,433,INDIFFERENT,False
+5xIr4rEFhek,Thou Swell,Horace Silver,Horace Silver Trio,2:53,173,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,435,INDIFFERENT,False
+h4VZBxBBLZE,"Paris, Texas (feat. SYML)",Lana Del Rey,Did you know that there's a tunnel under Ocean Blvd,3:27,207,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,437,INDIFFERENT,False
+mmK71ZfaZO4,Agape,Nicholas Britell,If Beale Street Could Talk (Original Motion Picture Score),2:56,176,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,438,INDIFFERENT,False
+DRCzH-3i7X0,Juan's World,BADBADNOTGOOD,Mid Spiral: Order,4:24,264,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,440,INDIFFERENT,False
+0QkImfX0ZhY,Sol,Alef,Sol y Luna,6:41,401,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,441,INDIFFERENT,False
+1gXWcKYcrWI,The smell of darkness,Chihei Hatakeyama,Afterimage,4:27,267,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,442,INDIFFERENT,False
+LFE7JeF56SY,Dying Alone,Hammock,Dying Alone,3:55,235,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,444,INDIFFERENT,False
+Ln1BFG_0skQ,Sonny's Applause,Dojo Cuts,"Dojo Cuts Instrumentals, Vol. 2",3:24,204,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,445,INDIFFERENT,False
+NJLs-4J5ZYk,Visions of Gideon,Sufjan Stevens,Call Me By Your Name (Original Motion Picture Soundtrack),4:08,248,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,446,INDIFFERENT,False
+wlc7cikBpg4,Exchange,Massive Attack,Mezzanine,4:12,252,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,448,INDIFFERENT,False
+4HCRb5EwJvU,Tranquil Encounter,Astron,Little Moments & Tranquil Encounter,4:19,259,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,451,INDIFFERENT,False
+JQ3Vbhj40IQ,DG on the Keys,Adrian Quesada,Jaguar Sound,3:55,235,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,453,INDIFFERENT,False
+X9PBCSlhaY4,Van Gogh,"Virginio Aiello, on piano",Van Gogh,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,454,INDIFFERENT,False
+Ryyz8KK-Yk4,dream river. (Async Ross rework),Woodsman,dream river. (Async Ross reworks),3:15,195,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,455,INDIFFERENT,False
+B5u_DV1_NM0,green to blue (slowed + reverbed),daniel.mp3,green to blue (slowed + reverbed),3:08,188,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,456,INDIFFERENT,False
+Qk6BEu2pAV4,Misty,Beegie Adair,Moments To Remember,3:26,206,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,457,INDIFFERENT,False
+6W5Ik21dCUc,Tangerine Sour,"9 Theory, Emancipator",Tangerine Sour,4:14,254,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,458,INDIFFERENT,False
+RpBhAT5lTsc,All This And Heaven Too,Jackie Gleason,Jackie Gleason Presents Rebound,2:32,152,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,459,INDIFFERENT,False
+90lYz0hT7ss,Afternoon Memories,Lavaros,Afternoon Memories,2:56,176,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,461,INDIFFERENT,False
+2S8c09C6J7Q,Via,Jason Fervento,Via,2:58,178,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,464,INDIFFERENT,False
+CqGpOqh9AIA,Dead Mans Blues,Roy Williams,American Shuffle,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,465,INDIFFERENT,False
+AS1R1_QeQmE,Fish,Amir Bresler,Afro Golden Line,4:46,286,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,466,INDIFFERENT,False
+OqI6s4mTdLU,CHASING LIGHT,"Moses Yoofee Trio, Noah Fürbringer, Moses Yoofee, cowboyklobe",CHASING LIGHT / ZERO,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,467,INDIFFERENT,False
+qZF1eXsuznA,Sylvia,Arthur Verocai,Arthur Verocai,3:04,184,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,3,469,INDIFFERENT,False
+7WGceI3-bjQ,A Higher Place,Röyksopp,Melody A.M.,4:32,272,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,471,INDIFFERENT,False
+mLlwp1aB8Eo,Naima,John Coltrane,Giant Steps,4:19,259,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,474,INDIFFERENT,False
+NMxi6yAajnE,A View to a Kill,L'Impératrice,Sonate Pacifique,5:14,314,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,477,INDIFFERENT,False
+5IHq3s7y71c,Silver Moon Over Sleeping Steeples,David Sylvian,Gone To Earth (Remastered 2003),2:22,142,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,478,INDIFFERENT,False
+uzcSJ4nAQ3k,some light,airshade,floating,1:52,112,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,480,INDIFFERENT,False
+iqr3khMncqM,Idea 25,"Andrea Vanzo, Gibran Alcocer",Idea 25,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,482,INDIFFERENT,False
+rRrlyjL-Ib0,Zeldas Lullaby Count Me Out Medley,"4zy, lorche",Zeldas Lullaby Count Me Out Medley,2:39,159,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,486,INDIFFERENT,False
+AJdTBPuZkHU,Yume Utsutsu,Lamp,Lamp Genso,5:16,316,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,488,INDIFFERENT,False
+WUQ2xMC1d2s,Ongoing,Joseph Martins,Leaf Warbler,3:40,220,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,492,INDIFFERENT,False
+Gxbwc1VfgYU,it's_cold_here,Star,it's_cold_here,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,493,INDIFFERENT,False
+sNIfnhL7Jrs,Pawky,Dorothy Ashby,Hip Harp (Japan),7:06,426,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,494,INDIFFERENT,False
+ePbX2QlYj5Q,Houston,Allah-Las,LAHS,2:14,134,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,496,INDIFFERENT,False
+7L0a-wtI9lw,"Jazz, Vol. 1",Seb Wildblood,"Jazz, Vol. 1",6:38,398,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,499,INDIFFERENT,False
+6KU9wxyWgfE,Kaepora Gaebora,Super Guitar Bros,Ocarina of Time,1:35,95,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,15,INDIFFERENT,False
+e-qMhYPPDSw,Fire,Thomas Naïm,Sounds of Jimi,3:37,217,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,35,INDIFFERENT,False
+BCdWFT_2-Gc,Iris,Forhill,Outlines,4:06,246,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,49,INDIFFERENT,False
+4dBFyx_XsqM,Pyramid Blue,Richard Houghten,Sailing Through Rainbows of Sound,3:58,238,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,60,INDIFFERENT,False
+8btHvnL9AWk,First day of winter,Library Tapes,Sketches,2:54,174,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,85,INDIFFERENT,False
+wvIi5nzu__I,Mascaram Setaba,Mulatu Astatke,New York - Addis - London: The Story of Ethio Jazz 1965-1975,1:51,111,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,91,INDIFFERENT,False
+gQLgfL54PhE,Wildwood Flower,"David Grisman, Tony Rice",Tone Poems,2:49,169,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,94,INDIFFERENT,False
+PhRm-oVm0_Y,Close (Luke Howard Rework),Ed Carlsen,The Journey Tapes (Reworked),3:39,219,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,100,INDIFFERENT,False
+YZNTGPnffx4,Title,Super Guitar Bros,Ocarina of Time,1:29,89,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,101,INDIFFERENT,False
+rSMH8xQijfk,Sonora,Hermanos Gutiérrez,Hijos Del Sol,1:04,64,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,103,INDIFFERENT,False
+al3Y5mOO9dA,El Águila,Siem Herstel,Los Picos,2:06,126,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,104,INDIFFERENT,False
+4b9Nqn4HqZk,Breathe,Skinshape,Filoxiny,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,105,LIKE,False
+5gArpb3m4YI,El Dorado,Gizmo Varillas,El Dorado,1:56,116,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,106,INDIFFERENT,False
+6NDloNQCVr4,Saffron Silence,Alexandr Bylkin,Safron Silence,2:34,154,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,107,INDIFFERENT,False
+T5IQ0D7nM3Y,Lungomare,René Aubry,Plaisirs d'amour,2:19,139,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,108,INDIFFERENT,False
+4FPy7rcifH8,Bark at the Moon,Tellsonic,Desert Moon Serenade,2:25,145,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,111,INDIFFERENT,False
+O4Uuaih7twQ,Cita,Diabi,Cita,2:44,164,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,113,INDIFFERENT,False
+sq-WkgefGNI,Nothing Lost,Coyote Island,Shadow Magic,2:36,156,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,114,INDIFFERENT,False
+26Lqfoi-2m4,Palm Breeze,Offthewally,Pollination,2:21,141,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,116,INDIFFERENT,False
+tnPIZMyC_VY,Affirmation,OMA,Lofi,1:23,83,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,117,INDIFFERENT,False
+1V9WOxtNBOM,Just Woke Up Here,Richard Houghten,Quantum Flow,2:29,149,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,119,INDIFFERENT,False
+rrfbZ3Qd6l0,Selenge,Céline Dessberg,Selenge,3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,121,INDIFFERENT,False
+gBPENEn9Kng,Vertebra,"David Bergmüller, Janus Rasmussen",Wirbel,3:34,214,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,127,INDIFFERENT,False
+L-DrEV4ZBSg,Café Tropical,LA LOM,La Lom,3:53,233,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,133,INDIFFERENT,False
+QoA-Iy2theg,Instants,Skúli Sverrisson,Sería II,2:31,151,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,135,INDIFFERENT,False
+lo_Gm5u93Aw,Koyo,Chequerboard,Souvenir,4:08,248,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,138,INDIFFERENT,False
+Xa-2g3Bo0pU,Sunset in the Desert,The Pilgrim,Walking into the Forest,1:25,85,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,140,INDIFFERENT,False
+JcxpUXDJcaE,Koda,Emancipator,Koda,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,143,INDIFFERENT,False
+Fz6vJ8QF7x8,Checo Y Moi,Yuuf,In The Sun,4:37,277,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,154,INDIFFERENT,False
+2ryZQn-99l0,Clouds,Connor Elgie,Clouds,3:45,225,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,155,INDIFFERENT,False
+5k6kSGARd8s,Time Is the Enemy,Quantic,The 5th Exotic,3:42,222,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,172,INDIFFERENT,False
+mv3SSGzD43k,Rain Quail,Dust Follows,Condor,3:09,189,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,201,INDIFFERENT,False
+5kaqGWCC6to,Thunderbird,Hermanos Gutiérrez,El Bueno Y El Malo,3:28,208,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,207,INDIFFERENT,False
+vuihuO4Ay8I,White Gloves,Khruangbin,The Universe Smiles Upon You,3:39,219,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,211,INDIFFERENT,False
+83boEyOO-pY,snowfield,".diedlonely, Blut Own",snowfield,3:08,188,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,243,INDIFFERENT,False
+uC5DRLeFcPM,Mental Breakdown,Yonder Mountain String Band,Elevation,2:58,178,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,245,INDIFFERENT,False
+DHNYkoORVeI,Hypnotica (Radio-Edit),"Lynnic, Neil Richter",Hypnotica,3:13,193,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,254,INDIFFERENT,False
+KRwfEjgOVjM,Terra Recipe,Minami Deutsch,Minami Deutsch,3:51,231,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,264,INDIFFERENT,False
+C4SyxvOiQjY,"Folia: Rodrigo Martinez, 1490 - Improvisations D'Après Le Villancico Du CMP (Anonyme)",Jordi Savall,La Folia,5:37,337,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,272,INDIFFERENT,False
+Qy9LTRu89FA,My Love Mine All Mine,Mitski,The Land Is Inhospitable and So Are We,2:18,138,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,291,INDIFFERENT,False
+fXCs_wbIYFY,Veredis Quo,Daft Punk,BiPolar - Digital vs. Analog,3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,319,INDIFFERENT,False
+_QR_PBR5i4Y,Evil Dub,Trentemøller,The Last Resort,6:07,367,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,342,INDIFFERENT,False
+ZPsRj20nuuA,"Fauna, Pt I",Gidge,Autumn Bells,3:34,214,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,392,INDIFFERENT,False
+MOH_oY5wX10,HAPUNA SUNSET  Charles Michael Brotman,Charles Michael Brotman,Slack Key Guitar,3:51,231,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,393,INDIFFERENT,False
+YAtV3BDRu5Y,Recurring Dream,Innesti,In Letters,4:14,254,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,396,INDIFFERENT,False
+fGf7q3qCsFQ,River (Anna Phoebe Rework),Balladeste & Anna Phoebe,Beyond Breath Rework EP,3:25,205,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,397,INDIFFERENT,False
+hNb1Nu5Mvwo,Nobody Knows,Skinshape,Craterellus Tubaeformis,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,401,INDIFFERENT,False
+NTjlFp9sJ28,Lon Lon Ranch,Super Guitar Bros,Ocarina of Time,1:46,106,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,403,INDIFFERENT,False
+H08UZ2_avpk,Salento,René Aubry,Plaisirs d'amour,5:46,346,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,412,INDIFFERENT,False
+4H_9Fmyybrs,Occuring Birds,Silent Remedies,Occuring Birds,3:44,224,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,416,INDIFFERENT,False
+sacRodHtf04,Doing the Wrong Thing,Kaki King,Legs to Make us Longer,5:05,305,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,422,INDIFFERENT,False
+xc7atbM0k6g,Poa Alpina,Biosphere,Substrata + Man with a Movie Camera,4:12,252,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,428,INDIFFERENT,False
+sEZ0NwOdGIc,In Your Arms,Vontmer,Home Is You,3:48,228,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,434,INDIFFERENT,False
+93n0chXrpuY,No More Time,Dylan John Sparkes,No More Time,3:46,226,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,447,INDIFFERENT,False
+NXdnBHXLDfQ,Go Home,h hunt,Playing Piano for Dad,3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,449,INDIFFERENT,False
+Sxp0Br5E2AU,Mountains and Peace,Sea of Waves,Blue Sphere,3:02,182,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,460,INDIFFERENT,False
+80LhtHY_fHw,Time,Pink Floyd,The Dark Side of the Moon,6:54,414,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,462,INDIFFERENT,False
+ktYDXGIpzEE,When Darkness Comes,E-Mantra,Expedition Frozen Taiga,6:12,372,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,470,INDIFFERENT,False
+58f6Q52v0bI,Ozerba Nights,Turu Anasi,Ozerba Nights,8:07,487,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,472,LIKE,False
+pJxl6BITXSY,Wash Away The Dust,Billow Observatory,Stareside,4:35,275,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,473,INDIFFERENT,False
+yBoCGqCqqYc,Tear Away,Pechblende,Solstice,6:04,364,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,475,INDIFFERENT,False
+Juz1g3gAOug,Riders On The Storm,Marcin Wasilewski Trio,En attendant,5:34,334,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,483,INDIFFERENT,False
+DZR2W0BNfcQ,Once in a Long Time,Joey Pecoraro,Once in a Long Time,3:23,203,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,487,INDIFFERENT,False
+1k5-tNlsg08,Coast 2 Coast,Harvey Sutherland,Expectations,7:10,430,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,490,INDIFFERENT,False
+MfmT776tflM,The Prelude To,Lawrence English,A Colour For Autumn,2:17,137,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,491,INDIFFERENT,False
+rQE2L-L5l7E,Lotus Flower (Jacques Greene Rmx),Radiohead,TKOL RMX 1234567,7:10,430,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,498,INDIFFERENT,False
+z-7YjIkEKKg,Bettina,"Skinshape, The Horus All Stars",Skinshape X Horus,3:44,224,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,8,LIKE,False
+kYv66mvecI0,Sunrise Prelude,Daft Punk,TRON: Legacy - The Complete Edition (Original Motion Picture Soundtrack),2:52,172,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,65,INDIFFERENT,False
+NDxQTrhI0Jc,Farolim de Felgueiras,Khruangbin,A LA SALA,2:01,121,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,74,INDIFFERENT,False
+JIIZTiSUXqQ,Safe From Harm (Just A Dub) (feat. Shara Nelson),Massive Attack,Safe From Harm,3:16,196,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,120,LIKE,False
+q8X5cqkVdDs,you left me on suicide sunday (Slowed + Reverb),thenian,you left me on suicide sunday (Remixes),3:19,199,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,122,INDIFFERENT,False
+DdvDijTWT4M,delayed take off,Sebastian Jautschus,delayed take off,2:52,172,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,131,INDIFFERENT,False
+hG5GgRnLyhI,Sansevieria,Green-House,Six Songs for Invisible Gardens,4:25,265,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,191,LIKE,True
+nZFvL3LHkfw,Beyond The Reef,Teresa Bright,Tropic Rhapsody,3:23,203,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,199,INDIFFERENT,False
+mqgEYRtWMJU,"The Son of Flynn (From ""TRON: Legacy""/Score)",Daft Punk,TRON: Legacy,1:36,96,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,227,INDIFFERENT,False
+lm9BbFaFXPk,Charlie,loscil,Plume,8:50,530,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,238,LIKE,False
+FGzhdlO0-rY,Chimney Swifts,Brad Kolodner,Chimney Swifts,3:47,227,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,252,LIKE,False
+R0ZmQ7x9s4w,Fading into Purple,Richard Houghten,Fading into Purple,2:58,178,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,405,INDIFFERENT,False
+KKjqlp1YEHc,Tone of The Blade,Tommy Guerrero,Tone of the Blade,3:27,207,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,410,INDIFFERENT,False
+nY1gfVP-00I,Cyme,Loscil,Umbel,7:26,446,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,415,INDIFFERENT,False
+g0WMddJVRD0,Ghost Voice (Origin 2011),Solar Fields,Origin # 04,5:59,359,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,439,INDIFFERENT,False
+i0IfxqYBUHs,Supernova,Common Saints,Equinox,3:18,198,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,481,INDIFFERENT,False
+p5XnJElFXcg,Nell'altra stanza,Andrea Rellini,Motus,2:30,150,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,485,INDIFFERENT,False
+Fq8lS-mSeoY,Fragment II,Library Tapes,Fragment,4:01,241,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,489,INDIFFERENT,False
+N3G7JPTVVEQ,Tha,Aphex Twin,Selected Ambient Works 85-92,9:08,548,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,495,INDIFFERENT,False
+NVBsK6u3X0E,Molecule 5,Alex Theory,Water,5:26,326,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,500,INDIFFERENT,False
 _MGo4X68xJA,El Fantasma,Hermanos Gutiérrez,Sonido Cósmico,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,13,INDIFFERENT,False
-1rTNWzuTeBQ,Time To Rebuild,The Sure Fire Soul Ensemble,Step Down,3:03,183,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,14,INDIFFERENT,False
 bQGywibsQGU,Cultivation,Offthewally,Cultivation,3:23,203,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,15,INDIFFERENT,False
-WXyO4-Jbntg,Daze of Flow,HATAMITSUNAMI,Leaves in the Wind,2:56,176,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,16,INDIFFERENT,False
-h3lj2-J2Ze0,My October,The Folks,My October,2:05,125,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,17,INDIFFERENT,False
-fL9s3jgo7Pg,Wait A Minute / Praying For A Jeepbeat (Smokers Delight Original Version),Nightmares On Wax,Smokers Delight,2:45,165,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,18,INDIFFERENT,False
-Z0TfdZBc7L8,Strange Seed,Emapea,"Seeds, Roots & Fruits",3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,20,LIKE,False
 6efh-dhz05w,Two Fish and an Elephant,Khruangbin,The Universe Smiles Upon You,3:34,214,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,21,INDIFFERENT,False
-cILn2-o56d0,Rainbow Delay,Richard Houghten,Rainbow Delay,3:12,192,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,22,INDIFFERENT,False
-2DXSAv-yjCk,Road Song,Ikebe Shakedown,The Beast / Road Song,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,24,INDIFFERENT,False
-6F7VMcPs6r4,Sheik,Super Guitar Bros,Ocarina of Time,1:23,83,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,25,INDIFFERENT,False
-oj8glZ0IrIY,Rugged Walk,The Rugged Nuggets,Rugged Walk,2:58,178,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,26,INDIFFERENT,False
-Sz9d01L8X5U,El Camino de Mallorca,Luca Stavos,El Camino de Mallorca,2:20,140,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,27,INDIFFERENT,False
-rsgxEtvgZ-4,Stay Soft,Melodiesinfonie,Stay Soft,3:20,200,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,28,INDIFFERENT,False
 bjWlLpe6Qeo,Endless Fragments of Time,Deep Watch,Endless Fragments of Time,3:36,216,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,29,INDIFFERENT,False
-XqOx9Lx6Wjg,The Fog,Realizer,The Fog,1:30,90,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,30,INDIFFERENT,False
-Byzhrg7oW58,Mahal,Glass Beams,Mahal,3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,31,INDIFFERENT,False
-alUNFofyIHg,Basilisk,Orgone,Basilisk,4:30,270,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,32,LIKE,False
-dUbnvxB7WtA,Let Your Body Fly,MAISON ROYALE,Let Your Body Fly,3:25,205,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,33,INDIFFERENT,False
-0i7vySnJOKQ,Fallen Down,Ricky Cheng,Fallen Down,1:07,67,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,34,INDIFFERENT,False
-4i5sgYI14Jg,Prelude,Jordi Savall,Les Voix Humaines,2:44,164,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,36,INDIFFERENT,False
-CJtcWyh_orA,Different Light,"44th Move, Alfa Mist, Richard Spaven",Anthem,1:26,86,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,37,INDIFFERENT,False
-thFRjY9al4w,Minor Blues,Joscho Stephan,Django Forever,3:14,194,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,38,INDIFFERENT,False
-0pHR4_cyIuA,Bleached,Video Days,sungazing,1:24,84,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,39,INDIFFERENT,False
-Fa_ovff8r-w,Frigate Bay,Dana and Alden,"Coyote, You're My Star",3:38,218,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,40,INDIFFERENT,False
 aZPOUq9-11w,Aces,Delvon Lamarr Organ Trio,I Told You So,4:42,282,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,41,INDIFFERENT,False
-Jarhu94B-yM,Sendero del Viento,David Albornoz,Sendero del Viento,1:34,94,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,42,INDIFFERENT,False
-_8I4Dki8KC4,Dust Bunny,Ryan James Carr,Electric Glow,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,44,INDIFFERENT,False
-bBzlV2E3KrE,Menuet,Toshifumi Hinata,Hitotsubu No Umi,1:47,107,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,45,INDIFFERENT,False
-DNrfL6hs0yQ,Stopover Bombay (feat. Pharoah Sanders),Alice Coltrane,Journey in Satchidananda,2:53,173,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,46,INDIFFERENT,False
-C0ElqNDOAiA,A New Kind Of Love (pt. 1),Ghost Funk Orchestra,A New Kind Of Love,4:35,275,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,47,INDIFFERENT,False
-seyuHkQsquo,Tiger Trot,Leroi Conroy,Tiger Trot,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,48,INDIFFERENT,False
-X6IW-YSJ_z0,"Locatelli: Violin Concerto in G Minor, Op. 3 No. 6: IIIa. Vivace","Elizabeth Wallfisch, Nicholas Kraemer, Pietro Locatelli, Raglan Baroque Players","Locatelli: L'Arte del Violino – 12 Concertos, Op. 3",2:59,179,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,49,INDIFFERENT,False
-tj9IN4LXtos,El Pueblo,José Méndez,El Pueblo,1:39,99,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,50,INDIFFERENT,False
 C4Ydhlp8hz4,LUCID DREAMER,The Comet Is Coming,Hyper-Dimensional Expansion Beam,3:30,210,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,53,INDIFFERENT,False
-RKfQT6O2ta0,Another Year,Andrew Gialanella,Another Year,2:08,128,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,55,INDIFFERENT,False
-5HzZ3zMLQHI,Phase 09 - Sombrero (2021 Remaster),Solar Fields,Until We Meet The Sky (2021 Remaster),5:44,344,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,56,INDIFFERENT,False
--lLf6zTGBOg,Just A Simple Thing,HomeGrown Ed,Acoustic Guitar Tales,2:02,122,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,58,INDIFFERENT,False
-6izGOqVKnXY,Slippery Eel (feat. Chris Thile & Billy Strings),Béla Fleck,My Bluegrass Heart,4:24,264,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,59,INDIFFERENT,False
-oIdNLsttpbQ,Donna Lira,Opez,Social Limbo,3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,60,INDIFFERENT,False
-JzYI-_hLguE,Glass: Études: No. 6,"Philip Glass, Yuja Wang",Glass: Études: No. 6,2:47,167,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,61,INDIFFERENT,False
-qbfFSXQB-gw,Karaindrou: Eternity and a Day: II. By The Sea,Eleni Karaindrou,Eternity and a Day,1:47,107,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,62,INDIFFERENT,False
-RpBhAT5lTsc,All This And Heaven Too,Jackie Gleason,Jackie Gleason Presents Rebound,2:32,152,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,63,INDIFFERENT,False
-1mcx9OdEZXo,Tillbaka,Stilhed,Tillbaka,2:04,124,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,64,INDIFFERENT,False
-Mu95lNZpyaM,To The Moon,"King Canyon, Otis McDonald, Eric Krasno, and Mike Chiavaro",King Canyon,3:43,223,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,65,INDIFFERENT,False
-CO8t-l3CdC4,Sweet Instability,Suso Sáiz,Resonant Bodies,3:54,234,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,66,INDIFFERENT,False
-qGVMBirxwWc,Forest Lake Walk,No Spirit,Reminiscing,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,67,INDIFFERENT,False
-oLLZgTV3bHw,In Lust,BALTHVS,Cause & Effect,3:14,194,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,68,INDIFFERENT,False
-YafP9rG7Ews,Sétima Regra,BADBADNOTGOOD,Mid Spiral: Order,5:32,332,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,69,INDIFFERENT,False
-SQQ5yo9NSus,Nocturno de Moriana,Lucas Brar,Nocturno de Moriana,3:21,201,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,70,INDIFFERENT,False
-8ZNucRs1hf8,Denna,Finnegan Tui,"Lost Tales, Vol. 1",3:31,211,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,71,INDIFFERENT,False
-uYd6YCZtSpg,Chimes,Duponte et Duponte,Chimes,2:44,164,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,72,INDIFFERENT,False
-hE0jTTPQl-U,"Beethoven: String Quartet No. 14 in C-Sharp Minor, Op. 131: 6. Adagio quasi un poco andante","Lindsay String Quartet, Ludwig van Beethoven","Beethoven: String Quartet in C-Sharp Minor, Op. 131 (Lindsay String Quartet: The Complete Beethoven String Quartets Vol. 9)",2:22,142,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,73,INDIFFERENT,False
-xUWWz0EFJ1A,Footsteps In The Dark,Karate Boogaloo,KB's Mixtape No. 1,3:41,221,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,74,INDIFFERENT,False
-JnKhDj3r81A,Oleander (Phutureprimitive Symbiotic Remix),Bluetech,Digital Singles Vol.1,7:36,456,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,75,INDIFFERENT,False
-IDZK13iPreA,In a Bubble,"Chalart58, Matah",Geomètric Dub,3:20,200,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,76,INDIFFERENT,False
 P8ccwFAKyGA,Now Still Waters,Christopher Elliott,Now Still Waters,3:28,208,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,77,INDIFFERENT,False
-R4RgrkzBH-U,Rudeboy Riddim,Stick Figure,Free Flow Sessions,2:16,136,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,79,INDIFFERENT,False
-d3emBxjLAgw,It Rains Love (Instrumental),Lee Fields & The Expressions,It Rains Love (Instrumentals),3:56,236,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,80,INDIFFERENT,False
-VI8zhRZn89k,Just Give Me One More Day,Alej,Just Give Me One More Day,2:12,132,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,81,INDIFFERENT,False
-0u_VXqY-VrE,Noctilune No. 1,Claudio Constantini,Fragile,2:45,165,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,82,INDIFFERENT,False
-NXA5whKj6go,Cracked Pepper,Polyrhythmics,Fondue Party,4:35,275,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,83,INDIFFERENT,False
-uXTKZryD8yY,Là-haut,L'Impératrice,Matahari,3:52,232,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,84,INDIFFERENT,False
-H0ZpXSf3C0Y,Broken,Robohands,Green,4:23,263,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,85,INDIFFERENT,False
-iGjUdw0XEhQ,Lesser Heaven,"Brian Eno, Jon Hopkins, Leo Abrahams",Small Craft On A Milk Sea,3:21,201,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,86,INDIFFERENT,False
-JgI6z6aQhEA,Velocities,Sleepy Fish,Velocities,3:12,192,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,87,INDIFFERENT,False
 _WGJ83wSibc,Something Something,Sync24,Comfortable Void,7:27,447,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,88,INDIFFERENT,False
 YguvZnzjrsU,Color Me Blue,Akane,Color Me Blue,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,89,INDIFFERENT,False
-bDj3_B51f-U,Ballerina,Yehezkel Raz,"Preludes, Book 1 - Streams",1:12,72,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,90,INDIFFERENT,False
-hCcQG8EGB5M,Afro Golden Line,Amir Bresler,Afro Golden Line,4:00,240,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,91,INDIFFERENT,False
-ge1MmOwL848,Bliss,Ferran Pancho,Bliss,2:33,153,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,92,INDIFFERENT,False
-QDasjmCz1do,ETOH,The Avalanches,Since I Left You (20th Anniversary Deluxe Edition),5:04,304,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,93,INDIFFERENT,False
 0WXCEssUwm8,Music To Watch Boys To,Lana Del Rey,Honeymoon,4:51,291,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,94,INDIFFERENT,False
-wcV_4lUx144,Waterworks,Bernth,Waterworks,2:03,123,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,95,INDIFFERENT,False
 vYI9Ww-Mjks,Forecast,Zela Margossian Quintet,Forecast,3:45,225,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,96,INDIFFERENT,False
-7N4_mlT5CtA,Fly,Art Music,Fly,2:20,140,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,97,INDIFFERENT,False
-551zeteeYHA,"Vivaldi: L'estro armonico, Violin Concerto in A Minor, RV 356, Op. 3 No. 6: III. Presto","Antonio Vivaldi, Simon Standage, The English Concert, Trevor Pinnock",Vivaldi: L'estro armonico Op.3,2:23,143,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,98,INDIFFERENT,False
-yarFH8myBvo,Between the Buttons,French 79,Angel,5:18,318,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,100,INDIFFERENT,False
-_396y7Vk9NA,Breathe (In the Air),Pink Floyd,The Dark Side of the Moon,2:50,170,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,103,INDIFFERENT,False
-k8fv9ZIo3FA,Moewe,Löwenzahnhonig,Moewe,3:39,219,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,104,INDIFFERENT,False
-2RNaWOyoquQ,Oro,Opez,Social Limbo,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,105,INDIFFERENT,False
-98fLD-wGHIo,Day Dream (feat. Marcus Finnie & Nate Clark),Charlie Hunter,AM Clock Radio,4:34,274,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,106,INDIFFERENT,False
-jg2FFAbYUco,A Menina Dança ? #1,Dead Combo,Vol. 2 - Quando a Alma Não é Pequena,2:58,178,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,107,INDIFFERENT,False
-UgLEeINmXBk,Ala Vida,El Michels Affair,Yeti Season (Deluxe Version),3:53,233,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,108,INDIFFERENT,False
-GsanQTBD4lQ,Totem Transport,Arc De Soleil,No Cardigan in Michigan Please (Prologue),3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,110,INDIFFERENT,False
-cQPdXcLVWU8,Swell,Offthewally,Surfari,3:59,239,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,111,INDIFFERENT,False
-gqEtDOWbMB4,La Colombiana,José Méndez,Lejanía,1:08,68,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,113,INDIFFERENT,False
 DeblSs9ET70,In My Head,Tommy Guerrero,Loose Grooves and Bastard Blues,3:08,188,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,114,INDIFFERENT,False
-iRHo9cz2wFc,Nightvision,Daft Punk,Discovery,1:45,105,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,115,INDIFFERENT,False
-zrLXBIc6F8E,Lost My Mind,Will Van Horn,Pedal Steel Guitar,3:50,230,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,116,INDIFFERENT,False
-CVAtWPTiw0Y,Asmarina,"Feqadu Amde-mesqel, Mulatu Astatke",Ethio Jazz,4:59,299,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,117,INDIFFERENT,False
-ikAPCpbK8u0,La Parisienne,"Alexander IV, Feiertag",La Parisienne,3:33,213,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,118,INDIFFERENT,False
-Xu2eELq1lzU,Get With It,Orgone,Get With It,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,119,INDIFFERENT,False
-64zp0wtAqj4,Opening Titles,The Sorcerers,In Search of the Lost City of the Monkey God,4:50,290,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,120,INDIFFERENT,False
-fi-DGhHGu1Y,Come Right Back (pt. 2),"Leroi Conroy, Wesley Bright",Come Right Back (pt 1 and pt 2),3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,121,INDIFFERENT,False
-dhrXE9ALSv8,Yo Todo Tu Yo,The Rugged Nuggets,Yo Todo Tu Yo,3:00,180,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,122,INDIFFERENT,False
-HQkK8NcVLR0,SLIDECANCEL,Carlos Jr,SLIDECANCEL,1:29,89,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,124,INDIFFERENT,False
-RGqxSSgy4Pw,A1 Bakery Pledge of Allegiance,Surprise Chef,Education & Recreation,3:20,200,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,125,INDIFFERENT,False
-JdaJM4RZppw,White Light,BADBADNOTGOOD,Mid Spiral: Growth,3:24,204,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,126,INDIFFERENT,False
-AGgB5EnM9Vc,Little Sparrow,Paul Alan Morris,Little Sparrow,1:35,95,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,127,INDIFFERENT,False
-I6PsdPYBpyk,Bean,Orions Belte,Bean,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,128,INDIFFERENT,False
-lV9DePcyEpU,L'autre Valse D'amélie,Frédéric Schubert,Pop Ballads on Piano,1:06,66,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,129,INDIFFERENT,False
-DX6QHjx_RYw,The Mercy of the Wind,Million Eyes,In the Wind,1:46,106,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,130,INDIFFERENT,False
-6hUkyKBsGtQ,Paradise Circus (feat. Hope Sandoval),Massive Attack,Heligoland,4:58,298,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,131,INDIFFERENT,False
-GEGaUF436cI,La Belle Époque,Brosky TSW,La Belle Époque,1:10,70,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,132,INDIFFERENT,False
-U0mENXVrQA8,Leaves in the Wind,HATAMITSUNAMI,Leaves in the Wind,2:54,174,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,133,INDIFFERENT,False
-5-jnZBr8i04,Olson (Version 3),Boards of Canada,Peel Session,2:32,152,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,134,INDIFFERENT,False
-4c3WSCpwnog,Wavy (feat. The Soul Surfers),Janko Nilovic,Maze Of Sounds,3:12,192,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,135,INDIFFERENT,False
-iamEJE1cC14,Jungle,Jimi Hendrix,Both Sides of the Sky,3:29,209,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,136,INDIFFERENT,False
-1Gly6GjOMYo,Sound Vagabond,Eric Hilton,Sound Vagabond,3:05,185,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,137,INDIFFERENT,False
-p4wmAhqaIx4,Urmel,okuma,Urmel / Kalkutta,7:50,470,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,138,LIKE,False
-BDJ7W15hFF4,Manhattan,"Gerhard Trede, THE GERHARD TREDE FILM ORCHESTRA","Archival, Vol. 5: Newsreel 2",1:23,83,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,139,INDIFFERENT,False
-yXHOpDF_pj4,Silky Spring,Yuuf,Silky Spring,3:45,225,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,140,INDIFFERENT,False
-Uy3bzQyvaOY,Stars,Brian Eno,Apollo: Atmospheres And Soundtracks (Extended Edition),8:03,483,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,141,INDIFFERENT,False
-mzVlT-qkblk,Moon in Reverse,La Luz,News of the Universe,2:01,121,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,142,INDIFFERENT,False
-Ty6DDvQivuw,Classical Cello Solo,Rafael Krux,Classical Cello Solo,1:44,104,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,143,INDIFFERENT,False
-hOyx5g-6-7E,My June,The Folks,My June,2:11,131,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,145,INDIFFERENT,False
-zLdT_0YfPLk,Serenade of Water,Men I Trust,Untourable Album,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,146,INDIFFERENT,False
 TQLJUxhL-JM,simple geometry,Oliver Buckland,THIRTY三十,2:17,137,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,147,LIKE,True
--476mGZVl8I,Orb,Glass Beams,Mahal,4:54,294,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,148,LIKE,False
-6W5Ik21dCUc,Tangerine Sour,"9 Theory, Emancipator",Tangerine Sour,4:14,254,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,149,INDIFFERENT,False
-bgsmr7t8zGE,15 Step,Radiohead,In Rainbows,3:58,238,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,150,INDIFFERENT,False
-KupPxov9Fd8,Light Footsteps,Lunng Fern,An Uncommon Bloom,1:59,119,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,151,INDIFFERENT,False
-7cXYRB5AnK0,Simply Beautiful,Acoustic Guitar Poet,"Guitar Sketches for Rest and Relaxation, Vol. 2",1:56,116,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,152,INDIFFERENT,False
-ICPdJholEmA,Always on My Mind,Marbert Rocel,In the Beginning,4:24,264,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,153,INDIFFERENT,False
-90lYz0hT7ss,Afternoon Memories,Lavaros,Afternoon Memories,2:56,176,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,154,INDIFFERENT,False
-eAKMuxB1ynU,Call Your Mom,Delvon Lamarr Organ Trio,I Told You So,4:00,240,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,155,INDIFFERENT,False
-7KGGweahz3o,Satin Curtains,Molly Lewis,The Forgotten Edge,2:39,159,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,156,INDIFFERENT,False
 9QhkjGHAHQ4,Huatulco,Goth Babe,Tongass National Forest,2:55,175,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,157,LIKE,False
-yIR_rU1pbcU,Prelude to a Soul,Sebastian Plano,Save Me Not,2:47,167,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,159,INDIFFERENT,False
-rvjFKme0tt4,Present,Lloyd Vaan,Lens Flare,2:26,146,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,160,INDIFFERENT,False
-a0IsicIJOn8,Hong Sau,In Motion Collective,Hong Sau / Elephant Walk,3:24,204,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,161,INDIFFERENT,False
-syNT-7udqpQ,Deja Vu (Instrumental) (feat. Cold Diamond & Mink),Bobby Oroza,This Love (Instrumentals),4:43,283,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,162,INDIFFERENT,False
-cwTWLfIfTJY,Dawn Chorus,Jon Hopkins,Dawn Chorus,3:29,209,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,163,INDIFFERENT,False
-yqXti_pVy3Y,Olancha Farewell,Harold Budd,Lovely Thunder,2:19,139,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,164,INDIFFERENT,False
-MmU-xbpK85Y,Dreamcore,Imxone,Dreamcore,1:47,107,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,165,INDIFFERENT,False
-PSffezqR_XA,Orchestral Intro (feat. sinfonia ViVA),Gorillaz,Plastic Beach,1:10,70,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,166,INDIFFERENT,False
-y8B7SbwEegc,"Pomegranate (feat. Bijan Chemirani, Redi Hasa & Rami Khalife)",L'Antidote,Pomegranate,4:46,286,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,167,INDIFFERENT,False
-8XabjqbkjCs,Germination,"Shpongle, Simon Posford",Flux & Contemplation - Portrait of an Artist in Isolation,2:14,134,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,169,INDIFFERENT,False
-0WhrFbBzkjc,Manea,Psyché,Psyché,4:44,284,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,170,INDIFFERENT,False
-EqDk4xzEuso,"limerence but ur in a magical forest (slowed and reverb, birds, sparkles) ｡⋆ ✧∘* ೃ ⋆｡˚",lily,,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,171,INDIFFERENT,False
-bGoaGYo8-ZI,恋だね - You're in Love,Joe Hisaishi,Howl's Moving Castle Soundtrack,1:12,72,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,172,INDIFFERENT,False
-TkUwzj-I7_M,People On Sunday,Domenique Dumont,People on Sunday,3:46,226,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,173,INDIFFERENT,False
-_EElynJ712s,Serpentine,Polyrhythmics,Life from Below,4:45,285,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,175,INDIFFERENT,False
-bNw9N74L3P0,Rio Grande,Ikebe Shakedown,Stone by Stone,3:51,231,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,176,INDIFFERENT,False
-ZYq1jWvG2o8,Oscar (feat. Anna Clementi),Tosca,Dehli 9,5:21,321,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,177,INDIFFERENT,False
-eKO0BOAXw70,Hiking,Elgafar,Hiking,1:44,104,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,178,INDIFFERENT,False
-MWoe2wgYidg,Valentine,Justice,Cross,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,179,INDIFFERENT,False
-PO9bcVTbRcg,Miss You,Trentemøller,The Last Resort,4:08,248,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,180,INDIFFERENT,False
-v3kHI_lgaCo,Waltz of Cecilia,Teesa,Peaceful Solitude,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,181,INDIFFERENT,False
-9yz6eSr1TI8,realization,FutureVille,realization,1:42,102,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,182,INDIFFERENT,False
-XMfwG_BfafA,Breezin,Boris Garbiner Happening,"Beach Diggin', Vol. 4",3:35,215,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,183,INDIFFERENT,False
 WKD2zdHfPCw,Queen Persephone,Dirty Art Club,Queen Persephone,3:45,225,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,184,INDIFFERENT,False
 qmF1qz3UCe0,Sofa Rockers (Richard Dorfmeister Remix),Sofa Surfers,Sofa Rockers,5:09,309,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,185,INDIFFERENT,False
-guQ_Sy7uAEI,retire (final),Alvedon,hurry up mixtape,3:35,215,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,186,INDIFFERENT,False
-iuTk8x410mk,LesAlpx,Floating Points,Crush,4:43,283,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,187,INDIFFERENT,False
-w_a5mRbwr-o,Sicily' Box (feat. Rocco Palladino),"Venna, Yussef Dayes, & Marco Bernardis",Sicily' Box,4:06,246,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,188,INDIFFERENT,False
-B5u_DV1_NM0,green to blue (slowed + reverbed),daniel.mp3,green to blue (slowed + reverbed),3:08,188,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,189,INDIFFERENT,False
-zvUC8Ka3cZA,green to blue,Aurenth,green to blue,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,191,INDIFFERENT,False
-Mnf1yfYOwUE,North Cormorant Obscurity,Rykard,Arrive The Radio Beacon,3:18,198,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,192,INDIFFERENT,False
-gfL-AuNCtVk,Cast in Lemon & Sand,Heathered Pearls,Body Complex,1:45,105,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,193,INDIFFERENT,False
-sWcLccMuCA8,Xtal,Aphex Twin,Selected Ambient Works 85-92,4:54,294,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,194,INDIFFERENT,False
 VoSoZyiHZ6o,Sour Times,Portishead,Dummy,4:13,253,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,195,INDIFFERENT,False
-eAtXB67MJoo,I Miss You,Kim Moongo,I Miss You,2:12,132,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,196,INDIFFERENT,False
-16SyKsFb7Yg,The Other Side,The Sure Fire Soul Ensemble,Step Down,3:39,219,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,197,INDIFFERENT,False
-mLlwp1aB8Eo,Naima,John Coltrane,Giant Steps,4:19,259,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,198,INDIFFERENT,False
-TlObLAPJ0_I,Pillars,Bill Laurance,Affinity,4:23,263,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,199,INDIFFERENT,False
-cTFDk3j9r0I,Start Line,Yuki Matsui,Passage of Time,1:31,91,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,200,INDIFFERENT,False
-i431cs0bUBA,Nature's Ratio,Slowly Rolling Camera,Juniper,1:58,118,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,201,INDIFFERENT,False
-e3n4fRYTc94,Any Colour You Like,Pink Floyd,The Dark Side of the Moon,3:27,207,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,204,INDIFFERENT,False
-Sdh6U945PI0,Slow Roll,Tommy Guerrero,Road to Knowhere,3:12,192,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,205,INDIFFERENT,False
-3bSGH0xEJSQ,The Shame,"Holy Hive, El Michels Affair, & Fleet Foxes",Big Crown Vaults Vol. 3 - Holy Hive,2:56,176,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,206,INDIFFERENT,False
-H_kvg5fV6mw,Maria También,Khruangbin,Con Todo El Mundo,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,207,INDIFFERENT,False
 ZOu4Ag6wY7U,Kakariko Village,Super Guitar Bros,Ocarina of Time,1:50,110,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,208,INDIFFERENT,False
-GkW-WpU_35Q,Umbra,Opez,Social Limbo,3:43,223,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,210,INDIFFERENT,False
-tt_7P9xsuGM,Air Swim,Arc De Soleil,Underwater Ranch,2:53,173,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,211,INDIFFERENT,False
-13TFBHPcPrg,Blue Nile,Mulatu Astatke / The Heliocentrics,Inspiration Information 3,3:13,193,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,212,INDIFFERENT,False
-fvlbJt_H_xU,Costa del Sol,José Méndez,Caminos,1:22,82,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,214,INDIFFERENT,False
-sNNktFpVv7o,Famagusta Port,BALTHVS,Famagusta Port,1:59,119,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,215,INDIFFERENT,False
-H_YQ_HRrldA,Goodnight Mr. Racoon,Santino Surfers,Goodnight Mr. Racoon,4:02,242,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,217,INDIFFERENT,False
-JQ3Vbhj40IQ,DG on the Keys,Adrian Quesada,Jaguar Sound,3:55,235,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,218,INDIFFERENT,False
-XLBVuHo0YVI,Slow And Steady,Shawn Lee,Shawn Lee's Soulscapes,2:05,125,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,219,INDIFFERENT,False
-3lY6lTejA6s,Summersurf,Löwenzahnhonig,Summersurf,1:51,111,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,220,INDIFFERENT,False
 e5UkXm0_F00,horizons,".diedlonely, théos",horizons,3:03,183,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,221,INDIFFERENT,False
-Ciap0srNiiU,Poinciana,Cal Tjader,Breeze From The East,3:27,207,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,222,INDIFFERENT,False
-g68DUGTWzlA,Night Aïr,Yuuf,Mt. Sava,3:14,194,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,223,INDIFFERENT,False
-MCwR6R3VhpI,Fly Me To The Moon,John Mendizabal,"A Journey to Classical Guitar, Vol. One",1:45,105,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,224,INDIFFERENT,False
-ciIZ_vgU6sU,What the Funk,Robohands,Dusk,4:09,249,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,225,INDIFFERENT,False
 _Q3k3mUGWVk,Still Foggy,Minami Deutsch,Fortune Goodies,4:49,289,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,226,INDIFFERENT,False
-wpbACnaChsE,Autumn Mountain,The Folks,Autumn Mountain,2:36,156,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,227,INDIFFERENT,False
-VcpnDfAQFJ8,Lebanese Blonde,Thievery Corporation,Mirror Conspiracy,4:49,289,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,229,INDIFFERENT,False
-cqxLnjRYqXs,Serenidade,Vincenzo Crimaco,Serenidade,3:08,188,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,230,INDIFFERENT,False
-5F95d7Eu_ic,Into the Night,Offthewally,Pollination,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,231,INDIFFERENT,False
-_8y3xjuA3Ng,"its okay, you can rest now.",Raiun,"its okay, you can rest now.",1:35,95,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,232,INDIFFERENT,False
 3yHll64Mf1c,New Beastly,Vulfpeck,Clarity of Cal,4:12,252,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,234,INDIFFERENT,False
-1gXWcKYcrWI,The smell of darkness,Chihei Hatakeyama,Afterimage,4:27,267,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,235,INDIFFERENT,False
-mfEn-6FtQ8E,Tune Down,Chris Joss,Sticks,4:41,281,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,236,LIKE,False
-yWiX1CRQeJY,Where Roses Bloom (Voice Memo Clip),Teesa,Where Roses Bloom (Voice Memo Clip),1:16,76,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,237,INDIFFERENT,False
-DfViwmUc4BU,One Percent,Gorillaz,The Now Now,2:22,142,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,238,INDIFFERENT,False
-CPvj4moLBvA,Chasing Cloud Nine,LUCHS,Chasing Cloud Nine,2:42,162,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,239,INDIFFERENT,False
-WVRCq7rP0XM,Lost,vibessmusic,Lost,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,240,INDIFFERENT,False
-42pZAwRBMJs,Heart to Heart,David Versace,Eye to Eye,2:45,165,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,242,INDIFFERENT,False
-TuwJBZEoWzw,Old Room,Pencil Legs,Pencil Legs,2:36,156,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,243,INDIFFERENT,False
-DVDiOMoW0wU,A Dream,Flatsound,"Somewhere in the Distance, Somewhere Toward the Mountains",2:51,171,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,244,INDIFFERENT,False
-4xsqQwyEm1Y,A Stream With Bright Fish (2005 Digital Remaster),"Brian Eno, Harold Budd",The Pearl,3:57,237,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,245,INDIFFERENT,False
-5Mcj_YtQhbQ,So Easy,Röyksopp,Melody A.M.,4:10,250,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,246,INDIFFERENT,False
-Ln1BFG_0skQ,Sonny's Applause,Dojo Cuts,"Dojo Cuts Instrumentals, Vol. 2",3:24,204,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,247,INDIFFERENT,False
-F-OeFm6y384,Tired of Fighting,Menahan Street Band,Make the Road By Walking,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,248,INDIFFERENT,False
-xMV6l2y67rk,Intro,The xx,xx,2:08,128,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,249,INDIFFERENT,False
-sui_6WqFZTk,Parasols,Orgone,Chimera,3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,250,INDIFFERENT,False
-5CG72ouw3j0,Laszlo (feat. The Vernon Spring),Ideophone,Laszlo,4:20,260,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,251,INDIFFERENT,False
-W76Tf2OJrWE,Dusk Gale,Loscil,Umbel,7:36,456,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,252,INDIFFERENT,False
-X9PBCSlhaY4,Van Gogh,"Virginio Aiello, on piano",Van Gogh,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,253,INDIFFERENT,False
-QWOvw77vPMk,"Chopin: Waltz No. 19 in A Minor, KK IVb (Arr. for Cello and Piano by C. Thomas)","Camille Thomas, Frédéric Chopin, Julien Brocal",The Chopin Project : Trilogy,2:23,143,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,254,INDIFFERENT,False
-AS1R1_QeQmE,Fish,Amir Bresler,Afro Golden Line,4:46,286,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,255,INDIFFERENT,False
-Of5l0KuT2xU,Sensitive Kind,J.J. Cale,Live,4:06,246,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,256,INDIFFERENT,False
-6jdKMs3zgnQ,Take Me Into Your Skin,Trentemøller,The Last Resort,7:31,451,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,257,INDIFFERENT,False
-yMiIrAxQhFA,Goth,Sidewalks and Skeletons,White Light,3:28,208,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,258,INDIFFERENT,False
-h4VZBxBBLZE,"Paris, Texas (feat. SYML)",Lana Del Rey,Did you know that there's a tunnel under Ocean Blvd,3:27,207,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,259,INDIFFERENT,False
-XKPalrELh5s,Jupiter Jazz,Haruki,Jupiter Jazz,3:20,200,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,260,INDIFFERENT,False
-5rOnW3AD1Ww,Soft Summer,Lowtone Music,Soft Summer,1:48,108,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,261,INDIFFERENT,False
-x8kMzAmfNEk,Haul (Radio Edit) (feat. Mohna),Christian Löffler,Haul,3:38,218,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,262,INDIFFERENT,False
-SyFeI_yxMhs,Como É Grande o Meu Amor por Você - Violão Solo,Israel Albino,Arranjos Populares para Violão Solo Vol. I,2:15,135,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,263,INDIFFERENT,False
-OVxKvxUwcVY,There Will Be Rain,Million Eyes,In the Wind,2:03,123,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,264,INDIFFERENT,False
-n4rldQkOutY,"Sibelius: 13 Pieces for Piano, Op. 76: No. 2, Etude (Arr. Sandquist for Cello & Piano)","Göran Söllscher, Jean Sibelius, Jian Wang",Reverie,2:49,169,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,266,INDIFFERENT,False
-xUi0mM6-PJ0,"Concerto Grosso for Strings ""Palladio"": No. I, Allegretto","Metamorphose String Orchestra, Pavel Lyubomudrov","Concerto Grosso for Strings ""Palladio"": I. Allegretto",2:34,154,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,267,INDIFFERENT,False
-4uMfiO2N1mk,Beautiful,"Ben Böhmer, Malou",Beautiful,3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,268,INDIFFERENT,False
-DRCzH-3i7X0,Juan's World,BADBADNOTGOOD,Mid Spiral: Order,4:24,264,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,269,INDIFFERENT,False
 x2BsQJnps1Q,Just Begun,Way Dynamic,So Familiar,2:56,176,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,270,INDIFFERENT,False
-ZZmXTGysai8,I'm Confessin' (That I Love You),Thelonious Monk,Solo Monk (Expanded Edition),2:38,158,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,271,INDIFFERENT,False
-5RZr27pjkWc,Aviators,Sun Creatures,Aviators,3:09,189,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,272,INDIFFERENT,False
-NJLs-4J5ZYk,Visions of Gideon,Sufjan Stevens,Call Me By Your Name (Original Motion Picture Soundtrack),4:08,248,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,273,INDIFFERENT,False
-sGecDxUouCo,U.s. Saloon Props 41/59,Porn Sword Tobacco,New Exclusive Olympic Heights,2:22,142,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,274,INDIFFERENT,False
-q_WH6lHZVMg,A Whole New Way of Looking At the Day,Abakus,That Much Closer to the Sun,3:33,213,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,275,INDIFFERENT,False
-e-3z40QzJT0,The French Library,Franz Gordon,The French Library,3:00,180,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,276,INDIFFERENT,False
-gD68IWwJOi4,Keep Breathing,Smoky,It Sounds a Bit Like Heaven,3:02,182,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,277,INDIFFERENT,False
-2SvTeJrAlV0,Turquoise Hexagon Sun,Boards of Canada,Music Has The Right To Children,5:08,308,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,278,INDIFFERENT,False
 YvYXVbedfVU,Falling,Tonic Walter,Falling,3:45,225,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,279,INDIFFERENT,False
-Qk6BEu2pAV4,Misty,Beegie Adair,Moments To Remember,3:26,206,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,280,INDIFFERENT,False
-NyguMxVh6z0,Outside In,We Dream of Eden,Innerspace,3:09,189,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,281,INDIFFERENT,False
-HeQE-OgzgRI,Sylvan Echoes,Jacob LaVallee,Sylvan Echoes,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,282,INDIFFERENT,False
-GpVEkOUj2ZQ,Reflections,Toshifumi Hinata,Hitotsubu No Umi,2:11,131,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,283,INDIFFERENT,False
-3Tb0NWTVtqE,Butterflies (Piano Sonata),Tony Anderson,Butterflies (Snowfall Remixes),4:00,240,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,284,INDIFFERENT,False
-CqGpOqh9AIA,Dead Mans Blues,Roy Williams,American Shuffle,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,285,INDIFFERENT,False
-NMxi6yAajnE,A View to a Kill,L'Impératrice,Sonate Pacifique,5:14,314,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,286,INDIFFERENT,False
 SHATBEAb-TU,Theme from Southern Comfort,Ry Cooder,Music by Ry Cooder,3:48,228,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,288,INDIFFERENT,False
-xlyeGkDlgKM,Main Theme from 'Succession',L'Orchestra Nazionale di Mendoni & Michele Mariotti,Main Theme from 'Succession',1:54,114,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,289,INDIFFERENT,False
-4C_hhw49fdQ,Love Theme From Spartacus (Remastered 2023),Yusef Lateef,Eastern Sounds (Remastered 2023),4:16,256,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,290,INDIFFERENT,False
-5nAa_jVbg9w,Can't Help It,Shtriker Big Band,Shtriker Big Band,2:24,144,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,291,INDIFFERENT,False
-dUzXCkhorog,Temporal,Aukai,Temporal,3:05,185,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,292,INDIFFERENT,False
-5PBuGYsyQs8,The Queen Of All Everything,Ott,Skylon,7:53,473,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,293,INDIFFERENT,False
-oQaXp16OC0c,Current,inola,Channel,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,294,INDIFFERENT,False
 VnS9cg7mhBg,Stay All Night,The Black Keys,Delta Kream,5:45,345,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,295,INDIFFERENT,False
 ZRdY1GGnF4U,Guðnadóttir: Mortar,"Hildur Guðnadóttir, London Contemporary Orchestra",TÁR (MUSIC FROM AND INSPIRED BY THE MOTION PICTURE),3:37,217,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,297,INDIFFERENT,False
-o8g5Omp0Tas,Small Memory,Jon Hopkins,Insides,1:41,101,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,299,INDIFFERENT,False
-KBkhmmLj7-M,Sunshine Drive,Lavaros,Sunshine Drive,3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,300,INDIFFERENT,False
 pl1mVRuc8fE,Mesa Redonda,Hermanos Gutiérrez,Hijos Del Sol,2:56,176,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,304,INDIFFERENT,False
-bHhet-GCZzw,Live Jam in Polynesia,Arc De Soleil,Libertalia,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,307,INDIFFERENT,False
-quQ479xMNfs,Flesh and Soul,BALTHVS,Flesh and Soul,3:33,213,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,308,INDIFFERENT,False
-HXPU0t2mBHw,Horizon (Japan CD),Daft Punk,Random Access Memories (10th Anniversary Edition),4:23,263,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,309,INDIFFERENT,False
 hKigd2bn3pM,Los padres,Tommy Guerrero,Road to Knowhere,4:03,243,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,310,INDIFFERENT,False
-Cbo_HRtcSOU,Gubèlyé,Mulatu Astatke,Ethio Jazz,4:41,281,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,311,INDIFFERENT,False
-OqI6s4mTdLU,CHASING LIGHT,"Moses Yoofee Trio, Noah Fürbringer, Moses Yoofee, cowboyklobe",CHASING LIGHT / ZERO,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,313,INDIFFERENT,False
-i5lM491mrLg,Jumpstart,Duke Boara,Jumpstart,3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,314,INDIFFERENT,False
-ePbX2QlYj5Q,Houston,Allah-Las,LAHS,2:14,134,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,315,INDIFFERENT,False
-eRaddYhTpcU,Rainy Day Lady,Menahan Street Band,The Exciting Sounds of Menahan Street Band,3:19,199,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,316,INDIFFERENT,False
-4XHTB2M6H_k,The Forest,Trentemøller,The Trentemøller Chronicles,5:46,346,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,317,INDIFFERENT,False
-5uKc4C9T5ZQ,Starry Nights (feat. Neal Francis),Adrian Quesada,Jaguar Sound,3:26,206,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,318,LIKE,False
-LIJEmC91inA,Borderlands,Tim Hecker,An Imaginary Country,4:47,287,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,319,INDIFFERENT,False
-HCDG91aUBlA,Italiana,Opez,Social Limbo,3:38,218,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,321,INDIFFERENT,False
-qlYoC2LRAVM,Etude n°16,Vanessa Wagner,Study of the Invisible,4:53,293,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,322,INDIFFERENT,False
-j4ZSIlp261g,Baia do Sol,José Méndez,Baia do Sol,1:41,101,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,324,INDIFFERENT,False
-hSzmR10T1hs,Hohenbol,Feldgeister,Between Camerae,3:20,200,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,325,INDIFFERENT,False
-iqr3khMncqM,Idea 25,"Andrea Vanzo, Gibran Alcocer",Idea 25,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,326,INDIFFERENT,False
-nB2ibgPnb4c,let me show you,kintsugi,let me show you,4:22,262,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,327,INDIFFERENT,False
-wlc7cikBpg4,Exchange,Massive Attack,Mezzanine,4:12,252,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,329,INDIFFERENT,False
 5yKxn54lXW8,Coki - Red Eye,Dubstep Classics,,4:31,271,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,331,LIKE,False
 xxxpnfRi4Tw,Endless Falls,loscil,Endless Falls,7:56,476,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,333,INDIFFERENT,False
-1z_w_9lGdeQ,Sunlit Silhouette,"Harold Budd, John Foxx",Translucence + Drift Music,3:16,196,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,334,INDIFFERENT,False
-WxV8aHg-FeQ,Satellite,Stellardrone,Echoes,3:18,198,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,337,INDIFFERENT,False
-ixz2lx0kenQ,Irreplaceable,Chad Lawson,Irreplaceable,4:28,268,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,340,INDIFFERENT,False
-JDqjkIVgcr8,Unite (Origin 2007) (2022 Remaster),Solar Fields,Origin # 01 (2022 Remaster),9:24,564,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,341,INDIFFERENT,False
-Gxbwc1VfgYU,it's_cold_here,Star,it's_cold_here,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,343,INDIFFERENT,False
-Ijx6qgW_-ZM,Forms,Cardamom,Forms,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,345,INDIFFERENT,False
-rRrlyjL-Ib0,Zeldas Lullaby Count Me Out Medley,"4zy, lorche",Zeldas Lullaby Count Me Out Medley,2:39,159,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,346,INDIFFERENT,False
-5IHq3s7y71c,Silver Moon Over Sleeping Steeples,David Sylvian,Gone To Earth (Remastered 2003),2:22,142,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,347,INDIFFERENT,False
-7WGceI3-bjQ,A Higher Place,Röyksopp,Melody A.M.,4:32,272,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,348,INDIFFERENT,False
-UDvfDy_I4vM,3 am walk,daniel.mp3,3 am walk,3:03,183,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,353,INDIFFERENT,False
 uRRnvXpCRbg,Nothing Is Something Worth Doing,Shpongle,Ineffable Mysteries From Shpongleland,6:25,385,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,354,INDIFFERENT,False
-J8ljVYAussA,Home,Murphy Cooper,Home,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,356,INDIFFERENT,False
 mlJTqWKRwnM,Courage,Patrick O'Hearn,Transitions,3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,357,INDIFFERENT,False
-OsR87w8eT6w,A Mother's Love,Gabriel Latchin Trio,A Mother's Love,4:56,296,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,358,INDIFFERENT,False
 eyvDlrWHvfM,View Theory,John Hayes,Beautifully Lost Mind,4:04,244,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,362,INDIFFERENT,False
-sNIfnhL7Jrs,Pawky,Dorothy Ashby,Hip Harp (Japan),7:06,426,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,363,INDIFFERENT,False
 Bj2wLEeRW0Y,The Husk,Orgone,Chimera,6:19,379,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,364,INDIFFERENT,False
 8KYOVWloU6A,Speak Low,"Cal Tjader, Mark Levine, Poncho Sanchez, Rob Fisher",La Onda Va Bien,6:05,365,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,365,INDIFFERENT,False
-jdfRKqkgGDA,Sun Rise Swell,Santino Surfers,"Copenhagen 2020, Vol. 2",6:18,378,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,366,INDIFFERENT,False
 4gclGAQFzAA,Hazy Days,Ibiza Chilled,"Ibiza Chilled, Vol. 2",3:42,222,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,367,INDIFFERENT,False
 c4eBNeYzq2o,The Middle Place,Hanna Lindgren,The Middle Place,3:34,214,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,368,INDIFFERENT,False
-euQ9NiXKIZ8,not ready to let go,GAKHED,not ready to let go,1:57,117,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,369,INDIFFERENT,False
-ZTotij07RHc,Recado,Original Paris Swing,Midnight in Paris (Music from the Motion Picture),4:08,248,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,370,INDIFFERENT,False
-7L0a-wtI9lw,"Jazz, Vol. 1",Seb Wildblood,"Jazz, Vol. 1",6:38,398,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,373,INDIFFERENT,False
-RhAUL-uQTCs,tiredminds - how to never stop being sad (instrumental) [slowed + reverb],tiredminds,,3:16,196,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,375,INDIFFERENT,False
 iOgTU7Ao7LM,Solas (Raban's Version),Raban,Solas (Raban's Version),3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,376,INDIFFERENT,False
 _ROJXuNbaDk,III,Jacaszek,Pentral,3:44,224,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,377,INDIFFERENT,False
 khLwOWDvNmA,Scheherazade: The Tale of the Kalendar Prince,Lars Hjalmar Joakim & Nikolai Rimsky-Korsakov,Rimsky-Korsakov: Scheherezade,3:21,201,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,378,INDIFFERENT,False
-sdY83BOwLYs,Cloud Bath,Ljoma Portova,Cloud Bath,2:35,155,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,379,INDIFFERENT,False
-0QkImfX0ZhY,Sol,Alef,Sol y Luna,6:41,401,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,381,INDIFFERENT,False
 BrO5eHbvy68,liza v posteli - poison tree [lyrics],p3xonik,,3:30,210,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,383,INDIFFERENT,False
-LFE7JeF56SY,Dying Alone,Hammock,Dying Alone,3:55,235,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,384,INDIFFERENT,False
-Z31FVFDNxyQ,Soul Wire,Vibrasphere,Lime Structure,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,385,INDIFFERENT,False
-uzcSJ4nAQ3k,some light,airshade,floating,1:52,112,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,387,INDIFFERENT,False
 CnYEHDRTM_o,Sad Ocean,Chihei Hatakeyama,Mirage,3:49,229,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,389,INDIFFERENT,False
-5Qnz5ZWRNR4,Swell,Kino,Swell,2:53,173,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,390,INDIFFERENT,False
 hCdTdbDEzlc,Underwater,David Arkenstone,Chillout Lounge 2: Easy Beats And Soft House Chill,4:19,259,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,391,INDIFFERENT,False
-AJdTBPuZkHU,Yume Utsutsu,Lamp,Lamp Genso,5:16,316,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,392,INDIFFERENT,False
-hXDxDNhe8Qs,Declarations,Heartbeat Sirens,Thoughts in a Chest,3:33,213,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,393,INDIFFERENT,False
 B9Tl84HGQQA,Outsider,Kavinsky,Reborn,4:40,280,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,394,INDIFFERENT,False
 jbwFDchsvBY,Imbre,Jordan Critz,Imbre,3:50,230,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,395,INDIFFERENT,False
 UYlW2wa0noU,Archetype,State Azure,Stellar Descent,5:55,355,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,396,INDIFFERENT,False
-z42Up1OIxUQ,In Motion,Ann Annie,Wander Into,3:58,238,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,397,INDIFFERENT,False
-G16UIMwpA9o,Stillness & Solace,FableForte,Stillness & Solace,1:28,88,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,399,INDIFFERENT,False
-cGcQPH4KyxA,Melodica,Rival Consoles,Articulation,3:40,220,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,400,INDIFFERENT,False
-pA4FiJU5weM,Calm Rivers,La Reve,Wings of Glass,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,402,INDIFFERENT,False
 PcKiH4wHWw4,From a Distant Home,Bedroom,From a Distant Home,3:00,180,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,403,INDIFFERENT,False
-8eqBSlAShyg,Los Navegantes,Hermanos Gutiérrez,Sonido Cósmico,4:13,253,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,405,INDIFFERENT,False
-_MYFPQSKzQI,Shades of Man,Khruangbin,Con Todo El Mundo,3:48,228,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,406,INDIFFERENT,False
-EdifTs5NX84,Aquarius,Cal Tjader,The Prophet,3:41,221,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,413,INDIFFERENT,False
 RNI-P8Qe8FQ,Little BeeBee,Arc De Soleil,Underwater Ranch,3:28,208,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,414,INDIFFERENT,False
-jcJPq0OaBoA,Que Diablos,Sullivan Fortner,Que Diablos,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,415,INDIFFERENT,False
 bLL6IR-AUwI,Friday Film Special,GoGo Penguin,Everything Is Going to Be OK,4:10,250,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,416,INDIFFERENT,False
 ycdalJTnryw,Concrete Ocean,Minami Deutsch,With Dim Light,4:53,293,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,417,INDIFFERENT,False
 lOW8vP3oBMI,Mr. Montgomery,Royce Campbell,Solo Wes: A Solo Guitar Tribute To Wes Mongtomery,4:14,254,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,418,INDIFFERENT,False
-C9UN0Ak9Z0c,Departure,Pierre Tardiveau,Departure,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,419,INDIFFERENT,False
-SJfF7FgAAHk,Autumn,Smoky,Minimal Sounds,3:46,226,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,421,INDIFFERENT,False
-nAIZlOtfKE0,Umbel,Loscil,Umbel,6:38,398,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,422,INDIFFERENT,False
-2S8c09C6J7Q,Via,Jason Fervento,Via,2:58,178,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,423,INDIFFERENT,False
-4Fwlu7pN7DY,Your Way,Old Futures,Your Way,2:43,163,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,425,INDIFFERENT,False
 9yKhNI1Tyvc,Goodbye Long Train,Ivan the Tolerable,Unfinished Pyramid,2:13,133,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,427,INDIFFERENT,False
-mdUG4JgPflw,Inner Dance,Dylan John Sparkes,Noon Dance,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,428,INDIFFERENT,False
-QpA2Gx8MHRc,Lights,Alex Banks,Illuminate,4:15,255,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,429,INDIFFERENT,False
-4HCRb5EwJvU,Tranquil Encounter,Astron,Little Moments & Tranquil Encounter,4:19,259,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,430,INDIFFERENT,False
-uvwjfBFciRU,Carnival of the Animals: The Swan (Arranged for Cello and Harp by Miriam Keogh),"Camille Saint-Saëns, Miriam Keogh, Sebastian Comberti",Romance,2:55,175,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,431,INDIFFERENT,False
 qt2t-V7QxQE,Voices In The Dark,JQ,Outside,4:09,249,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,433,INDIFFERENT,False
-UPa7BUF8btU,Prelude II,Jordi Savall,Les Voix Humaines,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,435,INDIFFERENT,False
 zQBeVdymxXk,That’s How I Feel,Sun Ra,Lanquidity (Definitive Edition),8:06,486,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,436,INDIFFERENT,False
 DeZeMGToQOA,I see you in my dreams,"Blut Own, sevenlies, your home",I see you in my dreams,3:27,207,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,437,INDIFFERENT,False
 g62w08JKhRI,September 23rd (Excerpt 7),William Basinski,September 23rd,2:15,135,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,438,INDIFFERENT,False
 KNkvloKdsZk,To the Great Beyond,Stellardrone,Between the Rings,5:35,335,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,439,INDIFFERENT,False
 MuRDuZFVIsk,Clip Clap,Kick Bong,The Lost Valley,3:27,207,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,440,INDIFFERENT,False
-z_gOuPipiT4,Fireflies (feat. Neal Francis),Adrian Quesada,Jaguar Sound,3:24,204,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,441,INDIFFERENT,False
-8YjBWbeZPCM,One And The Same (Instrumental),"Julien Marchal, Lissom, Lowswimmer",One And The Same,2:58,178,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,442,INDIFFERENT,False
-FpQp6xK1ER8,Ineffable,Hammock,Ineffable,3:02,182,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,444,INDIFFERENT,False
 YSg-dOYSBP0,Night Away (Slowed),Warmth,Night Away (Slowed),4:00,240,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,450,INDIFFERENT,False
-3Gq1DJrwEnQ,"Amélie - Comptine d’un autre été, l’après-midi (reimagined)",Andrea Vanzo,"Amélie - Comptine d’un autre été, l’après-midi (reimagined)",3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,453,INDIFFERENT,False
-QNHraCYv8Gg,Time Travel,Antologie,Time Travel,3:05,185,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,455,INDIFFERENT,False
 eYIsyp_Ci-M,Arcs,Bengalfuel,Arcs,5:25,325,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,459,INDIFFERENT,False
-7E_bYFk5h7g,Nocturne P 2 No. 8 in C minor,Serkmusic,Chopin Nocturne Album,3:10,190,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,460,INDIFFERENT,False
-5xIr4rEFhek,Thou Swell,Horace Silver,Horace Silver Trio,2:53,173,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,464,INDIFFERENT,False
-mmK71ZfaZO4,Agape,Nicholas Britell,If Beale Street Could Talk (Original Motion Picture Score),2:56,176,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,465,INDIFFERENT,False
 DkmuyErmhEE,Bodylove,Francesca Stephe,Bodylove,2:56,176,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,467,INDIFFERENT,False
 RnqDIew_97U,Patterns,James Malikey,Patterns,2:53,173,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,469,INDIFFERENT,False
-NQnMAyzn5Hs,Close to the Morning,Aukai,Close to the Morning,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,470,INDIFFERENT,False
 zrmXx9wbFcI,Telegram,Beautumn,Bordeaux,4:32,272,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,472,INDIFFERENT,False
-i7f67CcgWi8,From Home,Vivian Roost,From Home,3:23,203,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,474,INDIFFERENT,False
-WUQ2xMC1d2s,Ongoing,Joseph Martins,Leaf Warbler,3:40,220,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,476,INDIFFERENT,False
-9BDQpKuTWQI,Mulberry Mouse,Alan Gogoll,Mulberry Mouse,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,482,INDIFFERENT,False
 uuI5fcSdmmM,Strange Nostalgia For The Future,Cut Copy,Zonoscope,2:07,127,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,487,INDIFFERENT,False
 s_z9VpBEKuQ,Stay (Guitar Cover),Nylon & Frets,"Guitar Covers, Vol. 1",2:12,132,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,488,INDIFFERENT,False
 hyjXzZPhpwc,Yume Nikki Dream Diary OS - Snow Valley (S l o w e d  +  R e v e r b),S y n .,,4:25,265,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,490,INDIFFERENT,False
@@ -392,21 +491,14 @@ MApWl20oCh0,"It's Been A Long, Long Time","Chet Atkins, Les Paul",Chester & Lest
 Be6kt_AAxKA,"Into The Trees (Serenetti, Pt. 3)",Trentemøller,The Last Resort,7:14,434,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,52,INDIFFERENT,False
 J6lNyjK8-wg,"Requiem for a Reaper / Pillar of Cloud (feat. Thor Harris, Heinz Riegler & Norman Westberg)",Lawrence English,Cruel Optimism,3:20,200,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,54,INDIFFERENT,False
 NMw5wQp89g4,Fire (Reworked by Blackjoy),Thomas Naïm,Sounds of Jimi (Reworks),4:58,298,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,57,LIKE,True
-gQLgfL54PhE,Wildwood Flower,"David Grisman, Tony Rice",Tone Poems,2:49,169,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,78,INDIFFERENT,False
 xSXzw1XiDVw,Starry Night,Jordan Critz,Starry Night,4:59,299,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,99,INDIFFERENT,False
 00vfgUqvHj4,Fountayne,Skinshape,Life & Love,3:25,205,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,101,INDIFFERENT,False
-5kaqGWCC6to,Thunderbird,Hermanos Gutiérrez,El Bueno Y El Malo,3:28,208,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,102,INDIFFERENT,False
 GsI4bpnxMJA,Johanna's Dream,BALTHVS,Johanna's Dream,2:24,144,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,109,INDIFFERENT,False
-YZNTGPnffx4,Title,Super Guitar Bros,Ocarina of Time,1:29,89,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,112,INDIFFERENT,False
 upo8_2NdmRI,May Ninth,Khruangbin,A LA SALA,3:13,193,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,123,INDIFFERENT,False
 U3mDkApRvOU,Moon Palace,Stick Figure,Moon Palace,2:57,177,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,144,INDIFFERENT,False
 gwEZAx2YWN0,Exist,"Aukai, Richard Houghten",Exist,3:16,196,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,158,LIKE,False
-qZF1eXsuznA,Sylvia,Arthur Verocai,Arthur Verocai,3:04,184,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,168,INDIFFERENT,False
-Qy9LTRu89FA,My Love Mine All Mine,Mitski,The Land Is Inhospitable and So Are We,2:18,138,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,174,INDIFFERENT,False
 FEunm5fLGlU,Wickedness (NOiSEMAKER dub remix) (feat. Kava Jah & Screechy Dan),Boostive,Wickedness Dub,3:34,214,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,190,INDIFFERENT,False
 rd-4azHfOkM,Oracolo,Skinshape,Oracolo,4:15,255,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,202,INDIFFERENT,False
-lQditr-GdEw,Until We Meet Again,Hermanos Gutiérrez,Sonido Cósmico,3:02,182,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,203,LIKE,False
-4dBFyx_XsqM,Pyramid Blue,Richard Houghten,Sailing Through Rainbows of Sound,3:58,238,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,209,INDIFFERENT,False
 Can7kOYrGpI,Short Circuit,Daft Punk,Discovery,3:27,207,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,213,LIKE,False
 Tb0MC0jFv6M,Teardrop (feat. Elizabeth Fraser),Massive Attack,Mezzanine (Deluxe),5:31,331,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,216,LIKE,True
 t_DbxUaYiZQ,Riders On The Storm (2021 Remaster),The Doors,L.A. Woman (50th Anniversary Deluxe Edition),7:17,437,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,228,INDIFFERENT,False
@@ -415,22 +507,16 @@ OUhquyzIG-Y,Jamming (Dub),Bob Marley & The Wailers,Exodus (Deluxe Edition),3:08,
 qUwyeAc5KpU,Who Am I,Peace Orchestra,Peace Orchestra,5:58,358,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,265,INDIFFERENT,False
 qmX0a6Ftjyw,"Vivaldi: The Four Seasons, Summer, Violin Concerto in G Minor, Op. 8/2, RV 315: III. Presto","Adelina Oprean, Antonio Vivaldi, European Union Chamber Orchestra, Jörg Faerber",Vivaldi: The Four Seasons etc.,2:44,164,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,287,INDIFFERENT,False
 6xhdLejO8E8,Amor,Nu,Places EP,6:57,417,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,296,INDIFFERENT,False
-P1u9vSnMf2c,Dreamer,Kiefer,Dreamer,4:38,278,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,298,INDIFFERENT,False
 TSM0jj-hZtw,No Quarter (Remaster),Led Zeppelin,Mothership,7:03,423,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,301,INDIFFERENT,False
-BCdWFT_2-Gc,Iris,Forhill,Outlines,4:06,246,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,302,INDIFFERENT,False
 0w1hryCUmfA,Interstellar,"Skinshape, The Horus All Stars",Skinshape X Horus,3:27,207,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,303,INDIFFERENT,False
-vuihuO4Ay8I,White Gloves,Khruangbin,The Universe Smiles Upon You,3:39,219,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,305,INDIFFERENT,False
 2sUH-ac8Hy0,Kokiri Forest,Super Guitar Bros,Ocarina of Time,1:22,82,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,306,INDIFFERENT,False
-KRwfEjgOVjM,Terra Recipe,Minami Deutsch,Minami Deutsch,3:51,231,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,312,INDIFFERENT,False
 ylDTZpniKA0,Time,Pink Floyd,A Foot in the Door: The Best of Pink Floyd,6:21,381,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,320,INDIFFERENT,False
-uC5DRLeFcPM,Mental Breakdown,Yonder Mountain String Band,Elevation,2:58,178,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,323,INDIFFERENT,False
 _C9rRLDimfQ,YKWIM?,Yot Club,Bipolar,3:33,213,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,328,INDIFFERENT,False
 0UVOvTcJKH4,Walk Away,James Gang,Thirds,3:33,213,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,330,INDIFFERENT,False
 Ma62DJc36yQ,Waiting In Vain Dub,Bob Marley & The Wailers,In Dub Vol. 1,3:56,236,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,332,INDIFFERENT,False
 7SQQy3cVJYA,Medasin - Magic (Super Slowed + Reverb) (Tiktok),Faithful,,2:57,177,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,335,INDIFFERENT,False
 eRPjcpwOkF0,Tulips,"Cloudchord, Ian Ewing",Tulips,3:02,182,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,336,INDIFFERENT,False
 Rj_NUS9hwxA,Little Wing,Stevie Ray Vaughan & Double Trouble,Couldn't Stand The Weather (Legacy Edition),6:49,409,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,338,INDIFFERENT,False
-83boEyOO-pY,snowfield,".diedlonely, Blut Own",snowfield,3:08,188,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,339,INDIFFERENT,False
 jPWZVszFI6U,Seeker,Carbon Based Lifeforms,Seeker,7:31,451,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,342,INDIFFERENT,False
 b9u9E-lMUWo,花園 - The Flower Garden,Joe Hisaishi,Howl's Moving Castle Soundtrack,2:59,179,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,344,INDIFFERENT,False
 9ivTcudqfWQ,Castilian Blues,The Dave Brubeck Quartet,Countdown: Time In Outer Space,2:32,152,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,349,INDIFFERENT,False
@@ -456,7 +542,6 @@ VJNcIWydGpg,Make Love,Daft Punk,Human After All,4:50,290,2026-09-12T10:43:54Z,20
 q9NtWkikVAE,Money,Pink Floyd,The Dark Side of the Moon,6:23,383,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,409,INDIFFERENT,False
 x4NCbZUirzU,Vigilante Man (Live in the Studio - E.S.E),Tony Furtado,Paradise (Audiophile Edition SEA),3:56,236,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,410,LIKE,False
 43S0Fqh8syE,Chasing the Day Moon (feat. Tommy Guerrero & Josh Lippi),Los Days,Dusty Dreams,3:30,210,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,411,INDIFFERENT,False
-_QR_PBR5i4Y,Evil Dub,Trentemøller,The Last Resort,6:07,367,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,412,INDIFFERENT,False
 te9CHZCKWkU,Tezeta,Mulatu Astatke,Ethiopian Modern Instrumentals Hits,6:17,377,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,420,INDIFFERENT,False
 sLXLdD3t-OU,Roll Your Own,Tripswitch,Circuit Breaker,6:40,400,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,424,INDIFFERENT,False
 yedPW2kcc9c,The 2nd Law: Isolated System,Muse,The 2nd Law,5:00,300,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,426,INDIFFERENT,False
@@ -478,10 +563,7 @@ CYu_wHQE9Kc,Fibonacci Progression,Lab's Cloud,Organic Mathematics,7:50,470,2026-
 owj8oW_ozH0,Moonlight In Vermont / La Ville Endormie,"Claude Ciari, Bernard Gérard, & The Batucada's Seven",Crate Diggers: Library Music of the French Riviera,4:05,245,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,462,INDIFFERENT,False
 sbFeaxz9ybM,Run,Air,Talkie Walkie,4:13,253,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,463,INDIFFERENT,False
 avJtSmKKvaA,Calming Drizzle,Andrew Jeremy,Coffee Talk (Original Soundtrack),5:20,320,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,466,INDIFFERENT,False
-8btHvnL9AWk,First day of winter,Library Tapes,Sketches,2:54,174,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,468,INDIFFERENT,False
 pVkPWUsFIe0,Bye-Ya,Thelonious Monk,Monk's Dream,5:23,323,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,471,INDIFFERENT,False
-rQE2L-L5l7E,Lotus Flower (Jacques Greene Rmx),Radiohead,TKOL RMX 1234567,7:10,430,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,473,INDIFFERENT,False
-4H_9Fmyybrs,Occuring Birds,Silent Remedies,Occuring Birds,3:44,224,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,475,INDIFFERENT,False
 1I3D6KvjNt8,Blue Skies,Beegie Adair,The Great American Songbook Collection,3:16,196,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,477,INDIFFERENT,False
 w0O9L7KXkC0,Journey In Satchidananda (feat. Pharoah Sanders),Alice Coltrane,Journey in Satchidananda,6:37,397,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,478,INDIFFERENT,False
 QbLGjeR9bvI,Art Deco,Lana Del Rey,Honeymoon,4:56,296,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,479,INDIFFERENT,False
@@ -493,90 +575,38 @@ eGkGNCUQtWY,Magic Carpet Ride,Steppenwolf,The Second,4:32,272,2026-09-12T10:43:5
 wakyiXINPb4,8848 Meters Above Sea Level,Oleg Byonic,Birds Feel the Distance,8:37,517,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,486,INDIFFERENT,False
 fDyCzVkKv8k,Memory Arc,Rival Consoles,Persona,2:14,134,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,489,INDIFFERENT,False
 10Ybw9gNHsM,My head is empty .numb (slowed reverb) best part,Rain ,,3:42,222,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,491,INDIFFERENT,False
-DHNYkoORVeI,Hypnotica (Radio-Edit),"Lynnic, Neil Richter",Hypnotica,3:13,193,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,493,INDIFFERENT,False
 PpRwkceHlvk,Hope,Scann-Tec,"Cosmik Chill ""Orange""",8:33,513,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,495,INDIFFERENT,False
 jU4I6_LsCHM,Take Off Original Mix,Astronaut Ape,Flight 420,7:12,432,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,496,INDIFFERENT,False
 fT8B_NPINLo,Countdown,Letsko,SPACE: Venus,5:34,334,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,497,INDIFFERENT,False
 jP02qu9zRYg,Guardian of Time,Toni Verde,Guardian of Time,1:40,100,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,498,INDIFFERENT,False
 eISo-iFGGDg,Someone Great,LCD Soundsystem,Sound of Silver,6:31,391,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,499,INDIFFERENT,False
-hNb1Nu5Mvwo,Nobody Knows,Skinshape,Craterellus Tubaeformis,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,2,INDIFFERENT,False
 pIPVGoHjsmE,Dreaming in Color,Holly Jones,Dreaming in Color,3:25,205,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,23,INDIFFERENT,False
-wvIi5nzu__I,Mascaram Setaba,Mulatu Astatke,New York - Addis - London: The Story of Ethio Jazz 1965-1975,1:51,111,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,44,INDIFFERENT,False
-e-qMhYPPDSw,Fire,Thomas Naïm,Sounds of Jimi,3:37,217,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,47,INDIFFERENT,False
 sP8pIospPig,"Aerodynamic Beats / Gabrielle , Forget About the World",Daft Punk,Alive 2007,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,81,INDIFFERENT,False
 SwQk-WApgKg,Shimmer,Skinshape,Filoxiny,4:41,281,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,101,INDIFFERENT,False
-tnPIZMyC_VY,Affirmation,OMA,Lofi,1:23,83,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,102,INDIFFERENT,False
-rSMH8xQijfk,Sonora,Hermanos Gutiérrez,Hijos Del Sol,1:04,64,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,104,INDIFFERENT,False
-26Lqfoi-2m4,Palm Breeze,Offthewally,Pollination,2:21,141,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,106,INDIFFERENT,False
-al3Y5mOO9dA,El Águila,Siem Herstel,Los Picos,2:06,126,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,108,INDIFFERENT,False
-Xa-2g3Bo0pU,Sunset in the Desert,The Pilgrim,Walking into the Forest,1:25,85,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,109,INDIFFERENT,False
-rrfbZ3Qd6l0,Selenge,Céline Dessberg,Selenge,3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,110,INDIFFERENT,False
-QoA-Iy2theg,Instants,Skúli Sverrisson,Sería II,2:31,151,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,112,INDIFFERENT,False
-4FPy7rcifH8,Bark at the Moon,Tellsonic,Desert Moon Serenade,2:25,145,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,113,INDIFFERENT,False
-6KU9wxyWgfE,Kaepora Gaebora,Super Guitar Bros,Ocarina of Time,1:35,95,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,115,INDIFFERENT,False
-O4Uuaih7twQ,Cita,Diabi,Cita,2:44,164,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,116,INDIFFERENT,False
 Smk6_0dbl8k,Devil's Canyon,Walt Adams,Tin Can Descent,1:58,118,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,117,INDIFFERENT,False
-T5IQ0D7nM3Y,Lungomare,René Aubry,Plaisirs d'amour,2:19,139,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,118,INDIFFERENT,False
-5gArpb3m4YI,El Dorado,Gizmo Varillas,El Dorado,1:56,116,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,119,INDIFFERENT,False
-mv3SSGzD43k,Rain Quail,Dust Follows,Condor,3:09,189,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,120,INDIFFERENT,False
-gBPENEn9Kng,Vertebra,"David Bergmüller, Janus Rasmussen",Wirbel,3:34,214,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,122,INDIFFERENT,False
 htNVy-Samwk,Sparks in Space,richard houghten,Sparks in Space,3:12,192,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,123,INDIFFERENT,False
 EJu5S9etr-A,"{FREE} Psychedelic Jazz Type Beat ""Sun Is A Woman""",Fred Rosa (fka Fred Irie),,3:38,218,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,124,INDIFFERENT,False
-6NDloNQCVr4,Saffron Silence,Alexandr Bylkin,Safron Silence,2:34,154,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,126,INDIFFERENT,False
-d2-0JfJl4pA,time off,Sebastian Jautschus,time off,2:53,173,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,131,INDIFFERENT,False
-sq-WkgefGNI,Nothing Lost,Coyote Island,Shadow Magic,2:36,156,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,135,INDIFFERENT,False
-2ryZQn-99l0,Clouds,Connor Elgie,Clouds,3:45,225,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,137,INDIFFERENT,False
 LlR0FDLMTD8,Three From Two,Khruangbin,A LA SALA,3:35,215,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,138,INDIFFERENT,False
 yDS8J1fdoXE,You're Not Blind,Alfa Mist,Roulette,1:13,73,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,141,LIKE,False
-L-DrEV4ZBSg,Café Tropical,LA LOM,La Lom,3:53,233,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,142,INDIFFERENT,False
-JcxpUXDJcaE,Koda,Emancipator,Koda,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,157,INDIFFERENT,False
-5k6kSGARd8s,Time Is the Enemy,Quantic,The 5th Exotic,3:42,222,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,170,INDIFFERENT,False
 mGvuBRAFKC8,Kamouraska,Loscil,Umbel,6:35,395,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,173,INDIFFERENT,False
-lo_Gm5u93Aw,Koyo,Chequerboard,Souvenir,4:08,248,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,177,INDIFFERENT,False
-22KjxF3T2Vc,Interpreters of Forest,Minami Deutsch,Fortune Goodies,5:10,310,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,184,INDIFFERENT,False
 yJbPNeHS4bo,The Eastern Connection,Skinshape,Arrogance is the Death of Men,3:35,215,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,203,INDIFFERENT,False
-1V9WOxtNBOM,Just Woke Up Here,Richard Houghten,Quantum Flow,2:29,149,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,204,INDIFFERENT,False
-MPOdHqynJ8I,Anther,Offthewally,Pollination,2:58,178,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,206,INDIFFERENT,False
-I11HC7m0iXQ,La grande cascade,René Aubry,Plaisirs d'amour,4:29,269,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,208,INDIFFERENT,False
-YavwEs9KCqc,Agua Morena (feat. Tommy Guerrero & Josh Lippi),Los Days,Singing Sands,2:52,172,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,209,INDIFFERENT,False
-SWh6FEq6hQk,Follow the Sun (Reimagined Instrumental),Gizmo Varillas,Follow the Sun (Reimagined),3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,211,INDIFFERENT,False
-QqqYVMlsBns,True North,Chequerboard,Souvenir,5:10,310,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,223,LIKE,False
-Fz6vJ8QF7x8,Checo Y Moi,Yuuf,In The Sun,4:37,277,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,225,INDIFFERENT,False
-fXCs_wbIYFY,Veredis Quo,Daft Punk,BiPolar - Digital vs. Analog,3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,226,INDIFFERENT,False
-N8l8sqvmFiw,Long Gone,Emancipator,Dusk to Dawn (Deluxe Anniversary Edition),5:52,352,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,230,INDIFFERENT,False
-sacRodHtf04,Doing the Wrong Thing,Kaki King,Legs to Make us Longer,5:05,305,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,258,INDIFFERENT,False
 0jvmbfCAhr8,Geologic Time Scale,Hyperion Towers,Rovaniemi,3:20,200,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,272,INDIFFERENT,False
-sEZ0NwOdGIc,In Your Arms,Vontmer,Home Is You,3:48,228,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,277,INDIFFERENT,False
 H6KWDODx2Lc,Red Dust,Zero 7,Simple Things,5:41,341,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,289,LIKE,False
-3h-JYx76QNM,Teardrop (feat. Elizabeth Fraser),Massive Attack,Mezzanine,5:31,331,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,293,INDIFFERENT,False
 TqHAzvT9hH4,Jämnmod,Ström,Jämnmod,3:29,209,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,297,INDIFFERENT,False
-NTjlFp9sJ28,Lon Lon Ranch,Super Guitar Bros,Ocarina of Time,1:46,106,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,305,INDIFFERENT,False
 qWEXVUr5Nus,Place in the Snow,Richard Houghten,Quantum Flow,3:00,180,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,306,INDIFFERENT,False
-H08UZ2_avpk,Salento,René Aubry,Plaisirs d'amour,5:46,346,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,307,INDIFFERENT,False
 yL-_PGgFVvs,A Calf Born In Winter,Khruangbin,A Calf Born in Winter,3:30,210,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,309,INDIFFERENT,False
 MnP9xZpVZbs,Motherboard (Drumless Edition),Daft Punk,Random Access Memories (Drumless Edition),5:42,342,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,318,INDIFFERENT,False
 mlqMK5BUmoY,Carbon Based Thalassophile,E-Mantra,Drifting 2,6:20,380,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,319,INDIFFERENT,False
-Ryyz8KK-Yk4,dream river. (Async Ross rework),Woodsman,dream river. (Async Ross reworks),3:15,195,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,328,INDIFFERENT,False
 tTJ62RIC4Js,Infinite Motion,Minddigger,"The Chill Stompers, II",8:33,513,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,333,INDIFFERENT,False
-ZPsRj20nuuA,"Fauna, Pt I",Gidge,Autumn Bells,3:34,214,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,335,INDIFFERENT,False
 9ytiyD_QA2s,magic,"Medasin, MAE.SUN, & Sara Kawai",sounds,5:57,357,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,343,INDIFFERENT,False
-DZR2W0BNfcQ,Once in a Long Time,Joey Pecoraro,Once in a Long Time,3:23,203,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,346,INDIFFERENT,False
-NXdnBHXLDfQ,Go Home,h hunt,Playing Piano for Dad,3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,359,INDIFFERENT,False
-pJxl6BITXSY,Wash Away The Dust,Billow Observatory,Stareside,4:35,275,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,360,INDIFFERENT,False
-C4SyxvOiQjY,"Folia: Rodrigo Martinez, 1490 - Improvisations D'Après Le Villancico Du CMP (Anonyme)",Jordi Savall,La Folia,5:37,337,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,361,INDIFFERENT,False
 NcDfrGDXpyc,Stellardrone - I Don't Belong Here [SpaceAmbient Channel],SpaceAmbient,,4:35,275,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,364,INDIFFERENT,False
 4NghA79lISs,The Ghost in Your Smile,Les Trés,Les Trés,4:02,242,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,367,INDIFFERENT,False
 3gVbNfvFCN8,Seeking Nowhere (feat. Manifolds),Avatus,Seeking Nowhere,5:09,309,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,368,INDIFFERENT,False
 fsppc9t4Htc,Richter: Space 11 (Invisible Pages Over),"Ben Russell, Brian Snow, Caleb Burhans, Yuki Numata Resnick",From Sleep,5:16,316,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,372,INDIFFERENT,False
 xgqcaB6zhao,Obsidian,Wild Colors,Obsidian,3:59,239,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,374,INDIFFERENT,False
 O8det02XaIA,Meditation,Turu Anasi,Meditation,8:30,510,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,376,LIKE,False
-1k5-tNlsg08,Coast 2 Coast,Harvey Sutherland,Expectations,7:10,430,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,383,INDIFFERENT,False
-PhRm-oVm0_Y,Close (Luke Howard Rework),Ed Carlsen,The Journey Tapes (Reworked),3:39,219,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,386,INDIFFERENT,False
 mq39o5kLSl4,beyond horizons,our distant worlds,sleeping moons,3:15,195,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,390,INDIFFERENT,False
-Juz1g3gAOug,Riders On The Storm,Marcin Wasilewski Trio,En attendant,5:34,334,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,395,INDIFFERENT,False
 SAcSgQqgjGA,Debussy: Clair de lune from Suite bergamasque. Prelude (2005 Digital Remaster),"Claude Debussy, Nancy Allen",Debussy Harp Recital,4:59,299,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,399,INDIFFERENT,False
-MfmT776tflM,The Prelude To,Lawrence English,A Colour For Autumn,2:17,137,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,402,INDIFFERENT,False
-4b9Nqn4HqZk,Breathe,Skinshape,Filoxiny,3:04,184,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,404,LIKE,False
 lr19_EzZHEM,Low Sun,Hermanos Gutiérrez,Sonido Cósmico,3:09,189,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,405,INDIFFERENT,False
 i5m2YWVN9Fg,Song of Storms,Super Guitar Bros,Ocarina of Time,1:40,100,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,406,INDIFFERENT,False
 ub1xfytVNf8,Saving A Life,richard houghten,Sonata De Grillo,2:40,160,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,407,INDIFFERENT,False
@@ -585,15 +615,10 @@ qhvPsf7nkKs,Dewel (Stereo Master),Mulatu Astatke,Mulatu Of Ethiopia,4:13,253,202
 d76YVQom75Q,One And The Same,Helios,Domicile,5:46,346,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,424,INDIFFERENT,False
 wvPY4Jsb9Z4,Behold,Joey Fehrenbach,Mellowdrama,5:20,320,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,425,INDIFFERENT,False
 k1n_PvyAVlI,Aurora En Pekin,"Los Cubanos, Marc Ribot",Y Los Cubanos Postizos,5:32,332,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,427,INDIFFERENT,False
-fGf7q3qCsFQ,River (Anna Phoebe Rework),Balladeste & Anna Phoebe,Beyond Breath Rework EP,3:25,205,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,429,INDIFFERENT,False
 PQZXVksvGrE,Gradience,Nightflyer,Gradience,3:56,236,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,430,INDIFFERENT,False
 7cGtk7x7Hw0,The Border,Minami Deutsch,Fortune Goodies,4:45,285,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,431,INDIFFERENT,False
-ktYDXGIpzEE,When Darkness Comes,E-Mantra,Expedition Frozen Taiga,6:12,372,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,433,INDIFFERENT,False
-80LhtHY_fHw,Time,Pink Floyd,The Dark Side of the Moon,6:54,414,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,438,INDIFFERENT,False
 H41m_JWiH0o,Monotony,Tim Hecker,No Highs,8:23,503,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,449,INDIFFERENT,False
-YAtV3BDRu5Y,Recurring Dream,Innesti,In Letters,4:14,254,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,451,INDIFFERENT,False
 ZmFlUYfcdy8,Ruska,Thomas Köner,Teimo,3:47,227,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,454,INDIFFERENT,False
-xc7atbM0k6g,Poa Alpina,Biosphere,Substrata + Man with a Movie Camera,4:12,252,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,456,INDIFFERENT,False
 8bDewwR407M,At the Mercy of the Waves,Clem Leek,Holly Lane,5:00,300,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,458,INDIFFERENT,False
 fC9SS0EDGro,190306-07,Hideyuki Hashimoto,Soukou,2:17,137,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,459,INDIFFERENT,False
 L8BiDoGm1Mo,Forever and Ever,Alice in Freefall,World Breathes,3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,462,INDIFFERENT,False
@@ -602,10 +627,7 @@ xwwemve2EeI,The Mist,Phaeleh,Lost Time,6:34,394,2026-09-12T10:40:53Z,2026-09-12T
 fietqFFRZ6E,Innisfail (Rivers of My Fathers),Kyle Bobby Dunn,Bring Me The Head of Kyle Bobby Dunn,7:37,457,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,467,INDIFFERENT,False
 n6JYqUspP1U,Allemande BWV 1011,"Johann Sebastian Bach, Jordi Savall",Les Voix Humaines,5:09,309,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,472,INDIFFERENT,False
 OnydkS7sRHc,Bloom (Jamie xx Rework Part 3),Radiohead,TKOL RMX 8,7:48,468,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,473,INDIFFERENT,False
-Sxp0Br5E2AU,Mountains and Peace,Sea of Waves,Blue Sphere,3:02,182,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,474,INDIFFERENT,False
-yBoCGqCqqYc,Tear Away,Pechblende,Solstice,6:04,364,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,475,INDIFFERENT,False
 4YPJu97_NMM,Last Light,Manual,Confluence,7:17,437,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,479,INDIFFERENT,False
-MOH_oY5wX10,HAPUNA SUNSET  Charles Michael Brotman,Charles Michael Brotman,Slack Key Guitar,3:51,231,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,480,INDIFFERENT,False
 oNHLwIr3xXM,Yearn,Ed Carlsen,Yearn,3:19,199,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,481,INDIFFERENT,False
 V3uj_LuUzyI,Deep Waters,Infinity Fields,Infinite Waters,4:30,270,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,482,INDIFFERENT,False
 YqRNXPQC8dk,Slumber,Field Rotation,And Tomorrow I Will Sleep,3:15,195,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,484,INDIFFERENT,False
