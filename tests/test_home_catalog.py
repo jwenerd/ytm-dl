@@ -184,7 +184,8 @@ def test_sync_home_shelf_multi_run_lifecycle(tmp_path):
     assert res1["new_items"] == 2
     assert res1["updated_items"] == 0
 
-    yaml_file = tmp_path / "home" / "that_summer_feeling.yaml"
+    yaml_file = tmp_path / "meta" / "home" / "that_summer_feeling.yaml"
+    assert not (tmp_path / "home" / "that_summer_feeling.yaml").exists()
     with open(yaml_file) as f:
         meta1 = yaml.safe_load(f)
     assert meta1["title"] == "That summer feeling"
@@ -294,4 +295,5 @@ def test_sync_all_home_shelves_orchestration(tmp_path, monkeypatch):
     assert results[0]["new_items"] == 1
 
     assert (tmp_path / "home" / "quick_picks.csv").exists()
-    assert (tmp_path / "home" / "quick_picks.yaml").exists()
+    assert (tmp_path / "meta" / "home" / "quick_picks.yaml").exists()
+    assert not (tmp_path / "home" / "quick_picks.yaml").exists()

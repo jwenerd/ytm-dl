@@ -258,6 +258,7 @@ def merge_catalog_tracks(
 def fetch_and_merge_mix(
     mix_info: dict,
     output_base_dir: str = "output/mixes",
+    meta_base_dir: str | None = None,
     limit: int = 400,
     run_time: datetime | None = None,
     run_id: str | None = None,
@@ -270,12 +271,19 @@ def fetch_and_merge_mix(
     run_id = get_run_id(run_time, run_id)
     captured_at = run_time.strftime("%Y-%m-%dT%H:%M:%SZ")
 
+    if meta_base_dir is None:
+        parent = os.path.dirname(output_base_dir)
+        folder = os.path.basename(output_base_dir.rstrip("/\\"))
+        meta_base_dir = (
+            os.path.join(parent, "meta", folder) if parent else os.path.join("meta", folder)
+        )
+
     res = client.get_playlist(playlist_id, limit=limit)
     raw_tracks = res.get("tracks", [])
 
     mix_slug = slugify(mix_info.get("title", playlist_id))
     csv_path = os.path.join(output_base_dir, f"{mix_slug}.csv")
-    yaml_path = os.path.join(output_base_dir, f"{mix_slug}.yaml")
+    yaml_path = os.path.join(meta_base_dir, f"{mix_slug}.yaml")
 
     existing_rows, existing_lookup = read_existing_catalog(csv_path)
     merged_tracks, new_count, updated_count = merge_catalog_tracks(
@@ -320,15 +328,23 @@ def fetch_and_merge_mix(
 
 def sync_all_mood_mixes(
     output_base_dir: str | None = None,
+    meta_base_dir: str | None = None,
     max_workers: int = 8,
     run_time: datetime | None = None,
     run_id: str | None = None,
 ) -> list[dict]:
     """
     Main entry point: Discovers, fetches in parallel, and merges all Supermixes & Core Home Mixes.
+    CSVs are saved to output_base_dir and metadata to meta_base_dir (default: output/meta/mixes).
     """
     if output_base_dir is None:
         output_base_dir = output_path("mixes")
+    if meta_base_dir is None:
+        parent = os.path.dirname(output_base_dir)
+        folder = os.path.basename(output_base_dir.rstrip("/\\"))
+        meta_base_dir = (
+            os.path.join(parent, "meta", folder) if parent else os.path.join("meta", folder)
+        )
 
     if run_time is None:
         run_time = datetime.now(UTC)
@@ -350,6 +366,7 @@ def sync_all_mood_mixes(
             return fetch_and_merge_mix(
                 mix_info,
                 output_base_dir=output_base_dir,
+                meta_base_dir=meta_base_dir,
                 limit=400,
                 run_time=run_time,
                 run_id=run_id,

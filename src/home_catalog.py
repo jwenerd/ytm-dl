@@ -290,6 +290,7 @@ def sync_home_shelf(
     output_base_dir: str,
     run_time: datetime,
     run_id: str,
+    meta_base_dir: str | None = None,
 ) -> dict:
     """Merges a single home shelf into its continuous catalog files (<slug>.csv and .yaml)."""
     title = shelf["title"]
@@ -297,8 +298,15 @@ def sync_home_shelf(
     if not slug:
         slug = "home_recommendations"
 
+    if meta_base_dir is None:
+        parent = os.path.dirname(output_base_dir)
+        folder = os.path.basename(output_base_dir.rstrip("/\\"))
+        meta_base_dir = (
+            os.path.join(parent, "meta", folder) if parent else os.path.join("meta", folder)
+        )
+
     csv_path = os.path.join(output_base_dir, f"{slug}.csv")
-    yaml_path = os.path.join(output_base_dir, f"{slug}.yaml")
+    yaml_path = os.path.join(meta_base_dir, f"{slug}.yaml")
     captured_at = run_time.strftime("%Y-%m-%dT%H:%M:%SZ")
 
     existing_rows, existing_lookup = read_catalog(csv_path, key_field="id")
@@ -356,17 +364,24 @@ def sync_home_shelf(
 
 def sync_all_home_shelves(
     output_base_dir: str | None = None,
+    meta_base_dir: str | None = None,
     max_workers: int = 8,
     run_time: datetime | None = None,
     run_id: str | None = None,
 ) -> list[dict]:
     """
     Main entrypoint for Home recommendations:
-    Discovers all active Home shelves, merges into continuous living libraries in output/home/,
-    and writes companion YAML metadata.
+    Discovers all active Home shelves, merges into continuous living libraries in output_base_dir
+    (default: output/home/), and writes companion YAML metadata in meta_base_dir (default: output/meta/home/).
     """
     if output_base_dir is None:
         output_base_dir = output_path("home")
+    if meta_base_dir is None:
+        parent = os.path.dirname(output_base_dir)
+        folder = os.path.basename(output_base_dir.rstrip("/\\"))
+        meta_base_dir = (
+            os.path.join(parent, "meta", folder) if parent else os.path.join("meta", folder)
+        )
 
     if run_time is None:
         run_time = datetime.now(UTC)
@@ -391,6 +406,7 @@ def sync_all_home_shelves(
             return sync_home_shelf(
                 shelf_info,
                 output_base_dir=output_base_dir,
+                meta_base_dir=meta_base_dir,
                 run_time=run_time,
                 run_id=run_id,
             )

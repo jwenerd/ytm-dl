@@ -6,10 +6,12 @@ from src.mood_mixes import (
     discover_chip_supermixes,
     discover_home_core_mixes,
     discover_mood_chips,
+    fetch_and_merge_mix,
     is_supermix_or_core_mix,
     merge_catalog_tracks,
     read_existing_catalog,
     slugify,
+    sync_all_mood_mixes,
 )
 
 
@@ -348,3 +350,78 @@ def test_read_existing_catalog_and_roundtrip():
         assert lookup["v123"]["title"] == "Track Title"
         assert lookup["v123"]["times_recommended"] == "3"
         assert rows[0]["videoId"] == "v123"
+
+
+def test_fetch_and_merge_mix_destinations(tmp_path, monkeypatch):
+    class MockClient:
+        def get_playlist(self, playlist_id, limit=400):
+            return {
+                "title": "Chill Supermix",
+                "tracks": [
+                    {
+                        "videoId": "vid_mix1",
+                        "title": "Chill Track",
+                        "artists": [{"name": "Chill Artist"}],
+                        "album": {"name": "Chill Album"},
+                        "duration": "3:00",
+                        "duration_seconds": 180,
+                    }
+                ],
+            }
+
+    monkeypatch.setattr("src.mood_mixes.get_thread_client", lambda: MockClient())
+
+    mix_info = {
+        "title": "Chill Supermix",
+        "playlist_id": "PL_chill",
+        "mood_chip": "Relax",
+    }
+    output_dir = str(tmp_path / "mixes")
+
+    result = fetch_and_merge_mix(mix_info, output_base_dir=output_dir)
+
+    assert result["mix_slug"] == "chill_supermix"
+    assert result["total_tracks"] == 1
+
+    csv_path = tmp_path / "mixes" / "chill_supermix.csv"
+    yaml_path = tmp_path / "meta" / "mixes" / "chill_supermix.yaml"
+
+    assert csv_path.exists()
+    assert yaml_path.exists()
+    assert not (tmp_path / "mixes" / "chill_supermix.yaml").exists()
+
+
+def test_sync_all_mood_mixes_destinations(tmp_path, monkeypatch):
+    class MockClient:
+        def get_playlist(self, playlist_id, limit=400):
+            return {
+                "title": "Energy Supermix",
+                "tracks": [
+                    {
+                        "videoId": "vid_energy",
+                        "title": "Energy Track",
+                        "artists": [{"name": "Energy Artist"}],
+                        "album": {"name": "Energy Album"},
+                        "duration": "2:30",
+                        "duration_seconds": 150,
+                    }
+                ],
+            }
+
+    monkeypatch.setattr("src.mood_mixes.get_thread_client", lambda: MockClient())
+    monkeypatch.setattr(
+        "src.mood_mixes.discover_all_supermixes",
+        lambda _client: [
+            {"title": "Energy Supermix", "playlist_id": "PL_energy", "mood_chip": "Workout"}
+        ],
+    )
+
+    output_dir = str(tmp_path / "mixes")
+    results = sync_all_mood_mixes(output_base_dir=output_dir, max_workers=1)
+
+    assert len(results) == 1
+    assert results[0]["mix_slug"] == "energy_supermix"
+
+    assert (tmp_path / "mixes" / "energy_supermix.csv").exists()
+    assert (tmp_path / "meta" / "mixes" / "energy_supermix.yaml").exists()
+    assert not (tmp_path / "mixes" / "energy_supermix.yaml").exists()
