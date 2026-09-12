@@ -14,6 +14,7 @@ import argparse
 from datetime import datetime, timezone, timedelta
 
 from src.clean_history import clean_history
+from src.history_partition import partition_history_csv
 
 
 def parse_run_id(commit_msg, short_sha):
@@ -270,6 +271,10 @@ def run_backfill(branch="main-output", target_csv="output/history.csv", apply=Fa
             writer.writerows(cleaned_rows)
 
         print(f"  [APPLY] Written {len(cleaned_rows):,} rows to {target_csv} successfully!")
+
+        output_dir = os.path.join(os.path.dirname(target_csv), "history")
+        month_results = partition_history_csv(history_csv_path=target_csv, output_dir=output_dir)
+        print(f"  [APPLY] Partitioned {len(cleaned_rows):,} rows across {len(month_results)} monthly files in {output_dir}/")
     else:
         print(f"\n  [DRY RUN] Run with --apply to write changes to {target_csv}")
 
@@ -281,6 +286,14 @@ if __name__ == "__main__":
     parser.add_argument("--branch", default="main-output", help="Git branch to inspect (default: main-output)")
     parser.add_argument("--csv", default="output/history.csv", help="Path to history.csv")
     parser.add_argument("--apply", action="store_true", help="Apply changes and overwrite history.csv")
+    parser.add_argument("--split-only", action="store_true", help="Only split existing CSV into monthly files without replaying git history")
     args = parser.parse_args()
 
-    run_backfill(branch=args.branch, target_csv=args.csv, apply=args.apply)
+    if args.split_only:
+        output_dir = os.path.join(os.path.dirname(args.csv), "history")
+        results = partition_history_csv(history_csv_path=args.csv, output_dir=output_dir)
+        print(f"Partitioned {args.csv} into {len(results)} month files in {output_dir}/")
+        for m, count in sorted(results.items()):
+            print(f"  {m}.csv: {count:,} rows")
+    else:
+        run_backfill(branch=args.branch, target_csv=args.csv, apply=args.apply)

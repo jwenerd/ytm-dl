@@ -11,6 +11,7 @@ from .util import (
     write_output_yaml,
 )
 from .meta import MetaOutput
+from .history_partition import partition_history_csv, get_months_from_rows
 
 PREPEND_FILES = [
     "home",
@@ -114,6 +115,23 @@ class Output:
 
         if self.hash_before == file_hash(self.csv_file):
             return print("no updates to " + self.file)
+
+        if self.file == "history":
+            played_at_idx = (
+                self.mapping.columns.index("played_at")
+                if "played_at" in self.mapping.columns
+                else 8
+            )
+            touched_months = (
+                get_months_from_rows(self.rows, played_at_idx=played_at_idx)
+                if use_prepend
+                else None
+            )
+            partition_history_csv(
+                self.csv_file_with_path,
+                output_dir=output_path("history"),
+                target_months=touched_months,
+            )
 
         self.meta.write_files()
         length_rows = str(len(self.rows))
