@@ -3,11 +3,11 @@ mood_chip: Workout
 playlist_id: RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk
 description: Push yourself with this mix of upbeat songs that span all your tastes.
   Always updating.
-featured_artists: Lynnic, Justice, Hallucinogen, Daft Punk
+featured_artists: Hallucinogen, Shpongle, Justice, Tame Impala
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 749
-new_tracks_latest_run: 58
+total_unique_tracks: 800
+new_tracks_latest_run: 51
 latest_batch_size: 500
-last_updated: '2026-09-12T11:05:11Z'
-run_id: gh-6760
+last_updated: '2026-09-12T11:08:41Z'
+run_id: gh-6761
