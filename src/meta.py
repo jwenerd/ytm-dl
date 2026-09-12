@@ -107,6 +107,30 @@ def write_readme():
     write_output_file("README.md", md_lines(markdown))
 
 
+def write_auth_meta():
+    auth_info = MetaStore.get("auth").data.get("info")
+    if not auth_info or "captured_at" not in auth_info:
+        from .api import get_auth_info
+
+        fresh_info = get_auth_info()
+        if auth_info:
+            fresh_info.update({k: v for k, v in auth_info.items() if v is not None})
+        auth_info = fresh_info
+
+    captured = auth_info.get("captured_at", "Unknown")
+    age = auth_info.get("age", "Unknown")
+    auth_type = auth_info.get("auth_type", "Unknown")
+
+    lines = [
+        "### 🔑 Authentication",
+        f"- **Mode**: `{auth_type}`",
+    ]
+    if "captured_at" in auth_info:
+        lines.append(f"- **Session Age**: {age} (Captured: `{captured}`)")
+    lines.append("- **Status**: ✅ Active & Valid")
+    write_file("tmp/step_output/auth_info.md", "\n".join(lines) + "\n")
+
+
 def write_api_meta():
     data = list(MetaStore.get("api").data.values())
     md = md_lines("### 🤖 API Info", md_table(data))
@@ -121,6 +145,7 @@ def write_meta(updated=False):
         url = f"https://github.com/{GITHUB_META['repository']}/commit/__OUTPUTCOMMIT__?diff=unified&w=1"
         write_file("tmp/commit_link.md", f"### ± [Output Commit]({url})" + "\n\n")
 
+    write_auth_meta()
     write_api_meta()
 
 

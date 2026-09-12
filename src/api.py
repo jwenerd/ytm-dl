@@ -71,8 +71,10 @@ def validate_auth(client=None) -> dict:
         if isinstance(res, dict) and "tracks" in res:
             auth_info["valid"] = True
             auth_info["sample_count"] = len(res.get("tracks", []))
+            MetaStore.get("auth").add("info", auth_info)
             return auth_info
         auth_info["valid"] = True
+        MetaStore.get("auth").add("info", auth_info)
         return auth_info
     except Exception as e:
         err_msg = str(e)

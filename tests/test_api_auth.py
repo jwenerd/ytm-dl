@@ -132,3 +132,26 @@ def test_report_auth_failure_ci_output(tmp_path, monkeypatch, capsys):
     content = summary_file.read_text(encoding="utf-8")
     assert "YouTube Music Authentication Expired" in content
     assert "2h old" in content
+
+
+def test_write_auth_meta(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    from src.meta import write_auth_meta
+
+    with patch(
+        "src.api.get_auth_info",
+        return_value={
+            "auth_type": "browser.json",
+            "captured_at": "2026-09-12 19:15:39Z",
+            "age": "30m old",
+        },
+    ):
+        write_auth_meta()
+
+    auth_md = tmp_path / "tmp" / "step_output" / "auth_info.md"
+    assert auth_md.exists()
+    content = auth_md.read_text(encoding="utf-8")
+    assert "### 🔑 Authentication" in content
+    assert "`browser.json`" in content
+    assert "30m old" in content
+    assert "Active & Valid" in content

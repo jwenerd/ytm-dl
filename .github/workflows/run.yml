@@ -50,6 +50,14 @@ jobs:
           elif [ -n "$YTM_OAUTH" ]; then
             echo "$YTM_OAUTH" > oauth.json
           fi
+      - name: Validate Auth 🔑
+        env:
+          OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
+          OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
+        run: |
+          echo "::group::Validate YTM Authentication"
+          python ytm-dl.py auth
+          echo "::endgroup::"
       - name: Setup Output Worktree
         run: |
           echo "::group::Setup main-output worktree"
@@ -95,6 +103,10 @@ jobs:
           fi
 
           echo "::group::github step summary"
+          if [ -f "./tmp/step_output/auth_info.md" ]; then
+            cat "./tmp/step_output/auth_info.md" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+          fi
           echo "### ⚙️ python ytm-dl.py $RUN_OPTION" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
@@ -103,6 +115,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           for file in ./tmp/step_output/*.md; do
             [ -e "$file" ] || continue
+            [ "$file" = "./tmp/step_output/auth_info.md" ] && continue
             cat "$file" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
           done

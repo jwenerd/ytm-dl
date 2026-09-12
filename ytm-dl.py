@@ -53,6 +53,9 @@ def do_updates(option):
         if "captured_at" in auth_info:
             print(f"  Session Captured: {captured} ({age})")
         print(f"  Probe Result:     Successfully verified {sample} liked track sample.")
+        from src.meta import write_auth_meta
+
+        write_auth_meta()
         return
 
     if option == "mixes":
