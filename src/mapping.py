@@ -60,6 +60,19 @@ class HistorySchema(SongSchema):
         return keys + trailing
 
 
+class LikedSongSchema(SongSchema):
+    primary_key = "videoId"
+
+    liked_at = fields.Str()
+    run_id = fields.Str()
+
+    @property
+    def keys(self):
+        trailing = ["liked_at", "run_id"]
+        keys = [k for k in super().keys if k not in trailing]
+        return keys + trailing
+
+
 class ArtistSchema(BaseSchema):
     primary_key = "browseId"
 
@@ -94,6 +107,7 @@ class HomeSchema(BaseSchema):
 SCHEMA_MAPPING = {
     "home": HomeSchema,
     "history": HistorySchema,
+    "liked_songs": LikedSongSchema,
     "library_subscriptions": ArtistSchema,
     "_songs": SongSchema,
     "_artists": ArtistSchema,
@@ -231,6 +245,29 @@ def enrich_home_records(records, run_time=None, run_id=None):
     return records
 
 
+def enrich_liked_songs_records(records, run_time=None, run_id=None):
+    """
+    Enriches liked songs records with ISO UTC liked_at timestamp and run_id.
+    """
+    if not records:
+        return records
+
+    if run_time is None:
+        run_time = datetime.now(timezone.utc)
+    run_id = get_run_id(run_time, run_id)
+    liked_at = run_time.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        if "liked_at" not in record or not record["liked_at"]:
+            record["liked_at"] = liked_at
+        if "run_id" not in record or not record["run_id"]:
+            record["run_id"] = run_id
+
+    return records
+
+
 class Mapping:
     def __init__(self, file, records):
         self.file: str = file
@@ -275,5 +312,7 @@ class Mapping:
             records = enrich_history_records(records)
         elif self.file == "home":
             records = enrich_home_records(records)
+        elif self.file == "liked_songs":
+            records = enrich_liked_songs_records(records)
         rows = self.schema.dump(records, many=True)
         return [self._get_values(row) for row in rows]

@@ -4,10 +4,12 @@ import pytest
 from src.mapping import (
     Mapping,
     SongSchema,
+    LikedSongSchema,
     HistorySchema,
     ArtistSchema,
     AlbumSchema,
     HomeSchema,
+    enrich_liked_songs_records,
     get_run_id,
 )
 
@@ -34,6 +36,7 @@ def test_get_run_id(monkeypatch):
 
 def test_schema_primary_keys():
     assert SongSchema.primary_key == "videoId"
+    assert LikedSongSchema.primary_key == "videoId"
     assert HistorySchema.primary_key == "videoId"
     assert ArtistSchema.primary_key == "browseId"
     assert AlbumSchema.primary_key == "browseId"
@@ -55,6 +58,55 @@ def test_mapping_columns_and_key_index():
     assert m_songs.primary_key == "videoId"
     assert "videoId" in m_songs.columns
     assert m_songs.key_index == m_songs.columns.index("videoId")
+    assert m_songs.columns == [
+        "title",
+        "artists",
+        "album",
+        "duration",
+        "duration_seconds",
+        "videoId",
+        "liked_at",
+        "run_id",
+    ]
+
+
+def test_enrich_liked_songs_records():
+    run_time = datetime(2026, 9, 12, 10, 0, 0, tzinfo=timezone.utc)
+    records = [
+        {"title": "Track 1", "videoId": "v1"},
+        {"title": "Track 2", "videoId": "v2", "liked_at": "2026-09-01T00:00:00Z", "run_id": "gh-100"},
+    ]
+    enriched = enrich_liked_songs_records(records, run_time=run_time, run_id="gh-200")
+    assert enriched[0]["liked_at"] == "2026-09-12T10:00:00Z"
+    assert enriched[0]["run_id"] == "gh-200"
+    # Existing liked_at and run_id are preserved
+    assert enriched[1]["liked_at"] == "2026-09-01T00:00:00Z"
+    assert enriched[1]["run_id"] == "gh-100"
+
+
+def test_liked_songs_mapping_rows():
+    sample_records = [
+        {
+            "title": "Liked Track",
+            "artists": [{"name": "Liked Artist"}],
+            "album": {"name": "Liked Album"},
+            "duration": "3:30",
+            "duration_seconds": 210,
+            "videoId": "vid_liked_123",
+        }
+    ]
+    mapping = Mapping("liked_songs", sample_records)
+    rows = mapping.get_rows()
+    assert len(rows) == 1
+    row = rows[0]
+    assert row[0] == "Liked Track"
+    assert row[1] == "Liked Artist"
+    assert row[2] == "Liked Album"
+    assert row[3] == "3:30"
+    assert row[4] == 210
+    assert row[5] == "vid_liked_123"
+    assert row[6] != ""  # liked_at populated
+    assert row[7] != ""  # run_id populated
 
 
 def test_history_mapping_rows():
