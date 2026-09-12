@@ -1,8 +1,8 @@
 import csv
 import os
 import re
-from datetime import datetime, timezone
 from collections import defaultdict
+from datetime import UTC, datetime
 
 
 def extract_month_from_timestamp(ts_str):
@@ -15,7 +15,7 @@ def extract_month_from_timestamp(ts_str):
         if match:
             return match.group(1)
 
-    return datetime.now(timezone.utc).strftime("%Y-%m")
+    return datetime.now(UTC).strftime("%Y-%m")
 
 
 def get_months_from_rows(rows, played_at_idx=8):
@@ -55,7 +55,7 @@ def partition_history_csv(
         target_months = set(target_months)
 
     # Read the master CSV
-    with open(history_csv_path, "r", newline="", encoding="utf-8") as f:
+    with open(history_csv_path, newline="", encoding="utf-8") as f:
         reader = csv.reader(f, delimiter=",")
         header = next(reader, None)
         if header is None:

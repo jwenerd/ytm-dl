@@ -1,21 +1,20 @@
-import os
-from datetime import datetime, timezone
-import pytest
+from datetime import UTC, datetime
+
 from src.mapping import (
+    AlbumSchema,
+    ArtistSchema,
+    HistorySchema,
+    HomeSchema,
+    LikedSongSchema,
     Mapping,
     SongSchema,
-    LikedSongSchema,
-    HistorySchema,
-    ArtistSchema,
-    AlbumSchema,
-    HomeSchema,
     enrich_liked_songs_records,
     get_run_id,
 )
 
 
 def test_get_run_id(monkeypatch):
-    fixed_time = datetime(2026, 9, 12, 8, 30, 0, tzinfo=timezone.utc)
+    fixed_time = datetime(2026, 9, 12, 8, 30, 0, tzinfo=UTC)
 
     # Direct explicit run_id
     assert get_run_id(run_id="custom_123") == "custom_123"
@@ -71,10 +70,15 @@ def test_mapping_columns_and_key_index():
 
 
 def test_enrich_liked_songs_records():
-    run_time = datetime(2026, 9, 12, 10, 0, 0, tzinfo=timezone.utc)
+    run_time = datetime(2026, 9, 12, 10, 0, 0, tzinfo=UTC)
     records = [
         {"title": "Track 1", "videoId": "v1"},
-        {"title": "Track 2", "videoId": "v2", "liked_at": "2026-09-01T00:00:00Z", "run_id": "gh-100"},
+        {
+            "title": "Track 2",
+            "videoId": "v2",
+            "liked_at": "2026-09-01T00:00:00Z",
+            "run_id": "gh-100",
+        },
     ]
     enriched = enrich_liked_songs_records(records, run_time=run_time, run_id="gh-200")
     assert enriched[0]["liked_at"] == "2026-09-12T10:00:00Z"

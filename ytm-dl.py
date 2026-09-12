@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-import sys
 import concurrent.futures
 import string
+import sys
 
 from src.api import ApiMethod, suggest_search
-from src.output import Output, update_search_suggestions
 from src.meta import write_meta
+from src.output import Output, update_search_suggestions
 
 
 def ytmusic_to_file(file):
@@ -18,15 +18,13 @@ def ytmusic_to_file(file):
 
 def do_search_suggestions():
     with concurrent.futures.ThreadPoolExecutor() as executor:
-        search_results = list(
-            executor.map(lambda l: suggest_search(l), list(string.ascii_lowercase))
-        )
+        search_results = list(executor.map(suggest_search, list(string.ascii_lowercase)))
     search_results = {row[0]: row[1] for row in search_results}
     return update_search_suggestions(search_results)
 
 
 def do_updates(option):
-    if not option in ["all", "frequent"]:
+    if option not in ["all", "frequent"]:
         print("Option must be all or frequent")
         print("  given: " + str(option))
         sys.exit(1)

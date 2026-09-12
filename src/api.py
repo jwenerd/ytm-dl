@@ -1,14 +1,17 @@
-from ytmusicapi import YTMusic, OAuthCredentials
-from .util import write_file, make_dict_readonly
-from .meta import MetaStore
-import yaml
-from types import MappingProxyType
-from time import time, strftime
-import threading
 import os
+import threading
+from time import strftime, time
+from types import MappingProxyType
 
-OAUTH_CLIENT_ID = os.environ.get('OAUTH_CLIENT_ID')
-OAUTH_CLIENT_SECRET = os.environ.get('OAUTH_CLIENT_SECRET')
+import yaml
+from ytmusicapi import OAuthCredentials, YTMusic
+
+from .meta import MetaStore
+from .util import make_dict_readonly, write_file
+
+OAUTH_CLIENT_ID = os.environ.get("OAUTH_CLIENT_ID")
+OAUTH_CLIENT_SECRET = os.environ.get("OAUTH_CLIENT_SECRET")
+
 
 def records_from_response(response):
     meta = {}
@@ -29,7 +32,12 @@ def get_thread_client():
         if os.path.exists("browser.json"):
             thread_local.ytmusic = YTMusic("browser.json")
         elif os.path.exists("oauth.json") and OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET:
-            thread_local.ytmusic = YTMusic("oauth.json", oauth_credentials=OAuthCredentials(client_id=OAUTH_CLIENT_ID, client_secret=OAUTH_CLIENT_SECRET))
+            thread_local.ytmusic = YTMusic(
+                "oauth.json",
+                oauth_credentials=OAuthCredentials(
+                    client_id=OAUTH_CLIENT_ID, client_secret=OAUTH_CLIENT_SECRET
+                ),
+            )
         else:
             raise RuntimeError("No valid authentication file found (browser.json or oauth.json)")
     return thread_local.ytmusic
@@ -55,28 +63,29 @@ make_dict_readonly(API_ARGUMENTS)
 def suggest_search(search):
     return [search, get_thread_client().get_search_suggestions(search)]
 
+
 def build_home_records(records):
     rows = []
     i = 0
     for tab in records:
         i = i + 1
-        home_title = tab['title']
-        for row in tab['contents']:
-            artists = row.get('artists', [])
-            if len(artists) and artists[0].get('name') == 'Song' and not artists[0].get('id'):
-                row['type'] = 'Song'
+        home_title = tab["title"]
+        for row in tab["contents"]:
+            artists = row.get("artists", [])
+            if len(artists) and artists[0].get("name") == "Song" and not artists[0].get("id"):
+                row["type"] = "Song"
                 artists.pop(0)
-            if not row.get('type') and row.get('playlistId'):
-                row['type'] = 'Playlist' if not row.get('videoId') else 'Video'
-            if not row.get('type') and row.get('subscribers'):
-                row['type'] = 'Artist'
-            row['home'] = home_title
-            row['home_index'] = i
-            row['id'] = row.get('browseId')
-            if not row['id']:
-                row['id'] = row.get('playlistId')
-            if not row['id']:
-                row['id'] = row.get('videoId')
+            if not row.get("type") and row.get("playlistId"):
+                row["type"] = "Playlist" if not row.get("videoId") else "Video"
+            if not row.get("type") and row.get("subscribers"):
+                row["type"] = "Artist"
+            row["home"] = home_title
+            row["home_index"] = i
+            row["id"] = row.get("browseId")
+            if not row["id"]:
+                row["id"] = row.get("playlistId")
+            if not row["id"]:
+                row["id"] = row.get("videoId")
 
             rows.append(row)
     return rows
@@ -98,7 +107,6 @@ class ApiMethod:
         self.method_args = API_ARGUMENTS.get(method, DEFAULT_ARGUMENTS)
         if isinstance(self.method_args, MappingProxyType):
             self.method_args = dict(self.method_args)
-
 
     def perform(self):
         start_time = time()

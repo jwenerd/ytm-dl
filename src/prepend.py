@@ -9,7 +9,7 @@ def get_existing_ids(csv_file, key_index=None, limit=float("inf")):
         return []
 
     existing_ids = []
-    with open(csv_file, "r", newline="", encoding="utf-8") as f:
+    with open(csv_file, newline="", encoding="utf-8") as f:
         reader = csv.reader(f, delimiter=",")
         header = next(reader, None)
         if header is None:
@@ -78,7 +78,9 @@ def find_history_overlap(existing_ids, new_ids, max_window=15, min_ratio=0.75):
     return None
 
 
-def prepend_rows_for_file(csv_file, new_rows, is_history=False, is_home=False, key_index=None, by_key=False):
+def prepend_rows_for_file(
+    csv_file, new_rows, is_history=False, is_home=False, key_index=None, by_key=False
+):
     """
     Determine which rows from new_rows should be prepended to the CSV file.
     - If is_history: Uses sequence alignment to find new play events.
@@ -104,7 +106,9 @@ def prepend_rows_for_file(csv_file, new_rows, is_history=False, is_home=False, k
         start_index = find_history_overlap(existing_ids, new_ids)
 
         if start_index is None:
-            print(f"Warning: No history overlap found with {csv_file}. Prepending all {len(new_rows)} rows.")
+            print(
+                f"Warning: No history overlap found with {csv_file}. Prepending all {len(new_rows)} rows."
+            )
             return new_rows
 
         return new_rows[0:start_index]

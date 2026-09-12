@@ -1,7 +1,6 @@
 import csv
 import os
 import tempfile
-import pytest
 
 from src.history_partition import (
     extract_month_from_timestamp,
@@ -21,9 +20,42 @@ def test_extract_month_from_timestamp():
 
 def test_get_months_from_rows():
     rows = [
-        ["Song 1", "Artist 1", "Album", "true", "LIKE", "3:00", "180", "vid1", "2026-09-10T12:00:00Z", "gh-1"],
-        ["Song 2", "Artist 2", "Album", "true", "LIKE", "3:00", "180", "vid2", "2026-09-01T12:00:00Z", "gh-1"],
-        ["Song 3", "Artist 3", "Album", "false", "INDIFFERENT", "3:00", "180", "vid3", "2026-08-31T23:50:00Z", "gh-1"],
+        [
+            "Song 1",
+            "Artist 1",
+            "Album",
+            "true",
+            "LIKE",
+            "3:00",
+            "180",
+            "vid1",
+            "2026-09-10T12:00:00Z",
+            "gh-1",
+        ],
+        [
+            "Song 2",
+            "Artist 2",
+            "Album",
+            "true",
+            "LIKE",
+            "3:00",
+            "180",
+            "vid2",
+            "2026-09-01T12:00:00Z",
+            "gh-1",
+        ],
+        [
+            "Song 3",
+            "Artist 3",
+            "Album",
+            "false",
+            "INDIFFERENT",
+            "3:00",
+            "180",
+            "vid3",
+            "2026-08-31T23:50:00Z",
+            "gh-1",
+        ],
     ]
     months = get_months_from_rows(rows, played_at_idx=8)
     assert months == {"2026-09", "2026-08"}
@@ -31,14 +63,66 @@ def test_get_months_from_rows():
 
 def test_partition_history_csv_full():
     header = [
-        "title", "artists", "album", "inLibrary", "likeStatus",
-        "duration", "duration_seconds", "videoId", "played_at", "run_id"
+        "title",
+        "artists",
+        "album",
+        "inLibrary",
+        "likeStatus",
+        "duration",
+        "duration_seconds",
+        "videoId",
+        "played_at",
+        "run_id",
     ]
     rows = [
-        ["Song 1", "Artist 1", "Album 1", "true", "LIKE", "3:30", "210", "vid1", "2026-09-12T00:00:00Z", "gh-100"],
-        ["Song 2", "Artist 2", "Album 2", "true", "LIKE", "4:00", "240", "vid2", "2026-09-10T00:00:00Z", "gh-99"],
-        ["Song 3", "Artist 3", "Album 3", "false", "INDIFFERENT", "2:45", "165", "vid3", "2026-08-15T00:00:00Z", "gh-98"],
-        ["Song 4", "Artist 4", "Album 4", "false", "INDIFFERENT", "3:15", "195", "vid4", "2025-12-25T00:00:00Z", "gh-97"],
+        [
+            "Song 1",
+            "Artist 1",
+            "Album 1",
+            "true",
+            "LIKE",
+            "3:30",
+            "210",
+            "vid1",
+            "2026-09-12T00:00:00Z",
+            "gh-100",
+        ],
+        [
+            "Song 2",
+            "Artist 2",
+            "Album 2",
+            "true",
+            "LIKE",
+            "4:00",
+            "240",
+            "vid2",
+            "2026-09-10T00:00:00Z",
+            "gh-99",
+        ],
+        [
+            "Song 3",
+            "Artist 3",
+            "Album 3",
+            "false",
+            "INDIFFERENT",
+            "2:45",
+            "165",
+            "vid3",
+            "2026-08-15T00:00:00Z",
+            "gh-98",
+        ],
+        [
+            "Song 4",
+            "Artist 4",
+            "Album 4",
+            "false",
+            "INDIFFERENT",
+            "3:15",
+            "195",
+            "vid4",
+            "2025-12-25T00:00:00Z",
+            "gh-97",
+        ],
     ]
 
     with tempfile.TemporaryDirectory() as tmp_dir:
@@ -61,7 +145,7 @@ def test_partition_history_csv_full():
         # Check 2026-09.csv content & order
         sep_csv = os.path.join(history_dir, "2026-09.csv")
         assert os.path.exists(sep_csv)
-        with open(sep_csv, "r", newline="", encoding="utf-8") as f:
+        with open(sep_csv, newline="", encoding="utf-8") as f:
             reader = list(csv.reader(f))
             assert reader[0] == header
             assert len(reader) == 3
@@ -71,7 +155,7 @@ def test_partition_history_csv_full():
         # Check 2026-08.csv
         aug_csv = os.path.join(history_dir, "2026-08.csv")
         assert os.path.exists(aug_csv)
-        with open(aug_csv, "r", newline="", encoding="utf-8") as f:
+        with open(aug_csv, newline="", encoding="utf-8") as f:
             reader = list(csv.reader(f))
             assert len(reader) == 2
             assert reader[1][0] == "Song 3"
@@ -79,13 +163,54 @@ def test_partition_history_csv_full():
 
 def test_partition_history_csv_targeted():
     header = [
-        "title", "artists", "album", "inLibrary", "likeStatus",
-        "duration", "duration_seconds", "videoId", "played_at", "run_id"
+        "title",
+        "artists",
+        "album",
+        "inLibrary",
+        "likeStatus",
+        "duration",
+        "duration_seconds",
+        "videoId",
+        "played_at",
+        "run_id",
     ]
     rows = [
-        ["Song New", "Artist 1", "Album 1", "true", "LIKE", "3:30", "210", "vidNew", "2026-09-15T00:00:00Z", "gh-101"],
-        ["Song 1", "Artist 1", "Album 1", "true", "LIKE", "3:30", "210", "vid1", "2026-09-12T00:00:00Z", "gh-100"],
-        ["Song Old", "Artist Old", "Album Old", "false", "INDIFFERENT", "3:00", "180", "vidOld", "2026-07-01T00:00:00Z", "gh-50"],
+        [
+            "Song New",
+            "Artist 1",
+            "Album 1",
+            "true",
+            "LIKE",
+            "3:30",
+            "210",
+            "vidNew",
+            "2026-09-15T00:00:00Z",
+            "gh-101",
+        ],
+        [
+            "Song 1",
+            "Artist 1",
+            "Album 1",
+            "true",
+            "LIKE",
+            "3:30",
+            "210",
+            "vid1",
+            "2026-09-12T00:00:00Z",
+            "gh-100",
+        ],
+        [
+            "Song Old",
+            "Artist Old",
+            "Album Old",
+            "false",
+            "INDIFFERENT",
+            "3:00",
+            "180",
+            "vidOld",
+            "2026-07-01T00:00:00Z",
+            "gh-50",
+        ],
     ]
 
     with tempfile.TemporaryDirectory() as tmp_dir:
@@ -98,7 +223,9 @@ def test_partition_history_csv_targeted():
             writer.writerows(rows)
 
         # Regenerate ONLY 2026-09
-        results = partition_history_csv(master_csv, output_dir=history_dir, target_months=["2026-09"])
+        results = partition_history_csv(
+            master_csv, output_dir=history_dir, target_months=["2026-09"]
+        )
 
         assert results == {"2026-09": 2}
         assert os.path.exists(os.path.join(history_dir, "2026-09.csv"))
@@ -106,10 +233,11 @@ def test_partition_history_csv_targeted():
 
 
 def test_output_history_integration(monkeypatch):
-    from src.output import Output
     import src.output as output_module
+    from src.output import Output
 
     with tempfile.TemporaryDirectory() as tmp_dir:
+
         def mock_output_path(file=""):
             if file:
                 return os.path.join(tmp_dir, file)
@@ -153,7 +281,7 @@ def test_output_history_integration(monkeypatch):
         files = os.listdir(month_dir)
         assert len(files) == 1
         month_file = os.path.join(month_dir, files[0])
-        with open(month_file, "r", newline="", encoding="utf-8") as f:
+        with open(month_file, newline="", encoding="utf-8") as f:
             lines = list(csv.reader(f))
             assert len(lines) == 3  # Header + 2 songs
             assert lines[0][0] == "title"

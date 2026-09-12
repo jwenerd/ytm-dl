@@ -1,7 +1,9 @@
-import os
-from datetime import datetime, timezone, timedelta
 import operator
+import os
+from datetime import UTC, datetime, timedelta
+
 from marshmallow import Schema, fields
+
 
 class BaseSchema(Schema):
     primary_key: str = "id"
@@ -116,18 +118,30 @@ SCHEMA_MAPPING = {
 
 
 MONTH_NAMES = {
-    "january": 1, "jan": 1,
-    "february": 2, "feb": 2,
-    "march": 3, "mar": 3,
-    "april": 4, "apr": 4,
+    "january": 1,
+    "jan": 1,
+    "february": 2,
+    "feb": 2,
+    "march": 3,
+    "mar": 3,
+    "april": 4,
+    "apr": 4,
     "may": 5,
-    "june": 6, "jun": 6,
-    "july": 7, "jul": 7,
-    "august": 8, "aug": 8,
-    "september": 9, "sep": 9, "sept": 9,
-    "october": 10, "oct": 10,
-    "november": 11, "nov": 11,
-    "december": 12, "dec": 12,
+    "june": 6,
+    "jun": 6,
+    "july": 7,
+    "jul": 7,
+    "august": 8,
+    "aug": 8,
+    "september": 9,
+    "sep": 9,
+    "sept": 9,
+    "october": 10,
+    "oct": 10,
+    "november": 11,
+    "nov": 11,
+    "december": 12,
+    "dec": 12,
 }
 
 
@@ -137,7 +151,7 @@ def snap_relative_played_at(played_str, run_time=None):
     'This week', 'Last week', 'August 2026') to a clean UTC midnight ISO timestamp.
     """
     if run_time is None:
-        run_time = datetime.now(timezone.utc)
+        run_time = datetime.now(UTC)
 
     ref_date = run_time.date() if isinstance(run_time, datetime) else run_time
 
@@ -194,7 +208,7 @@ def get_run_id(run_time=None, run_id=None):
     if github_run:
         return f"gh-{github_run}"
     if run_time is None:
-        run_time = datetime.now(timezone.utc)
+        run_time = datetime.now(UTC)
     return f"local_{run_time.strftime('%Y%m%d_%H%M%S')}"
 
 
@@ -207,7 +221,7 @@ def enrich_history_records(records, run_time=None, run_id=None):
         return records
 
     if run_time is None:
-        run_time = datetime.now(timezone.utc)
+        run_time = datetime.now(UTC)
     run_id = get_run_id(run_time, run_id)
 
     for record in records:
@@ -230,7 +244,7 @@ def enrich_home_records(records, run_time=None, run_id=None):
         return records
 
     if run_time is None:
-        run_time = datetime.now(timezone.utc)
+        run_time = datetime.now(UTC)
     run_id = get_run_id(run_time, run_id)
     captured_at = run_time.strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -253,7 +267,7 @@ def enrich_liked_songs_records(records, run_time=None, run_id=None):
         return records
 
     if run_time is None:
-        run_time = datetime.now(timezone.utc)
+        run_time = datetime.now(UTC)
     run_id = get_run_id(run_time, run_id)
     liked_at = run_time.strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -303,7 +317,7 @@ class Mapping:
     def _get_values(self, row):
         values = []
         for col in self.columns:
-            values += [row.get(col, '')]
+            values += [row.get(col, "")]
         return values
 
     def get_rows(self):

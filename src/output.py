@@ -1,17 +1,18 @@
 import csv
 import os.path
 import shutil
+
+from .history_partition import get_months_from_rows, partition_history_csv
 from .mapping import Mapping
+from .meta import MetaOutput
 from .prepend import prepend_rows_for_file
 from .util import (
-    file_hash,
     file_exists,
+    file_hash,
     output_path,
     read_output_yaml,
     write_output_yaml,
 )
-from .meta import MetaOutput
-from .history_partition import partition_history_csv, get_months_from_rows
 
 PREPEND_FILES = [
     "home",
@@ -32,7 +33,9 @@ BY_KEY = ["library_subscriptions", "library_upload_artists", "library_artists"]
 class Output:
     readme_written = False
 
-    def __init__(self, file, records, meta={}):
+    def __init__(self, file, records, meta=None):
+        if meta is None:
+            meta = {}
         self.file = file
         self.csv_file = self.file + ".csv"
         self.csv_file_with_path = output_path(self.csv_file)
@@ -61,9 +64,7 @@ class Output:
 
         # move all the values from the previous file to the new file; open in append
         # mode so starts at the end of the file
-        with open(prev_file, "r") as old_file, open(
-            self.csv_file_with_path, "a+"
-        ) as new_file:
+        with open(prev_file) as old_file, open(self.csv_file_with_path, "a+") as new_file:
             for index, line in enumerate(old_file):
                 if index == 0:
                     continue
@@ -159,7 +160,7 @@ def read_search_suggestions():
 def get_words_from_suggestions(size_gt=3):
     data = read_search_suggestions()
     words = [" ".join(i).split() for i in list(data.values())]
-    words = [w for l in words for w in l]
+    words = [w for word_list in words for w in word_list]
     words = [word for word in set(words) if len(word) > size_gt]
     return words
 
