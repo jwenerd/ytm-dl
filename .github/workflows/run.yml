@@ -148,9 +148,12 @@ jobs:
 
           git add -A output/
           if ! git diff-index --quiet HEAD output/; then
-            RANDOM_EMOJIS=$(python3 -c "import random; emojis=['🎵','🎶','🎧','📻','🎷','🎸','🎹','🎺','🎻','🥁','💿','📀','🔥','✨','🚀','🎉','⚡','🕺','💃','🤠','🥑','🥐','☕','🍕','🪩','🏖️','🛸','🏄‍♂️','👾']; print(' '.join(random.sample(emojis, 3)))")
-
-            git commit --message="$GITHUB_JOB($RUN_OPTION) $GITHUB_EVENT_NAME #$GITHUB_RUN_NUMBER $RANDOM_EMOJIS"
+            COMMIT_MSG_FILE="$GITHUB_WORKSPACE/tmp/commit_message.txt"
+            if [ -f "$COMMIT_MSG_FILE" ]; then
+              git commit -F "$COMMIT_MSG_FILE"
+            else
+              git commit --message="$GITHUB_JOB($RUN_OPTION) $GITHUB_EVENT_NAME #$GITHUB_RUN_NUMBER"
+            fi
             git pull --rebase origin main-output || true
             git push origin main-output
 

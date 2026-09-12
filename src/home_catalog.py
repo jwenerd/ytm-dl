@@ -29,6 +29,7 @@ from .catalog import (
     write_catalog_csv,
     write_catalog_yaml,
 )
+from .changes import ChangeTracker
 from .mapping import ExtractNameStr, HomeCatalogItemSchema, get_run_id
 from .util import output_path, resolve_meta_dir, slugify
 
@@ -420,5 +421,25 @@ def sync_all_home_shelves(
             print(f"🏠 Home: ✨ [{slug}] +{new_cnt} new, {upd_cnt} updated ({tot} total)")
         else:
             print(f"🏠 Home: ☕ [{slug}] {upd_cnt} updated ({tot} total)")
+
+    changed_shelves = [r for r in results if r["new_items"] > 0]
+    if changed_shelves:
+        if len(changed_shelves) == 1:
+            r = changed_shelves[0]
+            log = f"🏠 Home: ✨ [{r['slug']}] +{r['new_items']} new, {r['updated_items']} updated ({r['total_items']} total)"
+            ChangeTracker.record(emoji="🏠", label="Home", count=r["new_items"], log_message=log)
+        else:
+            shelf_details = [
+                f"- [{r['slug']}] +{r['new_items']} new ({r['total_items']} total)"
+                for r in changed_shelves
+            ]
+            log = f"🏠 Home: ✨ +{total_new} new items across {len(changed_shelves)} shelves"
+            ChangeTracker.record(
+                emoji="🏠",
+                label="Home",
+                count=total_new,
+                log_message=log,
+                details=shelf_details,
+            )
 
     return results

@@ -2,6 +2,7 @@ import csv
 import os.path
 import shutil
 
+from .changes import ChangeTracker
 from .history_partition import get_months_from_rows, partition_history_csv
 from .mapping import Mapping
 from .meta import MetaOutput
@@ -41,6 +42,7 @@ FILE_DISPLAY: dict[str, tuple[str, str]] = {
     "library_upload_albums": ("☁️", "Uploaded Albums"),
     "search/suggest_by_letter": ("🔤", "Search Suggestions"),
     "search/suggest_by_letter.yaml": ("🔤", "Search Suggestions"),
+    "mixes": ("🎛️", "Mixes"),
 }
 
 
@@ -174,6 +176,12 @@ class Output:
         else:
             log = f"{emoji} {label}: 🆕 Created with {length_rows} rows"
         print(log)
+        ChangeTracker.record(
+            emoji=emoji,
+            label=label,
+            count=length_rows,
+            log_message=log,
+        )
 
         return self.file
 
@@ -208,7 +216,14 @@ def update_search_suggestions(search_results):
     write_output_yaml(output_file, search_results)
     emoji, label = get_file_display(output_file)
     if added_count > 0:
-        print(f"{emoji} {label}: ✨ +{added_count} new terms")
+        log = f"{emoji} {label}: ✨ +{added_count} new terms"
+        print(log)
+        ChangeTracker.record(
+            emoji=emoji,
+            label=label,
+            count=added_count,
+            log_message=log,
+        )
         return "search/suggest_by_letter"
     else:
         print(f"{emoji} {label}: ☕ Up to date")

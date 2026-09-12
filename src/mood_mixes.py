@@ -11,6 +11,7 @@ from .catalog import (
     write_catalog_csv,
     write_catalog_yaml,
 )
+from .changes import ChangeTracker
 from .mapping import ExtractNameStr, MoodMixTrackSchema, get_run_id
 from .util import output_path, resolve_meta_dir, slugify
 
@@ -369,4 +370,26 @@ def sync_all_mood_mixes(
 
     total_new = sum(r["new_tracks"] for r in results)
     print(f"✅ Synced {len(results)} mix catalogs (+{total_new} new unique songs discovered).")
+
+    changed_mixes = [r for r in results if r["new_tracks"] > 0]
+    if changed_mixes:
+        if len(changed_mixes) == 1:
+            r = changed_mixes[0]
+            slug = r.get("mix_slug") or r.get("slug") or r.get("title")
+            log = f"🎛️ Mixes: ✨ [{slug}] +{r['new_tracks']} new songs ({r['total_tracks']} total)"
+            ChangeTracker.record(emoji="🎛️", label="Mixes", count=r["new_tracks"], log_message=log)
+        else:
+            mix_details = [
+                f"- [{r.get('mix_slug') or r.get('slug') or r.get('title')}] +{r['new_tracks']} new songs ({r['total_tracks']} total)"
+                for r in changed_mixes
+            ]
+            log = f"🎛️ Mixes: ✨ +{total_new} new songs across {len(changed_mixes)} mixes"
+            ChangeTracker.record(
+                emoji="🎛️",
+                label="Mixes",
+                count=total_new,
+                log_message=log,
+                details=mix_details,
+            )
+
     return results

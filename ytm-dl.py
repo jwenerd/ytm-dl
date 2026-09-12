@@ -10,6 +10,7 @@ from src.api import (
     suggest_search,
     validate_auth,
 )
+from src.changes import ChangeTracker
 from src.home_catalog import sync_all_home_shelves
 from src.meta import write_meta
 from src.mood_mixes import sync_all_mood_mixes
@@ -32,6 +33,7 @@ def do_search_suggestions():
 
 
 def do_updates(option):
+    ChangeTracker.reset()
     if option not in ["all", "frequent", "mixes", "home", "auth"]:
         print("Option must be all, frequent, mixes, home, or auth")
         print("  given: " + str(option))
@@ -61,11 +63,13 @@ def do_updates(option):
     if option == "mixes":
         sync_all_mood_mixes()
         ApiMethod.save_api_artifact()
+        write_meta(len(ChangeTracker.get_changes()) > 0, run_option=option)
         return
 
     if option == "home":
         sync_all_home_shelves()
         ApiMethod.save_api_artifact()
+        write_meta(len(ChangeTracker.get_changes()) > 0, run_option=option)
         return
 
     files = ["liked_songs", "library_songs", "history"]
@@ -85,10 +89,10 @@ def do_updates(option):
         sync_all_home_shelves()
 
     files_written = set(filter(None, files_written))
-    output_updates = len(files_written) > 0
+    output_updates = len(files_written) > 0 or len(ChangeTracker.get_changes()) > 0
 
     ApiMethod.save_api_artifact()
-    write_meta(output_updates)
+    write_meta(output_updates, run_option=option)
 
 
 if __name__ == "__main__":

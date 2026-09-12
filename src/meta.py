@@ -137,9 +137,18 @@ def write_api_meta():
     write_file("tmp/step_output/api_info.md", md)
 
 
-def write_meta(updated=False):
+def write_meta(updated=False, run_option=""):
     if updated:
         write_readme()
+
+    from .changes import ChangeTracker
+
+    ChangeTracker.write_commit_message(run_option=run_option)
+    msg = ChangeTracker.format_commit_message(run_option=run_option)
+    write_file(
+        "tmp/step_output/commit_message.md",
+        f"### 💬 Output Commit Message\n\n```text\n{msg}```\n\n",
+    )
 
     if updated and IS_GITHUB:
         url = f"https://github.com/{GITHUB_META['repository']}/commit/__OUTPUTCOMMIT__?diff=unified&w=1"
