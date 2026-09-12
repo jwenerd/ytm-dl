@@ -1,4 +1,4 @@
 *
 !output
-!output/meta
+!output/**
 .DS_Store
