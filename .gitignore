@@ -9,6 +9,8 @@ pyvenv.cfg
 
 
 oauth.json
+browser.json
+scratch/
 .DS_Store
 .env
 cron.log

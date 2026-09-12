@@ -7,8 +7,8 @@ from time import time, strftime
 import threading
 import os
 
-OAUTH_CLIENT_ID = os.environ['OAUTH_CLIENT_ID']
-OAUTH_CLIENT_SECRET = os.environ['OAUTH_CLIENT_SECRET']
+OAUTH_CLIENT_ID = os.environ.get('OAUTH_CLIENT_ID')
+OAUTH_CLIENT_SECRET = os.environ.get('OAUTH_CLIENT_SECRET')
 
 def records_from_response(response):
     meta = {}
@@ -26,7 +26,12 @@ thread_local = threading.local()
 
 def get_thread_client():
     if not hasattr(thread_local, "ytmusic"):
-        thread_local.ytmusic = YTMusic("oauth.json", oauth_credentials=OAuthCredentials(client_id=OAUTH_CLIENT_ID, client_secret=OAUTH_CLIENT_SECRET))
+        if os.path.exists("browser.json"):
+            thread_local.ytmusic = YTMusic("browser.json")
+        elif os.path.exists("oauth.json") and OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET:
+            thread_local.ytmusic = YTMusic("oauth.json", oauth_credentials=OAuthCredentials(client_id=OAUTH_CLIENT_ID, client_secret=OAUTH_CLIENT_SECRET))
+        else:
+            raise RuntimeError("No valid authentication file found (browser.json or oauth.json)")
     return thread_local.ytmusic
 
 
