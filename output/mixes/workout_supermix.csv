@@ -1,497 +1,568 @@
 videoId,title,artists,album,duration,duration_seconds,first_seen,last_seen,times_recommended,latest_position,likeStatus,inLibrary
-1xteudBUJzg,Assimilated,"Freedom Fighters, Evil Oil Man",Edge,6:30,390,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,410,INDIFFERENT,False
-o3Dv4L2RnRQ,Andromeda (feat. DRAM),Gorillaz,Humanz,3:18,198,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,419,INDIFFERENT,False
-Nr7_6U6WBVA,It Doesn't Matter,The Toxic Avenger,Yes Future (Extended),4:39,279,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,420,INDIFFERENT,False
-gE2Cs7Ks2Zg,Kernkraft 400,Zombie Nation,Leichenschmaus,4:46,286,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,422,INDIFFERENT,False
-X-Y2BL_g3lY,E-Pro (CapeLion V2 Remix),Beck,E-Pro (CapeLion Remix V2),2:05,125,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,424,INDIFFERENT,False
-wjbLuDhO3lQ,Speaking in Tongues I,Jade Cicada & Sheila Chandra,Brood VII,2:18,138,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,426,INDIFFERENT,False
-J8fMAXnDocs,Cassius 1999 (Radio Edit),Cassius,1999 (Deluxe Edition),3:42,222,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,430,INDIFFERENT,False
-l7VKAbxFhpA,Vortex,Gorovich,Vortex,10:00,600,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,435,INDIFFERENT,False
-VO4B-vXKnzU,Nouveau chapitre,College,Heritage,3:23,203,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,443,INDIFFERENT,False
-G5ZWShLC6eg,Nitro Bong (Wanted Remix),WEBRA,Nitro Bong (Remixes),5:31,331,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,447,INDIFFERENT,False
-tUTXb5pevm8,Robot Tune,French Class,French Class,2:11,131,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,450,INDIFFERENT,False
-JPb0xixZXXg,Alteza,Vini Vici,Future Classics,7:53,473,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,451,INDIFFERENT,False
-C3yCnfYN9bI,Land Of Freedom (Liquid Soul Remix),Transwave,Land Of Freedom (Liquid Soul Remix),8:09,489,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,453,INDIFFERENT,False
-bJV2ChvIm7g,Om namaha,Gammaepsilon,Om namaha,6:42,402,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,465,INDIFFERENT,False
-rF3r9Knc6Vc,Spirit Molecule,Mekkanikka,Spirit Molecule,7:50,470,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,472,INDIFFERENT,False
-lbWWa9PTMC8,Laughable Butane Bob,AFX,Hangable Auto Bulb,3:03,183,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,480,INDIFFERENT,False
-SBXnK-AfdOM,Vagabond (Liberty City Mix),Greenskeepers,Vagabond Remixes,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,482,INDIFFERENT,False
-8sfSJrPgvns,The Beyond,"GMS, Legohead",Dimension 005 (Compiled by Alpha Portal),7:57,477,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,5,494,INDIFFERENT,False
-8XabjqbkjCs,Germination,"Shpongle, Simon Posford",Flux & Contemplation - Portrait of an Artist in Isolation,2:14,134,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,202,INDIFFERENT,False
-yNUSt39VzlE,Golden Hour,Dekel & Modus,Golden Hour,9:05,545,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,206,INDIFFERENT,False
+VO4B-vXKnzU,Nouveau chapitre,College,Heritage,3:23,203,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,7,221,INDIFFERENT,False
+1xteudBUJzg,Assimilated,"Freedom Fighters, Evil Oil Man",Edge,6:30,390,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,7,231,INDIFFERENT,False
+o3Dv4L2RnRQ,Andromeda (feat. DRAM),Gorillaz,Humanz,3:18,198,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,7,326,INDIFFERENT,False
+C3yCnfYN9bI,Land Of Freedom (Liquid Soul Remix),Transwave,Land Of Freedom (Liquid Soul Remix),8:09,489,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,7,375,INDIFFERENT,False
+8sfSJrPgvns,The Beyond,"GMS, Legohead",Dimension 005 (Compiled by Alpha Portal),7:57,477,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,7,463,INDIFFERENT,False
+rF3r9Knc6Vc,Spirit Molecule,Mekkanikka,Spirit Molecule,7:50,470,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,22,INDIFFERENT,False
+l7VKAbxFhpA,Vortex,Gorovich,Vortex,10:00,600,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,41,INDIFFERENT,False
+Nr7_6U6WBVA,It Doesn't Matter,The Toxic Avenger,Yes Future (Extended),4:39,279,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,44,INDIFFERENT,False
+SBXnK-AfdOM,Vagabond (Liberty City Mix),Greenskeepers,Vagabond Remixes,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,79,INDIFFERENT,False
+JPb0xixZXXg,Alteza,Vini Vici,Future Classics,7:53,473,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,81,INDIFFERENT,False
+wjbLuDhO3lQ,Speaking in Tongues I,Jade Cicada & Sheila Chandra,Brood VII,2:18,138,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,82,INDIFFERENT,False
+X-Y2BL_g3lY,E-Pro (CapeLion V2 Remix),Beck,E-Pro (CapeLion Remix V2),2:05,125,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,93,INDIFFERENT,False
+lbWWa9PTMC8,Laughable Butane Bob,AFX,Hangable Auto Bulb,3:03,183,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,98,INDIFFERENT,False
+8XabjqbkjCs,Germination,"Shpongle, Simon Posford",Flux & Contemplation - Portrait of an Artist in Isolation,2:14,134,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,203,INDIFFERENT,False
+PiokT-ul7K8,Welcome Theremin,MEZERG,Welcome Theremin,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,206,INDIFFERENT,False
+s0AOTdzyiLg,Beep Street,Squarepusher,Hard Normal Daddy,6:38,398,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,225,INDIFFERENT,False
+QmnvzLDHLdk,Sheyba - Ganesh [1995],stkthree03,,7:12,432,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,229,INDIFFERENT,False
+GUJ-PFnXZvI,Wake Up To Reality,Tao Andra,Move / Wake Up To Reality,5:30,330,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,232,INDIFFERENT,False
+XuoVPiJL2Rg,All You Children,"Jamie xx, The Avalanches",All You Children,4:15,255,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,256,INDIFFERENT,False
+J8fMAXnDocs,Cassius 1999 (Radio Edit),Cassius,1999 (Deluxe Edition),3:42,222,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,261,INDIFFERENT,False
+tUTXb5pevm8,Robot Tune,French Class,French Class,2:11,131,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,262,INDIFFERENT,False
+taHYtEGxLnw,Joy.,"Absolutely, Amma, RAYE",THIS MUSIC MAY CONTAIN HOPE.,4:24,264,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,275,INDIFFERENT,False
+lWQPBaswYMw,Hanumam,Pandora,Essência,3:52,232,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,276,INDIFFERENT,False
+IVagMZ8fS4E,Inside Your Head,Vertical Mode,Psy-Fi Book of Changes Compiled by Astrix,7:55,475,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,278,INDIFFERENT,False
+Px7d23QWS08,Danda Pani,ATARA,Danda Pani,7:03,423,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,279,INDIFFERENT,False
+gE2Cs7Ks2Zg,Kernkraft 400,Zombie Nation,Leichenschmaus,4:46,286,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,285,INDIFFERENT,False
+CuJWjC_W2ps,1997,Stefano Somma,1997,5:40,340,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,287,INDIFFERENT,False
+YvYXVbedfVU,Falling,Tonic Walter,Falling,3:45,225,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,293,INDIFFERENT,False
+KIMyqKdbHX8,Hops of Hades Vini Vici Remix,Ticon,Future Classics,6:53,413,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,295,INDIFFERENT,False
+HE1Y1z-qe7A,Dreaming of Life,Grouch,Corpus Callosum,7:43,463,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,297,INDIFFERENT,False
+yNUSt39VzlE,Golden Hour,Dekel & Modus,Golden Hour,9:05,545,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,306,INDIFFERENT,False
+2Z-lzB4A52w,Reach Out,Marc Rebillet,Loop Daddy,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,315,INDIFFERENT,False
+P9pipEPQ1p0,Organic Rhythm,Ritmo,Organic Rhythm,8:25,505,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,317,INDIFFERENT,False
+sCGiK4Oi57Y,Center Of The Universe,Mandragora,Disc 1,6:12,372,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,318,INDIFFERENT,False
+fYpJOTXG7gA,Salted Caramel Ice Cream,Metronomy,Metronomy Forever,3:31,211,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,327,INDIFFERENT,False
+dEyPelEU4IE,leavemealone,"Baby Keem, Fred again..",USB,3:43,223,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,329,INDIFFERENT,False
+bJV2ChvIm7g,Om namaha,Gammaepsilon,Om namaha,6:42,402,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,330,INDIFFERENT,False
+3XhrtNTGwRk,Calling for Peace,Electric Universe & Faders,Calling for Peace,9:00,540,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,331,INDIFFERENT,False
+cscAcMcfeuc,Magic Monkey Juice,Younger Brother,A Flock of Bleeps,7:00,420,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,373,INDIFFERENT,False
+dLLC5aiDEpM,dream girl,gothcandy,identity crisis,2:06,126,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,395,INDIFFERENT,False
+agByml2PVeY,Changa Falls,ZEN MECHANICS,Changa Falls,9:57,597,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,447,INDIFFERENT,False
+Vlv7gDbFjIg,The Last Kiss,Querox,The Last Kiss,7:22,442,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,484,INDIFFERENT,False
+G5ZWShLC6eg,Nitro Bong (Wanted Remix),WEBRA,Nitro Bong (Remixes),5:31,331,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,6,500,INDIFFERENT,False
+za0J4m9Hrn8,Step-Grandma,Salvatore Ganacci,Step-Grandma,2:41,161,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,24,INDIFFERENT,False
+bAUIM688GtA,You (feat. Madeline Follin),Etienne de Crécy,Super Discount 3,3:35,215,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,32,INDIFFERENT,False
+VmVBxOeBTRU,Land of 2 Suns (Liquid Soul Remix),Aqualize,Land of 2 Suns (Liquid Soul Remix),8:16,496,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,34,INDIFFERENT,False
+tz4r7mYVPqc,Shiva,Avalon & Waio,Shiva,6:40,400,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,42,INDIFFERENT,False
+y6UxHtHLZv0,Make Me Feel,oskar med k,Make Me Feel,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,47,INDIFFERENT,False
+iuTk8x410mk,LesAlpx,Floating Points,Crush,4:43,283,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,52,INDIFFERENT,False
+62NXIIjV8BY,Solitary Native,"Alix Perez, Sabre",Solitary Native / Old Flame,7:27,447,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,56,INDIFFERENT,False
+Oh6ep3eKnpw,Odd Look,Kavinsky,OutRun (US Version),4:50,290,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,60,INDIFFERENT,False
+nh8Yci9QEPU,Pharaohs,"Roses Gabor, SBTRKT",SBTRKT,3:39,219,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,71,INDIFFERENT,False
+XpK0mjZBGJE,The Medicine,Darwish & Adirøs,The Medicine,7:57,477,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,86,INDIFFERENT,False
+875UJAYpsmo,The Echo (Durante Remix),TEED,The Echo (Durante Remix),4:41,281,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,90,INDIFFERENT,False
+tbA8Nj8iV5g,1987 (Symphonix Remix),"Symphonix, Ticon",1987 (Symphonix Remix),5:48,348,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,97,INDIFFERENT,False
+AD655XLjXXQ,Infinity (Anna Remix),"Captain Hook, Ritmo",Infinity (Anna Remix),6:42,402,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,100,INDIFFERENT,False
+kcxK1Tnwy5M,"Around the World / Harder, Better, Faster, Stronger",Daft Punk,Alive 2007,5:43,343,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,5,114,INDIFFERENT,False
+W6z69QNvyjo,Burst (ANNA Remix),Kiasmos,Burst (ANNA Remix),5:44,344,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,148,INDIFFERENT,False
+v7YaObBp68M,Free Soul,"Avan7, Br1sa",Free Soul,8:33,513,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,155,INDIFFERENT,False
+bM-Y71tgba0,Spinning Into Place Electronic,Younger Brother,Vaccine Electronic,8:09,489,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,204,INDIFFERENT,False
+z3uLFiWLvHA,Intro,"Alan Braxe, Fred Falke",Running,4:55,295,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,214,INDIFFERENT,False
+-nk0BacuWDM,Miracle,"Blazy, Durs, Neelix",Miracle,6:38,398,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,220,INDIFFERENT,False
+VeGBIjyA40M,Tell Me Why (MEDUZA Remix),Supermode & MEDUZA,Tell Me Why (MEDUZA Remix),2:52,172,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,237,INDIFFERENT,False
+gJQJ7YP9QEo,Idealistic,Digitalism,Idealism,4:11,251,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,244,INDIFFERENT,False
+sJd6FzVICzA,THINK ABOUT U,NOTION,THINK ABOUT U,3:29,209,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,245,INDIFFERENT,False
+7IQCsdcMevk,Tantra,Fmesier,Tantra,7:51,471,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,249,INDIFFERENT,False
+6SEhU-e6YCs,Flowers Are Speakers,Smilk,Floorless,11:43,703,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,5,252,INDIFFERENT,False
+pO6C3xTrZi8,Mr. Croissant Taker,Transistorcake,Mr. Croissant Taker,4:29,269,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,259,LIKE,False
+Kvjob00JYf0,Butterfly,Vegas (Brazil),Butterfly,5:08,308,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,264,INDIFFERENT,False
+9JwlLw6OWaE,Am I Wrong,Etienne de Crécy,Tempovision,3:52,232,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,266,INDIFFERENT,False
+hGiVOboWZNM,We Are Thoughts,"GroundBass, Perception, Tijah",We Are Thoughts,6:12,372,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,271,INDIFFERENT,False
+KtuGqCKM-BM,The Order,Kick Puncher,LiveDieRepeat,3:47,227,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,273,INDIFFERENT,False
+G6aNYV8B5wc,Tribulations,LCD Soundsystem,LCD Soundsystem,4:59,299,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,282,INDIFFERENT,False
+ecbj4JIT9kg,ASTRAL FANG (feat. WIZAX),UFO,ASTRAL FANG,7:24,444,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,283,INDIFFERENT,False
+apV0LcRlcb0,Epic Life,Merkaba,Rediscovery,8:45,525,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,286,INDIFFERENT,False
+KLyNVBSsWq8,Delorean Dynamite,Todd Terje,It's Album Time,6:46,406,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,288,INDIFFERENT,False
+0J2SVEzWew4,Rolling,Mandragora,Aladin,5:19,319,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,289,INDIFFERENT,False
+Mv05ckyuFEk,Magic Portal,"Alpha Portal, Magik",Full Throttle,6:47,407,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,309,INDIFFERENT,False
+jmnurN4Sb3U,Bungee Jump,"Astrix, Captain Hook",Akashic Library,8:39,519,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,314,INDIFFERENT,False
+eOfVCEyyhOs,We Are Awakening,Symbolic & Lifeforms,One of a Kind,7:57,477,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,316,INDIFFERENT,False
+e_kIXeB9jeg,Feeling for You,Cassius,1999 (Deluxe Edition),4:38,278,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,321,INDIFFERENT,False
+6vPS1G3U37c,Fade Away (feat. Joe Reeves),Vitalic,Rave Age,4:29,269,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,322,INDIFFERENT,False
+TbV6kpl6yl0,Wayfarer,Kavinsky,1986,4:30,270,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,323,INDIFFERENT,False
+Gdv3Zn20Fec,Dirty Beat Drop,Querox,How Life Goes On,7:22,442,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,324,INDIFFERENT,False
+km3lJVvMVpg,Weirder,Burn in Noise,Trance for Nations 14 (Compiled by Astrix),7:51,471,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,335,INDIFFERENT,False
+JUUNHisjb0s,Pogo,Digitalism,Idealism,3:47,227,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,350,INDIFFERENT,False
+j6wlCvkx3CI,Push To Start,"No/Me, Noizu, Westend",Push To Start,3:02,182,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,359,INDIFFERENT,False
+CbbFYyK1qUE,Black Hole Original Mix,Egorythmia,"Goa X, Vol. 3",7:25,445,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,360,INDIFFERENT,False
+xjqanC6zfxU,Sounds of Madness (Perception Remix),Groundbass & Tijah,Sounds of Madness (Perception Remix),8:11,491,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,364,INDIFFERENT,False
+KX0Fqgx1ouk,afx - halibut acid,kantenbaer,,6:11,371,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,370,INDIFFERENT,False
+fw0YSEszQdI,Want You to Know,Animato,Want You to Know,7:19,439,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,371,INDIFFERENT,False
+A0vVCpAp3ek,Synrise (Soulwax Remix),GOOSE,Synrise (10 Year Anniversary Edition),3:43,223,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,374,INDIFFERENT,False
+C1yqRXC5FTs,Final Frontier,Juno Reactor,The Golden Sun of the Great East,10:03,603,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,383,INDIFFERENT,False
+wAFNG099JGo,Hoffman's Legacy,A-Tech & Overdrive,Hoffman's Legacy,7:04,424,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,390,INDIFFERENT,False
+YWSkr6NgnrY,The Future (Polaris Extended Remix),Liquid Soul & Zyrus 7,The Future,7:27,447,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,393,INDIFFERENT,False
+JfuzK6oSo_M,Shamanic (Symphonix Remix),Ghost Rider,Psychedelic Energy,7:44,464,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,410,INDIFFERENT,False
+3aJdgbJvn-o,I Am,Liquid Soul,,8:02,482,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,411,INDIFFERENT,False
+vjxU0mJplnI,Agate,Astrix & Ritmo,Astrix - He.art,8:44,524,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,418,INDIFFERENT,False
+Stcw-pXUdBM,Ceremony,Side Effects,Brain Signal,6:39,399,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,429,INDIFFERENT,False
+pZ_zeodlRRY,Marea (we’ve lost dancing),"Fred again.., The Blessed Madonna",Actual Life (April 14 - December 17 2020),4:46,286,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,430,INDIFFERENT,False
+Q_aNjrkycLM,The Beautiful Garden,"Raja Ram, Tristan",Nano Sonic Sound System 2014,6:50,410,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,436,INDIFFERENT,False
+mJC4_ENo_IU,Psychedelic Woods,Omiki,Psychedelic Woods,7:26,446,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,439,INDIFFERENT,False
+R723w9CWkX0,Born Slippy (Nuxx / Remastered),Underworld,Second Toughest In The Infants (Deluxe / Remastered),11:46,706,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,452,INDIFFERENT,False
+Am-_3efmbko,Life,Normalize,Life,8:18,498,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,460,INDIFFERENT,False
+shCZFUWFscA,End Of Summer,Tame Impala,Deadbeat,7:13,433,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,464,INDIFFERENT,False
+3cM0gN90AH8,We Are One,Ranji,Anyone Can Fly,6:33,393,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,472,INDIFFERENT,False
+XTQzEE5Udd0,Don't Leave,QB9,Don't Leave,3:30,210,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,488,INDIFFERENT,False
+HkCF5mhM4HI,Pretty Eyes (Jody Wisternoff & James Grant Dub Edit (Mixed)),Marsh,Anjunadeep 13,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,5,489,INDIFFERENT,False
+5WloHlh44r0,The Answer,Ace Ventura & Interactive Noise,The Answer,7:03,423,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,2,INDIFFERENT,False
+AjwTjHeTbaY,Lightvessel,Thip Trong,Guillotines,3:18,198,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,3,INDIFFERENT,False
+13Dvi1h2pek,Coconut,Antinomy & Ritmo,Coconut,6:47,407,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,4,INDIFFERENT,False
+td-W-olYskE,Psychic Gibbon,Younger Brother,The Last Days Of Gravity,7:31,451,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,7,INDIFFERENT,False
+tv6N9Uddhac,Divide (Miami Edit),Magna,Divide (Miami Edit),4:17,257,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,8,INDIFFERENT,False
+8S2LKUj759A,Time To Dance (SebastiAn Remix),"Anthonin Ternant, The Shoes",Crack My Bones,3:25,205,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,9,INDIFFERENT,False
+geb0Da6d5rE,The Power of Now (Shayman Remix),Captain Hook,The Power of Now (Shayman Remix),8:11,491,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,10,INDIFFERENT,False
+EjfNkXfPLWM,3rd Eye (Symbolic & Waio Remix),GMS & Space Tribe,Psy-Fi Book of Changes Compiled by Astrix,8:01,481,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,15,INDIFFERENT,False
+q3urnWeErkE,Creatures,Alpha Portal,Psy-Fi Book of Changes Compiled by Astrix,7:27,447,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,16,INDIFFERENT,False
+VrSFMyEso-M,gravity,all things break,gravity,3:51,231,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,17,INDIFFERENT,False
+UVD8t63Ql8Q,I Only Smoke When I Drink,nimino,I Only Smoke When I Drink,3:19,199,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,18,INDIFFERENT,False
+2sOlt8vddwo,Finale (feat. Nicholas Petricca),Madeon,Adventure (Deluxe),3:25,205,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,20,INDIFFERENT,False
+MUDWT2KHU3I,Infiltrator,Nine Inch Nails,TRON: Ares (Original Motion Picture Soundtrack),2:48,168,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,21,INDIFFERENT,False
+H6G-M-5SbH8,The Age of Giants,Outsiders,Psychedelic Awakening,7:20,440,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,28,INDIFFERENT,False
+_leY_k2A0SM,Voodoo,Interactive Noise,The Nine Stories,5:31,331,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,30,INDIFFERENT,False
+m_5bDlvHj_Q,Planisphere Part. II,Justice,Planisphere,2:18,138,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,36,INDIFFERENT,False
+U5I6CNZI7mI,Spiral of Change,IKØN & MoRsei,Spiral of Change,7:27,447,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,37,INDIFFERENT,False
+f7-6rqZOf_s,Cool for You,Haiku Hands,Cool for You,3:19,199,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,51,INDIFFERENT,False
+7rrHv-bFgsA,Sadhu,Static Movement Entima,Sadhu,7:46,466,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,53,INDIFFERENT,False
+DHNYkoORVeI,Hypnotica (Radio-Edit),"Lynnic, Neil Richter",Hypnotica,3:13,193,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,54,INDIFFERENT,False
+yTsRaKh6WqE,HOOLIGANG,Joey Valence & Brae,PUNK TACTICS,2:48,168,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,57,INDIFFERENT,False
+QXsGB67iL5k,IN LAK'ECH,"Durs, Odd Lottus, Who Knows?",IN LAK'ECH,4:49,289,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,58,INDIFFERENT,False
+eX25d2CeLbI,Open Door (Dub) (feat. Lee 'Scratch' Perry),Alpha Steppa,Alpha Steppa Meets Joe Ariwa,3:58,238,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,59,INDIFFERENT,False
+hDZsAPst7oA,Duties of the Hearts,Lifeforms,Trance for Nations 14 (Compiled by Astrix),6:53,413,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,61,INDIFFERENT,False
+CGiQYnIGaRQ,Where Are You,Abel York,Where Are You,3:19,199,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,4,64,INDIFFERENT,False
+L8F_Q0BCAqg,Clouds,"BUNT., Nate Traveller",Clouds,2:39,159,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,67,INDIFFERENT,False
+j_set46fRhg,Psychomachine (Remaster 2002),X-Dream,The Best 1991-2001,8:30,510,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,68,INDIFFERENT,False
+m-wDiCRMl_c,Miami Showdown,Digitalism,"I Love You, Dude",3:27,207,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,70,INDIFFERENT,False
+H4PRjvRFHvc,In the Jungle,Starlab (IN) & Shivatree,"Universal Frequencies, Vol. 20",7:06,426,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,74,INDIFFERENT,False
+5VM1plRhrtU,Tondo,"Disclosure, Eko Roosevelt",Ecstasy,5:30,330,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,83,INDIFFERENT,False
+kMy0wBHNB14,Stamina,Vitalic,Rave Age,3:43,223,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,89,INDIFFERENT,False
+zqmbAN_q3x8,DEFIANT ORDER,Birdy Nam Nam,Defiant Order,3:42,222,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,91,INDIFFERENT,False
+sSuo756Lzkc,Rounders (Stryker Remix),Growling Machines,Rounders,7:27,447,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,92,INDIFFERENT,False
+qOf0NfN1SCs,Lost Paradise,U-Recken,Aquatic Serenade (Digital Re-Release),7:25,445,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,95,INDIFFERENT,False
+FN_PSKxTl9A,Do It Again,The Chemical Brothers,We Are The Night,5:33,333,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,96,INDIFFERENT,False
+hngyBkMM5RA,Northern Stars,"Static Movement,Cosmic Tone",Northern Stars,7:33,453,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,99,INDIFFERENT,False
+wP2f97DNSBA,Exoplanet,Protonica,Symmetry,8:42,522,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,162,INDIFFERENT,False
+Dvxtn4LvGFw,All We Have Is Now,Nevo,Between Heaven and Hell,9:50,590,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,177,INDIFFERENT,False
+nYX-wygZfhs,Plant Medicine,"Avalon, Electric Universe",Plant Medicine,9:43,583,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,182,INDIFFERENT,False
+OhUJEfU2mzg,Home Is Not a Place,Hinap,Home Is Not a Place,6:43,403,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,200,INDIFFERENT,False
+9JVVLm0bYJo,Astral Pancakes (Soundaholix Remix),Hallucinogen,Raw Material,7:39,459,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,201,INDIFFERENT,False
+MC8vL4dSTto,One Species,Bellatrix,One Species,7:54,474,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,205,INDIFFERENT,False
+VRrxdYiRx8s,In Between Captain Hook Remix,"Ace Ventura, Gaudium",In Between,7:18,438,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,208,INDIFFERENT,False
+oRviMSB32dY,Blizzard,Kavinsky,OutRun,3:28,208,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,210,INDIFFERENT,False
+LFlWkdRZNTg,Captain Hook - Desert Adventure (Modus Remix) [TAS Visuals / 4K],Captain Hook Official,,7:30,450,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,4,213,INDIFFERENT,False
+ZcrJXJ0P8rY,Challengers [MIXED],"Boys Noize, Trent Reznor & Atticus Ross",Challengers [MIXED] by Boys Noize,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,216,INDIFFERENT,False
+hRvrj_diWYQ,Music Sounds Better With You (Radio Edit),Stardust,Music Sounds Better With You,4:21,261,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,219,INDIFFERENT,False
+KrYOlLL6Jyk,ProtoSyntheticNeuroCoreWave,"Electrypnose, HypoGeo",Protocol Zero,6:10,370,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,4,223,INDIFFERENT,False
+IMdz_M0Ux5s,Bear Line,Dekel,Sol,9:38,578,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,234,INDIFFERENT,False
+89P8b-mIo8A,Better Off Alone (UK Short Cut),Alice DJ,Better Off Alone,2:54,174,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,235,INDIFFERENT,False
+gc5TgDStbv8,The Universe Is Sound (feat. Ryanosaurus),Pspiralife,Wabi Sabi,7:23,443,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,4,236,INDIFFERENT,False
+aw21KTFPTOg,Tomorrow,"Capital Monkey, Klopfgeister",Tomorrow,7:33,453,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,238,INDIFFERENT,False
+U0xMaifiWso,Fight Dirty,Salvatore Ganacci,Fight Dirty,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,242,INDIFFERENT,False
+jd2rtmAevl4,Sacramental,"Tristan, Pogo",Dimension 005 (Compiled by Alpha Portal),7:19,439,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,243,INDIFFERENT,False
+j-DVZKKFqqc,Cyberion - Strange Signals,Mignon15,,9:15,555,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,246,INDIFFERENT,False
+29o0_sz3QRI,Consciousness,Altruism,Consciousness,8:14,494,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,247,INDIFFERENT,False
+HidQeN_DxtQ,New World Order,Morten Granau,New World Order,6:57,417,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,4,253,INDIFFERENT,False
+f_TJvjc4e-I,À cause des garçons (Tepr Remix Edit),Yelle,Pop-Up (Extended Version),2:55,175,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,254,INDIFFERENT,False
+F3oXKLRJvaw,Gravity,Protonica,Gravity,7:20,440,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,255,INDIFFERENT,False
+IoeMVlD6ufs,Dimension of Music,"Symphonix, Taylor Marie",Dimension of Music,7:39,459,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,258,INDIFFERENT,False
+nZkhyZIU9w0,Oxygen Session,AIRI,Zenon Records: 20 Years,6:58,418,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,4,260,INDIFFERENT,False
+tJp1beSCmK0,Let It Go,"MA:RK, NOTSOBAD",Let It Go,3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,263,INDIFFERENT,False
+SLVQg8PkvKY,Hard Dreams,"Gesaffelstein, Yan Wagner",Gamma,2:51,171,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,267,INDIFFERENT,False
+GO3GJD9cI2w,NRG,"A-Trak, Armand Van Helden, Duck Sauce",Quack,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,268,INDIFFERENT,False
+ke2y6WQ8urM,Jungle Sunrise,"Out of Orbit, Space Cat",Jungle Sunrise,7:43,463,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,4,269,INDIFFERENT,False
+7aMfyY-t2bg,Shadows of Light,Asgard,Shadows of Light,7:34,454,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,270,INDIFFERENT,False
+RB26WSK0ouY,Too Good to Be True,Modjo,Modjo,1:27,87,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,272,INDIFFERENT,False
+-XEGlWgWTlQ,Red Dressed (Ben Böhmer Remix) (feat. Eivør),Worakls,Red Dressed (Ben Böhmer Remix),5:59,359,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,274,INDIFFERENT,False
+tImti6vu0mE,Blessings (feat. Clementine Douglas),Calvin Harris,Blessings,3:40,220,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,277,INDIFFERENT,False
+_jKs5FkqX_o,My Friend Dario,Vitalic,My Friend Dario,3:38,218,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,280,INDIFFERENT,False
+ha68yWbzIFY,It's Time,Avalon,Rise,6:38,398,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,284,INDIFFERENT,False
+j6PklMxZeFI,"if you wanna party, come over to my house (Eli Escobar Remix)",Fcukers,"if you wanna party, come over to my house (Eli Escobar Remix)",5:15,315,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,290,INDIFFERENT,False
+PNrdc5jczVQ,Golden Wings,Bag Raiders,Bag Raiders (Deluxe),4:45,285,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,294,INDIFFERENT,False
+TecrrhxQ8Rk,Flutes,Hot Chip,In Our Heads (Expanded Edition),7:06,426,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,296,INDIFFERENT,False
+59_L9Qj5n0Y,Mojo,Phaxe & Gaudium & Emok & Martin Vice,Mojo,8:13,493,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,299,INDIFFERENT,False
+WnC2s257-bs,Green Light District,Flexus & Morten Granau,"Christiania Selection, Vol. 3",7:16,436,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,301,INDIFFERENT,False
+zB9NWgAD8Uw,Shamanix (Domestic & Spacecat Remix),Hallucinogen,Shamanix (Domestic & Spacecat Remix),8:22,502,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,302,INDIFFERENT,False
+ulMfZ5MLZxo,"Levitation Nation (Remastered, 2019)",Shpongle,"Nothing Lasts...but Nothing Is Lost (Remastered, 2019)",3:41,221,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,305,INDIFFERENT,False
+zMqlCx3nOl8,Eigengrau,"KOBI, Migdalor",Eigengrau,8:55,535,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,4,311,INDIFFERENT,False
+i2MrAn5lYvs,Lady Sweet Dream (Megatone Remix),Talamasca,Lady Sweet Dream (Megatone Remix),7:18,438,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,325,INDIFFERENT,False
+RT1zCzBO48I,Eternal Valley,Asgard,Trance for Nations 14 (Compiled by Astrix),8:25,505,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,328,INDIFFERENT,False
+sYxRIbrtDPM,It's a Monster (Mystic Remix),Rising Dust,Reef,8:04,484,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,336,INDIFFERENT,False
+1VAVFXtD9vY,Energy,TERRA,Energy,5:44,344,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,339,INDIFFERENT,False
+hrdw52m7kHw,Orck,Gesaffelstein,Novo Sonic System,3:09,189,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,340,INDIFFERENT,False
+BKVC79XmN4A,In & Out (Liquid Soul Remix),"Emok, Martin Vice, Off Limits, Vini Vici",In & Out (Liquid Soul Remix),7:41,461,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,341,INDIFFERENT,False
+P_jNZNplI7M,Resonance (Inner Sphere remix),Divination,Resonance (Inner Sphere Remix),7:31,451,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,342,INDIFFERENT,False
+MiGXcaalNe0,On Fire,Tristan,Psychedelic Awakening,5:58,358,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,343,INDIFFERENT,False
+WZyiHdp1YBw,Shining (feat. Ekko),Korolova,Shining,3:40,220,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,344,INDIFFERENT,False
+evN_mbO1pTQ,Running Sounds Better With You,Sideview,Leftovers,8:01,481,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,345,INDIFFERENT,False
+bPiQZfuhBew,Discovery,Protonica,Discovery,7:20,440,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,347,INDIFFERENT,False
+kv6PGv_Cbao,Human Heart,"Antinomy, Symbolic",Trance for Nations 14 (Compiled by Astrix),7:44,464,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,348,INDIFFERENT,False
+hYP2g75M6KY,Lek Nevel,Grouch,Rare Specimens,8:18,498,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,4,349,INDIFFERENT,False
+92auKZHxJC8,Genetic Lottery,Astrix & Loud,High On Mel,8:14,494,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,352,INDIFFERENT,False
+ZeMH1US_eVw,Forever,ZULAN,Forever,2:40,160,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,353,INDIFFERENT,False
+qAnw-lLDJ5s,Sacred Planet,MoRsei,Sacred Planet,7:57,477,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,357,INDIFFERENT,False
+IWY7eV-deQ0,Chunky,Trampsta,Chunky,5:09,309,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,358,INDIFFERENT,False
+mlBDtNWrLXY,Expect What,Neelix,Nerd,8:13,493,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,4,361,INDIFFERENT,False
+zF9BVQVCfIo,5 Billion Stars (Captain Hook Remix),LOUD,Loud Remixes Vol 2,9:30,570,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,363,INDIFFERENT,False
+XkibcVeSqOs,True Reality (Interactive Noise Remix),"Symphonix, Venes",The Usual Suspects Remixes Part 1,7:04,424,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,365,INDIFFERENT,False
+_glQWax1Anw,Ian Pooley ''Chord Memory'' (Daft Punk Remix),Ian Pooley,"Musique, Vol. 1",6:56,416,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,367,INDIFFERENT,False
+f-A8JEBvWMs,Bhaga,Sighter,Bhaga,4:53,293,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,369,INDIFFERENT,False
+E_s47YzWaRA,Feel So Good,Jamiroquai,A Funk Odyssey,5:22,322,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,372,INDIFFERENT,False
+aZ49Hoea9IU,Silver Screen (Shower Scene),Felix Da Housecat,Kittenz and Thee Glitz,4:41,281,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,376,INDIFFERENT,False
+LhOjN4t0YsY,Breathe,The Prodigy,The Fat of the Land - Expanded Edition,5:35,335,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,377,INDIFFERENT,False
+ofxTUt6Wcyg,Satisfied (Marsh Remix),Catching Flies,Satisfied (The Remixes),4:35,275,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,378,INDIFFERENT,False
+FibcGsZpPaM,Limbic Resonance,Altruism,Psychedelic Awakening,6:39,399,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,382,INDIFFERENT,False
+FpkawF5GWMI,All That She Wants,Ace of Base,Happy Nation,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,384,INDIFFERENT,False
+Da8c_6hZD04,Paradox,Mindbenderz,Paradox,8:27,507,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,385,INDIFFERENT,False
+23_6io7ftso,Area Codes,Jenny Marotta,Area Codes,4:05,245,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,391,INDIFFERENT,False
+4d_vkvE3Iys,You & Me (Rivo Remix) (feat. Eliza Doolittle),"Disclosure, Rivo",You & Me (Rivo Remix),3:29,209,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,396,INDIFFERENT,False
+pkkEGSnRvGs,Star Guitar,The Chemical Brothers,Come With Us,6:28,388,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,398,INDIFFERENT,False
+-nlZ-UBnRXU,World Rebirth Party,Zyce,Alignment,7:28,448,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,402,INDIFFERENT,False
+co55sXN2pZQ,"Molecular Superstructure (Remastered, 2019)",Shpongle,"Nothing Lasts...but Nothing Is Lost (Remastered, 2019)",4:48,288,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,403,INDIFFERENT,False
+OyE_HxhbJX4,The Origin of Troubles,College,Old Tapes,4:39,279,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,409,INDIFFERENT,False
+aaYdFaYigEQ,Blitz,Digitalism,"I Love You, Dude",4:18,258,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,413,INDIFFERENT,False
+KbIKIjo5Nck,Intestellar Space,Hinap,"Beach Atmosphere, Vol.3",8:12,492,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,414,INDIFFERENT,False
+bxUI0AXsy8I,Aiha,Burn in Noise,Dimension 005 (Compiled by Alpha Portal),7:47,467,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,4,415,INDIFFERENT,False
+l-JUCqppU1I,Source,Djantrix,Source,6:47,407,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,417,INDIFFERENT,False
+UPphO_ibuV8,23 Times,"Javiis, Munkler",Paradox,6:06,366,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,419,INDIFFERENT,False
+-QpdI2yutjE,Starfall,Ajja,Raja Rams Stashbag Vol. 5,8:21,501,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,420,INDIFFERENT,False
+1ExdigjJmaA,Pursuit,Gesaffelstein,Aleph,4:08,248,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,421,INDIFFERENT,False
+EJBXUB61Op0,3rd Time Lucky (Ritmo Remix),"Astrix, John Fleming",3rd Time Lucky (Ritmo Remix),7:58,478,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,422,INDIFFERENT,False
+ZqndMIHv0Kk,Horizon,Protonica,Horizon,9:31,571,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,428,INDIFFERENT,False
+hGBX04xsuFQ,TEMPORARY FRIENDS,"Charlotte Plank, NOTION",TEMPORARY FRIENDS,3:02,182,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,431,INDIFFERENT,False
+fT7zAXuA4Us,Superstylin',Groove Armada,Goodbye Country (Hello Nightclub),6:01,361,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,434,INDIFFERENT,False
+GKZwJ1fOXsI,Teleport (Antinomy remix),Man With No Name,Teleport (Antinomy Remix),6:47,407,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,437,INDIFFERENT,False
+cpbkUYAGpcI,"Wherever You Go (feat. Jamie xx, Neneh Cherry & CLYPSO)",The Avalanches,We Will Always Love You,5:51,351,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,440,INDIFFERENT,False
+VqGFV63HgXs,Mindshift,Ace Ventura & GMS,Mindshift,8:12,492,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,444,INDIFFERENT,False
+4PkSruWFA2U,Inside,Gorovich,Creative Acts,7:03,423,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,445,INDIFFERENT,False
+DQLb0lKE7XA,hooked on jungle,Merkaba,Awaken,11:12,672,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,446,INDIFFERENT,False
+RvegizX3GqY,Numb,Elderbrook,Why Do We Shake In The Cold?,3:51,231,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,449,INDIFFERENT,False
+6rg0si_QdaQ,Just An Imagination,"Yestermorrow, Zyce",Just An Imagination,6:47,407,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,459,INDIFFERENT,False
+gUZXU2JRSQI,We Are Underground,"Groundbass, Synthatic, Tijah",We Are Underground,8:21,501,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,465,INDIFFERENT,False
+aP1PrVeBiIA,Flat Beat (Radio Edit),Mr. Oizo,Analog Worms Attack,5:17,317,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,469,INDIFFERENT,False
+HKbXxXTULEU,Sky High,Mad Tribe & Alpha Portal,Sky High,7:58,478,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,470,INDIFFERENT,False
+w9LiOOVQ12U,Somedays,"D.O.D, Jazzy, Sonny Fodera",can we do it all again?,3:28,208,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,471,INDIFFERENT,False
+Ca6xSPQ8VLQ,Cyber Space,Symbolic,Psychedelic Awakening,8:07,487,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,477,INDIFFERENT,False
+7xI8mCKLiRM,Prime Audio Soup,Meat Beat Manifesto,Actual Sounds + Voices,6:18,378,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,478,INDIFFERENT,False
+67Ir5k02Z2s,I Want to Die,Marc Rebillet,I Want to Die,4:59,299,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,479,INDIFFERENT,False
+knGWAkh9_Gc,Foil,Autechre,Amber,6:05,365,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,485,INDIFFERENT,False
+FlBCUzGLce0,Helena Beat,Foster The People,Torches,4:37,277,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,490,INDIFFERENT,False
+cmsRvmY1R6E,Daft Punk Is Playing at My House (Soulwax Shibuya Mix),LCD Soundsystem,Daft Punk Is Playing at My House,6:52,412,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,492,INDIFFERENT,False
+-njMAzRYuUk,Mental Hotline,Space Buddha,Full Circle,7:19,439,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,493,INDIFFERENT,False
+Pdbg44M37Q4,The Sign,Ace of Base,Happy Nation (U.S. Version),3:12,192,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,494,INDIFFERENT,False
+2AKfICpiPHo,CRIMSONBREAKER,Lunar Amethyst,CRIMSONBREAKER,4:58,298,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,495,INDIFFERENT,False
+C3i8gmaifnI,We Are Your Friends (Justice Vs. Simian Edit),"Justice, Simian",We Are Your Friends,2:45,165,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,4,499,INDIFFERENT,False
+3UYgfElw-K8,Pathfinder,"Forhill, YOUTH 83",Pathfinder,3:29,209,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,3,5,INDIFFERENT,False
+mYLqpUBOWTQ,Girl's Club,Marc Rebillet,Loop Daddy III,1:46,106,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,12,INDIFFERENT,False
+gQSbAQDZA9w,Muse (feat. Kate Morgan),Rezident,Only For A Moment EP,3:19,199,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,13,INDIFFERENT,False
+1lMnOlb5v20,The Way,Sonic Species,The Way,7:28,448,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,3,23,INDIFFERENT,False
+nJq5gjprwh8,The Soul,Ritmo,Roots,7:35,455,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,3,25,INDIFFERENT,False
+oVWwskO-650,Cheap And Cheerful (Sebastian remix),The Kills,Cheap And Cheerful (Remixes),5:57,357,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,26,INDIFFERENT,False
+Uf4rmpa7IMA,Shade,"Dekel, Shtuby",Shade,12:51,771,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,39,INDIFFERENT,False
+DxWk6_l2NVg,Thank You (Not So Bad),"Dido, Dimitri Vegas & Like Mike, Tiësto, W&W",Thank You (Not So Bad),2:20,140,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,3,40,INDIFFERENT,False
+TCLaL-FA09s,Talamasca - Let There Be Trance,Talamasca,Let There Be Trance,7:37,457,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,48,INDIFFERENT,False
+LB7PIZHX1KM,& Down,Boys Noize,Oi Oi Oi,4:19,259,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,62,INDIFFERENT,False
+R5RlvkrBK6M,Walkman,SebastiAn,Ross Ross Ross,5:00,300,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,63,INDIFFERENT,False
+7OL8xavogtE,Mama India (Out Now Remix),Technical Hitch,Mama India (Out Now Remix),6:56,416,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,66,INDIFFERENT,False
+FqpNjmcu-RQ,Tripical Moon,Querox And Phaxe,Tripical Moon,7:19,439,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,73,INDIFFERENT,False
+aNK2wfuiks0,Rude Alert,Ajja,Tulpa,6:58,418,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,77,INDIFFERENT,False
+opn4DAbw_YQ,Hydrogen,M|O|O|N,MOON E.P.,4:50,290,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,80,INDIFFERENT,False
+9PK3T7Y_PE8,So Hï,KREAM,So Hï,3:33,213,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,84,INDIFFERENT,False
+sP8pIospPig,"Aerodynamic Beats / Gabrielle , Forget About the World",Daft Punk,Alive 2007,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,87,INDIFFERENT,False
+3vFgqwr2ssk,Silverlight,Rules,Silverlight,3:21,201,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,94,INDIFFERENT,False
+6QL_bUCuhvo,Electric Feel (Justice Remix),MGMT,Electric Feel (Justice Remix),5:28,328,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,146,INDIFFERENT,False
+N8Pzy04zKww,3rd Eye,"Morten Granau, Emok",3rd Eye,7:24,444,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,183,INDIFFERENT,False
+ARfJ55bUAw0,Around the World (Radio Edit),Daft Punk,Around the World,4:02,242,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,211,INDIFFERENT,False
+_en9n1pVHek,A Real Good Time,"Burn In Noise, Loud",Regan Presents Origin 5,8:45,525,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,215,INDIFFERENT,False
+Eqsg3rZOEL4,Anything & Everything,Vini Vici & Pixel,"Best of My Sets, Vol. 12",7:26,446,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,224,INDIFFERENT,False
+_QWla5g_ozY,Violently Happy (original mix),Talpa,Serbian Brasil Conection,7:03,423,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,3,228,INDIFFERENT,False
+DUK54BoiXZw,Liquid Gold,Astrix,High On Mel,7:38,458,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,230,INDIFFERENT,False
+ee9_oMs2_5Y,Flux Capacitor,"GMS, Shanti V Deedrah",Trance for Nations 14 (Compiled by Astrix),6:27,387,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,233,INDIFFERENT,False
+bfVFMRwALHg,Summon The Fire,The Comet Is Coming,Trust In The Lifeforce Of The Deep Mystery,3:56,236,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,251,INDIFFERENT,False
+jrFHlGJOomU,Garage Palace (feat. Little Simz),Gorillaz,Garage Palace,2:32,152,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,257,INDIFFERENT,False
+Sku74urw_W8,Shadow Of A Smile,Day Din & Klopfgeister,Sync Yourself,8:20,500,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,3,265,INDIFFERENT,False
+CLyJRRmQ3Dk,noon,skaviński,porn and crystal meth,5:42,342,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,281,INDIFFERENT,False
+TOotlMMW7E0,Lost Paradise (Tijah Remix),Groundbass,Lost Paradise (Tijah Remix),8:51,531,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,291,INDIFFERENT,False
+q3PvB0VViFo,Om Namah Shivaya,Electric Universe & Greg Hilight,Om Namah Shivaya,9:18,558,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,292,INDIFFERENT,False
+ZdWyWGscm3Q,Swoon,The Chemical Brothers,Further,6:06,366,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,298,INDIFFERENT,False
+MOV-dObhpcY,Rattle,Kliment,Path To Extinction,8:04,484,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,300,INDIFFERENT,False
+uaumM3VcjoA,Da Funk / Daftendirekt,Daft Punk,Alive 2007,6:37,397,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,303,INDIFFERENT,False
+pf7uueiK8ec,Genesis,Justice,Cross,3:55,235,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,304,INDIFFERENT,False
+nFnKwggB7Kc,Revolution (Inner Sphere Remix),Liquid Soul,Revolution,6:45,405,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,312,INDIFFERENT,False
+jRXL0ne3Esg,Psychic Experience (Captain Hook Remix),Ace Ventura & Liquid Soul,Psychic Experience,8:09,489,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,3,313,INDIFFERENT,False
+fVZZmhY7TD0,People Can Fly,Astral Projection,Trust In Trance,9:56,596,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,334,INDIFFERENT,False
+b2NtYi8KdRk,Atlantic Spirit (2018 Remix),Static Movement & Impact,Speed of Light,7:22,442,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,346,INDIFFERENT,False
+QSWzLGgRF8c,Micro Music,Sonic Species & Relativ,Micro Music,7:47,467,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,3,355,INDIFFERENT,False
+k62KonzIfAs,Crazy People (Victor Ruiz Remix),Liquid Soul,Crazy People (Victor Ruiz Remix),7:15,435,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,356,INDIFFERENT,False
+mSaEB9LSfg8,Neurochemistry (Indianix Remix),Liquid Ace,Neurochemistry (Indianix Remix),5:58,358,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,362,INDIFFERENT,False
+TRkd3IkYt6c,Balance,"NORTH, Wilkinson",Balance,3:14,194,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,3,366,INDIFFERENT,False
+bmjROkH6xtE,Elysium - Subconsciousness,Amatria7,,8:55,535,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,368,INDIFFERENT,False
+CS2dDd7BSOE,Cosmic Ritual,E-mov,Cosmic Ritual,7:42,462,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,3,379,INDIFFERENT,False
+C8gjTbYVteQ,37 Grad,Oliver Huntemann,"Fieber, Pt. 1",6:27,387,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,381,INDIFFERENT,False
+YxHAS9Ietco,The Dude,Kronfeld,The Freaks,7:19,439,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,386,INDIFFERENT,False
+ZZle4z5LzAU,My Love Is (Basscannon & Sighter Remix) (feat. Ellie Ka),"Bruce Leroys, Luthier",My Love Is (Basscannon & Sighter Remix),5:36,336,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,3,387,INDIFFERENT,False
+P8Et4YCHrCY,"I Sold My Bed, But Not My Stereo",Capital Cities,In A Tidal Wave of Mystery,3:55,235,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,388,INDIFFERENT,False
+ZcwC6M_v4u4,It's You,"A-Trak, Armand Van Helden, Duck Sauce",Quack,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,389,INDIFFERENT,False
+MBExyI9rdOs,Repetition Is Where We Find the Truth,Ryan Lott,"Marathon, Vol. I: Somewhere in the Heavens (Original Game Soundtrack)",1:55,115,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,394,INDIFFERENT,False
+sjv5knfjrHc,Solstice (Early Mix),Hallucinogen,The Singles (Remastered 2024),5:54,354,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,397,LIKE,False
+kDfejbzHp_U,Mothership Reconnection [(Daft Punk Remix)] (feat. Parliament & Funkadelic),Scott Grooves,"Musique, Vol. 1",4:01,241,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,399,INDIFFERENT,False
+ifJxwoDmQqY,Too Long / Steam Machine,Daft Punk,Alive 2007,7:02,422,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,407,INDIFFERENT,False
+_N2jswscOy8,Lonely Forest,Hatikwa,Life Cycle - Emergence,8:07,487,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,3,408,INDIFFERENT,False
+V6FjFdP70Dg,The Collective,"Morten Granau, Phaxe",Progressive Psy Trance Picks Vol.20,8:22,502,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,424,INDIFFERENT,False
+UL1JVD7BygI,Liquid Connective,Sonic Species & Divination,Liquid Connective,8:07,487,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,426,INDIFFERENT,False
+BYxJC4tds2o,Mind Storm,Animato & Pettra,Mind Storm,7:42,462,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,433,INDIFFERENT,False
+JB0sTn3rNa4,Orchid,Ritmo & Lifeforms,Orchid,7:50,470,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,435,INDIFFERENT,False
+GNtlKZ8CQ4g,Universal Language,"Astral Projection, Outsiders","Stash Bag, Vol. 6",8:04,484,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,438,INDIFFERENT,False
+h6Jql0ZvC24,FRESH BAKED BREAD,"Daily Bread, EAZYBAKED",FRESH BAKED BREAD,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,441,INDIFFERENT,False
+cMMxXF33Wpw,Love In Motion (feat. Mayer Hawthorne),SebastiAn,Total,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,442,INDIFFERENT,False
+BGlWw2B_FOU,Deep Vibrations Astrix Remix,Vertical Mode,Type 1,7:43,463,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,443,INDIFFERENT,False
+iWozJGBjTMc,Believe Phanatic & Static Movement Remix,Liquid Soul & Neodyne,Liquid Soul Remixed,7:52,472,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,448,INDIFFERENT,False
+OvQoZ7cC3ZM,BUBBAZ,"CloZee, LSDREAM",LSZEE: ENIGMA MIXTAPE,1:53,113,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,453,INDIFFERENT,False
+D9IVHdsn3Yw,Strange Timez (feat. Robert Smith),Gorillaz,"Song Machine, Season One: Strange Timez (Deluxe)",3:48,228,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,454,INDIFFERENT,False
+G1ozSoBSKw4,Infinite Horizon,Chronosphere,Infinite Horizon,7:57,477,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,456,INDIFFERENT,False
+Zjo8dCFbgMU,Jiboya,Vegas (Brazil),Jiboya,6:33,393,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,457,INDIFFERENT,False
+9R40wDpOxEo,Orientation Station,Grouch,Corpus Callosum,8:55,535,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,458,INDIFFERENT,False
+7OoxhZpaS8E,buzzin,Chanpan,buzzin,2:42,162,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,462,INDIFFERENT,False
+tRIiHQwMOgQ,100 Billion Galaxies,Egorythmia,100 Billion Galaxies,8:17,497,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,3,466,INDIFFERENT,False
+l4y_Hw0lneA,I Feel Better,Hot Chip,One Life Stand,4:41,281,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,467,INDIFFERENT,False
+HNxAXF6CHsg,Edge of Sanity,Alpha Portal,Psychedelic Awakening,7:16,436,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,3,468,INDIFFERENT,False
+tk2fi7Dh-YI,Upgrade,"Day Din, Klopfgeister",Upgrade,7:47,467,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,473,INDIFFERENT,False
+_R0fmXGJzRA,Can't Stop,"Major7, Rexalted",Can't Stop,7:07,427,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,474,INDIFFERENT,False
+oWhcw8Y024k,Tonight (Radio Edit),Yuksek,Away From The Sea,3:14,194,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,480,INDIFFERENT,False
+U8nW4vNHkiY,Night Lead Me Astray (Younger Brother Remix),Younger Brother,Night Lead Me Astray,7:58,478,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,481,INDIFFERENT,False
+jWa_Gmxt9uQ,The Art of Letting Go,Peter Axon,The Art of Letting Go,5:22,322,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,486,INDIFFERENT,False
+Lj_xjlGGOLw,Digeridoo,Aphex Twin,Digeridoo,7:12,432,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,487,INDIFFERENT,False
+qbD_0W3ACz8,Peace Pipe (Dekel Remix),LOUD,Loud Remixes Vol 2,9:45,585,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,3,491,INDIFFERENT,False
+y4hMX9XF2WA,Waterfall,StereOMantra,Wings,7:10,430,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,496,INDIFFERENT,False
+uAVfLArZ2uA,"Turn Up the Silence (Remastered, 2019)",Shpongle,"Nothing Lasts...but Nothing Is Lost (Remastered, 2019)",3:23,203,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,3,498,INDIFFERENT,False
+IH-LFA2Lyfo,Time & Space,Captain Hook,Origin,12:47,767,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,2,1,INDIFFERENT,False
+4AZla4vwWN0,Diamonds (feat. Vangelico),Lifeinvader,Diamonds,2:37,157,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,2,29,INDIFFERENT,False
+J09FQxX_yBQ,"Control Me, Pt. 2","Groundbass, Perception","Control Me, Pt. 2",8:53,533,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,33,INDIFFERENT,False
+1wTJ0wX6hNY,Eya (Rexalted Remix),Omiki,"The Remixes, Pt. 1",6:27,387,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,49,INDIFFERENT,False
+K8_0YFXGROU,Here & There Original Mix,"Astrix, Pixel",Here & There,7:40,460,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,2,50,INDIFFERENT,False
+6rb23e_tka8,Somebody To Love,"Ben Kim, LP Giobbi",Somebody To Love,3:43,223,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,88,INDIFFERENT,False
+ci3FiZM7_mg,Astral Pancakes (Remastered 2024),Hallucinogen,The Singles (Remastered 2024),8:03,483,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,2,101,INDIFFERENT,False
+2K9POBRgC08,Acid Rain,Alpha Portal,Dimension 005 (Compiled by Alpha Portal),8:09,489,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,137,INDIFFERENT,False
+oD8JwqjWcPw,Gravity Reset,"Command D, Zara",Gravity Reset,5:02,302,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,156,LIKE,False
+cif1SK3t1Ag,Hashish (Faders Remix),1200 Micrograms,Hashish (Faders Remix),6:57,417,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,170,INDIFFERENT,False
+T4DwP6d8YHM,Tribal Journey,Talamasca,Tribal Jouney,8:59,539,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,2,178,INDIFFERENT,False
+xHcPUTfPuk0,Waters of Nazareth,Justice,Cross,4:26,266,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,2,202,INDIFFERENT,False
+gXpmOi2R6B8,Liquid Hook (Interactive Noise Remix),Liquid Soul & Captain Hook,Liquid Hook (Interactive Noise Remix),6:54,414,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,2,207,INDIFFERENT,False
+Y_MQ5GB5_uk,Spice Travel,"Sonic Species,Zen Mechanics",Unleash the Beat,9:45,585,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,217,INDIFFERENT,False
+thxkF_4Ga6Q,Kick Back,Of The Trees,Dream Atlas,2:23,143,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,2,218,INDIFFERENT,False
+8jxz6Auj424,Off the Geiger Meter,Grouch,Rare Specimens,7:17,437,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,2,222,INDIFFERENT,False
+qeDB7WgB4xA,Rabauke,AKZENTH,Rabauke,5:48,348,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,2,239,INDIFFERENT,False
+YQZuXCkBvuQ,Rainfall (Praise You),Tom Santa,Rainfall (Praise You),2:47,167,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,2,241,INDIFFERENT,False
+dSoKVyxl2ts,The Other Side,Alpha Portal & Ajja,The Other Side,8:20,500,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,2,248,INDIFFERENT,False
+z6TiO8mbtlY,A Brief History Of Goa-Trance Juno Reactor,Talamasca,A Brief History Of Goa-Trance,8:28,508,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,2,250,INDIFFERENT,False
+4-rDzvcrBA4,Bebopper,Ajja,Tulpa,7:38,458,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,2,307,INDIFFERENT,False
+c3KaBLLstgs,Subconscious,"Freedom Fighters, Pspiralife, Hypogeo",Crocadelia,7:40,460,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,2,320,INDIFFERENT,False
+5uUaudoEYnA,The Changa Zone,1200 Micrograms,The Changa Sessions,5:32,332,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,2,332,INDIFFERENT,False
+JbOz0sMLFko,On My Knees,RÜFÜS DU SOL,Surrender,4:22,262,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,2,333,INDIFFERENT,False
+Xc935c2LrlY,Journey (Radio Mix),Steve Levi,Journey,3:51,231,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,2,337,INDIFFERENT,False
+qn2fXoSaYp0,Long Story Short (Static Movement Remix),"Morten Granau, Phaxe",Long Story Short Remixed,8:28,508,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,338,INDIFFERENT,False
+_2q8IZjvySY,Nightwind,"Side Effects, Timelock",Nightwind,7:17,437,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,351,INDIFFERENT,False
+9vNu5qwXIL0,Six Feet Under (Captain Hook Remix),Perfect Stranger,Rocky Tilbor - Best of My Set Vol.17,10:24,624,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,2,354,INDIFFERENT,False
+FgDvgxGDYoA,Bigger Bang,"Raja Ram, Mad Tribe",Bigger Bang,10:08,608,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,2,380,INDIFFERENT,False
+3TkQ4qtIzDs,Interplanetary Soul,Alienatic,Creative Soul,9:40,580,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,400,INDIFFERENT,False
+A9NgTtn2SzQ,Alakazam ! x Fire (WWW),Justice,Woman Worldwide,6:10,370,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,401,INDIFFERENT,False
+zkPyW0J73z4,Ecstasy,1200 Micrograms,The Remixes,7:15,435,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,2,412,INDIFFERENT,False
+OOaovThubr8,Flashback (Freedom Fighters Remix),Vini Vici & Pixel,Life Is a Remix,8:39,519,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,416,INDIFFERENT,False
+pORTdLf_8P8,When Hitch Goes Slow,Technical Hitch,Let's Go Faster,7:24,444,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,2,427,INDIFFERENT,False
+0FGSCJXgs1g,Cosmic Void,Aion & Agmon,Cosmic Void,7:06,426,2026-09-12T10:43:54Z,2026-09-12T10:59:40Z,2,432,INDIFFERENT,False
+OjgsdQbVzRI,Last Night,Rivo,Last Night,3:43,223,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,2,455,INDIFFERENT,False
+WwyqnV01mlM,Sexdrugs & Acidtrance II,Sun Project,Macrophage,8:44,524,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,2,461,INDIFFERENT,False
+SNqar0UNBrA,Lady Sweet Dream,Talamasca,The Experiment,9:16,556,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,2,482,INDIFFERENT,False
+ZqEW72IefXg,Sexual Distortion,Symphonix,Sexual Distortion,6:24,384,2026-09-12T10:40:53Z,2026-09-12T10:59:40Z,2,483,INDIFFERENT,False
+2dQnh8LIhpA,Gamma Goblins (Outsiders & Space Cat Remix),Hallucinogen,Gamma Goblins (Outsiders & SpaceCat remix),8:17,497,2026-09-12T10:52:02Z,2026-09-12T10:59:40Z,2,497,INDIFFERENT,False
+0tFq0bxEysw,Old' On,Jack Marlow,Tastes Like The 90s,3:22,202,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,6,INDIFFERENT,False
+EKAX1jukwU0,Ghosts 'n' Stuff (Original Instrumental Mix),deadmau5,Ghosts N Stuff (Original Instrumental Mix),6:11,371,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,11,INDIFFERENT,False
+H2YfBAVbrsY,"Drift Like A Cloud, Flow Like Water",INZO,"Drift Like A Cloud, Flow Like Water",3:21,201,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,14,INDIFFERENT,False
+tQ5jWE6ZnXc,The God Molecule,"Altruism, Avalon, Burn In Noise, Tristan",The God Molecule,6:55,415,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,19,INDIFFERENT,False
+PWVnhMylOEA,Closer (Adriatique x GENESI),"Adriatique, Emmit Fenn, & GENESI",Closer (Adriatique x GENESI),3:08,188,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,27,INDIFFERENT,False
+KnTtXAV40zQ,Magik (Remastered 2024),Hallucinogen,The Singles (Remastered 2024),7:32,452,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,31,INDIFFERENT,False
+pqUEhKfuq9w,Baiame,"Chronosphere, Spinal Fusion",Baiame,7:49,469,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,35,INDIFFERENT,False
+CqlMDef9ap8,Let's Go (feat. Lil' Jon & Twista),Trick Daddy,Thug Matrimony: Married to the Streets,3:43,223,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,38,INDIFFERENT,False
+RWUZssV5f7Q,No Light Theory (UNI & Tsuyoshi Suzuki Remix),Spectra Sonics,No Light Theory / Samurai Remixes,7:36,456,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,43,INDIFFERENT,False
+SDYW9oX3XDU,The Eliath Symphony,Ballarak,ARTCORE DUO XVI,3:07,187,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,45,INDIFFERENT,False
+MMSUbiqOGwk,sampling scott pilgrim,disctr4k,sampling scott pilgrim,3:46,226,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,46,INDIFFERENT,False
+S8nGzjrvQNM,Love Forever,Max Styler & Kuuda,I Don't Think I Can Stop,3:39,219,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,55,INDIFFERENT,False
+jU3ANUXdB9s,Wake Up,Liquid Soul,Wake Up,7:34,454,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,65,INDIFFERENT,False
+3W5oJZPaU9A,Lonely (feat. PHEA),VisionV,Lonely,2:46,166,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,69,INDIFFERENT,False
+FcRBUd_gJBg,6 Foot 7 Foot (feat. Cory Gunz),Lil Wayne,Tha Carter IV,4:09,249,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,72,INDIFFERENT,False
+p66lrZl2foE,Psychonaut,"NO SPOON, Space Cat",Psychonaut,6:01,361,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,75,INDIFFERENT,False
+TNPkb9JebFU,Power of Acid (Out Now Remix),Ranji,Power of Acid (Out Now Remix),6:52,412,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,76,INDIFFERENT,False
+F-pK9KHoCsg,Signatune (Thomas Bangalter Edit),DJ Mehdi,Lucky Girl,6:20,380,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,78,INDIFFERENT,False
+pAgb9NdNuyA,Galactic Mantra (Liquid Soul remix),Ovnimoon,Extrasensory Perception part 3,9:41,581,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,85,INDIFFERENT,False
+tRsNrkBhiEc,Human Design,Captain Hook,Dance Computer,8:10,490,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,105,INDIFFERENT,False
+sLabWAzQYdI,Vertebra L2 (Pitchbend Remix),Captain Hook,Vertebra L2,7:54,474,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,209,INDIFFERENT,False
+rg2FV_vQzm0,Angels of Destruction (Neelix Remix) (feat. Caroline Harrison),Phaxe,Angels of Destruction (Neelix Remix),7:59,479,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,212,INDIFFERENT,False
+jfGd6A_dBEo,Chill Like That,"PiCKUPLiNES, Sunday Scaries",Chill Like That,3:00,180,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,226,INDIFFERENT,False
+COOJUh2whcI,Free Tibet (Vini Vici Remix),Hilight Tribe,Free Tibet (Vini Vici Remix),7:55,475,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,227,INDIFFERENT,False
+qtDF3TvPfgU,Speed Of Light (Dynamic Remix),1200 Micrograms,The Beach 2009,5:59,359,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,240,INDIFFERENT,False
+wfEUjkhqXeE,Origin,Captain Hook,Origin,10:11,611,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,308,INDIFFERENT,False
+YR_RUkQjjxY,Phoenix,Monolink,The Beauty Of It All,4:10,250,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,310,INDIFFERENT,False
+8m_H8LlpELw,Endjoy,Marcus Meinhardt,Bar 25: Tage Ausserhalb der Zeit,6:56,416,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,319,INDIFFERENT,False
+mQJczSYaJMk,Chimera,"Blazy, Faders",Chimera,8:07,487,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,392,INDIFFERENT,False
+bRWpSRA62Eg,LSD (Astral Projection Remix),Hallucinogen,Goa Classics Remixed,8:45,525,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,404,INDIFFERENT,False
+wj_kpf-fuHk,The Jolly Roger,"Ace Ventura, Captain Hook",Jolly Roger,10:00,600,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,405,INDIFFERENT,False
+gOCVNO2OeVI,TTHHEE PPAARRTTYY (Live Version),Justice,A Cross The Universe,2:47,167,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,406,INDIFFERENT,False
+HNJFQ-ODV7s,Primordial Black Hole,DEKEL,Ancient Future,9:28,568,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,423,INDIFFERENT,False
+AqQQp2KKvcE,Hollow,"LYNY, Of The Trees",Hollow,3:35,215,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,425,INDIFFERENT,False
+cANwZtj4zIQ,Be My Lover (2023 Mix - Extended Mix) (feat. La Bouche),"David Guetta, Hypaton",Be My Lover (2023 Mix - Extended Mix),3:59,239,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,450,INDIFFERENT,False
+T0oWQH8Q_X0,Sol,Static Movement,Sol,9:16,556,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,451,INDIFFERENT,False
+GUppXYuQrNs,Recycled Original Mix,Freedom Fighters,Rebel,7:10,430,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,475,INDIFFERENT,False
+4CeXMZpCMrM,No Lights Without Darkness,Etnica,Trance De Eivissa,9:16,556,2026-09-12T10:59:40Z,2026-09-12T10:59:40Z,1,476,INDIFFERENT,False
 C1h_SYc_OkA,Signatune,DJ Mehdi,Lucky Boy,1:05,65,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,208,INDIFFERENT,False
-YvYXVbedfVU,Falling,Tonic Walter,Falling,3:45,225,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,209,INDIFFERENT,False
-XuoVPiJL2Rg,All You Children,"Jamie xx, The Avalanches",All You Children,4:15,255,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,210,INDIFFERENT,False
-fYpJOTXG7gA,Salted Caramel Ice Cream,Metronomy,Metronomy Forever,3:31,211,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,212,INDIFFERENT,False
-PiokT-ul7K8,Welcome Theremin,MEZERG,Welcome Theremin,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,215,INDIFFERENT,False
-bAUIM688GtA,You (feat. Madeline Follin),Etienne de Crécy,Super Discount 3,3:35,215,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,216,INDIFFERENT,False
-jmnurN4Sb3U,Bungee Jump,"Astrix, Captain Hook",Akashic Library,8:39,519,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,217,INDIFFERENT,False
-IVagMZ8fS4E,Inside Your Head,Vertical Mode,Psy-Fi Book of Changes Compiled by Astrix,7:55,475,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,218,INDIFFERENT,False
-G6aNYV8B5wc,Tribulations,LCD Soundsystem,LCD Soundsystem,4:59,299,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,219,INDIFFERENT,False
-iuTk8x410mk,LesAlpx,Floating Points,Crush,4:43,283,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,220,INDIFFERENT,False
-HE1Y1z-qe7A,Dreaming of Life,Grouch,Corpus Callosum,7:43,463,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,221,INDIFFERENT,False
-tbA8Nj8iV5g,1987 (Symphonix Remix),"Symphonix, Ticon",1987 (Symphonix Remix),5:48,348,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,225,INDIFFERENT,False
-bM-Y71tgba0,Spinning Into Place Electronic,Younger Brother,Vaccine Electronic,8:09,489,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,226,INDIFFERENT,False
 qT-9HbRiY14,korg funk5 [London 19.08.2023],Aphex Twin,Music From The Merch Desk (2016 - 2023),3:22,202,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,229,INDIFFERENT,False
-y6UxHtHLZv0,Make Me Feel,oskar med k,Make Me Feel,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,232,INDIFFERENT,False
-za0J4m9Hrn8,Step-Grandma,Salvatore Ganacci,Step-Grandma,2:41,161,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,235,INDIFFERENT,False
-s0AOTdzyiLg,Beep Street,Squarepusher,Hard Normal Daddy,6:38,398,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,237,INDIFFERENT,False
-dEyPelEU4IE,leavemealone,"Baby Keem, Fred again..",USB,3:43,223,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,241,INDIFFERENT,False
-pO6C3xTrZi8,Mr. Croissant Taker,Transistorcake,Mr. Croissant Taker,4:29,269,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,246,LIKE,False
-3XhrtNTGwRk,Calling for Peace,Electric Universe & Faders,Calling for Peace,9:00,540,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,248,INDIFFERENT,False
-wAFNG099JGo,Hoffman's Legacy,A-Tech & Overdrive,Hoffman's Legacy,7:04,424,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,249,INDIFFERENT,False
 ioXjjM7MT_M,Power of Acid,Ranji,Power of Acid,9:09,549,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,255,INDIFFERENT,False
 wcBqQ9Ta1h8,Biological Computer (Shanti V Deedrah Remix),Ace Ventura & Ritmo,Biological Computer,6:34,394,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,257,INDIFFERENT,False
-CuJWjC_W2ps,1997,Stefano Somma,1997,5:40,340,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,258,INDIFFERENT,False
-Vlv7gDbFjIg,The Last Kiss,Querox,The Last Kiss,7:22,442,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,259,INDIFFERENT,False
-sCGiK4Oi57Y,Center Of The Universe,Mandragora,Disc 1,6:12,372,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,260,INDIFFERENT,False
-AD655XLjXXQ,Infinity (Anna Remix),"Captain Hook, Ritmo",Infinity (Anna Remix),6:42,402,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,267,INDIFFERENT,False
-P9pipEPQ1p0,Organic Rhythm,Ritmo,Organic Rhythm,8:25,505,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,273,INDIFFERENT,False
-2Z-lzB4A52w,Reach Out,Marc Rebillet,Loop Daddy,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,274,INDIFFERENT,False
-nh8Yci9QEPU,Pharaohs,"Roses Gabor, SBTRKT",SBTRKT,3:39,219,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,275,INDIFFERENT,False
-QmnvzLDHLdk,Sheyba - Ganesh [1995],stkthree03,,7:12,432,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,277,INDIFFERENT,False
--nk0BacuWDM,Miracle,"Blazy, Durs, Neelix",Miracle,6:38,398,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,278,INDIFFERENT,False
-dLLC5aiDEpM,dream girl,gothcandy,identity crisis,2:06,126,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,280,INDIFFERENT,False
-GUJ-PFnXZvI,Wake Up To Reality,Tao Andra,Move / Wake Up To Reality,5:30,330,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,284,INDIFFERENT,False
-62NXIIjV8BY,Solitary Native,"Alix Perez, Sabre",Solitary Native / Old Flame,7:27,447,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,285,INDIFFERENT,False
-VmVBxOeBTRU,Land of 2 Suns (Liquid Soul Remix),Aqualize,Land of 2 Suns (Liquid Soul Remix),8:16,496,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,288,INDIFFERENT,False
-lWQPBaswYMw,Hanumam,Pandora,Essência,3:52,232,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,296,INDIFFERENT,False
-Mv05ckyuFEk,Magic Portal,"Alpha Portal, Magik",Full Throttle,6:47,407,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,299,INDIFFERENT,False
-taHYtEGxLnw,Joy.,"Absolutely, Amma, RAYE",THIS MUSIC MAY CONTAIN HOPE.,4:24,264,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,330,INDIFFERENT,False
-tz4r7mYVPqc,Shiva,Avalon & Waio,Shiva,6:40,400,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,345,INDIFFERENT,False
-CbbFYyK1qUE,Black Hole Original Mix,Egorythmia,"Goa X, Vol. 3",7:25,445,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,365,INDIFFERENT,False
-j6wlCvkx3CI,Push To Start,"No/Me, Noizu, Westend",Push To Start,3:02,182,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,387,INDIFFERENT,False
-W6z69QNvyjo,Burst (ANNA Remix),Kiasmos,Burst (ANNA Remix),5:44,344,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,391,INDIFFERENT,False
-kcxK1Tnwy5M,"Around the World / Harder, Better, Faster, Stronger",Daft Punk,Alive 2007,5:43,343,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,4,404,INDIFFERENT,False
-VeGBIjyA40M,Tell Me Why (MEDUZA Remix),Supermode & MEDUZA,Tell Me Why (MEDUZA Remix),2:52,172,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,406,INDIFFERENT,False
-0J2SVEzWew4,Rolling,Mandragora,Aladin,5:19,319,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,408,INDIFFERENT,False
 V038A0FjjFk,Amber Decay (Sirāt Remix),Kangding Ray,Sirāt - Original Motion Picture Soundtrack,4:23,263,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,413,INDIFFERENT,False
-cscAcMcfeuc,Magic Monkey Juice,Younger Brother,A Flock of Bleeps,7:00,420,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,427,INDIFFERENT,False
 hhOSoyriFLg,Colorblind,Mythospheric,Colorblind,8:13,493,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,428,INDIFFERENT,False
-Oh6ep3eKnpw,Odd Look,Kavinsky,OutRun (US Version),4:50,290,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,432,INDIFFERENT,False
-shCZFUWFscA,End Of Summer,Tame Impala,Deadbeat,7:13,433,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,433,INDIFFERENT,False
-fw0YSEszQdI,Want You to Know,Animato,Want You to Know,7:19,439,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,438,INDIFFERENT,False
-KIMyqKdbHX8,Hops of Hades Vini Vici Remix,Ticon,Future Classics,6:53,413,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,439,INDIFFERENT,False
-875UJAYpsmo,The Echo (Durante Remix),TEED,The Echo (Durante Remix),4:41,281,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,444,INDIFFERENT,False
-Px7d23QWS08,Danda Pani,ATARA,Danda Pani,7:03,423,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,445,INDIFFERENT,False
-XTQzEE5Udd0,Don't Leave,QB9,Don't Leave,3:30,210,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,446,INDIFFERENT,False
-JUUNHisjb0s,Pogo,Digitalism,Idealism,3:47,227,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,449,INDIFFERENT,False
-sJd6FzVICzA,THINK ABOUT U,NOTION,THINK ABOUT U,3:29,209,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,452,INDIFFERENT,False
 XEVBRIA-4tA,Gabriel (Soulwax Remix),"Joe Goddard, Valentina",Gabriel Remixes II,4:31,271,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,457,INDIFFERENT,False
 2n3Ddn22dRk,Planet X,Alien Art,Planet X,10:31,631,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,459,INDIFFERENT,False
-XpK0mjZBGJE,The Medicine,Darwish & Adirøs,The Medicine,7:57,477,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,466,INDIFFERENT,False
-pZ_zeodlRRY,Marea (we’ve lost dancing),"Fred again.., The Blessed Madonna",Actual Life (April 14 - December 17 2020),4:46,286,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,469,INDIFFERENT,False
-agByml2PVeY,Changa Falls,ZEN MECHANICS,Changa Falls,9:57,597,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,473,INDIFFERENT,False
-Stcw-pXUdBM,Ceremony,Side Effects,Brain Signal,6:39,399,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,474,INDIFFERENT,False
-vjxU0mJplnI,Agate,Astrix & Ritmo,Astrix - He.art,8:44,524,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,475,INDIFFERENT,False
-KX0Fqgx1ouk,afx - halibut acid,kantenbaer,,6:11,371,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,477,INDIFFERENT,False
-6vPS1G3U37c,Fade Away (feat. Joe Reeves),Vitalic,Rave Age,4:29,269,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,479,INDIFFERENT,False
-km3lJVvMVpg,Weirder,Burn in Noise,Trance for Nations 14 (Compiled by Astrix),7:51,471,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,485,INDIFFERENT,False
-Gdv3Zn20Fec,Dirty Beat Drop,Querox,How Life Goes On,7:22,442,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,488,INDIFFERENT,False
-v7YaObBp68M,Free Soul,"Avan7, Br1sa",Free Soul,8:33,513,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,490,INDIFFERENT,False
-eOfVCEyyhOs,We Are Awakening,Symbolic & Lifeforms,One of a Kind,7:57,477,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,491,INDIFFERENT,False
-Am-_3efmbko,Life,Normalize,Life,8:18,498,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,493,INDIFFERENT,False
 E5AFlTjeqT8,Techno Shaman,Ummet Ozcan,Techno Shaman,4:14,254,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,4,498,INDIFFERENT,False
 pAmyMW95yUg,Overthrow,Boys Noize,Mayday,4:46,286,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,4,500,INDIFFERENT,False
-IMdz_M0Ux5s,Bear Line,Dekel,Sol,9:38,578,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,3,INDIFFERENT,False
-KLyNVBSsWq8,Delorean Dynamite,Todd Terje,It's Album Time,6:46,406,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,4,INDIFFERENT,False
-UVD8t63Ql8Q,I Only Smoke When I Drink,nimino,I Only Smoke When I Drink,3:19,199,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,5,INDIFFERENT,False
-U0xMaifiWso,Fight Dirty,Salvatore Ganacci,Fight Dirty,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,9,INDIFFERENT,False
-ecbj4JIT9kg,ASTRAL FANG (feat. WIZAX),UFO,ASTRAL FANG,7:24,444,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,10,INDIFFERENT,False
 tJGIFpEIVDs,No Light Theory (T4N Edit),Spectra Sonics,Trance for Nations 14 (Compiled by Astrix),7:08,428,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,11,INDIFFERENT,False
-hGiVOboWZNM,We Are Thoughts,"GroundBass, Perception, Tijah",We Are Thoughts,6:12,372,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,12,INDIFFERENT,False
-f-A8JEBvWMs,Bhaga,Sighter,Bhaga,4:53,293,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,13,INDIFFERENT,False
-tJp1beSCmK0,Let It Go,"MA:RK, NOTSOBAD",Let It Go,3:17,197,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,14,INDIFFERENT,False
 f21NTwWYkMw,Chase The Sun,Koven,Chase The Sun,3:10,190,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,15,INDIFFERENT,False
-gJQJ7YP9QEo,Idealistic,Digitalism,Idealism,4:11,251,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,16,INDIFFERENT,False
-hGBX04xsuFQ,TEMPORARY FRIENDS,"Charlotte Plank, NOTION",TEMPORARY FRIENDS,3:02,182,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,18,INDIFFERENT,False
-9JwlLw6OWaE,Am I Wrong,Etienne de Crécy,Tempovision,3:52,232,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,19,INDIFFERENT,False
 jYEWwOfSxHE,Mind Control,Side Effects,Mind Control,8:18,498,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,20,INDIFFERENT,False
-wP2f97DNSBA,Exoplanet,Protonica,Symmetry,8:42,522,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,22,INDIFFERENT,False
 lMw0OdOHzvU,Cinema (Radio Edit) (feat. Gary Go),Benny Benassi,Electroman,3:03,183,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,23,INDIFFERENT,False
-l-JUCqppU1I,Source,Djantrix,Source,6:47,407,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,24,INDIFFERENT,False
-VqGFV63HgXs,Mindshift,Ace Ventura & GMS,Mindshift,8:12,492,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,25,INDIFFERENT,False
-ha68yWbzIFY,It's Time,Avalon,Rise,6:38,398,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,26,INDIFFERENT,False
 1aPGjEObFXY,High and I Like it,"Evalyn, it's murph",High and I Like it,3:44,224,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,27,INDIFFERENT,False
-ZcrJXJ0P8rY,Challengers [MIXED],"Boys Noize, Trent Reznor & Atticus Ross",Challengers [MIXED] by Boys Noize,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,29,INDIFFERENT,False
--XEGlWgWTlQ,Red Dressed (Ben Böhmer Remix) (feat. Eivør),Worakls,Red Dressed (Ben Böhmer Remix),5:59,359,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,30,INDIFFERENT,False
-e_kIXeB9jeg,Feeling for You,Cassius,1999 (Deluxe Edition),4:38,278,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,33,INDIFFERENT,False
-DHNYkoORVeI,Hypnotica (Radio-Edit),"Lynnic, Neil Richter",Hypnotica,3:13,193,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,34,INDIFFERENT,False
-EjfNkXfPLWM,3rd Eye (Symbolic & Waio Remix),GMS & Space Tribe,Psy-Fi Book of Changes Compiled by Astrix,8:01,481,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,35,INDIFFERENT,False
-kMy0wBHNB14,Stamina,Vitalic,Rave Age,3:43,223,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,36,INDIFFERENT,False
-FN_PSKxTl9A,Do It Again,The Chemical Brothers,We Are The Night,5:33,333,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,37,INDIFFERENT,False
-td-W-olYskE,Psychic Gibbon,Younger Brother,The Last Days Of Gravity,7:31,451,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,39,INDIFFERENT,False
-SLVQg8PkvKY,Hard Dreams,"Gesaffelstein, Yan Wagner",Gamma,2:51,171,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,40,INDIFFERENT,False
-aw21KTFPTOg,Tomorrow,"Capital Monkey, Klopfgeister",Tomorrow,7:33,453,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,41,INDIFFERENT,False
-qAnw-lLDJ5s,Sacred Planet,MoRsei,Sacred Planet,7:57,477,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,42,INDIFFERENT,False
 Z40azBQ4hzo,6am,Channel Tres,6am,3:42,222,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,44,INDIFFERENT,False
-zqmbAN_q3x8,DEFIANT ORDER,Birdy Nam Nam,Defiant Order,3:42,222,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,46,INDIFFERENT,False
-sSuo756Lzkc,Rounders (Stryker Remix),Growling Machines,Rounders,7:27,447,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,48,INDIFFERENT,False
-f_TJvjc4e-I,À cause des garçons (Tepr Remix Edit),Yelle,Pop-Up (Extended Version),2:55,175,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,51,INDIFFERENT,False
-H6G-M-5SbH8,The Age of Giants,Outsiders,Psychedelic Awakening,7:20,440,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,52,INDIFFERENT,False
-HkCF5mhM4HI,Pretty Eyes (Jody Wisternoff & James Grant Dub Edit (Mixed)),Marsh,Anjunadeep 13,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,53,INDIFFERENT,False
-jd2rtmAevl4,Sacramental,"Tristan, Pogo",Dimension 005 (Compiled by Alpha Portal),7:19,439,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,55,INDIFFERENT,False
-RvegizX3GqY,Numb,Elderbrook,Why Do We Shake In The Cold?,3:51,231,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,56,INDIFFERENT,False
-GO3GJD9cI2w,NRG,"A-Trak, Armand Van Helden, Duck Sauce",Quack,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,57,INDIFFERENT,False
-JfuzK6oSo_M,Shamanic (Symphonix Remix),Ghost Rider,Psychedelic Energy,7:44,464,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,58,INDIFFERENT,False
-ofxTUt6Wcyg,Satisfied (Marsh Remix),Catching Flies,Satisfied (The Remixes),4:35,275,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,61,INDIFFERENT,False
-KtuGqCKM-BM,The Order,Kick Puncher,LiveDieRepeat,3:47,227,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,62,INDIFFERENT,False
-kv6PGv_Cbao,Human Heart,"Antinomy, Symbolic",Trance for Nations 14 (Compiled by Astrix),7:44,464,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,63,INDIFFERENT,False
-z3uLFiWLvHA,Intro,"Alan Braxe, Fred Falke",Running,4:55,295,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,64,INDIFFERENT,False
 nu4vtFqISoU,Mr. Glock,Key Glock,Yellow Tape,2:27,147,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,65,INDIFFERENT,False
-OyE_HxhbJX4,The Origin of Troubles,College,Old Tapes,4:39,279,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,66,INDIFFERENT,False
-qOf0NfN1SCs,Lost Paradise,U-Recken,Aquatic Serenade (Digital Re-Release),7:25,445,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,67,INDIFFERENT,False
-L8F_Q0BCAqg,Clouds,"BUNT., Nate Traveller",Clouds,2:39,159,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,68,INDIFFERENT,False
 nEbbPM_Xl14,Blade,"Bounce Inc., DJ Kuba, Neitan",Blade,3:10,190,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,69,INDIFFERENT,False
 XYZkBlc9GxQ,Cosmic Calendar,"Mandragora, Special M",Triple M,6:39,399,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,70,INDIFFERENT,False
-apV0LcRlcb0,Epic Life,Merkaba,Rediscovery,8:45,525,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,71,INDIFFERENT,False
-WZyiHdp1YBw,Shining (feat. Ekko),Korolova,Shining,3:40,220,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,72,INDIFFERENT,False
-f7-6rqZOf_s,Cool for You,Haiku Hands,Cool for You,3:19,199,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,73,INDIFFERENT,False
-j6PklMxZeFI,"if you wanna party, come over to my house (Eli Escobar Remix)",Fcukers,"if you wanna party, come over to my house (Eli Escobar Remix)",5:15,315,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,74,INDIFFERENT,False
 U81Unnu-0yA,Amanita,Of The Trees,Amanita,3:24,204,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,75,INDIFFERENT,False
-AjwTjHeTbaY,Lightvessel,Thip Trong,Guillotines,3:18,198,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,76,INDIFFERENT,False
-2sOlt8vddwo,Finale (feat. Nicholas Petricca),Madeon,Adventure (Deluxe),3:25,205,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,77,INDIFFERENT,False
-A0vVCpAp3ek,Synrise (Soulwax Remix),GOOSE,Synrise (10 Year Anniversary Edition),3:43,223,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,78,INDIFFERENT,False
-TbV6kpl6yl0,Wayfarer,Kavinsky,1986,4:30,270,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,79,INDIFFERENT,False
-hRvrj_diWYQ,Music Sounds Better With You (Radio Edit),Stardust,Music Sounds Better With You,4:21,261,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,80,INDIFFERENT,False
-RT1zCzBO48I,Eternal Valley,Asgard,Trance for Nations 14 (Compiled by Astrix),8:25,505,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,82,INDIFFERENT,False
-hDZsAPst7oA,Duties of the Hearts,Lifeforms,Trance for Nations 14 (Compiled by Astrix),6:53,413,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,83,INDIFFERENT,False
-FlBCUzGLce0,Helena Beat,Foster The People,Torches,4:37,277,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,84,INDIFFERENT,False
 oobPDNY8SoM,They Come To Get Us (Original Death Set Punk Version),The Death Set,Can You Seen Straight?,1:53,113,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,85,INDIFFERENT,False
-PNrdc5jczVQ,Golden Wings,Bag Raiders,Bag Raiders (Deluxe),4:45,285,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,87,INDIFFERENT,False
-Pdbg44M37Q4,The Sign,Ace of Base,Happy Nation (U.S. Version),3:12,192,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,89,INDIFFERENT,False
-MUDWT2KHU3I,Infiltrator,Nine Inch Nails,TRON: Ares (Original Motion Picture Soundtrack),2:48,168,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,90,INDIFFERENT,False
 boMZLcKycro,A Name I Don't Know,After Cooking,A Name I Don't Know,2:43,163,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,91,INDIFFERENT,False
-8S2LKUj759A,Time To Dance (SebastiAn Remix),"Anthonin Ternant, The Shoes",Crack My Bones,3:25,205,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,92,INDIFFERENT,False
-tv6N9Uddhac,Divide (Miami Edit),Magna,Divide (Miami Edit),4:17,257,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,94,INDIFFERENT,False
-6rg0si_QdaQ,Just An Imagination,"Yestermorrow, Zyce",Just An Imagination,6:47,407,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,95,INDIFFERENT,False
-hngyBkMM5RA,Northern Stars,"Static Movement,Cosmic Tone",Northern Stars,7:33,453,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,96,INDIFFERENT,False
-KbIKIjo5Nck,Intestellar Space,Hinap,"Beach Atmosphere, Vol.3",8:12,492,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,99,INDIFFERENT,False
-Kvjob00JYf0,Butterfly,Vegas (Brazil),Butterfly,5:08,308,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,100,INDIFFERENT,False
-3aJdgbJvn-o,I Am,Liquid Soul,,8:02,482,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,119,INDIFFERENT,False
-ZqndMIHv0Kk,Horizon,Protonica,Horizon,9:31,571,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,140,INDIFFERENT,False
-aaYdFaYigEQ,Blitz,Digitalism,"I Love You, Dude",4:18,258,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,149,INDIFFERENT,False
-UPphO_ibuV8,23 Times,"Javiis, Munkler",Paradox,6:06,366,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,155,INDIFFERENT,False
-FibcGsZpPaM,Limbic Resonance,Altruism,Psychedelic Awakening,6:39,399,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,158,INDIFFERENT,False
-tImti6vu0mE,Blessings (feat. Clementine Douglas),Calvin Harris,Blessings,3:40,220,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,159,INDIFFERENT,False
-i2MrAn5lYvs,Lady Sweet Dream (Megatone Remix),Talamasca,Lady Sweet Dream (Megatone Remix),7:18,438,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,161,INDIFFERENT,False
 tTCp30S8MPA,Alien Alert,1200 Micrograms,"Stash Bag, Vol. 6",6:33,393,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,163,INDIFFERENT,False
-WnC2s257-bs,Green Light District,Flexus & Morten Granau,"Christiania Selection, Vol. 3",7:16,436,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,179,INDIFFERENT,False
-aP1PrVeBiIA,Flat Beat (Radio Edit),Mr. Oizo,Analog Worms Attack,5:17,317,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,190,INDIFFERENT,False
 uk1QhN2EjQw,Crystal Vision,Sonic Species & Mad Maxx,Crystal Vision,8:17,497,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,194,INDIFFERENT,False
 1YY7UkOVvB0,F For You,Disclosure,Settle (Special Edition),4:29,269,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,200,INDIFFERENT,False
-U5I6CNZI7mI,Spiral of Change,IKØN & MoRsei,Spiral of Change,7:27,447,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,222,INDIFFERENT,False
 F3hKIbSjBT0,Galactic Mantra (Killerwatts Remix),Ovnimoon,Galactic Mantra (Killerwatts Remix),8:13,493,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,230,INDIFFERENT,False
-Da8c_6hZD04,Paradox,Mindbenderz,Paradox,8:27,507,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,231,INDIFFERENT,False
-zF9BVQVCfIo,5 Billion Stars (Captain Hook Remix),LOUD,Loud Remixes Vol 2,9:30,570,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,234,INDIFFERENT,False
-geb0Da6d5rE,The Power of Now (Shayman Remix),Captain Hook,The Power of Now (Shayman Remix),8:11,491,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,236,INDIFFERENT,False
 mp9Zd2krvF4,Anjuna (Radio Edit) (feat. Solar Kid),"Liquid Soul, Zyce",Anjuna,3:53,233,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,238,INDIFFERENT,False
-yTsRaKh6WqE,HOOLIGANG,Joey Valence & Brae,PUNK TACTICS,2:48,168,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,239,INDIFFERENT,False
-bPiQZfuhBew,Discovery,Protonica,Discovery,7:20,440,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,240,INDIFFERENT,False
-m-wDiCRMl_c,Miami Showdown,Digitalism,"I Love You, Dude",3:27,207,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,242,INDIFFERENT,False
-eX25d2CeLbI,Open Door (Dub) (feat. Lee 'Scratch' Perry),Alpha Steppa,Alpha Steppa Meets Joe Ariwa,3:58,238,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,244,INDIFFERENT,False
-P_jNZNplI7M,Resonance (Inner Sphere remix),Divination,Resonance (Inner Sphere Remix),7:31,451,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,245,INDIFFERENT,False
-59_L9Qj5n0Y,Mojo,Phaxe & Gaudium & Emok & Martin Vice,Mojo,8:13,493,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,250,INDIFFERENT,False
-13Dvi1h2pek,Coconut,Antinomy & Ritmo,Coconut,6:47,407,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,251,INDIFFERENT,False
-j_set46fRhg,Psychomachine (Remaster 2002),X-Dream,The Best 1991-2001,8:30,510,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,252,INDIFFERENT,False
-_leY_k2A0SM,Voodoo,Interactive Noise,The Nine Stories,5:31,331,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,253,INDIFFERENT,False
-fT7zAXuA4Us,Superstylin',Groove Armada,Goodbye Country (Hello Nightclub),6:01,361,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,254,INDIFFERENT,False
-IWY7eV-deQ0,Chunky,Trampsta,Chunky,5:09,309,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,263,INDIFFERENT,False
-C1yqRXC5FTs,Final Frontier,Juno Reactor,The Golden Sun of the Great East,10:03,603,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,264,INDIFFERENT,False
-7rrHv-bFgsA,Sadhu,Static Movement Entima,Sadhu,7:46,466,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,266,INDIFFERENT,False
-7IQCsdcMevk,Tantra,Fmesier,Tantra,7:51,471,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,268,INDIFFERENT,False
-OhUJEfU2mzg,Home Is Not a Place,Hinap,Home Is Not a Place,6:43,403,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,272,INDIFFERENT,False
 TsLAGDFr2l8,Glitter Freeze (feat. Mark E Smith),Gorillaz,Plastic Beach (Deluxe),4:04,244,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,276,INDIFFERENT,False
-Q_aNjrkycLM,The Beautiful Garden,"Raja Ram, Tristan",Nano Sonic Sound System 2014,6:50,410,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,279,INDIFFERENT,False
 ZgoE-brDKHo,Ratio Shmatio,Infected Mushroom,IM The Supervisor,6:30,390,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,282,INDIFFERENT,False
-sYxRIbrtDPM,It's a Monster (Mystic Remix),Rising Dust,Reef,8:04,484,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,286,INDIFFERENT,False
-H4PRjvRFHvc,In the Jungle,Starlab (IN) & Shivatree,"Universal Frequencies, Vol. 20",7:06,426,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,287,INDIFFERENT,False
-knGWAkh9_Gc,Foil,Autechre,Amber,6:05,365,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,290,INDIFFERENT,False
-29o0_sz3QRI,Consciousness,Altruism,Consciousness,8:14,494,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,291,INDIFFERENT,False
-_jKs5FkqX_o,My Friend Dario,Vitalic,My Friend Dario,3:38,218,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,292,INDIFFERENT,False
-oRviMSB32dY,Blizzard,Kavinsky,OutRun,3:28,208,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,294,INDIFFERENT,False
-ZeMH1US_eVw,Forever,ZULAN,Forever,2:40,160,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,295,INDIFFERENT,False
-gUZXU2JRSQI,We Are Underground,"Groundbass, Synthatic, Tijah",We Are Underground,8:21,501,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,297,INDIFFERENT,False
-5VM1plRhrtU,Tondo,"Disclosure, Eko Roosevelt",Ecstasy,5:30,330,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,298,INDIFFERENT,False
-YWSkr6NgnrY,The Future (Polaris Extended Remix),Liquid Soul & Zyrus 7,The Future,7:27,447,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,300,INDIFFERENT,False
-9JVVLm0bYJo,Astral Pancakes (Soundaholix Remix),Hallucinogen,Raw Material,7:39,459,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,302,INDIFFERENT,False
-m_5bDlvHj_Q,Planisphere Part. II,Justice,Planisphere,2:18,138,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,303,INDIFFERENT,False
-ulMfZ5MLZxo,"Levitation Nation (Remastered, 2019)",Shpongle,"Nothing Lasts...but Nothing Is Lost (Remastered, 2019)",3:41,221,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,305,INDIFFERENT,False
 zN3mo5T0h-I,Sol,Dekel,Sol,9:27,567,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,308,INDIFFERENT,False
-1VAVFXtD9vY,Energy,TERRA,Energy,5:44,344,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,320,INDIFFERENT,False
-q3urnWeErkE,Creatures,Alpha Portal,Psy-Fi Book of Changes Compiled by Astrix,7:27,447,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,321,INDIFFERENT,False
-F3oXKLRJvaw,Gravity,Protonica,Gravity,7:20,440,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,327,INDIFFERENT,False
 l66x7HWmyhs,Zen Ninja,Ajja,Trance for Nations 14 (Compiled by Astrix),8:09,489,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,334,INDIFFERENT,False
-3cM0gN90AH8,We Are One,Ranji,Anyone Can Fly,6:33,393,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,335,INDIFFERENT,False
-VRrxdYiRx8s,In Between Captain Hook Remix,"Ace Ventura, Gaudium",In Between,7:18,438,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,337,INDIFFERENT,False
 WxLBOwdTKjI,"NIAMOS! (Chandrilian Club Mix) (From ""Andor (Season 2)"")","Brandon Roberts, Nicholas Britell","NIAMOS! (Chandrilian Club Mix) (From ""Andor (Season 2)"")",4:15,255,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,341,INDIFFERENT,False
-IoeMVlD6ufs,Dimension of Music,"Symphonix, Taylor Marie",Dimension of Music,7:39,459,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,347,INDIFFERENT,False
-Dvxtn4LvGFw,All We Have Is Now,Nevo,Between Heaven and Hell,9:50,590,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,350,INDIFFERENT,False
-1ExdigjJmaA,Pursuit,Gesaffelstein,Aleph,4:08,248,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,351,INDIFFERENT,False
-DQLb0lKE7XA,hooked on jungle,Merkaba,Awaken,11:12,672,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,353,INDIFFERENT,False
-R723w9CWkX0,Born Slippy (Nuxx / Remastered),Underworld,Second Toughest In The Infants (Deluxe / Remastered),11:46,706,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,354,INDIFFERENT,False
 SfG3GCP9ZT8,Escape (feat. Hayla),"Kaskade, Kx5, deadmau5",Escape,4:01,241,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,358,INDIFFERENT,False
-VrSFMyEso-M,gravity,all things break,gravity,3:51,231,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,361,INDIFFERENT,False
-cmsRvmY1R6E,Daft Punk Is Playing at My House (Soulwax Shibuya Mix),LCD Soundsystem,Daft Punk Is Playing at My House,6:52,412,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,363,INDIFFERENT,False
-E_s47YzWaRA,Feel So Good,Jamiroquai,A Funk Odyssey,5:22,322,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,367,INDIFFERENT,False
-cpbkUYAGpcI,"Wherever You Go (feat. Jamie xx, Neneh Cherry & CLYPSO)",The Avalanches,We Will Always Love You,5:51,351,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,369,INDIFFERENT,False
-w9LiOOVQ12U,Somedays,"D.O.D, Jazzy, Sonny Fodera",can we do it all again?,3:28,208,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,370,INDIFFERENT,False
-MC8vL4dSTto,One Species,Bellatrix,One Species,7:54,474,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,374,INDIFFERENT,False
-4d_vkvE3Iys,You & Me (Rivo Remix) (feat. Eliza Doolittle),"Disclosure, Rivo",You & Me (Rivo Remix),3:29,209,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,376,INDIFFERENT,False
-j-DVZKKFqqc,Cyberion - Strange Signals,Mignon15,,9:15,555,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,380,INDIFFERENT,False
 t3eyjDZSCfg,1st DESTINATION,ENGAI,DESTINATIONS,8:44,524,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,384,INDIFFERENT,False
-TecrrhxQ8Rk,Flutes,Hot Chip,In Our Heads (Expanded Edition),7:06,426,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,386,INDIFFERENT,False
-7xI8mCKLiRM,Prime Audio Soup,Meat Beat Manifesto,Actual Sounds + Voices,6:18,378,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,388,INDIFFERENT,False
-2AKfICpiPHo,CRIMSONBREAKER,Lunar Amethyst,CRIMSONBREAKER,4:58,298,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,390,INDIFFERENT,False
 2P-h57Z7cKY,I know that I know that I know that I know that I know that I know that I know that I know that I know that I know that I know that I know that,Dudiish,Delírio Coletivo,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,393,INDIFFERENT,False
 fauXU4xKLV8,Light & Love,Static Movement,Sian,9:23,563,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,394,INDIFFERENT,False
 XjvkxXblpz8,Sandstorm (Radio Edit),Darude,Sandstorm,3:47,227,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,396,INDIFFERENT,False
-nYX-wygZfhs,Plant Medicine,"Avalon, Electric Universe",Plant Medicine,9:43,583,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,398,INDIFFERENT,False
 aleaJs2yawk,Stress (WWW),Justice,Woman Worldwide,5:49,349,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,401,INDIFFERENT,False
-zB9NWgAD8Uw,Shamanix (Domestic & Spacecat Remix),Hallucinogen,Shamanix (Domestic & Spacecat Remix),8:22,502,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,402,INDIFFERENT,False
-co55sXN2pZQ,"Molecular Superstructure (Remastered, 2019)",Shpongle,"Nothing Lasts...but Nothing Is Lost (Remastered, 2019)",4:48,288,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,403,INDIFFERENT,False
 d5aaisita1k,Space Tube 25 Indira Paganotto Remix,Captain Hook,Space Tube 25 Indira Paganotto Remix,6:30,390,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,405,INDIFFERENT,False
 5VhokOvIUKQ,Bazinga,Ajja,Tulpa,8:17,497,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,407,INDIFFERENT,False
-EJBXUB61Op0,3rd Time Lucky (Ritmo Remix),"Astrix, John Fleming",3rd Time Lucky (Ritmo Remix),7:58,478,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,412,INDIFFERENT,False
--nlZ-UBnRXU,World Rebirth Party,Zyce,Alignment,7:28,448,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,416,INDIFFERENT,False
-5WloHlh44r0,The Answer,Ace Ventura & Interactive Noise,The Answer,7:03,423,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,418,INDIFFERENT,False
-hrdw52m7kHw,Orck,Gesaffelstein,Novo Sonic System,3:09,189,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,429,INDIFFERENT,False
 UWQFVjQ0h7w,Heartbreaker (feat. John Legend),MSTRKRFT,Heartbreaker,3:13,193,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,431,INDIFFERENT,False
-CGiQYnIGaRQ,Where Are You,Abel York,Where Are You,3:19,199,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,3,434,INDIFFERENT,False
-92auKZHxJC8,Genetic Lottery,Astrix & Loud,High On Mel,8:14,494,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,436,INDIFFERENT,False
 YfEReG1vLDs,Blow,Rising Dust,Tempoo,7:26,446,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,442,INDIFFERENT,False
-xjqanC6zfxU,Sounds of Madness (Perception Remix),Groundbass & Tijah,Sounds of Madness (Perception Remix),8:11,491,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,448,INDIFFERENT,False
 _b6YP9I9iro,Power of God,Berg,Aurora,6:38,398,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,454,INDIFFERENT,False
 KUnGExQX80A,Colors,Avalon & Tristan & Vini Vici,Colors,8:08,488,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,455,INDIFFERENT,False
 gw92JUfLaPI,Speed Freak,1200 Micrograms,Ritualism EP,6:51,411,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,456,INDIFFERENT,False
-mJC4_ENo_IU,Psychedelic Woods,Omiki,Psychedelic Woods,7:26,446,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,458,INDIFFERENT,False
-MiGXcaalNe0,On Fire,Tristan,Psychedelic Awakening,5:58,358,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,460,INDIFFERENT,False
-FpkawF5GWMI,All That She Wants,Ace of Base,Happy Nation,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,461,INDIFFERENT,False
-6SEhU-e6YCs,Flowers Are Speakers,Smilk,Floorless,11:43,703,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,3,462,INDIFFERENT,False
-LhOjN4t0YsY,Breathe,The Prodigy,The Fat of the Land - Expanded Edition,5:35,335,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,463,INDIFFERENT,False
 KMTpEiLPCK4,thePotatoeyo - dramatic tumbleweed,ThePotatoeyo,,2:42,162,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,464,INDIFFERENT,False
-67Ir5k02Z2s,I Want to Die,Marc Rebillet,I Want to Die,4:59,299,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,467,INDIFFERENT,False
-89P8b-mIo8A,Better Off Alone (UK Short Cut),Alice DJ,Better Off Alone,2:54,174,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,468,INDIFFERENT,False
-GKZwJ1fOXsI,Teleport (Antinomy remix),Man With No Name,Teleport (Antinomy Remix),6:47,407,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,470,INDIFFERENT,False
-Ca6xSPQ8VLQ,Cyber Space,Symbolic,Psychedelic Awakening,8:07,487,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,471,INDIFFERENT,False
-pkkEGSnRvGs,Star Guitar,The Chemical Brothers,Come With Us,6:28,388,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,476,INDIFFERENT,False
-7aMfyY-t2bg,Shadows of Light,Asgard,Shadows of Light,7:34,454,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,481,INDIFFERENT,False
-RB26WSK0ouY,Too Good to Be True,Modjo,Modjo,1:27,87,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,483,INDIFFERENT,False
 A25GvyttpB4,Jim Thompson -- Lucky 7,ballacid,,8:30,510,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,484,INDIFFERENT,False
-HKbXxXTULEU,Sky High,Mad Tribe & Alpha Portal,Sky High,7:58,478,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,486,INDIFFERENT,False
 1d42D629FT0,Light Beings,Sonic Species,Light Beings,6:06,366,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,487,INDIFFERENT,False
 7eFd_wLNcC0,Horse,Salvatore Ganacci,Horse,2:54,174,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,489,INDIFFERENT,False
-QXsGB67iL5k,IN LAK'ECH,"Durs, Odd Lottus, Who Knows?",IN LAK'ECH,4:49,289,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,492,INDIFFERENT,False
-evN_mbO1pTQ,Running Sounds Better With You,Sideview,Leftovers,8:01,481,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,495,INDIFFERENT,False
 oz7-7ouXUJU,Ghosts 'n' Stuff,deadmau5,For Lack of a Better Name,3:15,195,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,3,496,INDIFFERENT,False
-HidQeN_DxtQ,New World Order,Morten Granau,New World Order,6:57,417,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,3,499,INDIFFERENT,False
 ZqIReA-ZBhs,Safe and Sound (WWW),Justice,Woman Worldwide,7:33,453,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,2,INDIFFERENT,False
 mbT7eiFqq8k,How the Jellyfish Jumped up the Mountain,Shpongle,Museum of Consciousness,10:26,626,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,6,INDIFFERENT,False
-3UYgfElw-K8,Pathfinder,"Forhill, YOUTH 83",Pathfinder,3:29,209,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,17,INDIFFERENT,False
 AMt7cxsfJv0,Maana,"Ace Ventura, Starlab (IN)",Maana,10:00,600,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,31,INDIFFERENT,False
-N8Pzy04zKww,3rd Eye,"Morten Granau, Emok",3rd Eye,7:24,444,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,32,INDIFFERENT,False
 n7ftQ2lPgF0,Rocksteady,The Bloody Beetroots,Rocksteady,3:42,222,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,38,INDIFFERENT,False
-TOotlMMW7E0,Lost Paradise (Tijah Remix),Groundbass,Lost Paradise (Tijah Remix),8:51,531,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,43,INDIFFERENT,False
-BYxJC4tds2o,Mind Storm,Animato & Pettra,Mind Storm,7:42,462,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,47,INDIFFERENT,False
 a4_uaE3DQXs,Krishna (feat. Ankit Sharda),"Omiki, Planet 6",Krishna,6:42,402,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,54,INDIFFERENT,False
-nJq5gjprwh8,The Soul,Ritmo,Roots,7:35,455,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,59,INDIFFERENT,False
 XOsY3W3dlI0,(It Goes Like) Nanana (Edit),Peggy Gou,I Hear You,3:52,232,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,60,INDIFFERENT,False
-TRkd3IkYt6c,Balance,"NORTH, Wilkinson",Balance,3:14,194,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,86,INDIFFERENT,False
 xZgWDI6tmXk,Ocean Call,Nico Morano,Opposite Minds,6:34,394,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,88,LIKE,False
 mZdfvOuRvFc,Superheroes,Daft Punk,Discovery,3:58,238,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,93,INDIFFERENT,False
-bxUI0AXsy8I,Aiha,Burn in Noise,Dimension 005 (Compiled by Alpha Portal),7:47,467,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,97,INDIFFERENT,False
 s5hNz9aLU1E,Consciousness,Captain Hook & DJ Gula K,Consciousness,6:39,399,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,105,INDIFFERENT,False
 sG_etTHdrBc,L.S.D.,Hallucinogen,Twisted,6:44,404,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,201,INDIFFERENT,False
-LFlWkdRZNTg,Captain Hook - Desert Adventure (Modus Remix) [TAS Visuals / 4K],Captain Hook Official,,7:30,450,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,204,INDIFFERENT,False
-ifJxwoDmQqY,Too Long / Steam Machine,Daft Punk,Alive 2007,7:02,422,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,205,INDIFFERENT,False
-hYP2g75M6KY,Lek Nevel,Grouch,Rare Specimens,8:18,498,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,211,INDIFFERENT,False
-nZkhyZIU9w0,Oxygen Session,AIRI,Zenon Records: 20 Years,6:58,418,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,214,INDIFFERENT,False
-ke2y6WQ8urM,Jungle Sunrise,"Out of Orbit, Space Cat",Jungle Sunrise,7:43,463,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,224,INDIFFERENT,False
 zcfYN0dnHZY,Tridimensional Object,"Oxyflux, Render",Eagles Rising,7:02,422,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,228,INDIFFERENT,False
-KrYOlLL6Jyk,ProtoSyntheticNeuroCoreWave,"Electrypnose, HypoGeo",Protocol Zero,6:10,370,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,233,INDIFFERENT,False
 NDFvwuoRxqM,Atmos - Everglade,Iboga Records Music,,7:47,467,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,243,INDIFFERENT,False
 vksqdGOJonM,Lsd Visions,Psybie Project,Lsd Visions,6:58,418,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,256,INDIFFERENT,False
-gc5TgDStbv8,The Universe Is Sound (feat. Ryanosaurus),Pspiralife,Wabi Sabi,7:23,443,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,261,INDIFFERENT,False
 9Zo8jqTqju0,Better,"Manta, nimino",Better,3:59,239,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,262,INDIFFERENT,False
-MOV-dObhpcY,Rattle,Kliment,Path To Extinction,8:04,484,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,265,INDIFFERENT,False
-1lMnOlb5v20,The Way,Sonic Species,The Way,7:28,448,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,269,INDIFFERENT,False
-iWozJGBjTMc,Believe Phanatic & Static Movement Remix,Liquid Soul & Neodyne,Liquid Soul Remixed,7:52,472,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,283,INDIFFERENT,False
-zMqlCx3nOl8,Eigengrau,"KOBI, Migdalor",Eigengrau,8:55,535,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,293,INDIFFERENT,False
 E04tCD-xm0Q,Conversations,"Outsiders, Volcano On Mars",Conversations,8:58,538,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,301,INDIFFERENT,False
 N-4D1WuJ8AQ,Machines (Empirikal Remix),Loud,Brain Worms,8:44,524,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,307,INDIFFERENT,False
-V6FjFdP70Dg,The Collective,"Morten Granau, Phaxe",Progressive Psy Trance Picks Vol.20,8:22,502,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,309,INDIFFERENT,False
-UL1JVD7BygI,Liquid Connective,Sonic Species & Divination,Liquid Connective,8:07,487,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,344,INDIFFERENT,False
-ZZle4z5LzAU,My Love Is (Basscannon & Sighter Remix) (feat. Ellie Ka),"Bruce Leroys, Luthier",My Love Is (Basscannon & Sighter Remix),5:36,336,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,356,INDIFFERENT,False
-Sku74urw_W8,Shadow Of A Smile,Day Din & Klopfgeister,Sync Yourself,8:20,500,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,366,INDIFFERENT,False
 YsWnWA0PXqI,Planisphere Part. III,Justice,Planisphere,3:31,211,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,400,INDIFFERENT,False
 YAszKsWBpKs,Salvation,Liquid Soul,,8:00,480,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,409,INDIFFERENT,False
-mlBDtNWrLXY,Expect What,Neelix,Nerd,8:13,493,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,415,INDIFFERENT,False
-HNxAXF6CHsg,Edge of Sanity,Alpha Portal,Psychedelic Awakening,7:16,436,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,417,INDIFFERENT,False
-DxWk6_l2NVg,Thank You (Not So Bad),"Dido, Dimitri Vegas & Like Mike, Tiësto, W&W",Thank You (Not So Bad),2:20,140,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,423,INDIFFERENT,False
 PCxVUTpz3uU,White Tunnel,Egorythmia & Ace Ventura,Forensic Science,10:55,655,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,425,INDIFFERENT,False
 258QqS6gTXc,Dreams We Have,Symphonix,Dreams We Have,5:44,344,2026-09-12T10:43:54Z,2026-09-12T10:52:02Z,2,437,INDIFFERENT,False
 LpaXAbIJX10,Power of Ayahuasca,Aioaska,Into The Cosmic Jungle,9:11,551,2026-09-12T10:40:53Z,2026-09-12T10:52:02Z,2,478,INDIFFERENT,False
 VDweRnNLg7M,Sin City,Hatikwa,Life Cycle - Evolution,9:29,569,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,2,497,INDIFFERENT,False
-IH-LFA2Lyfo,Time & Space,Captain Hook,Origin,12:47,767,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,1,INDIFFERENT,False
 rVgWsOBx1Dg,Raider on the Storm,"Inéz, Solomun",Raider on the Storm,3:14,194,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,7,INDIFFERENT,False
 Uqt1wu2jZps,Solstice (Remastered 2024),Hallucinogen,The Albums (Remastered 2024),8:02,482,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,8,INDIFFERENT,False
 32Gp9WH9leI,Oblivion,"Interactive Noise, Liquid Soul",Oblivion,6:57,417,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,21,INDIFFERENT,False
 kbM3-OK2mCA,Atmosphere,"Anyma, Chris Avantgarde",The End Of Genesys,3:44,224,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,28,INDIFFERENT,False
-JbOz0sMLFko,On My Knees,RÜFÜS DU SOL,Surrender,4:22,262,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,45,INDIFFERENT,False
 sd5Ewokyo5E,Forbidden,DJ DEMON,Forbidden,4:54,294,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,49,INDIFFERENT,False
 RajNPCC7sDY,Flashback,"Pixel, Vini Vici",Part of the Dream - Compiled by Vini Vici,8:01,481,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,50,INDIFFERENT,False
 RNYHM178lBQ,Don’t Mess With Us,"Kaufmann (DE), Victor Ruiz",Don’t Mess With Us,6:44,404,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,81,INDIFFERENT,False
 qtTFlyiQkTk,Close My Eyes,Max Styler,I Don't Think I Can Stop,3:17,197,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,98,INDIFFERENT,False
-ci3FiZM7_mg,Astral Pancakes (Remastered 2024),Hallucinogen,The Singles (Remastered 2024),8:03,483,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,101,INDIFFERENT,False
 VyXvextvrYw,Phantom (Live / AAA),Justice,Access All Arenas,4:42,282,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,104,INDIFFERENT,False
-4-rDzvcrBA4,Bebopper,Ajja,Tulpa,7:38,458,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,127,INDIFFERENT,False
-xHcPUTfPuk0,Waters of Nazareth,Justice,Cross,4:26,266,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,203,INDIFFERENT,False
 3PWuzytJl5U,Time & Space Grouch remix,Captain Hook,Ouroboros - Past,8:11,491,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,207,INDIFFERENT,False
-_N2jswscOy8,Lonely Forest,Hatikwa,Life Cycle - Emergence,8:07,487,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,213,INDIFFERENT,False
-c3KaBLLstgs,Subconscious,"Freedom Fighters, Pspiralife, Hypogeo",Crocadelia,7:40,460,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,223,INDIFFERENT,False
-5uUaudoEYnA,The Changa Zone,1200 Micrograms,The Changa Sessions,5:32,332,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,227,INDIFFERENT,False
-_QWla5g_ozY,Violently Happy (original mix),Talpa,Serbian Brasil Conection,7:03,423,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,247,INDIFFERENT,False
 lvga5E_K6Xk,Talking with U.F.O's,Vini Vici,Future Classics,7:47,467,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,270,INDIFFERENT,False
 T6KdsPyJvFk,Yalla Habibi,Kolter,Yalla Habibi,3:55,235,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,271,LIKE,False
 g6qs87o89pM,Forest Cure,Ajja,Oddular,7:57,477,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,281,INDIFFERENT,False
-4AZla4vwWN0,Diamonds (feat. Vangelico),Lifeinvader,Diamonds,2:37,157,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,289,INDIFFERENT,False
 5EQJ_wUB800,Liquid Hook (Interactive Noise Remix) (Mixed),"Captain Hook, Liquid Soul & Captain Hook",Full On Fluoro Vol. 5 mixed by Liquid Soul & Magnus (DJ Mix),5:01,301,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,310,INDIFFERENT,False
 mV4DoTQmP8M,Sahara,Astrix,Psychedelic Awakening,8:49,529,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,311,INDIFFERENT,False
 8kV_NEnz-GM,Black Ice,"Rezz, Subtronics",CAN YOU SEE ME?,4:21,261,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,352,INDIFFERENT,False
-z6TiO8mbtlY,A Brief History Of Goa-Trance Juno Reactor,Talamasca,A Brief History Of Goa-Trance,8:28,508,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,389,INDIFFERENT,False
-2dQnh8LIhpA,Gamma Goblins (Outsiders & Space Cat Remix),Hallucinogen,Gamma Goblins (Outsiders & SpaceCat remix),8:17,497,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,397,INDIFFERENT,False
 3kmMgmtbAiY,Liquid Universe,Liquid Soul & Electric Universe,Liquid Universe (Volcano Remix),7:41,461,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,411,INDIFFERENT,False
-8jxz6Auj424,Off the Geiger Meter,Grouch,Rare Specimens,7:17,437,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,414,INDIFFERENT,False
 KYWXpWFviuM,Fibonacci,Dekel,Fibonacci,9:01,541,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,421,INDIFFERENT,False
-T4DwP6d8YHM,Tribal Journey,Talamasca,Tribal Jouney,8:59,539,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,440,INDIFFERENT,False
-qbD_0W3ACz8,Peace Pipe (Dekel Remix),LOUD,Loud Remixes Vol 2,9:45,585,2026-09-12T10:52:02Z,2026-09-12T10:52:02Z,1,441,INDIFFERENT,False
-gQSbAQDZA9w,Muse (feat. Kate Morgan),Rezident,Only For A Moment EP,3:19,199,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,17,INDIFFERENT,False
-sjv5knfjrHc,Solstice (Early Mix),Hallucinogen,The Singles (Remastered 2024),5:54,354,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,18,LIKE,False
-9PK3T7Y_PE8,So Hï,KREAM,So Hï,3:33,213,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,32,INDIFFERENT,False
-4PkSruWFA2U,Inside,Gorovich,Creative Acts,7:03,423,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,49,INDIFFERENT,False
-9R40wDpOxEo,Orientation Station,Grouch,Corpus Callosum,8:55,535,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,59,INDIFFERENT,False
-BKVC79XmN4A,In & Out (Liquid Soul Remix),"Emok, Martin Vice, Off Limits, Vini Vici",In & Out (Liquid Soul Remix),7:41,461,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,72,INDIFFERENT,False
-uaumM3VcjoA,Da Funk / Daftendirekt,Daft Punk,Alive 2007,6:37,397,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,83,INDIFFERENT,False
-b2NtYi8KdRk,Atlantic Spirit (2018 Remix),Static Movement & Impact,Speed of Light,7:22,442,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,88,INDIFFERENT,False
 I85wLH35f2I,My Name Is Thunder,"Jet, The Bloody Beetroots",My Name Is Thunder,2:48,168,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,99,INDIFFERENT,False
-sP8pIospPig,"Aerodynamic Beats / Gabrielle , Forget About the World",Daft Punk,Alive 2007,3:32,212,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,107,INDIFFERENT,False
-uAVfLArZ2uA,"Turn Up the Silence (Remastered, 2019)",Shpongle,"Nothing Lasts...but Nothing Is Lost (Remastered, 2019)",3:23,203,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,108,INDIFFERENT,False
-3vFgqwr2ssk,Silverlight,Rules,Silverlight,3:21,201,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,123,INDIFFERENT,False
-CLyJRRmQ3Dk,noon,skaviński,porn and crystal meth,5:42,342,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,130,INDIFFERENT,False
-OvQoZ7cC3ZM,BUBBAZ,"CloZee, LSDREAM",LSZEE: ENIGMA MIXTAPE,1:53,113,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,131,INDIFFERENT,False
-23_6io7ftso,Area Codes,Jenny Marotta,Area Codes,4:05,245,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,134,INDIFFERENT,False
-jWa_Gmxt9uQ,The Art of Letting Go,Peter Axon,The Art of Letting Go,5:22,322,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,138,INDIFFERENT,False
 pSVbF6DGH9U,Around the World (La La La La La),A Touch of Class,Planet Pop,3:35,215,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,142,INDIFFERENT,False
-opn4DAbw_YQ,Hydrogen,M|O|O|N,MOON E.P.,4:50,290,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,144,INDIFFERENT,False
 44UYbsnEx08,More And More (Single Version),Captain Hollywood Project,Love Is Not Sex,4:14,254,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,148,INDIFFERENT,False
-Uf4rmpa7IMA,Shade,"Dekel, Shtuby",Shade,12:51,771,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,151,INDIFFERENT,False
-D9IVHdsn3Yw,Strange Timez (feat. Robert Smith),Gorillaz,"Song Machine, Season One: Strange Timez (Deluxe)",3:48,228,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,165,INDIFFERENT,False
-ee9_oMs2_5Y,Flux Capacitor,"GMS, Shanti V Deedrah",Trance for Nations 14 (Compiled by Astrix),6:27,387,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,175,INDIFFERENT,False
-bfVFMRwALHg,Summon The Fire,The Comet Is Coming,Trust In The Lifeforce Of The Deep Mystery,3:56,236,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,185,INDIFFERENT,False
 BsbnLMvOqPo,Fly Away (Intro),Daily Bread,Across The Burning Sky,4:04,244,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,186,INDIFFERENT,False
 pEte7EmZqgg,Firestarter (Edit),The Prodigy,Firestarter,3:48,228,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,190,INDIFFERENT,False
 f4ZKprjMPmc,Withered Branch of Fury,Metal Scar Radio & Anti-General,"Old Deep Water Dies, by Rising Tide It is Denied Original Soundtrack",2:28,148,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,191,INDIFFERENT,False
-aZ49Hoea9IU,Silver Screen (Shower Scene),Felix Da Housecat,Kittenz and Thee Glitz,4:41,281,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,211,INDIFFERENT,False
 jgHYgDFD0xo,Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) (Cedric Gervais Remix),"Cedric Gervais, Lana Del Rey",Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) (Cedric Gervais Remix),3:35,215,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,214,INDIFFERENT,False
-R5RlvkrBK6M,Walkman,SebastiAn,Ross Ross Ross,5:00,300,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,215,INDIFFERENT,False
-_glQWax1Anw,Ian Pooley ''Chord Memory'' (Daft Punk Remix),Ian Pooley,"Musique, Vol. 1",6:56,416,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,218,INDIFFERENT,False
--QpdI2yutjE,Starfall,Ajja,Raja Rams Stashbag Vol. 5,8:21,501,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,219,INDIFFERENT,False
-MBExyI9rdOs,Repetition Is Where We Find the Truth,Ryan Lott,"Marathon, Vol. I: Somewhere in the Heavens (Original Game Soundtrack)",1:55,115,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,229,INDIFFERENT,False
 ldAX8o4ccJE,Afterglow,"Bob Moses, Kasablanca",Afterglow,4:30,270,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,232,INDIFFERENT,False
-jrFHlGJOomU,Garage Palace (feat. Little Simz),Gorillaz,Garage Palace,2:32,152,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,233,INDIFFERENT,False
 q4QyEUsAuuQ,Disco Valley (Interactive Noise Remix),Astrix,The Nine Stories,6:56,416,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,235,INDIFFERENT,False
 beO3qViOUiQ,The Weekend (Original 12 Inch Mix),Michael Gray,The Weekend,7:53,473,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,241,INDIFFERENT,False
-TCLaL-FA09s,Talamasca - Let There Be Trance,Talamasca,Let There Be Trance,7:37,457,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,242,INDIFFERENT,False
-LB7PIZHX1KM,& Down,Boys Noize,Oi Oi Oi,4:19,259,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,247,INDIFFERENT,False
-h6Jql0ZvC24,FRESH BAKED BREAD,"Daily Bread, EAZYBAKED",FRESH BAKED BREAD,3:01,181,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,248,INDIFFERENT,False
 CprkskUlA9c,Let Go,The Japanese Popstars,Let Go,5:23,323,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,250,INDIFFERENT,False
-k62KonzIfAs,Crazy People (Victor Ruiz Remix),Liquid Soul,Crazy People (Victor Ruiz Remix),7:15,435,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,252,INDIFFERENT,False
-FqpNjmcu-RQ,Tripical Moon,Querox And Phaxe,Tripical Moon,7:19,439,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,255,INDIFFERENT,False
-7OoxhZpaS8E,buzzin,Chanpan,buzzin,2:42,162,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,266,INDIFFERENT,False
-BGlWw2B_FOU,Deep Vibrations Astrix Remix,Vertical Mode,Type 1,7:43,463,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,276,INDIFFERENT,False
 74QLjfYFd44,Forever (Extended Mix),Nordfold,Forever / Together,6:40,400,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,277,INDIFFERENT,False
-ZcwC6M_v4u4,It's You,"A-Trak, Armand Van Helden, Duck Sauce",Quack,3:11,191,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,279,INDIFFERENT,False
 HVTPxnzLvUk,Victory Lap,"Fred again.., PlaqueBoyMax, Skepta",USB,2:46,166,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,282,INDIFFERENT,False
-P8Et4YCHrCY,"I Sold My Bed, But Not My Stereo",Capital Cities,In A Tidal Wave of Mystery,3:55,235,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,283,INDIFFERENT,False
-mYLqpUBOWTQ,Girl's Club,Marc Rebillet,Loop Daddy III,1:46,106,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,285,INDIFFERENT,False
 s1y61lxiYQM,My Only Chance,The Toxic Avenger,Furi (Original Game Soundtrack),6:49,409,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,286,INDIFFERENT,False
-l4y_Hw0lneA,I Feel Better,Hot Chip,One Life Stand,4:41,281,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,287,INDIFFERENT,False
-kDfejbzHp_U,Mothership Reconnection [(Daft Punk Remix)] (feat. Parliament & Funkadelic),Scott Grooves,"Musique, Vol. 1",4:01,241,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,291,INDIFFERENT,False
 X2bDlt9uSK0,Warp 1.9 (feat. Steve Aoki),The Bloody Beetroots,ROMBORAMA,3:24,204,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,293,INDIFFERENT,False
-mSaEB9LSfg8,Neurochemistry (Indianix Remix),Liquid Ace,Neurochemistry (Indianix Remix),5:58,358,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,297,INDIFFERENT,False
 H4RELGc9su8,HUMBLE.,Kendrick Lamar,DAMN. COLLECTORS EDITION.,2:57,177,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,299,INDIFFERENT,False
-C3i8gmaifnI,We Are Your Friends (Justice Vs. Simian Edit),"Justice, Simian",We Are Your Friends,2:45,165,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,303,INDIFFERENT,False
 F6e2rM2-oLY,Television Rules the Nation / Crescendolls,Daft Punk,Alive 2007,4:51,291,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,307,INDIFFERENT,False
 8GAiFG4YGB0,Deep into Nature Extrawelt remix,Captain Hook,Ouroboros - Past,5:39,339,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,310,INDIFFERENT,False
 2-F5_QlAxxg,Jellyhead,"Phaxe, Morten Granau",Calm Under Pressure,7:42,462,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,315,INDIFFERENT,False
-ZdWyWGscm3Q,Swoon,The Chemical Brothers,Further,6:06,366,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,316,INDIFFERENT,False
 Qn6HrBh59do,Pranava (Volcano on Mars Remix),Ace Ventura & Astrix,Pranava (Volcano on Mars Remix),8:56,536,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,318,INDIFFERENT,False
 EU79S-pFmn0,Can't Get You Out of My Head,Kylie Minogue,Can't Get You Out of My Head,3:52,232,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,327,INDIFFERENT,False
-Zjo8dCFbgMU,Jiboya,Vegas (Brazil),Jiboya,6:33,393,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,334,INDIFFERENT,False
 uKtqyyVG-IQ,Universe Inside Me (Ghost Rider & Ranji Remix),Vini Vici & Liquid Soul,Life Is a Remix,6:00,360,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,335,INDIFFERENT,False
-cMMxXF33Wpw,Love In Motion (feat. Mayer Hawthorne),SebastiAn,Total,3:06,186,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,344,INDIFFERENT,False
-q3PvB0VViFo,Om Namah Shivaya,Electric Universe & Greg Hilight,Om Namah Shivaya,9:18,558,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,347,INDIFFERENT,False
 r3iA80Dykgo,Negev,"Animato, Pettra",Negev,8:00,480,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,348,INDIFFERENT,False
 OPUQqaINY7s,Professional Griefers (Vocal Mix) (feat. Gerard Way),deadmau5,> album title goes here <,4:04,244,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,350,INDIFFERENT,False
 uyOHa5kOBVg,Oblivion,"Durs, Morten Granau",Oblivion,6:01,361,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,352,INDIFFERENT,False
-_R0fmXGJzRA,Can't Stop,"Major7, Rexalted",Can't Stop,7:07,427,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,357,INDIFFERENT,False
-fVZZmhY7TD0,People Can Fly,Astral Projection,Trust In Trance,9:56,596,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,358,INDIFFERENT,False
 gKs3nR4PpFo,My Moon My Man (Boys Noize Classic Mix),Feist,My Moon My Man,6:40,400,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,359,INDIFFERENT,False
-oWhcw8Y024k,Tonight (Radio Edit),Yuksek,Away From The Sea,3:14,194,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,360,INDIFFERENT,False
--njMAzRYuUk,Mental Hotline,Space Buddha,Full Circle,7:19,439,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,362,INDIFFERENT,False
 PPe3mtq9I9s,Deep Melodies,"OneNoise, Pounding Dwarf",Deep Melodies,4:28,268,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,367,INDIFFERENT,False
-JB0sTn3rNa4,Orchid,Ritmo & Lifeforms,Orchid,7:50,470,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,369,INDIFFERENT,False
 bhz1QcTMnfo,Eyes (Radio Edit),Jay Benson,Eyes,3:12,192,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,371,INDIFFERENT,False
-oVWwskO-650,Cheap And Cheerful (Sebastian remix),The Kills,Cheap And Cheerful (Remixes),5:57,357,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,372,INDIFFERENT,False
-y4hMX9XF2WA,Waterfall,StereOMantra,Wings,7:10,430,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,374,INDIFFERENT,False
 VbxyY8UMU1E,The Man (Jacques Lu Cont Remix),The Killers,Wonderful Wonderful (Deluxe),4:16,256,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,376,INDIFFERENT,False
-G1ozSoBSKw4,Infinite Horizon,Chronosphere,Infinite Horizon,7:57,477,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,378,INDIFFERENT,False
 PJqViNPI0dE,Hands,The Ting Tings,Sounds From Nowheresville,3:20,200,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,379,INDIFFERENT,False
-Lj_xjlGGOLw,Digeridoo,Aphex Twin,Digeridoo,7:12,432,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,380,INDIFFERENT,False
 bKZz_iFGVL4,Raindrops,Basement Jaxx,Scars,4:10,250,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,383,INDIFFERENT,False
-pf7uueiK8ec,Genesis,Justice,Cross,3:55,235,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,388,INDIFFERENT,False
 gzQws46SYzU,Dark Magus,Hallucinogen,Twisted,7:32,452,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,391,INDIFFERENT,False
 IaEsugejaI4,Now We Are Free,Ignis Soul,Now We Are Free,3:53,233,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,393,INDIFFERENT,False
 SdsndGy9YYM,I don't play nice,babushka,I don't play nice,2:08,128,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,394,INDIFFERENT,False
 5E1Fg8w_TMg,Vector,Noosphere,Bass Monster,6:33,393,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,396,INDIFFERENT,False
 ATeIOEqbzPc,Euphoria,IgorMoraix,Euphoria,4:45,285,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,398,INDIFFERENT,False
-ARfJ55bUAw0,Around the World (Radio Edit),Daft Punk,Around the World,4:02,242,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,407,INDIFFERENT,False
 40UaaSJbCt4,Plastic Bed,"Eric Borgo, Oxia",Toolroom Knights (Mixed by Mark Knight 3.0),7:59,479,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,411,INDIFFERENT,False
-Eqsg3rZOEL4,Anything & Everything,Vini Vici & Pixel,"Best of My Sets, Vol. 12",7:26,446,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,412,INDIFFERENT,False
 i7IlPwFbY8U,Circles,Digitalism,"I Love You, Dude",3:47,227,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,415,INDIFFERENT,False
-aNK2wfuiks0,Rude Alert,Ajja,Tulpa,6:58,418,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,416,INDIFFERENT,False
 QN01dSaYFp4,In Your Brain,Liquid Soul & Silent Sphere,In Your Brain,7:43,463,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,419,INDIFFERENT,False
 qYG0tKyz0lo,Viol,Gesaffelstein,Conspiracy Pt.2,5:44,344,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,423,INDIFFERENT,False
 ZzW-8nQdkXo,Miss You,Foster The People,Torches,3:33,213,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,424,INDIFFERENT,False
 7neXnf7sJNw,Testarossa Autodrive,Kavinsky,OutRun,3:38,218,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,425,INDIFFERENT,False
-C8gjTbYVteQ,37 Grad,Oliver Huntemann,"Fieber, Pt. 1",6:27,387,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,426,INDIFFERENT,False
 TQ3faJ5QhXE,Moonlight Purpose,Freedom Fighters & Merkaba,Moonlight Purpose,8:31,511,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,427,INDIFFERENT,False
-GNtlKZ8CQ4g,Universal Language,"Astral Projection, Outsiders","Stash Bag, Vol. 6",8:04,484,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,428,INDIFFERENT,False
-bmjROkH6xtE,Elysium - Subconsciousness,Amatria7,,8:55,535,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,432,INDIFFERENT,False
 V3qUoiwr5kQ,Mr. Vain,Culture Beat,Serenity,5:37,337,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,435,INDIFFERENT,False
 y_-SP55sRig,Pump Up The Jam,Technotronic,Pump Up The Jam,5:21,321,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,437,LIKE,False
-U8nW4vNHkiY,Night Lead Me Astray (Younger Brother Remix),Younger Brother,Night Lead Me Astray,7:58,478,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,440,INDIFFERENT,False
 t-bBaD0OiDg,Luna Getika - Hesychia [[[ Dub Lunar II ]]],E-Mantra Official,,10:56,656,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,444,INDIFFERENT,False
 EwRydrKOA_o,Follow The Light,Housenatic,Follow The Light,4:20,260,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,445,INDIFFERENT,False
 kWaAVbmJSTs,Instant Enlightenment,"Raja Ram, Mad Tribe",Bigger Bang,9:43,583,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,446,INDIFFERENT,False
 8Q7e7YdjIpw,Full Measure,DJ YAGI,PSYCHEDELIC LABORATORY Vol.2,8:10,490,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,454,INDIFFERENT,False
-XkibcVeSqOs,True Reality (Interactive Noise Remix),"Symphonix, Venes",The Usual Suspects Remixes Part 1,7:04,424,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,457,INDIFFERENT,False
-7OL8xavogtE,Mama India (Out Now Remix),Technical Hitch,Mama India (Out Now Remix),6:56,416,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,459,INDIFFERENT,False
-6QL_bUCuhvo,Electric Feel (Justice Remix),MGMT,Electric Feel (Justice Remix),5:28,328,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,461,INDIFFERENT,False
 Q266UWljhlc,It's My Life,Dr. Alban,One Love,4:00,240,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,466,INDIFFERENT,False
-YxHAS9Ietco,The Dude,Kronfeld,The Freaks,7:19,439,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,467,INDIFFERENT,False
 dZ-cxh1zYTQ,Technoaid,DEKEL,Initiation,9:30,570,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,474,INDIFFERENT,False
 x_y3ImPszjo,Let Go,Liquid Ace,Let Go,8:45,525,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,475,INDIFFERENT,False
 u80b9Y-mkgM,Bubble'n Tweak (Remastered 2024),Hallucinogen,The Singles (Remastered 2024),6:25,385,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,482,INDIFFERENT,False
-nFnKwggB7Kc,Revolution (Inner Sphere Remix),Liquid Soul,Revolution,6:45,405,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,484,INDIFFERENT,False
 FziWpNVb-jg,Behind Closed Eyelids,Shpongle,Are You Shpongled?,12:30,750,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,486,INDIFFERENT,False
 Rtj6ES2bOVE,Witch Hunter (feat. Annina Giannini),Vermont (Br) & 8th Sin,Witch Hunter (feat. Annina Giannini),7:57,477,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,493,INDIFFERENT,False
-_en9n1pVHek,A Real Good Time,"Burn In Noise, Loud",Regan Presents Origin 5,8:45,525,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,495,INDIFFERENT,False
 jWJuIsWnrZ0,Theia,King Gizzard & The Lizard Wizard,The Silver Cord,3:25,205,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,496,INDIFFERENT,False
 Qq2Am2NVUbA,Pleasure x Newjack x Civilization (WWW),Justice,Woman Worldwide,5:39,339,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,497,INDIFFERENT,False
 ST-R2rF9By8,Multiple Futures,"Flegma, Volcano",Multiple Futures,6:55,415,2026-09-12T10:40:53Z,2026-09-12T10:43:54Z,2,499,INDIFFERENT,False
 A0zvOiOeuIU,I Believe,Technical Hitch,I Believe,11:03,663,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,89,INDIFFERENT,False
-cif1SK3t1Ag,Hashish (Faders Remix),1200 Micrograms,Hashish (Faders Remix),6:57,417,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,100,INDIFFERENT,False
 n5x0j2ln7_k,L.S.D. (Oliver Lieb Remix),Hallucinogen,Mi-Loony-Um!,7:53,473,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,101,INDIFFERENT,False
 cBzYlAtNudU,City Cook (Shiny Mob Remix) (Mixed),Caravan Palace,Dusty House Mix,2:11,131,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,111,INDIFFERENT,False
 lQTkJ5bUHcU,Sinnerman (Sofi Tukker Remix),"Nina Simone, SOFI TUKKER",Sinnerman (Sofi Tukker Remix),3:53,233,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,113,INDIFFERENT,False
@@ -500,36 +571,28 @@ ZJKzbfktApE,Wild West (Club Mix),Pickle,Wild West (Club Mix),4:14,254,2026-09-12
 eg7TkB0fxIQ,Aulos,Vladimir Cauchemar,Aulos,3:06,186,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,120,INDIFFERENT,False
 RX-Ra2NoB8M,GO OFF (Nuthin' 2 It),Dillon Francis,GO OFF (Nuthin' 2 It),2:53,173,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,125,INDIFFERENT,False
 NQT3dyE4qPc,Beside Of Me,"Maverick Sabre, nimino",Beside Of Me,3:28,208,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,137,INDIFFERENT,False
-QSWzLGgRF8c,Micro Music,Sonic Species & Relativ,Micro Music,7:47,467,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,141,INDIFFERENT,False
 m_j8vkVHRl8,Bass Inside,AC Slater,Bass Inside,4:24,264,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,157,INDIFFERENT,False
 GmZl5ymzYLY,Mr. Gold,Captain Hook,Mr. Gold,7:12,432,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,172,INDIFFERENT,False
-6rb23e_tka8,Somebody To Love,"Ben Kim, LP Giobbi",Somebody To Love,3:43,223,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,174,INDIFFERENT,False
 FB2yz0UQeSw,Time & Space (Lifeforms & Kali Remix),"Avalon, Burn In Noise",London Landscapes 2,7:50,470,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,178,INDIFFERENT,False
 tgzUvNjjPVo,Free tibet,Hilight Tribe,Love medicine & natural trance,5:59,359,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,182,INDIFFERENT,False
 vWrS8_HB5fY,Take Me To America (Stuzzi Remix),Salvatore Ganacci,Take Me To America (Stuzzi Remix),4:01,241,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,203,INDIFFERENT,False
-A9NgTtn2SzQ,Alakazam ! x Fire (WWW),Justice,Woman Worldwide,6:10,370,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,204,INDIFFERENT,False
 sa1T2s09Rgs,Burnin' / Too Long,Daft Punk,Alive 2007,7:12,432,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,206,INDIFFERENT,False
 CgrM07jF4PY,La Fiesta,Pickle,La Fiesta,3:25,205,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,207,INDIFFERENT,False
 6wketJkKYCo,I See You (feat. Solar Kid),"Liquid Soul, Zyce",Time,7:13,433,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,223,INDIFFERENT,False
 QVG6VY-PFGk,HELICOPTER,A$AP Rocky,Don't Be Dumb,2:41,161,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,231,INDIFFERENT,False
-jRXL0ne3Esg,Psychic Experience (Captain Hook Remix),Ace Ventura & Liquid Soul,Psychic Experience,8:09,489,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,238,INDIFFERENT,False
 jVBsM8CM0AE,i like the way you kiss me,Artemas,i like the way you kiss me,2:23,143,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,259,INDIFFERENT,False
-OOaovThubr8,Flashback (Freedom Fighters Remix),Vini Vici & Pixel,Life Is a Remix,8:39,519,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,272,INDIFFERENT,False
 pot42HZO83o,DMT (Volcano On Mars & Spacenoize remix),1200 Micrograms,DMT (Volcano On Mars & Spacenoize remix),8:30,510,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,273,INDIFFERENT,False
-3TkQ4qtIzDs,Interplanetary Soul,Alienatic,Creative Soul,9:40,580,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,300,INDIFFERENT,False
 oZs00PBZI7s,Can You Speak English,Salvatore Ganacci,Can You Speak English,3:04,184,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,304,INDIFFERENT,False
 vxw60P4mfyM,Angelic Particles (Remastered 2024),Hallucinogen,The Singles (Remastered 2024),7:25,445,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,305,INDIFFERENT,False
 2RYw2uwW1RE,Moonshine,Astrix & Avalon,Psy-Fi Book of Changes Compiled by Astrix,7:47,467,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,330,INDIFFERENT,False
 TSd33Gz_fvs,Positive Visualisation,Talamasca,Positive Visualization,7:32,452,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,331,INDIFFERENT,False
 oiAS1nRvwuE,Hijacked FM Station,Killatk & Popek,Hijacked FM Station,5:28,328,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,332,INDIFFERENT,False
 YUo8LhA97lo,Vibrancy (Kos:mo Remix),UMEK,Vibrancy (Kos:mo Remix),6:39,399,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,349,INDIFFERENT,False
-0FGSCJXgs1g,Cosmic Void,Aion & Agmon,Cosmic Void,7:06,426,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,365,INDIFFERENT,False
 GPPJsRILcP8,Shiva Tandava Stotram,Technical Hitch,Shiva Tandava Stotram,6:54,414,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,370,INDIFFERENT,False
 l0Lrv5_r3sE,Fuse Our Minds,"NoFace, Outsiders",Fuse Our Minds,9:11,551,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,373,INDIFFERENT,False
 0dBk19Cq_b4,Atarishii,Inner Lux,Atarishii,7:08,428,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,375,INDIFFERENT,False
 HKfAV4fqYhI,380 Volt (Sun Project Remix),Sun Project,Remixes II,8:24,504,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,384,INDIFFERENT,False
 bc2GtIbD8w8,Your Mother,Salvatore Ganacci,Your Mother,3:16,196,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,389,INDIFFERENT,False
-oD8JwqjWcPw,Gravity Reset,"Command D, Zara",Gravity Reset,5:02,302,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,390,LIKE,False
 9sXfXWVZqwQ,"Divine Moments of Truth (Astrix, Loud & The Lost Secret Door Remix)",Shpongle,"Divine Moments of Truth (Astrix, Loud & The Lost Secret Door Remix)",10:01,601,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,397,INDIFFERENT,False
 J80cgPG_Xdk,Polished Chrome,Captain Hook & Liquid Soul,"Captain Hook - Best of My Sets, Vol. 09",8:57,537,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,401,INDIFFERENT,False
 ByWq5McwERs,The Concert,Salvatore Ganacci,Culturally Appropriate,3:11,191,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,404,INDIFFERENT,False
@@ -537,15 +600,10 @@ ByWq5McwERs,The Concert,Salvatore Ganacci,Culturally Appropriate,3:11,191,2026-0
 16k1G4nEJR8,Only in Dreams,Liquid Soul,Set: 39,7:40,460,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,408,INDIFFERENT,False
 Lt2SceJdeOQ,Strange Planet,"Astrix, Shpongle",Codex VI,8:56,536,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,409,INDIFFERENT,False
 UedHTFWuiUg,Cosmic Traveller,"Burn In Noise, WEBRA",Cosmic Traveller,7:07,427,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,418,INDIFFERENT,False
-Y_MQ5GB5_uk,Spice Travel,"Sonic Species,Zen Mechanics",Unleash the Beat,9:45,585,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,420,INDIFFERENT,False
-qn2fXoSaYp0,Long Story Short (Static Movement Remix),"Morten Granau, Phaxe",Long Story Short Remixed,8:28,508,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,422,INDIFFERENT,False
 FLvlaqe6908,A Brief History Of Goa-Trance Hallucinogen,Talamasca,A Brief History Of Goa-Trance,8:14,494,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,429,INDIFFERENT,False
 5HLImwTx7Vc,Lava Lava,Boys Noize,Oi Oi Oi,4:01,241,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,430,INDIFFERENT,False
 1DjOhjuRVNI,The Sixth Revelation,1200 Micrograms,The Secret Of The Thirteen Crystal Skulls,10:02,602,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,431,INDIFFERENT,False
-2K9POBRgC08,Acid Rain,Alpha Portal,Dimension 005 (Compiled by Alpha Portal),8:09,489,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,436,INDIFFERENT,False
 fJMuNcC39yo,Eagle Horizon (Ilai rmx),Zyce,Eagle Horizon (Ilai rmx),7:57,477,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,438,INDIFFERENT,False
-1wTJ0wX6hNY,Eya (Rexalted Remix),Omiki,"The Remixes, Pt. 1",6:27,387,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,442,INDIFFERENT,False
-J09FQxX_yBQ,"Control Me, Pt. 2","Groundbass, Perception","Control Me, Pt. 2",8:53,533,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,447,INDIFFERENT,False
 J0EF7rs7wqY,Flowstate,"Protonica, Zen Mechanics",Flowstate,9:37,577,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,448,INDIFFERENT,False
 rUQxmCe8134,It Might Have Been,Mandragora,Disc 2,3:57,237,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,449,INDIFFERENT,False
 bLbd5MtWews,Stranger (feat. Daya),Kliment,Path To Extinction,7:10,430,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,453,INDIFFERENT,False
@@ -554,14 +612,11 @@ W2M_7Et8o2c,We Got the Power (feat. Jehnny Beth),Gorillaz,Humanz,2:20,140,2026-0
 S-VVD85pXWA,Collard Greens (feat. Kendrick Lamar),ScHoolboy Q,Oxymoron,5:00,300,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,462,INDIFFERENT,False
 dNTwvW7Py7M,As Alive As You Need Me To Be,Nine Inch Nails,As Alive As You Need Me To Be,3:54,234,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,465,INDIFFERENT,False
 Et4wZBxIsNQ,Anything is Possible,"Astro-D, Etnica",Party Alien,9:34,574,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,468,INDIFFERENT,False
-_2q8IZjvySY,Nightwind,"Side Effects, Timelock",Nightwind,7:17,437,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,469,INDIFFERENT,False
 o_oAh1n8Als,Fire Like This,Hardknox,Hardknox,4:39,279,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,470,INDIFFERENT,False
-tRIiHQwMOgQ,100 Billion Galaxies,Egorythmia,100 Billion Galaxies,8:17,497,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,471,INDIFFERENT,False
 x3f3FlkMbqU,Please Please Please (Workout Remix 128 BPM),Power Music Workout,Please Please Please,2:53,173,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,478,LIKE,True
 01M-PdaZnIU,Berserk,Salvatore Ganacci,Work Hard Not Smart,2:25,145,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,479,INDIFFERENT,False
 4glVKFz_Raw,Liquid Hook (Interactive Noise Remix),Captain Hook & Liquid Soul,The Journey Part 03 - Mix by Dj Emok,4:29,269,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,485,INDIFFERENT,False
 pV086iqH7yA,Protect Me From Evil,BigWalkDog,Protect Me From Evil,3:08,188,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,489,INDIFFERENT,False
-CS2dDd7BSOE,Cosmic Ritual,E-mov,Cosmic Ritual,7:42,462,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,491,INDIFFERENT,False
 OzFP1pxCWQA,Coolio (Darwish Remix),Astrix,Coolio,6:40,400,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,492,INDIFFERENT,False
 KmoLON42eSU,Siki Siki Baba (feat. Butch),Salvatore Ganacci,Culturally Appropriate,3:56,236,2026-09-12T10:43:54Z,2026-09-12T10:43:54Z,1,494,INDIFFERENT,False
 VJoXyLBwgMA,SEE YOU DROP,Ray Volpe,SEE YOU DROP,2:38,158,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,2,INDIFFERENT,False
@@ -601,45 +656,32 @@ l6Fx2nyU52w,No Broke Boys,"Disco Lines, Tinashe",No Broke Boys,2:44,164,2026-09-
 2XF2v9UA0og,Afraid To Feel,LF SYSTEM,Afraid To Feel,2:58,178,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,160,INDIFFERENT,False
 kNtk-CnpL-Y,This Girl (Kungs Vs. Cookin' On 3 Burners) (Kungs Vs. Cookin' On 3 Burners),"Cookin' On 3 Burners, Kungs",Layers,3:16,196,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,162,INDIFFERENT,False
 O7kPl57pXHw,Polygon Window,Polygon Window,Surfing On Sine Waves,5:28,328,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,164,INDIFFERENT,False
-qeDB7WgB4xA,Rabauke,AKZENTH,Rabauke,5:48,348,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,170,INDIFFERENT,False
 io7IlDiGmv0,Come with Us (Asgard Remix),Ace Ventura & Zen Mechanics,Come with Us (Asgard Remix),10:26,626,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,177,INDIFFERENT,False
 QCquV3A7kdY,Into Dust (Still Falling),Four Tet,Into Dust (Still Falling),5:34,334,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,193,INDIFFERENT,False
 s0UzPHcZGRM,Jen High,Peggy Gou,Art of War (Pt. II) EP,6:28,388,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,202,INDIFFERENT,False
 meDk3gD1-Fg,"She’s Gone, Dance On",Disclosure,"She’s Gone, Dance On",3:47,227,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,204,INDIFFERENT,False
 TQQHZFvh1Bk,Dirty Cash (Money Talks),"Adventures Of Stevie V, PAWSA",Dirty Cash (Money Talks),3:42,222,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,214,INDIFFERENT,False
-OjgsdQbVzRI,Last Night,Rivo,Last Night,3:43,223,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,230,INDIFFERENT,False
 dFxWITe5O2o,Brackish,Of The Trees & Tape B,Brackish,2:50,170,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,245,INDIFFERENT,False
 xAdvWC9gXUo,I Remember,"Kaskade, deadmau5",Random Album Title,9:08,548,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,266,INDIFFERENT,False
-pORTdLf_8P8,When Hitch Goes Slow,Technical Hitch,Let's Go Faster,7:24,444,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,274,INDIFFERENT,False
 Y2_hKPShcpY,Rasputin,"Boney M., Majestic",Rasputin,3:07,187,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,297,INDIFFERENT,False
 XWCPbRsMb0Q,One Kiss,"Calvin Harris, Dua Lipa",One Kiss,3:35,215,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,298,INDIFFERENT,False
 PxSUgsoij0Q,Heart Beat (Extended Mix),"Animato, Gaudium",Heart Beat,7:40,460,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,299,INDIFFERENT,False
 jAwtFtcgNkA,D.A.N.C.E,Peggy Gou,F1 The Album (Cinematic Edition),3:16,196,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,304,INDIFFERENT,False
 TjWBm-rCWWY,Devotion,Liquid Soul,Devotion,7:46,466,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,316,INDIFFERENT,False
 mHIwg6Tv6xg,The Power of Now Talpa & Zyce Remix,Critical Choice,The Power of Now Remix,8:23,503,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,323,INDIFFERENT,False
-SNqar0UNBrA,Lady Sweet Dream,Talamasca,The Experiment,9:16,556,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,342,INDIFFERENT,False
 ywT7UBr7_GQ,Space Tube 25,Captain Hook,Space Tube 25,15:27,927,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,351,INDIFFERENT,False
-ZqEW72IefXg,Sexual Distortion,Symphonix,Sexual Distortion,6:24,384,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,356,INDIFFERENT,False
 phELKuqnaS4,Sugar On My Tongue,"Tyler, The Creator",DON'T TAP THE GLASS,2:34,154,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,373,INDIFFERENT,False
 tUNwIsXkNWY,Kids (Soulwax Mix),MGMT,Kids (Soulwax Mix),5:39,339,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,386,INDIFFERENT,False
-dSoKVyxl2ts,The Other Side,Alpha Portal & Ajja,The Other Side,8:20,500,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,387,INDIFFERENT,False
-FgDvgxGDYoA,Bigger Bang,"Raja Ram, Mad Tribe",Bigger Bang,10:08,608,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,399,INDIFFERENT,False
-zkPyW0J73z4,Ecstasy,1200 Micrograms,The Remixes,7:15,435,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,400,INDIFFERENT,False
 10JPFw0ieqI,Helix (Live / AAA),Justice,Access All Arenas,4:07,247,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,404,INDIFFERENT,False
 TVTt3rjqMOw,Han Pan,Peggy Gou,Moment EP,6:42,402,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,405,INDIFFERENT,False
-DUK54BoiXZw,Liquid Gold,Astrix,High On Mel,7:38,458,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,416,INDIFFERENT,False
 wD6jCMn5nq0,The Rockafeller Skank,Fatboy Slim,You've Come A Long Way Baby,6:54,414,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,420,INDIFFERENT,False
 dEOmR6b0IqM,"What Is Love (7"" Mix)",Haddaway,The Album,4:31,271,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,431,INDIFFERENT,False
 kdfF0cOC50w,Paul Revere,Beastie Boys,Licensed To Ill,3:41,221,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,433,INDIFFERENT,False
 2Ul3oPwdsQI,Del Tango Original Mix,Phaxe,Del Tango,7:23,443,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,436,INDIFFERENT,False
 93AiMdYJ3iE,Voices Of Israel,Technical Hitch,Voices Of Israel,7:44,464,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,439,INDIFFERENT,False
-WwyqnV01mlM,Sexdrugs & Acidtrance II,Sun Project,Macrophage,8:44,524,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,455,INDIFFERENT,False
 cHhd23jzx6Y,PUT A HIT ON,MUTTLEE,PUT A HIT ON,2:55,175,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,465,INDIFFERENT,False
 RpFwXfOpwoc,Stay Fly (feat. Young Buck & Eightball & MJG),Three 6 Mafia,Stay Fly (4 Pack),3:59,239,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,466,INDIFFERENT,False
-tk2fi7Dh-YI,Upgrade,"Day Din, Klopfgeister",Upgrade,7:47,467,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,470,INDIFFERENT,False
 nBcjBzs4F9o,Graviton II (feat. Shanti People),Psycrain,Graviton II,5:59,359,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,471,INDIFFERENT,False
 R97pP4z-5Ak,Love S.O.S. (WWW),Justice,Woman Worldwide,4:46,286,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,484,INDIFFERENT,False
 fpO_VmAN0fY,Big Subwoofer (feat. E-40 & Too $hort),"Ice Cube, MOUNT WESTMORE, Snoop Dogg",SNOOP CUBE 40 $HORT,3:40,220,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,485,INDIFFERENT,False
 EWeIWVGPibc,Starry Night,Peggy Gou,Moment EP,6:39,399,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,488,INDIFFERENT,False
-gXpmOi2R6B8,Liquid Hook (Interactive Noise Remix),Liquid Soul & Captain Hook,Liquid Hook (Interactive Noise Remix),6:54,414,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,494,INDIFFERENT,False
-K8_0YFXGROU,Here & There Original Mix,"Astrix, Pixel",Here & There,7:40,460,2026-09-12T10:40:53Z,2026-09-12T10:40:53Z,1,495,INDIFFERENT,False
