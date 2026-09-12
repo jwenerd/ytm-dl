@@ -1,12 +1,12 @@
 # 📝  output 
 
-## ⚙️ [run #6752](https://github.com/jwenerd/ytm-dl/actions/runs/34682705889)
+## ⚙️ [run #6753](https://github.com/jwenerd/ytm-dl/actions/runs/34683589535)
 
 ### 📁 Files
 
 |                                                                         |lines|size|
 |-------------------------------------------------------------------------|-----|----|
-|[`output/history.csv` ](output/history.csv)                              |66679|8.4M|
+|[`output/history.csv` ](output/history.csv)                              |66686|8.4M|
 |[`output/history/2024-01.csv` ](output/history/2024-01.csv)              |2255 |288K|
 |[`output/history/2024-02.csv` ](output/history/2024-02.csv)              |1736 |212K|
 |[`output/history/2024-03.csv` ](output/history/2024-03.csv)              |1868 |228K|
@@ -29,8 +29,8 @@
 |[`output/history/2026-06.csv` ](output/history/2026-06.csv)              |5666 |740K|
 |[`output/history/2026-07.csv` ](output/history/2026-07.csv)              |8461 |1.1M|
 |[`output/history/2026-08.csv` ](output/history/2026-08.csv)              |5921 |772K|
-|[`output/history/2026-09.csv` ](output/history/2026-09.csv)              |3216 |432K|
-|[`output/home.csv` ](output/home.csv)                                    |4172 |380K|
+|[`output/history/2026-09.csv` ](output/history/2026-09.csv)              |3223 |436K|
+|[`output/home.csv` ](output/home.csv)                                    |106  |16K |
 |[`output/library_albums.csv` ](output/library_albums.csv)                |1329 |92K |
 |[`output/library_artists.csv` ](output/library_artists.csv)              |2619 |116K|
 |[`output/library_songs.csv` ](output/library_songs.csv)                  |8368 |736K|
