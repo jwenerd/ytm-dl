@@ -5,6 +5,7 @@ import sys
 
 from src.api import ApiMethod, suggest_search
 from src.meta import write_meta
+from src.mood_mixes import sync_all_mood_mixes
 from src.output import Output, update_search_suggestions
 
 
@@ -24,10 +25,15 @@ def do_search_suggestions():
 
 
 def do_updates(option):
-    if option not in ["all", "frequent"]:
-        print("Option must be all or frequent")
+    if option not in ["all", "frequent", "mixes"]:
+        print("Option must be all, frequent, or mixes")
         print("  given: " + str(option))
         sys.exit(1)
+
+    if option == "mixes":
+        sync_all_mood_mixes()
+        ApiMethod.save_api_artifact()
+        return
 
     files = ["liked_songs", "library_songs", "history"]
     if option == "all":
@@ -41,6 +47,7 @@ def do_updates(option):
 
     if option == "all":
         files_written += do_search_suggestions()
+        sync_all_mood_mixes()
 
     files_written = set(filter(None, files_written))
     output_updates = len(files_written) > 0

@@ -106,11 +106,34 @@ class HomeSchema(BaseSchema):
     run_id = fields.Str()
 
 
+class MoodMixTrackSchema(SongSchema):
+    primary_key = "videoId"
+
+    position = fields.Int()
+    likeStatus = fields.Str()
+    inLibrary = fields.Str()
+
+    @property
+    def keys(self):
+        return [
+            "position",
+            "title",
+            "artists",
+            "album",
+            "duration",
+            "duration_seconds",
+            "videoId",
+            "likeStatus",
+            "inLibrary",
+        ]
+
+
 SCHEMA_MAPPING = {
     "home": HomeSchema,
     "history": HistorySchema,
     "liked_songs": LikedSongSchema,
     "library_subscriptions": ArtistSchema,
+    "mood_mix_track": MoodMixTrackSchema,
     "_songs": SongSchema,
     "_artists": ArtistSchema,
     "_albums": AlbumSchema,
