@@ -15,8 +15,17 @@ def get_existing_ids(csv_file, key_index=None, limit=float("inf")):
         if header is None:
             return []
 
-        idx = key_index if key_index is not None else (len(header) - 1)
-        if idx >= len(header):
+        if isinstance(key_index, str) and key_index in header:
+            idx = header.index(key_index)
+        elif key_index is not None and isinstance(key_index, int) and key_index < len(header):
+            idx = key_index
+        elif "videoId" in header:
+            idx = header.index("videoId")
+        elif "browseId" in header:
+            idx = header.index("browseId")
+        elif "id" in header:
+            idx = header.index("id")
+        else:
             idx = len(header) - 1
 
         for row in reader:
