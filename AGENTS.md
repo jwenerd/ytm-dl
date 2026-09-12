@@ -162,3 +162,6 @@ The codebase enforces strict linting and formatting via **Ruff**:
 5. **Branching Model Awareness**:
    - `main`: Application codebase, configuration, tests, workflows.
    - `main-output`: Automated target branch containing exported CSV/YAML datasets in `output/`.
+
+6. **Git Commit & Push Authorization**:
+   - **NEVER** run `git commit` or `git push` to `main` (or any remote branch) without the user explicitly stating to commit/push in their prompt. Always propose changes, run validations, and wait for explicit confirmation.

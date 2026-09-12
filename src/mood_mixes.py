@@ -2,7 +2,6 @@ import concurrent.futures
 import os
 from datetime import UTC, datetime
 
-from ytmusicapi.continuations import get_continuations
 from ytmusicapi.navigation import SECTION_LIST, SINGLE_COLUMN_TAB, nav
 
 from .api import get_thread_client
@@ -62,26 +61,13 @@ def discover_mood_chips(client) -> list[tuple[str, str]]:
 
 
 def discover_chip_supermixes(client, chip_name: str, chip_params: str) -> list[dict]:
-    """Finds Supermixes under a specific mood chip."""
+    """Finds the Supermix in 'Mixed for you' section under a specific mood chip."""
     supermixes = []
     try:
         chip_raw = client._send_request(
             "browse", {"browseId": "FEmusic_home", "params": chip_params}
         )
-        section_list = list(nav(chip_raw, SINGLE_COLUMN_TAB + SECTION_LIST, True) or [])
-        sec_list_rend = nav(chip_raw, [*SINGLE_COLUMN_TAB, "sectionListRenderer"], True) or {}
-        if "continuations" in sec_list_rend:
-
-            def req_fn(additionalParams):
-                return client._send_request(
-                    "browse", {"browseId": "FEmusic_home", "params": chip_params}, additionalParams
-                )
-
-            cont_secs = get_continuations(
-                sec_list_rend, "sectionListContinuation", 10, req_fn, lambda x: x
-            )
-            section_list.extend(cont_secs)
-
+        section_list = nav(chip_raw, SINGLE_COLUMN_TAB + SECTION_LIST)
         for sec in section_list:
             for key in [
                 "musicCarouselShelfRenderer",
@@ -89,40 +75,52 @@ def discover_chip_supermixes(client, chip_name: str, chip_params: str) -> list[d
                 "gridRenderer",
             ]:
                 if key in sec:
-                    for item in sec[key].get("contents", []):
-                        for r_type in [
-                            "musicTwoRowItemRenderer",
-                            "musicResponsiveListItemRenderer",
-                        ]:
-                            if r_type in item:
-                                rend = item[r_type]
-                                t = "".join(
-                                    [
-                                        r.get("text", "")
-                                        for r in rend.get("title", {}).get("runs", [])
-                                    ]
-                                )
-                                sub = "".join(
-                                    [
-                                        r.get("text", "")
-                                        for r in rend.get("subtitle", {}).get("runs", [])
-                                    ]
-                                )
-                                nav_ep = rend.get("navigationEndpoint", {})
-                                b_ep = nav_ep.get("browseEndpoint", {})
-                                w_ep = nav_ep.get("watchEndpoint", {})
-                                p_id = w_ep.get("playlistId") or b_ep.get("browseId")
-                                if p_id and p_id.startswith("VL"):
-                                    p_id = p_id[2:]
-                                if p_id and is_supermix_or_core_mix(t):
-                                    supermixes.append(
-                                        {
-                                            "title": t,
-                                            "mood_chip": chip_name,
-                                            "playlist_id": p_id,
-                                            "featured_artists": sub,
-                                        }
+                    header = sec[key].get("header", {})
+                    title_runs = (
+                        header.get("musicCarouselShelfBasicHeaderRenderer", {})
+                        .get("title", {})
+                        .get("runs", [])
+                    )
+                    if not title_runs:
+                        title_runs = (
+                            header.get("gridHeaderRenderer", {}).get("title", {}).get("runs", [])
+                        )
+                    sec_title = "".join([r.get("text", "") for r in title_runs])
+                    if sec_title == "Mixed for you":
+                        for item in sec[key].get("contents", []):
+                            for r_type in [
+                                "musicTwoRowItemRenderer",
+                                "musicResponsiveListItemRenderer",
+                            ]:
+                                if r_type in item:
+                                    rend = item[r_type]
+                                    t = "".join(
+                                        [
+                                            r.get("text", "")
+                                            for r in rend.get("title", {}).get("runs", [])
+                                        ]
                                     )
+                                    sub = "".join(
+                                        [
+                                            r.get("text", "")
+                                            for r in rend.get("subtitle", {}).get("runs", [])
+                                        ]
+                                    )
+                                    nav_ep = rend.get("navigationEndpoint", {})
+                                    b_ep = nav_ep.get("browseEndpoint", {})
+                                    w_ep = nav_ep.get("watchEndpoint", {})
+                                    p_id = w_ep.get("playlistId") or b_ep.get("browseId")
+                                    if p_id and p_id.startswith("VL"):
+                                        p_id = p_id[2:]
+                                    if p_id and is_supermix_or_core_mix(t):
+                                        supermixes.append(
+                                            {
+                                                "title": t,
+                                                "mood_chip": chip_name,
+                                                "playlist_id": p_id,
+                                                "featured_artists": sub,
+                                            }
+                                        )
     except Exception as e:
         print(f"Warning: Failed to discover mixes for chip '{chip_name}': {e}")
     return supermixes
@@ -132,23 +130,25 @@ def discover_home_core_mixes(client) -> list[dict]:
     """Finds My Supermix and core algorithmic mixes (Discover, Replay, etc.) on Home."""
     home_mixes = []
     try:
-        home_sections = client.get_home(limit=50)
+        home_sections = client.get_home(limit=25)
         for sec in home_sections:
-            for item in sec.get("contents", []):
-                title = item.get("title", "")
-                p_id = item.get("playlistId") or item.get("browseId")
-                if p_id and p_id.startswith("VL"):
-                    p_id = p_id[2:]
-                if p_id and is_supermix_or_core_mix(title):
-                    desc = item.get("description", "")
-                    home_mixes.append(
-                        {
-                            "title": title,
-                            "mood_chip": "Home",
-                            "playlist_id": p_id,
-                            "featured_artists": desc,
-                        }
-                    )
+            sec_title = sec.get("title", "")
+            if sec_title in ["Mixed for you", "Fresh finds, old favorites"]:
+                for item in sec.get("contents", []):
+                    title = item.get("title", "")
+                    p_id = item.get("playlistId") or item.get("browseId")
+                    if p_id and p_id.startswith("VL"):
+                        p_id = p_id[2:]
+                    if p_id and is_supermix_or_core_mix(title):
+                        desc = item.get("description", "")
+                        home_mixes.append(
+                            {
+                                "title": title,
+                                "mood_chip": "Home",
+                                "playlist_id": p_id,
+                                "featured_artists": desc,
+                            }
+                        )
     except Exception as e:
         print(f"Warning: Failed to discover home mixes: {e}")
     return home_mixes
