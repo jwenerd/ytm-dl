@@ -3,12 +3,11 @@ mood_chip: Relax
 playlist_id: RDTMAK5uy_nzfwl2UYv7htL7wDoxbX8Pp6UAFBd92cQ
 description: Relax and let go with this mix of songs that span all your tastes. Always
   updating.
-featured_artists: "Skinshape, Mississippi John Hurt, Hermanos Guti\xE9rrez, Super\
-  \ Guitar Bros"
+featured_artists: "Skinshape, Hermanos Guti\xE9rrez, Arc De Soleil, Super Guitar Bros"
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1232
-new_tracks_latest_run: 58
+total_unique_tracks: 1259
+new_tracks_latest_run: 27
 latest_batch_size: 500
-last_updated: '2026-09-12T20:18:18Z'
-run_id: gh-6772
+last_updated: '2026-09-12T20:31:33Z'
+run_id: gh-6773
