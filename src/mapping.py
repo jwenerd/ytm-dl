@@ -109,20 +109,26 @@ class HomeSchema(BaseSchema):
 class MoodMixTrackSchema(SongSchema):
     primary_key = "videoId"
 
-    position = fields.Int()
+    first_seen = fields.Str()
+    last_seen = fields.Str()
+    times_recommended = fields.Int()
+    latest_position = fields.Int()
     likeStatus = fields.Str()
     inLibrary = fields.Str()
 
     @property
     def keys(self):
         return [
-            "position",
+            "videoId",
             "title",
             "artists",
             "album",
             "duration",
             "duration_seconds",
-            "videoId",
+            "first_seen",
+            "last_seen",
+            "times_recommended",
+            "latest_position",
             "likeStatus",
             "inLibrary",
         ]

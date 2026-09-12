@@ -1,41 +1,40 @@
 import concurrent.futures
 import csv
-import hashlib
 import os
 import re
-from datetime import UTC, datetime, timedelta
+from datetime import UTC, datetime
 
 import yaml
 from ytmusicapi.navigation import SECTION_LIST, SINGLE_COLUMN_TAB, nav
 
 from .api import get_thread_client
-from .mapping import MoodMixTrackSchema, get_run_id
+from .mapping import ExtractNameStr, MoodMixTrackSchema, get_run_id
 from .util import file_exists, output_path, write_file
+
+CORE_HOME_MIX_TITLES = {
+    "my supermix",
+    "discover mix",
+    "new release mix",
+    "replay mix",
+    "archive mix",
+}
 
 
 def slugify(text: str) -> str:
-    """Converts display names to clean snake_case filenames/folder names."""
+    """Converts display names to clean snake_case filenames."""
     text = text.strip().lower()
     text = re.sub(r"[^a-z0-9]+", "_", text)
     return text.strip("_")
 
 
-def get_week_archive_folder(run_time: datetime | None = None) -> str:
-    """
-    Returns the YYYY_MM_DD string for the Monday (start) of the ISO week.
-    Example: 2026-09-12 (Saturday) -> '2026_09_08' (Monday)
-    """
-    if run_time is None:
-        run_time = datetime.now(UTC)
-    ref_date = run_time.date() if isinstance(run_time, datetime) else run_time
-    monday = ref_date - timedelta(days=ref_date.weekday())
-    return monday.strftime("%Y_%m_%d")
-
-
-def compute_tracklist_hash(tracks: list[dict]) -> str:
-    """Computes SHA-256 hash of ordered videoIds for change detection."""
-    video_ids = [t.get("videoId", "") for t in tracks if isinstance(t, dict)]
-    return hashlib.sha256(",".join(video_ids).encode("utf-8")).hexdigest()
+def is_supermix_or_core_mix(title: str) -> bool:
+    """Returns True if the title belongs to a Supermix or Core Home Mix."""
+    cleaned = title.strip().lower()
+    if "supermix" in cleaned:
+        return True
+    if cleaned in CORE_HOME_MIX_TITLES:
+        return True
+    return False
 
 
 def discover_mood_chips(client) -> list[tuple[str, str]]:
@@ -65,9 +64,9 @@ def discover_mood_chips(client) -> list[tuple[str, str]]:
     return chips
 
 
-def discover_chip_mixes(client, chip_name: str, chip_params: str) -> list[dict]:
-    """Finds all mixes in 'Mixed for you' section under a specific mood chip."""
-    mixes = []
+def discover_chip_supermixes(client, chip_name: str, chip_params: str) -> list[dict]:
+    """Finds the Supermix in 'Mixed for you' section under a specific mood chip."""
+    supermixes = []
     try:
         chip_raw = client._send_request(
             "browse", {"browseId": "FEmusic_home", "params": chip_params}
@@ -117,8 +116,8 @@ def discover_chip_mixes(client, chip_name: str, chip_params: str) -> list[dict]:
                                     p_id = w_ep.get("playlistId") or b_ep.get("browseId")
                                     if p_id and p_id.startswith("VL"):
                                         p_id = p_id[2:]
-                                    if p_id:
-                                        mixes.append(
+                                    if p_id and is_supermix_or_core_mix(t):
+                                        supermixes.append(
                                             {
                                                 "title": t,
                                                 "mood_chip": chip_name,
@@ -128,11 +127,11 @@ def discover_chip_mixes(client, chip_name: str, chip_params: str) -> list[dict]:
                                         )
     except Exception as e:
         print(f"Warning: Failed to discover mixes for chip '{chip_name}': {e}")
-    return mixes
+    return supermixes
 
 
-def discover_home_mixes(client) -> list[dict]:
-    """Finds My Supermix and algorithmic mixes (Discover, Replay, etc.) on Home."""
+def discover_home_core_mixes(client) -> list[dict]:
+    """Finds My Supermix and core algorithmic mixes (Discover, Replay, etc.) on Home."""
     home_mixes = []
     try:
         home_sections = client.get_home(limit=25)
@@ -144,11 +143,7 @@ def discover_home_mixes(client) -> list[dict]:
                     p_id = item.get("playlistId") or item.get("browseId")
                     if p_id and p_id.startswith("VL"):
                         p_id = p_id[2:]
-                    if p_id and (
-                        "mix" in title.lower()
-                        or "supermix" in title.lower()
-                        or sec_title == "Mixed for you"
-                    ):
+                    if p_id and is_supermix_or_core_mix(title):
                         desc = item.get("description", "")
                         home_mixes.append(
                             {
@@ -163,22 +158,22 @@ def discover_home_mixes(client) -> list[dict]:
     return home_mixes
 
 
-def discover_all_mixes(client) -> list[dict]:
-    """Scans all mood chips and home feed to build master list of mixes."""
+def discover_all_supermixes(client) -> list[dict]:
+    """Scans all mood chips and home feed to build master list of Supermixes & Core Mixes."""
     all_mixes = []
     seen_ids = set()
 
     # 1. Home mixes
-    for mix in discover_home_mixes(client):
+    for mix in discover_home_core_mixes(client):
         pid = mix["playlist_id"]
         if pid not in seen_ids:
             seen_ids.add(pid)
             all_mixes.append(mix)
 
-    # 2. Mood Chip mixes
+    # 2. Mood Chip supermixes
     chips = discover_mood_chips(client)
     for chip_name, chip_params in chips:
-        for mix in discover_chip_mixes(client, chip_name, chip_params):
+        for mix in discover_chip_supermixes(client, chip_name, chip_params):
             pid = mix["playlist_id"]
             if pid not in seen_ids:
                 seen_ids.add(pid)
@@ -187,8 +182,105 @@ def discover_all_mixes(client) -> list[dict]:
     return all_mixes
 
 
-def fetch_and_format_mix(mix_info: dict, limit: int = 300, run_time=None, run_id=None) -> dict:
-    """Fetches playlist tracks and formats metadata for a single mix."""
+def read_existing_catalog(csv_path: str) -> dict[str, dict]:
+    """Reads existing catalog CSV into a dict keyed by videoId."""
+    catalog = {}
+    if not file_exists(csv_path):
+        return catalog
+
+    try:
+        with open(csv_path, encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                vid = row.get("videoId")
+                if vid:
+                    catalog[vid] = dict(row)
+    except Exception as e:
+        print(f"Warning: Failed to read existing catalog at {csv_path}: {e}")
+    return catalog
+
+
+def merge_catalog_tracks(
+    existing_catalog: dict[str, dict],
+    new_tracks: list[dict],
+    captured_at: str,
+) -> tuple[list[dict], int, int]:
+    """
+    Merges newly fetched tracks into existing cumulative catalog.
+    Returns: (sorted_catalog_rows, new_count, updated_count)
+    """
+    catalog = dict(existing_catalog)
+    extractor = ExtractNameStr()
+    new_count = 0
+    updated_count = 0
+
+    for idx, t in enumerate(new_tracks):
+        vid = t.get("videoId")
+        if not vid:
+            continue
+
+        pos = idx + 1
+        title = t.get("title", "")
+        artists = extractor._serialize(t.get("artists", []), None, None) or ""
+        album = extractor._serialize(t.get("album", {}), None, None) or ""
+        duration = t.get("duration", "")
+        duration_sec = t.get("duration_seconds") or 0
+        like_status = t.get("likeStatus", "INDIFFERENT")
+        in_library = str(t.get("inLibrary", False))
+
+        if vid in catalog:
+            # Update existing track
+            row = catalog[vid]
+            row["last_seen"] = captured_at
+            row["times_recommended"] = str(int(row.get("times_recommended") or 1) + 1)
+            row["latest_position"] = str(pos)
+            row["likeStatus"] = like_status
+            row["inLibrary"] = in_library
+            if duration and not row.get("duration"):
+                row["duration"] = duration
+                row["duration_seconds"] = str(duration_sec)
+            if album and not row.get("album"):
+                row["album"] = album
+            updated_count += 1
+        else:
+            # Add brand new track
+            catalog[vid] = {
+                "videoId": vid,
+                "title": title,
+                "artists": artists,
+                "album": album,
+                "duration": duration,
+                "duration_seconds": str(duration_sec),
+                "first_seen": captured_at,
+                "last_seen": captured_at,
+                "times_recommended": "1",
+                "latest_position": str(pos),
+                "likeStatus": like_status,
+                "inLibrary": in_library,
+            }
+            new_count += 1
+
+    def sort_key(item):
+        last_seen = item.get("last_seen", "")
+        times_rec = int(item.get("times_recommended") or 0)
+        try:
+            latest_pos = int(item.get("latest_position") or 9999)
+        except ValueError:
+            latest_pos = 9999
+        return (last_seen, times_rec, -latest_pos)
+
+    sorted_tracks = sorted(catalog.values(), key=sort_key, reverse=True)
+    return sorted_tracks, new_count, updated_count
+
+
+def fetch_and_merge_mix(
+    mix_info: dict,
+    output_base_dir: str = "output/mixes",
+    limit: int = 400,
+    run_time: datetime | None = None,
+    run_id: str | None = None,
+) -> dict:
+    """Fetches playlist tracks, merges with cumulative catalog, and writes files."""
     client = get_thread_client()
     playlist_id = mix_info["playlist_id"]
     if run_time is None:
@@ -199,24 +291,29 @@ def fetch_and_format_mix(mix_info: dict, limit: int = 300, run_time=None, run_id
     res = client.get_playlist(playlist_id, limit=limit)
     raw_tracks = res.get("tracks", [])
 
-    # Enrich tracks with position index
-    enriched_tracks = []
-    for idx, t in enumerate(raw_tracks):
-        track_copy = dict(t)
-        track_copy["position"] = idx + 1
-        enriched_tracks.append(track_copy)
+    mix_slug = slugify(mix_info.get("title", playlist_id))
+    csv_path = os.path.join(output_base_dir, f"{mix_slug}.csv")
+    yaml_path = os.path.join(output_base_dir, f"{mix_slug}.yaml")
 
-    # Serialize tracks using schema
+    existing_catalog = read_existing_catalog(csv_path)
+    merged_tracks, new_count, updated_count = merge_catalog_tracks(
+        existing_catalog, raw_tracks, captured_at
+    )
+
     schema = MoodMixTrackSchema()
-    dumped_tracks = schema.dump(enriched_tracks, many=True)
     columns = schema.keys
-    track_rows = [[row.get(col, "") for col in columns] for row in dumped_tracks]
+
+    # Write CSV
+    os.makedirs(output_base_dir, exist_ok=True)
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=columns)
+        writer.writeheader()
+        for track in merged_tracks:
+            writer.writerow({col: track.get(col, "") for col in columns})
 
     author = res.get("author")
     if isinstance(author, dict):
         author = author.get("name")
-
-    content_hash = compute_tracklist_hash(raw_tracks)
 
     metadata = {
         "title": res.get("title") or mix_info.get("title", ""),
@@ -226,66 +323,21 @@ def fetch_and_format_mix(mix_info: dict, limit: int = 300, run_time=None, run_id
         "featured_artists": mix_info.get("featured_artists", ""),
         "author": author or "YouTube Music",
         "year": str(res.get("year", "")),
-        "track_count": len(raw_tracks),
-        "content_hash": content_hash,
-        "captured_at": captured_at,
+        "total_unique_tracks": len(merged_tracks),
+        "new_tracks_latest_run": new_count,
+        "latest_batch_size": len(raw_tracks),
+        "last_updated": captured_at,
         "run_id": run_id,
     }
 
-    return {
-        "metadata": metadata,
-        "columns": columns,
-        "rows": track_rows,
-        "mood_slug": slugify(mix_info.get("mood_chip", "mixes")),
-        "mix_slug": slugify(mix_info.get("title", playlist_id)),
-    }
-
-
-def write_mix_files(
-    mix_data: dict, output_base_dir: str = "output/mixes", week_folder: str | None = None
-) -> dict:
-    """
-    Writes current/<mood>/<mix>.{csv,yaml} and history/<week>/<mood>/<mix>.{csv,yaml}
-    with smart deduplication based on content hash.
-    """
-    metadata = mix_data["metadata"]
-    columns = mix_data["columns"]
-    rows = mix_data["rows"]
-    mood_slug = mix_data["mood_slug"]
-    mix_slug = mix_data["mix_slug"]
-
-    # 1. Current files
-    current_dir = os.path.join(output_base_dir, "current", mood_slug)
-    os.makedirs(current_dir, exist_ok=True)
-    current_csv = os.path.join(current_dir, f"{mix_slug}.csv")
-    current_yaml = os.path.join(current_dir, f"{mix_slug}.yaml")
-
-    with open(current_csv, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f, delimiter=",", quoting=csv.QUOTE_MINIMAL)
-        writer.writerows([columns] + rows)
-
-    write_file(current_yaml, yaml.dump(metadata, sort_keys=False))
-
-    # 2. History files (weekly snapshot)
-    history_written = False
-    if week_folder:
-        history_dir = os.path.join(output_base_dir, "history", week_folder, mood_slug)
-        history_csv = os.path.join(history_dir, f"{mix_slug}.csv")
-        history_yaml = os.path.join(history_dir, f"{mix_slug}.yaml")
-
-        if not file_exists(history_yaml):
-            os.makedirs(history_dir, exist_ok=True)
-            with open(history_csv, "w", newline="", encoding="utf-8") as f:
-                writer = csv.writer(f, delimiter=",", quoting=csv.QUOTE_MINIMAL)
-                writer.writerows([columns] + rows)
-            write_file(history_yaml, yaml.dump(metadata, sort_keys=False))
-            history_written = True
+    write_file(yaml_path, yaml.dump(metadata, sort_keys=False))
 
     return {
+        "title": metadata["title"],
         "mix_slug": mix_slug,
-        "mood_slug": mood_slug,
-        "tracks": len(rows),
-        "history_written": history_written,
+        "total_tracks": len(merged_tracks),
+        "new_tracks": new_count,
+        "batch_size": len(raw_tracks),
     }
 
 
@@ -296,7 +348,7 @@ def sync_all_mood_mixes(
     run_id: str | None = None,
 ) -> list[dict]:
     """
-    Main entry point: Discovers, fetches in parallel, and saves all mood mixes and supermixes.
+    Main entry point: Discovers, fetches in parallel, and merges all Supermixes & Core Home Mixes.
     """
     if output_base_dir is None:
         output_base_dir = output_path("mixes")
@@ -304,24 +356,29 @@ def sync_all_mood_mixes(
     if run_time is None:
         run_time = datetime.now(UTC)
 
-    week_folder = get_week_archive_folder(run_time)
     client = get_thread_client()
 
-    print("🔍 Discovering all Mood Chips and Mixes...")
-    all_mixes = discover_all_mixes(client)
-    print(f"Discovered {len(all_mixes)} total mixes across Home and Mood Chips.")
+    print("🔍 Discovering Supermixes and Core Home Mixes...")
+    all_mixes = discover_all_supermixes(client)
+    print(f"Discovered {len(all_mixes)} Supermixes & Core Mixes.")
 
     if not all_mixes:
         print("No mixes found to sync.")
         return []
 
-    print(f"🚀 Fetching tracks for {len(all_mixes)} mixes (concurrency: {max_workers})...")
+    print(f"🚀 Fetching & merging {len(all_mixes)} mixes (concurrency: {max_workers})...")
 
     def worker(mix_info):
         try:
-            return fetch_and_format_mix(mix_info, limit=300, run_time=run_time, run_id=run_id)
+            return fetch_and_merge_mix(
+                mix_info,
+                output_base_dir=output_base_dir,
+                limit=400,
+                run_time=run_time,
+                run_id=run_id,
+            )
         except Exception as e:
-            print(f"Error fetching {mix_info.get('title')}: {e}")
+            print(f"Error syncing {mix_info.get('title')}: {e}")
             return None
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
@@ -329,13 +386,6 @@ def sync_all_mood_mixes(
 
     results = [r for r in results if r is not None]
 
-    history_count = 0
-    for mix_data in results:
-        res = write_mix_files(mix_data, output_base_dir=output_base_dir, week_folder=week_folder)
-        if res.get("history_written"):
-            history_count += 1
-
-    print(
-        f"✅ Synced {len(results)} mixes to current/ and archived {history_count} to history/{week_folder}/"
-    )
+    total_new = sum(r["new_tracks"] for r in results)
+    print(f"✅ Synced {len(results)} mix catalogs (+{total_new} new unique songs discovered).")
     return results
