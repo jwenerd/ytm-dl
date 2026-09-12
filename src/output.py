@@ -74,10 +74,12 @@ class Output:
 
     def update_rows_for_prepend(self):
         is_history = self.file == "history"
+        is_home = self.file == "home"
         self.rows = prepend_rows_for_file(
             self.csv_file_with_path,
             self.rows,
             is_history=is_history,
+            is_home=is_home,
             key_index=self.mapping.key_index,
             by_key=self.by_key,
         )

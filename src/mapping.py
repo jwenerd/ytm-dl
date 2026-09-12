@@ -87,6 +87,8 @@ class HomeSchema(BaseSchema):
     artists = ExtractNameStr()
     description = fields.Str()
     id = fields.Str()
+    captured_at = fields.Str()
+    run_id = fields.Str()
 
 
 SCHEMA_MAPPING = {
@@ -167,6 +169,21 @@ def snap_relative_played_at(played_str, run_time=None):
     return f"{ref_date.isoformat()}T00:00:00Z"
 
 
+def get_run_id(run_time=None, run_id=None):
+    """
+    Returns the run_id from environment (GitHub Actions run number/ID)
+    or generates a local timestamp-based ID fallback.
+    """
+    if run_id:
+        return run_id
+    github_run = os.environ.get("GITHUB_RUN_NUMBER") or os.environ.get("GITHUB_RUN_ID")
+    if github_run:
+        return f"gh-{github_run}"
+    if run_time is None:
+        run_time = datetime.now(timezone.utc)
+    return f"local_{run_time.strftime('%Y%m%d_%H%M%S')}"
+
+
 def enrich_history_records(records, run_time=None, run_id=None):
     """
     Snaps playback timestamps to relative midnight boundaries based on YTM's 'played' field
@@ -177,12 +194,7 @@ def enrich_history_records(records, run_time=None, run_id=None):
 
     if run_time is None:
         run_time = datetime.now(timezone.utc)
-    if run_id is None:
-        github_run = os.environ.get("GITHUB_RUN_NUMBER") or os.environ.get("GITHUB_RUN_ID")
-        if github_run:
-            run_id = f"gh-{github_run}"
-        else:
-            run_id = f"local_{run_time.strftime('%Y%m%d_%H%M%S')}"
+    run_id = get_run_id(run_time, run_id)
 
     for record in records:
         if not isinstance(record, dict):
@@ -190,6 +202,29 @@ def enrich_history_records(records, run_time=None, run_id=None):
         if "played_at" not in record or not record["played_at"]:
             played_raw = record.get("played", "")
             record["played_at"] = snap_relative_played_at(played_raw, run_time)
+        if "run_id" not in record or not record["run_id"]:
+            record["run_id"] = run_id
+
+    return records
+
+
+def enrich_home_records(records, run_time=None, run_id=None):
+    """
+    Enriches home feed records with ISO UTC captured_at timestamp and run_id.
+    """
+    if not records:
+        return records
+
+    if run_time is None:
+        run_time = datetime.now(timezone.utc)
+    run_id = get_run_id(run_time, run_id)
+    captured_at = run_time.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        if "captured_at" not in record or not record["captured_at"]:
+            record["captured_at"] = captured_at
         if "run_id" not in record or not record["run_id"]:
             record["run_id"] = run_id
 
@@ -238,5 +273,7 @@ class Mapping:
         records = self.records
         if self.file == "history":
             records = enrich_history_records(records)
+        elif self.file == "home":
+            records = enrich_home_records(records)
         rows = self.schema.dump(records, many=True)
         return [self._get_values(row) for row in rows]

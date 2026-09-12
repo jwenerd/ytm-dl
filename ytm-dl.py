@@ -33,6 +33,7 @@ def do_updates(option):
 
     files = ["liked_songs", "library_songs", "history"]
     if option == "all":
+        files += ["home"]
         files += ["library_subscriptions", "library_artists", "library_albums"]
         files += ["library_upload_songs", "library_upload_artists", "library_upload_albums"]
 

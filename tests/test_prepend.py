@@ -92,6 +92,27 @@ def test_prepend_rows_for_collections(tmp_path):
     assert rows_to_prepend[0] == ["Song 1", "Artist 1", "vid1"]
 
 
+def test_prepend_rows_for_home(tmp_path):
+    csv_file = tmp_path / "home.csv"
+    with open(csv_file, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["home", "home_index", "type", "title", "artists", "description", "id", "captured_at", "run_id"])
+        writer.writerow(["Listen again", "1", "Song", "Song 2", "Artist 2", "", "vid2", "2026-09-10T00:00:00Z", "gh-1"])
+
+    # New home snapshot includes previously seen items with new timestamp
+    new_snapshot = [
+        ["Listen again", "1", "Song", "Song 1", "Artist 1", "", "vid1", "2026-09-12T00:00:00Z", "gh-2"],
+        ["Listen again", "1", "Song", "Song 2", "Artist 2", "", "vid2", "2026-09-12T00:00:00Z", "gh-2"],
+    ]
+
+    rows_to_prepend = prepend_rows_for_file(
+        str(csv_file), new_snapshot, is_home=True
+    )
+    # Entire snapshot should be returned for prepending
+    assert len(rows_to_prepend) == 2
+    assert rows_to_prepend == new_snapshot
+
+
 def test_get_existing_ids(tmp_path):
     csv_file = tmp_path / "test.csv"
     with open(csv_file, "w", newline="") as f:
