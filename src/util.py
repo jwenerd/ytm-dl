@@ -28,6 +28,18 @@ def output_path(file=""):
     return f"output{file}"
 
 
+def resolve_meta_dir(output_dir: str) -> str:
+    """
+    Resolves companion metadata directory preserving folder hierarchy under 'meta/'.
+    e.g. 'output/mixes' -> 'output/meta/mixes'
+         'output/home'  -> 'output/meta/home'
+         '/tmp/x/home'  -> '/tmp/x/meta/home'
+    """
+    parent = os.path.dirname(output_dir)
+    folder = os.path.basename(output_dir.rstrip("/\\"))
+    return os.path.join(parent, "meta", folder) if parent else os.path.join("meta", folder)
+
+
 def file_exists(file):
     return os.path.isfile(file)
 

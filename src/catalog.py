@@ -3,7 +3,7 @@ import os
 
 import yaml
 
-from .util import create_directory, file_exists, write_file
+from .util import create_directory, file_exists, resolve_meta_dir, write_file
 
 
 def read_catalog(csv_path: str, key_field: str = "id") -> tuple[list[dict], dict[str, dict]]:
@@ -105,3 +105,16 @@ def write_catalog_yaml(yaml_path: str, meta: dict):
             pass
 
     write_file(yaml_path, yaml.dump(meta, sort_keys=False))
+
+
+def get_catalog_paths(
+    output_base_dir: str, slug: str, meta_base_dir: str | None = None
+) -> tuple[str, str]:
+    """
+    Returns (csv_path, yaml_path) for a catalog item, routing companion YAML to meta/.
+    """
+    meta_base_dir = meta_base_dir or resolve_meta_dir(output_base_dir)
+    return (
+        os.path.join(output_base_dir, f"{slug}.csv"),
+        os.path.join(meta_base_dir, f"{slug}.yaml"),
+    )

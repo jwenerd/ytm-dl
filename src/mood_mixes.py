@@ -1,18 +1,18 @@
 import concurrent.futures
-import os
 from datetime import UTC, datetime
 
 from ytmusicapi.navigation import SECTION_LIST, SINGLE_COLUMN_TAB, nav
 
 from .api import get_thread_client
 from .catalog import (
+    get_catalog_paths,
     merge_catalog_items,
     read_catalog,
     write_catalog_csv,
     write_catalog_yaml,
 )
 from .mapping import ExtractNameStr, MoodMixTrackSchema, get_run_id
-from .util import output_path, slugify
+from .util import output_path, resolve_meta_dir, slugify
 
 CORE_HOME_MIX_TITLES = {
     "my supermix",
@@ -271,19 +271,11 @@ def fetch_and_merge_mix(
     run_id = get_run_id(run_time, run_id)
     captured_at = run_time.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    if meta_base_dir is None:
-        parent = os.path.dirname(output_base_dir)
-        folder = os.path.basename(output_base_dir.rstrip("/\\"))
-        meta_base_dir = (
-            os.path.join(parent, "meta", folder) if parent else os.path.join("meta", folder)
-        )
-
     res = client.get_playlist(playlist_id, limit=limit)
     raw_tracks = res.get("tracks", [])
 
     mix_slug = slugify(mix_info.get("title", playlist_id))
-    csv_path = os.path.join(output_base_dir, f"{mix_slug}.csv")
-    yaml_path = os.path.join(meta_base_dir, f"{mix_slug}.yaml")
+    csv_path, yaml_path = get_catalog_paths(output_base_dir, mix_slug, meta_base_dir)
 
     existing_rows, existing_lookup = read_existing_catalog(csv_path)
     merged_tracks, new_count, updated_count = merge_catalog_tracks(
@@ -339,12 +331,7 @@ def sync_all_mood_mixes(
     """
     if output_base_dir is None:
         output_base_dir = output_path("mixes")
-    if meta_base_dir is None:
-        parent = os.path.dirname(output_base_dir)
-        folder = os.path.basename(output_base_dir.rstrip("/\\"))
-        meta_base_dir = (
-            os.path.join(parent, "meta", folder) if parent else os.path.join("meta", folder)
-        )
+    meta_base_dir = meta_base_dir or resolve_meta_dir(output_base_dir)
 
     if run_time is None:
         run_time = datetime.now(UTC)

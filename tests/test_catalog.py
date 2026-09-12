@@ -1,11 +1,13 @@
 import yaml
 
 from src.catalog import (
+    get_catalog_paths,
     merge_catalog_items,
     read_catalog,
     write_catalog_csv,
     write_catalog_yaml,
 )
+from src.util import resolve_meta_dir
 
 
 def test_read_catalog_nonexistent(tmp_path):
@@ -143,3 +145,22 @@ def test_write_catalog_yaml_preserves_first_captured(tmp_path):
     assert data["first_captured"] == "2026-09-01T00:00:00Z"
     assert data["last_captured"] == "2026-09-12T12:00:00Z"
     assert data["total_items"] == 15
+
+
+def test_resolve_meta_dir():
+    assert resolve_meta_dir("output/mixes") == "output/meta/mixes"
+    assert resolve_meta_dir("output/home") == "output/meta/home"
+    assert resolve_meta_dir("/tmp/test/home") == "/tmp/test/meta/home"
+    assert resolve_meta_dir("home") == "meta/home"
+
+
+def test_get_catalog_paths():
+    csv_path, yaml_path = get_catalog_paths("output/mixes", "chill_supermix")
+    assert csv_path == "output/mixes/chill_supermix.csv"
+    assert yaml_path == "output/meta/mixes/chill_supermix.yaml"
+
+    csv_custom, yaml_custom = get_catalog_paths(
+        "output/home", "quick_picks", meta_base_dir="custom/meta"
+    )
+    assert csv_custom == "output/home/quick_picks.csv"
+    assert yaml_custom == "custom/meta/quick_picks.yaml"
