@@ -27,10 +27,10 @@ jobs:
     name: ${{ github.event_name }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: "pip"
@@ -102,7 +102,7 @@ jobs:
           echo "::group::determine if need to commit to output"
           git diff-index --quiet origin/main-output output/ || echo "DOCOMMIT=1" >> "$GITHUB_OUTPUT"
           echo "::endgroup::"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: api_results
           path: artifacts/api_results_*
