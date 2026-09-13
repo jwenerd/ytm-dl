@@ -4,9 +4,9 @@ slug: forgotten_favorites
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 18
-new_items_latest_run: 2
+total_items: 19
+new_items_latest_run: 1
 latest_batch_size: 10
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-09-13T01:23:32Z'
-run_id: gh-6776
+last_captured: '2026-09-13T08:20:33Z'
+run_id: gh-6778
