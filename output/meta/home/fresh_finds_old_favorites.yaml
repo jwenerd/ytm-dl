@@ -4,9 +4,9 @@ slug: fresh_finds_old_favorites
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 4
-new_items_latest_run: 0
-latest_batch_size: 3
+total_items: 5
+new_items_latest_run: 1
+latest_batch_size: 4
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-09-13T08:20:33Z'
-run_id: gh-6778
+last_captured: '2026-09-14T08:57:42Z'
+run_id: gh-6784

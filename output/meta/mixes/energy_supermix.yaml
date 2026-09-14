@@ -3,11 +3,11 @@ mood_chip: Energize
 playlist_id: RDTMAK5uy_kskEGBYLWbdi3Z9IdjDoDEI8hEBvHEreM
 description: Get a boost with this mix of high-energy songs that span all your tastes.
   Always updating.
-featured_artists: Vintage Culture, Hallucinogen, Daft Punk, Captain Hook
+featured_artists: Grateful Dead, Widespread Panic, Surkin, John Legend
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1102
-new_tracks_latest_run: 17
+total_unique_tracks: 1145
+new_tracks_latest_run: 43
 latest_batch_size: 500
-last_updated: '2026-09-13T08:20:16Z'
-run_id: gh-6778
+last_updated: '2026-09-14T08:57:25Z'
+run_id: gh-6784

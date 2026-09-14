@@ -1,12 +1,12 @@
-title: Albums for you
+title: Downtempo
 strapline: null
-slug: albums_for_you
+slug: downtempo
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 34
-new_items_latest_run: 4
-latest_batch_size: 10
-first_captured: '2026-09-12T19:29:50Z'
+total_items: 5
+new_items_latest_run: 5
+latest_batch_size: 5
+first_captured: '2026-09-14T08:57:42Z'
 last_captured: '2026-09-14T08:57:42Z'
 run_id: gh-6784
