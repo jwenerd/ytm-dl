@@ -2,11 +2,11 @@ title: Discover Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_n_5IN6hzAOwdCnM8D8rzrs3vDl12UcZpA
 description: Discover great music, picked just for you. Always updating.
-featured_artists: Dead & Company, Bob Weir, MGMT, Los Retros
+featured_artists: Million Eyes, Phaxe, Bobby Bare, Dekel
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1450
-new_tracks_latest_run: 220
+total_unique_tracks: 1552
+new_tracks_latest_run: 102
 latest_batch_size: 500
-last_updated: '2026-09-14T08:57:25Z'
-run_id: gh-6784
+last_updated: '2026-09-15T08:42:48Z'
+run_id: gh-6789
