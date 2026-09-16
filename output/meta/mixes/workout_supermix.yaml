@@ -3,11 +3,11 @@ mood_chip: Workout
 playlist_id: RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk
 description: Push yourself with this mix of upbeat songs that span all your tastes.
   Always updating.
-featured_artists: Hallucinogen, Justice, Tonic Walter, Captain Hook
+featured_artists: Justice, Daft Punk, Shpongle, Disclosure
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1339
-new_tracks_latest_run: 64
+total_unique_tracks: 1364
+new_tracks_latest_run: 25
 latest_batch_size: 500
-last_updated: '2026-09-16T05:17:39Z'
-run_id: gh-6794
+last_updated: '2026-09-16T08:37:24Z'
+run_id: gh-6795

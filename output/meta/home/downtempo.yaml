@@ -4,9 +4,9 @@ slug: downtempo
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 6
-new_items_latest_run: 1
-latest_batch_size: 4
+total_items: 8
+new_items_latest_run: 2
+latest_batch_size: 7
 first_captured: '2026-09-14T08:57:42Z'
-last_captured: '2026-09-15T08:43:06Z'
-run_id: gh-6789
+last_captured: '2026-09-16T08:37:41Z'
+run_id: gh-6795

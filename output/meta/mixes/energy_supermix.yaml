@@ -3,11 +3,11 @@ mood_chip: Energize
 playlist_id: RDTMAK5uy_kskEGBYLWbdi3Z9IdjDoDEI8hEBvHEreM
 description: Get a boost with this mix of high-energy songs that span all your tastes.
   Always updating.
-featured_artists: Justice, Daft Punk, Captain Hook, Liquid Soul
+featured_artists: Justice, Daft Punk, Captain Hook, Hallucinogen
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1283
-new_tracks_latest_run: 78
+total_unique_tracks: 1305
+new_tracks_latest_run: 22
 latest_batch_size: 500
-last_updated: '2026-09-16T05:17:39Z'
-run_id: gh-6794
+last_updated: '2026-09-16T08:37:24Z'
+run_id: gh-6795

@@ -4,9 +4,9 @@ slug: folk_acoustic
 browse_id: FEmusic_moods_and_genres_category
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 10
-new_items_latest_run: 10
+total_items: 13
+new_items_latest_run: 3
 latest_batch_size: 10
 first_captured: '2026-09-13T08:20:33Z'
-last_captured: '2026-09-13T08:20:33Z'
-run_id: gh-6778
+last_captured: '2026-09-16T08:37:41Z'
+run_id: gh-6795
