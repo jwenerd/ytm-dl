@@ -4,9 +4,9 @@ slug: featured_playlists_for_you
 browse_id: FEmusic_moods_and_genres
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 19
-new_items_latest_run: 4
-latest_batch_size: 8
+total_items: 25
+new_items_latest_run: 6
+latest_batch_size: 10
 first_captured: '2026-09-13T08:20:33Z'
-last_captured: '2026-09-15T08:43:06Z'
-run_id: gh-6789
+last_captured: '2026-09-17T08:41:23Z'
+run_id: gh-6801

@@ -4,9 +4,9 @@ slug: from_the_community
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 81
-new_items_latest_run: 7
+total_items: 86
+new_items_latest_run: 5
 latest_batch_size: 10
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-09-16T08:37:41Z'
-run_id: gh-6795
+last_captured: '2026-09-17T08:41:23Z'
+run_id: gh-6801
