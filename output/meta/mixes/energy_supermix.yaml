@@ -3,11 +3,11 @@ mood_chip: Energize
 playlist_id: RDTMAK5uy_kskEGBYLWbdi3Z9IdjDoDEI8hEBvHEreM
 description: Get a boost with this mix of high-energy songs that span all your tastes.
   Always updating.
-featured_artists: Little Feat, Phish, Kristian Thinning, Justice
+featured_artists: Justice, King Gizzard & The Lizard Wizard, Daft Punk, Infected Mushroom
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1322
-new_tracks_latest_run: 17
+total_unique_tracks: 1382
+new_tracks_latest_run: 60
 latest_batch_size: 500
-last_updated: '2026-09-17T08:41:05Z'
-run_id: gh-6801
+last_updated: '2026-09-18T08:16:45Z'
+run_id: gh-6806
