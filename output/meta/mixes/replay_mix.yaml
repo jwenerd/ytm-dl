@@ -2,11 +2,11 @@ title: Replay Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_nilrsVWxrKskY0ZUpVZ3zpB0u4LwWTVJ4
 description: A mix of the songs you've been listening to most in the last few weeks.
-featured_artists: Solar Fields, YOUTH 83, Old & In The Way, Daft Punk
+featured_artists: Old & In The Way
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 633
-new_tracks_latest_run: 36
-latest_batch_size: 500
-last_updated: '2026-09-18T08:16:45Z'
-run_id: gh-6806
+total_unique_tracks: 680
+new_tracks_latest_run: 47
+latest_batch_size: 466
+last_updated: '2026-09-19T08:04:47Z'
+run_id: gh-6812
