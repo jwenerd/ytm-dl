@@ -2,11 +2,11 @@ title: New Release Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_lr0LWzGrq6FU9GIxWvFHTRPQD2LHMqlFA
 description: Brand new music, selected just for you. Always updating.
-featured_artists: Druid Fluids, Molly Tuttle, Benjamin Tod
+featured_artists: Druid Fluids, Benjamin Tod, Molly Tuttle, Paul Cauthen
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 345
-new_tracks_latest_run: 93
-latest_batch_size: 503
-last_updated: '2026-09-19T08:04:47Z'
-run_id: gh-6812
+total_unique_tracks: 375
+new_tracks_latest_run: 30
+latest_batch_size: 200
+last_updated: '2026-09-20T08:37:04Z'
+run_id: gh-6818

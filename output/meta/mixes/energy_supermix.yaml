@@ -3,11 +3,11 @@ mood_chip: Energize
 playlist_id: RDTMAK5uy_kskEGBYLWbdi3Z9IdjDoDEI8hEBvHEreM
 description: Get a boost with this mix of high-energy songs that span all your tastes.
   Always updating.
-featured_artists: E-Clip, Daft Punk, Captain Hook, Justice
+featured_artists: Grateful Dead, Daft Punk, Trey Anastasio, Phish
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1410
-new_tracks_latest_run: 28
+total_unique_tracks: 1433
+new_tracks_latest_run: 23
 latest_batch_size: 500
-last_updated: '2026-09-19T08:04:47Z'
-run_id: gh-6812
+last_updated: '2026-09-20T08:37:04Z'
+run_id: gh-6818

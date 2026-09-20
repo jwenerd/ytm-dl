@@ -4,9 +4,9 @@ slug: dance_electronic
 browse_id: FEmusic_moods_and_genres_category
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 28
-new_items_latest_run: 2
+total_items: 29
+new_items_latest_run: 1
 latest_batch_size: 10
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-09-18T08:17:04Z'
-run_id: gh-6806
+last_captured: '2026-09-20T08:37:20Z'
+run_id: gh-6818
