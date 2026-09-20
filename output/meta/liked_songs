@@ -3,10 +3,10 @@ API:
     limit: 500
   method: get_liked_songs
   records_length: 600
-  time: 2.89
+  time: 3.44
 CSV File:
-  lines: 2360
-  lines_added: 2
+  lines: 2361
+  lines_added: 1
   size: 276K
 Tracks:
   author:
