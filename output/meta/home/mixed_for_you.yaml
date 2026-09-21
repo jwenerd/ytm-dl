@@ -8,5 +8,5 @@ total_items: 8
 new_items_latest_run: 0
 latest_batch_size: 8
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-09-20T08:37:20Z'
-run_id: gh-6818
+last_captured: '2026-09-21T08:59:04Z'
+run_id: gh-6824
