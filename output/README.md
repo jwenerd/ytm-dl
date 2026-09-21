@@ -1,12 +1,12 @@
 # 📝  output 
 
-## ⚙️ [run #6824](https://github.com/jwenerd/ytm-dl/actions/runs/35580699785)
+## ⚙️ [run #6826](https://github.com/jwenerd/ytm-dl/actions/runs/35648287664)
 
 ### 📁 Files
 
 |                                                                                 |lines|size|
 |---------------------------------------------------------------------------------|-----|----|
-|[`history.csv` ](history.csv)                                                    |67062|8.5M|
+|[`history.csv` ](history.csv)                                                    |67108|8.5M|
 |[`history/2024-01.csv` ](history/2024-01.csv)                                    |2255 |288K|
 |[`history/2024-02.csv` ](history/2024-02.csv)                                    |1736 |212K|
 |[`history/2024-03.csv` ](history/2024-03.csv)                                    |1868 |228K|
@@ -29,7 +29,7 @@
 |[`history/2026-06.csv` ](history/2026-06.csv)                                    |5666 |740K|
 |[`history/2026-07.csv` ](history/2026-07.csv)                                    |8461 |1.1M|
 |[`history/2026-08.csv` ](history/2026-08.csv)                                    |5921 |772K|
-|[`history/2026-09.csv` ](history/2026-09.csv)                                    |3599 |480K|
+|[`history/2026-09.csv` ](history/2026-09.csv)                                    |3645 |488K|
 |[`home/albums_for_you.csv` ](home/albums_for_you.csv)                            |52   |8.0K|
 |[`home/country_americana.csv` ](home/country_americana.csv)                      |11   |4.0K|
 |[`home/covers_and_remixes.csv` ](home/covers_and_remixes.csv)                    |85   |12K |
@@ -70,23 +70,23 @@
 |[`home/your_daily_discover.csv` ](home/your_daily_discover.csv)                  |78   |8.0K|
 |[`library_albums.csv` ](library_albums.csv)                                      |1331 |92K |
 |[`library_artists.csv` ](library_artists.csv)                                    |2624 |116K|
-|[`library_songs.csv` ](library_songs.csv)                                        |8387 |736K|
+|[`library_songs.csv` ](library_songs.csv)                                        |8388 |736K|
 |[`library_subscriptions.csv` ](library_subscriptions.csv)                        |187  |8.0K|
 |[`library_upload_albums.csv` ](library_upload_albums.csv)                        |1427 |212K|
 |[`library_upload_artists.csv` ](library_upload_artists.csv)                      |1899 |208K|
 |[`library_upload_songs.csv` ](library_upload_songs.csv)                          |18749|1.5M|
-|[`liked_songs.csv` ](liked_songs.csv)                                            |2361 |276K|
+|[`liked_songs.csv` ](liked_songs.csv)                                            |2362 |276K|
 |[`mixes/archive_mix.csv` ](mixes/archive_mix.csv)                                |104  |16K |
-|[`mixes/chill_supermix.csv` ](mixes/chill_supermix.csv)                          |2187 |304K|
+|[`mixes/chill_supermix.csv` ](mixes/chill_supermix.csv)                          |2187 |300K|
 |[`mixes/discover_mix.csv` ](mixes/discover_mix.csv)                              |2349 |336K|
-|[`mixes/energy_supermix.csv` ](mixes/energy_supermix.csv)                        |1484 |208K|
+|[`mixes/energy_supermix.csv` ](mixes/energy_supermix.csv)                        |1484 |204K|
 |[`mixes/feel_good_supermix.csv` ](mixes/feel_good_supermix.csv)                  |1677 |248K|
 |[`mixes/focus_supermix.csv` ](mixes/focus_supermix.csv)                          |1983 |272K|
-|[`mixes/my_supermix.csv` ](mixes/my_supermix.csv)                                |3942 |556K|
-|[`mixes/new_release_mix.csv` ](mixes/new_release_mix.csv)                        |423  |64K |
-|[`mixes/party_supermix.csv` ](mixes/party_supermix.csv)                          |1781 |252K|
+|[`mixes/my_supermix.csv` ](mixes/my_supermix.csv)                                |3942 |552K|
+|[`mixes/new_release_mix.csv` ](mixes/new_release_mix.csv)                        |423  |60K |
+|[`mixes/party_supermix.csv` ](mixes/party_supermix.csv)                          |1781 |248K|
 |[`mixes/replay_mix.csv` ](mixes/replay_mix.csv)                                  |703  |100K|
 |[`mixes/romantic_supermix.csv` ](mixes/romantic_supermix.csv)                    |1439 |200K|
 |[`mixes/sad_songs_supermix.csv` ](mixes/sad_songs_supermix.csv)                  |1493 |212K|
-|[`mixes/sleep_supermix.csv` ](mixes/sleep_supermix.csv)                          |1759 |252K|
-|[`mixes/workout_supermix.csv` ](mixes/workout_supermix.csv)                      |1553 |212K|
+|[`mixes/sleep_supermix.csv` ](mixes/sleep_supermix.csv)                          |1759 |248K|
+|[`mixes/workout_supermix.csv` ](mixes/workout_supermix.csv)                      |1553 |208K|
