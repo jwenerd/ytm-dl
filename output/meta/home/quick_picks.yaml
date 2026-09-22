@@ -4,9 +4,9 @@ slug: quick_picks
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 153
-new_items_latest_run: 10
+total_items: 161
+new_items_latest_run: 8
 latest_batch_size: 20
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-09-21T08:59:04Z'
-run_id: gh-6824
+last_captured: '2026-09-22T08:34:36Z'
+run_id: gh-6829
