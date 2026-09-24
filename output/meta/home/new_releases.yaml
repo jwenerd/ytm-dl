@@ -4,9 +4,9 @@ slug: new_releases
 browse_id: FEmusic_new_releases_albums
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 37
-new_items_latest_run: 0
+total_items: 39
+new_items_latest_run: 2
 latest_batch_size: 10
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-09-23T08:36:53Z'
-run_id: gh-6834
+last_captured: '2026-09-24T08:29:34Z'
+run_id: gh-6839
