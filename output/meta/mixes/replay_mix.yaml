@@ -2,12 +2,11 @@ title: Replay Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_nilrsVWxrKskY0ZUpVZ3zpB0u4LwWTVJ4
 description: A mix of the songs you've been listening to most in the last few weeks.
-featured_artists: The Infamous Stringdusters, Piero Umiliani, Green-House, Waylon
-  Jennings
+featured_artists: The Infamous Stringdusters, Green-House, Caravan Palace, Piero Umiliani
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 793
-new_tracks_latest_run: 91
-latest_batch_size: 465
-last_updated: '2026-09-23T08:36:35Z'
-run_id: gh-6834
+total_unique_tracks: 819
+new_tracks_latest_run: 26
+latest_batch_size: 522
+last_updated: '2026-09-25T08:51:12Z'
+run_id: gh-6844
