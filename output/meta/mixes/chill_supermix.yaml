@@ -3,11 +3,11 @@ mood_chip: Relax
 playlist_id: RDTMAK5uy_nzfwl2UYv7htL7wDoxbX8Pp6UAFBd92cQ
 description: Relax and let go with this mix of songs that span all your tastes. Always
   updating.
-featured_artists: Grateful Dead, Widespread Panic, Daft Punk, Ween
+featured_artists: Otis Redding, David Grisman, Danger Mouse, Grateful Dead
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 2441
-new_tracks_latest_run: 48
+total_unique_tracks: 2538
+new_tracks_latest_run: 97
 latest_batch_size: 500
-last_updated: '2026-09-25T08:51:12Z'
-run_id: gh-6844
+last_updated: '2026-09-26T08:37:40Z'
+run_id: gh-6850

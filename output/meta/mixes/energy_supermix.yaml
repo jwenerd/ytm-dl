@@ -3,11 +3,11 @@ mood_chip: Energize
 playlist_id: RDTMAK5uy_kskEGBYLWbdi3Z9IdjDoDEI8hEBvHEreM
 description: Get a boost with this mix of high-energy songs that span all your tastes.
   Always updating.
-featured_artists: Rusted Root, Widespread Panic, Trey Anastasio, Phish
+featured_artists: Justice, Astrix, Starlab (IN), Ajja
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1574
-new_tracks_latest_run: 26
+total_unique_tracks: 1594
+new_tracks_latest_run: 20
 latest_batch_size: 500
-last_updated: '2026-09-25T08:51:12Z'
-run_id: gh-6844
+last_updated: '2026-09-26T08:37:40Z'
+run_id: gh-6850
