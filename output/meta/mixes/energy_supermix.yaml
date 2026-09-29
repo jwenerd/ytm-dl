@@ -3,11 +3,11 @@ mood_chip: Energize
 playlist_id: RDTMAK5uy_kskEGBYLWbdi3Z9IdjDoDEI8hEBvHEreM
 description: Get a boost with this mix of high-energy songs that span all your tastes.
   Always updating.
-featured_artists: Phish, Justice, Daft Punk, Widespread Panic
+featured_artists: Trey Anastasio, Blues Traveler, Widespread Panic, Phish
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1655
-new_tracks_latest_run: 30
+total_unique_tracks: 1686
+new_tracks_latest_run: 31
 latest_batch_size: 500
-last_updated: '2026-09-28T09:49:05Z'
-run_id: gh-6861
+last_updated: '2026-09-29T09:51:34Z'
+run_id: gh-6865

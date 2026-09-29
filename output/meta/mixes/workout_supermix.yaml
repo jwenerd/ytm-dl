@@ -3,11 +3,11 @@ mood_chip: Workout
 playlist_id: RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk
 description: Push yourself with this mix of upbeat songs that span all your tastes.
   Always updating.
-featured_artists: Daft Punk, GOOSE, Shpongle, Ween
+featured_artists: Daft Punk, Tim Hecker, Justice, Parliament
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1767
-new_tracks_latest_run: 28
+total_unique_tracks: 1780
+new_tracks_latest_run: 13
 latest_batch_size: 500
-last_updated: '2026-09-28T09:49:05Z'
-run_id: gh-6861
+last_updated: '2026-09-29T09:51:34Z'
+run_id: gh-6865
