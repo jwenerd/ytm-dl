@@ -1,4 +1,10 @@
 title,artists,album,inLibrary,likeStatus,duration,duration_seconds,videoId,played_at,run_id
+Only Ruins Have Ever Existed Here,"Bvdub, zakè",Oblivion,False,INDIFFERENT,18:09,1089,KmQlmQeQwuo,2026-09-30T00:00:00Z,gh-6872
+Oblivion,"Bvdub, zakè",Oblivion,False,INDIFFERENT,18:41,1121,GJ4dzH78Vsw,2026-09-30T00:00:00Z,gh-6872
+Clouds at Night,"Bvdub, zakè",Oblivion,False,INDIFFERENT,23:29,1409,eenqoLaLtnY,2026-09-30T00:00:00Z,gh-6872
+Black Rain in Lightless Fields,"Bvdub, zakè",Oblivion,False,INDIFFERENT,13:51,831,avTeLCvnnS8,2026-09-30T00:00:00Z,gh-6872
+Chasms Inside of Chasms,"Bvdub, zakè",Oblivion,False,INDIFFERENT,22:01,1321,fjyrUsYLgcA,2026-09-30T00:00:00Z,gh-6872
+Oceans of Stone,"Bvdub, zakè",Oblivion,False,INDIFFERENT,10:20,620,neNWpT3j2c8,2026-09-30T00:00:00Z,gh-6872
 Good Bones,Railroad Earth,Will of the Water,False,INDIFFERENT,4:40,280,JIJEBdu6gHw,2026-09-29T00:00:00Z,gh-6867
 Waiting For You,Railroad Earth,Will of the Water,False,INDIFFERENT,3:45,225,xMAZmNyPzgQ,2026-09-29T00:00:00Z,gh-6867
 Gravity,Railroad Earth,Will of the Water,False,INDIFFERENT,4:22,262,-s8jdlT0HYc,2026-09-29T00:00:00Z,gh-6867
@@ -3751,8 +3757,6 @@ Medusa,Jarl Flamar,Medusa,False,INDIFFERENT,6:41,401,rMB5xjwlLKo,2026-09-01T00:2
 Shamaqam,Turu Anasi,Mundo Maravilloso,False,INDIFFERENT,7:47,467,vJntvpg0A6k,2026-09-01T00:20:00Z,commit:5c97d16a
 Tête Sage (Sahalé in the forest Remix),okuma,Restate,False,INDIFFERENT,7:13,433,MxjZcAp-56w,2026-09-01T00:12:47Z,commit:5c97d16a
 Jellydish,okuma,Bi Ba Bü,False,INDIFFERENT,8:26,506,tAduyj4-uRc,2026-09-01T00:04:21Z,commit:5c97d16a
-title,artist,album,inLibrary,likeStatus,duration,duration_seconds,video_id,,commit:5c97d16a
-title,artist,album,inLibrary,likeStatus,duration,duration_seconds,link,,commit:5c97d16a
 Give Me Cornbread When I'm Hungry,John Fahey,The Dance Of Death & Other Plantation Favorites,False,INDIFFERENT,3:09,189,MDLOYZ0kgoQ,2026-09-12T06:41:49Z,gh-6748
 16 Tons,Merle Travis,The Very Best,False,INDIFFERENT,2:10,130,Jaqe5nsV_Ck,2026-09-12T06:39:39Z,gh-6748
 That's All Right,Blind Snooks Eaglin,That's All Right,True,LIKE,2:09,129,1O2vGcl3M4g,2026-09-12T06:37:30Z,gh-6748
@@ -3950,5 +3954,3 @@ Feelings (Edit / 2018 Remaster),Solar Fields,Movements,False,INDIFFERENT,7:23,44
 Das Bungalow,Solar Fields,Movements,False,INDIFFERENT,6:48,408,hrjvq5U6Z1s,2026-09-11T09:49:47Z,gh-6748
 Dust,Solar Fields,Movements,False,INDIFFERENT,6:04,364,_wzDtZ7I1aY,2026-09-11T09:43:43Z,gh-6748
 The Stones Are Not Too Busy,Solar Fields,Movements,False,INDIFFERENT,10:31,631,bvaL_ohykUg,2026-09-11T09:33:12Z,gh-6748
-title,artist,album,inLibrary,likeStatus,duration,duration_seconds,video_id,,gh-85
-title,artist,album,inLibrary,likeStatus,duration,duration_seconds,link,,commit:bbb614e9
