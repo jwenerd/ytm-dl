@@ -2,12 +2,11 @@ title: My Supermix
 mood_chip: Home
 playlist_id: RDTMAK5uy_kset8DisdE7LSD4TNjEVvrKRTmG7a56sY
 description: A mix of songs that span all your tastes. Always updating.
-featured_artists: Carolina Chocolate Drops, The Infamous Stringdusters, Paul Simon,
-  Ralph Stanley
+featured_artists: Blind Snooks Eaglin, Kenny Rogers, Dean Johnson, Old & In The Way
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 5209
-new_tracks_latest_run: 127
+total_unique_tracks: 5308
+new_tracks_latest_run: 99
 latest_batch_size: 500
-last_updated: '2026-09-30T09:44:01Z'
-run_id: gh-6869
+last_updated: '2026-10-01T10:10:21Z'
+run_id: gh-6873

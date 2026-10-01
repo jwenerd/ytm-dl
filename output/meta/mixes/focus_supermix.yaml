@@ -3,11 +3,12 @@ mood_chip: Focus
 playlist_id: RDTMAK5uy_l3TXw3uC_sIHl4m6RMGqCyKKd2D2_pv28
 description: Get in the zone with this mix of songs that span all your tastes. Always
   updating.
-featured_artists: "Skinshape, Green-House, Hermanos Guti\xE9rrez, Piero Piccioni"
+featured_artists: "Jerry Garcia, Widespread Panic, Medeski Martin & Wood, B\xE9la\
+  \ Fleck"
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 2614
-new_tracks_latest_run: 47
+total_unique_tracks: 2676
+new_tracks_latest_run: 62
 latest_batch_size: 500
-last_updated: '2026-09-30T09:44:01Z'
-run_id: gh-6869
+last_updated: '2026-10-01T10:10:21Z'
+run_id: gh-6873

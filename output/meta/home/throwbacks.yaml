@@ -4,9 +4,9 @@ slug: throwbacks
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 10
-new_items_latest_run: 10
+total_items: 13
+new_items_latest_run: 3
 latest_batch_size: 10
 first_captured: '2026-09-17T08:41:23Z'
-last_captured: '2026-09-17T08:41:23Z'
-run_id: gh-6801
+last_captured: '2026-10-01T10:10:40Z'
+run_id: gh-6873
