@@ -3,11 +3,11 @@ mood_chip: Workout
 playlist_id: RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk
 description: Push yourself with this mix of upbeat songs that span all your tastes.
   Always updating.
-featured_artists: Daft Punk, The Japanese Popstars, Justice, Shpongle
+featured_artists: Daft Punk, Justice, Captain Hook, Shpongle
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1812
-new_tracks_latest_run: 17
+total_unique_tracks: 2086
+new_tracks_latest_run: 274
 latest_batch_size: 500
-last_updated: '2026-10-01T10:10:21Z'
-run_id: gh-6873
+last_updated: '2026-10-02T09:48:13Z'
+run_id: gh-6877
