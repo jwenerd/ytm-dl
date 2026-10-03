@@ -2,11 +2,12 @@ title: Discover Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_n_5IN6hzAOwdCnM8D8rzrs3vDl12UcZpA
 description: Discover great music, picked just for you. Always updating.
-featured_artists: loopgarden, Kris Kristofferson, Trampled By Turtles, Johnny Cash
+featured_artists: Walter Wanderley, Laurindo Almeida, Dan Fontaine, Mississippi John
+  Hurt
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3260
-new_tracks_latest_run: 138
+total_unique_tracks: 3411
+new_tracks_latest_run: 151
 latest_batch_size: 500
-last_updated: '2026-10-02T09:48:13Z'
-run_id: gh-6877
+last_updated: '2026-10-03T09:10:54Z'
+run_id: gh-6881
