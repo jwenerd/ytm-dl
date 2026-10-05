@@ -4,9 +4,9 @@ slug: long_listens
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 140
-new_items_latest_run: 4
-latest_batch_size: 20
+total_items: 142
+new_items_latest_run: 2
+latest_batch_size: 19
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-10-04T09:50:33Z'
-run_id: gh-6887
+last_captured: '2026-10-05T10:29:35Z'
+run_id: gh-6892
