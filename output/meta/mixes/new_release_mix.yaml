@@ -2,11 +2,11 @@ title: New Release Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_lr0LWzGrq6FU9GIxWvFHTRPQD2LHMqlFA
 description: Brand new music, selected just for you. Always updating.
-featured_artists: Druid Fluids, Benjamin Tod, Manic Focus, Molly Tuttle
+featured_artists: Druid Fluids, Manic Focus, Benjamin Tod, Molly Tuttle
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 716
-new_tracks_latest_run: 6
-latest_batch_size: 501
-last_updated: '2026-10-05T10:29:11Z'
-run_id: gh-6892
+total_unique_tracks: 742
+new_tracks_latest_run: 26
+latest_batch_size: 336
+last_updated: '2026-10-07T10:17:51Z'
+run_id: gh-6900

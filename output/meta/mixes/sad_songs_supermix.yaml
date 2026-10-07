@@ -2,11 +2,11 @@ title: Sad Songs Supermix
 mood_chip: Sad
 playlist_id: RDTMAK5uy_mZvWCHQ-KwmUM_ZMeZNRF93nKrLafqFp0
 description: ''
-featured_artists: John R. Miller, Yo-Yo Ma, Grateful Dead, Jerry Garcia
+featured_artists: "Yo-Yo Ma, Felix Mendelssohn, Daria Hovora, Gautier Capu\xE7on"
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 2213
-new_tracks_latest_run: 75
+total_unique_tracks: 2231
+new_tracks_latest_run: 18
 latest_batch_size: 500
-last_updated: '2026-10-06T10:20:28Z'
-run_id: gh-6896
+last_updated: '2026-10-07T10:17:51Z'
+run_id: gh-6900
