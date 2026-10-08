@@ -3,11 +3,11 @@ mood_chip: Workout
 playlist_id: RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk
 description: Push yourself with this mix of upbeat songs that span all your tastes.
   Always updating.
-featured_artists: Justice, The Prodigy, Joey Valence & Brae, Infected Mushroom
+featured_artists: Digitalism, Daft Punk, Tim Hecker, Shpongle
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 2375
-new_tracks_latest_run: 32
+total_unique_tracks: 2519
+new_tracks_latest_run: 144
 latest_batch_size: 500
-last_updated: '2026-10-07T10:17:51Z'
-run_id: gh-6900
+last_updated: '2026-10-08T10:37:12Z'
+run_id: gh-6904

@@ -4,9 +4,9 @@ slug: mindful_instrumentals
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 10
-new_items_latest_run: 10
-latest_batch_size: 10
+total_items: 11
+new_items_latest_run: 1
+latest_batch_size: 9
 first_captured: '2026-10-03T09:11:26Z'
-last_captured: '2026-10-03T09:11:26Z'
-run_id: gh-6881
+last_captured: '2026-10-08T10:37:31Z'
+run_id: gh-6904

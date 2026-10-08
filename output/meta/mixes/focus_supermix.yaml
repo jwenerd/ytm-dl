@@ -3,11 +3,11 @@ mood_chip: Focus
 playlist_id: RDTMAK5uy_l3TXw3uC_sIHl4m6RMGqCyKKd2D2_pv28
 description: Get in the zone with this mix of songs that span all your tastes. Always
   updating.
-featured_artists: Piero Umiliani, Laurindo Almeida, Piero Piccioni, Super Guitar Bros
+featured_artists: Grateful Dead, Phish, Jerry Garcia, Widespread Panic
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3247
-new_tracks_latest_run: 37
+total_unique_tracks: 3303
+new_tracks_latest_run: 56
 latest_batch_size: 500
-last_updated: '2026-10-07T10:17:51Z'
-run_id: gh-6900
+last_updated: '2026-10-08T10:37:12Z'
+run_id: gh-6904
