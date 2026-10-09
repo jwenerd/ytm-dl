@@ -4,9 +4,9 @@ slug: indie_alternative
 browse_id: FEmusic_moods_and_genres_category
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 10
-new_items_latest_run: 10
+total_items: 13
+new_items_latest_run: 3
 latest_batch_size: 10
 first_captured: '2026-10-08T10:37:31Z'
-last_captured: '2026-10-08T10:37:31Z'
-run_id: gh-6904
+last_captured: '2026-10-09T10:36:24Z'
+run_id: gh-6908
