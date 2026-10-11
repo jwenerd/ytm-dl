@@ -3,11 +3,12 @@ mood_chip: Relax
 playlist_id: RDTMAK5uy_nzfwl2UYv7htL7wDoxbX8Pp6UAFBd92cQ
 description: Relax and let go with this mix of songs that span all your tastes. Always
   updating.
-featured_artists: Piero Piccioni, Laurindo Almeida, Skinshape, Mississippi John Hurt
+featured_artists: The String Cheese Incident, Jerry Garcia, Green-House, Medeski Martin
+  & Wood
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3476
-new_tracks_latest_run: 45
+total_unique_tracks: 3506
+new_tracks_latest_run: 30
 latest_batch_size: 500
-last_updated: '2026-10-10T09:52:29Z'
-run_id: gh-6912
+last_updated: '2026-10-11T10:02:16Z'
+run_id: gh-6917
