@@ -5,8 +5,8 @@ description: A mix of the songs you've been listening to most in the last few we
 featured_artists: Johnny Blue Skies, John R. Miller, Grateful Dead, Daft Punk
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1167
-new_tracks_latest_run: 0
-latest_batch_size: 478
-last_updated: '2026-10-11T10:02:16Z'
-run_id: gh-6917
+total_unique_tracks: 1170
+new_tracks_latest_run: 3
+latest_batch_size: 508
+last_updated: '2026-10-12T10:52:30Z'
+run_id: gh-6921

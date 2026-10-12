@@ -2,11 +2,12 @@ title: Discover Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_n_5IN6hzAOwdCnM8D8rzrs3vDl12UcZpA
 description: Discover great music, picked just for you. Always updating.
-featured_artists: Bob Weir, Michel Legrand, Crumb, Laurindo Almeida
+featured_artists: Bob Weir, Alessandro Brugnolini, New Riders Of The Purple Sage,
+  The Allman Brothers Band
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3948
-new_tracks_latest_run: 51
-latest_batch_size: 500
-last_updated: '2026-10-11T10:02:16Z'
-run_id: gh-6917
+total_unique_tracks: 4025
+new_tracks_latest_run: 77
+latest_batch_size: 519
+last_updated: '2026-10-12T10:52:30Z'
+run_id: gh-6921
