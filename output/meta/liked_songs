@@ -3,9 +3,9 @@ API:
     limit: 500
   method: get_liked_songs
   records_length: 600
-  time: 3.4
+  time: 2.84
 CSV File:
-  lines: 2371
+  lines: 2372
   lines_added: 1
   size: 280K
 Tracks:
@@ -14,8 +14,8 @@ Tracks:
     name: Jared Wenerd
   description: Music you like in any YouTube app will show here. You can change this
     in Settings.
-  duration: 17+ hours
-  duration_seconds: 317366
+  duration: 18+ hours
+  duration_seconds: 317700
   id: null
   owned: false
   privacy: PUBLIC
@@ -31,6 +31,6 @@ Tracks:
     url: https://www.gstatic.com/youtube/media/ytm/images/pbg/liked-songs-delhi-1200.png
     width: 1200
   title: Liked Music
-  trackCount: 2384
+  trackCount: 2385
   views: null
   year: '2026'
