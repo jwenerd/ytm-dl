@@ -3,9 +3,9 @@ API:
     limit: 25
     order: recently_added
   method: get_library_subscriptions
-  records_length: 65
-  time: 1.35
+  records_length: 25
+  time: 0.13
 CSV File:
-  lines: 187
-  lines_added: 26
+  lines: 188
+  lines_added: 1
   size: 8.0K
