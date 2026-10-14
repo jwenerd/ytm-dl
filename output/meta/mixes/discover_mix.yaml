@@ -2,12 +2,11 @@ title: Discover Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_n_5IN6hzAOwdCnM8D8rzrs3vDl12UcZpA
 description: Discover great music, picked just for you. Always updating.
-featured_artists: Elizabeth Cotton, John Fahey, Blind Boy Fuller, Mississippi John
-  Hurt
+featured_artists: Laurindo Almeida, moe., Mississippi John Hurt, John R. Miller
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 4129
-new_tracks_latest_run: 104
-latest_batch_size: 491
-last_updated: '2026-10-13T10:38:13Z'
-run_id: gh-6924
+total_unique_tracks: 4168
+new_tracks_latest_run: 39
+latest_batch_size: 501
+last_updated: '2026-10-14T08:45:04Z'
+run_id: gh-6929
