@@ -1,5 +1,5 @@
 title: Today's biggest hits
-strapline: null
+strapline: JUST UPDATED
 slug: todays_biggest_hits
 browse_id: null
 thumbnail: null
@@ -8,5 +8,5 @@ total_items: 13
 new_items_latest_run: 0
 latest_batch_size: 10
 first_captured: '2026-09-18T08:17:04Z'
-last_captured: '2026-10-11T10:02:33Z'
-run_id: gh-6917
+last_captured: '2026-10-16T08:12:57Z'
+run_id: gh-6939

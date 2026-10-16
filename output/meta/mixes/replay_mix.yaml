@@ -2,12 +2,11 @@ title: Replay Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_nilrsVWxrKskY0ZUpVZ3zpB0u4LwWTVJ4
 description: A mix of the songs you've been listening to most in the last few weeks.
-featured_artists: Yonder Mountain String Band, King Gizzard & The Lizard Wizard, David
-  Grisman, Elizabeth Cotton
+featured_artists: Mount Shrine, Jackson C. Frank, Muddy Waters, Fetsum
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1216
-new_tracks_latest_run: 26
+total_unique_tracks: 1224
+new_tracks_latest_run: 8
 latest_batch_size: 514
-last_updated: '2026-10-15T08:20:04Z'
-run_id: gh-6934
+last_updated: '2026-10-16T08:12:40Z'
+run_id: gh-6939

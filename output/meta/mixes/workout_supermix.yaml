@@ -3,11 +3,11 @@ mood_chip: Workout
 playlist_id: RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk
 description: Push yourself with this mix of upbeat songs that span all your tastes.
   Always updating.
-featured_artists: Justice, Daft Punk, Shpongle, Infected Mushroom
+featured_artists: Eat Static, Daft Punk, Justice, Infected Mushroom
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 2758
-new_tracks_latest_run: 51
-latest_batch_size: 500
-last_updated: '2026-10-15T08:20:04Z'
-run_id: gh-6934
+total_unique_tracks: 2765
+new_tracks_latest_run: 7
+latest_batch_size: 511
+last_updated: '2026-10-16T08:12:40Z'
+run_id: gh-6939
