@@ -4,9 +4,9 @@ slug: your_daily_discover
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 224
-new_items_latest_run: 4
-latest_batch_size: 8
+total_items: 230
+new_items_latest_run: 6
+latest_batch_size: 9
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-10-16T08:12:57Z'
-run_id: gh-6939
+last_captured: '2026-10-17T07:50:16Z'
+run_id: gh-6945
