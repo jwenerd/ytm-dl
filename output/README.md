@@ -1,6 +1,6 @@
 # 📝  output 
 
-## ⚙️ [run #6950](https://github.com/jwenerd/ytm-dl/actions/runs/39097606906)
+## ⚙️ [run #6951](https://github.com/jwenerd/ytm-dl/actions/runs/39109976609)
 
 ### 📁 Files
 
@@ -41,34 +41,34 @@
 |[`home/ethereal_rhythms.csv` ](home/ethereal_rhythms.csv)                        |11   |4.0K |
 |[`home/featured_playlists_for_you.csv` ](home/featured_playlists_for_you.csv)    |44   |8.0K |
 |[`home/folk_acoustic.csv` ](home/folk_acoustic.csv)                              |14   |4.0K |
-|[`home/forgotten_favorites.csv` ](home/forgotten_favorites.csv)                  |75   |12K  |
+|[`home/forgotten_favorites.csv` ](home/forgotten_favorites.csv)                  |77   |12K  |
 |[`home/fresh_finds_old_favorites.csv` ](home/fresh_finds_old_favorites.csv)      |6    |4.0K |
-|[`home/from_the_community.csv` ](home/from_the_community.csv)                    |192  |28K  |
+|[`home/from_the_community.csv` ](home/from_the_community.csv)                    |194  |28K  |
 |[`home/from_your_library.csv` ](home/from_your_library.csv)                      |40   |8.0K |
 |[`home/grateful_dead.csv` ](home/grateful_dead.csv)                              |11   |4.0K |
-|[`home/green_house.csv` ](home/green_house.csv)                                  |33   |4.0K |
+|[`home/green_house.csv` ](home/green_house.csv)                                  |38   |8.0K |
 |[`home/hallucinogen.csv` ](home/hallucinogen.csv)                                |17   |4.0K |
 |[`home/indie_alternative.csv` ](home/indie_alternative.csv)                      |15   |4.0K |
 |[`home/jazz.csv` ](home/jazz.csv)                                                |11   |4.0K |
 |[`home/jerry_garcia.csv` ](home/jerry_garcia.csv)                                |18   |4.0K |
 |[`home/justice.csv` ](home/justice.csv)                                          |14   |4.0K |
 |[`home/keep_listening.csv` ](home/keep_listening.csv)                            |544  |32K  |
-|[`home/listen_again.csv` ](home/listen_again.csv)                                |87   |12K  |
-|[`home/listen_together.csv` ](home/listen_together.csv)                          |6    |4.0K |
+|[`home/listen_again.csv` ](home/listen_again.csv)                                |90   |12K  |
+|[`home/listen_together.csv` ](home/listen_together.csv)                          |7    |4.0K |
 |[`home/live_performances.csv` ](home/live_performances.csv)                      |121  |16K  |
-|[`home/long_listens.csv` ](home/long_listens.csv)                                |168  |24K  |
+|[`home/long_listens.csv` ](home/long_listens.csv)                                |170  |24K  |
 |[`home/loscil.csv` ](home/loscil.csv)                                            |32   |8.0K |
 |[`home/low_key_vibes.csv` ](home/low_key_vibes.csv)                              |20   |4.0K |
 |[`home/mac_demarco.csv` ](home/mac_demarco.csv)                                  |15   |4.0K |
 |[`home/medeski_martin_wood.csv` ](home/medeski_martin_wood.csv)                  |17   |4.0K |
 |[`home/mindful_instrumentals.csv` ](home/mindful_instrumentals.csv)              |12   |4.0K |
 |[`home/mixed_for_you.csv` ](home/mixed_for_you.csv)                              |9    |4.0K |
-|[`home/music_videos_for_you.csv` ](home/music_videos_for_you.csv)                |66   |8.0K |
-|[`home/new_releases.csv` ](home/new_releases.csv)                                |101  |12K  |
+|[`home/music_videos_for_you.csv` ](home/music_videos_for_you.csv)                |76   |12K  |
+|[`home/new_releases.csv` ](home/new_releases.csv)                                |102  |12K  |
 |[`home/phish.csv` ](home/phish.csv)                                              |11   |4.0K |
 |[`home/piero_piccioni.csv` ](home/piero_piccioni.csv)                            |11   |4.0K |
 |[`home/podcasts_to_get_you_started.csv` ](home/podcasts_to_get_you_started.csv)  |24   |4.0K |
-|[`home/quick_picks.csv` ](home/quick_picks.csv)                                  |363  |36K  |
+|[`home/quick_picks.csv` ](home/quick_picks.csv)                                  |376  |40K  |
 |[`home/recaps.csv` ](home/recaps.csv)                                            |4    |4.0K |
 |[`home/shows_for_you.csv` ](home/shows_for_you.csv)                              |66   |12K  |
 |[`home/shpongle.csv` ](home/shpongle.csv)                                        |11   |4.0K |
@@ -76,8 +76,8 @@
 |[`home/throwbacks.csv` ](home/throwbacks.csv)                                    |14   |4.0K |
 |[`home/todays_biggest_hits.csv` ](home/todays_biggest_hits.csv)                  |14   |4.0K |
 |[`home/trending_community_playlists.csv` ](home/trending_community_playlists.csv)|18   |4.0K |
-|[`home/trending_songs_for_you.csv` ](home/trending_songs_for_you.csv)            |298  |32K  |
-|[`home/your_daily_discover.csv` ](home/your_daily_discover.csv)                  |231  |24K  |
+|[`home/trending_songs_for_you.csv` ](home/trending_songs_for_you.csv)            |310  |36K  |
+|[`home/your_daily_discover.csv` ](home/your_daily_discover.csv)                  |237  |24K  |
 |[`library_albums.csv` ](library_albums.csv)                                      |1335 |92K  |
 |[`library_artists.csv` ](library_artists.csv)                                    |2629 |116K |
 |[`library_songs.csv` ](library_songs.csv)                                        |8463 |744K |
@@ -87,16 +87,16 @@
 |[`library_upload_songs.csv` ](library_upload_songs.csv)                          |18769|1.5M |
 |[`liked_songs.csv` ](liked_songs.csv)                                            |2378 |280K |
 |[`mixes/archive_mix.csv` ](mixes/archive_mix.csv)                                |119  |20K  |
-|[`mixes/chill_supermix.csv` ](mixes/chill_supermix.csv)                          |3951 |552K |
-|[`mixes/discover_mix.csv` ](mixes/discover_mix.csv)                              |4389 |628K |
+|[`mixes/chill_supermix.csv` ](mixes/chill_supermix.csv)                          |3979 |560K |
+|[`mixes/discover_mix.csv` ](mixes/discover_mix.csv)                              |4445 |640K |
 |[`mixes/energy_supermix.csv` ](mixes/energy_supermix.csv)                        |2113 |292K |
-|[`mixes/feel_good_supermix.csv` ](mixes/feel_good_supermix.csv)                  |2782 |412K |
-|[`mixes/focus_supermix.csv` ](mixes/focus_supermix.csv)                          |3899 |552K |
-|[`mixes/my_supermix.csv` ](mixes/my_supermix.csv)                                |7126 |1000K|
+|[`mixes/feel_good_supermix.csv` ](mixes/feel_good_supermix.csv)                  |2809 |416K |
+|[`mixes/focus_supermix.csv` ](mixes/focus_supermix.csv)                          |3949 |564K |
+|[`mixes/my_supermix.csv` ](mixes/my_supermix.csv)                                |7206 |1016K|
 |[`mixes/new_release_mix.csv` ](mixes/new_release_mix.csv)                        |1004 |144K |
-|[`mixes/party_supermix.csv` ](mixes/party_supermix.csv)                          |3185 |444K |
-|[`mixes/replay_mix.csv` ](mixes/replay_mix.csv)                                  |1233 |180K |
-|[`mixes/romantic_supermix.csv` ](mixes/romantic_supermix.csv)                    |2789 |388K |
-|[`mixes/sad_songs_supermix.csv` ](mixes/sad_songs_supermix.csv)                  |2484 |368K |
-|[`mixes/sleep_supermix.csv` ](mixes/sleep_supermix.csv)                          |2947 |428K |
-|[`mixes/workout_supermix.csv` ](mixes/workout_supermix.csv)                      |2776 |372K |
+|[`mixes/party_supermix.csv` ](mixes/party_supermix.csv)                          |3208 |448K |
+|[`mixes/replay_mix.csv` ](mixes/replay_mix.csv)                                  |1243 |180K |
+|[`mixes/romantic_supermix.csv` ](mixes/romantic_supermix.csv)                    |2809 |392K |
+|[`mixes/sad_songs_supermix.csv` ](mixes/sad_songs_supermix.csv)                  |2509 |376K |
+|[`mixes/sleep_supermix.csv` ](mixes/sleep_supermix.csv)                          |2962 |432K |
+|[`mixes/workout_supermix.csv` ](mixes/workout_supermix.csv)                      |2809 |380K |
