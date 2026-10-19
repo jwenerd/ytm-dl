@@ -8,6 +8,6 @@ author: YouTube Music
 year: '2026'
 total_unique_tracks: 118
 new_tracks_latest_run: 0
-latest_batch_size: 95
-last_updated: '2026-10-18T08:03:42Z'
-run_id: gh-6951
+latest_batch_size: 499
+last_updated: '2026-10-19T08:55:14Z'
+run_id: gh-6958
