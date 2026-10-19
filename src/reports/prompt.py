@@ -40,6 +40,11 @@ Instructions for the report structure:
 """
 
     if cadence == "daily":
+        anchor_info = (
+            f"- Catalog Anchor: {telemetry['catalog_anchor']}\n"
+            if telemetry.get("catalog_anchor")
+            else ""
+        )
         prompt += f"""
 Produce a report in the following Markdown structure:
 # 🎧 Daily Listening Log: {period_label}
@@ -48,38 +53,71 @@ Produce a report in the following Markdown structure:
 ## 1. Session Telemetry
 - Total Tracks Observed: {telemetry["total_tracks"]}
 - Auditory Duration: {telemetry["total_duration_display"]}
-- Unique Artists: {telemetry["unique_artists_count"]}
-- Library Ratio: {telemetry["library_ratio_pct"]}% library tracks
-- Temporal Distribution: Morning ({telemetry["temporal_distribution"]["morning"]}), Afternoon ({telemetry["temporal_distribution"]["afternoon"]}), Evening ({telemetry["temporal_distribution"]["evening"]}), Night ({telemetry["temporal_distribution"]["night"]})
+- Unique Artists: {telemetry["unique_artists_count"]} ({telemetry["unique_albums_count"]} albums)
+{anchor_info}- Library Ratio: {telemetry["library_ratio_pct"]}% library tracks
 
 ## 2. Musicological Notes
-[Provide 2-3 focused paragraphs analyzing the listening session. Discuss pacing, live vs studio versions, repeat loops, and the sonic continuity of the session. If the session has 0 plays, briefly note an inactive observation period.]
+### Field Observations
+[Provide 3 to 4 concise bullet points highlighting key session facts. Each bullet MUST start with a bold label like **Primary Anchor**, **Harmonic Texture**, **Pacing & Transitions**, or **Anomalies & Drift**.]
 
-## 3. Algorithmic Suggestions Radar
+### Narrative Synthesis
+[Provide 1 to 2 focused, tightly written paragraphs synthesizing the listening session. Keep it analytical, observant, and direct without unnecessary wordiness. If the session has 0 plays, briefly note an inactive observation period.]
+
+## 3. Dynamic Field Spotlight
+[Dynamically select and include 1 or 2 of the following features that BEST fit today's data:
+- **Sonic Texture & Timbre**: (Dominant instrumentation, vocal density, production era)
+- **Live Archives & Performance Notes**: (If live recordings were detected, note jam duration, venue, or live vs studio dynamics)
+- **Catalog Archaeology & Deep Cuts**: (Deep album cuts vs greatest hits, track sequencing)
+- **Earworm / Replay Loop**: (If repeat tracks were played, analyze why that specific take was repeated)
+- **Historical Field Note**: (1-2 sentence fascinating historical recording or studio trivia connecting today's artists)]
+
+## 4. Algorithmic Suggestions Radar
 [Evaluate 3 to 5 candidate tracks from the provided radar_candidates list. Cross-reference them against what the user listened to today. Present as a markdown table with columns: Track | Artist | Shelf Source | Prior Impressions | Musicologist Appraisal. The appraisal should explain objectively why this recommendation fits or contrasts with today's listening session.]
 """
     elif cadence == "weekly":
+        anchor_info = (
+            f"- Catalog Anchor: {telemetry['catalog_anchor']}\n"
+            if telemetry.get("catalog_anchor")
+            else ""
+        )
         prompt += f"""
 Produce a report in the following Markdown structure:
 # 📈 Weekly Sonic Digest: {period_label}
 
 ## 1. Macro Analysis
 - Cumulative Volume: {telemetry["total_tracks"]} plays across {telemetry["total_duration_display"]}
-- Unique Artists: {telemetry["unique_artists_count"]}
-- Top Artists: List top 3-5 artists by play count
+- Unique Artists: {telemetry["unique_artists_count"]} ({telemetry["unique_albums_count"]} albums)
+{anchor_info}- Top Artists: List top 3-5 artists by play count
 - Library Ratio: {telemetry["library_ratio_pct"]}%
 
-## 2. Genre & Texture Distribution
-[Estimate and summarize the primary sonic genres and textures observed across the week based on the artist roster.]
+## 2. Weekly Field Observations
+[Provide 3 to 4 concise bullet points capturing the week's key shifts with bold labels like **Primary Anchor**, **Emerging Obsessions**, **Texture Range**, **Catalog Penetration**.]
 
-## 3. The Replay Loop & New Catalog Additions
+## 3. Narrative Synthesis
+[Provide 1 to 2 focused paragraphs analyzing the macro arc of the week, shifts between workdays and weekends, and predominant listening modes.]
+
+## 4. Dynamic Weekly Spotlight
+[Dynamically select and include 1 or 2 of the following features that BEST reflect this week's data:
+- **Genre & Texture Distribution**: (Percentage breakdown of observed sonic textures and micro-genres)
+- **Live Circuit & Tour Archive**: (If live recordings were prevalent, note venues, tour eras, and extended jams)
+- **Catalog Archaeology & Deep Dives**: (Album-level continuity vs shuffle track hopping)
+- **Earworm & Replay Loops**: (Analysis of repeated tracks across multiple sessions)
+- **Weekly Historical Footnote**: (Historical studio or songwriting lineage linking the week's artists)]
+
+## 5. Replay Loops & Catalog Additions
 - Replays: Mention notable repeat tracks (if any from repeat_tracks)
 - Liked Songs: List any newly added likes from the week
 
-## 4. Algorithmic Hit Rate & Discovery Queue
+## 6. Algorithmic Suggestions Radar & Weekend Queue
 [Audit the recommendation shelves. Highlight 3-5 of the highest priority suggestions from the radar_candidates that warrant a listen during the upcoming weekend, noting their shelf source and a concise appraisal.]
 """
     elif cadence == "monthly":
+        anchor_info = (
+            f"- Catalog Anchor: {telemetry['catalog_anchor']}\n"
+            if telemetry.get("catalog_anchor")
+            else ""
+        )
+        likes_count = len(telemetry.get("new_likes", []))
         prompt += f"""
 Produce a report in the following Markdown structure:
 # 📜 Monthly Retrospective: {period_label}
@@ -87,12 +125,24 @@ Produce a report in the following Markdown structure:
 ## 1. Month in Review
 - Total Volume: {telemetry["total_tracks"]} plays ({telemetry["total_duration_display"]})
 - Artist Breadth: {telemetry["unique_artists_count"]} distinct artists, {telemetry["unique_albums_count"]} albums
+{anchor_info}- Library Growth: {likes_count} new catalog likes
 - Top Artists: Top 5 artists by volume
 
-## 2. Sonic Cartography & Macro Shifts
-[A deep-dive musicological essay on the dominant themes, artist rabbit holes, live performance explorations, and tonal shifts observed over the course of the month.]
+## 2. Monthly Field Observations
+[Provide 4 to 5 concise bullet points capturing the month's macro shifts with bold labels like **Monthly Anchor**, **New Frontier**, **Deep Catalog Exploration**, **Soundtrack Texture**.]
 
-## 3. Curated Archive Playlist: {period_label}
+## 3. Sonic Cartography & Narrative Essay
+[A 2-3 paragraph deep-dive musicological essay on the dominant themes, artist rabbit holes, live performance explorations, and tonal shifts observed over the course of the month.]
+
+## 4. Dynamic Monthly Spotlight
+[Dynamically select and include 1 or 2 of the following deep-dive features based on the month's data:
+- **Macro Sonic Texture Map**: (Detailed percentage breakdown of moods and styles throughout the month)
+- **Comfort Zone vs Frontier Matrix**: (Core staples vs newly explored artists and genres)
+- **The Month's Defining Deep Dives**: (Full albums or artist catalogs explored from start to finish)
+- **Live Tapes & Tour Retrospective**: (Concert recordings, festival sets, and improvisation highlights)
+- **Historical Lineage & Liner Notes**: (Broad historical essay tracing recording lineage across the month's top works)]
+
+## 5. Curated Archive Playlist: {period_label}
 [Construct an AI-curated 10-track thematic retrospective playlist inspired by the month's listening. List Track, Artist, and a 1-sentence liner note for each selection.]
 """
 
@@ -116,33 +166,57 @@ def generate_fallback_report(context: dict) -> str:
         lines.append("## 1. Session Telemetry")
         lines.append(f"- **Total Tracks Observed**: {t['total_tracks']}")
         lines.append(f"- **Auditory Duration**: {t['total_duration_display']}")
-        lines.append(f"- **Unique Artists**: {t['unique_artists_count']}")
-        lines.append(f"- **Library Ratio**: {t['library_ratio_pct']}%")
         lines.append(
-            f"- **Temporal Windows**: Morning: {t['temporal_distribution']['morning']} | "
-            f"Afternoon: {t['temporal_distribution']['afternoon']} | "
-            f"Evening: {t['temporal_distribution']['evening']} | "
-            f"Night: {t['temporal_distribution']['night']}\n"
+            f"- **Unique Artists**: {t['unique_artists_count']} ({t['unique_albums_count']} albums)"
         )
+        if t.get("catalog_anchor"):
+            lines.append(f"- **Catalog Anchor**: {t['catalog_anchor']}")
+        lines.append(f"- **Library Ratio**: {t['library_ratio_pct']}%\n")
 
         lines.append("## 2. Musicological Notes")
+        lines.append("### Field Observations")
         if t["total_tracks"] > 0:
             top_artist = t["top_artists"][0]["artist"] if t["top_artists"] else "Various Artists"
             lines.append(
-                f"Session activity centered predominantly around **{top_artist}** with "
-                f"{t['unique_artists_count']} distinct artists logged across "
-                f"{t['total_duration_display']} of playback."
+                f"- **Primary Anchor**: Centered around {top_artist} ({t['unique_artists_count']} unique artists observed)."
             )
             if t["repeat_tracks"]:
                 repeats_str = ", ".join(
                     f"*{r['title']}* ({r['count']}x)" for r in t["repeat_tracks"][:3]
                 )
-                lines.append(f"\nRepeat loops detected: {repeats_str}.")
+                lines.append(f"- **Repeat Loop**: {repeats_str}.")
+            if t.get("live_track_count", 0) > 0:
+                lines.append(
+                    f"- **Performance Mode**: {t['live_track_count']} live recordings captured."
+                )
+            lines.append("")
+            lines.append("### Narrative Synthesis")
+            lines.append(
+                f"Playback centered predominantly on **{top_artist}** across "
+                f"{t['total_duration_display']} of active listening."
+            )
         else:
-            lines.append("No playback sessions recorded during this observation window.")
+            lines.append(
+                "- **Observation**: No playback sessions recorded during this observation window."
+            )
         lines.append("")
 
-        lines.append("## 3. Algorithmic Suggestions Radar")
+        lines.append("## 3. Dynamic Field Spotlight")
+        if t.get("live_track_count", 0) > 0:
+            lines.append(
+                f"- **Live Archive Tracking**: {t['live_track_count']} tracks logged from live concert recordings."
+            )
+        elif t.get("repeat_tracks"):
+            lines.append(
+                f"- **Earworm Analysis**: Multiple replays recorded for *{t['repeat_tracks'][0]['title']}*."
+            )
+        else:
+            lines.append(
+                "- **Sonic Timbre**: Studio catalog listening focused on studio production and album sequencing."
+            )
+        lines.append("")
+
+        lines.append("## 4. Algorithmic Suggestions Radar")
         if radar:
             lines.append("| Track | Artist | Shelf Source | Impressions | Position | Status |")
             lines.append("| :--- | :--- | :--- | :--- | :--- | :--- |")
@@ -161,15 +235,51 @@ def generate_fallback_report(context: dict) -> str:
         lines.append(
             f"- **Cumulative Volume**: {t['total_tracks']} plays ({t['total_duration_display']})"
         )
-        lines.append(f"- **Distinct Artists**: {t['unique_artists_count']}")
+        lines.append(
+            f"- **Distinct Artists**: {t['unique_artists_count']} ({t['unique_albums_count']} albums)"
+        )
+        if t.get("catalog_anchor"):
+            lines.append(f"- **Catalog Anchor**: {t['catalog_anchor']}")
         lines.append(f"- **Library Ratio**: {t['library_ratio_pct']}%\n")
 
-        lines.append("## 2. Top Rotations")
+        lines.append("## 2. Weekly Field Observations")
+        if t["top_artists"]:
+            lines.append(
+                f"- **Primary Anchor**: {t['top_artists'][0]['artist']} ({t['top_artists'][0]['count']} plays)"
+            )
+        if t.get("repeat_tracks"):
+            lines.append(
+                f"- **Key Loops**: {', '.join(r['title'] for r in t['repeat_tracks'][:3])}"
+            )
+        if t.get("live_track_count", 0) > 0:
+            lines.append(f"- **Live Share**: {t['live_track_count']} live recordings captured.")
+        lines.append("")
+
+        lines.append("## 3. Narrative Synthesis")
+        if t["top_artists"]:
+            lines.append(
+                f"Weekly playback prioritized extended listening sessions dominated by **{t['top_artists'][0]['artist']}** "
+                f"with exploration spanning {t['unique_artists_count']} distinct artists."
+            )
+        lines.append("")
+
+        lines.append("## 4. Dynamic Weekly Spotlight")
+        if t.get("live_track_count", 0) > 0:
+            lines.append(
+                f"- **Live Performance Spotlight**: High live recording engagement ({t['live_track_count']} tracks logged)."
+            )
+        else:
+            lines.append(
+                "- **Catalog Depth**: Balanced representation of catalog deep-cuts and flagship tracks."
+            )
+        lines.append("")
+
+        lines.append("## 5. Replay Loops & Catalog Additions")
         for a in t["top_artists"][:5]:
             lines.append(f"- **{a['artist']}**: {a['count']} plays")
         lines.append("")
 
-        lines.append("## 3. Algorithmic Suggestions Radar")
+        lines.append("## 6. Algorithmic Suggestions Radar & Weekend Queue")
         if radar:
             lines.append("| Track | Artist | Shelf Source | Impressions |")
             lines.append("| :--- | :--- | :--- | :--- |")
@@ -185,21 +295,44 @@ def generate_fallback_report(context: dict) -> str:
         lines.append("## 1. Month in Review")
         lines.append(f"- **Total Plays**: {t['total_tracks']} ({t['total_duration_display']})")
         lines.append(
-            f"- **Catalog Breadth**: {t['unique_artists_count']} artists, {t['unique_albums_count']} albums\n"
+            f"- **Catalog Breadth**: {t['unique_artists_count']} artists, {t['unique_albums_count']} albums"
         )
+        if t.get("catalog_anchor"):
+            lines.append(f"- **Catalog Anchor**: {t['catalog_anchor']}")
+        lines.append(f"- **Library Growth**: {len(t.get('new_likes', []))} new likes recorded\n")
 
-        lines.append("## 2. Top Artists")
-        for a in t["top_artists"][:10]:
-            lines.append(f"- **{a['artist']}**: {a['count']} plays")
+        lines.append("## 2. Monthly Field Observations")
+        if t["top_artists"]:
+            lines.append(
+                f"- **Monthly Core**: {t['top_artists'][0]['artist']} led overall volume ({t['top_artists'][0]['count']} plays)."
+            )
+        lines.append(
+            f"- **Exploration Index**: {t['unique_artists_count']} distinct artists logged across {t['unique_albums_count']} releases."
+        )
         lines.append("")
 
-        lines.append("## 3. Algorithmic Suggestions Radar")
+        lines.append("## 3. Sonic Cartography & Narrative Essay")
+        if t["top_artists"]:
+            lines.append(
+                f"The month unfolded with extensive catalog exploration anchored by **{t['top_artists'][0]['artist']}**, "
+                f"accounting for substantial playback time across multiple distinct albums."
+            )
+        lines.append("")
+
+        lines.append("## 4. Dynamic Monthly Spotlight")
+        if t.get("live_track_count", 0) > 0:
+            lines.append(
+                f"- **Live Archival Trajectory**: Strong engagement with concert bootlegs and live performance recordings ({t['live_track_count']} tracks)."
+            )
+        else:
+            lines.append(
+                "- **Production Era Focus**: Concentrated listening through studio catalog masterings."
+            )
+        lines.append("")
+
+        lines.append("## 5. Curated Archive Playlist")
         if radar:
-            lines.append("| Track | Artist | Shelf Source | Impressions |")
-            lines.append("| :--- | :--- | :--- | :--- |")
-            for c in radar[:8]:
-                lines.append(
-                    f"| {c['title']} | {c['artists']} | `{c['shelf']}` | {c['times_recommended']}x |"
-                )
+            for idx, c in enumerate(radar[:8], start=1):
+                lines.append(f"{idx}. **{c['title']}** — {c['artists']}")
 
     return "\n".join(lines).strip() + "\n"

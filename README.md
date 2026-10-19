@@ -2,7 +2,9 @@
 
 #### &nbsp;&nbsp;&nbsp;&nbsp; 🔎 [Latest Update](https://github.com/jwenerd/ytm-dl/commit/main-output)
 
-#### &nbsp;&nbsp;&nbsp;&nbsp; 📰 [AI Listening Reports](https://github.com/jwenerd/ytm-dl/blob/main-output/output/reports/README.md)
+#### &nbsp;&nbsp;&nbsp;&nbsp; 📰 [Listening Reports](https://github.com/jwenerd/ytm-dl/blob/main-output/output/reports/README.md)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [daily](https://github.com/jwenerd/ytm-dl/blob/main-output/output/reports/daily.md) | [weekly](https://github.com/jwenerd/ytm-dl/blob/main-output/output/reports/weekly.md) | [monthly](https://github.com/jwenerd/ytm-dl/blob/main-output/output/reports/monthly.md) | [archive](https://github.com/jwenerd/ytm-dl/tree/main-output/output/reports/archive)
 
 #### &nbsp;&nbsp;&nbsp;&nbsp; ± [History](https://github.com/jwenerd/ytm-dl/commits/main-output/output)
 

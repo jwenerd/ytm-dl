@@ -130,7 +130,8 @@ def aggregate_listening_telemetry(
             "top_tracks": [],
             "repeat_tracks": [],
             "library_ratio_pct": 0,
-            "temporal_distribution": {"morning": 0, "afternoon": 0, "evening": 0, "night": 0},
+            "catalog_anchor": None,
+            "live_track_count": 0,
             "new_likes": [],
         }
 
@@ -139,7 +140,7 @@ def aggregate_listening_telemetry(
     albums_counter: Counter[str] = Counter()
     tracks_counter: Counter[tuple[str, str]] = Counter()
     in_library_count = 0
-    temporal_dist = {"morning": 0, "afternoon": 0, "evening": 0, "night": 0}
+    live_track_count = 0
 
     for row in history_slice:
         # Duration
@@ -163,22 +164,15 @@ def aggregate_listening_telemetry(
         title = row.get("title", "").strip()
         tracks_counter[(title, artist_str)] += 1
 
+        # Live performance detection
+        lower_title = title.lower()
+        lower_album = album_str.lower()
+        if "live" in lower_title or "live" in lower_album or "concert" in lower_album:
+            live_track_count += 1
+
         # Library status
         if row.get("inLibrary", "").lower() in ("true", "1"):
             in_library_count += 1
-
-        # Temporal binning (UTC hour)
-        dt = parse_iso_timestamp(row.get("played_at"))
-        if dt:
-            hour = dt.hour
-            if 6 <= hour < 12:
-                temporal_dist["morning"] += 1
-            elif 12 <= hour < 18:
-                temporal_dist["afternoon"] += 1
-            elif 18 <= hour < 24:
-                temporal_dist["evening"] += 1
-            else:
-                temporal_dist["night"] += 1
 
     # Top repeated tracks (played >= 2 times)
     repeat_tracks = [
@@ -196,6 +190,13 @@ def aggregate_listening_telemetry(
     ]
 
     library_ratio = round((in_library_count / total_tracks) * 100, 1)
+
+    catalog_anchor = None
+    if top_artists:
+        pct = round((top_artists[0]["count"] / total_tracks) * 100)
+        catalog_anchor = (
+            f"{top_artists[0]['artist']} ({pct}% of session, {top_artists[0]['count']} plays)"
+        )
 
     new_likes = []
     if liked_songs_slice:
@@ -218,7 +219,8 @@ def aggregate_listening_telemetry(
         "top_tracks": top_tracks,
         "repeat_tracks": repeat_tracks,
         "library_ratio_pct": library_ratio,
-        "temporal_distribution": temporal_dist,
+        "catalog_anchor": catalog_anchor,
+        "live_track_count": live_track_count,
         "new_likes": new_likes,
     }
 

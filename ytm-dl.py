@@ -107,15 +107,15 @@ def do_updates(option):
 
         reports_generated = run_reports(output_dir="output")
         if reports_generated:
-            print(f"✓ Generated AI listening report(s): {', '.join(reports_generated)}")
+            print(f"✓ Generated listening report(s): {', '.join(reports_generated)}")
             ChangeTracker.record(
                 emoji="📰",
-                label="AI Reports",
+                label="Listening Reports",
                 count=len(reports_generated),
                 log_message=f"✨ {', '.join(r.capitalize() for r in reports_generated)} report{'s' if len(reports_generated) > 1 else ''} generated",
             )
     except Exception as e:
-        print(f"Warning: Failed to evaluate AI reports: {e}")
+        print(f"Warning: Failed to evaluate listening reports: {e}")
 
     output_updates = len(files_written) > 0 or len(ChangeTracker.get_changes()) > 0
 

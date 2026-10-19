@@ -142,8 +142,7 @@ def test_aggregate_listening_telemetry():
     assert res["unique_artists_count"] == 1
     assert res["unique_albums_count"] == 1
     assert res["library_ratio_pct"] == 66.7
-    assert res["temporal_distribution"]["evening"] == 2
-    assert res["temporal_distribution"]["afternoon"] == 1
+    assert "Grateful Dead" in res["catalog_anchor"]
     assert len(res["repeat_tracks"]) == 1
     assert res["repeat_tracks"][0]["title"] == "Shakedown Street"
     assert res["repeat_tracks"][0]["count"] == 2

@@ -82,7 +82,7 @@ def generate_report(
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.35,
-            "maxOutputTokens": 2048,
+            "maxOutputTokens": 4096,
         },
     }
 

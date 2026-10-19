@@ -29,7 +29,8 @@ def sample_context(cadence="daily"):
             "top_tracks": [{"title": "Shakedown Street", "artist": "Grateful Dead", "count": 2}],
             "repeat_tracks": [{"title": "Shakedown Street", "artist": "Grateful Dead", "count": 2}],
             "library_ratio_pct": 75.0,
-            "temporal_distribution": {"morning": 0, "afternoon": 5, "evening": 10, "night": 0},
+            "catalog_anchor": "Grateful Dead (67% of session, 10 plays)",
+            "live_track_count": 0,
             "new_likes": [{"title": "Honky Cat", "artist": "Elton John", "album": "Honky Chateau"}],
         },
         "radar_candidates": [
@@ -99,7 +100,7 @@ def test_generate_fallback_report():
 
 
 def test_generate_report_fallback_when_no_api_key(monkeypatch):
-    monkeypatch.delenv("GOOGLE_AI_API_KEY", raising=False)
+    monkeypatch.setattr("src.reports.generator.get_google_ai_api_key", lambda: None)
     ctx = sample_context("daily")
     report = generate_report(ctx, api_key=None)
     assert "# 🎧 Daily Listening Log" in report
