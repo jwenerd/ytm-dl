@@ -109,7 +109,7 @@ Produce a report in the following Markdown structure:
 - Liked Songs: List any newly added likes from the week
 
 ## 6. Algorithmic Suggestions Radar & Weekend Queue
-[Audit the recommendation shelves. Highlight 3-5 of the highest priority suggestions from the radar_candidates that warrant a listen during the upcoming weekend, noting their shelf source and a concise appraisal.]
+[Audit the recommendation shelves. Highlight 3 to 5 of the highest priority suggestions from the radar_candidates that warrant a listen during the upcoming weekend. Present strictly as a markdown table with columns: Track | Artist | Shelf Source | Prior Impressions | Musicologist Appraisal. The appraisal should explain objectively why this recommendation fits or contrasts with this week's listening trends.]
 """
     elif cadence == "monthly":
         anchor_info = (
@@ -142,8 +142,8 @@ Produce a report in the following Markdown structure:
 - **Live Tapes & Tour Retrospective**: (Concert recordings, festival sets, and improvisation highlights)
 - **Historical Lineage & Liner Notes**: (Broad historical essay tracing recording lineage across the month's top works)]
 
-## 5. Curated Archive Playlist: {period_label}
-[Construct an AI-curated 10-track thematic retrospective playlist inspired by the month's listening. List Track, Artist, and a 1-sentence liner note for each selection.]
+## 5. Algorithmic Suggestions Radar & Curated Archive Mixtape
+[Evaluate 5 to 8 candidate tracks from the provided radar_candidates list to curate an archival discovery queue inspired by the month's listening. Present strictly as a markdown table with columns: Track | Artist | Shelf Source | Prior Impressions | Musicologist Appraisal. The appraisal should provide an analytical liner note explaining why this recommendation warrants inclusion based on the month's aesthetic trajectory.]
 """
 
     return prompt.strip()
@@ -281,11 +281,15 @@ def generate_fallback_report(context: dict) -> str:
 
         lines.append("## 6. Algorithmic Suggestions Radar & Weekend Queue")
         if radar:
-            lines.append("| Track | Artist | Shelf Source | Impressions |")
-            lines.append("| :--- | :--- | :--- | :--- |")
+            lines.append(
+                "| Track | Artist | Shelf Source | Prior Impressions | Position | Status |"
+            )
+            lines.append("| :--- | :--- | :--- | :--- | :--- | :--- |")
             for c in radar[:5]:
+                status = "✨ New Arrival" if c["is_new"] else "🔁 Recurring"
                 lines.append(
-                    f"| {c['title']} | {c['artists']} | `{c['shelf']}` | {c['times_recommended']}x |"
+                    f"| {c['title']} | {c['artists']} | `{c['shelf']}` | "
+                    f"{c['times_recommended']}x | #{c['latest_position']} | {status} |"
                 )
         else:
             lines.append("No active recommendations captured.")
@@ -330,9 +334,19 @@ def generate_fallback_report(context: dict) -> str:
             )
         lines.append("")
 
-        lines.append("## 5. Curated Archive Playlist")
+        lines.append("## 5. Algorithmic Suggestions Radar & Curated Archive Mixtape")
         if radar:
-            for idx, c in enumerate(radar[:8], start=1):
-                lines.append(f"{idx}. **{c['title']}** — {c['artists']}")
+            lines.append(
+                "| Track | Artist | Shelf Source | Prior Impressions | Position | Status |"
+            )
+            lines.append("| :--- | :--- | :--- | :--- | :--- | :--- |")
+            for c in radar[:8]:
+                status = "✨ New Arrival" if c["is_new"] else "🔁 Recurring"
+                lines.append(
+                    f"| {c['title']} | {c['artists']} | `{c['shelf']}` | "
+                    f"{c['times_recommended']}x | #{c['latest_position']} | {status} |"
+                )
+        else:
+            lines.append("No active recommendations captured.")
 
     return "\n".join(lines).strip() + "\n"
