@@ -34,10 +34,21 @@ def do_search_suggestions():
 
 def do_updates(option):
     ChangeTracker.reset()
-    if option not in ["all", "frequent", "mixes", "home", "auth"]:
-        print("Option must be all, frequent, mixes, home, or auth")
+    if option not in ["all", "frequent", "mixes", "home", "auth", "report"]:
+        print("Option must be all, frequent, mixes, home, auth, or report")
         print("  given: " + str(option))
         sys.exit(1)
+
+    if option == "report":
+        from src.reports.rotator import run_reports
+
+        cadence = sys.argv[2] if len(sys.argv) >= 3 else None
+        generated = run_reports(output_dir="output", force_cadence=cadence)
+        if generated:
+            print(f"✓ Generated AI listening report(s): {', '.join(generated)}")
+        else:
+            print("ℹ No reports due for generation.")
+        return
 
     try:
         auth_info = validate_auth()
@@ -89,6 +100,23 @@ def do_updates(option):
         sync_all_home_shelves()
 
     files_written = set(filter(None, files_written))
+
+    # Evaluate lazy-man AI reports after sync
+    try:
+        from src.reports.rotator import run_reports
+
+        reports_generated = run_reports(output_dir="output")
+        if reports_generated:
+            print(f"✓ Generated AI listening report(s): {', '.join(reports_generated)}")
+            ChangeTracker.record(
+                emoji="📰",
+                label="AI Reports",
+                count=len(reports_generated),
+                log_message=f"✨ {', '.join(r.capitalize() for r in reports_generated)} report{'s' if len(reports_generated) > 1 else ''} generated",
+            )
+    except Exception as e:
+        print(f"Warning: Failed to evaluate AI reports: {e}")
+
     output_updates = len(files_written) > 0 or len(ChangeTracker.get_changes()) > 0
 
     ApiMethod.save_api_artifact()
