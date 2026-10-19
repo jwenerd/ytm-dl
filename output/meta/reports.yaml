@@ -1,15 +1,15 @@
 daily:
   archive_file: reports/archive/daily/2026/2026-10-18.md
-  last_generated_at: '2026-10-19T07:48:43.292859+00:00'
+  last_generated_at: '2026-10-19T08:34:16.706284+00:00'
   last_period: '2026-10-18'
   live_file: reports/daily.md
 monthly:
   archive_file: reports/archive/monthly/2026/2026-09.md
-  last_generated_at: '2026-10-19T07:48:43.292859+00:00'
+  last_generated_at: '2026-10-19T08:34:16.706284+00:00'
   last_period: 2026-09
   live_file: reports/monthly.md
 weekly:
   archive_file: reports/archive/weekly/2026/2026-W42.md
-  last_generated_at: '2026-10-19T07:48:43.292859+00:00'
+  last_generated_at: '2026-10-19T08:34:16.706284+00:00'
   last_period: 2026-W42
   live_file: reports/weekly.md
