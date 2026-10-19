@@ -29,6 +29,11 @@ ytm-dl/
 │   ├── history_partition.py     # Partitioning history CSV into monthly archives
 │   ├── meta.py                  # Metadata tracking, file statistics, step summaries, README generation
 │   ├── markdown.py              # GitHub-flavored Markdown and table helpers
+│   ├── reports/                 # AI listening reports & discovery radar engine
+│   │   ├── aggregator.py        # Telemetry aggregation & recommendation radar filtering
+│   │   ├── generator.py         # Lightweight Gemini REST client (requests)
+│   │   ├── prompt.py            # Musicologist prompt engineering & deterministic fallback
+│   │   └── rotator.py           # Lazy-man cron cadence checker & archive rotation
 │   ├── util.py                  # File I/O, hash calculation, dict helpers
 │   └── cloud_functions/         # Webhook handler (Google Cloud Functions) to trigger GitHub Actions
 │       ├── main.py
@@ -36,7 +41,10 @@ ytm-dl/
 ├── tests/                       # Pytest test suite
 │   ├── test_history_partition.py
 │   ├── test_mapping.py
-│   └── test_prepend.py
+│   ├── test_prepend.py
+│   ├── test_report_aggregator.py
+│   ├── test_report_generator.py
+│   └── test_report_rotator.py
 ├── appscript/                   # Google Apps Script for syncing output CSVs into Google Sheets
 │   ├── Code.js
 │   ├── Settings.js
@@ -137,6 +145,16 @@ The codebase enforces strict linting and formatting via **Ruff**:
   1. `browser.json` (exported browser session headers)
   2. `oauth.json` (OAuth2 token credentials with `OAUTH_CLIENT_ID` and `OAUTH_CLIENT_SECRET`)
 - Thread-local client management (`get_thread_client()`) ensures thread safety during parallel execution.
+
+### 4.6. AI Listening Reports & Discovery Radar (`src/reports/`)
+- **Cadence & Rotation**: Automatically generates `daily.md`, `weekly.md`, and `monthly.md` reports in `output/reports/`.
+- **Lazy-Man Cron**: During standard sync runs (`frequent` or `all`), `src/reports/rotator.py` checks `output/meta/reports.yaml` to detect if a new day, ISO week, or month threshold has elapsed.
+- **Archive Rotation**: Previous reports are automatically rotated to `output/reports/archive/{cadence}/YYYY/{period}.md` and indexed in `output/reports/README.md`.
+- **Recommendation Shelves**: Correlates listening history against 5 shelves (`your_daily_discover`, `discover_mix`, `new_releases`, `quick_picks`, `mixed_for_you`).
+- **Zero-Dependency Gemini Client**: Uses `requests` with `gemini-3.8-flash` via `GOOGLE_AI_API_KEY`. Gracefully falls back to deterministic markdown when offline.
+- **CLI Commands**:
+  - `python ytm-dl.py report` (checks lazy-man cadence)
+  - `python ytm-dl.py report [daily|weekly|monthly|all]` (forces generation)
 
 ---
 
