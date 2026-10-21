@@ -1,37 +1,36 @@
-# 🎧 Daily Listening Log: 2026-10-19
+# 🎧 Daily Listening Log: 2026-10-20
 *Recorded via ytm-dl | Cadence: Daily Observation*
 
 ## 1. Session Telemetry
-- Total Tracks Observed: 13
-- Auditory Duration: 1h 10m
-- Unique Artists: 3 (5 albums)
-- Catalog Anchor: Ott (54% of session, 7 plays)
-- Library Ratio: 7.7% library tracks
+- Total Tracks Observed: 49
+- Auditory Duration: 3h 07m
+- Unique Artists: 39 (40 albums)
+- Catalog Anchor: Dorothy Ashby (16% of session, 8 plays)
+- Library Ratio: 4.1% library tracks
 
 ## 2. Musicological Notes
 ### Field Observations
-- **Primary Anchor**: Ott commanded over half the logged duration (7 tracks), engaging sustained psychill and downtempo arrangements characterized by mid-tempo breakbeats and intricate modular processing.
-- **Pacing & Transitions**: The session bifurcated cleanly into two distinct operational blocks: an extended, continuous immersion in Ott's psychoacoustic dub soundscapes followed by an episodic sequence of Gorillaz collaborative singles.
-- **Harmonic Texture**: Prominent reliance on Jamaican dub mixing techniques—spring reverb decay, tape-delay feedback loops, and sub-bass prioritization—which bridged the stylistic distance between Ott's ambient electronics and Gorillaz's hip-hop crossover productions.
-- **Anomalies & Drift**: The minimal library ratio (7.7%) denotes an exploratory session driven largely by algorithmic surfacing or unarchived contextual playback rather than curated personal rotation.
+- **Primary Anchor:** Dorothy Ashby’s jazz harp serves as the gravitational core of the session, both through solo bandleader cuts and collaborative recordings alongside flutist Frank Wess.
+- **Harmonic Texture:** A persistent balance between modal jazz instrumentation (harp, upright bass, flute) and turn-of-the-century sample-driven downtempo (Wax Tailor, The Sound Defects, early Gorillaz).
+- **Pacing & Transitions:** The low library retention metric (4.1%) reflects extensive catalog exploration, shifting seamlessly from psych-folk (Linda Perhacs) to cosmic jazz-funk (Lonnie Liston Smith) without abrupt dynamic friction.
 
 ### Narrative Synthesis
-The observation window represents an unhurried, low-variety session dominated by two UK production sensibilities that share foundational roots in dub aesthetics. The initial sequence tracked through Ott’s dense, organic electronica, specifically cuts from the 2022 LP *Heads* (including "The Eternal Mrs R" and "Muggy Boneheads"). These selections emphasize wide stereo imaging, non-Western melodic phrasing, and micro-sampled acoustic instruments pinned to relaxed half-time rhythms. 
+The listening session operates primarily as a crate-digging exercise characterized by wide artist dispersion (39 artists across 49 tracks). Rather than circling familiar personal library territory, the telemetry outlines an exploratory drift centered on acoustic timbre and rhythmic groove. Ashby’s harp phrasing establishes an unhurried, warm modal palette that contextualizes the ensuing selections.
 
-A hard thematic pivot into Gorillaz followed, yet sonic continuity was preserved via common production lineage. From "Dirty Harry" to "Tormenta" and "Clint Eastwood" (featuring Del the Funky Homosapien), the listening pattern highlighted Damon Albarn’s recurring use of dub space, bassline-forward mixing, and polyphonic vocal counterpoints. The brevity of the catalog list suggests an intentional seated listening block of album listening followed by a short algorithmic descent into familiar alternative hip-hop landmarks.
+The secondary half of the session branches into late-1990s and early-2000s productions that borrow heavily from mid-century jazz aesthetics. Selections by Wax Tailor and The Sound Defects mirror the syncopated drum breaks and melodic ostinatos established by Ashby and Lonnie Liston Smith, while entries from Ween and G. Love & Special Sauce inject loose, roots-oriented rhythm into an otherwise serene acoustic environment.
 
 ## 3. Dynamic Field Spotlight
 ### Sonic Texture & Timbre
-Ott’s works in this block showcase a clinical approach to acoustic-electronic synthesis. In "Raketwetenschap" and "Camping '76!", acoustic percussion and brass motifs are subjected to comb filtering, micro-pitch shifting, and dynamic tape saturation. The rhythm section remains unquantized in feel, balancing glitch precision with live instrumentation. When juxtaposed against Gorillaz’s compressed, radio-forward mastering on "Rhinestone Eyes" and "Dirty Harry," the contrast highlights differing applications of the same studio lineage: Ott uses negative space for psychoacoustic depth, whereas Albarn and his co-producers compress that space to frame the vocal features.
+The prevailing sound signature is defined by plucked, clean acoustic strings and analog decay. Dorothy Ashby’s treatment of the concert harp discards traditional impressionistic sweeps in favor of percussive, bebop-inflected articulation. This tonal characteristic bridges naturally into the muted electric guitar riffs of G. Love, the acoustic picking of Linda Perhacs, and the vinyl-sampled upright basslines underpinning Wax Tailor's rhythmic architecture.
 
-### Catalog Archaeology & Deep Cuts
-The Ott listening run bypasses typical legacy entry points (e.g., *Blumenkraft* or *Skylon*) in favor of the intricate album sequence of *Heads*. Rather than engaging with fragmented playlisting, the listening path reflects album-order fidelity, moving deliberately across non-single tracks like "A Door In The Back Of The Wardrobe." Conversely, the Gorillaz cluster acted purely as an anthology of anchor singles across multiple eras, demonstrating two divergent consumption modes within a single seventy-minute span.
+### Historical Field Note
+Between 1958 and the early 1960s, Dorothy Ashby and Frank Wess documented a series of essential sessions (most notably *In a Minor Groove*), systematically demonstrating that the harp could navigate complex hard-bop changes rather than functioning purely as an orchestral novelty.
 
 ## 4. Algorithmic Suggestions Radar
 
 | Track | Artist | Shelf Source | Prior Impressions | Musicologist Appraisal |
 | :--- | :--- | :--- | :--- | :--- |
-| **Sit Around The Fire** | East Forest, Jon Hopkins | `your_daily_discover` | 1 | **Aligned.** Hopkins’ analog synth pads and meditative pacing align closely with the psychill and downtempo architecture of Ott’s longer narrative tracks. |
-| **Loved** | Four Tet | `your_daily_discover` | 1 | **Strong Match.** Kieran Hebden’s integration of hip-hop breaks, organic micro-samples, and ambient electronica sits directly at the intersection of today's Ott and Gorillaz selections. |
-| **What Will Survive Of Us Is Love** | Ott | `quick_picks` | 1 | **Direct Reinforcement.** A logical catalog adjacency from *Heads*; offers algorithmic closure to the morning's incomplete run through the producer's latest LP. |
-| **Between the Rings** | Stellardrone | `your_daily_discover` | 1 | **Contextual Pivot.** Leans significantly into space ambient and synth-drone textures, stripping away the percussive dub backbone that anchored today's listening. |
+| **Ain't It Funky Now** | Grant Green | your_daily_discover | 1 | **Aligned.** Green’s sparse, rhythmic single-note guitar lines on Blue Note complement the groove-centric jazz and hip-hop sample lineage observed in the session. |
+| **ボディー・アンド・ソウル (Live at Vidro'77)** | Ryo Fukui | your_daily_discover | 1 | **Aligned.** Fukui’s tactile, live modal piano performance directly reflects the acoustic jazz foundation anchored by Ashby. |
+| **Saturday's Children (feat. Neal Casal)** | Circles Around The Sun | quick_picks | 1 | **Contrasting Drift.** Introduces extended instrumental neo-psychedelic groove; harmonically resonant with the session's laid-back tempo, though structurally more expansive than Ashby's concise bop arrangements. |
+| **Brookside Hybrid 23** | Ott | your_daily_discover | 1 | **Divergent.** Expands upon the electronic and downtempo elements of Wax Tailor and Gorillaz, shifting into heavier dub production and synthetic sound design. |
