@@ -78,10 +78,7 @@ def find_history_overlap(existing_ids, new_ids, max_window=15, min_ratio=0.75):
     return None
 
 
-def prepend_rows_for_file(
-    csv_file, new_rows, is_history=False, is_home=False, key_index=None, by_key=False
-):
-    del by_key
+def prepend_rows_for_file(csv_file, new_rows, is_history=False, is_home=False, key_index=None):
     """
     Determine which rows from new_rows should be prepended to the CSV file.
     - If is_history: Uses sequence alignment to find new play events.

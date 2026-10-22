@@ -170,7 +170,6 @@ def get_thread_client():
 
 API_ARGUMENTS = {
     "get_history": {},
-    "get_home": 9,
     "get_liked_songs": {"limit": 500},
     "get_library_songs": {"limit": 500, "order": "recently_added"},
     "get_library_subscriptions": {"limit": 25, "order": "recently_added"},
@@ -187,33 +186,6 @@ make_dict_readonly(API_ARGUMENTS)
 
 def suggest_search(search):
     return [search, get_thread_client().get_search_suggestions(search)]
-
-
-def build_home_records(records):
-    rows = []
-    i = 0
-    for tab in records:
-        i = i + 1
-        home_title = tab["title"]
-        for row in tab["contents"]:
-            artists = row.get("artists", [])
-            if len(artists) and artists[0].get("name") == "Song" and not artists[0].get("id"):
-                row["type"] = "Song"
-                artists.pop(0)
-            if not row.get("type") and row.get("playlistId"):
-                row["type"] = "Playlist" if not row.get("videoId") else "Video"
-            if not row.get("type") and row.get("subscribers"):
-                row["type"] = "Artist"
-            row["home"] = home_title
-            row["home_index"] = i
-            row["id"] = row.get("browseId")
-            if not row["id"]:
-                row["id"] = row.get("playlistId")
-            if not row["id"]:
-                row["id"] = row.get("videoId")
-
-            rows.append(row)
-    return rows
 
 
 class ApiMethod:
@@ -239,9 +211,6 @@ class ApiMethod:
         self.elapsed_time = round(time() - start_time, 2)
 
         self.records, meta = records_from_response(api_results.copy())
-        if self.method == "get_home":
-            self.records = build_home_records(self.records)
-
         meta["API"] = self.api_meta
 
         MetaStore.get("api_results").add(self.method, api_results)
