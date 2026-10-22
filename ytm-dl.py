@@ -105,7 +105,8 @@ def do_updates(option):
     try:
         from src.reports.rotator import run_reports
 
-        reports_generated = run_reports(output_dir="output")
+        history_updated = any("history" in str(f) for f in files_written)
+        reports_generated = run_reports(output_dir="output", refresh_nocturnal=history_updated)
         if reports_generated:
             print(f"✓ Generated listening report(s): {', '.join(reports_generated)}")
             ChangeTracker.record(

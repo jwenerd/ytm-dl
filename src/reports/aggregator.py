@@ -5,6 +5,8 @@ import os
 from collections import Counter
 from datetime import UTC, date, datetime, time, timedelta
 
+from src.util import get_user_timezone
+
 CANDIDATE_SHELVES = [
     ("home/your_daily_discover.csv", "your_daily_discover"),
     ("mixes/discover_mix.csv", "discover_mix"),
@@ -56,43 +58,43 @@ def get_cadence_window(
 ) -> tuple[datetime, datetime]:
     """
     Returns (start_dt, end_dt) in UTC for the requested cadence.
-    - daily: full 24h window for target_date (default yesterday).
-    - weekly: Monday 00:00:00 to Sunday 23:59:59 UTC of the target week.
-    - monthly: 1st of month 00:00:00 to last second of month.
+    - daily: 04:00 local on target_date to 04:00 local on next day (converted to UTC).
+    - weekly: Monday 04:00 local of target week to following Monday 04:00 local (in UTC).
+    - monthly: 1st of month 04:00 local to 1st of next month 04:00 local (in UTC).
     """
-    now = datetime.now(UTC)
+    tz = get_user_timezone()
+    now_local = datetime.now(tz)
+
     if target_date is None:
-        target = now.date() - timedelta(days=1)
+        target = now_local.date() - timedelta(days=1)
     elif isinstance(target_date, datetime):
-        target = target_date.astimezone(UTC).date()
+        if target_date.tzinfo is None:
+            target_date = target_date.replace(tzinfo=UTC)
+        target = target_date.astimezone(tz).date()
     else:
         target = target_date
 
     cadence = cadence.lower()
     if cadence == "daily":
-        start = datetime.combine(target, time.min, tzinfo=UTC)
-        end = datetime.combine(target, time.max, tzinfo=UTC)
-        return start, end
+        start_local = datetime.combine(target, time(4, 0), tzinfo=tz)
+        end_local = start_local + timedelta(days=1) - timedelta(microseconds=1)
+        return start_local.astimezone(UTC), end_local.astimezone(UTC)
 
     if cadence == "weekly":
-        # Target week: Monday to Sunday
         start_of_week = target - timedelta(days=target.weekday())
-        end_of_week = start_of_week + timedelta(days=6)
-        start = datetime.combine(start_of_week, time.min, tzinfo=UTC)
-        end = datetime.combine(end_of_week, time.max, tzinfo=UTC)
-        return start, end
+        start_local = datetime.combine(start_of_week, time(4, 0), tzinfo=tz)
+        end_local = start_local + timedelta(days=7) - timedelta(microseconds=1)
+        return start_local.astimezone(UTC), end_local.astimezone(UTC)
 
     if cadence == "monthly":
         start_of_month = target.replace(day=1)
-        # Find last day of month
         if start_of_month.month == 12:
             next_month = start_of_month.replace(year=start_of_month.year + 1, month=1)
         else:
             next_month = start_of_month.replace(month=start_of_month.month + 1)
-        last_day = next_month - timedelta(days=1)
-        start = datetime.combine(start_of_month, time.min, tzinfo=UTC)
-        end = datetime.combine(last_day, time.max, tzinfo=UTC)
-        return start, end
+        start_local = datetime.combine(start_of_month, time(4, 0), tzinfo=tz)
+        end_local = datetime.combine(next_month, time(4, 0), tzinfo=tz) - timedelta(microseconds=1)
+        return start_local.astimezone(UTC), end_local.astimezone(UTC)
 
     msg = f"Unsupported cadence: {cadence}. Expected 'daily', 'weekly', or 'monthly'."
     raise ValueError(msg)
@@ -109,6 +111,42 @@ def filter_rows_by_timestamp(
     for row in rows:
         ts = parse_iso_timestamp(row.get(ts_field))
         if ts and start_dt <= ts <= end_dt:
+            filtered.append(row)
+    return filtered
+
+
+def filter_history_for_cadence(
+    rows: list[dict[str, str]],
+    cadence: str,
+    target_date: date,
+) -> list[dict[str, str]]:
+    """
+    Filters history rows for a cadence window by matching played_at calendar date.
+    """
+    cadence = cadence.lower()
+    if cadence == "daily":
+        start_date = target_date
+        end_date = target_date
+    elif cadence == "weekly":
+        start_date = target_date - timedelta(days=target_date.weekday())
+        end_date = start_date + timedelta(days=6)
+    elif cadence == "monthly":
+        start_date = target_date.replace(day=1)
+        if start_date.month == 12:
+            next_m = start_date.replace(year=start_date.year + 1, month=1)
+        else:
+            next_m = start_date.replace(month=start_date.month + 1)
+        end_date = next_m - timedelta(days=1)
+    else:
+        start_date = target_date
+        end_date = target_date
+
+    filtered = []
+    for row in rows:
+        ts = parse_iso_timestamp(row.get("played_at"))
+        if not ts:
+            continue
+        if start_date <= ts.date() <= end_date:
             filtered.append(row)
     return filtered
 
@@ -324,12 +362,22 @@ def assemble_report_context(
     """
     Assembles the full context dictionary needed by the prompt builder and report generator.
     """
-    start_dt, end_dt = get_cadence_window(cadence, target_date)
+    tz = get_user_timezone()
+    if target_date is None:
+        target = (datetime.now(tz) - timedelta(days=1)).date()
+    elif isinstance(target_date, datetime):
+        if target_date.tzinfo is None:
+            target_date = target_date.replace(tzinfo=UTC)
+        target = target_date.astimezone(tz).date()
+    else:
+        target = target_date
+
+    start_dt, end_dt = get_cadence_window(cadence, target)
 
     # 1. Read history
     history_path = os.path.join(output_dir, "history.csv")
     all_history = read_csv_rows(history_path)
-    history_slice = filter_rows_by_timestamp(all_history, "played_at", start_dt, end_dt)
+    history_slice = filter_history_for_cadence(all_history, cadence, target)
 
     # 2. Read liked songs
     liked_path = os.path.join(output_dir, "liked_songs.csv")
@@ -360,19 +408,30 @@ def assemble_report_context(
         "cadence": cadence.lower(),
         "start_time": start_dt.isoformat(),
         "end_time": end_dt.isoformat(),
-        "period_label": format_period_label(cadence, start_dt, end_dt),
+        "period_label": format_period_label(cadence, start_dt, end_dt, target),
         "telemetry": telemetry,
         "radar_candidates": radar_candidates,
     }
 
 
-def format_period_label(cadence: str, start_dt: datetime, end_dt: datetime) -> str:
+def format_period_label(
+    cadence: str, start_dt: datetime, end_dt: datetime, target_date: date | None = None
+) -> str:
     """Returns a clean display label for the period (e.g., '2026-10-18' or '2026-W42')."""
     if cadence == "daily":
-        return start_dt.strftime("%Y-%m-%d")
+        if target_date:
+            return target_date.strftime("%Y-%m-%d")
+        tz = get_user_timezone()
+        return start_dt.astimezone(tz).strftime("%Y-%m-%d")
     if cadence == "weekly":
-        year, week, _ = start_dt.isocalendar()
-        return f"{year}-W{week:02d} ({start_dt.strftime('%b %d')} - {end_dt.strftime('%b %d')})"
+        tz = get_user_timezone()
+        local_start = start_dt.astimezone(tz)
+        local_end = end_dt.astimezone(tz)
+        year, week, _ = local_start.isocalendar()
+        return (
+            f"{year}-W{week:02d} ({local_start.strftime('%b %d')} - {local_end.strftime('%b %d')})"
+        )
     if cadence == "monthly":
-        return start_dt.strftime("%B %Y")
+        tz = get_user_timezone()
+        return start_dt.astimezone(tz).strftime("%B %Y")
     return start_dt.strftime("%Y-%m-%d")

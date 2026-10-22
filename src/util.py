@@ -1,9 +1,41 @@
 import hashlib
 import os
 import re
+from datetime import UTC, date, datetime, timedelta
 from types import MappingProxyType
+from zoneinfo import ZoneInfo
 
 import yaml
+
+
+def get_user_timezone() -> ZoneInfo:
+    """Returns the user configured timezone (default 'America/Denver')."""
+    tz_name = os.environ.get("YTM_TIMEZONE", "America/Denver")
+    try:
+        return ZoneInfo(tz_name)
+    except Exception:
+        return ZoneInfo("America/Denver")
+
+
+def get_effective_listening_date(
+    dt: datetime | None = None, cutoff_hour: int = 4, tz: ZoneInfo | None = None
+) -> date:
+    """
+    Returns the effective listening date for a given datetime.
+    Hours prior to cutoff_hour (default 4:00 AM) are considered the late-night
+    continuation of the previous calendar day's listening session.
+    """
+    if dt is None:
+        dt = datetime.now(UTC)
+    elif dt.tzinfo is None:
+        dt = dt.replace(tzinfo=UTC)
+
+    target_tz = tz or get_user_timezone()
+    local_dt = dt.astimezone(target_tz)
+
+    if local_dt.hour < cutoff_hour:
+        return local_dt.date() - timedelta(days=1)
+    return local_dt.date()
 
 
 def slugify(text: str) -> str:

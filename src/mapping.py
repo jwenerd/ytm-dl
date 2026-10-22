@@ -4,6 +4,8 @@ from datetime import UTC, datetime, timedelta
 
 from marshmallow import Schema, fields
 
+from src.util import get_user_timezone
+
 
 class BaseSchema(Schema):
     primary_key: str = "id"
@@ -207,32 +209,47 @@ def snap_relative_played_at(played_str, run_time=None):
     """
     Snaps a relative 'played' string from YouTube Music (e.g. 'Today', 'Yesterday',
     'This week', 'Last week', 'August 2026') to a clean UTC midnight ISO timestamp.
+    Accounts for user timezone and early-morning nocturnal listening (< 4:00 AM local).
     """
     if run_time is None:
         run_time = datetime.now(UTC)
+    elif isinstance(run_time, datetime) and run_time.tzinfo is None:
+        run_time = run_time.replace(tzinfo=UTC)
 
-    ref_date = run_time.date() if isinstance(run_time, datetime) else run_time
+    if isinstance(run_time, datetime):
+        tz = get_user_timezone()
+        local_run_time = run_time.astimezone(tz)
+        local_date = local_run_time.date()
+        is_nocturnal = local_run_time.hour < 4
+    else:
+        local_date = run_time
+        is_nocturnal = False
 
     if not played_str or not isinstance(played_str, str):
+        ref_date = local_date - timedelta(days=1) if is_nocturnal else local_date
         return f"{ref_date.isoformat()}T00:00:00Z"
 
     cleaned = played_str.strip().lower()
 
     if cleaned == "today":
-        return f"{ref_date.isoformat()}T00:00:00Z"
+        # If running during nocturnal hours (< 4am local), late-night music belongs to previous day
+        target_date = local_date - timedelta(days=1) if is_nocturnal else local_date
+        return f"{target_date.isoformat()}T00:00:00Z"
 
     if cleaned == "yesterday":
-        target_date = ref_date - timedelta(days=1)
+        # If running during nocturnal hours, YTM's 'Yesterday' was the evening of the concluding day
+        # If running >= 4am local, 'Yesterday' was the preceding calendar day
+        target_date = local_date - timedelta(days=1)
         return f"{target_date.isoformat()}T00:00:00Z"
 
     if cleaned == "this week":
         # Snap to Monday (start) of current week
-        target_date = ref_date - timedelta(days=ref_date.weekday())
+        target_date = local_date - timedelta(days=local_date.weekday())
         return f"{target_date.isoformat()}T00:00:00Z"
 
     if cleaned == "last week":
         # Snap to Monday (start) of previous week
-        target_date = ref_date - timedelta(days=ref_date.weekday() + 7)
+        target_date = local_date - timedelta(days=local_date.weekday() + 7)
         return f"{target_date.isoformat()}T00:00:00Z"
 
     # Check for "<Month> <Year>" (e.g. "August 2026" or "Feb 2025")
@@ -251,7 +268,8 @@ def snap_relative_played_at(played_str, run_time=None):
     except Exception:
         pass
 
-    # Default fallback: snap to run_time date at midnight
+    # Default fallback: snap to effective date at midnight
+    ref_date = local_date - timedelta(days=1) if is_nocturnal else local_date
     return f"{ref_date.isoformat()}T00:00:00Z"
 
 

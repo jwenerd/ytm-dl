@@ -11,6 +11,7 @@ from src.reports.aggregator import (
     assemble_report_context,
 )
 from src.reports.generator import generate_report
+from src.util import get_user_timezone
 
 logger = logging.getLogger(__name__)
 
@@ -38,13 +39,19 @@ def write_reports_meta(meta_path: str, meta: dict) -> None:
 def get_target_period_info(cadence: str, now_dt: datetime) -> tuple[str, date, str]:
     """
     Computes the (period_key, target_date, archive_subpath) for a given cadence.
-    - daily: target is yesterday. Key: 'YYYY-MM-DD'. Archive: 'archive/daily/YYYY/YYYY-MM-DD.md'
+    - daily: target is yesterday in local time. Key: 'YYYY-MM-DD'. Archive: 'archive/daily/YYYY/YYYY-MM-DD.md'
     - weekly: target is previous Monday-Sunday week. Key: 'YYYY-Www'. Archive: 'archive/weekly/YYYY/YYYY-Www.md'
     - monthly: target is previous month. Key: 'YYYY-MM'. Archive: 'archive/monthly/YYYY/YYYY-MM.md'
     """
+    if now_dt.tzinfo is None:
+        now_dt = now_dt.replace(tzinfo=UTC)
+
+    tz = get_user_timezone()
+    now_local = now_dt.astimezone(tz)
     cadence = cadence.lower()
+
     if cadence == "daily":
-        target = now_dt.date() - timedelta(days=1)
+        target = now_local.date() - timedelta(days=1)
         period_key = target.strftime("%Y-%m-%d")
         archive_path = os.path.join("archive", "daily", str(target.year), f"{period_key}.md")
         return period_key, target, archive_path
@@ -52,7 +59,7 @@ def get_target_period_info(cadence: str, now_dt: datetime) -> tuple[str, date, s
     if cadence == "weekly":
         # Target is the last completed week (evaluated on Monday or subsequent days)
         # Shift back 7 days from current week's Monday
-        monday_this_week = now_dt.date() - timedelta(days=now_dt.date().weekday())
+        monday_this_week = now_local.date() - timedelta(days=now_local.date().weekday())
         target_day_in_prev_week = monday_this_week - timedelta(days=3)  # Midpoint of prev week
         year, week, _ = target_day_in_prev_week.isocalendar()
         period_key = f"{year}-W{week:02d}"
@@ -61,7 +68,7 @@ def get_target_period_info(cadence: str, now_dt: datetime) -> tuple[str, date, s
 
     if cadence == "monthly":
         # Target is the previous calendar month
-        first_of_this_month = now_dt.date().replace(day=1)
+        first_of_this_month = now_local.date().replace(day=1)
         target_day_in_prev_month = first_of_this_month - timedelta(days=1)
         period_key = target_day_in_prev_month.strftime("%Y-%m")
         archive_path = os.path.join(
@@ -73,10 +80,17 @@ def get_target_period_info(cadence: str, now_dt: datetime) -> tuple[str, date, s
     raise ValueError(msg)
 
 
-def should_run_cadence(cadence: str, meta: dict, now_dt: datetime) -> tuple[bool, str, date]:
+def should_run_cadence(
+    cadence: str,
+    meta: dict,
+    now_dt: datetime,
+    refresh_nocturnal: bool = False,
+) -> tuple[bool, str, date]:
     """
     Evaluates whether the specified cadence is due to run.
     Returns (should_run, period_key, target_date).
+    If refresh_nocturnal is True and it's early morning (< 4am local), allows refreshing
+    the newly generated daily report if new plays were added.
     """
     period_key, target_date, _ = get_target_period_info(cadence, now_dt)
     cadence_meta = meta.get(cadence) or {}
@@ -85,6 +99,15 @@ def should_run_cadence(cadence: str, meta: dict, now_dt: datetime) -> tuple[bool
     # If never run or last recorded period is older than target period
     if not last_period or str(last_period) < period_key:
         return True, period_key, target_date
+
+    # If already ran for this period, but we are in nocturnal hours (< 4am local)
+    # and new history was added, allow refreshing the daily report
+    if refresh_nocturnal and cadence.lower() == "daily" and str(last_period) == period_key:
+        if now_dt.tzinfo is None:
+            now_dt = now_dt.replace(tzinfo=UTC)
+        now_local = now_dt.astimezone(get_user_timezone())
+        if now_local.hour < 4:
+            return True, period_key, target_date
 
     return False, period_key, target_date
 
@@ -177,6 +200,7 @@ def run_reports(
     api_key: str | None = None,
     target_date: date | None = None,
     now_dt: datetime | None = None,
+    refresh_nocturnal: bool = False,
 ) -> list[str]:
     """
     Evaluates cadences and generates due reports.
@@ -199,7 +223,9 @@ def run_reports(
 
     for cad in cadences_to_check:
         is_forced = bool(force_cadence and force_cadence.lower() in (cad, "all"))
-        should_run, period_key, computed_target = should_run_cadence(cad, meta, now_dt)
+        should_run, period_key, computed_target = should_run_cadence(
+            cad, meta, now_dt, refresh_nocturnal=refresh_nocturnal
+        )
 
         if is_forced or should_run:
             use_date = target_date if target_date else computed_target

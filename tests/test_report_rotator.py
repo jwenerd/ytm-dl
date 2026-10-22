@@ -146,3 +146,54 @@ def test_run_reports_lazy_man_flow(mock_gen, tmp_path):
     forced_run = run_reports(output_dir=output_dir, force_cadence="daily", now_dt=now_dt)
     assert forced_run == ["daily"]
     assert mock_gen.call_count == 4
+
+
+def test_should_run_cadence_evening_vs_nocturnal_timing(monkeypatch):
+    monkeypatch.setenv("YTM_TIMEZONE", "America/Denver")
+    meta = {"daily": {"last_period": "2026-10-18"}}
+
+    # 1. Monday 6:19 PM MDT (00:19 UTC Oct 20)
+    # UTC rolled over, but in Denver it is still Monday evening.
+    # The report for Monday (Oct 19) must NOT run yet.
+    dt_evening_early = datetime(2026, 10, 20, 0, 19, 0, tzinfo=UTC)
+    should_run, period_key, _ = should_run_cadence("daily", meta, dt_evening_early)
+    assert should_run is False
+    assert period_key == "2026-10-18"
+
+    # 2. Monday 10:49 PM MDT (04:49 UTC Oct 20)
+    # Late evening listening: still Monday, must NOT run daily report yet.
+    dt_evening_late = datetime(2026, 10, 20, 4, 49, 0, tzinfo=UTC)
+    should_run, period_key, _ = should_run_cadence("daily", meta, dt_evening_late)
+    assert should_run is False
+    assert period_key == "2026-10-18"
+
+    # 3. Tuesday 1:19 AM MDT (07:19 UTC Oct 20)
+    # Calendar date in Denver is now Tuesday. The first run of the day executes.
+    # It SHOULD run for Monday Oct 19!
+    dt_1am = datetime(2026, 10, 20, 7, 19, 0, tzinfo=UTC)
+    should_run, period_key, _ = should_run_cadence("daily", meta, dt_1am)
+    assert should_run is True
+    assert period_key == "2026-10-19"
+
+    # 4. Tuesday 3:19 AM MDT (09:19 UTC Oct 20) with refresh_nocturnal
+    # If report was already generated at 1am, but more plays arrived before 4am, refresh allows updating.
+    meta_updated = {"daily": {"last_period": "2026-10-19"}}
+    dt_3am = datetime(2026, 10, 20, 9, 19, 0, tzinfo=UTC)
+    should_run_no_refresh, _, _ = should_run_cadence(
+        "daily", meta_updated, dt_3am, refresh_nocturnal=False
+    )
+    assert should_run_no_refresh is False
+
+    should_run_refresh, period_key_refresh, _ = should_run_cadence(
+        "daily", meta_updated, dt_3am, refresh_nocturnal=True
+    )
+    assert should_run_refresh is True
+    assert period_key_refresh == "2026-10-19"
+
+    # 5. Tuesday 6:19 AM MDT (12:19 UTC Oct 20)
+    # After the 4am cutoff, even with refresh_nocturnal, the window is closed.
+    dt_6am = datetime(2026, 10, 20, 12, 19, 0, tzinfo=UTC)
+    should_run_morning, _, _ = should_run_cadence(
+        "daily", meta_updated, dt_6am, refresh_nocturnal=True
+    )
+    assert should_run_morning is False

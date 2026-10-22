@@ -10,6 +10,7 @@ from src.mapping import (
     SongSchema,
     enrich_liked_songs_records,
     get_run_id,
+    snap_relative_played_at,
 )
 
 
@@ -168,3 +169,30 @@ def test_home_mapping_rows():
     # Verify captured_at and run_id are populated
     assert row[7] != ""
     assert row[8] != ""
+
+
+def test_snap_relative_played_at_timezone_and_nocturnal(monkeypatch):
+    monkeypatch.setenv("YTM_TIMEZONE", "America/Denver")
+
+    # 1. Daytime run (2:00 PM MDT on Oct 19 = 20:00 UTC Oct 19)
+    run_day = datetime(2026, 10, 19, 20, 0, 0, tzinfo=UTC)
+    assert snap_relative_played_at("Today", run_day) == "2026-10-19T00:00:00Z"
+    assert snap_relative_played_at("Yesterday", run_day) == "2026-10-18T00:00:00Z"
+
+    # 2. Evening run (10:42 PM MDT on Oct 18 = 04:42 UTC Oct 19)
+    # Even though UTC is Oct 19, local time is Oct 18 evening!
+    run_evening = datetime(2026, 10, 19, 4, 42, 0, tzinfo=UTC)
+    assert snap_relative_played_at("Today", run_evening) == "2026-10-18T00:00:00Z"
+    assert snap_relative_played_at("Yesterday", run_evening) == "2026-10-17T00:00:00Z"
+
+    # 3. Nocturnal run (1:19 AM MDT on Oct 20 = 07:19 UTC Oct 20)
+    # Both "Today" (post-midnight 12:30 AM) and "Yesterday" (pre-midnight 11:30 PM)
+    # belong to the nocturnal conclusion of Oct 19
+    run_nocturnal = datetime(2026, 10, 20, 7, 19, 0, tzinfo=UTC)
+    assert snap_relative_played_at("Today", run_nocturnal) == "2026-10-19T00:00:00Z"
+    assert snap_relative_played_at("Yesterday", run_nocturnal) == "2026-10-19T00:00:00Z"
+
+    # 4. Morning run after cutoff (6:00 AM MDT on Oct 20 = 12:00 UTC Oct 20)
+    run_morning = datetime(2026, 10, 20, 12, 0, 0, tzinfo=UTC)
+    assert snap_relative_played_at("Today", run_morning) == "2026-10-20T00:00:00Z"
+    assert snap_relative_played_at("Yesterday", run_morning) == "2026-10-19T00:00:00Z"
