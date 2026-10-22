@@ -1,12 +1,12 @@
 # 📝  output 
 
-## ⚙️ [run #6970](https://github.com/jwenerd/ytm-dl/actions/runs/39681061802)
+## ⚙️ [run #6971](https://github.com/jwenerd/ytm-dl/actions/runs/39724339711)
 
 ### 📁 Files
 
 |                                                                                 |lines|size|
 |---------------------------------------------------------------------------------|-----|----|
-|[`history.csv` ](history.csv)                                                    |68302|8.7M|
+|[`history.csv` ](history.csv)                                                    |68318|8.7M|
 |[`history/2024-01.csv` ](history/2024-01.csv)                                    |2255 |288K|
 |[`history/2024-02.csv` ](history/2024-02.csv)                                    |1736 |212K|
 |[`history/2024-03.csv` ](history/2024-03.csv)                                    |1868 |228K|
@@ -30,7 +30,7 @@
 |[`history/2026-07.csv` ](history/2026-07.csv)                                    |8461 |1.1M|
 |[`history/2026-08.csv` ](history/2026-08.csv)                                    |5921 |772K|
 |[`history/2026-09.csv` ](history/2026-09.csv)                                    |4283 |568K|
-|[`history/2026-10.csv` ](history/2026-10.csv)                                    |557  |72K |
+|[`history/2026-10.csv` ](history/2026-10.csv)                                    |573  |76K |
 |[`home/albums_for_you.csv` ](home/albums_for_you.csv)                            |105  |12K |
 |[`home/all_time_essentials.csv` ](home/all_time_essentials.csv)                  |11   |4.0K|
 |[`home/autumn_loading.csv` ](home/autumn_loading.csv)                            |15   |4.0K|
@@ -80,7 +80,7 @@
 |[`home/your_daily_discover.csv` ](home/your_daily_discover.csv)                  |247  |28K |
 |[`library_albums.csv` ](library_albums.csv)                                      |1335 |92K |
 |[`library_artists.csv` ](library_artists.csv)                                    |2629 |116K|
-|[`library_songs.csv` ](library_songs.csv)                                        |8463 |744K|
+|[`library_songs.csv` ](library_songs.csv)                                        |8472 |744K|
 |[`library_subscriptions.csv` ](library_subscriptions.csv)                        |188  |8.0K|
 |[`library_upload_albums.csv` ](library_upload_albums.csv)                        |1428 |212K|
 |[`library_upload_artists.csv` ](library_upload_artists.csv)                      |1899 |208K|
