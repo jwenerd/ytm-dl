@@ -39,6 +39,8 @@ class TestBranchBoundaries:
         assert is_boundary_violation("oauth.json") is True
         assert is_boundary_violation(".env") is True
         assert is_boundary_violation("config/.env") is True
+        assert is_boundary_violation(".clasprc.json") is True
+        assert is_boundary_violation("appscript/.clasprc.json") is True
 
         # Forbidden artifacts/
         assert is_boundary_violation("artifacts/api_results_123.yaml") is True

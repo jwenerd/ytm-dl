@@ -18,7 +18,7 @@ from pathlib import Path
 ALLOWED_OUTPUT_FILES = {"output/.keep"}
 DATA_EXTENSIONS = (".csv", ".csv.gz")
 ALLOWED_DATA_PREFIXES = ("tests/", "tests\\")
-CREDENTIAL_FILES = {"browser.json", "oauth.json", ".env"}
+CREDENTIAL_FILES = {"browser.json", "oauth.json", ".env", ".clasprc.json"}
 
 
 def is_boundary_violation(filepath: str) -> bool:

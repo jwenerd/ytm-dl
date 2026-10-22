@@ -115,6 +115,7 @@ The Web App handles incoming `POST` requests according to payload content:
    - `_cleanupTriggers("asyncSaveCSVs")` runs both *before* creating a trigger and inside the *finally* block of `asyncSaveCSVs()`.
    - This prevents stale trigger accumulation across repeated sync runs.
 
-2. **Branch Boundaries**:
-   - `appscript/` source files are committed to `main` for version control.
-   - `.clasp.json` contains public metadata (Script ID only); credentials remain in `~/.clasprc.json` on the local machine and are never committed.
+2. **Branch Boundaries & Secret Protection**:
+   - `appscript/` source files (`Code.js`, `Settings.js`, `appsscript.json`) are tracked on `main`.
+   - `.clasp.json` contains only public project metadata (Script ID).
+   - `.clasprc.json` contains sensitive OAuth2 tokens and is strictly blocked by `.gitignore` and `scripts/check_boundaries.py`. **NEVER** commit `.clasprc.json` to any branch.
