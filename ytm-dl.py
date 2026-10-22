@@ -19,10 +19,7 @@ from src.output import Output, update_search_suggestions
 
 def ytmusic_to_file(file):
     records, meta = ApiMethod(f"get_{file}").perform()
-    result = Output(file, records, meta).write_files()
-    if result is None:
-        return
-    return result
+    return Output(file, records, meta).write_files()
 
 
 def do_search_suggestions():

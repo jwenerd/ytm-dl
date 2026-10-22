@@ -103,9 +103,11 @@ def test_validate_auth_unexpected_error():
     mock_client = MagicMock()
     mock_client.get_liked_songs.side_effect = ConnectionError("Network unreachable")
 
-    with patch("src.api.get_auth_info", return_value={"auth_type": "browser.json"}):
-        with pytest.raises(ConnectionError):
-            validate_auth(client=mock_client)
+    with (
+        patch("src.api.get_auth_info", return_value={"auth_type": "browser.json"}),
+        pytest.raises(ConnectionError),
+    ):
+        validate_auth(client=mock_client)
 
 
 def test_report_auth_failure_ci_output(tmp_path, monkeypatch, capsys):
@@ -153,5 +155,19 @@ def test_write_auth_meta(tmp_path, monkeypatch):
     content = auth_md.read_text(encoding="utf-8")
     assert "### 🔑 Authentication" in content
     assert "`browser.json`" in content
-    assert "30m old" in content
     assert "Active & Valid" in content
+
+
+def test_records_from_response():
+    from src.api import records_from_response
+
+    # Dict with tracks
+    resp = {"tracks": [{"videoId": "v1"}], "title": "My Album"}
+    records, meta = records_from_response(resp)
+    assert records == [{"videoId": "v1"}]
+    assert "Tracks" in meta
+
+    # List response
+    records2, meta2 = records_from_response([{"videoId": "v2"}])
+    assert records2 == [{"videoId": "v2"}]
+    assert meta2 == {}

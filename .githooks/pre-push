@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Git pre-push hook to prevent accidental direct pushes to the main branch.
+# To bypass in an emergency: ALLOW_MAIN_PUSH=1 git push origin main
+
+z40="0000000000000000000000000000000000000000"
+
+while read local_ref local_sha remote_ref remote_sha; do
+    if [ "$remote_ref" = "refs/heads/main" ]; then
+        if [ "$ALLOW_MAIN_PUSH" = "1" ] || [ "$ALLOW_MAIN_PUSH" = "true" ]; then
+            echo "⚠️ [pre-push] ALLOW_MAIN_PUSH override detected. Allowing direct push to main."
+            exit 0
+        fi
+
+        echo ""
+        echo "🛑 ================================================================="
+        echo "🛑 DIRECT PUSH TO 'main' IS BLOCKED BY REPOSITORY POLICY"
+        echo "🛑 ================================================================="
+        echo ""
+        echo "All changes must be submitted via a GitHub Pull Request."
+        echo ""
+        echo "How to proceed:"
+        echo "  1. Create a feature branch:  git checkout -b feat/your-feature-name"
+        echo "  2. Push your branch:        git push -u origin feat/your-feature-name"
+        echo "  3. Open a Pull Request:     gh pr create --web"
+        echo ""
+        echo "If this is a critical emergency hotfix, bypass with:"
+        echo "  ALLOW_MAIN_PUSH=1 git push origin main"
+        echo ""
+        echo "================================================================="
+        echo ""
+        exit 1
+    fi
+done
+
+exit 0

@@ -1,0 +1,48 @@
+name: guard-main
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  audit-direct-push:
+    name: Audit Main Commits
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Inspect Commit Origin
+        run: |
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          AUTHOR=$(git log -1 --pretty=%an)
+          SHA=$(git log -1 --pretty=%h)
+
+          echo "Inspecting commit: $SHA by $AUTHOR"
+          echo "Commit message: $COMMIT_MSG"
+
+          # Check if commit is from a PR merge or squash
+          if echo "$COMMIT_MSG" | grep -qE "(Merge pull request #|Merge branch |\(#[0-9]+\))"; then
+            echo "✅ Verified: Commit arrived via Pull Request."
+            echo "## 🛡️ Main Branch Audit" >> $GITHUB_STEP_SUMMARY
+            echo "✅ Commit \`$SHA\` arrived via GitHub Pull Request." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "::warning::Direct commit pushed to main branch without standard PR pattern!"
+            echo "## ⚠️ Main Branch Audit Warning" >> $GITHUB_STEP_SUMMARY
+            echo "⚠️ **Direct commit pushed to main!**" >> $GITHUB_STEP_SUMMARY
+            echo "- **Commit:** \`$SHA\`" >> $GITHUB_STEP_SUMMARY
+            echo "- **Author:** $AUTHOR" >> $GITHUB_STEP_SUMMARY
+            echo "- **Message:** $COMMIT_MSG" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "> Repository policy requires all changes to arrive through Pull Requests." >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Verify Branch Boundaries (No Data or Secrets on Main)
+        run: |
+          python3 scripts/check_boundaries.py --audit-tree

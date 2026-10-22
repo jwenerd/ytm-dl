@@ -1,6 +1,7 @@
 import os
 import threading
 from dataclasses import dataclass, field
+from typing import ClassVar
 
 from .util import write_file
 
@@ -16,7 +17,7 @@ class ChangeRecord:
 
 class ChangeTracker:
     _lock = threading.Lock()
-    _records: list[ChangeRecord] = []
+    _records: ClassVar[list[ChangeRecord]] = []
 
     @classmethod
     def reset(cls) -> None:
@@ -62,11 +63,7 @@ class ChangeTracker:
         event_name = os.getenv("GITHUB_EVENT_NAME") or "local"
         run_number = os.getenv("GITHUB_RUN_NUMBER") or ""
         run_opt = run_option or os.getenv("RUN_OPTION") or ""
-
-        if run_opt:
-            prefix = f"{job}({run_opt}) {event_name}"
-        else:
-            prefix = f"{job} {event_name}"
+        prefix = f"{job}({run_opt}) {event_name}" if run_opt else f"{job} {event_name}"
 
         if run_number:
             prefix = f"{prefix} #{run_number}"

@@ -18,20 +18,29 @@ Welcome to `ytm-dl`! This document provides architectural context, development w
 
 ## 2. Repository Structure
 
-```
 ytm-dl/
 ├── ytm-dl.py                     # Main CLI entrypoint and execution orchestrator
+├── scripts/                      # Developer and agent workflow automation
+│   ├── dev.py                   # Unified pre-flight CI check, lint, format, and test CLI
+│   ├── check_boundaries.py      # Branch boundary and secret leak enforcement
+│   └── format_pr_coverage.py    # Scoped PR coverage comment formatter
 ├── src/
 │   ├── api.py                   # ytmusicapi client wrapper, auth handling, API call dispatch
+│   ├── catalog.py               # Shared tabular catalog export engine
+│   ├── changes.py               # Runtime changes and step summary tracker
+│   ├── history_partition.py     # Partitioning history CSV into monthly archives
+│   ├── home_catalog.py          # Recommendations and home catalog extraction
 │   ├── mapping.py               # Marshmallow schemas, field mappings, timestamp/run_id enrichment
+│   ├── markdown.py              # GitHub-flavored Markdown and table helpers
+│   ├── meta.py                  # Metadata tracking, file statistics, step summaries, README generation
+│   ├── mood_mixes.py            # Mood and energy mix discovery engine
 │   ├── output.py                # Output manager, CSV/YAML writes, prepend orchestrator
 │   ├── prepend.py               # Sequence alignment & deduplication logic for prepending
-│   ├── history_partition.py     # Partitioning history CSV into monthly archives
-│   ├── meta.py                  # Metadata tracking, file statistics, step summaries, README generation
-│   ├── markdown.py              # GitHub-flavored Markdown and table helpers
 │   ├── reports/                 # AI listening reports & discovery radar engine
 │   │   ├── aggregator.py        # Telemetry aggregation & recommendation radar filtering
+│   │   ├── email_template.py    # Rich dark-mode HTML email template generator
 │   │   ├── generator.py         # Lightweight Gemini REST client (requests)
+│   │   ├── mailer.py            # Report mailer and webhook dispatcher
 │   │   ├── prompt.py            # Musicologist prompt engineering & deterministic fallback
 │   │   └── rotator.py           # Lazy-man cron cadence checker & archive rotation
 │   ├── util.py                  # File I/O, hash calculation, dict helpers
@@ -39,21 +48,26 @@ ytm-dl/
 │       ├── main.py
 │       └── requirements.txt
 ├── tests/                       # Pytest test suite
+│   ├── test_branch_boundaries.py
+│   ├── test_coverage_formatter.py
+│   ├── test_dev_runner.py
 │   ├── test_history_partition.py
 │   ├── test_mapping.py
 │   ├── test_prepend.py
 │   ├── test_report_aggregator.py
 │   ├── test_report_generator.py
 │   └── test_report_rotator.py
-├── appscript/                   # Google Apps Script for syncing output CSVs into Google Sheets
-│   ├── Code.js
-│   ├── Settings.js
-│   └── appsscript.json
-├── .github/workflows/
-│   └── run.yml                  # GitHub Actions workflow for scheduled and manual extraction
-├── pyproject.toml               # Project metadata, Ruff & Pytest configuration
+├── .githooks/                   # Git hooks preventing accidental direct pushes to main
+│   └── pre-push
+├── .github/
+│   ├── pull_request_template.md # PR quality and verification checklist
+│   └── workflows/
+│       ├── run.yml              # Scheduled and manual sync extraction
+│       ├── pr.yml               # Automated PR CI validation & coverage commenting
+│       └── guard-main.yml       # Branch boundary and PR commit auditor
+├── pyproject.toml               # Project metadata, Ruff, coverage, and Pytest configuration
 ├── requirements.txt             # Production dependencies
-├── requirements-dev.txt         # Development & testing dependencies
+├── requirements-dev.txt         # Development, coverage & testing dependencies
 └── .pre-commit-config.yaml      # Pre-commit hooks configuration
 ```
 
@@ -61,7 +75,47 @@ ytm-dl/
 
 ## 3. Development Setup & Commands
 
-### Virtual Environment
+### 3.1. Unified Developer & Agent CLI (`scripts/dev.py`)
+A single orchestrator CLI is provided for local developers and AI agents to ensure complete parity with GitHub Actions CI:
+
+```bash
+# Run complete pre-flight check (Branch boundaries -> Ruff lint -> Ruff format -> Pytest + Coverage -> Diff coverage gate)
+python scripts/dev.py check
+
+# Fast check (skips diff-cover against base branch)
+python scripts/dev.py check --fast
+
+# Auto-fix linting issues, import sorting, and formatting with Ruff
+python scripts/dev.py fix
+
+# Check linting and formatting without mutating files
+python scripts/dev.py lint
+
+# Run branch boundary audit (verifies no output data, artifacts, or secrets on main)
+python scripts/dev.py boundary
+
+# Run pytest test suite (supports all pytest flags like -k or specific files)
+python scripts/dev.py test
+python scripts/dev.py test -k test_prepend
+
+# Run full test suite with coverage analysis (exports tmp/coverage.md & tmp/coverage.xml)
+python scripts/dev.py cov
+```
+
+### 3.2. Git Pre-Push Hook (Safety Guard)
+To prevent accidental pushes to `main` (which should always be updated via Pull Requests):
+
+```bash
+# Configure local repository to use .githooks/
+git config core.hooksPath .githooks
+```
+
+In the event of an emergency hotfix, the hook can be bypassed:
+```bash
+ALLOW_MAIN_PUSH=1 git push origin main
+```
+
+### 3.3. Virtual Environment
 Always execute tests and scripts within the virtual environment:
 
 ```bash
@@ -74,36 +128,7 @@ source venv/bin/activate
 ./venv/bin/python ytm-dl.py frequent
 ```
 
-### Running Tests
-Run the full test suite using `pytest`:
-
-```bash
-./venv/bin/pytest
-```
-
-To run a specific test file or test case:
-```bash
-./venv/bin/pytest tests/test_history_partition.py
-./venv/bin/pytest tests/test_prepend.py -k "test_find_history_overlap"
-```
-
-### Linting & Formatting
-The codebase enforces strict linting and formatting via **Ruff**:
-- **Line length**: 100 characters
-- **Target Python**: Python 3.12+
-- **Selected Rules**: `E`, `W`, `F`, `I` (isort), `UP` (pyupgrade), `B` (flake8-bugbear)
-
-```bash
-# Check linting and formatting
-./venv/bin/ruff check .
-./venv/bin/ruff format --check .
-
-# Auto-fix lint issues and format files
-./venv/bin/ruff check --fix .
-./venv/bin/ruff format .
-```
-
-### Pre-commit Hooks
+### 3.4. Pre-commit Hooks
 ```bash
 ./venv/bin/pre-commit run --all-files
 ```
@@ -156,30 +181,49 @@ The codebase enforces strict linting and formatting via **Ruff**:
   - `python ytm-dl.py report` (checks lazy-man cadence)
   - `python ytm-dl.py report [daily|weekly|monthly|all]` (forces generation)
 
+### 4.7. Where to Make Changes
+
+| Task | Package File | Facade / Entry Point | Function / Section |
+|---|---|---|---|
+| **Add or update data schemas** | `src/mapping.py` | — | `SongSchema`, `HistorySchema`, `LikedSongSchema`, etc. |
+| **Modify API call or client auth** | `src/api.py` | `src/api.py` | `ApiMethod`, `get_auth_info`, `validate_auth` |
+| **Update history alignment & prepend** | `src/prepend.py` | `src/output.py` | `find_history_overlap`, `prepend_rows_for_file` |
+| **Modify monthly history partitioning** | `src/history_partition.py` | `src/history_partition.py` | `partition_history_csv` |
+| **Home feed & recommendation catalogs** | `src/home_catalog.py` | `ytm-dl.py` | `sync_home_catalogs`, `parse_home_item` |
+| **Mood and energy mix discovery** | `src/mood_mixes.py` | `ytm-dl.py` | `sync_all_mood_mixes` |
+| **AI report prompts & radar filtering** | `src/reports/prompt.py` & `src/reports/aggregator.py` | `src/reports/rotator.py` | `build_report_prompt`, `assemble_report_context` |
+| **Report HTML email rendering** | `src/reports/email_template.py` | `src/reports/mailer.py` | `markdown_to_email_html` |
+| **Report mailer & webhook dispatch** | `src/reports/mailer.py` | `ytm-dl.py report` | `send_report_email` |
+| **Branch boundary & secret protection** | `scripts/check_boundaries.py` | `scripts/dev.py` | `is_boundary_violation`, `main` |
+| **Developer CLI runner & pre-flight** | `scripts/dev.py` | `scripts/dev.py` | `cmd_check`, `cmd_fix`, `cmd_lint`, `cmd_test` |
+| **PR coverage formatting & sticky comments**| `scripts/format_pr_coverage.py` | `.github/workflows/pr.yml` | `generate_pr_comment`, `main` |
+| **PR CI workflows & commit auditing** | `.github/workflows/` | `pr.yml` & `guard-main.yml` | GitHub Actions steps |
+
 ---
 
-## 5. Coding Guidelines & Best Practices for Agents
+## 5. Agent Rules of Engagement & Best Practices
 
-1. **Test Coverage**:
-   - Any modifications to data transformation, schemas (`src/mapping.py`), prepending logic (`src/prepend.py`), or partitioning (`src/history_partition.py`) must be accompanied by comprehensive unit tests in `tests/`.
-   - Maintain 100% test suite passing rate (`./venv/bin/pytest`).
+1. **Preserve Branch Boundaries (Rule 1)**:
+   - **NEVER** commit `output/` files, runtime artifacts (`artifacts/`), or credentials (`browser.json`, `oauth.json`, `.env`) to `main`.
+   - `main-output` is the designated orphan data branch for synchronization exports.
+   - Guarded locally and in CI via `python scripts/check_boundaries.py`.
 
-2. **Code Style & Tooling**:
-   - Use Python 3.11+ syntax (e.g. type unions `X | Y`, built-in generics).
-   - Format with `ruff format` and ensure `ruff check .` passes without errors.
-   - Keep docstrings clean and accurate for core algorithms.
+2. **100% PR Diff Coverage Gate**:
+   - Any new or modified production code must be accompanied by unit tests in `tests/`.
+   - Pull Requests enforce a 100% diff coverage gate via `diff-cover`. Uncovered lines in PR diffs block merging.
 
-3. **Data Integrity & Schema Consistency**:
-   - When modifying schemas or column ordering, verify that column indexes in helper methods (e.g. `key_index`, `played_at_idx`) are dynamically resolved from `columns` where possible rather than hardcoded.
-   - Never remove or mutate primary keys without updating all dependent modules (`output.py`, `prepend.py`, `mapping.py`).
+3. **Pre-Flight CI Parity**:
+   - Before opening or proposing a PR, always execute `python scripts/dev.py check`.
+   - Use `python scripts/dev.py fix` to automatically correct formatting and linting.
 
-4. **Safety & Secrets**:
-   - **NEVER** commit `browser.json`, `oauth.json`, or `.env` files containing real API credentials.
-   - Sensitive tokens (`YTM_BROWSER_AUTH`, `YTM_OAUTH`, `YTM_GITHUB_TOKEN`, `YTM_SHEET_UPDATE_URL`) are injected via environment variables in GitHub Actions.
+4. **Data Integrity & Schema Consistency**:
+   - When modifying schemas or column ordering in `src/mapping.py`, verify dynamic column resolution (`key_index`) in `output.py` and `prepend.py`.
+   - Never alter primary keys without updating dependent modules.
 
-5. **Branching Model Awareness**:
-   - `main`: Application codebase, configuration, tests, workflows.
-   - `main-output`: Automated target branch containing exported CSV/YAML datasets in `output/`.
+5. **Safety & Secrets**:
+   - **NEVER** commit real API credentials or session tokens.
+   - Sensitive tokens are injected exclusively via environment variables in GitHub Actions (`YTM_BROWSER_AUTH`, `YTM_OAUTH`, `YTM_GITHUB_TOKEN`).
 
 6. **Git Commit & Push Authorization**:
-   - **NEVER** run `git commit` or `git push` to `main` (or any remote branch) without the user explicitly stating to commit/push in their prompt. Always propose changes, run validations, and wait for explicit confirmation.
+   - **NEVER** run `git commit` or `git push` to `main` (or any remote branch) without the user explicitly requesting a commit/push in their prompt.
+   - Always propose changes, run validations via `scripts/dev.py check`, and await explicit confirmation.

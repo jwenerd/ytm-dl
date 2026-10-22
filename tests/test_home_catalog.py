@@ -297,3 +297,118 @@ def test_sync_all_home_shelves_orchestration(tmp_path, monkeypatch):
     assert (tmp_path / "home" / "quick_picks.csv").exists()
     assert (tmp_path / "meta" / "home" / "quick_picks.yaml").exists()
     assert not (tmp_path / "home" / "quick_picks.yaml").exists()
+
+
+def test_parse_home_item_branches(monkeypatch):
+    from src import home_catalog
+    from src.home_catalog import parse_home_item
+
+    # 1. Album branch
+    monkeypatch.setattr(
+        home_catalog, "parse_album", lambda d: {"title": "Album 1", "type": "Album"}
+    )
+    item_album = {
+        "musicTwoRowItemRenderer": {
+            "title": {
+                "runs": [
+                    {
+                        "text": "Album Title",
+                        "navigationEndpoint": {
+                            "browseEndpoint": {
+                                "browseEndpointContextSupportedConfigs": {
+                                    "browseEndpointContextMusicConfig": {
+                                        "pageType": "MUSIC_PAGE_TYPE_ALBUM"
+                                    }
+                                }
+                            }
+                        },
+                    }
+                ]
+            }
+        }
+    }
+    assert parse_home_item(item_album) == {"title": "Album 1", "type": "Album"}
+
+    # 2. Artist branch
+    monkeypatch.setattr(
+        home_catalog,
+        "parse_related_artist",
+        lambda d: {"title": "Artist 1", "type": "Artist"},
+    )
+    item_artist = {
+        "musicTwoRowItemRenderer": {
+            "title": {
+                "runs": [
+                    {
+                        "navigationEndpoint": {
+                            "browseEndpoint": {
+                                "browseEndpointContextSupportedConfigs": {
+                                    "browseEndpointContextMusicConfig": {
+                                        "pageType": "MUSIC_PAGE_TYPE_ARTIST"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+    assert parse_home_item(item_artist) == {"title": "Artist 1", "type": "Artist"}
+
+    # 3. Playlist branch
+    monkeypatch.setattr(
+        home_catalog, "parse_playlist", lambda d: {"title": "Playlist 1", "type": "Playlist"}
+    )
+    item_playlist = {
+        "musicTwoRowItemRenderer": {
+            "title": {
+                "runs": [
+                    {
+                        "navigationEndpoint": {
+                            "browseEndpoint": {
+                                "browseEndpointContextSupportedConfigs": {
+                                    "browseEndpointContextMusicConfig": {
+                                        "pageType": "MUSIC_PAGE_TYPE_PLAYLIST"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+    assert parse_home_item(item_playlist) == {"title": "Playlist 1", "type": "Playlist"}
+
+    # 4. Podcast branch
+    monkeypatch.setattr(
+        home_catalog, "parse_podcast", lambda d: {"title": "Podcast 1", "type": "Podcast"}
+    )
+    item_podcast = {
+        "musicTwoRowItemRenderer": {
+            "title": {
+                "runs": [
+                    {
+                        "navigationEndpoint": {
+                            "browseEndpoint": {
+                                "browseEndpointContextSupportedConfigs": {
+                                    "browseEndpointContextMusicConfig": {
+                                        "pageType": "MUSIC_PAGE_TYPE_PODCAST_SHOW_DETAIL_PAGE"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+    assert parse_home_item(item_podcast) == {"title": "Podcast 1", "type": "Podcast"}
+
+    # 5. Flat song branch (musicResponsiveListItemRenderer)
+    monkeypatch.setattr(
+        home_catalog, "parse_song_flat", lambda d: {"title": "Flat Song", "type": "Song"}
+    )
+    item_flat = {"musicResponsiveListItemRenderer": {"title": "Flat Song"}}
+    assert parse_home_item(item_flat) == {"title": "Flat Song", "type": "Song"}

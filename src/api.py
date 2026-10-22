@@ -140,7 +140,7 @@ def report_auth_failure(error: str | Exception) -> None:
 
 def records_from_response(response):
     meta = {}
-    if isinstance(response, dict) and "tracks" in response.keys():
+    if isinstance(response, dict) and "tracks" in response:
         records = response["tracks"]
         del response["tracks"]
         meta["Tracks"] = response

@@ -125,3 +125,15 @@ def test_update_search_suggestions_logs(tmp_path, monkeypatch):
         assert res is None
         assert "🔤 Search Suggestions: ☕ Up to date" in mock_stdout.getvalue()
         assert len(ChangeTracker.get_changes()) == 1  # Unchanged, no new record
+
+
+def test_get_words_from_suggestions(monkeypatch):
+    monkeypatch.setattr(
+        "src.output.read_search_suggestions",
+        lambda: {"a": ["apple pie", "apricot"], "b": ["banana"]},
+    )
+    from src.output import get_words_from_suggestions
+
+    words = get_words_from_suggestions(size_gt=3)
+    assert "apple" in words
+    assert "banana" in words
