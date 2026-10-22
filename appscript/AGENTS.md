@@ -99,7 +99,7 @@ The Web App handles incoming `POST` requests according to payload content:
   {
     "action": "send_email",
     "cadence": "daily",
-    "subject": "🎧 Daily Listening Log",
+    "subject": "Daily Listening Log",
     "html_body": "<!DOCTYPE html>...",
     "recipient": "user@example.com"
   }

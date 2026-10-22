@@ -103,7 +103,7 @@ def test_generate_report_fallback_when_no_api_key(monkeypatch):
     monkeypatch.setattr("src.reports.generator.get_google_ai_api_key", lambda: None)
     ctx = sample_context("daily")
     report = generate_report(ctx, api_key=None)
-    assert "# 🎧 Daily Listening Log" in report
+    assert "# Daily Listening Log" in report
     assert "GREEN" in report
 
 
@@ -115,9 +115,7 @@ def test_generate_report_success(mock_post):
             {
                 "content": {
                     "parts": [
-                        {
-                            "text": "```markdown\n# 🎧 Daily Listening Log: 2026-10-18\nAI content\n```"
-                        }
+                        {"text": "```markdown\n# Daily Listening Log: 2026-10-18\nAI content\n```"}
                     ]
                 }
             }
@@ -128,7 +126,7 @@ def test_generate_report_success(mock_post):
 
     ctx = sample_context("daily")
     report = generate_report(ctx, api_key="valid-key")
-    assert "# 🎧 Daily Listening Log: 2026-10-18" in report
+    assert "# Daily Listening Log: 2026-10-18" in report
     assert "AI content" in report
     mock_post.assert_called_once()
 
@@ -139,5 +137,5 @@ def test_generate_report_handles_request_exception(mock_post):
     ctx = sample_context("daily")
     report = generate_report(ctx, api_key="valid-key")
     # Should fall back cleanly without raising
-    assert "# 🎧 Daily Listening Log" in report
+    assert "# Daily Listening Log" in report
     assert "Grateful Dead" in report

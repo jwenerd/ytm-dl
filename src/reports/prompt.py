@@ -47,7 +47,7 @@ Instructions for the report structure:
         )
         prompt += f"""
 Produce a report in the following Markdown structure:
-# 🎧 Daily Listening Log: {period_label}
+# Daily Listening Log: {period_label}
 *Recorded via ytm-dl | Cadence: Daily Observation*
 
 ## 1. Session Telemetry
@@ -82,7 +82,7 @@ Produce a report in the following Markdown structure:
         )
         prompt += f"""
 Produce a report in the following Markdown structure:
-# 📈 Weekly Sonic Digest: {period_label}
+# Weekly Sonic Digest: {period_label}
 
 ## 1. Macro Analysis
 - Cumulative Volume: {telemetry["total_tracks"]} plays across {telemetry["total_duration_display"]}
@@ -120,7 +120,7 @@ Produce a report in the following Markdown structure:
         likes_count = len(telemetry.get("new_likes", []))
         prompt += f"""
 Produce a report in the following Markdown structure:
-# 📜 Monthly Retrospective: {period_label}
+# Monthly Retrospective: {period_label}
 
 ## 1. Month in Review
 - Total Volume: {telemetry["total_tracks"]} plays ({telemetry["total_duration_display"]})
@@ -161,7 +161,7 @@ def generate_fallback_report(context: dict) -> str:
 
     lines = []
     if cadence == "daily":
-        lines.append(f"# 🎧 Daily Listening Log: {period_label}")
+        lines.append(f"# Daily Listening Log: {period_label}")
         lines.append("*Recorded via ytm-dl | Cadence: Daily Observation*\n")
         lines.append("## 1. Session Telemetry")
         lines.append(f"- **Total Tracks Observed**: {t['total_tracks']}")
@@ -230,7 +230,7 @@ def generate_fallback_report(context: dict) -> str:
             lines.append("No fresh shelf suggestions detected for this period.")
 
     elif cadence == "weekly":
-        lines.append(f"# 📈 Weekly Sonic Digest: {period_label}\n")
+        lines.append(f"# Weekly Sonic Digest: {period_label}\n")
         lines.append("## 1. Macro Analysis")
         lines.append(
             f"- **Cumulative Volume**: {t['total_tracks']} plays ({t['total_duration_display']})"
@@ -295,7 +295,7 @@ def generate_fallback_report(context: dict) -> str:
             lines.append("No active recommendations captured.")
 
     elif cadence == "monthly":
-        lines.append(f"# 📜 Monthly Retrospective: {period_label}\n")
+        lines.append(f"# Monthly Retrospective: {period_label}\n")
         lines.append("## 1. Month in Review")
         lines.append(f"- **Total Plays**: {t['total_tracks']} ({t['total_duration_display']})")
         lines.append(

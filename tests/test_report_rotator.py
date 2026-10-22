@@ -70,7 +70,7 @@ def test_rotate_and_write_report(tmp_path):
     now_dt = datetime(2026, 10, 19, 10, 0, 0, tzinfo=UTC)
     meta = {}
 
-    content = "# 🎧 Daily Listening Log: 2026-10-18\nTest Content"
+    content = "# Daily Listening Log: 2026-10-18\nTest Content"
     rotate_and_write_report(
         output_dir=output_dir,
         cadence="daily",

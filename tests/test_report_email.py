@@ -49,8 +49,13 @@ Playback centered predominantly on harp jazz and instrumental soul.
 
     # Verify key structure
     assert "<!DOCTYPE html>" in html
+    assert "<title>Daily Listening Log: 2026-10-20</title>" in html
     assert "Daily Listening Log: 2026-10-20" in html
     assert "YTM-DL LISTENING LOG" in html
+    # Ensure emojis are stripped from the H1 header
+    h1_content = html.split("<h1")[1].split("</h1>")[0]
+    assert "🎧" not in h1_content
+    assert "Daily Listening Log: 2026-10-20" in h1_content
 
     # Verify stat cards
     assert "TRACKS" in html
@@ -74,7 +79,7 @@ Playback centered predominantly on harp jazz and instrumental soul.
 
 
 def test_markdown_to_email_html_fallback_stats_extraction():
-    sample_md = """# 🎧 Daily Listening Log: 2026-10-19
+    sample_md = """# Daily Listening Log: 2026-10-19
 *Recorded via ytm-dl | Cadence: Daily Observation*
 
 ## 1. Session Telemetry
@@ -89,6 +94,7 @@ Some notes here.
     # No context provided: extracts from markdown directly
     html = markdown_to_email_html(sample_md, context=None)
 
+    assert "<title>Daily Listening Log: 2026-10-19</title>" in html
     assert "15" in html
     assert "48m" in html
     assert "5" in html
