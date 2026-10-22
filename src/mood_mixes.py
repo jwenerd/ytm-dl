@@ -27,11 +27,7 @@ CORE_HOME_MIX_TITLES = {
 def is_supermix_or_core_mix(title: str) -> bool:
     """Returns True if the title belongs to a Supermix or Core Home Mix."""
     cleaned = title.strip().lower()
-    if "supermix" in cleaned:
-        return True
-    if cleaned in CORE_HOME_MIX_TITLES:
-        return True
-    return False
+    return "supermix" in cleaned or cleaned in CORE_HOME_MIX_TITLES
 
 
 def discover_mood_chips(client) -> list[tuple[str, str]]:
@@ -279,7 +275,7 @@ def fetch_and_merge_mix(
     csv_path, yaml_path = get_catalog_paths(output_base_dir, mix_slug, meta_base_dir)
 
     existing_rows, existing_lookup = read_existing_catalog(csv_path)
-    merged_tracks, new_count, updated_count = merge_catalog_tracks(
+    merged_tracks, new_count, _ = merge_catalog_tracks(
         existing_rows, existing_lookup, raw_tracks, captured_at
     )
 

@@ -1,0 +1,137 @@
+name: pr-ci
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    name: Lint, Test & Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Cache Python Virtualenv
+        id: cache-venv
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-3.12-${{ hashFiles('requirements.txt', 'requirements-dev.txt') }}
+
+      - name: Install dependencies (on cache miss)
+        if: steps.cache-venv.outputs.cache-hit != 'true'
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install --upgrade pip
+          .venv/bin/pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Add Virtualenv to PATH
+        run: echo "$GITHUB_WORKSPACE/.venv/bin" >> $GITHUB_PATH
+
+      - name: Verify Branch Boundaries (No Data or Secrets on Main)
+        run: |
+          echo "::group::Branch Boundary Audit"
+          python scripts/check_boundaries.py --base-ref "${{ github.base_ref || 'main' }}"
+          echo "::endgroup::"
+
+      - name: Lint with Ruff
+        run: |
+          echo "::group::Ruff Linter Check"
+          ruff check .
+          echo "::endgroup::"
+
+      - name: Check Formatting with Ruff
+        run: |
+          echo "::group::Ruff Format Check"
+          ruff format --check .
+          echo "::endgroup::"
+
+      - name: Run Test Suite & Generate Coverage
+        id: test
+        run: |
+          mkdir -p tmp
+          echo "::group::Pytest & Coverage Execution"
+          pytest --cov=src --cov=scripts --cov-report=term-missing --cov-report=markdown:tmp/coverage.md --cov-report=xml:tmp/coverage.xml -v
+          echo "::endgroup::"
+
+      - name: Enforce PR Diff Test Coverage (100% on PR Changes)
+        run: |
+          echo "::group::Diff Coverage Gate"
+          diff-cover tmp/coverage.xml --compare-branch "origin/${{ github.base_ref || 'main' }}" --fail-under 100 --format markdown:tmp/diff_coverage.md
+          echo "::endgroup::"
+
+      - name: Format Scoped PR Coverage Report
+        if: always()
+        run: |
+          python scripts/format_pr_coverage.py \
+            --coverage-md tmp/coverage.md \
+            --diff-cover-md tmp/diff_coverage.md \
+            --base-ref "${{ github.base_ref || 'main' }}" \
+            --output tmp/pr_comment.md
+
+      - name: Publish Coverage to Step Summary
+        if: always()
+        run: |
+          if [ -f tmp/pr_comment.md ]; then
+            cat tmp/pr_comment.md >> $GITHUB_STEP_SUMMARY
+          elif [ -f tmp/coverage.md ]; then
+            cat tmp/coverage.md >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Agent Remediation Instructions
+        if: failure()
+        run: |
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 💡 Agent Remediation Steps" >> $GITHUB_STEP_SUMMARY
+          echo "- **Unified Pre-flight Check:** Run \`python scripts/dev.py check\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Auto-Fix Formatting & Lint:** Run \`python scripts/dev.py fix\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Failing Tests:** Run \`python scripts/dev.py test -v --tb=short\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Missing Test Coverage:** Run \`python scripts/dev.py cov\`" >> $GITHUB_STEP_SUMMARY
+
+      - name: Post or Update Sticky PR Comment
+        if: always() && github.event.pull_request.number
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ ! -f tmp/pr_comment.md ]; then
+            echo "No PR comment file found, skipping PR comment."
+            exit 0
+          fi
+
+          COMMENT_HEADER="<!-- pr-coverage-report -->"
+          COMMENT_BODY=$(cat tmp/pr_comment.md)
+
+          # Find existing comment with the header tag
+          EXISTING_COMMENT_ID=$(gh api "repos/${REPO}/issues/${PR_NUMBER}/comments" \
+            --jq ".[] | select(.body | contains(\"${COMMENT_HEADER}\")) | .id" | head -n 1)
+
+          if [ -n "$EXISTING_COMMENT_ID" ]; then
+            echo "Updating existing PR comment #$EXISTING_COMMENT_ID..."
+            gh api -X PATCH "repos/${REPO}/issues/comments/${EXISTING_COMMENT_ID}" \
+              -f body="$COMMENT_BODY" > /dev/null
+            echo "Updated comment."
+          else
+            echo "Creating new PR comment..."
+            gh api "repos/${REPO}/issues/${PR_NUMBER}/comments" \
+              -f body="$COMMENT_BODY" > /dev/null
+            echo "Created comment."
+          fi

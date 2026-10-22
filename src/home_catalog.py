@@ -43,15 +43,14 @@ def parse_home_item(result: dict) -> dict | None:
             if page_type is None:
                 if nav(data, NAVIGATION_WATCH_PLAYLIST_ID, True) is not None:
                     return parse_watch_playlist(data)
-                else:
-                    return parse_song(data)
-            elif page_type in ["MUSIC_PAGE_TYPE_ALBUM", "MUSIC_PAGE_TYPE_AUDIOBOOK"]:
+                return parse_song(data)
+            if page_type in ["MUSIC_PAGE_TYPE_ALBUM", "MUSIC_PAGE_TYPE_AUDIOBOOK"]:
                 return parse_album(data)
-            elif page_type in ["MUSIC_PAGE_TYPE_ARTIST", "MUSIC_PAGE_TYPE_USER_CHANNEL"]:
+            if page_type in ["MUSIC_PAGE_TYPE_ARTIST", "MUSIC_PAGE_TYPE_USER_CHANNEL"]:
                 return parse_related_artist(data)
-            elif page_type == "MUSIC_PAGE_TYPE_PLAYLIST":
+            if page_type == "MUSIC_PAGE_TYPE_PLAYLIST":
                 return parse_playlist(data)
-            elif page_type == "MUSIC_PAGE_TYPE_PODCAST_SHOW_DETAIL_PAGE":
+            if page_type == "MUSIC_PAGE_TYPE_PODCAST_SHOW_DETAIL_PAGE":
                 return parse_podcast(data)
         except Exception:
             pass
@@ -77,7 +76,7 @@ def parse_home_item(result: dict) -> dict | None:
             "browseId": browse_ep.get("browseId"),
         }
 
-    elif data := nav(result, [MRLIR], True):
+    if data := nav(result, [MRLIR], True):
         try:
             return parse_song_flat(data)
         except Exception:

@@ -193,9 +193,9 @@ def sync_github_secret(repo_root: Path) -> bool:
     if res.returncode == 0:
         print("✓ Updated GitHub secret 'YTM_BROWSER_AUTH'")
         return True
-    else:
-        print(f"Failed to update GitHub secret: {res.stderr}", file=sys.stderr)
-        return False
+
+    print(f"Failed to update GitHub secret: {res.stderr}", file=sys.stderr)
+    return False
 
 
 def trigger_workflow_run(repo_root: Path, run_option: str = "all") -> bool:
@@ -205,9 +205,9 @@ def trigger_workflow_run(repo_root: Path, run_option: str = "all") -> bool:
     if res.returncode == 0:
         print(f"✓ Triggered GitHub Actions workflow run.yml (run_option: {run_option})")
         return True
-    else:
-        print(f"Failed to trigger workflow: {res.stderr}", file=sys.stderr)
-        return False
+
+    print(f"Failed to trigger workflow: {res.stderr}", file=sys.stderr)
+    return False
 
 
 def main() -> int:

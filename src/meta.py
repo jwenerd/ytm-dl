@@ -1,6 +1,7 @@
 import os
 import subprocess
 from glob import glob
+from typing import ClassVar
 
 import yaml
 
@@ -159,7 +160,7 @@ def write_meta(updated=False, run_option=""):
 
 
 class MetaStore:
-    instances = {}
+    instances: ClassVar[dict] = {}
 
     @staticmethod
     def get(name):

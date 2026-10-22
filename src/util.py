@@ -87,8 +87,7 @@ def file_hash(file):
 
     with open(file) as f:
         data = f.read()
-        hash = hashlib.sha256(data.encode()).hexdigest()
-    return hash
+    return hashlib.sha256(data.encode()).hexdigest()
 
 
 def write_file(file, content):
@@ -104,10 +103,9 @@ def write_output_yaml(file, records):
 def read_output_yaml(file):
     try:
         with open(output_path(file)) as f:
-            data = yaml.safe_load(f)
-        return data
+            return yaml.safe_load(f)
     except OSError:
-        return
+        return None
 
 
 def write_output_file(file, content):
@@ -133,5 +131,4 @@ def deep_sort_keys(d):
     if isinstance(d, dict):
         sorted_keys = sorted(d.keys())
         return {key: deep_sort_keys(d[key]) for key in sorted_keys}
-    else:
-        return d
+    return d

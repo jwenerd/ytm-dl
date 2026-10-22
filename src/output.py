@@ -77,7 +77,7 @@ class Output:
     def write_csv(self):
         with open(self.csv_file_with_path, "w", newline="") as csvfile:
             writer = csv.writer(csvfile, delimiter=",", quoting=csv.QUOTE_MINIMAL)
-            writer.writerows([self.mapping.columns] + self.rows)
+            writer.writerows([self.mapping.columns, *self.rows])
 
     def prepend_to_csv(self):
         # first copy the existing csv
@@ -198,8 +198,7 @@ def get_words_from_suggestions(size_gt=3):
     data = read_search_suggestions()
     words = [" ".join(i).split() for i in list(data.values())]
     words = [w for word_list in words for w in word_list]
-    words = [word for word in set(words) if len(word) > size_gt]
-    return words
+    return [word for word in set(words) if len(word) > size_gt]
 
 
 def update_search_suggestions(search_results):
@@ -225,6 +224,6 @@ def update_search_suggestions(search_results):
             log_message=log,
         )
         return "search/suggest_by_letter"
-    else:
-        print(f"{emoji} {label}: ☕ Up to date")
-        return None
+
+    print(f"{emoji} {label}: ☕ Up to date")
+    return None

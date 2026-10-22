@@ -40,13 +40,11 @@ def _format_inline(text: str) -> str:
     )
 
     # Links: [text](url)
-    out = re.sub(
+    return re.sub(
         r"\[([^\]]+)\]\((https?://[^\)]+)\)",
         r'<a href="\2" style="color: #58a6ff; text-decoration: none; border-bottom: 1px dotted #58a6ff;">\1</a>',
         out,
     )
-
-    return out
 
 
 def _render_stats_grid(telemetry: dict[str, Any]) -> str:
@@ -80,14 +78,13 @@ def _render_stats_grid(telemetry: dict[str, Any]) -> str:
             </td>"""
         )
 
-    grid_html = f"""
+    return f"""
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 24px; border-collapse: separate;">
       <tr>
         {"".join(card_tds)}
       </tr>
     </table>
     """
-    return grid_html
 
 
 def _parse_table(lines: list[str]) -> str:
@@ -199,7 +196,7 @@ def markdown_to_email_html(md_content: str, context: dict[str, Any] | None = Non
             flush_list()
             table_buffer.append(stripped)
             continue
-        elif table_buffer:
+        if table_buffer:
             flush_table()
 
         # List items
@@ -208,7 +205,7 @@ def markdown_to_email_html(md_content: str, context: dict[str, Any] | None = Non
             # If item contains catalog anchor or telemetry bullets in Session Telemetry, skip if already handled
             list_buffer.append(item_text)
             continue
-        elif list_buffer:
+        if list_buffer:
             flush_list()
 
         # Headings
@@ -241,7 +238,7 @@ def markdown_to_email_html(md_content: str, context: dict[str, Any] | None = Non
 
     body_content = "".join(html_parts)
 
-    full_html = f"""<!DOCTYPE html>
+    return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -300,7 +297,6 @@ def markdown_to_email_html(md_content: str, context: dict[str, Any] | None = Non
 </body>
 </html>
 """
-    return full_html
 
 
 def _extract_telemetry_from_lines(lines: list[str]) -> dict[str, Any]:

@@ -20,12 +20,12 @@ class ExtractNameStr(fields.String):
         key = "name"
         if isinstance(value, list):
             value = self._join_list_value(value, key)
-        if isinstance(value, dict) and key in value.keys():
+        if isinstance(value, dict) and key in value:
             value = value[key]
         return super()._serialize(value, attr, data, **kwargs)
 
     def _join_list_value(self, values, key="name"):
-        plucked = sorted(set(map(lambda t: t[key], values)))
+        plucked = sorted({t[key] for t in values})
         return ", ".join(plucked)
 
 
@@ -43,7 +43,7 @@ class SongSchema(BaseSchema):
     def keys(self):
         keys = super().keys
         keys.remove("videoId")
-        return keys + ["videoId"]
+        return [*keys, "videoId"]
 
 
 class HistorySchema(SongSchema):
@@ -381,9 +381,9 @@ class Mapping:
         return len(self.columns) - 1
 
     def _find_schema(self) -> BaseSchema:
-        schema = SCHEMA_MAPPING.get(self.file, None)
+        schema = SCHEMA_MAPPING.get(self.file)
         if not schema:
-            key = [k for k in SCHEMA_MAPPING.keys() if self.file.endswith(k)]
+            key = [k for k in SCHEMA_MAPPING if self.file.endswith(k)]
             if key:
                 schema = SCHEMA_MAPPING[key[0]]
         if not schema:
