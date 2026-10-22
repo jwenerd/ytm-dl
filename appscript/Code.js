@@ -108,7 +108,8 @@ function dispatchEmailFromPayload(body, params) {
   }
 
   const titleMatch = htmlBody.match(/<title>([^<]+)<\/title>/i);
-  const subject = (body && body.subject) || (titleMatch ? titleMatch[1] : "🎧 Daily Listening Log");
+  let subject = (body && body.subject) || (titleMatch ? titleMatch[1] : "Daily Listening Log");
+  subject = subject.replace(/^[\s\p{Extended_Pictographic}\u2600-\u27bf\uFE0F]+/u, "").trim();
   const plainText = "Your daily listening log is ready. Please view this message in an HTML-compatible email client.";
 
   GmailApp.sendEmail(recipient, subject, plainText, {
@@ -144,12 +145,12 @@ function sendDailyReportEmail(options) {
 
 function testSendDailyEmail() {
   const sampleHtml = `<!DOCTYPE html><html><body style="background:#0d1117;color:#f0f6fc;font-family:sans-serif;padding:20px;">
-    <h2>🎧 YTM-DL Test Dispatch</h2>
+    <h2>YTM-DL Test Dispatch</h2>
     <p>This is an automated test verifying end-to-end Gmail dispatch from Google Apps Script.</p>
   </body></html>`;
 
   const result = dispatchEmailFromPayload({
-    subject: "🎧 YTM-DL Test Dispatch",
+    subject: "YTM-DL Test Dispatch",
     html_body: sampleHtml
   });
   console.log("testSendDailyEmail result:", result);

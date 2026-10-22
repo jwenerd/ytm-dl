@@ -51,8 +51,14 @@ class ReportMailer:
             if stripped.startswith("# "):
                 title = stripped[2:].strip()
                 # Clean markdown characters from title if any
-                return re.sub(r"[*_`]", "", title)
-        return f"🎧 {self.cadence.capitalize()} Listening Log"
+                clean_title = re.sub(r"[*_`]", "", title)
+                # Strip emojis and leading non-alphanumeric characters
+                clean_title = re.sub(
+                    r"[\U00010000-\U0010ffff\u2600-\u27bf\ufe0f]+", "", clean_title
+                )
+                clean_title = re.sub(r"^[\W_]+", "", clean_title).strip()
+                return clean_title or f"{self.cadence.capitalize()} Listening Log"
+        return f"{self.cadence.capitalize()} Listening Log"
 
     def render_html(self, save_preview: bool = True) -> tuple[str, str]:
         """
@@ -112,7 +118,7 @@ class ReportMailer:
         if recipient:
             payload["recipient"] = recipient
 
-        headers = {"Content-Type": "application/json"}
+        headers = {"Content-Type": "application/json; charset=utf-8"}
         response = requests.post(
             url,
             data=json.dumps(payload),

@@ -170,7 +170,9 @@ def markdown_to_email_html(md_content: str, context: dict[str, Any] | None = Non
         # Capture title
         if stripped.startswith("# ") and not date_str:
             title_text = stripped[2:].strip()
-            title = title_text
+            clean_title = re.sub(r"[\U00010000-\U0010ffff\u2600-\u27bf\ufe0f]+", "", title_text)
+            clean_title = re.sub(r"^[\W_]+", "", clean_title).strip()
+            title = clean_title or title_text
             # Try to grab date
             date_match = re.search(r"\d{4}-\d{2}-\d{2}", title_text)
             if date_match:
