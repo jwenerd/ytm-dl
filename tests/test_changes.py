@@ -1,6 +1,5 @@
 import concurrent.futures
 import os
-from unittest.mock import patch
 
 from src.changes import ChangeRecord, ChangeTracker
 
@@ -110,20 +109,22 @@ def test_format_commit_message_many_items(monkeypatch):
     assert "  - [covers-and-remixes] +10 new" in lines
 
 
-def test_write_commit_message_file(tmp_path):
+def test_write_commit_message_file(tmp_path, monkeypatch):
     target_file = str(tmp_path / "commit_msg.txt")
     ChangeTracker.reset()
     ChangeTracker.record("❤️", "Liked Songs", 1, "❤️ Liked Songs: ✨ +1 added")
 
-    with patch.dict(
-        os.environ, {"GITHUB_JOB": "run", "GITHUB_EVENT_NAME": "test", "RUN_OPTION": "frequent"}
-    ):
-        res = ChangeTracker.write_commit_message(filepath=target_file)
-        assert os.path.exists(target_file)
-        with open(target_file) as f:
-            content = f.read()
-        assert content == res
-        assert "run(frequent) test: ❤️ Liked Songs (+1)" in content
+    monkeypatch.setenv("GITHUB_JOB", "run")
+    monkeypatch.setenv("GITHUB_EVENT_NAME", "test")
+    monkeypatch.setenv("RUN_OPTION", "frequent")
+    monkeypatch.delenv("GITHUB_RUN_NUMBER", raising=False)
+
+    res = ChangeTracker.write_commit_message(filepath=target_file)
+    assert os.path.exists(target_file)
+    with open(target_file) as f:
+        content = f.read()
+    assert content == res
+    assert "run(frequent) test: ❤️ Liked Songs (+1)" in content
 
 
 def test_concurrent_recording():
