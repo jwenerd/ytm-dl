@@ -4,9 +4,9 @@ slug: trending_songs_for_you
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 327
-new_items_latest_run: 11
+total_items: 339
+new_items_latest_run: 12
 latest_batch_size: 20
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-10-20T08:34:47Z'
-run_id: gh-6962
+last_captured: '2026-10-22T08:38:47Z'
+run_id: gh-6972
