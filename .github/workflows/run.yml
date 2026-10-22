@@ -177,4 +177,15 @@ jobs:
           YTM_SHEET_UPDATE_URL: ${{ secrets.YTM_SHEET_UPDATE_URL }}
         run: |
           true || 🫡
-          curl -s -L -d '' $YTM_SHEET_UPDATE_URL
+          curl -s -L -d '' "$YTM_SHEET_UPDATE_URL"
+      - name: Dispatch Daily Report Email ✉️
+        id: dispatch-email
+        if: ${{ steps.run.outputs.DOCOMMIT == '1' }}
+        env:
+          YTM_SHEET_UPDATE_URL: ${{ secrets.YTM_SHEET_UPDATE_URL }}
+        run: |
+          if [ -f "tmp/reports_generated.txt" ] && grep -q "daily" "tmp/reports_generated.txt"; then
+            echo "::group::Dispatch Daily Report Email"
+            python ytm-dl.py mail daily
+            echo "::endgroup::"
+          fi

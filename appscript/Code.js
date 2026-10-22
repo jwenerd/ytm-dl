@@ -6,18 +6,51 @@ function doGet() {
   return ContentService.createTextOutput('🤠');
 }
 
-function authorized(request) {
-  const passkey = request.parameter.passkey;
-  return passkey === PASSKEY;
+function authorized(request, body) {
+  const queryPasskey = request && request.parameter && request.parameter.passkey;
+  const bodyPasskey = body && body.passkey;
+  return queryPasskey === PASSKEY || bodyPasskey === PASSKEY;
 }
 
 function doPost(request) {
-  if (! authorized(request) ) {
+  let body = {};
+  if (request && request.postData && request.postData.contents) {
+    try {
+      body = JSON.parse(request.postData.contents);
+    } catch (e) {
+      console.warn("Could not parse JSON postData: " + e);
+    }
+  }
+
+  if (! authorized(request, body) ) {
     return NOT_FOUND;
   }
-  const result = saveCSVs();
+
+  // 1. Direct email dispatch from ReportMailer (separate process)
+  if (body.action === "send_email" || body.html_body) {
+    const emailResult = dispatchEmailFromPayload(body, request.parameter);
+    return ContentService
+      .createTextOutput(JSON.stringify(emailResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // 2. Standard CSV synchronization
+  const output = {
+    sheets: saveCSVs()
+  };
+
+  // Optional trigger via query parameter
+  if (request && request.parameter && request.parameter.report === "daily") {
+    try {
+      output.email = sendDailyReportEmail();
+    } catch (err) {
+      console.error("Failed to dispatch daily report email: " + err);
+      output.email_error = String(err);
+    }
+  }
+
   return ContentService
-    .createTextOutput(JSON.stringify(result))
+    .createTextOutput(JSON.stringify(output))
     .setMimeType(ContentService.MimeType.JSON);
 }
 
@@ -27,6 +60,63 @@ function saveCSVs() {
   });
   console.log({ results });
   return results;
+}
+
+function dispatchEmailFromPayload(body, params) {
+  const recipient = (body && body.recipient) || (params && params.recipient) || Session.getEffectiveUser().getEmail();
+  const htmlBody = (body && body.html_body) || "";
+
+  if (!htmlBody) {
+    return { status: "error", message: "No html_body provided in request" };
+  }
+
+  const titleMatch = htmlBody.match(/<title>([^<]+)<\/title>/i);
+  const subject = (body && body.subject) || (titleMatch ? titleMatch[1] : "🎧 Daily Listening Log");
+  const plainText = "Your daily listening log is ready. Please view this message in an HTML-compatible email client.";
+
+  GmailApp.sendEmail(recipient, subject, plainText, {
+    htmlBody: htmlBody,
+    name: "ytm-dl Listening Log"
+  });
+
+  const successInfo = {
+    status: "success",
+    recipient: recipient,
+    subject: subject,
+    bytes: htmlBody.length
+  };
+  console.log("Email successfully dispatched via GmailApp:", successInfo);
+  return successInfo;
+}
+
+function sendDailyReportEmail(options) {
+  const recipient = (options && options.recipient) || Session.getEffectiveUser().getEmail();
+  const url = `https://api.github.com/repos/${REPO}/contents/output/reports/daily.html?ref=main-output`;
+
+  let htmlBody = "";
+  try {
+    htmlBody = __gh_req(url);
+  } catch (err) {
+    const msg = `Could not fetch daily.html from GitHub repository: ${err}`;
+    console.error(msg);
+    return { status: "error", message: msg };
+  }
+
+  return dispatchEmailFromPayload({ html_body: htmlBody, recipient: recipient });
+}
+
+function testSendDailyEmail() {
+  const sampleHtml = `<!DOCTYPE html><html><body style="background:#0d1117;color:#f0f6fc;font-family:sans-serif;padding:20px;">
+    <h2>🎧 YTM-DL Test Dispatch</h2>
+    <p>This is an automated test verifying end-to-end Gmail dispatch from Google Apps Script.</p>
+  </body></html>`;
+
+  const result = dispatchEmailFromPayload({
+    subject: "🎧 YTM-DL Test Dispatch",
+    html_body: sampleHtml
+  });
+  console.log("testSendDailyEmail result:", result);
+  return result;
 }
 
 function __gh_req(url) {
@@ -46,5 +136,5 @@ function _updateFile(file, id) {
   const data = Utilities.parseCsv(__gh_req(url));
   const wsht = gSheetDoc.getSheetByName("Sheet1").clearContents();
   wsht.getRange(1, 1, data.length, data[0].length).setValues(data);
-  return "updated " + file + " - count: " + data.length
+  return "updated " + file + " - count: " + data.length;
 }

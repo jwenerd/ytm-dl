@@ -34,10 +34,28 @@ def do_search_suggestions():
 
 def do_updates(option):
     ChangeTracker.reset()
-    if option not in ["all", "frequent", "mixes", "home", "auth", "report"]:
-        print("Option must be all, frequent, mixes, home, auth, or report")
+    if option not in ["all", "frequent", "mixes", "home", "auth", "report", "mail"]:
+        print("Option must be all, frequent, mixes, home, auth, report, or mail")
         print("  given: " + str(option))
         sys.exit(1)
+
+    if option == "mail":
+        from src.reports.mailer import ReportMailer
+
+        cadence = "daily"
+        for arg in sys.argv[2:]:
+            if not arg.startswith("-"):
+                cadence = arg
+                break
+        dry_run = "--dry-run" in sys.argv
+        mailer = ReportMailer(cadence=cadence)
+        try:
+            res = mailer.send(dry_run=dry_run)
+            print(f"✓ Mailer result: {res}")
+        except Exception as e:
+            print(f"✗ Mailer error: {e}")
+            sys.exit(1)
+        return
 
     if option == "report":
         from src.reports.rotator import run_reports
@@ -109,6 +127,12 @@ def do_updates(option):
         reports_generated = run_reports(output_dir="output", refresh_nocturnal=history_updated)
         if reports_generated:
             print(f"✓ Generated listening report(s): {', '.join(reports_generated)}")
+            try:
+                from src.util import write_file
+
+                write_file("tmp/reports_generated.txt", "\n".join(reports_generated) + "\n")
+            except Exception:
+                pass
             ChangeTracker.record(
                 emoji="📰",
                 label="Listening Reports",
