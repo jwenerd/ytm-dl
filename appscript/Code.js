@@ -34,24 +34,61 @@ function doPost(request) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 
-  // 2. Standard CSV synchronization
-  const output = {
-    sheets: saveCSVs()
-  };
-
-  // Optional trigger via query parameter
-  if (request && request.parameter && request.parameter.report === "daily") {
-    try {
-      output.email = sendDailyReportEmail();
-    } catch (err) {
-      console.error("Failed to dispatch daily report email: " + err);
-      output.email_error = String(err);
+  // 2. Synchronous override if explicitly requested (?sync=true)
+  if (request && request.parameter && request.parameter.sync === "true") {
+    const output = {
+      sheets: saveCSVs()
+    };
+    if (request.parameter.report === "daily") {
+      try {
+        output.email = sendDailyReportEmail();
+      } catch (err) {
+        console.error("Failed to dispatch daily report email: " + err);
+        output.email_error = String(err);
+      }
     }
+    return ContentService
+      .createTextOutput(JSON.stringify(output))
+      .setMimeType(ContentService.MimeType.JSON);
   }
 
+  // 3. Default: Asynchronous CSV synchronization with instant acknowledgment (< 500ms)
+  _cleanupTriggers("asyncSaveCSVs");
+
+  ScriptApp.newTrigger("asyncSaveCSVs")
+    .timeBased()
+    .after(1000)
+    .create();
+
   return ContentService
-    .createTextOutput(JSON.stringify(output))
+    .createTextOutput(JSON.stringify({
+      status: "queued",
+      message: "CSV synchronization job accepted and scheduled"
+    }))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+function asyncSaveCSVs() {
+  try {
+    saveCSVs();
+  } catch (err) {
+    console.error("Async saveCSVs failed: " + err);
+  } finally {
+    _cleanupTriggers("asyncSaveCSVs");
+  }
+}
+
+function _cleanupTriggers(handlerName) {
+  const triggers = ScriptApp.getProjectTriggers();
+  for (let i = 0; i < triggers.length; i++) {
+    if (triggers[i].getHandlerFunction() === handlerName) {
+      try {
+        ScriptApp.deleteTrigger(triggers[i]);
+      } catch (err) {
+        console.warn("Could not delete trigger: " + err);
+      }
+    }
+  }
 }
 
 function saveCSVs() {

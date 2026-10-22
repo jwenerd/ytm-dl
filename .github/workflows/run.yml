@@ -177,7 +177,10 @@ jobs:
           YTM_SHEET_UPDATE_URL: ${{ secrets.YTM_SHEET_UPDATE_URL }}
         run: |
           true || 🫡
-          curl -s -L -d '' "$YTM_SHEET_UPDATE_URL"
+          echo "::group::Update Google Sheets (Async Dispatch)"
+          curl -s -L -f -d '' "$YTM_SHEET_UPDATE_URL"
+          echo ""
+          echo "::endgroup::"
       - name: Dispatch Daily Report Email ✉️
         id: dispatch-email
         if: ${{ steps.run.outputs.DOCOMMIT == '1' }}
