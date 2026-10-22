@@ -171,3 +171,142 @@ def test_records_from_response():
     records2, meta2 = records_from_response([{"videoId": "v2"}])
     assert records2 == [{"videoId": "v2"}]
     assert meta2 == {}
+
+
+def test_get_thread_client_browser_json(monkeypatch):
+    from src.api import get_thread_client, thread_local
+
+    if hasattr(thread_local, "ytmusic"):
+        del thread_local.ytmusic
+
+    monkeypatch.setattr("os.path.exists", lambda path: path == "browser.json")
+    mock_ytmusic = MagicMock()
+    with patch("src.api.YTMusic", return_value=mock_ytmusic):
+        client = get_thread_client()
+        assert client == mock_ytmusic
+
+    if hasattr(thread_local, "ytmusic"):
+        del thread_local.ytmusic
+
+
+def test_get_thread_client_oauth(monkeypatch):
+    from src.api import get_thread_client, thread_local
+
+    if hasattr(thread_local, "ytmusic"):
+        del thread_local.ytmusic
+
+    monkeypatch.setattr("os.path.exists", lambda path: path == "oauth.json")
+    monkeypatch.setattr("src.api.OAUTH_CLIENT_ID", "test_client_id")
+    monkeypatch.setattr("src.api.OAUTH_CLIENT_SECRET", "test_client_secret")
+
+    mock_ytmusic = MagicMock()
+    with patch("src.api.YTMusic", return_value=mock_ytmusic), patch("src.api.OAuthCredentials"):
+        client = get_thread_client()
+        assert client == mock_ytmusic
+
+    if hasattr(thread_local, "ytmusic"):
+        del thread_local.ytmusic
+
+
+def test_get_thread_client_no_auth(monkeypatch):
+    from src.api import get_thread_client, thread_local
+
+    if hasattr(thread_local, "ytmusic"):
+        del thread_local.ytmusic
+
+    monkeypatch.setattr("os.path.exists", lambda path: False)
+    with pytest.raises(RuntimeError, match="No valid authentication file found"):
+        get_thread_client()
+
+    if hasattr(thread_local, "ytmusic"):
+        del thread_local.ytmusic
+
+
+def test_suggest_search(monkeypatch):
+    from src.api import suggest_search, thread_local
+
+    mock_client = MagicMock()
+    mock_client.get_search_suggestions.return_value = ["acoustic", "ambient"]
+    thread_local.ytmusic = mock_client
+
+    try:
+        res = suggest_search("a")
+        assert res == ["a", ["acoustic", "ambient"]]
+        mock_client.get_search_suggestions.assert_called_once_with("a")
+    finally:
+        if hasattr(thread_local, "ytmusic"):
+            del thread_local.ytmusic
+
+
+def test_api_method_perform_and_meta(monkeypatch):
+    from src.api import ApiMethod, thread_local
+    from src.meta import MetaStore
+
+    mock_client = MagicMock()
+    mock_client.get_liked_songs.return_value = {
+        "tracks": [{"videoId": "song1", "title": "Track 1"}],
+        "title": "Liked Tracks",
+    }
+    thread_local.ytmusic = mock_client
+
+    try:
+        api_method = ApiMethod("get_liked_songs")
+        records, meta = api_method.perform()
+        assert records == [{"videoId": "song1", "title": "Track 1"}]
+        assert "API" in meta
+        assert meta["API"]["method"] == "get_liked_songs"
+        assert meta["API"]["records_length"] == 1
+        assert "Tracks" in meta
+
+        # Verify stored in MetaStore
+        assert "get_liked_songs" in MetaStore.get("api_results").data
+        assert "get_liked_songs" in MetaStore.get("api").data
+    finally:
+        if hasattr(thread_local, "ytmusic"):
+            del thread_local.ytmusic
+
+
+def test_api_method_perform_list_response(monkeypatch):
+    from src.api import ApiMethod, thread_local
+
+    mock_client = MagicMock()
+    mock_client.get_history.return_value = [{"videoId": "h1"}]
+    mock_client.custom_method.return_value = [{"videoId": "c1"}]
+    thread_local.ytmusic = mock_client
+
+    try:
+        api_method = ApiMethod("get_history")
+        records, meta = api_method.perform()
+        assert records == [{"videoId": "h1"}]
+        assert meta["API"]["method"] == "get_history"
+        assert meta["API"]["records_length"] == 1
+
+        # Test positional arg (non-dict)
+        custom_api = ApiMethod("custom_method")
+        custom_api.method_args = 42
+        assert custom_api.api_results() == [{"videoId": "c1"}]
+        mock_client.custom_method.assert_called_once_with(42)
+    finally:
+        if hasattr(thread_local, "ytmusic"):
+            del thread_local.ytmusic
+
+
+def test_api_method_save_api_artifact(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    from src.api import ApiMethod
+    from src.meta import MetaStore
+
+    # Empty data should return without writing
+    MetaStore.get("api_results").data.clear()
+    ApiMethod.save_api_artifact()
+    artifacts_dir = tmp_path / "artifacts"
+    assert not artifacts_dir.exists()
+
+    # Populated data should write YAML
+    MetaStore.get("api_results").add("test_method", {"key": "val"})
+    ApiMethod.save_api_artifact()
+    assert artifacts_dir.exists()
+    yaml_files = list(artifacts_dir.glob("api_results_*.yaml"))
+    assert len(yaml_files) == 1
+    content = yaml_files[0].read_text(encoding="utf-8")
+    assert "test_method:" in content

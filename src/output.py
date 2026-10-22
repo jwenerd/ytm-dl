@@ -26,8 +26,6 @@ PREPEND_FILES = [
     "library_albums",
 ]
 
-BY_KEY = ["library_subscriptions", "library_upload_artists", "library_artists"]
-
 
 FILE_DISPLAY: dict[str, tuple[str, str]] = {
     "history": ("🕒", "History"),
@@ -67,7 +65,6 @@ class Output:
         self.file_exists = file_exists(self.csv_file_with_path)
 
         self.prepend = file in PREPEND_FILES
-        self.by_key = file in BY_KEY
 
         self.mapping = Mapping(file, records)
         self.hash_before = file_hash(self.csv_file)
@@ -100,14 +97,11 @@ class Output:
 
     def update_rows_for_prepend(self):
         is_history = self.file == "history"
-        is_home = self.file == "home"
         self.rows = prepend_rows_for_file(
             self.csv_file_with_path,
             self.rows,
             is_history=is_history,
-            is_home=is_home,
             key_index=self.mapping.key_index,
-            by_key=self.by_key,
         )
 
     def write_files(self):
@@ -128,7 +122,7 @@ class Output:
                 row for row in self.rows if len(row) > key_idx and row[key_idx] not in problems
             ]
 
-        use_prepend = self.file_exists and (self.prepend or self.by_key)
+        use_prepend = self.file_exists and self.prepend
 
         if use_prepend:
             self.update_rows_for_prepend()
