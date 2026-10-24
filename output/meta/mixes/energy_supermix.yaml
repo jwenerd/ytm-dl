@@ -3,11 +3,11 @@ mood_chip: Energize
 playlist_id: RDTMAK5uy_kskEGBYLWbdi3Z9IdjDoDEI8hEBvHEreM
 description: Get a boost with this mix of high-energy songs that span all your tastes.
   Always updating.
-featured_artists: Widespread Panic, Justice, Little Feat, Daft Punk
+featured_artists: Rusted Root, Daft Punk, Phish, Little Feat
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 2112
-new_tracks_latest_run: 54
+total_unique_tracks: 2365
+new_tracks_latest_run: 253
 latest_batch_size: 500
-last_updated: '2026-10-04T09:50:15Z'
-run_id: gh-6887
+last_updated: '2026-10-24T11:40:52Z'
+run_id: gh-6984
