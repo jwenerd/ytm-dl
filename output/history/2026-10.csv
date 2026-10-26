@@ -1,4 +1,16 @@
 title,artists,album,inLibrary,likeStatus,duration,duration_seconds,videoId,played_at,run_id
+Horn,Nick Drake,Pink Moon,False,INDIFFERENT,1:22,82,9absJQoPCX8,2026-10-26T00:00:00Z,gh-6997
+Which Will,Nick Drake,Pink Moon,False,INDIFFERENT,2:57,177,1gYtqGgSTuo,2026-10-26T00:00:00Z,gh-6997
+Road,Nick Drake,Pink Moon,False,INDIFFERENT,2:00,120,jpk32L8Bb4c,2026-10-26T00:00:00Z,gh-6997
+Place To Be,Nick Drake,Pink Moon,False,INDIFFERENT,2:41,161,jvLtyyBRITo,2026-10-26T00:00:00Z,gh-6997
+Pink Moon,Nick Drake,Pink Moon,False,INDIFFERENT,2:05,125,ZgHdUeMHTwc,2026-10-26T00:00:00Z,gh-6997
+Swing 51,David Grisman,The David Grisman Quintet,False,INDIFFERENT,4:29,269,rbDf4sutxUU,2026-10-26T00:00:00Z,gh-6997
+Jumping Into Spring,Suzy Bogguss,A Twist of Jazz,False,INDIFFERENT,1:58,118,vELDZlaUauM,2026-10-26T00:00:00Z,gh-6997
+Django's Tiger,Django Reinhardt,The Best Of Django Reinhardt,False,INDIFFERENT,2:39,159,V9dtrEip7Hk,2026-10-26T00:00:00Z,gh-6997
+Caravan (alternate version),"Chet Atkins, Les Paul",Chester & Lester,False,INDIFFERENT,3:15,195,u9tSAm7zNQs,2026-10-26T00:00:00Z,gh-6997
+The World Is Waiting for the Sunrise,"Chet Atkins, Les Paul",Chester & Lester,True,LIKE,2:20,140,1_1z6_rlP2U,2026-10-26T00:00:00Z,gh-6997
+Cream Puff War (Full Length Version),Grateful Dead,Grateful Dead,False,INDIFFERENT,3:19,199,Sx0uy2ZNoo8,2026-10-26T00:00:00Z,gh-6997
+Tombstone Blues,Bob Dylan,Highway 61 Revisited,False,LIKE,5:57,357,J6yWZUv9QJA,2026-10-26T00:00:00Z,gh-6997
 Silver Dagger,Dolly Parton,The Grass Is Blue,False,INDIFFERENT,4:55,295,-nEOjMI4p78,2026-10-25T00:00:00Z,gh-6994
 There's a Rainbow in Every Teardrop,Corn Potato String Band,Good Job Everybody,False,INDIFFERENT,2:14,134,IVoatcEGtmM,2026-10-25T00:00:00Z,gh-6994
 Was I Drunk?,Corn Potato String Band,Good Job Everybody,False,LIKE,3:25,205,3bxFS2RhS2E,2026-10-25T00:00:00Z,gh-6994
