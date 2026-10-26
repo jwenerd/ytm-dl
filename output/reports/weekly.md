@@ -1,60 +1,45 @@
-# 📈 Weekly Sonic Digest: 2026-W42 (Oct 12 - Oct 18)
+# Weekly Sonic Digest: 2026-W43 (Oct 19 - Oct 26)
 
 ## 1. Macro Analysis
-- Cumulative Volume: 197 plays across 18h 14m
-- Unique Artists: 90 (112 albums)
-- Catalog Anchor: Grateful Dead (9% of session, 18 plays)
-- Top Artists: Grateful Dead (18), Elton John (17), Phish (17), Ween (13), Foxy Shazam (7)
-- Library Ratio: 5.6%
+- Cumulative Volume: 318 plays across 22h 35m
+- Unique Artists: 137 (163 albums)
+- Catalog Anchor: Ivan the Tolerable (8% of session, 25 plays)
+- Top Artists: Ivan the Tolerable (25), The Avalanches (23), Grateful Dead (20), Frankie Reyes (14), Dorothy Ashby (12)
+- Library Ratio: 2.2%
 
 ## 2. Weekly Field Observations
-- **Primary Anchor**: Jam-band extended improvisations held consistent catalog weight, split evenly between Grateful Dead (18 plays) and recent Phish live sets (17 plays).
-- **Emerging Obsessions**: A sharp, focused intake of early-to-mid 1970s Elton John album cuts ("Social Disease", "Honky Cat") matched the raw theatricality of Foxy Shazam's "Killin' It".
-- **Texture Range**: Broad dynamic swings occurred between deep ambient/psydub corridors (Ott, Shpongle) and grounded country-soul pickers (Jerry Reed, Glen Campbell, John R. Miller).
-- **Catalog Penetration**: Extremely low library ratio (5.6%) indicates an open discovery pipeline, relying heavily on contextual radio streams, archival sets, and exploratory sessions rather than saved catalog rotation.
+- **Primary Anchor**: Ivan the Tolerable commanded the week's focal concentration, driven by sequential engagement with an astrological/planetary conceptual suite (*The Planetary Suite* / *Saturn*, *Jupiter*, *Mars*).
+- **Texture Range**: Broad dynamic spread extending from sample-dense plunderphonics (The Avalanches) and synth-reinterpreted Latin standards (Frankie Reyes) to modal harp jazz (Dorothy Ashby) and Appalachian string band arrangements (Corn Potato String Band).
+- **Improvisational Continuum**: Distinct presence of extended-form performance vectors, anchored by 13 live selections encompassing the Grateful Dead and jam-tronica pioneers The Disco Biscuits alongside New Orleans piano virtuosity (James Booker).
+- **Algorithmic Disconnect**: An exceptionally low library ratio (2.2%) indicates sessions heavily sustained by discovery queues, algorithmic radios, or curated external playback rather than established local archive navigation.
 
 ## 3. Narrative Synthesis
-The listening period exhibited a tri-modal distribution centered around narrative songwriting, sprawling improvisational live sets, and ambient dub architecture. The dominant daytime mode balanced classic songcraft—anchored by Bernie Taupin/Elton John arrangements and vintage country-funk—with the eccentric genre deconstructions of Ween. Extended listening blocks shifted toward live performance documentation, marked by a high live-track volume (25 tracks) that provided continuous, uninterrupted playback durations.
+The logging period reveals a listener alternating between structured conceptual long-plays and wide-aperture discovery paths. The macro arc was principally weighted by instrumental timbre and harmonic layering rather than vocal-driven song structures. Weekday listening displays deep immersion in atmospheric sound design—evidenced by sustained runs through Ivan the Tolerable’s kosmische jazz excursions and Frankie Reyes’s minimal Oberheim synthesizer etudes, balanced by the rhythmic complexity of Dorothy Ashby’s late-60s spiritual jazz.
 
-Late-session telemetry reveals a deliberate retreat into synthetic and organic dub spaces. The parallel presence of Ott and Shpongle suggests structured, low-cognitive-load focus blocks, offering an acoustic counterweight to the bombastic glam-rock deliveries of Foxy Shazam and the high-energy arena exchanges documented in contemporary Phish tour dates.
+As the session volume accrued, an undercurrent of live improvisation and crate-digging aesthetics surfaced. Extended-form passages from the Grateful Dead and The Disco Biscuits provided unstructured, rhythmic counterweights to the dense, multi-source collage work of The Avalanches. Rather than cycling heavily through a narrow tracklist, the profile demonstrates high artist turnover (137 artists across 318 tracks), punctuated only by deliberate, repeat inquiries into specific movements of Ivan the Tolerable's planetary compositions.
 
 ## 4. Dynamic Weekly Spotlight
 
-### Live Circuit & Tour Archive
-Live material constituted nearly 13% of the week's discrete track selections, exerting disproportionate leverage over total duration:
-- **Phish (Huntsville, AL – 2026-10-12)**: A direct document of contemporary fall tour running order, highlighted by an exploratory "AC/DC Bag" that provided long-form structural pacing.
-- **Ween (Trocadero Theatre, Philadelphia, PA – 1995-06-16)**: Archival mid-90s live energy captured on the *Boognish Provides* live dispatch, exemplified by a volatile rendition of "Pumpin' 4 the Man."
-- **Grateful Dead (Studio Rarities vs. Stage)**: While unreleased studio takes surfaced ("Death Don't Have No Mercy"), the bulk of the 18 Dead tracks functioned as long-form improvisational scaffolding across extended playback blocks.
-
 ### Catalog Archaeology & Deep Dives
-Rather than defaulting to standard greatest-hits configurations, catalog engagement with legacy artists demonstrated intentional deep-cut tracking:
-- **Elton John (*Honky Château* & *Goodbye Yellow Brick Road*)**: Heavy rotation of non-single album tracks—notably "Social Disease" (logged 3 times) and "Ballad Of A Well-Known Gun"—points to intentional full-side LP listening or targeted deep-catalog indexing rather than passive algorithmic top-track selection.
+Album-level continuity manifested intensely within select nodes, contrasting sharply with the week's overall high-entropy shuffle. Ivan the Tolerable's catalog was accessed as a cohesive structural unit; the playback of *Saturn*, *Jupiter*, *Mars*, *Pluto*, *Neptune*, *Uranus*, *Earth*, *Venus*, and *Mercury* reflects intentional, front-to-back programmatic consumption of a themed cycle. Similar thematic coherence appeared in the concentrated clusters for The Avalanches and Frankie Reyes, suggesting that while discovery algorithms governed background hours, active deep dives were reserved for longform textural suites.
+
+### Earworm & Replay Loops
+The repeat behavior remained largely analytical rather than hook-dependent. Outside of the systemic replays across Ivan the Tolerable's suite, targeted individual repeats were sparse. Elton John's "Social Disease" (*Goodbye Yellow Brick Road*) stood out as a narrative oddity, logged three times against an otherwise instrumental-leaning backdrop. Secondary repeat vectors showed brief, curious returns to mid-tempo sample collages (Wax Tailor’s "Que Sera", Gorillaz’ "Clint Eastwood") and idiosyncratic roots arrangements (Corn Potato String Band’s "Chesapeake Bay"), demonstrating isolated micro-loops within an expansive listening net.
 
 ## 5. Replay Loops & Catalog Additions
-- **Replays**:
-  - Elton John – "Social Disease" (3 plays)
-  - Foxy Shazam – "Killin' It" (3 plays)
-  - Elton John – "I Guess That's Why They Call It The Blues" (2 plays)
-  - Satellite Friend – "Horses at Full Stride" (2 plays)
-  - Foxy Shazam – "Evil Thoughts" (2 plays)
-  - John R. Miller – "Insomnia Blues" (2 plays)
-- **Liked Songs**:
-  - Elton John – "Honky Cat" (*Honky Chateau*)
-  - Ween – "Pumpin' 4 the Man (Live at Trocadero Theatre, 1995)" (*Boognish Provides*)
-  - Kaya Project – "One Hundred Lights (Grouch Remix)" (*Firedance Remixes EP*)
-  - Ott – "Escape From Tulse Hell" (*Blumenkraft*)
-  - Elton John – "Social Disease" (*Goodbye Yellow Brick Road*)
-  - Satellite Friend – "Favorite Son" (*Shameful Joy*)
-  - Grateful Dead – "Death Don't Have No Mercy" (*Complete Studio Rarities Collection*)
-  - Phish – "AC/DC Bag" (*2026-10-12 The Orion Amphitheater, Huntsville, AL*)
-  - RAYE – "Goodbye Henry. (feat. Al Green)" (*THIS MUSIC MAY CONTAIN HOPE.*)
+- **Replays**: "Social Disease" (Elton John), "Saturn or The Bringer of Obstacles" (Ivan the Tolerable), "Jupiter or The Guardian & Protector" (Ivan the Tolerable), "Mars or The Lesser Malefic" (Ivan the Tolerable), "Chesapeake Bay" (Corn Potato String Band), "Killin' It" (Foxy Shazam), "Don't Shit Where You Eat" (Ween), "Please Send Me Someone To Love" (James Booker).
+- **Liked Songs**: 
+  - "China Doll (2024 Remaster)" – Grateful Dead (*From the Mars Hotel (50th Anniversary Deluxe Edition)*)
+  - "Everything In Its Right Place" – Radiohead (*Kid A*)
+  - "42" – The Disco Biscuits (*2021/10/30 Las Vegas, NV*)
+  - "The World Is Waiting For The Sunrise" – Les Paul, Mary Ford (*The Hit Makers*)
 
 ## 6. Algorithmic Suggestions Radar & Weekend Queue
-- **Béla Fleck – *Live Heart: My Bluegrass Heart at the Ryman*** (*Shelf: new_releases*)
-  - *Appraisal*: Natural convergence of the week's acoustic picking (Jerry Reed) and intricate ensemble improvisation. High algorithmic priority across three recommendation scans.
-- **Hiroshi Yoshimura – "GREEN"** (*Shelf: your_daily_discover*)
-  - *Appraisal*: Japanese environmental ambient classic; provides a necessary minimalist bridge out of the heavier psych-dub passages mapped by Ott and Shpongle.
-- **Ivan the Tolerable – *The Planets*** (*Shelf: new_releases*)
-  - *Appraisal*: Prolific UK multi-instrumentalist blending motorik rhythms, free-jazz woodwinds, and psychedelic space-rock—aligns squarely with the week's jam-adjacent experimentalism.
-- **Surprise Chef – "Sleep Dreams"** (*Shelf: discover_mix*)
-  - *Appraisal*: Melbourne cinematic instrumental soul; offers tight, groove-driven arrangements complementary to classic 1970s rhythm-section productions.
+
+| Track | Artist | Shelf Source | Prior Impressions | Musicologist Appraisal |
+| :--- | :--- | :--- | :--- | :--- |
+| **Phish: Live In Savannah 2026** | Phish | new_releases | 5 | Logical extension of the week's high-tier Grateful Dead and Disco Biscuits sessions; tests current appetite for contemporary long-form arena improvisation. |
+| **Brookside Hybrid 23** | Ott | your_daily_discover | 3 | High algorithmic resonance following 7 logged Ott plays this period; offers a clean bridge between downtempo dub architecture and synth modularity. |
+| **Scenery** | Ryo Fukui | your_daily_discover | 2 | Mirrors the modal jazz and piano technique logged via Dorothy Ashby and James Booker; classic hard-bop trio textures provide acoustic clarity. |
+| **These Foolish Things (Remastered 1995)** | Lester Young | discover_mix | 2 | Serves as an essential historical antecedent to the week's melodic instrumental jazz and early electric experimentation (Les Paul). |
+| **Amour, voulés vous acorder** | Baptiste Bailly, Efrén López, Matthew Baker | discover_mix | 1 | Uncharted cross-modal acoustic ensemble (hurdy-gurdy, fretless bass, modal piano); parallels the folk-roots instrumentation of Corn Potato String Band with European early-music sensibilities. |
