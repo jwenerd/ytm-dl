@@ -4,9 +4,9 @@ slug: fall_vibes
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 10
-new_items_latest_run: 10
+total_items: 11
+new_items_latest_run: 1
 latest_batch_size: 10
 first_captured: '2026-10-26T08:58:04Z'
-last_captured: '2026-10-26T08:58:04Z'
-run_id: gh-6995
+last_captured: '2026-10-27T09:02:04Z'
+run_id: gh-6999
