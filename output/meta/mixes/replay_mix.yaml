@@ -2,11 +2,11 @@ title: Replay Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_nilrsVWxrKskY0ZUpVZ3zpB0u4LwWTVJ4
 description: A mix of the songs you've been listening to most in the last few weeks.
-featured_artists: "St\xE9phane Grappelli, Elton John, Les Paul, Avery \"Kid\" Howard"
+featured_artists: Kliment, Elton John, Doc Watson, Frankie Reyes
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1530
-new_tracks_latest_run: 13
+total_unique_tracks: 1562
+new_tracks_latest_run: 32
 latest_batch_size: 500
-last_updated: '2026-10-30T10:03:07Z'
-run_id: gh-7012
+last_updated: '2026-10-31T09:41:06Z'
+run_id: gh-7016
