@@ -3,11 +3,11 @@ mood_chip: Focus
 playlist_id: RDTMAK5uy_l3TXw3uC_sIHl4m6RMGqCyKKd2D2_pv28
 description: Get in the zone with this mix of songs that span all your tastes. Always
   updating.
-featured_artists: Grateful Dead, Christopher Willits, Jerry Garcia, Susumu Yokota
+featured_artists: Green-House, Loscil, Grateful Dead, Jerry Garcia
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 4496
-new_tracks_latest_run: 25
+total_unique_tracks: 4535
+new_tracks_latest_run: 39
 latest_batch_size: 500
-last_updated: '2026-10-30T10:03:07Z'
-run_id: gh-7012
+last_updated: '2026-11-01T10:29:13Z'
+run_id: gh-7021
