@@ -1,0 +1,10 @@
+title,artists,album,inLibrary,likeStatus,duration,duration_seconds,videoId,played_at,run_id
+Lover,Skinshape,Chapman's Pool,False,INDIFFERENT,3:30,210,0RWbbhSpo-s,2026-11-01T00:00:00Z,gh-7024
+El Ultimo Hombre,Skinshape,Chapman's Pool,False,INDIFFERENT,2:57,177,mJ5QFV8k0vM,2026-11-01T00:00:00Z,gh-7024
+Together We Win,Skinshape,Chapman's Pool,False,INDIFFERENT,3:57,237,KNxbawW-bP4,2026-11-01T00:00:00Z,gh-7024
+Underwater,Skinshape,Chapman's Pool,False,INDIFFERENT,3:17,197,YZPeBc3OVos,2026-11-01T00:00:00Z,gh-7024
+Beyond Pluto,Skinshape,Chapman's Pool,False,INDIFFERENT,4:21,261,Y6A6RCY5VnI,2026-11-01T00:00:00Z,gh-7024
+title,artist,album,inLibrary,likeStatus,duration,duration_seconds,video_id,,commit:5c97d16a
+title,artist,album,inLibrary,likeStatus,duration,duration_seconds,link,,commit:5c97d16a
+title,artist,album,inLibrary,likeStatus,duration,duration_seconds,video_id,,gh-85
+title,artist,album,inLibrary,likeStatus,duration,duration_seconds,link,,commit:bbb614e9

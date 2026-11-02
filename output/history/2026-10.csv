@@ -1,4 +1,10 @@
 title,artists,album,inLibrary,likeStatus,duration,duration_seconds,videoId,played_at,run_id
+Spirit,Skinshape,Chapman's Pool,False,INDIFFERENT,4:39,279,2T_3an-WeI8,2026-10-31T00:00:00Z,gh-7024
+Chapman's Pool,Skinshape,Chapman's Pool,False,INDIFFERENT,3:13,193,r8RWZFMwl70,2026-10-31T00:00:00Z,gh-7024
+Take It As It Is,Skinshape,Chapman's Pool,False,INDIFFERENT,4:50,290,4Sujnu36vy4,2026-10-31T00:00:00Z,gh-7024
+The Blade of a Knife,Skinshape,Chapman's Pool,True,LIKE,4:14,254,DuhWuktCWr0,2026-10-31T00:00:00Z,gh-7024
+Global Heartbeat,Edmar Castañeda,GLOBAL HEARTBEAT,False,INDIFFERENT,6:14,374,XPfGhUxRlnQ,2026-10-31T00:00:00Z,gh-7024
+The World Is Waiting for the Sunrise,"Django Reinhardt, Stéphane Grappelli",Rome 1949,True,LIKE,2:53,173,lm1sSTO4Rgw,2026-10-31T00:00:00Z,gh-7024
 "The Hostess With The Mostes' On The Ball (From ""Call Me Madam"")","Ethel Merman, Gordon Jenkins And His Orchestra",Songs She Has Made Famous (Deluxe Edition),False,INDIFFERENT,3:28,208,EUD7WvLCu6U,2026-10-31T00:00:00Z,gh-7018
 Spooks (feat. Gordon Jenkins And His Orchestra),Louis Armstrong,Satchmo In Style (Expanded Edition),True,LIKE,2:37,157,b0vaI7s2p68,2026-10-31T00:00:00Z,gh-7018
 "Rudy, a Message to You",Dandy,Suzanne Beware of the Devil - The Best of Dandy Livingstone,False,INDIFFERENT,2:49,169,jnMTB66klos,2026-10-31T00:00:00Z,gh-7018
@@ -953,7 +959,3 @@ Before,Julia Gjertsen,Before,False,INDIFFERENT,3:50,230,2832VqbGrVQ,2026-10-01T0
 "Schubert: 4 Impromptus, Op. 90, D. 899: No. 3 in G-Flat Major","Franz Schubert, Maria João Pires",Le Voyage Magnifique – Schubert: Impromptus & 3 Klavierstücke,False,INDIFFERENT,5:50,350,5PKflWlmOWE,2026-10-01T00:00:00Z,gh-6873
 "Szymanowski: Variations on a Polish Folk Theme, Op. 10 - Var. 6. Andante dolcissimo","Karol Szymanowski, Krystian Zimerman","Szymanowski: Variations on a Polish Folk Theme, Op. 10: Var. 6. Andante dolcissimo",False,INDIFFERENT,3:11,191,5AbkQe2scAU,2026-10-01T00:00:00Z,gh-6873
 Kaleidoscope (feat. Crystalline),"Champagne Drip, Crystalline",Starman,False,INDIFFERENT,3:32,212,CLcnWKn3Tuo,2026-10-01T00:00:00Z,gh-6873
-title,artist,album,inLibrary,likeStatus,duration,duration_seconds,video_id,,commit:5c97d16a
-title,artist,album,inLibrary,likeStatus,duration,duration_seconds,link,,commit:5c97d16a
-title,artist,album,inLibrary,likeStatus,duration,duration_seconds,video_id,,gh-85
-title,artist,album,inLibrary,likeStatus,duration,duration_seconds,link,,commit:bbb614e9
