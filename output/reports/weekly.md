@@ -1,45 +1,70 @@
-# Weekly Sonic Digest: 2026-W43 (Oct 19 - Oct 26)
+# Weekly Sonic Digest: 2026-W44 (Oct 26 - Nov 02)
 
 ## 1. Macro Analysis
-- Cumulative Volume: 318 plays across 22h 35m
-- Unique Artists: 137 (163 albums)
-- Catalog Anchor: Ivan the Tolerable (8% of session, 25 plays)
-- Top Artists: Ivan the Tolerable (25), The Avalanches (23), Grateful Dead (20), Frankie Reyes (14), Dorothy Ashby (12)
-- Library Ratio: 2.2%
+- Cumulative Volume: 178 plays across 12h 30m
+- Unique Artists: 86 (93 albums)
+- Catalog Anchor: The Dixieland Gipsyband (8% of session, 15 plays)
+- Top Artists: 
+  - The Dixieland Gipsyband (15 plays)
+  - The Fox Hunt (12 plays)
+  - Floating Points (10 plays)
+  - Skinshape (9 plays)
+  - The Disco Biscuits / Younger Brother / George Lewis (8 plays each)
+- Library Ratio: 6.2%
 
 ## 2. Weekly Field Observations
-- **Primary Anchor**: Ivan the Tolerable commanded the week's focal concentration, driven by sequential engagement with an astrological/planetary conceptual suite (*The Planetary Suite* / *Saturn*, *Jupiter*, *Mars*).
-- **Texture Range**: Broad dynamic spread extending from sample-dense plunderphonics (The Avalanches) and synth-reinterpreted Latin standards (Frankie Reyes) to modal harp jazz (Dorothy Ashby) and Appalachian string band arrangements (Corn Potato String Band).
-- **Improvisational Continuum**: Distinct presence of extended-form performance vectors, anchored by 13 live selections encompassing the Grateful Dead and jam-tronica pioneers The Disco Biscuits alongside New Orleans piano virtuosity (James Booker).
-- **Algorithmic Disconnect**: An exceptionally low library ratio (2.2%) indicates sessions heavily sustained by discovery queues, algorithmic radios, or curated external playback rather than established local archive navigation.
+- **Primary Anchor & Traditionalism**: Listening gravitated toward acoustic, polyphonic string traditions. The Dixieland Gipsyband and The Fox Hunt anchored the baseline volume, balancing European Romani swing inflections with Appalachian old-time and bluegrass structures.
+- **Comparative Auditioning**: A deliberate comparative study emerged around the 1919 standard *"The World Is Waiting for the Sunrise."* Telemetry recorded multiple consecutive interpretations across divergent idioms: 1949 Parisian/Roman hot club jazz, New Orleans revival polyphony, mid-century Nashville thumb-picking, and contemporary instrumental rock.
+- **Texture Range & Electronic Counterweight**: Alongside historical acoustic works, substantial blocks were dedicated to complex contemporary electronica and jam-band pacing, represented by Floating Points, Younger Brother, and live segments of The Disco Biscuits (accounting for a portion of the 20 recorded live tracks).
+- **Catalog Penetration**: At a 6.2% library ratio, session activity was overwhelmingly exploratory or algorithmic, pulling widely from unfamiliar catalog nodes rather than established user archives.
 
 ## 3. Narrative Synthesis
-The logging period reveals a listener alternating between structured conceptual long-plays and wide-aperture discovery paths. The macro arc was principally weighted by instrumental timbre and harmonic layering rather than vocal-driven song structures. Weekday listening displays deep immersion in atmospheric sound design—evidenced by sustained runs through Ivan the Tolerable’s kosmische jazz excursions and Frankie Reyes’s minimal Oberheim synthesizer etudes, balanced by the rhythmic complexity of Dorothy Ashby’s late-60s spiritual jazz.
+Field observations for 2026-W44 reveal a dual-mode listening profile divided between rigorous archival investigation and texture-based ambient focus. The high ratio of unique artists (86 across 178 tracks) combined with a meager 6.2% library affinity indicates that the user was either testing algorithmic discovery surfaces or pursuing specific musicological reference trails. The primary trajectory centered on mid-20th-century string virtuosity and early jazz ensembles (George Lewis, Django Reinhardt, Les Paul), frequently punctuated by modern acoustic counterparts such as Jacob Jolliff and The Seldom Scene. 
 
-As the session volume accrued, an undercurrent of live improvisation and crate-digging aesthetics surfaced. Extended-form passages from the Grateful Dead and The Disco Biscuits provided unstructured, rhythmic counterweights to the dense, multi-source collage work of The Avalanches. Rather than cycling heavily through a narrow tracklist, the profile demonstrates high artist turnover (137 artists across 318 tracks), punctuated only by deliberate, repeat inquiries into specific movements of Ivan the Tolerable's planetary compositions.
+The mid-week sessions demonstrated an intentional shift into long-form instrumental pacing. The inclusion of Floating Points and Younger Brother provided sustained synth and rhythmic frameworks, contrasting sharp pick-and-bow transients with sustained low-frequency dynamics. Extended concert recordings also remained functional during this window, documented by 20 distinct live entries, including repeat plays of The Disco Biscuits' "Helicopters." Overall, the week operated less as an exercise in casual background streaming and more as an active comparative audition of historical performance styles.
 
 ## 4. Dynamic Weekly Spotlight
 
-### Catalog Archaeology & Deep Dives
-Album-level continuity manifested intensely within select nodes, contrasting sharply with the week's overall high-entropy shuffle. Ivan the Tolerable's catalog was accessed as a cohesive structural unit; the playback of *Saturn*, *Jupiter*, *Mars*, *Pluto*, *Neptune*, *Uranus*, *Earth*, *Venus*, and *Mercury* reflects intentional, front-to-back programmatic consumption of a themed cycle. Similar thematic coherence appeared in the concentrated clusters for The Avalanches and Frankie Reyes, suggesting that while discovery algorithms governed background hours, active deep dives were reserved for longform textural suites.
+### Weekly Historical Footnote: The "Sunrise" Matrix
+A notable event in the week's telemetry was the repeated interrogation of a single work: *"The World Is Waiting for the Sunrise"* (composed in 1919 by Ernest Seitz with lyrics by Gene Lockhart). The subject logged 8 total plays across 4 distinct aesthetic readings:
+1. **Django Reinhardt & Stéphane Grappelli (1949)**: Gypsy swing phrasing highlighting Reinhardt's acoustic-electric cadence in Rome.
+2. **George Lewis (1950s New Orleans Revival)**: Traditional brass-and-reed polyphony with Avery "Kid" Howard and Jim Robinson, emphasizing ensemble counterpoint over individual virtuosity.
+3. **Chet Atkins & Les Paul (*Chester & Lester*, 1976)**: A study in technical hybrid picking, split-channel dialogue, and mid-century technical precision.
+4. **Eric Johnson (*EJ*, 2016)**: Solo acoustic flat-picking and fingerstyle translation, modernizing Atkins' chord-melody approach.
 
-### Earworm & Replay Loops
-The repeat behavior remained largely analytical rather than hook-dependent. Outside of the systemic replays across Ivan the Tolerable's suite, targeted individual repeats were sparse. Elton John's "Social Disease" (*Goodbye Yellow Brick Road*) stood out as a narrative oddity, logged three times against an otherwise instrumental-leaning backdrop. Secondary repeat vectors showed brief, curious returns to mid-tempo sample collages (Wax Tailor’s "Que Sera", Gorillaz’ "Clint Eastwood") and idiosyncratic roots arrangements (Corn Potato String Band’s "Chesapeake Bay"), demonstrating isolated micro-loops within an expansive listening net.
+This pattern demonstrates active cross-era taxonomy—auditioning how distinct vernacular traditions interpret identical harmonic changes.
+
+### Live Circuit & Tour Archive
+Live material constituted 11.2% of total playback (20 tracks). Rather than brief singles, these events favored extended performance formats:
+- **Extended Improvisation**: Live cuts from The Disco Biscuits provided long-form structural continuity, functioning as steady rhythmic anchors across extended sessions.
+- **Archival Field Recordings**: Historic location dates—including George Lewis's *Jass at the Ohio Union*—anchored the acoustic live telemetry, prioritizing room acoustics, ambient stage bleed, and authentic historical documentation over polished studio tracking.
 
 ## 5. Replay Loops & Catalog Additions
-- **Replays**: "Social Disease" (Elton John), "Saturn or The Bringer of Obstacles" (Ivan the Tolerable), "Jupiter or The Guardian & Protector" (Ivan the Tolerable), "Mars or The Lesser Malefic" (Ivan the Tolerable), "Chesapeake Bay" (Corn Potato String Band), "Killin' It" (Foxy Shazam), "Don't Shit Where You Eat" (Ween), "Please Send Me Someone To Love" (James Booker).
-- **Liked Songs**: 
-  - "China Doll (2024 Remaster)" – Grateful Dead (*From the Mars Hotel (50th Anniversary Deluxe Edition)*)
-  - "Everything In Its Right Place" – Radiohead (*Kid A*)
-  - "42" – The Disco Biscuits (*2021/10/30 Las Vegas, NV*)
-  - "The World Is Waiting For The Sunrise" – Les Paul, Mary Ford (*The Hit Makers*)
+- **Replays**:
+  - Django Reinhardt, Stéphane Grappelli – *"The World Is Waiting for the Sunrise"* (4 plays)
+  - The Disco Biscuits – *"Helicopters"* (2 plays)
+  - Chet Atkins, Les Paul – *"The World Is Waiting for the Sunrise"* (2 plays)
+
+- **Liked Songs (New Additions)**:
+  - Skinshape – *"The Blade of a Knife"*
+  - Louis Armstrong – *"Spooks (feat. Gordon Jenkins And His Orchestra)"*
+  - Ленинград – *"Звезда рок-н-ролла"*
+  - mashathegreat – *"Everything Is Illuminated- leningrad/Ленинград"*
+  - Django Reinhardt, Emmanuel Soudieux, Eugène Vées, Maurice Meunier – *"Les yeux noirs"*
+  - George Lewis – *"The World Is Waiting for the Sunrise"*
+  - Django Reinhardt, Stéphane Grappelli – *"The World Is Waiting for the Sunrise"*
+  - Eric Johnson – *"The World Is Waiting For The Sunrise"*
+  - Chet Atkins, Les Paul – *"The World Is Waiting for the Sunrise"*
+  - Jacob Jolliff – *"Los Angeles County Breakdown"*
+  - Jacob Jolliff – *"Vera"*
+  - Queen – *"Don't Stop Me Now (With Long-Lost Guitars)"*
+  - Freddie Mercury – *"The Great Pretender"*
 
 ## 6. Algorithmic Suggestions Radar & Weekend Queue
 
 | Track | Artist | Shelf Source | Prior Impressions | Musicologist Appraisal |
 | :--- | :--- | :--- | :--- | :--- |
-| **Phish: Live In Savannah 2026** | Phish | new_releases | 5 | Logical extension of the week's high-tier Grateful Dead and Disco Biscuits sessions; tests current appetite for contemporary long-form arena improvisation. |
-| **Brookside Hybrid 23** | Ott | your_daily_discover | 3 | High algorithmic resonance following 7 logged Ott plays this period; offers a clean bridge between downtempo dub architecture and synth modularity. |
-| **Scenery** | Ryo Fukui | your_daily_discover | 2 | Mirrors the modal jazz and piano technique logged via Dorothy Ashby and James Booker; classic hard-bop trio textures provide acoustic clarity. |
-| **These Foolish Things (Remastered 1995)** | Lester Young | discover_mix | 2 | Serves as an essential historical antecedent to the week's melodic instrumental jazz and early electric experimentation (Les Paul). |
-| **Amour, voulés vous acorder** | Baptiste Bailly, Efrén López, Matthew Baker | discover_mix | 1 | Uncharted cross-modal acoustic ensemble (hurdy-gurdy, fretless bass, modal piano); parallels the folk-roots instrumentation of Corn Potato String Band with European early-music sensibilities. |
+| **Josephine** | Les Paul, Mary Ford | discover_mix | Seen 3x (Pos: 1) | Directly intersects with the Atkins/Paul sessions logged this week. Provides essential historical context regarding early multi-track guitar techniques and tape-speed manipulation. |
+| **Guérillons** | Kham Meslien, Roger Raspail | discover_mix | Seen 2x (Pos: 1) | Acoustic double-bass dialogue with West Indian percussion. Bridges the acoustic string timbre of the week with modal, world-jazz rhythmic structures. |
+| **Pluto or The Great Renewer** | Ivan the Tolerable | quick_picks | Seen 2x (Pos: 1) | Free-leaning, space-rock krautrock instrumental. Fits alongside the modular electronic explorations of Floating Points and Younger Brother. |
+| **Visite du vigile** | Miles Davis | your_daily_discover | Seen 1x (Pos: 1) | Extracted from the 1958 *Ascenseur pour l'échafaud* sessions. Aligns with the mid-century Parisian recordings logged this week while offering a stripped-down, noir modal contrast. |
