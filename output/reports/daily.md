@@ -1,37 +1,33 @@
-# Daily Listening Log: 2026-11-03
+# Daily Listening Log: 2026-11-04
 *Recorded via ytm-dl | Cadence: Daily Observation*
 
 ## 1. Session Telemetry
-- Total Tracks Observed: 13
-- Auditory Duration: 44m
-- Unique Artists: 13 (13 albums)
-- Catalog Anchor: Sven Libaek (8% of session, 1 plays)
-- Library Ratio: 0.0% library tracks
+- Total Tracks Observed: 7
+- Auditory Duration: 37m
+- Unique Artists: 2 (2 albums)
+- Catalog Anchor: Green-House (71% of session, 5 plays)
+- Library Ratio: 28.6% library tracks
 
 ## 2. Musicological Notes
 ### Field Observations
-- **Primary Anchor**: Absolute horizontal dispersion; 13 unique selections across 13 distinct artists and albums, paired with a 0.0% library ratio, reflecting pure exploratory browsing or a focused algorithmic radio session.
-- **Harmonic Texture**: Strong convergence on mid-century jazz-funk, modal ostinatos, and library cues—ranging from Walter Wanderley’s percussive B-3 organ work to Yusef Lateef’s modal flute phrasing and Akalé Wubé's Ethio-jazz brass stabs.
-- **Pacing & Transitions**: Steady mid-tempo instrumental propulsion; transitions bridge 1970s Japanese jazz-fusion (Jiro Inagaki, Fujimaru Band) cleanly into contemporary retro-soul instrumentalists (The Budos Band, Ikebe Shakedown).
-- **Anomalies & Drift**: Zero vocal-centric tracks observed; the session maintains an uninterrupted 44-minute lineage of instrumental, groove-centric crate-digger aesthetics.
+- **Primary Anchor**: Olive Ardizoni’s project Green-House accounted for five of seven logged tracks, drawing almost in full from the 2020 EP *Six Songs for Invisible Gardens*.
+- **Harmonic Texture**: Clean separation between organic, low-arousal minimalist synthesizer vignettes (Green-House) and dense, mid-tempo psychedelic downtempo production (Younger Brother).
+- **Pacing & Transitions**: The session moved linearly without repeat plays. An initial ambient suite framed around short botanical sketches yielded to two longer, beat-driven cuts exceeding five minutes each ("Evil & Harm" and "Weird On a Monday Night").
 
 ### Narrative Synthesis
-The listening period operates as a cohesive study in rhythm-section-led instrumental music, emphasizing groove-heavy global jazz from the late 1960s through contemporary revival movements. The progression relies on timbre rather than chronology, linking Sven Libaek’s underwater documentary library jazz directly to Japanese jazz-rock fusion (*The Raven Speaks*) and West African-influenced modal funk without jarring dynamic breaks.
+The 37-minute listening window was structured into two distinct, deliberate movements. The first two-thirds operated within the gentle, post-ambient lineage of Green-House. Utilizing simple melodic phrases, pitched idiophone textures, and open-interval synthesis, these tracks evoked mid-century environmental music and domestic soundscapes, establishing a calm, unhurried sonic floor.
 
-The presence of both contemporary instrumental groups (Ikebe Shakedown, Akalé Wubé) alongside historic studio players (Booker T. Averheart, Walter Wanderley) points to an exploratory radio thread informed by archival funk reissues and soundtrack aesthetics.
+The session closed with a clear sonic transition into Younger Brother's 2007 album *The Last Days of Gravity*. Engineered by Simon Posford and Benji Vaughan, this material reintroduced rhythmic drive, layered acoustic guitar, vocoded vocal fragments, and analog bass saturation. While stylistically divergent in energy, both artists share an affinity for organic-electronic hybridity, linking environmental ambient tranquility to introspective electronic downtempo.
 
 ## 3. Dynamic Field Spotlight
-### Sonic Texture & Timbre
-The acoustic signature is defined by dry, uncompressed rhythmic sections: flat-wound electric bass, muted snare hits, and rhythm guitars playing tight chop patterns. Melodic duties are dominated by brass ensembles, vintage reed instruments, and warm analog keyboard treatments (notably the Hammond organ on Wanderley's cut and electric pianos across the Japanese fusion cuts). Reverb is applied sparingly, evoking the dry studio isolation booths typical of late-1960s and early-1970s library recording sessions.
-
-### Historical Field Note
-Sven Libaek’s featured track, "Solar Flares," originated from Australian documentary and educational score archives. Libaek’s work—originally commissioned for marine documentaries and industrial reels in the late 1960s and early 1970s—gained a second life among hip-hop producers and crate-digging archivists in the late 1990s, cementing library music as a viable sub-genre of jazz-funk historiography.
+- **Sonic Texture & Timbre**: Green-House's timbre relies on unadorned sine and triangle waves sculpted into soft, round plucks reminiscent of marimbas and woodblocks, maintaining dry acoustic staging with modest spatial reverb. By contrast, Younger Brother employs heavy multi-tap delays, sidechain compression, and granular audio manipulation to build a wide, dense stereophonic field.
+- **Catalog Archaeology & Deep Cuts**: Rather than pulling isolated singles, the log reflects long-form album engagement. The listener auditioned five consecutive selections from *Six Songs for Invisible Gardens*, treating the record as a unified long-form ambient installation before switching catalogs.
 
 ## 4. Algorithmic Suggestions Radar
 
 | Track | Artist | Shelf Source | Prior Impressions | Musicologist Appraisal |
 | :--- | :--- | :--- | :--- | :--- |
-| **Générique** | Miles Davis | your_daily_discover | 0 | **Direct Alignment**: Davis's improvised score for Louis Malle's *Ascenseur pour l'échafaud* matches the cinematic, muted-trumpet noir textures implied by Lateef and Libaek. |
-| **Pudding & Pie** | The New Mastersounds | your_daily_discover | 0 | **Direct Alignment**: Modern British funk quartet that directly parallels the rhythmic pocket and organ-led dynamics of Booker T. Averheart and Ikebe Shakedown. |
-| **Oboe Diddly** | Skinshape & J. Moody | your_daily_discover | 0 | **Aesthetic Alignment**: Psych-soul and vintage library pastiche; mirrors the session's mid-century instrumental production values. |
-| **Holidays in the Sun** | Sex Pistols | your_daily_discover | 0 | **Algorithmic Aberration**: High-distortion late-70s punk rock. Utterly detached from the instrumental groove, modal jazz, and library funk telemetry of the day. |
+| **Rogue Bagel** | Ott | your_daily_discover | 1st impression | Logically sound. Ott shares production history, genre lineage (Twisted Records / psych-downtempo), and textural overlap with Younger Brother. |
+| **Anemo Wheel** | Haruomi Hosono | quick_picks | 1st impression | Strong aesthetic parallel. Hosono's ambient and environmental synthesizer works directly influenced modern pastoral ambient acts like Green-House. |
+| **River Dream** | Otto Benson | discover_mix | 1st impression | Contextually aligned. An unfamiliar artist recommended via algorithmic discovery, likely targeting the quiet, woodsy melodic character of the Green-House cluster. |
+| **Black Hot Soup (DJ Shadow "My Own Reality" Re-Write)** | King Gizzard & The Lizard Wizard | your_daily_discover | 1st impression | Stylistic contrast. Pulls toward breakbeat and psychedelic rock, reflecting the heavier rhythmic elements of Younger Brother rather than ambient stillness. |

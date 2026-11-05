@@ -5,8 +5,8 @@ browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
 total_items: 13
-new_items_latest_run: 3
+new_items_latest_run: 0
 latest_batch_size: 10
 first_captured: '2026-09-17T08:41:23Z'
-last_captured: '2026-10-01T10:10:40Z'
-run_id: gh-6873
+last_captured: '2026-11-05T10:58:15Z'
+run_id: gh-7036
