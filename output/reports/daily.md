@@ -1,33 +1,37 @@
-# Daily Listening Log: 2026-11-04
+# Daily Listening Log: 2026-11-05
 *Recorded via ytm-dl | Cadence: Daily Observation*
 
 ## 1. Session Telemetry
-- Total Tracks Observed: 7
-- Auditory Duration: 37m
-- Unique Artists: 2 (2 albums)
-- Catalog Anchor: Green-House (71% of session, 5 plays)
-- Library Ratio: 28.6% library tracks
+- Total Tracks Observed: 11
+- Auditory Duration: 45m
+- Unique Artists: 8 (11 albums)
+- Catalog Anchor: Grateful Dead (36% of session, 4 plays)
+- Library Ratio: 0.0% library tracks
 
 ## 2. Musicological Notes
 ### Field Observations
-- **Primary Anchor**: Olive Ardizoni’s project Green-House accounted for five of seven logged tracks, drawing almost in full from the 2020 EP *Six Songs for Invisible Gardens*.
-- **Harmonic Texture**: Clean separation between organic, low-arousal minimalist synthesizer vignettes (Green-House) and dense, mid-tempo psychedelic downtempo production (Younger Brother).
-- **Pacing & Transitions**: The session moved linearly without repeat plays. An initial ambient suite framed around short botanical sketches yielded to two longer, beat-driven cuts exceeding five minutes each ("Evil & Harm" and "Weird On a Monday Night").
+- **Primary Anchor**: Jerry Garcia-affiliated material formed the gravitational core of the session (nearly 55% of total selections), spanning core Grateful Dead compositions, Garcia's solo work, and a previously unreleased Garcia/Saunders session take.
+- **Harmonic Texture**: Heavy emphasis on loose, organic 1970s ensemble dynamics, marked by syncopated clavinet/organ grooves, roots-rock slide guitars, and syncopated New Orleans-style rhythmic foundations (Little Feat's "Dixie Chicken", Garcia/Saunders' "Keepers").
+- **Anomalies & Drift**: The primary stylistic departure occurred via Lô Borges’ "Fio Da Navalha", injecting Brazilian *Clube da Esquina* modal harmonies and acoustic guitar arrangements into an otherwise Anglo-American roots and blues-rock environment.
+- **Pacing & Transitions**: The session progressed through mid-tempo, feel-driven structures without structural repetition; zero tracks were looped or replayed.
 
 ### Narrative Synthesis
-The 37-minute listening window was structured into two distinct, deliberate movements. The first two-thirds operated within the gentle, post-ambient lineage of Green-House. Utilizing simple melodic phrases, pitched idiophone textures, and open-interval synthesis, these tracks evoked mid-century environmental music and domestic soundscapes, establishing a calm, unhurried sonic floor.
+The 45-minute listening window was characterized by deep stylistic coherence anchored in mid-1970s analog production values. Rather than relying on extended live concert tapes, the session pulled from studio releases, alternate takes, and tight studio-bound funk and R&B interpretations. Selections such as Garcia’s cover of Smokey Robinson’s "When The Hunter Gets Captured By The Game" and Shuggie Otis’ "Funky Thithee" highlight an appetite for warm, rhythm-section-led arrangements dominated by electric piano, clean guitar lines, and subtle syncopation.
 
-The session closed with a clear sonic transition into Younger Brother's 2007 album *The Last Days of Gravity*. Engineered by Simon Posford and Benji Vaughan, this material reintroduced rhythmic drive, layered acoustic guitar, vocoded vocal fragments, and analog bass saturation. While stylistically divergent in energy, both artists share an affinity for organic-electronic hybridity, linking environmental ambient tranquility to introspective electronic downtempo.
+Even when branching into broader international or legacy catalogs, the choices retained structural commonalities. The inclusion of The Kinks' "Apeman" and Lô Borges' "Fio Da Navalha" shared an acoustic, rhythm-forward chassis that complemented the country-funk and Americana of Little Feat and the Grateful Dead. The algorithmic landscape reflected entirely non-library discoveries, pointing toward an active, exploratory radio or automated queue rather than self-directed playback of pinned favorites.
 
 ## 3. Dynamic Field Spotlight
-- **Sonic Texture & Timbre**: Green-House's timbre relies on unadorned sine and triangle waves sculpted into soft, round plucks reminiscent of marimbas and woodblocks, maintaining dry acoustic staging with modest spatial reverb. By contrast, Younger Brother employs heavy multi-tap delays, sidechain compression, and granular audio manipulation to build a wide, dense stereophonic field.
-- **Catalog Archaeology & Deep Cuts**: Rather than pulling isolated singles, the log reflects long-form album engagement. The listener auditioned five consecutive selections from *Six Songs for Invisible Gardens*, treating the record as a unified long-form ambient installation before switching catalogs.
+### Sonic Texture & Timbre
+The prevailing sonic fingerprint across this session was defined by early-to-mid 1970s analog tracking: uncompressed drum transients, round bass responses, and dry, upfront vocal placement. Keyboards functioned as primary rhythmic drivers rather than melodic leads, observed in the syncopated clavinet textures on Little Feat’s "Dixie Chicken", Merl Saunders' Hammond organ interplay on "Keepers", and Shuggie Otis' multi-instrumental layering.
+
+### Historical Field Note
+Jerry Garcia’s recorded output in 1973–1974 operated as a bridge between San Francisco psychedelia and classic soul. His take on "When The Hunter Gets Captured By The Game"—originally penned by Smokey Robinson for The Marvelettes in 1967—featured studio backing by Merl Saunders and Elvis Presley's drummer Ron Tutt, highlighting the precise mid-70s session ensemble dynamics heard throughout today's log.
 
 ## 4. Algorithmic Suggestions Radar
 
 | Track | Artist | Shelf Source | Prior Impressions | Musicologist Appraisal |
 | :--- | :--- | :--- | :--- | :--- |
-| **Rogue Bagel** | Ott | your_daily_discover | 1st impression | Logically sound. Ott shares production history, genre lineage (Twisted Records / psych-downtempo), and textural overlap with Younger Brother. |
-| **Anemo Wheel** | Haruomi Hosono | quick_picks | 1st impression | Strong aesthetic parallel. Hosono's ambient and environmental synthesizer works directly influenced modern pastoral ambient acts like Green-House. |
-| **River Dream** | Otto Benson | discover_mix | 1st impression | Contextually aligned. An unfamiliar artist recommended via algorithmic discovery, likely targeting the quiet, woodsy melodic character of the Green-House cluster. |
-| **Black Hot Soup (DJ Shadow "My Own Reality" Re-Write)** | King Gizzard & The Lizard Wizard | your_daily_discover | 1st impression | Stylistic contrast. Pulls toward breakbeat and psychedelic rock, reflecting the heavier rhythmic elements of Younger Brother rather than ambient stillness. |
+| **This Time** | Neal Francis | your_daily_discover | 1st impression | **Direct Aesthetic Match**. Contemporary analog soul/rock heavily driven by clavinet, Rhodes, and classic Allen Toussaint-influenced rhythm sections; seamlessly continues the Little Feat/Merl Saunders lineage. |
+| **Take the Highway** | The Marshall Tucker Band | discover_mix | 1st impression | **Harmonic Match**. Classic Southern rock utilizing country-rock modal soloing and flute flourishes; conceptually mirrors the mid-70s Grateful Dead studio framework. |
+| **The Rolling Thunder Revue 1976: Fort Worth Texas, May 16th** | Bob Dylan | new_releases | 1st impression | **Contextual Match**. Dylan was tracked during the session; this archival live tape matches the historical era and features raw, roots-heavy ensemble work similar to the Garcia/Dead catalog. |
+| **Blue Sky And Yellow Sunflower** | Susumu Yokota | your_daily_discover | 1st impression | **Stylistic Divergence**. Minimalist ambient/downtempo. Represents an algorithmic swing toward quiet textural listening, sharp in contrast to today's analog roots-funk instrumentation. |
