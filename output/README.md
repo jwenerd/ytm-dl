@@ -1,12 +1,12 @@
 # 📝  output 
 
-## ⚙️ [run #7038](https://github.com/jwenerd/ytm-dl/actions/runs/42130916904)
+## ⚙️ [run #7039](https://github.com/jwenerd/ytm-dl/actions/runs/42176630740)
 
 ### 📁 Files
 
 |                                                                                 |lines|size|
 |---------------------------------------------------------------------------------|-----|----|
-|[`history.csv` ](history.csv)                                                    |68769|8.7M|
+|[`history.csv` ](history.csv)                                                    |68777|8.7M|
 |[`history/2024-01.csv` ](history/2024-01.csv)                                    |2255 |288K|
 |[`history/2024-02.csv` ](history/2024-02.csv)                                    |1736 |212K|
 |[`history/2024-03.csv` ](history/2024-03.csv)                                    |1868 |228K|
@@ -31,7 +31,7 @@
 |[`history/2026-08.csv` ](history/2026-08.csv)                                    |5921 |772K|
 |[`history/2026-09.csv` ](history/2026-09.csv)                                    |4283 |568K|
 |[`history/2026-10.csv` ](history/2026-10.csv)                                    |961  |124K|
-|[`history/2026-11.csv` ](history/2026-11.csv)                                    |64   |8.0K|
+|[`history/2026-11.csv` ](history/2026-11.csv)                                    |72   |12K |
 |[`home/albums_for_you.csv` ](home/albums_for_you.csv)                            |133  |16K |
 |[`home/all_time_essentials.csv` ](home/all_time_essentials.csv)                  |12   |4.0K|
 |[`home/autumn_loading.csv` ](home/autumn_loading.csv)                            |17   |4.0K|
