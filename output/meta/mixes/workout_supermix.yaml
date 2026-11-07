@@ -3,11 +3,11 @@ mood_chip: Workout
 playlist_id: RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk
 description: Push yourself with this mix of upbeat songs that span all your tastes.
   Always updating.
-featured_artists: Daft Punk, Floating Points, Hallucinogen, Younger Brother
+featured_artists: Hallucinogen, Daft Punk, Shpongle, Peaches
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3348
-new_tracks_latest_run: 32
+total_unique_tracks: 3361
+new_tracks_latest_run: 13
 latest_batch_size: 500
-last_updated: '2026-11-06T10:55:04Z'
-run_id: gh-7040
+last_updated: '2026-11-07T10:13:25Z'
+run_id: gh-7044

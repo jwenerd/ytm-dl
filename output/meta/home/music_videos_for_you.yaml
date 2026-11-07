@@ -4,9 +4,9 @@ slug: music_videos_for_you
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 103
-new_items_latest_run: 9
+total_items: 108
+new_items_latest_run: 5
 latest_batch_size: 10
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-11-06T10:55:24Z'
-run_id: gh-7040
+last_captured: '2026-11-07T10:13:43Z'
+run_id: gh-7044
