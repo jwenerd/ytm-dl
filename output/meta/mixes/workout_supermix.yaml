@@ -3,11 +3,11 @@ mood_chip: Workout
 playlist_id: RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk
 description: Push yourself with this mix of upbeat songs that span all your tastes.
   Always updating.
-featured_artists: Hallucinogen, Daft Punk, Shpongle, Peaches
+featured_artists: Kavinsky, Ween, Justice, Daft Punk
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3361
-new_tracks_latest_run: 13
+total_unique_tracks: 3385
+new_tracks_latest_run: 24
 latest_batch_size: 500
-last_updated: '2026-11-07T10:13:25Z'
-run_id: gh-7044
+last_updated: '2026-11-08T10:25:12Z'
+run_id: gh-7048
