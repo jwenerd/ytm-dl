@@ -3,11 +3,11 @@ mood_chip: Workout
 playlist_id: RDTMAK5uy_lYASLyO2RK1XMAg1Och0EWW1biH_JFTNk
 description: Push yourself with this mix of upbeat songs that span all your tastes.
   Always updating.
-featured_artists: Kavinsky, Ween, Justice, Daft Punk
+featured_artists: Shpongle, MGMT, Daft Punk, GOOSE
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3385
-new_tracks_latest_run: 24
+total_unique_tracks: 3397
+new_tracks_latest_run: 12
 latest_batch_size: 500
-last_updated: '2026-11-08T10:25:12Z'
-run_id: gh-7048
+last_updated: '2026-11-09T11:35:26Z'
+run_id: gh-7052

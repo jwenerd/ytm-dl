@@ -1,7 +1,7 @@
 daily:
-  archive_file: reports/archive/daily/2026/2026-11-07.md
-  last_generated_at: '2026-11-08T10:25:34.527705+00:00'
-  last_period: '2026-11-07'
+  archive_file: reports/archive/daily/2026/2026-11-08.md
+  last_generated_at: '2026-11-09T11:35:46.649501+00:00'
+  last_period: '2026-11-08'
   live_file: reports/daily.md
 monthly:
   archive_file: reports/archive/monthly/2026/2026-10.md
@@ -9,7 +9,7 @@ monthly:
   last_period: 2026-10
   live_file: reports/monthly.md
 weekly:
-  archive_file: reports/archive/weekly/2026/2026-W44.md
-  last_generated_at: '2026-11-02T11:11:29.145868+00:00'
-  last_period: 2026-W44
+  archive_file: reports/archive/weekly/2026/2026-W45.md
+  last_generated_at: '2026-11-09T11:35:46.649501+00:00'
+  last_period: 2026-W45
   live_file: reports/weekly.md
