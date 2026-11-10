@@ -3,11 +3,11 @@ mood_chip: Energize
 playlist_id: RDTMAK5uy_kskEGBYLWbdi3Z9IdjDoDEI8hEBvHEreM
 description: Get a boost with this mix of high-energy songs that span all your tastes.
   Always updating.
-featured_artists: Phish, Mr. Bungle, Daft Punk, Little Feat
+featured_artists: Hallucinogen, Daft Punk, Ween, Sex Pistols
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 2802
-new_tracks_latest_run: 15
+total_unique_tracks: 2812
+new_tracks_latest_run: 10
 latest_batch_size: 500
-last_updated: '2026-11-09T11:35:26Z'
-run_id: gh-7052
+last_updated: '2026-11-10T11:15:14Z'
+run_id: gh-7055
