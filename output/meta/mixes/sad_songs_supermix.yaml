@@ -2,11 +2,11 @@ title: Sad Songs Supermix
 mood_chip: Sad
 playlist_id: RDTMAK5uy_mZvWCHQ-KwmUM_ZMeZNRF93nKrLafqFp0
 description: ''
-featured_artists: Radiohead, Grateful Dead, PINK FLOYD, Nick Drake
+featured_artists: Grateful Dead, Radiohead, Natalie Merchant, John R. Miller
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3279
-new_tracks_latest_run: 14
+total_unique_tracks: 3284
+new_tracks_latest_run: 5
 latest_batch_size: 500
-last_updated: '2026-11-10T11:15:14Z'
-run_id: gh-7055
+last_updated: '2026-11-11T11:00:00Z'
+run_id: gh-7059
