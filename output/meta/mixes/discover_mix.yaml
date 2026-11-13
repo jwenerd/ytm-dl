@@ -2,11 +2,12 @@ title: Discover Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_n_5IN6hzAOwdCnM8D8rzrs3vDl12UcZpA
 description: Discover great music, picked just for you. Always updating.
-featured_artists: John Kahn, Spirituals, Mantovani & His Orchestra, Widespread Panic
+featured_artists: Hiromasa Suzuki, Jiro Inagaki and His Soul Media, Les Paul, Ryo
+  Fukui
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 6534
-new_tracks_latest_run: 54
-latest_batch_size: 295
-last_updated: '2026-11-12T11:14:41Z'
-run_id: gh-7063
+total_unique_tracks: 6567
+new_tracks_latest_run: 33
+latest_batch_size: 298
+last_updated: '2026-11-13T11:00:27Z'
+run_id: gh-7067
