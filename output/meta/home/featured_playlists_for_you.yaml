@@ -5,8 +5,8 @@ browse_id: FEmusic_moods_and_genres
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
 total_items: 55
-new_items_latest_run: 1
+new_items_latest_run: 0
 latest_batch_size: 10
 first_captured: '2026-09-13T08:20:33Z'
-last_captured: '2026-11-15T10:56:38Z'
-run_id: gh-7075
+last_captured: '2026-11-16T11:22:16Z'
+run_id: gh-7079

@@ -2,12 +2,11 @@ title: Discover Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_n_5IN6hzAOwdCnM8D8rzrs3vDl12UcZpA
 description: Discover great music, picked just for you. Always updating.
-featured_artists: Dead & Company, Bob Weir, New Riders of the Purple Sage, The Sight
-  Below
+featured_artists: Carbon Based Lifeforms, The Band, Kalya Scintilla, Henry Mancini
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 6626
-new_tracks_latest_run: 27
-latest_batch_size: 344
-last_updated: '2026-11-15T10:56:19Z'
-run_id: gh-7075
+total_unique_tracks: 6664
+new_tracks_latest_run: 38
+latest_batch_size: 396
+last_updated: '2026-11-16T11:21:56Z'
+run_id: gh-7079
