@@ -2,11 +2,11 @@ title: My Supermix
 mood_chip: Home
 playlist_id: RDTMAK5uy_kset8DisdE7LSD4TNjEVvrKRTmG7a56sY
 description: A mix of songs that span all your tastes. Always updating.
-featured_artists: Ween, Grateful Dead, Daft Punk, Idris Muhammad
+featured_artists: "\xC9va Lenoir, Ween, the Keels, Grateful Dead"
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 10247
-new_tracks_latest_run: 58
+total_unique_tracks: 10338
+new_tracks_latest_run: 91
 latest_batch_size: 500
-last_updated: '2026-11-16T11:21:56Z'
-run_id: gh-7079
+last_updated: '2026-11-17T11:54:22Z'
+run_id: gh-7082

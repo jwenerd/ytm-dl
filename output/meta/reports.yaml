@@ -1,7 +1,7 @@
 daily:
-  archive_file: reports/archive/daily/2026/2026-11-15.md
-  last_generated_at: '2026-11-16T11:22:17.727774+00:00'
-  last_period: '2026-11-15'
+  archive_file: reports/archive/daily/2026/2026-11-16.md
+  last_generated_at: '2026-11-17T11:54:40.883913+00:00'
+  last_period: '2026-11-16'
   live_file: reports/daily.md
 monthly:
   archive_file: reports/archive/monthly/2026/2026-10.md
