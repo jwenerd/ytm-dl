@@ -1,5 +1,6 @@
 """Unit tests for src/reports/rotator.py"""
 
+import csv
 import os
 from datetime import UTC, datetime
 from unittest.mock import patch
@@ -120,12 +121,51 @@ def test_update_reports_readme(tmp_path):
         assert "[daily.md](daily.md)" in readme_text
 
 
+def _write_history_csv(output_dir: str, played_at_dates: list[str]) -> None:
+    """Helper to seed output/history.csv with plays on given ISO date/timestamp strings."""
+    history_path = os.path.join(output_dir, "history.csv")
+    os.makedirs(output_dir, exist_ok=True)
+    fieldnames = [
+        "videoId",
+        "title",
+        "artists",
+        "album",
+        "duration_seconds",
+        "inLibrary",
+        "played_at",
+    ]
+    with open(history_path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for idx, ts in enumerate(played_at_dates, start=1):
+            writer.writerow(
+                {
+                    "videoId": f"vid-{idx}",
+                    "title": f"Track {idx}",
+                    "artists": "Test Artist",
+                    "album": "Test Album",
+                    "duration_seconds": "200",
+                    "inLibrary": "True",
+                    "played_at": ts,
+                }
+            )
+
+
 @patch("src.reports.rotator.generate_report", return_value="# Mocked Report Content\n")
 def test_run_reports_lazy_man_flow(mock_gen, tmp_path):
     output_dir = str(tmp_path)
     now_dt = datetime(2026, 10, 19, 10, 0, 0, tzinfo=UTC)
 
-    # First run without API key -> falls back to deterministic and generates daily, weekly, monthly
+    # Seed plays in daily (2026-10-18), weekly (2026-W42), and monthly (2026-09) windows
+    _write_history_csv(
+        output_dir,
+        [
+            "2026-10-18T12:00:00Z",
+            "2026-09-15T12:00:00Z",
+        ],
+    )
+
+    # First run -> generates daily, weekly, monthly
     generated = run_reports(output_dir=output_dir, now_dt=now_dt)
     assert "daily" in generated
     assert "weekly" in generated
@@ -146,6 +186,95 @@ def test_run_reports_lazy_man_flow(mock_gen, tmp_path):
     forced_run = run_reports(output_dir=output_dir, force_cadence="daily", now_dt=now_dt)
     assert forced_run == ["daily"]
     assert mock_gen.call_count == 4
+
+
+@patch("src.reports.rotator.generate_report", return_value="# Should Not Run\n")
+def test_run_reports_skips_zero_activity(mock_gen, tmp_path):
+    output_dir = str(tmp_path)
+    now_dt = datetime(2026, 10, 19, 10, 0, 0, tzinfo=UTC)
+
+    # No history.csv -> 0 tracks for daily, weekly, monthly
+    generated = run_reports(output_dir=output_dir, now_dt=now_dt)
+    assert generated == []
+    mock_gen.assert_not_called()
+
+    # No report files, archive, README, or metadata written
+    assert not os.path.exists(os.path.join(output_dir, "reports"))
+    assert not os.path.exists(os.path.join(output_dir, "meta", "reports.yaml"))
+
+    # Even forced cadences skip when there are 0 plays
+    forced = run_reports(output_dir=output_dir, force_cadence="all", now_dt=now_dt)
+    assert forced == []
+    mock_gen.assert_not_called()
+
+
+@patch("src.reports.rotator.generate_report")
+def test_run_reports_preserves_previous_report_on_inactive_day(mock_gen, tmp_path):
+    output_dir = str(tmp_path)
+    mock_gen.side_effect = [
+        "# Daily Report 2026-10-18\n",
+        "# Daily Report 2026-10-19\n",
+    ]
+    meta_path = os.path.join(output_dir, "meta", "reports.yaml")
+    write_reports_meta(
+        meta_path,
+        {
+            "weekly": {"last_period": "2026-W42"},
+            "monthly": {"last_period": "2026-09"},
+        },
+    )
+
+    # Day 1 (2026-10-18) has plays
+    _write_history_csv(output_dir, ["2026-10-18T12:00:00Z"])
+    day1_now = datetime(2026, 10, 19, 10, 0, 0, tzinfo=UTC)
+    assert run_reports(output_dir=output_dir, now_dt=day1_now) == ["daily"]
+
+    live_daily = os.path.join(output_dir, "reports", "daily.md")
+    with open(live_daily) as f:
+        assert f.read() == "# Daily Report 2026-10-18\n"
+    assert read_reports_meta(meta_path)["daily"]["last_period"] == "2026-10-18"
+
+    # Day 2 (2026-10-19) has 0 plays -> skipped cleanly without touching live file or meta
+    day2_now = datetime(2026, 10, 20, 10, 0, 0, tzinfo=UTC)
+    assert run_reports(output_dir=output_dir, now_dt=day2_now) == []
+    assert mock_gen.call_count == 1
+    with open(live_daily) as f:
+        assert f.read() == "# Daily Report 2026-10-18\n"
+    assert not os.path.exists(
+        os.path.join(output_dir, "reports", "archive", "daily", "2026", "2026-10-19.md")
+    )
+    assert read_reports_meta(meta_path)["daily"]["last_period"] == "2026-10-18"
+
+    # Late-arriving plays for 2026-10-19 arrive later -> next run picks them up
+    _write_history_csv(output_dir, ["2026-10-19T22:00:00Z", "2026-10-18T12:00:00Z"])
+    assert run_reports(output_dir=output_dir, now_dt=day2_now) == ["daily"]
+    assert mock_gen.call_count == 2
+    with open(live_daily) as f:
+        assert f.read() == "# Daily Report 2026-10-19\n"
+    assert read_reports_meta(meta_path)["daily"]["last_period"] == "2026-10-19"
+
+
+@patch("src.reports.rotator.generate_report", return_value="# Active Report\n")
+def test_run_reports_partial_activity_across_cadences(mock_gen, tmp_path):
+    output_dir = str(tmp_path)
+    # Monday 2026-10-19: daily=2026-10-18, weekly=2026-W42 (Oct 12-18), monthly=2026-09
+    now_dt = datetime(2026, 10, 19, 10, 0, 0, tzinfo=UTC)
+
+    # Plays exist in previous week (Oct 15) and previous month (Sep 10), but NOT yesterday (Oct 18)
+    _write_history_csv(
+        output_dir,
+        [
+            "2026-10-15T12:00:00Z",
+            "2026-09-10T12:00:00Z",
+        ],
+    )
+
+    generated = run_reports(output_dir=output_dir, now_dt=now_dt)
+    assert generated == ["weekly", "monthly"]
+    assert mock_gen.call_count == 2
+    assert not os.path.exists(os.path.join(output_dir, "reports", "daily.md"))
+    assert os.path.isfile(os.path.join(output_dir, "reports", "weekly.md"))
+    assert os.path.isfile(os.path.join(output_dir, "reports", "monthly.md"))
 
 
 def test_should_run_cadence_evening_vs_nocturnal_timing(monkeypatch):
