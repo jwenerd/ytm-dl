@@ -5,8 +5,8 @@ description: A mix of the songs you've been listening to most in the last few we
 featured_artists: Melanie, Speedy West, Jimi Hendrix, Bing Crosby
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1631
-new_tracks_latest_run: 0
-latest_batch_size: 437
-last_updated: '2026-11-18T11:44:47Z'
-run_id: gh-7085
+total_unique_tracks: 1668
+new_tracks_latest_run: 37
+latest_batch_size: 482
+last_updated: '2026-11-19T11:42:27Z'
+run_id: gh-7088

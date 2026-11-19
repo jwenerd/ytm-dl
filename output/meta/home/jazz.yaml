@@ -4,9 +4,9 @@ slug: jazz
 browse_id: FEmusic_moods_and_genres_category
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 10
-new_items_latest_run: 10
+total_items: 19
+new_items_latest_run: 9
 latest_batch_size: 10
 first_captured: '2026-10-15T08:20:19Z'
-last_captured: '2026-10-15T08:20:19Z'
-run_id: gh-6934
+last_captured: '2026-11-19T11:42:44Z'
+run_id: gh-7088
