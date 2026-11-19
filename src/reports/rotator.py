@@ -204,7 +204,9 @@ def run_reports(
 ) -> list[str]:
     """
     Evaluates cadences and generates due reports.
-    If force_cadence is provided ('daily', 'weekly', 'monthly', or 'all'), generates them unconditionally.
+    If force_cadence is provided ('daily', 'weekly', 'monthly', or 'all'), evaluates them regardless of schedule.
+    Periods with zero listening activity (total_tracks == 0) are skipped without
+    calling the generator, writing files, or updating report metadata.
     Returns list of cadences generated.
     """
     if now_dt is None:
@@ -229,9 +231,16 @@ def run_reports(
 
         if is_forced or should_run:
             use_date = target_date if target_date else computed_target
-            logger.info("Generating %s report for period: %s", cad, period_key)
-
             ctx = assemble_report_context(output_dir, cad, use_date)
+            if ctx["telemetry"]["total_tracks"] == 0:
+                logger.info(
+                    "Skipping %s report for period %s: no listening activity",
+                    cad,
+                    period_key,
+                )
+                continue
+
+            logger.info("Generating %s report for period: %s", cad, period_key)
             content = generate_report(ctx, api_key=api_key)
 
             rotate_and_write_report(
