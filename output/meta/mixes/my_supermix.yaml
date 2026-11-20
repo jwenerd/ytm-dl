@@ -2,11 +2,11 @@ title: My Supermix
 mood_chip: Home
 playlist_id: RDTMAK5uy_kset8DisdE7LSD4TNjEVvrKRTmG7a56sY
 description: A mix of songs that span all your tastes. Always updating.
-featured_artists: The Sorcerers, Dorothy Ashby, Floating Points, Alice Coltrane
+featured_artists: "Grateful Dead, Mulatu Astatke, Green-House, Hermanos Guti\xE9rrez"
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 10443
-new_tracks_latest_run: 32
+total_unique_tracks: 10561
+new_tracks_latest_run: 118
 latest_batch_size: 500
-last_updated: '2026-11-19T11:42:27Z'
-run_id: gh-7088
+last_updated: '2026-11-20T11:42:35Z'
+run_id: gh-7091

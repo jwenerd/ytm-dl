@@ -1,0 +1,12 @@
+title: New & trending songs
+strapline: JUST UPDATED
+slug: new_trending_songs
+browse_id: null
+thumbnail: null
+item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
+total_items: 10
+new_items_latest_run: 10
+latest_batch_size: 10
+first_captured: '2026-11-20T11:42:55Z'
+last_captured: '2026-11-20T11:42:55Z'
+run_id: gh-7091
