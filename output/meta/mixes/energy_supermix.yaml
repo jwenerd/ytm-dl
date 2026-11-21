@@ -3,11 +3,11 @@ mood_chip: Energize
 playlist_id: RDTMAK5uy_kskEGBYLWbdi3Z9IdjDoDEI8hEBvHEreM
 description: Get a boost with this mix of high-energy songs that span all your tastes.
   Always updating.
-featured_artists: Ween, The Chemical Brothers, Grateful Dead, The Band
+featured_artists: Daft Punk, Hallucinogen, Peaches, Shpongle
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3114
-new_tracks_latest_run: 135
+total_unique_tracks: 3149
+new_tracks_latest_run: 35
 latest_batch_size: 500
-last_updated: '2026-11-20T11:42:35Z'
-run_id: gh-7091
+last_updated: '2026-11-21T11:04:41Z'
+run_id: gh-7095
