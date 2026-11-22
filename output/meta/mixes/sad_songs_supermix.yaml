@@ -2,11 +2,11 @@ title: Sad Songs Supermix
 mood_chip: Sad
 playlist_id: RDTMAK5uy_mZvWCHQ-KwmUM_ZMeZNRF93nKrLafqFp0
 description: ''
-featured_artists: Radiohead, Nick Drake, Satellite Friend, Hank Williams
+featured_artists: Phish, Widespread Panic, Bob Weir, The Band
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3597
-new_tracks_latest_run: 18
+total_unique_tracks: 3629
+new_tracks_latest_run: 32
 latest_batch_size: 500
-last_updated: '2026-11-21T11:04:41Z'
-run_id: gh-7095
+last_updated: '2026-11-22T11:27:31Z'
+run_id: gh-7099

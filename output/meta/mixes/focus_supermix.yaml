@@ -3,11 +3,11 @@ mood_chip: Focus
 playlist_id: RDTMAK5uy_l3TXw3uC_sIHl4m6RMGqCyKKd2D2_pv28
 description: Get in the zone with this mix of songs that span all your tastes. Always
   updating.
-featured_artists: Green-House, Dorothy Ashby, Piero Piccioni, Piero Umiliani
+featured_artists: Tycho, Boards of Canada, Bonobo, Mac DeMarco
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 5252
-new_tracks_latest_run: 90
+total_unique_tracks: 5285
+new_tracks_latest_run: 33
 latest_batch_size: 500
-last_updated: '2026-11-21T11:04:41Z'
-run_id: gh-7095
+last_updated: '2026-11-22T11:27:31Z'
+run_id: gh-7099
