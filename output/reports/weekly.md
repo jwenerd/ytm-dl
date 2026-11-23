@@ -1,55 +1,67 @@
-# Weekly Sonic Digest: 2026-W46 (Nov 09 - Nov 16)
+# Weekly Sonic Digest: 2026-W47 (Nov 16 - Nov 23)
 
 ## 1. Macro Analysis
-- Cumulative Volume: 21 plays across 1h 19m
-- Unique Artists: 4 (4 albums)
-- Catalog Anchor: DJ Frane (48% of session, 10 plays)
-- Top Artists:
-  1. DJ Frane (10 plays)
-  2. Mecánica Clásica (9 plays)
-  3. Edson Lopes, Johann Sebastian Bach (1 play)
-  4. Nicola Cruz (1 play)
-- Library Ratio: 0.0%
+- Cumulative Volume: 189 plays across 20h 19m
+- Unique Artists: 126 (107 albums)
+- Catalog Anchor: Acid Pauli (12% of session, 23 plays)
+- Top Artists: Acid Pauli (23), Bonobo (15), RAYE (7), Offthewally (6), El Búho (4)
+- Library Ratio: 2.1%
 
 ## 2. Weekly Field Observations
-- **Primary Anchor**: DJ Frane commanded nearly half of the logged duration (48%), serving as a sustained rhythmic backbone anchored in sample-based instrumental downtempo.
-- **Album-Level Continuity**: Mecánica Clásica’s sequential nine-track playback represents an uninterrupted long-form listening engagement, favoring continuous suite architecture over fragmented streaming.
-- **Micro-Texture Divergence**: Acoustic classical guitar interpretation (Edson Lopes rendering J.S. Bach) and Andean-inflected downbeat (Nicola Cruz) appeared as isolated, high-contrast bookends to the dominant electronic material.
-- **Zero Library Penetration**: The 0.0% library ratio indicates pure exploratory or algorithmic playback, completely detached from saved, local, or pinned archival collections.
+- **Primary Anchor**: Downtempo organic house and Andean/folktronica hybrids dominated the baseline, anchored by Acid Pauli, Bonobo, Nicola Cruz, and El Búho.
+- **Soundtrack Archaeology**: A focused micro-cluster emerged around the soundtrack for *Es War Einmal Indianerland*, drawing repeated plays for Acid Pauli, Mooryc, Diego Dolby, and Johanna Polley.
+- **Live Ephemera**: Distinct field capture activity occurred around the November 20, 2026 performance by Trey Anastasio Band featuring Billy Strings in Worcester, MA, logged via audience archival audio.
+- **Algorithmic Dispersion**: An exceptionally low library ratio (2.1%) indicates passive discovery and algorithmic radio traversal, resulting in 126 distinct artists across 189 plays.
 
 ## 3. Narrative Synthesis
-Listening telemetry for 2026-W46 reveals an exceptionally brief yet rigorously focused acoustic footprint—totaling just 1 hour and 19 minutes across 21 tracks. Rather than scattering attention across diverse playlists, the subject engaged in two sustained album-length blocks. The sessions split almost evenly between the subterranean boom-bap and space-hop textures of DJ Frane (10 tracks) and the modular Kosmische-Fourth World synthesis of Spanish outfit Mecánica Clásica (9 tracks).
+Listening activity this period split into two distinct behavioral registers. The workweek baseline functioned as a continuous, ambient low-tempo stream dominated by Acid Pauli and Bonobo. Rather than full album playbacks, playback favored automated curation that drifted across organic house, dub-inflected cumbia (Meridian Brothers, Cumbiasound), and downtempo textures. This stream settled briefly into repeated forensic plays of Acid Pauli's score for *Es War Einmal Indianerland*, where tracks like "Edda's Cumbia" and "Wilhelm Tell" served as recurring ambient markers.
 
-The absence of repeated tracks and the complete neglect of saved library assets reflect an intentional, low-frequency listening mode. Both major sessions unfolded as sequential thematic cycles: DJ Frane's sample-collage grooves provided low-tempo kinetic motion, while Mecánica Clásica's suite (*Agógica* through *Movimiento*) established a cerebral, polyrhythmic ambient state. Single-track entries from Edson Lopes and Nicola Cruz functioned as peripheral acoustic palate cleansers rather than genuine diversions.
+The secondary current broke entirely away from electronic drift. Clustered late in the week, field-recorded live cuts from the November 20 DCU Center concert entered the log, documenting the acoustic-electric cross-pollination between Trey Anastasio Band and Billy Strings. The logging of unconventional repertoire—ranging from Phish staples ("Ghost") to an extended jam on Metallica’s "Master of Puppets"—reveals deliberate, targeted seeking of performance artifacts amidst an otherwise algorithmic, low-intervention listening regime.
 
 ## 4. Dynamic Weekly Spotlight
 
+### Live Circuit & Tour Archive
+- **Event**: Trey Anastasio Band featuring Billy Strings
+- **Venue / Date**: DCU Center, Worcester, MA — November 20, 2026
+- **Context & Material**: The appearance of high-energy, audience-sourced concert audio interrupts the otherwise synthetic and downtempo character of the week. Billy Strings' integration into Anastasio's horn-heavy septet provides a stark textural contrast to the week's organic house. Of note is the rendition of Metallica's "Master of Puppets," where thrash-metal riffs are recontextualized across flatpicked acoustic dreadnought and brass arrangements, followed by extended improvisational modal vamps on "Ghost."
+
 ### Catalog Archaeology & Deep Dives
-The data demonstrates an unyielding adherence to full-album architecture over track-level shuffling. Mecánica Clásica’s block was consumed in exact conceptual sequence:
-
-```
-[Agógica] → [Reacción] → [Silencio] → [Acción] → [Pulsación] → [Dinámica] → [Forma] → [Recurrencia] → [Movimiento]
-```
-
-This structural tracking mirrors historical vinyl side-listening. By following the composer’s intended dynamics—oscillating from pulse-driven sequencers to sustained drift—the listener treats the digital platform as an archive playback engine rather than an automated radio feed. DJ Frane's adjacent 10-track sequence further reinforces this behavior, confirming that engagement during W46 was defined by comprehensive long-form works.
-
-### Genre & Texture Distribution
-- **Instrumental Hip-Hop / Downtempo**: 47.6% (DJ Frane)
-- **Kosmische / Modular Ambient**: 42.9% (Mecánica Clásica)
-- **Baroque Classical Guitar**: 4.8% (Edson Lopes, J.S. Bach)
-- **Organic Downbeat / Folktronica**: 4.8% (Nicola Cruz)
+- **Focal Work**: *Es War Einmal Indianerland (Original Motion Picture Soundtrack)* (2017)
+- **Artists Observed**: Acid Pauli, Mooryc, Diego Dolby, Johanna Polley
+- **Analysis**: Rather than engaging with Acid Pauli's club edits or extended DJ sets, the session homed in on this multi-artist film score. The tracks bridge minimal techno, regional South American rhythms, and European chamber motifs ("Saint-Saëns," "Edda's Cumbia"). The presence of spoken/incidental fragments ("Edda") alongside functional score pieces illustrates an interest in cinematic pacing rather than continuous four-on-the-floor momentum.
 
 ## 5. Replay Loops & Catalog Additions
-- **Replays**: None observed. Zero intra-week duplicates were registered across the 21 logged events.
+- **Replays**:
+  - Acid Pauli – "Edda's Cumbia" (3 plays)
+  - Acid Pauli – "Wilhelm Tell" (3 plays)
+  - RAYE – "Goodbye Henry. (feat. Al Green)" (2 plays)
+  - Ahmadi, Buitrago – "El Chapo y el Perso" (2 plays)
+  - Acid Pauli – "Edda, Mauser & Mustafa" (2 plays)
+  - Mooryc – "Saint-Saëns" (2 plays)
+  - Johanna Polley – "Edda" (2 plays)
+  - Acid Pauli – "Requiem for a Loop (Be Svendsen Remix Edit)" (2 plays)
+
 - **Liked Songs**:
-  - The Be Good Tanyas – "The Littlest Birds (Video Version)" (*The Littlest Birds #1*)
-  - Forgotten – "Club Soda" (*Club Soda*)
+  - Trey Anastasio Band & Billy Strings – "Ghost" (Live, Nov 20, 2026, Worcester, MA)
+  - Trey Anastasio Band & Billy Strings – "Master of Puppets" (Live, Nov 20, 2026, Worcester, MA)
+  - Trey Anastasio Band & Billy Strings – "What’s Going Through Your Mind" (Live, Nov 20, 2026, Worcester, MA)
+  - ceeceerider – "Tight Rope / Leon Russell"
+  - Satori (NL) – "Days Without You (Crussen Remix) [feat. Miou Amadée]"
+  - Meridian Brothers, Mexican Institute of Sound – "Ritmo Babilonia (feat. Beck)"
+  - Cumbiasound – "Cumbia del Jaguar"
+  - Diego Dolby – "Yopo Moon"
+  - Mooryc – "Saint-Saëns"
+  - Acid Pauli – "Edda's Cumbia"
+  - DWIG – "Orange Evening"
+  - Epact – "Gogol Bordello - Start Wearing Purple"
+  - Ricardo Maraña – "C. Ciari B. Gerard And The Batucada's Seven - Moonlight in Vermont"
+  - Chaos in the CBD, Isaac Aesili – "A Deeper Life"
 
 ## 6. Algorithmic Suggestions Radar & Weekend Queue
 
 | Track | Artist | Shelf Source | Prior Impressions | Musicologist Appraisal |
 | :--- | :--- | :--- | :--- | :--- |
-| *Drukqs (Expanded Edition)* | Aphex Twin | `new_releases` | 3 | High-affinity catalog expansion. Richard D. James's prepared piano works and algorithmic percussion mirror the tension observed between Edson Lopes's Baroque structures and Mecánica Clásica's modular sequencing. |
-| *Nowhere* | SVLBRD | `new_releases` | 4 | Persistent algorithmic pressure (4 impressions). Heavy ambient-drone textures align directly with the non-vocal, space-conscious focus established throughout the week. |
-| *Akasha* | CoryaYo, Hippo Dreams | `your_daily_discover` | 2 | Natural bridge candidate. Lo-fi instrumental beat architecture that directly complements the turntable-driven downtempo landscape established by DJ Frane. |
-| *People Everywhere ii* | Khruangbin | `your_daily_discover` | 1 | Stylistic lateral shift. The bass-forward, globe-spanning groove provides a warm, analog-band equivalent to Nicola Cruz’s rhythmic programming. |
+| **Mystic Meltdown** | Acid Pauli, Hani Mojtahedy, Kingdom Molongi | `new_releases` | 3 recs (#1) | Directly aligns with the primary anchor artist while expanding toward Middle Eastern vocal traditions and ambient dub; natural follow-up to the *Indianerland* material. |
+| **El Borrachito** | Chicha Libre | `your_daily_discover` | 1 rec (#1) | Connects to the cumbia and Latin syncopations explored via Meridian Brothers and Cumbiasound, substituting digital production for analog surf-cumbia psychedelia. |
+| **Blood Of The Past (feat. Kae Tempest)** | The Comet Is Coming | `your_daily_discover` | 1 rec (#1) | High-contrast kinetic jazz/electronics. Diverges from downtempo minimalism, offering abrasive synthetic brass and spoken-word cadence to balance ambient inertia. |
+| **The Forage** | Offthewally | `your_daily_discover` | 1 rec (#1) | Sustains the downtempo study environment established by Offthewally's logged plays earlier in the week; minimal harmonic friction. |
