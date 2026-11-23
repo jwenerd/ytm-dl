@@ -2,11 +2,11 @@ title: Replay Mix
 mood_chip: Home
 playlist_id: RDTMAK5uy_nilrsVWxrKskY0ZUpVZ3zpB0u4LwWTVJ4
 description: A mix of the songs you've been listening to most in the last few weeks.
-featured_artists: "Acid Pauli, Mooryc, Avery \"Kid\" Howard, Miou Amad\xE9e"
+featured_artists: "Acid Pauli, Mooryc, Miou Amad\xE9e, Diego Dolby"
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 1705
-new_tracks_latest_run: 18
-latest_batch_size: 537
-last_updated: '2026-11-22T11:27:31Z'
-run_id: gh-7099
+total_unique_tracks: 1745
+new_tracks_latest_run: 40
+latest_batch_size: 451
+last_updated: '2026-11-23T12:46:26Z'
+run_id: gh-7103
