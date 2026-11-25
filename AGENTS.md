@@ -36,13 +36,17 @@ ytm-dl/
 │   ├── mood_mixes.py            # Mood and energy mix discovery engine
 │   ├── output.py                # Output manager, CSV/YAML writes, prepend orchestrator
 │   ├── prepend.py               # Sequence alignment & deduplication logic for prepending
-│   ├── reports/                 # AI listening reports & discovery radar engine
-│   │   ├── aggregator.py        # Telemetry aggregation & recommendation radar filtering
-│   │   ├── email_template.py    # Rich dark-mode HTML email template generator
+│   ├── reports/                 # AI listening reports, Crate-Digger zine & rolling radar
+│   │   ├── aggregator.py        # Thin context-assembly orchestration facade
+│   │   ├── candidates.py        # Radar, Liked & Forgotten, Full Album & Long Spin extractors
+│   │   ├── email_template.py    # Editorial Zine / Vinyl OBI dark-mode HTML email renderer
 │   │   ├── generator.py         # Lightweight Gemini REST client (requests)
 │   │   ├── mailer.py            # Report mailer and webhook dispatcher
-│   │   ├── prompt.py            # Musicologist prompt engineering & deterministic fallback
-│   │   └── rotator.py           # Lazy-man cron cadence checker & archive rotation
+│   │   ├── palettes.py          # 10 rotating record-label color palettes (modulo day-of-month)
+│   │   ├── playlist.py          # Self-updating rolling 25-track YTM Daily Radar playlist sync
+│   │   ├── prompt.py            # Crate-Digger prompt engineering & deterministic fallback
+│   │   ├── rotator.py           # Lazy-man cron cadence checker, 7-day dedupe & archive rotation
+│   │   └── telemetry.py         # Cadence windows, artist hygiene & listening telemetry metrics
 │   ├── util.py                  # File I/O, hash calculation, dict helpers
 │   └── cloud_functions/         # Webhook handler (Google Cloud Functions) to trigger GitHub Actions
 │       ├── main.py
@@ -55,8 +59,14 @@ ytm-dl/
 │   ├── test_mapping.py
 │   ├── test_prepend.py
 │   ├── test_report_aggregator.py
+│   ├── test_report_candidates.py
+│   ├── test_report_email.py
 │   ├── test_report_generator.py
-│   └── test_report_rotator.py
+│   ├── test_report_mailer.py
+│   ├── test_report_palettes.py
+│   ├── test_report_playlist.py
+│   ├── test_report_rotator.py
+│   └── test_report_telemetry.py
 ├── .githooks/                   # Git hooks preventing accidental direct pushes to main
 │   └── pre-push
 ├── .github/
@@ -175,7 +185,9 @@ source venv/bin/activate
 - **Cadence & Rotation**: Automatically generates `daily.md`, `weekly.md`, and `monthly.md` reports in `output/reports/`.
 - **Lazy-Man Cron**: During standard sync runs (`frequent` or `all`), `src/reports/rotator.py` checks `output/meta/reports.yaml` to detect if a new day, ISO week, or month threshold has elapsed.
 - **Archive Rotation**: Previous reports are automatically rotated to `output/reports/archive/{cadence}/YYYY/{period}.md` and indexed in `output/reports/README.md`.
-- **Recommendation Shelves**: Correlates listening history against 5 shelves (`your_daily_discover`, `discover_mix`, `new_releases`, `quick_picks`, `mixed_for_you`).
+- **Recommendation Shelves & Deep Cuts**: Correlates listening history against 5 song radar shelves (`your_daily_discover`, `discover_mix`, `new_releases`, `quick_picks`, `mixed_for_you`), surfaces **Liked & Forgotten** gems (`>=90d` old likes + `forgotten_favorites` / `archive_mix` unplayed in 60 days), and recommends a **Full Album** (`albums_for_you`) and **Long Spin** (`long_listens` / `live_performances`).
+- **Rolling Daily Radar Playlist**: `src/reports/playlist.py` automatically creates/updates a private `⚡ Daily Radar (ytm-dl)` playlist (rolling 25-track FIFO cap) on YouTube Music and tracks 7-day period exclusions in `output/meta/reports.yaml`.
+- **Editorial Zine Email & Rotating Palettes**: `src/reports/email_template.py` renders an Editorial Zine / Vinyl OBI Strip layout styled by 10 record-label palettes in `src/reports/palettes.py` rotating via `(day_of_month - 1) % 10`.
 - **Zero-Dependency Gemini Client**: Uses `requests` with `gemini-3.8-flash` via `GOOGLE_AI_API_KEY`. Gracefully falls back to deterministic markdown when offline.
 - **CLI Commands**:
   - `python ytm-dl.py report` (checks lazy-man cadence)
@@ -191,9 +203,12 @@ source venv/bin/activate
 | **Modify monthly history partitioning** | `src/history_partition.py` | `src/history_partition.py` | `partition_history_csv` |
 | **Home feed & recommendation catalogs** | `src/home_catalog.py` | `ytm-dl.py` | `sync_home_catalogs`, `parse_home_item` |
 | **Mood and energy mix discovery** | `src/mood_mixes.py` | `ytm-dl.py` | `sync_all_mood_mixes` |
-| **AI report prompts & radar filtering** | `src/reports/prompt.py` & `src/reports/aggregator.py` | `src/reports/rotator.py` | `build_report_prompt`, `assemble_report_context` |
-| **Report HTML email rendering** | `src/reports/email_template.py` | `src/reports/mailer.py` | `markdown_to_email_html` |
-| **Report mailer & webhook dispatch** | `src/reports/mailer.py` | `ytm-dl.py report` | `send_report_email` |
+| **Listening telemetry & cadence windows** | `src/reports/telemetry.py` | `src/reports/aggregator.py` | `aggregate_listening_telemetry`, `get_cadence_window` |
+| **Radar, Forgotten & Long-Form picks** | `src/reports/candidates.py` | `src/reports/aggregator.py` | `extract_radar_candidates`, `extract_forgotten_favorites`, `extract_long_form_picks` |
+| **AI report prompts & Crate-Digger voice** | `src/reports/prompt.py` | `src/reports/rotator.py` | `build_report_prompt`, `generate_fallback_report` |
+| **Rolling Daily Radar YTM playlist** | `src/reports/playlist.py` | `src/reports/rotator.py` | `sync_daily_radar_playlist`, `extract_playlist_video_ids` |
+| **Report HTML email & rotating palettes** | `src/reports/email_template.py` & `src/reports/palettes.py` | `src/reports/mailer.py` | `markdown_to_email_html`, `select_email_theme` |
+| **Report mailer & webhook dispatch** | `src/reports/mailer.py` | `ytm-dl.py mail` | `ReportMailer.send` |
 | **Branch boundary & secret protection** | `scripts/check_boundaries.py` | `scripts/dev.py` | `is_boundary_violation`, `main` |
 | **Developer CLI runner & pre-flight** | `scripts/dev.py` | `scripts/dev.py` | `cmd_check`, `cmd_fix`, `cmd_lint`, `cmd_test` |
 | **PR coverage formatting & sticky comments**| `scripts/format_pr_coverage.py` | `.github/workflows/pr.yml` | `generate_pr_comment`, `main` |
