@@ -7,10 +7,14 @@ from datetime import UTC, date, datetime, timedelta
 
 import yaml
 
-from src.reports.aggregator import (
-    assemble_report_context,
-)
+from src.reports.aggregator import assemble_report_context
 from src.reports.generator import generate_report
+from src.reports.playlist import (
+    extract_featured_entity_ids,
+    extract_playlist_video_ids,
+    inject_playlist_banner,
+    sync_daily_radar_playlist,
+)
 from src.util import get_user_timezone
 
 logger = logging.getLogger(__name__)
@@ -57,17 +61,14 @@ def get_target_period_info(cadence: str, now_dt: datetime) -> tuple[str, date, s
         return period_key, target, archive_path
 
     if cadence == "weekly":
-        # Target is the last completed week (evaluated on Monday or subsequent days)
-        # Shift back 7 days from current week's Monday
         monday_this_week = now_local.date() - timedelta(days=now_local.date().weekday())
-        target_day_in_prev_week = monday_this_week - timedelta(days=3)  # Midpoint of prev week
+        target_day_in_prev_week = monday_this_week - timedelta(days=3)
         year, week, _ = target_day_in_prev_week.isocalendar()
         period_key = f"{year}-W{week:02d}"
         archive_path = os.path.join("archive", "weekly", str(year), f"{period_key}.md")
         return period_key, target_day_in_prev_week, archive_path
 
     if cadence == "monthly":
-        # Target is the previous calendar month
         first_of_this_month = now_local.date().replace(day=1)
         target_day_in_prev_month = first_of_this_month - timedelta(days=1)
         period_key = target_day_in_prev_month.strftime("%Y-%m")
@@ -89,19 +90,14 @@ def should_run_cadence(
     """
     Evaluates whether the specified cadence is due to run.
     Returns (should_run, period_key, target_date).
-    If refresh_nocturnal is True and it's early morning (< 4am local), allows refreshing
-    the newly generated daily report if new plays were added.
     """
     period_key, target_date, _ = get_target_period_info(cadence, now_dt)
     cadence_meta = meta.get(cadence) or {}
     last_period = cadence_meta.get("last_period")
 
-    # If never run or last recorded period is older than target period
     if not last_period or str(last_period) < period_key:
         return True, period_key, target_date
 
-    # If already ran for this period, but we are in nocturnal hours (< 4am local)
-    # and new history was added, allow refreshing the daily report
     if refresh_nocturnal and cadence.lower() == "daily" and str(last_period) == period_key:
         if now_dt.tzinfo is None:
             now_dt = now_dt.replace(tzinfo=UTC)
@@ -110,6 +106,45 @@ def should_run_cadence(
             return True, period_key, target_date
 
     return False, period_key, target_date
+
+
+def _get_prior_excluded_ids(meta: dict, current_period: str) -> set[str]:
+    """
+    Returns featured entity IDs from prior periods while never excluding picks from
+    `current_period` itself (safe across nocturnal refreshes or forced same-day reruns).
+    """
+    excluded: set[str] = set()
+    by_period = meta.get("recent_radar_by_period")
+    if isinstance(by_period, dict):
+        for period, ids in by_period.items():
+            if str(period) != current_period and isinstance(ids, list):
+                excluded.update(str(i) for i in ids if i)
+    elif (meta.get("daily") or {}).get("last_period") != current_period:
+        excluded.update(str(i) for i in (meta.get("recent_radar_ids") or []) if i)
+    return excluded
+
+
+def _record_period_picks(
+    meta: dict,
+    period_key: str,
+    featured_ids: list[str],
+    max_periods: int = 7,
+) -> None:
+    """Persists featured picks keyed by period (retaining the latest `max_periods` days)."""
+    raw_by_period = meta.get("recent_radar_by_period")
+    by_period: dict[str, list[str]] = dict(raw_by_period) if isinstance(raw_by_period, dict) else {}
+    by_period[period_key] = featured_ids
+
+    trimmed_keys = sorted(by_period.keys(), reverse=True)[:max_periods]
+    trimmed = {k: by_period[k] for k in trimmed_keys}
+    meta["recent_radar_by_period"] = trimmed
+
+    flat: list[str] = []
+    for k in trimmed_keys:
+        for item_id in trimmed[k]:
+            if item_id not in flat:
+                flat.append(item_id)
+    meta["recent_radar_ids"] = flat[:50]
 
 
 def rotate_and_write_report(
@@ -128,19 +163,16 @@ def rotate_and_write_report(
     reports_dir = os.path.join(output_dir, "reports")
     os.makedirs(reports_dir, exist_ok=True)
 
-    # 1. Live file
     live_file = os.path.join(reports_dir, f"{cadence}.md")
     with open(live_file, "w", encoding="utf-8") as f:
         f.write(content)
 
-    # 2. Archive file
     _, _, archive_rel_path = get_target_period_info(cadence, now_dt)
     archive_file = os.path.join(reports_dir, archive_rel_path)
     os.makedirs(os.path.dirname(archive_file), exist_ok=True)
     with open(archive_file, "w", encoding="utf-8") as f:
         f.write(content)
 
-    # 3. Update meta
     meta[cadence] = {
         "last_period": period_key,
         "last_generated_at": now_dt.isoformat(),
@@ -159,17 +191,17 @@ def update_reports_readme(output_dir: str) -> None:
         return
 
     lines = [
-        "# 🎧 Listening Reports & Discovery Radar",
+        "# 🎧 Listening Reports & Crate-Digger Radar",
         "",
-        "Automated musicological field logs and algorithmic discovery radars generated by `ytm-dl`.",
+        "Automated crate-digger listening logs, resurfaced gems, and rolling radar picks generated by `ytm-dl`.",
         "",
         "## 📌 Active Reports",
         "",
         "| Cadence | Current Report | Description |",
         "| :--- | :--- | :--- |",
-        "| **Daily** | [daily.md](daily.md) | Yesterday's listening pulse & 3 fresh radar suggestions |",
-        "| **Weekly** | [weekly.md](weekly.md) | Weekly macro shifts, top rotations & weekend discovery queue |",
-        "| **Monthly** | [monthly.md](monthly.md) | Comprehensive monthly retrospective & curated mixtape |",
+        "| **Daily** | [daily.md](daily.md) | Yesterday's spin, rolling radar picks, resurfaced like & full LP/set |",
+        "| **Weekly** | [weekly.md](weekly.md) | Weekly crate digest, top rotations & weekend radar queue |",
+        "| **Monthly** | [monthly.md](monthly.md) | Monthly crate retrospective, new artist discoveries & deep cuts |",
         "",
         "## 🏛️ Archive",
         "",
@@ -201,13 +233,13 @@ def run_reports(
     target_date: date | None = None,
     now_dt: datetime | None = None,
     refresh_nocturnal: bool = False,
+    sync_playlist: bool = True,
 ) -> list[str]:
     """
     Evaluates cadences and generates due reports.
-    If force_cadence is provided ('daily', 'weekly', 'monthly', or 'all'), evaluates them regardless of schedule.
-    Periods with zero listening activity (total_tracks == 0) are skipped without
-    calling the generator, writing files, or updating report metadata.
-    Returns list of cadences generated.
+    Periods with zero listening activity (total_tracks == 0) are skipped.
+    For daily reports, syncs the rolling 25-track YTM Daily Radar playlist and
+    tracks featured songs, albums, and sets per period to avoid day-over-day repetition.
     """
     if now_dt is None:
         now_dt = datetime.now(UTC)
@@ -231,22 +263,36 @@ def run_reports(
 
         if is_forced or should_run:
             use_date = target_date if target_date else computed_target
-            ctx = assemble_report_context(output_dir, cad, use_date)
+            effective_key = (
+                use_date.strftime("%Y-%m-%d") if (cad == "daily" and target_date) else period_key
+            )
+            recent_ids = _get_prior_excluded_ids(meta, effective_key) if cad == "daily" else None
+            ctx = assemble_report_context(output_dir, cad, use_date, excluded_radar_ids=recent_ids)
             if ctx["telemetry"]["total_tracks"] == 0:
                 logger.info(
                     "Skipping %s report for period %s: no listening activity",
                     cad,
-                    period_key,
+                    effective_key,
                 )
                 continue
 
-            logger.info("Generating %s report for period: %s", cad, period_key)
+            logger.info("Generating %s report for period: %s", cad, effective_key)
             content = generate_report(ctx, api_key=api_key)
+
+            if cad == "daily":
+                picked_song_ids = extract_playlist_video_ids(content, ctx)
+                if sync_playlist:
+                    playlist_url = sync_daily_radar_playlist(picked_song_ids, effective_key, meta)
+                    if playlist_url:
+                        content = inject_playlist_banner(content, playlist_url)
+                featured_all_ids = extract_featured_entity_ids(content, picked_song_ids)
+                if featured_all_ids:
+                    _record_period_picks(meta, effective_key, featured_all_ids)
 
             rotate_and_write_report(
                 output_dir=output_dir,
                 cadence=cad,
-                period_key=period_key,
+                period_key=effective_key,
                 content=content,
                 meta=meta,
                 meta_path=meta_path,
