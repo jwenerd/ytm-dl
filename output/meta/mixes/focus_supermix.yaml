@@ -3,11 +3,11 @@ mood_chip: Focus
 playlist_id: RDTMAK5uy_l3TXw3uC_sIHl4m6RMGqCyKKd2D2_pv28
 description: Get in the zone with this mix of songs that span all your tastes. Always
   updating.
-featured_artists: Lawrence English, Jerry Garcia, Widespread Panic, Green-House
+featured_artists: Green-House, Bonobo, Piero Piccioni, Grateful Dead
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 5374
-new_tracks_latest_run: 32
+total_unique_tracks: 5503
+new_tracks_latest_run: 129
 latest_batch_size: 500
-last_updated: '2026-11-24T13:45:26Z'
-run_id: gh-7106
+last_updated: '2026-11-25T12:58:11Z'
+run_id: gh-7109
