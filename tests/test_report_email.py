@@ -1,101 +1,107 @@
-"""Unit tests for HTML email template generation and report rotation."""
+"""Unit tests for Editorial Zine / Vinyl OBI HTML email template."""
 
-from src.reports.email_template import markdown_to_email_html
+from src.reports.email_template import (
+    EMAIL_THEMES,
+    _parse_table,
+    _render_callout_card,
+    _render_obi_ledger,
+    markdown_to_email_html,
+)
 
 
-def test_markdown_to_email_html_with_context():
-    sample_md = """# 🎧 Daily Listening Log: 2026-10-20
-*Recorded via ytm-dl | Cadence: Daily Observation*
+def test_markdown_to_email_html_obi_strip_and_modulo_palette():
+    # 2026-11-24 -> (24 - 1) % 10 == 3 ('dub_studio_forest')
+    sample_md = """# 🎧 Daily Listening Log: 2026-11-24
+*Recorded via ytm-dl | Crate-Digger Daily*
 
-## 1. Session Telemetry
-- Total Tracks Observed: 42
-- Auditory Duration: 2h 15m
-- Unique Artists: 12 (8 albums)
-- Library Ratio: 75%
+**[▶ Play Rolling Daily Radar Playlist](https://music.youtube.com/playlist?list=PLd8VL-RVFUnw)**
 
-## 2. Musicological Notes
-### Field Observations
-- **Primary Anchor**: Centered around Dorothy Ashby.
-- **Repeat Loop**: *Soul Vibrations* (3x).
+- **Stats**: 44 plays · 4h 17m · 25 artists · 8 new artists
 
-### Narrative Synthesis
-Playback centered predominantly on harp jazz and instrumental soul.
+**The Spin:** Heavy analog synth-funk grooves swerved hard into 70s outlaw country.
 
-## 3. Dynamic Field Spotlight
-- **Sonic Timbre**: Warm acoustic production featuring Dorothy Ashby's jazz harp.
+Warm 4-hour run anchored by Octave Cat before taking a sharp detour into classic honky-tonk.
 
-## 4. Algorithmic Suggestions Radar
-| Track | Artist | Shelf Source | Impressions | Position | Status |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Wax and Wane | Dorothy Ashby | `your_daily_discover` | 2x | #1 | ✨ New Arrival |
-| Afro-Harping | Dorothy Ashby | `discover_mix` | 1x | #3 | 🔁 Recurring |
+## On the Turntable
+- **Heavy Rotation:** Octave Cat (14) · The Disco Biscuits (4)
+
+> **⚡ Double-Take:** Caught two takes on *The World Is Waiting for the Sunrise*.
+>
+> **🔗 Lineage:** Octave Cat bridges Lotus and Dopapod.
+
+> **🌱 First-Timer:** Seun Kuti entered the crates today.
+
+### Bonus Subhead
+| Track | Artist | Shelf |
+| :--- | :--- | :--- |
+| `quick_picks` | **[Sweet Echo](https://music.youtube.com/watch?v=v1)** | Ezra Collective |
 """
 
-    context = {
-        "cadence": "daily",
-        "period_label": "2026-10-20",
-        "telemetry": {
-            "total_tracks": 42,
-            "total_duration_display": "2h 15m",
-            "unique_artists_count": 12,
-            "unique_albums_count": 8,
-            "library_ratio_pct": 75,
-            "catalog_anchor": "Dorothy Ashby",
-        },
-        "radar_candidates": [],
-    }
+    html = markdown_to_email_html(sample_md, context=None)
 
-    html = markdown_to_email_html(sample_md, context=context)
+    assert 'data-theme="dub_studio_forest"' in html
+    assert "#060e0b" in html
+    assert "#0b1713" in html
+    assert "<title>Daily Listening Log: 2026-11-24</title>" in html
+    assert "DAILY LISTENING LOG  //  2026-11-24" in html
+    assert "LIBRARY" not in html
 
-    # Verify key structure
-    assert "<!DOCTYPE html>" in html
-    assert "<title>Daily Listening Log: 2026-10-20</title>" in html
-    assert "Daily Listening Log: 2026-10-20" in html
-    assert "YTM-DL LISTENING LOG" in html
-    # Ensure emojis are stripped from the H1 header
-    h1_content = html.split("<h1")[1].split("</h1>")[0]
-    assert "🎧" not in h1_content
-    assert "Daily Listening Log: 2026-10-20" in h1_content
+    h1_block = html.split("<h1")[1].split("</h1>")[0]
+    assert "Heavy analog synth-funk grooves swerved hard into 70s outlaw country." in h1_block
 
-    # Verify stat cards
-    assert "TRACKS" in html
-    assert "42" in html
-    assert "DURATION" in html
-    assert "2h 15m" in html
-    assert "ARTISTS" in html
-    assert "12" in html
-    assert "LIBRARY" in html
-    assert "75%" in html
-
-    # Verify table parsing
+    assert "44</span> SPINS" in html
+    assert "4H 17M</span>" in html
+    assert "25</span> ARTISTS" in html
+    assert "(8 FIRST-TIMERS)" in html
+    assert "https://music.youtube.com/playlist?list=PLd8VL-RVFUnw" in html
+    assert "Play Crate" in html
+    assert "44 plays · 4h 17m" not in html
+    assert "Warm 4-hour run anchored by Octave Cat" in html
+    assert "Bonus Subhead" in html
     assert "<table" in html
-    assert "Wax and Wane" in html
-    assert "Afro-Harping" in html
-    assert "your_daily_discover" in html
-
-    # Verify inline formatting
-    assert '<strong style="font-weight: 600; color: #f0f6fc;">Primary Anchor</strong>' in html
-    assert '<em style="font-style: italic; color: #d29922;">Soul Vibrations</em>' in html
 
 
-def test_markdown_to_email_html_fallback_stats_extraction():
-    sample_md = """# Daily Listening Log: 2026-10-19
-*Recorded via ytm-dl | Cadence: Daily Observation*
+def test_markdown_to_email_html_fallbacks_and_new_palettes():
+    legacy_md = """# Weekly Crate Digest
+*ytm-dl weekly*
 
 ## 1. Session Telemetry
 - Total Tracks Observed: 15
 - Auditory Duration: 48m
-- Unique Artists: 5 (3 albums)
-- Library Ratio: 60%
+- Unique Artists: 5
+- New Artists: 2
 
-## 2. Musicological Notes
-Some notes here.
+## Notes
+Plain paragraph.
+> Trailing quote at EOF
 """
-    # No context provided: extracts from markdown directly
-    html = markdown_to_email_html(sample_md, context=None)
+    html_legacy = markdown_to_email_html(legacy_md, context=None)
+    assert "WEEKLY CRATE DIGEST" in html_legacy
+    assert "15</span> SPINS" in html_legacy
+    assert "48M</span>" in html_legacy
+    assert "(2 FIRST-TIMERS)" in html_legacy
+    assert "Trailing quote at EOF" in html_legacy
 
-    assert "<title>Daily Listening Log: 2026-10-19</title>" in html
-    assert "15" in html
-    assert "48m" in html
-    assert "5" in html
-    assert "60%" in html
+    # 2026-11-18 -> (18 - 1) % 10 == 7 ('pacific_cumbia_teal') + colon outside **The Spin**:
+    ctx = {
+        "period_label": "2026-11-18",
+        "playlist_url": "https://music.youtube.com/playlist?list=PL_CTX",
+        "telemetry": {
+            "total_tracks": 10,
+            "total_duration_display": "35m",
+            "unique_artists_count": 4,
+            "new_artists_count": 0,
+        },
+    }
+    html_ctx = markdown_to_email_html(
+        "# Monthly Crate\n**The Spin**: Outside colon headline.\n", context=ctx
+    )
+    assert 'data-theme="pacific_cumbia_teal"' in html_ctx
+    assert "Outside colon headline." in html_ctx
+    assert "PL_CTX" in html_ctx
+    assert "FIRST-TIMERS" not in html_ctx
+
+    assert _render_obi_ledger({}, EMAIL_THEMES[0], playlist_url=None) == ""
+    assert _render_callout_card(["   "], EMAIL_THEMES[0]) == ""
+    assert _parse_table([]) == ""
+    assert _parse_table(["| Only One Row |"]) == ""
