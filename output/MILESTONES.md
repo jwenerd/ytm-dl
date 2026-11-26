@@ -2,7 +2,7 @@
 
 [<- README](README.md)
 
-`Updated: 2026-11-26` | `Plays: 69,104` | `Hours: 6,979.3h` | `Artists: 4,675` | `Unlocked: 4,755`
+`Updated: 2026-11-26` | `Plays: 69,109` | `Hours: 6,979.6h` | `Artists: 4,680` | `Unlocked: 4,755`
 
 ---
 
@@ -21,7 +21,7 @@
 - `ALBUM` **2026/10/04 Milwaukee, WI** — Octave Cat (14 plays, 14 tracks / 7d)
 - `ALBUM` **Distance in Static** — Bonobo (12 plays, 12 tracks / 7d)
 - `ALBUM` **Mystic Meltdown** — Acid Pauli (11 plays, 11 tracks / 7d)
-- `PHASE` **Nu Jazz** (7.9x baseline, 29 plays) · **Instrumental Hip-Hop** (6.3x baseline, 12 plays) · **Trip Hop** (5.2x baseline, 29 plays) · **Krautrock** (4.0x baseline, 17 plays)
+- `PHASE` **Nu Jazz** (7.8x baseline, 29 plays) · **Instrumental Hip-Hop** (6.2x baseline, 12 plays) · **Trip Hop** (5.1x baseline, 29 plays) · **Krautrock** (3.9x baseline, 17 plays)
 
 ---
 
@@ -82,9 +82,9 @@
 
 | Metric | Value | Date / Period |
 |---|---:|---|
-| Total Plays | 69,104 | Since 2024-01 |
-| Total Hours | 6,979.3h | Since 2024-01 |
-| Unique Artists | 4,675 | Since 2024-01 |
+| Total Plays | 69,109 | Since 2024-01 |
+| Total Hours | 6,979.6h | Since 2024-01 |
+| Unique Artists | 4,680 | Since 2024-01 |
 | Longest Streak | 153 days | Ended 2026-09-22 |
 | Peak Day | 502 plays | 2024-08-20 |
 | Peak Week | 2,219 plays | 2026-W27 |
