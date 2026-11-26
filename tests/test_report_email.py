@@ -4,6 +4,7 @@ from src.reports.email_template import (
     EMAIL_THEMES,
     _parse_table,
     _render_callout_card,
+    _render_liner_notes,
     _render_obi_ledger,
     markdown_to_email_html,
 )
@@ -105,3 +106,73 @@ Plain paragraph.
     assert _render_callout_card(["   "], EMAIL_THEMES[0]) == ""
     assert _parse_table([]) == ""
     assert _parse_table(["| Only One Row |"]) == ""
+
+
+def test_liner_notes_obi_block_and_one_tap_links():
+    assert _render_liner_notes([], [], EMAIL_THEMES[0]) == ""
+
+    milestones = [
+        {"category": "catalog_hours", "entity": "Library", "threshold": 7000, "date": "2026-11-26"},
+        {"category": "artist_plays", "entity": "Tim Hecker", "threshold": 25, "date": "2026-11-26"},
+        {"category": "artist_tracks", "entity": "Brian Eno", "threshold": 25, "date": "2026-11-26"},
+        {
+            "category": "track_plays",
+            "entity": "Looped — Act",
+            "threshold": 10,
+            "date": "2026-11-26",
+        },
+        {"category": "album_plays", "entity": "LP — Act", "threshold": 25, "date": "2026-11-26"},
+    ]
+    almost_there = [
+        {
+            "label": "**Tim Hecker** — 50 plays",
+            "tag": "HOT",
+            "ratio": 0.96,
+            "progress": "48/50",
+            "remaining_display": "2 plays",
+            "url": "",
+        },
+        {
+            "label": "**Human Destiny — Ivan the Tolerable** — 10 plays",
+            "tag": "TRACK",
+            "ratio": 0.90,
+            "progress": "9/10",
+            "remaining_display": "1 play",
+            "url": "https://music.youtube.com/watch?v=v_human",
+        },
+        {
+            "label": "Plain Track Title",
+            "tag": "DUSTY",
+            "ratio": 0.90,
+            "progress": "9/10",
+            "remaining_display": "1 play (100d idle)",
+            "url": "https://music.youtube.com/watch?v=v_plain",
+        },
+    ]
+
+    md = (
+        "# Daily Listening Log: 2026-11-26\n"
+        "- **Stats**: 12 plays · 48m · 5 artists · 1 new artists\n\n"
+        "**The Spin:** Ambient swells.\n\nWarm session.\n"
+    )
+    rendered = markdown_to_email_html(
+        md, context={"milestones": milestones, "almost_there": almost_there}
+    )
+    # Telemetry still extracted from markdown lines even when context omits 'telemetry'
+    assert "12</span> SPINS" in rendered
+    assert "LINER NOTES  //  ON DECK" in rendered
+    assert "FULL LEDGER" in rendered or "Full Ledger" in rendered
+    assert "output/MILESTONES.md" in rendered
+    assert "+1 more unlocked" in rendered
+    assert 'href="https://music.youtube.com/watch?v=v_human"' in rendered
+    assert 'href="https://music.youtube.com/watch?v=v_plain"' in rendered
+    assert "Tim Hecker</strong>" in rendered
+    assert "[#########-] 48/50 &middot; 2 plays" in rendered
+
+    unlocked_only = _render_liner_notes(milestones[:1], [], EMAIL_THEMES[0])
+    assert "Unlocked" in unlocked_only
+    assert "On Deck" not in unlocked_only
+
+    on_deck_only = _render_liner_notes([], almost_there[:1], EMAIL_THEMES[0])
+    assert "Unlocked" not in on_deck_only
+    assert "On Deck" in on_deck_only

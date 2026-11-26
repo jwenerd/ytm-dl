@@ -12,10 +12,13 @@ from src.reports.milestones import (
     _step_ratio,
     detect_obsessions,
     evaluate_milestones,
+    format_major_milestone_subject_tag,
+    format_milestone_summary,
     get_period_milestones,
     read_milestones,
     render_milestones_markdown,
     run_milestones_cli,
+    select_email_almost_there,
     sync_milestones,
     write_milestones,
 )
@@ -575,3 +578,59 @@ def test_almost_there_hot_step_ratio_and_wildcards(tmp_path):
         md = f.read()
     assert "| Target | Tag | Progress | Remaining |" in md
     assert "| `HOT` |" in md
+
+    # Verify track URLs, email slice selection, and subject-tag formatting
+    track_targets = [x for x in almost_w47 if x["category"] == "track_plays"]
+    assert track_targets
+    assert all(x["url"].startswith("https://music.youtube.com/watch?v=") for x in track_targets)
+    artist_targets = [x for x in almost_w47 if x["category"] == "artist_plays"]
+    assert all(x["url"] == "" for x in artist_targets)
+
+    email_slice = select_email_almost_there(almost_w47, max_hot=2, max_wild=1)
+    assert len(email_slice) == 3
+    assert [x["tag"] for x in email_slice[:2]] == ["HOT", "HOT"]
+    assert email_slice[2]["tag"] != "HOT"
+
+    hot_only = [x for x in almost_w47 if x["tag"] == "HOT"]
+    backfilled_slice = select_email_almost_there(hot_only[:3], max_hot=1, max_wild=1)
+    assert len(backfilled_slice) == 2
+    assert select_email_almost_there([], max_hot=2, max_wild=1) == []
+
+    assert format_major_milestone_subject_tag([]) == ""
+    assert (
+        format_major_milestone_subject_tag(
+            [
+                {"category": "artist_plays", "threshold": 50},
+                {"category": "streak_days", "threshold": 14},
+            ]
+        )
+        == ""
+    )
+    assert (
+        format_major_milestone_subject_tag(
+            [
+                {"category": "catalog_plays", "threshold": 70000},
+                {"category": "catalog_hours", "threshold": 7000},
+            ]
+        )
+        == "[7,000h]"
+    )
+    assert (
+        format_major_milestone_subject_tag([{"category": "catalog_plays", "threshold": 70000}])
+        == "[70,000 plays]"
+    )
+    assert (
+        format_major_milestone_subject_tag([{"category": "streak_days", "threshold": 30}])
+        == "[30d Streak]"
+    )
+    assert (
+        format_major_milestone_subject_tag([{"category": "catalog_artists", "threshold": 4700}])
+        == "[4,700 artists]"
+    )
+    assert format_milestone_summary(
+        {"category": "artist_plays", "entity": "Tim Hecker", "threshold": 25}
+    ) == ("ARTIST", "**Tim Hecker** — 25 plays")
+    assert format_milestone_summary({"category": "other", "entity": "Item", "threshold": 5}) == (
+        "MILESTONE",
+        "**Item** — 5",
+    )

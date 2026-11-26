@@ -353,6 +353,7 @@ def _build_almost_there(
         nxt: int,
         noun: str,
         days_since: int,
+        url: str = "",
     ) -> dict[str, Any] | None:
         if curr <= 0:
             return None
@@ -373,6 +374,7 @@ def _build_almost_there(
             "score": ratio / (1.0 + days_since / 14.0),
             "progress": f"{curr:,}/{nxt:,}{prog_unit}",
             "remaining_display": rem_display,
+            "url": url,
         }
 
     for tier, key, category, curr, fmt_label, noun in (
@@ -503,6 +505,7 @@ def _build_almost_there(
             nxt=nxt_tp,
             noun="play",
             days_since=days_since,
+            url=ytm_watch_url(vid),
         )
         if cand_tp:
             if days_since <= 45 and (cand_tp["ratio"] >= 0.75 or cand_tp["remaining"] <= 5):
@@ -1110,6 +1113,54 @@ def _format_milestone_text(entry: dict[str, Any]) -> str:
         "streak_days": f"**{threshold:,}** consecutive days",
     }
     return templates.get(cat, f"**{entity}** — {threshold:,}")
+
+
+def format_milestone_summary(entry: dict[str, Any]) -> tuple[str, str]:
+    """Returns `(category_code, markdown_text)` for a milestone entry."""
+    code = _CATEGORY_CODE.get(str(entry.get("category") or ""), "MILESTONE")
+    return code, _format_milestone_text(entry)
+
+
+def select_email_almost_there(
+    almost_there: list[dict[str, Any]],
+    max_hot: int = 2,
+    max_wild: int = 1,
+) -> list[dict[str, Any]]:
+    """Picks up to `max_hot` HOT targets and `max_wild` wildcard targets for email footer."""
+    hot = [item for item in almost_there if item.get("tag") == "HOT"][:max_hot]
+    wild = [item for item in almost_there if item.get("tag") != "HOT"][:max_wild]
+    selected = hot + wild
+    total_cap = max_hot + max_wild
+    if len(selected) < total_cap:
+        seen = {id(x) for x in selected}
+        for item in almost_there:
+            if id(item) in seen:
+                continue
+            selected.append(item)
+            if len(selected) >= total_cap:
+                break
+    return selected
+
+
+def format_major_milestone_subject_tag(milestones: list[dict[str, Any]]) -> str:
+    """Returns a concise bracketed subject tag for major catalog or >=30d streak milestones."""
+    if not milestones:
+        return ""
+    priorities = (
+        ("catalog_hours", lambda t: f"[{t:,}h]", 1),
+        ("catalog_plays", lambda t: f"[{t:,} plays]", 1),
+        ("streak_days", lambda t: f"[{t:,}d Streak]", 30),
+        ("catalog_artists", lambda t: f"[{t:,} artists]", 1),
+    )
+    for cat, fmt, min_val in priorities:
+        matching = [
+            int(m.get("threshold") or 0)
+            for m in milestones
+            if m.get("category") == cat and int(m.get("threshold") or 0) >= min_val
+        ]
+        if matching:
+            return fmt(max(matching))
+    return ""
 
 
 def render_milestones_markdown(

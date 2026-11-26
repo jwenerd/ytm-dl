@@ -9,14 +9,37 @@ import json
 import logging
 import os
 import re
+from datetime import date
 from typing import Any
 
 import requests
 
 from src.reports.email_template import markdown_to_email_html
+from src.reports.milestones import (
+    evaluate_milestones,
+    format_major_milestone_subject_tag,
+    get_period_milestones,
+    read_milestones,
+    select_email_almost_there,
+    sync_milestones,
+)
+from src.reports.telemetry import get_cadence_dates
 from src.util import write_file
 
 logger = logging.getLogger(__name__)
+_REPORT_DATE_RE = re.compile(r"\b(\d{4}-\d{2}-\d{2})\b")
+
+
+def _extract_report_date(md_content: str) -> date | None:
+    """Extracts the first valid `YYYY-MM-DD` date from the report header lines."""
+    for line in md_content.splitlines()[:5]:
+        match = _REPORT_DATE_RE.search(line)
+        if match:
+            try:
+                return date.fromisoformat(match.group(1))
+            except ValueError:
+                continue
+    return None
 
 
 class ReportMailer:
@@ -44,30 +67,71 @@ class ReportMailer:
         with open(self.report_path, encoding="utf-8") as f:
             return f.read()
 
-    def extract_subject(self, md_content: str) -> str:
-        """Extracts the email subject line from the markdown title."""
+    def build_milestone_context(self, md_content: str) -> dict[str, Any]:
+        """
+        Ensures milestones are synced from `history.csv` before generating email output,
+        returning unlocked milestones for the report window and compact On Deck targets.
+        """
+        history_path = os.path.join(self.output_dir, "history.csv")
+        if not os.path.isfile(history_path):
+            return {}
+
+        sync_milestones(output_dir=self.output_dir)
+        store = read_milestones(os.path.join(self.output_dir, "meta", "milestones.yaml"))
+        target_date = _extract_report_date(md_content)
+        if target_date is None and store["meta"].get("last_history_date"):
+            target_date = date.fromisoformat(store["meta"]["last_history_date"])
+
+        period_ms: list[dict[str, Any]] = []
+        if target_date is not None and self.cadence in ("daily", "weekly", "monthly"):
+            start_date, end_date = get_cadence_dates(self.cadence, target_date)
+            period_ms = get_period_milestones(self.output_dir, start_date, end_date)
+
+        _, _, _, almost_there = evaluate_milestones(
+            output_dir=self.output_dir,
+            reference_date=target_date,
+            backfill=False,
+        )
+        return {
+            "milestones": period_ms,
+            "almost_there": select_email_almost_there(almost_there),
+        }
+
+    def extract_subject(
+        self,
+        md_content: str,
+        milestones: list[dict[str, Any]] | None = None,
+    ) -> str:
+        """Extracts the email subject line from the markdown title with optional milestone tag."""
+        base = f"{self.cadence.capitalize()} Listening Log"
         for line in md_content.splitlines():
             stripped = line.strip()
             if stripped.startswith("# "):
                 title = stripped[2:].strip()
-                # Clean markdown characters from title if any
                 clean_title = re.sub(r"[*_`]", "", title)
-                # Strip emojis and leading non-alphanumeric characters
                 clean_title = re.sub(
                     r"[\U00010000-\U0010ffff\u2600-\u27bf\ufe0f]+", "", clean_title
                 )
                 clean_title = re.sub(r"^[\W_]+", "", clean_title).strip()
-                return clean_title or f"{self.cadence.capitalize()} Listening Log"
-        return f"{self.cadence.capitalize()} Listening Log"
+                if clean_title:
+                    base = clean_title
+                break
+        tag = format_major_milestone_subject_tag(milestones or [])
+        return f"{base} {tag}" if tag else base
 
-    def render_html(self, save_preview: bool = True) -> tuple[str, str]:
+    def render_html(
+        self,
+        save_preview: bool = True,
+        context: dict[str, Any] | None = None,
+    ) -> tuple[str, str]:
         """
         Renders the markdown report into standalone, responsive HTML.
         Saves a local preview copy in tmp/ (never in output/ to avoid committing).
         Returns (html_content, preview_path).
         """
         md_content = self.read_markdown()
-        html_content = markdown_to_email_html(md_content, context=None)
+        effective_ctx = self.build_milestone_context(md_content) if context is None else context
+        html_content = markdown_to_email_html(md_content, context=effective_ctx or None)
 
         preview_path = os.path.join("tmp", f"email_preview_{self.cadence}.html")
         if save_preview:
@@ -91,8 +155,9 @@ class ReportMailer:
         If dry_run is True, renders HTML and saves preview without dispatching HTTP request.
         """
         md_content = self.read_markdown()
-        subject = self.extract_subject(md_content)
-        html_content, preview_path = self.render_html(save_preview=True)
+        ctx = self.build_milestone_context(md_content)
+        subject = self.extract_subject(md_content, milestones=ctx.get("milestones"))
+        html_content, preview_path = self.render_html(save_preview=True, context=ctx)
 
         if dry_run:
             logger.info("Dry-run email render complete. Subject: %s", subject)
