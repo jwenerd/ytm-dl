@@ -9,6 +9,7 @@ import html
 import re
 from typing import Any
 
+from src.reports.milestones import _ascii_bar, format_milestone_summary
 from src.reports.palettes import (
     EMAIL_THEMES,
     EmailTheme,
@@ -22,6 +23,7 @@ __all__ = [
     "select_email_theme",
 ]
 
+_MILESTONES_URL = "https://github.com/jwenerd/ytm-dl/blob/main-output/output/MILESTONES.md"
 _PLAYLIST_URL_RE = re.compile(r"https://music\.youtube\.com/playlist\?list=[A-Za-z0-9_-]+")
 _COMPACT_STATS_RE = re.compile(
     r"(\d+)\s+plays\s*·\s*([^·]+?)\s*·\s*(\d+)\s+artists\s*·\s*(\d+)\s+new\s+artists",
@@ -202,6 +204,116 @@ def _is_telemetry_bullet(item_text: str) -> bool:
     return plain.startswith(prefixes)
 
 
+def _format_liner_target(item: dict[str, Any], theme: EmailTheme) -> str:
+    raw_label = str(item.get("label") or "")
+    url = str(item.get("url") or "").strip()
+    if not url:
+        return _format_inline(raw_label, theme)
+    safe_url = _escape(url)
+    link_style = (
+        f"color: {theme['link']}; text-decoration: none; "
+        f"border-bottom: 1px dotted {theme['link']}; font-weight: 600;"
+    )
+    if raw_label.startswith("**") and "**" in raw_label[2:]:
+        title_part, rest = raw_label[2:].split("**", 1)
+        return f'<a href="{safe_url}" style="{link_style}">{_escape(title_part)}</a>{_format_inline(rest, theme)}'
+    return f'<a href="{safe_url}" style="{link_style}">{_escape(raw_label)}</a>'
+
+
+def _render_liner_notes(
+    milestones: list[dict[str, Any]],
+    almost_there: list[dict[str, Any]],
+    theme: EmailTheme,
+) -> str:
+    """Renders the compact bottom Liner Notes / On Deck OBI block for milestones and near-misses."""
+    if not milestones and not almost_there:
+        return ""
+
+    header_html = f"""
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 10px;">
+        <tr>
+          <td style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: {theme["secondary"]}; text-transform: uppercase;">
+            LINER NOTES  //  ON DECK
+          </td>
+          <td align="right" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; letter-spacing: 0.06em;">
+            <a href="{_MILESTONES_URL}" style="color: {theme["link"]}; text-decoration: none; text-transform: uppercase;">Full Ledger &#8599;</a>
+          </td>
+        </tr>
+      </table>"""
+
+    unlocked_html = ""
+    if milestones:
+        badge_style = (
+            "font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; "
+            f"font-size: 10px; font-weight: 700; background: {theme['code_bg']}; "
+            f"color: {theme['code_fg']}; padding: 1px 5px; border-radius: 3px; "
+            "letter-spacing: 0.05em; margin-right: 6px;"
+        )
+        items_html = []
+        for entry in milestones[:4]:
+            code, text = format_milestone_summary(entry)
+            items_html.append(
+                f'<div style="margin: 4px 0; font-size: 12.5px; line-height: 1.5; color: {theme["text_body"]};">'
+                f'<span style="{badge_style}">{_escape(code)}</span>{_format_inline(text, theme)}'
+                "</div>"
+            )
+        extra = len(milestones) - 4
+        if extra > 0:
+            items_html.append(
+                f'<div style="margin-top: 4px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; color: {theme["text_muted"]};">+{extra} more unlocked</div>'
+            )
+        unlocked_html = (
+            f'<div style="margin-bottom: {"12px" if almost_there else "0"};">'
+            f'<div style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; letter-spacing: 0.08em; color: {theme["text_muted"]}; text-transform: uppercase; margin-bottom: 4px;">Unlocked</div>'
+            f"{''.join(items_html)}"
+            "</div>"
+        )
+
+    on_deck_html = ""
+    if almost_there:
+        tag_style = (
+            "font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; "
+            f"font-size: 10px; font-weight: 700; background: {theme['code_bg']}; "
+            f"color: {theme['code_fg']}; padding: 1px 5px; border-radius: 3px; "
+            "letter-spacing: 0.04em; margin-right: 6px;"
+        )
+        rows_html = []
+        for item in almost_there:
+            tag = _escape(str(item.get("tag") or "HOT"))
+            target_cell = _format_liner_target(item, theme)
+            bar = _ascii_bar(float(item.get("ratio") or 0.0))
+            prog = _escape(str(item.get("progress") or ""))
+            rem = _escape(str(item.get("remaining_display") or ""))
+            rows_html.append(
+                "<tr>"
+                f'<td style="padding: 4px 8px 4px 0; font-size: 12.5px; line-height: 1.45; color: {theme["text_body"]}; vertical-align: middle;">'
+                f'<span style="{tag_style}">{tag}</span>{target_cell}'
+                "</td>"
+                f'<td align="right" style="padding: 4px 0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; color: {theme["text_muted"]}; white-space: nowrap; vertical-align: middle;">'
+                f"{bar} {prog} &middot; {rem}"
+                "</td>"
+                "</tr>"
+            )
+        on_deck_html = (
+            "<div>"
+            f'<div style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; letter-spacing: 0.08em; color: {theme["text_muted"]}; text-transform: uppercase; margin-bottom: 4px;">On Deck</div>'
+            f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0">{"".join(rows_html)}</table>'
+            "</div>"
+        )
+
+    return f"""
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: {theme["obi_bg"]}; border-top: 1px solid {theme["border"]};">
+      <tr>
+        <td style="padding: 16px 24px 18px 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+          {header_html}
+          {unlocked_html}
+          {on_deck_html}
+        </td>
+      </tr>
+    </table>
+    """
+
+
 def markdown_to_email_html(
     md_content: str,
     context: dict[str, Any] | None = None,
@@ -346,8 +458,20 @@ def markdown_to_email_html(
     flush_list()
     flush_table()
 
-    telemetry = context.get("telemetry", {}) if context else _extract_telemetry_from_lines(lines)
+    telemetry = (
+        context["telemetry"]
+        if (context and context.get("telemetry"))
+        else _extract_telemetry_from_lines(lines)
+    )
     obi_ledger_html = _render_obi_ledger(telemetry, theme=theme, playlist_url=playlist_url)
+    milestones = (context or {}).get("milestones") or []
+    almost_there = (context or {}).get("almost_there") or []
+    liner_notes_html = _render_liner_notes(milestones, almost_there, theme=theme)
+    liner_notes_tr = (
+        f'\n          <!-- Liner Notes / On Deck OBI Block -->\n          <tr><td style="padding: 0;">{liner_notes_html}</td></tr>'
+        if liner_notes_html
+        else ""
+    )
     masthead_headline = spin_headline or doc_title
     body_content = "".join(html_parts)
 
@@ -396,7 +520,7 @@ def markdown_to_email_html(
             <td style="padding: 22px 24px 24px 24px;">
               {body_content}
             </td>
-          </tr>
+          </tr>{liner_notes_tr}
 
           <!-- Colophon Footer -->
           <tr>

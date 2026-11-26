@@ -5,7 +5,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from src.reports.mailer import ReportMailer
+from src.reports.mailer import ReportMailer, _extract_report_date
 
 
 def test_mailer_file_not_found(tmp_path):
@@ -126,3 +126,44 @@ def test_mailer_send_success(mock_post, tmp_path):
     sent_data = call_args[1]["data"]
     assert '"action": "send_email"' in sent_data
     assert '"recipient": "user@example.com"' in sent_data
+
+
+def test_mailer_syncs_milestones_and_adds_subject_tag(tmp_path):
+    assert _extract_report_date("# Daily Listening Log: 2026-99-99\n# Date 2026-11-26") is not None
+    assert _extract_report_date("No valid date anywhere") is None
+
+    out_dir = tmp_path
+    with open(out_dir / "history.csv", "w", encoding="utf-8") as f:
+        f.write("title,artists,album,duration_seconds,videoId,played_at\n")
+        for i in range(24):
+            f.write(f'"Track {i}","Tim Hecker","Virgins",100,vt{i},2026-11-26T00:00:00Z\n')
+        for i in range(76):
+            f.write(f'"Long {i}","Artist {i}","LP",4800,vl{i},2026-11-26T00:00:00Z\n')
+
+    report_dir = out_dir / "reports"
+    report_dir.mkdir(parents=True)
+    report_file = report_dir / "daily.md"
+    report_file.write_text(
+        "# Daily Listening Log: 2026-11-26\n"
+        "- **Stats**: 100 plays · 102h · 77 artists · 77 new artists\n\n"
+        "Dense drone session.\n",
+        encoding="utf-8",
+    )
+
+    mailer = ReportMailer(cadence="daily", report_path=str(report_file), output_dir=str(out_dir))
+    with patch("src.reports.mailer.write_file") as mock_write_file:
+        res = mailer.send(dry_run=True)
+
+    # Milestones must have synced prior to rendering even though milestones.yaml did not exist yet
+    assert (out_dir / "meta" / "milestones.yaml").is_file()
+    assert (out_dir / "MILESTONES.md").is_file()
+    assert res["subject"] == "Daily Listening Log: 2026-11-26 [100h]"
+    html_out = mock_write_file.call_args[0][1]
+    assert "LINER NOTES  //  ON DECK" in html_out
+    assert "listening hours" in html_out
+    assert "Tim Hecker" in html_out
+
+    # Report without H1 date falls back cleanly to last_history_date from milestones.yaml
+    fallback_ctx = mailer.build_milestone_context("# Daily Digest\nContent\n")
+    assert fallback_ctx["milestones"]
+    assert fallback_ctx["almost_there"]
