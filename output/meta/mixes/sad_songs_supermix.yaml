@@ -2,11 +2,11 @@ title: Sad Songs Supermix
 mood_chip: Sad
 playlist_id: RDTMAK5uy_mZvWCHQ-KwmUM_ZMeZNRF93nKrLafqFp0
 description: ''
-featured_artists: Nick Drake, Hank Williams Jr., Grateful Dead, Radiohead
+featured_artists: Nick Drake, Hank Williams, George Jones, Merle Haggard
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3779
-new_tracks_latest_run: 109
+total_unique_tracks: 3819
+new_tracks_latest_run: 40
 latest_batch_size: 500
-last_updated: '2026-11-25T12:58:11Z'
-run_id: gh-7109
+last_updated: '2026-11-26T09:33:48Z'
+run_id: gh-7112
