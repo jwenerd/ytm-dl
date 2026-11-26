@@ -5,6 +5,7 @@ from unittest.mock import MagicMock, patch
 import requests
 
 from src.reports.generator import (
+    DEFAULT_MAX_OUTPUT_TOKENS,
     clean_markdown_fences,
     generate_report,
     get_google_ai_api_key,
@@ -225,13 +226,15 @@ def test_generate_report_fallback_and_api(monkeypatch):
         mock_resp.json.return_value = {
             "candidates": [
                 {
+                    "finishReason": "STOP",
                     "content": {
                         "parts": [
+                            {"thought": True, "text": "Internal reasoning should be skipped."},
                             {
                                 "text": "```markdown\n# Daily Listening Log: 2026-10-18\nCrate spin\n```"
-                            }
+                            },
                         ]
-                    }
+                    },
                 }
             ]
         }
@@ -240,6 +243,28 @@ def test_generate_report_fallback_and_api(monkeypatch):
 
         ok_report = generate_report(ctx, api_key="valid-key")
         assert "Crate spin" in ok_report
+        assert "Internal reasoning" not in ok_report
+        sent_payload = mock_post.call_args.kwargs["json"]
+        assert sent_payload["generationConfig"]["maxOutputTokens"] == DEFAULT_MAX_OUTPUT_TOKENS
+        assert DEFAULT_MAX_OUTPUT_TOKENS == 16384
+
+    # MAX_TOKENS truncation falls back cleanly to deterministic report
+    with patch("src.reports.generator.requests.post") as mock_trunc:
+        trunc_resp = MagicMock()
+        trunc_resp.json.return_value = {
+            "candidates": [
+                {
+                    "finishReason": "MAX_TOKENS",
+                    "content": {"parts": [{"text": "# Daily Listening Log: Truncated..."}]},
+                }
+            ]
+        }
+        trunc_resp.raise_for_status.return_value = None
+        mock_trunc.return_value = trunc_resp
+
+        fallback_on_trunc = generate_report(ctx, api_key="valid-key")
+        assert "Truncated..." not in fallback_on_trunc
+        assert "## On the Turntable" in fallback_on_trunc
 
     with patch("src.reports.generator.requests.post") as mock_err:
         mock_err.side_effect = requests.RequestException("Network error")
