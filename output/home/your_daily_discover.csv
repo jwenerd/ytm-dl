@@ -1,16 +1,16 @@
 id,type,title,artists,description,first_seen,last_seen,times_recommended,latest_position
-dpPLIx2PhHI,Song,#7,Aphex Twin,,2026-11-26T09:34:05Z,2026-11-26T10:14:31Z,2,2
-Yevo49R1o4I,Song,Minority,Bill Evans,,2026-11-26T09:34:05Z,2026-11-26T10:14:31Z,2,3
-9KcnxA36s04,Song,expectations,"Chappell Roan, Olivia Rodrigo",,2026-11-26T09:34:05Z,2026-11-26T10:14:31Z,2,5
-C9Ivq2bXUGA,Song,Candle,Buck Meek,,2026-11-26T09:34:05Z,2026-11-26T10:14:31Z,2,6
-9rD3zdscDRQ,Song,"So What (feat. John Coltrane, Cannonball Adderley & Bill Evans)",Miles Davis,,2026-11-26T09:34:05Z,2026-11-26T10:14:31Z,2,8
-shOfu810phM,Song,Wisdom Eye,Alice Coltrane,,2026-11-26T09:34:05Z,2026-11-26T10:14:31Z,2,10
+dpPLIx2PhHI,Song,#7,Aphex Twin,,2026-11-26T09:34:05Z,2026-11-26T12:37:30Z,3,2
+Yevo49R1o4I,Song,Minority,Bill Evans,,2026-11-26T09:34:05Z,2026-11-26T12:37:30Z,3,3
+9KcnxA36s04,Song,expectations,"Chappell Roan, Olivia Rodrigo",,2026-11-26T09:34:05Z,2026-11-26T12:37:30Z,3,5
+C9Ivq2bXUGA,Song,Candle,Buck Meek,,2026-11-26T09:34:05Z,2026-11-26T12:37:30Z,3,6
+9rD3zdscDRQ,Song,"So What (feat. John Coltrane, Cannonball Adderley & Bill Evans)",Miles Davis,,2026-11-26T09:34:05Z,2026-11-26T12:37:30Z,3,8
+shOfu810phM,Song,Wisdom Eye,Alice Coltrane,,2026-11-26T09:34:05Z,2026-11-26T12:37:30Z,3,10
 nxHe9CX79h4,Song,Same Old Blues (feat. Jessi Colter),Waylon Jennings,,2026-11-25T12:58:28Z,2026-11-25T12:58:28Z,1,4
 KT4xmEBWyn8,Song,Mr. Mudd And Mr. Gold,Townes Van Zandt,,2026-11-25T12:58:28Z,2026-11-25T12:58:28Z,1,7
 cHm_zL4azWU,Song,Most High (feat. Libianca),Ezra Collective,,2026-11-25T12:58:28Z,2026-11-25T12:58:28Z,1,8
 kiDjxO3B398,Song,Parallel Jalebi,Four Tet,,2026-11-25T12:58:28Z,2026-11-25T12:58:28Z,1,9
 1UGtH3t-QKg,Song,To Never Forget The Source,Sons Of Kemet,,2026-11-25T12:58:28Z,2026-11-25T12:58:28Z,1,10
-RDTMAK5uy_n_5IN6hzAOwdCnM8D8rzrs3vDl12UcZpA,Playlist,Discover Mix,,"Traffic, New Riders of the Purple Sage, The Dead Milkmen, The String Cheese Incident",2026-11-24T13:45:47Z,2026-11-26T10:14:31Z,4,1
+RDTMAK5uy_n_5IN6hzAOwdCnM8D8rzrs3vDl12UcZpA,Playlist,Discover Mix,,"Traffic, New Riders of the Purple Sage, The Dead Milkmen, The String Cheese Incident",2026-11-24T13:45:47Z,2026-11-26T12:37:30Z,5,1
 Kq1TQzjZtxg,Song,Maboroshi,,,2026-11-24T13:45:47Z,2026-11-24T13:45:47Z,1,4
 TyeCKOMABfk,Song,Aurora Centralis,747,,2026-11-24T13:45:47Z,2026-11-24T13:45:47Z,1,5
 XuuL0rvMxOM,Song,Sweet Echo,Ezra Collective,,2026-11-24T13:45:47Z,2026-11-24T13:45:47Z,1,6
@@ -250,7 +250,7 @@ bKS1v5-X2yg,Song,"Aberdeen (feat. John Medeski, Jorge Roeder & Kenny Wollesen)",
 dzqlywF2MRo,Song,Here I Am,Rambler Kane,,2026-10-12T10:52:47Z,2026-10-12T10:52:47Z,1,2
 2eBFmc08qng,Song,Club Intro,Mild High Club,,2026-10-12T10:52:47Z,2026-10-12T10:52:47Z,1,5
 absss4RXfys,Song,Little Child Runnin' Wild,Curtis Mayfield,,2026-10-12T10:52:47Z,2026-10-12T10:52:47Z,1,6
-voxg5-I7Kb0,Song,Ene Alantchi Anorem,"Girma Hadgu, Mulatu Astatke",,2026-10-11T10:02:33Z,2026-11-26T10:14:31Z,3,7
+voxg5-I7Kb0,Song,Ene Alantchi Anorem,"Girma Hadgu, Mulatu Astatke",,2026-10-11T10:02:33Z,2026-11-26T12:37:30Z,4,7
 Hc7Bichvq6k,Song,The Boat,Hania Rani,,2026-10-11T10:02:33Z,2026-10-11T10:02:33Z,1,2
 LuZvynxUthc,Song,Too Late To Turn Back,El Michels Affair,,2026-10-11T10:02:33Z,2026-10-11T10:02:33Z,1,3
 9WNCJx0KAbg,Song,October,Okonski,,2026-10-11T10:02:33Z,2026-10-11T10:02:33Z,1,5
@@ -289,7 +289,7 @@ GKUzL0yQfcU,Song,"Brahms: 4 Piano Pieces, Op. 119: No. 1 in B Minor. Intermezzo.
 NKuvim3R2WY,Song,Dual Custody,John Prine,,2026-10-04T09:50:33Z,2026-10-04T09:50:33Z,1,1
 xks_KXbD1wk,Song,Tributary,Julian Lage,,2026-10-04T09:50:33Z,2026-10-29T10:00:16Z,3,6
 MomTosyM2DM,Song,Ookpik Waltz,"Chris Thile, Michael Daves",,2026-10-04T09:50:33Z,2026-10-04T09:50:33Z,1,3
-fjbDzF9epqA,Song,Grown (Alex Somers Rework) (feat. Ólafur Arnalds & Janus Rasmussen),"Alex Somers, Kiasmos",,2026-10-04T09:50:33Z,2026-11-26T10:14:31Z,3,4
+fjbDzF9epqA,Song,Grown (Alex Somers Rework) (feat. Ólafur Arnalds & Janus Rasmussen),"Alex Somers, Kiasmos",,2026-10-04T09:50:33Z,2026-11-26T12:37:30Z,4,4
 _JZLMacEK3g,Song,Gliding Through Everything,Four Tet,,2026-10-04T09:50:33Z,2026-10-04T09:50:33Z,1,7
 vra_byR4Bt4,Song,Jupiter's Faerie,"Johnny Blue Skies, Sturgill Simpson",,2026-10-04T09:50:33Z,2026-10-07T10:18:10Z,2,3
 VQBa4eqrCgI,Song,Serenade,Julian Lage,,2026-10-03T09:11:26Z,2026-10-07T10:18:10Z,2,2
@@ -306,7 +306,7 @@ DutN4sQROo0,Song,"Nocturne, Op. 19, No. 4 (Arr. for Cello and Orchestra)","Pyotr
 t9d3Q8l8rMM,Song,"Mozart: Piano Concerto No. 20 in D Minor, K. 466: II. Romance","Chamber Orchestra of Europe, Seong-Jin Cho, Wolfgang Amadeus Mozart, Yannick Nézet-Séguin",,2026-10-01T10:10:40Z,2026-10-04T09:50:33Z,2,4
 4HMw1eV2Qcs,Song,Wildflowers,"Dolly Parton, Emmylou Harris, Linda Ronstadt",,2026-10-01T10:10:40Z,2026-10-01T10:10:40Z,1,7
 68LS6Yv9JIo,Song,"2 Arabesques, L. 66: No. 1, Andantino con moto (Arr. R. Boyd & L. Metcalf for Guitar & Cello)","Boyd Meets Girl, Claude Debussy, Laura Metcalf, Rupert Boyd",,2026-10-01T10:10:40Z,2026-10-01T10:10:40Z,1,8
-fTP0n7eJOxA,Song,Green To You,"Emile Mosseri, Kaitlyn Aurelia Smith",,2026-10-01T10:10:40Z,2026-11-26T10:14:31Z,3,9
+fTP0n7eJOxA,Song,Green To You,"Emile Mosseri, Kaitlyn Aurelia Smith",,2026-10-01T10:10:40Z,2026-11-26T12:37:30Z,4,9
 RzCybATHyjU,Song,Rabbit In the Log (feat. The Virginia Boys),Jim & Jesse,,2026-09-30T09:44:17Z,2026-10-30T10:03:25Z,3,4
 CBGZ9Xaq7qs,Song,Black Disciples,Ernest Ranglin,,2026-09-30T09:44:17Z,2026-09-30T09:44:17Z,1,4
 dMpvnhILdUM,Song,Another Brick in the Wall,"Keller Williams, the Keels",,2026-09-30T09:44:17Z,2026-09-30T09:44:17Z,1,5
