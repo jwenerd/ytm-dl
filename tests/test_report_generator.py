@@ -6,6 +6,8 @@ import requests
 
 from src.reports.generator import (
     DEFAULT_MAX_OUTPUT_TOKENS,
+    DEFAULT_THINKING_LEVEL,
+    GEMINI_API_URL,
     clean_markdown_fences,
     generate_report,
     get_google_ai_api_key,
@@ -244,9 +246,13 @@ def test_generate_report_fallback_and_api(monkeypatch):
         ok_report = generate_report(ctx, api_key="valid-key")
         assert "Crate spin" in ok_report
         assert "Internal reasoning" not in ok_report
+        assert "gemini-4-hydrogen" in GEMINI_API_URL
+        assert mock_post.call_args.args[0] == GEMINI_API_URL
         sent_payload = mock_post.call_args.kwargs["json"]
         assert sent_payload["generationConfig"]["maxOutputTokens"] == DEFAULT_MAX_OUTPUT_TOKENS
         assert DEFAULT_MAX_OUTPUT_TOKENS == 16384
+        assert DEFAULT_THINKING_LEVEL == "medium"
+        assert sent_payload["generationConfig"]["thinkingConfig"] == {"thinkingLevel": "medium"}
 
     # MAX_TOKENS truncation falls back cleanly to deterministic report
     with patch("src.reports.generator.requests.post") as mock_trunc:
