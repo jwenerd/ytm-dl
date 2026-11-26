@@ -77,13 +77,13 @@
 
 ---
 
-## All-Time Records
+## Recorded Totals & Peaks
 
 | Metric | Value | Date / Period |
 |---|---:|---|
-| Total Plays | 69,090 | Lifetime |
-| Total Hours | 6,978.3h | Lifetime |
-| Unique Artists | 4,672 | Lifetime |
+| Total Plays | 69,090 | Since 2024-01 |
+| Total Hours | 6,978.3h | Since 2024-01 |
+| Unique Artists | 4,672 | Since 2024-01 |
 | Longest Streak | 153 days | Ended 2026-09-22 |
 | Peak Day | 502 plays | 2024-08-20 |
 | Peak Week | 2,219 plays | 2026-W27 |
