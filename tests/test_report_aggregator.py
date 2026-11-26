@@ -42,6 +42,11 @@ def test_assemble_report_context_and_new_artists(monkeypatch, tmp_path):
     assert ctx["telemetry"]["new_artists"] == ["Dorothy Ashby"]
     assert "forgotten_candidates" in ctx
     assert "long_form_picks" in ctx
+    assert "milestones" in ctx
+    assert ctx["obsessions"] == {}
+
+    ctx_weekly = assemble_report_context(output_dir, "weekly", date(2026, 10, 19))
+    assert "window_14d_plays" in ctx_weekly["obsessions"]
 
     ctx_dt = assemble_report_context(output_dir, "daily", datetime(2026, 10, 19, 18, 0))
     assert ctx_dt["period_label"] == "2026-10-19"

@@ -130,6 +130,21 @@ def test_get_google_ai_api_key(tmp_path, monkeypatch):
 def test_build_report_prompt_crate_digger():
     for cadence in ["daily", "weekly", "monthly"]:
         ctx = sample_context(cadence)
+        ctx["milestones"] = [
+            {
+                "category": "artist_plays",
+                "entity": "Grateful Dead",
+                "threshold": 500,
+                "date": "2026-10-18",
+            }
+        ]
+        ctx["obsessions"] = {
+            "window_14d_plays": 42,
+            "tracks_on_repeat": [{"title": "Shakedown Street", "plays_7d": 5}],
+            "artist_signals": [],
+            "album_binges": [],
+            "taste_phases": [],
+        }
         prompt = build_report_prompt(ctx)
         assert "record-store clerk" in prompt
         assert "Library Ratio" not in prompt
@@ -137,12 +152,22 @@ def test_build_report_prompt_crate_digger():
         assert "Liked & Forgotten" in prompt
         assert "Full Album" in prompt
         assert "Long Spin" in prompt
+        assert "Milestones & Obsessions" in prompt
+        assert '"obsessions"' in prompt
         assert cadence.upper() in prompt
 
 
 def test_generate_fallback_report_all_branches():
     for cadence in ["daily", "weekly", "monthly"]:
         ctx = sample_context(cadence)
+        ctx["milestones"] = [
+            {
+                "category": "artist_plays",
+                "entity": "Grateful Dead",
+                "threshold": 500,
+                "date": "2026-10-18",
+            }
+        ]
         fallback = generate_fallback_report(ctx)
         assert "Library Ratio" not in fallback
         assert "1 new artists" in fallback
@@ -150,6 +175,7 @@ def test_generate_fallback_report_all_branches():
         assert "**Liked & Forgotten:**" in fallback
         assert "**Full Album:**" in fallback
         assert "**Long Spin:**" in fallback
+        assert "Milestone Unlocked" in fallback
 
     # Collision branch + live branch + zero-activity branch
     ctx_col = sample_context("daily")

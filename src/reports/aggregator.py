@@ -10,6 +10,7 @@ from src.reports.candidates import (
     extract_long_form_picks,
     extract_radar_candidates,
 )
+from src.reports.milestones import detect_obsessions, get_period_milestones
 from src.reports.telemetry import (
     aggregate_listening_telemetry,
     clean_and_split_artists,
@@ -69,7 +70,7 @@ def assemble_report_context(
     else:
         target = target_date
 
-    start_date, _ = get_cadence_dates(cadence, target)
+    start_date, end_date = get_cadence_dates(cadence, target)
     start_dt, end_dt = get_cadence_window(cadence, target)
 
     # 1. Read history and separate prior artist catalog from active slice
@@ -129,6 +130,11 @@ def assemble_report_context(
         max_sets=3,
     )
 
+    obsessions = (
+        detect_obsessions(output_dir, reference_date=target)
+        if cadence.lower() in ("weekly", "monthly")
+        else {}
+    )
     return {
         "cadence": cadence.lower(),
         "start_time": start_dt.isoformat(),
@@ -138,4 +144,6 @@ def assemble_report_context(
         "radar_candidates": radar_candidates,
         "forgotten_candidates": forgotten_candidates,
         "long_form_picks": long_form_picks,
+        "milestones": get_period_milestones(output_dir, start_date, end_date),
+        "obsessions": obsessions,
     }

@@ -190,6 +190,7 @@ def test_write_readme_moves_files_to_files_md_and_embeds_charts(tmp_path, monkey
 
     readme_md = written["README.md"]
     assert "### 📁 Files" not in readme_md
+    assert "[Milestones](MILESTONES.md)" in readme_md
     assert "[📁 Output Files](FILES.md)" in readme_md
     assert "[📰 Listening Reports](reports/README.md)" in readme_md
     assert "run #7109" in readme_md

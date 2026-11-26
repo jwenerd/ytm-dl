@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import concurrent.futures
+import os
 import string
 import sys
 
@@ -31,10 +32,28 @@ def do_search_suggestions():
 
 def do_updates(option):
     ChangeTracker.reset()
-    if option not in ["all", "frequent", "mixes", "home", "auth", "report", "mail", "enrich"]:
-        print("Option must be all, frequent, mixes, home, auth, report, mail, or enrich")
+    if option not in [
+        "all",
+        "frequent",
+        "mixes",
+        "home",
+        "auth",
+        "report",
+        "mail",
+        "enrich",
+        "milestones",
+    ]:
+        print(
+            "Option must be all, frequent, mixes, home, auth, report, mail, enrich, or milestones"
+        )
         print("  given: " + str(option))
         sys.exit(1)
+
+    if option == "milestones":
+        from src.reports.milestones import run_milestones_cli
+
+        run_milestones_cli(sys.argv[2:])
+        return
 
     if option == "enrich":
         from src.reports.artist_tags import run_enrich_cli
@@ -134,12 +153,30 @@ def do_updates(option):
             print(f"Warning: Failed to enrich artist tags: {e}")
 
     files_written = set(filter(None, files_written))
+    history_updated = any("history" in str(f) for f in files_written)
+
+    # Sync deterministic milestones & obsessions only when history changed or output is missing
+    if history_updated or not os.path.isfile("output/MILESTONES.md"):
+        try:
+            from src.reports.milestones import sync_milestones
+
+            ms_res = sync_milestones(output_dir="output")
+            if ms_res["newly_unlocked"] > 0:
+                ChangeTracker.record(
+                    emoji="🏆",
+                    label="Milestones",
+                    count=ms_res["newly_unlocked"],
+                    log_message=(
+                        f"✨ Unlocked {ms_res['newly_unlocked']} new listening milestone(s)"
+                    ),
+                )
+        except Exception as e:
+            print(f"Warning: Failed to sync milestones: {e}")
 
     # Evaluate lazy-man AI reports after sync
     try:
         from src.reports.rotator import run_reports
 
-        history_updated = any("history" in str(f) for f in files_written)
         reports_generated = run_reports(output_dir="output", refresh_nocturnal=history_updated)
         if reports_generated:
             print(f"✓ Generated listening report(s): {', '.join(reports_generated)}")
