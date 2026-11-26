@@ -6,6 +6,21 @@ from typing import TypedDict
 _ISO_DATE_RE = re.compile(r"\b(\d{4})-(\d{2})-(\d{2})\b")
 _ISO_WEEK_RE = re.compile(r"\b\d{4}-W(\d{2})\b")
 _ISO_MONTH_RE = re.compile(r"\b\d{4}-(\d{2})\b")
+_MONTH_NAMES = {
+    "january": 1,
+    "february": 2,
+    "march": 3,
+    "april": 4,
+    "may": 5,
+    "june": 6,
+    "july": 7,
+    "august": 8,
+    "september": 9,
+    "october": 10,
+    "november": 11,
+    "december": 12,
+}
+_MONTH_NAME_RE = re.compile(r"\b(" + "|".join(_MONTH_NAMES) + r")\s+\d{4}\b", re.IGNORECASE)
 
 
 class EmailTheme(TypedDict):
@@ -293,6 +308,11 @@ def select_email_theme(
     m_month = _ISO_MONTH_RE.search(period_hint)
     if m_month:
         month = int(m_month.group(1))
+        return EMAIL_THEMES[(month - 1) % count]
+
+    m_month_name = _MONTH_NAME_RE.search(period_hint)
+    if m_month_name:
+        month = _MONTH_NAMES[m_month_name.group(1).lower()]
         return EMAIL_THEMES[(month - 1) % count]
 
     return EMAIL_THEMES[0]

@@ -6,6 +6,7 @@ from src.reports.email_template import (
     _render_callout_card,
     _render_liner_notes,
     _render_obi_ledger,
+    _render_obsessions_block,
     markdown_to_email_html,
 )
 
@@ -176,3 +177,84 @@ def test_liner_notes_obi_block_and_one_tap_links():
     on_deck_only = _render_liner_notes([], almost_there[:1], EMAIL_THEMES[0])
     assert "Unlocked" not in on_deck_only
     assert "On Deck" in on_deck_only
+
+
+def test_weekly_monthly_editions_preheader_and_obsessions():
+    assert _render_obsessions_block({}, EMAIL_THEMES[0]) == ""
+
+    obs = {
+        "artist_signals": [
+            {"artist": "Acid Pauli", "signal": "SURGE", "plays_14d": 23, "context": "3.2x vs 90d"},
+            {"artist": "Meitei", "signal": "BREAKOUT", "plays_14d": 12, "context": ""},
+        ],
+        "tracks_on_repeat": [
+            {
+                "title": "Edda's Cumbia",
+                "artist": "Acid Pauli",
+                "url": "https://music.youtube.com/watch?v=v_edda",
+                "plays_7d": 5,
+            },
+            {"title": "Unlinked Loop", "artist": "Artist B", "url": "", "plays_7d": 4},
+        ],
+        "album_binges": [{"album": "Virgins", "artist": "Tim Hecker", "plays_7d": 11}],
+        "taste_phases": [{"label": "Ethio-jazz", "lift": 2.8}],
+    }
+    milestones = [
+        {"category": "catalog_hours", "entity": "Library", "threshold": 7000, "date": "2026-11-05"},
+        *[
+            {
+                "category": "artist_plays",
+                "entity": f"Artist {i}",
+                "threshold": 25,
+                "date": "2026-11-10",
+            }
+            for i in range(5)
+        ],
+    ]
+
+    weekly_md = (
+        "# Weekly Crate Digest: 2026-W47 (Nov 16 - Nov 22)\n"
+        "*Recorded via ytm-dl | Crate-Digger Weekly*\n\n"
+        "- **Stats**: 189 plays · 20h 19m · 126 artists · 14 new artists\n\n"
+        "**The Spin:** Organic house drift met acoustic flatpicking.\n\n"
+        "Warm week across the shop.\n"
+    )
+    weekly_html = markdown_to_email_html(
+        weekly_md,
+        context={"cadence": "weekly", "obsessions": obs, "milestones": milestones},
+    )
+    assert "WEEKLY EDITION" in weekly_html
+    assert "Full Ledger" in weekly_html
+    assert (
+        "Organic house drift met acoustic flatpicking. — 189 spins / 20H 19M / 126 artists"
+        in weekly_html
+    )
+    assert "OBSESSIONS &amp; SURGES  //  14D WINDOW" in weekly_html
+    assert "BREAKOUT" in weekly_html
+    assert "https://music.youtube.com/watch?v=v_edda" in weekly_html
+    assert "Unlinked Loop" in weekly_html
+    assert "Virgins" in weekly_html
+    assert "Ethio-jazz" in weekly_html
+    assert "LINER NOTES  //  MILESTONES" in weekly_html
+    assert "ytm-dl weekly log" in weekly_html
+    # Weekly Liner Notes cap is 6 (6 milestones rendered, +0 more -> no '+1 more')
+    assert "more unlocked" not in weekly_html
+
+    monthly_md = (
+        "# Monthly Crate Retrospective: October 2026\n"
+        "*Recorded via ytm-dl | Crate-Digger Monthly*\n\n"
+        "- **Stats**: 954 plays · 72h 46m · 414 artists · 45 new artists\n\n"
+        "A month of deep archival listening.\n"
+    )
+    monthly_html = markdown_to_email_html(
+        monthly_md,
+        context={"obsessions": obs, "milestones": [*milestones, milestones[0]]},
+    )
+    assert 'data-theme="tokyo_kissaten_olive"' in monthly_html
+    assert "MONTHLY SPECIAL" in monthly_html
+    assert (
+        "height: 2px; line-height: 2px; font-size: 1px; background-color: #f59e0b;" in monthly_html
+    )
+    assert "+1 more unlocked" in monthly_html
+    assert "ytm-dl monthly log" in monthly_html
+    assert len(monthly_html.encode("utf-8")) < 102400

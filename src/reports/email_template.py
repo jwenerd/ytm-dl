@@ -19,6 +19,7 @@ from src.reports.palettes import (
 __all__ = [
     "EMAIL_THEMES",
     "EmailTheme",
+    "_render_obsessions_block",
     "markdown_to_email_html",
     "select_email_theme",
 ]
@@ -69,14 +70,51 @@ def _format_inline(text: str, theme: EmailTheme | None = None) -> str:
     )
 
 
+def _infer_cadence(context: dict[str, Any] | None, doc_title: str) -> str:
+    """Resolves report cadence from context or falls back to document title keywords."""
+    raw = str((context or {}).get("cadence") or "").strip().lower()
+    if raw in ("daily", "weekly", "monthly"):
+        return raw
+    title_lower = doc_title.lower()
+    if "weekly" in title_lower:
+        return "weekly"
+    if "monthly" in title_lower:
+        return "monthly"
+    return "daily"
+
+
+def _render_preheader(
+    spin_headline: str,
+    telemetry: dict[str, Any],
+    doc_title: str,
+) -> str:
+    """Renders an invisible inbox preview preheader overriding client boilerplate."""
+    lead = spin_headline or doc_title
+    total = int(telemetry.get("total_tracks") or 0)
+    if total > 0:
+        dur = str(telemetry.get("total_duration_display", "0m")).upper()
+        artists = int(telemetry.get("unique_artists_count") or 0)
+        preview_text = f"{lead} — {total} spins / {dur} / {artists} artists"
+    else:
+        preview_text = lead
+    spacer = "&zwnj;&nbsp;" * 24
+    return (
+        '<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;'
+        'font-size:1px;line-height:1px;color:transparent;opacity:0;">'
+        f"{_escape(preview_text)} {spacer}"
+        "</div>"
+    )
+
+
 def _render_obi_ledger(
     telemetry: dict[str, Any],
     theme: EmailTheme,
     playlist_url: str | None = None,
+    cadence: str = "daily",
 ) -> str:
     """
     Renders a single-line Vinyl OBI / Editorial Zine ledger bar bounded by thin hairlines,
-    with an inline 'Play Crate' pill button on the right (zero KPI boxes).
+    with an inline 'Play Crate' (daily) or 'Full Ledger' (weekly/monthly) pill button.
     """
     has_stats = bool(telemetry and telemetry.get("total_tracks") is not None)
     if not has_stats and not playlist_url:
@@ -109,6 +147,13 @@ def _render_obi_ledger(
         <td align="right" valign="middle" style="padding-left: 12px; white-space: nowrap;">
           <a href="{safe_url}" style="display: inline-block; background: {theme["cta_bg"]}; color: {theme["cta_text"]}; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; padding: 6px 12px; border-radius: 999px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
             &#9654; Play Crate &#8599;
+          </a>
+        </td>"""
+    elif cadence in ("weekly", "monthly") and has_stats:
+        cta_td = f"""
+        <td align="right" valign="middle" style="padding-left: 12px; white-space: nowrap;">
+          <a href="{_MILESTONES_URL}" style="display: inline-block; background: {theme["cta_bg"]}; color: {theme["cta_text"]}; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; padding: 6px 12px; border-radius: 999px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            Full Ledger &#8599;
           </a>
         </td>"""
 
@@ -220,20 +265,116 @@ def _format_liner_target(item: dict[str, Any], theme: EmailTheme) -> str:
     return f'<a href="{safe_url}" style="{link_style}">{_escape(raw_label)}</a>'
 
 
+def _render_obsessions_block(
+    obsessions: dict[str, Any],
+    theme: EmailTheme,
+) -> str:
+    """Renders a compact Obsessions & Surges OBI block for weekly and monthly emails."""
+    signals = (obsessions.get("artist_signals") or [])[:3]
+    repeats = (obsessions.get("tracks_on_repeat") or [])[:3]
+    binges = (obsessions.get("album_binges") or [])[:2]
+    phases = (obsessions.get("taste_phases") or [])[:2]
+    if not (signals or repeats or binges or phases):
+        return ""
+
+    badge_style = (
+        "font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; "
+        f"font-size: 10px; font-weight: 700; background: {theme['code_bg']}; "
+        f"color: {theme['code_fg']}; padding: 1px 5px; border-radius: 3px; "
+        "letter-spacing: 0.05em; margin-right: 6px;"
+    )
+    header_html = f"""
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 10px;">
+        <tr>
+          <td style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: {theme["secondary"]}; text-transform: uppercase;">
+            OBSESSIONS &amp; SURGES  //  14D WINDOW
+          </td>
+          <td align="right" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; letter-spacing: 0.06em;">
+            <a href="{_MILESTONES_URL}" style="color: {theme["link"]}; text-decoration: none; text-transform: uppercase;">Full Ledger &#8599;</a>
+          </td>
+        </tr>
+      </table>"""
+
+    rows: list[str] = []
+    for sig in signals:
+        badge = _escape(str(sig.get("signal") or "SURGE"))
+        artist = _escape(str(sig.get("artist") or ""))
+        plays = int(sig.get("plays_14d") or 0)
+        ctx_txt = _escape(str(sig.get("context") or ""))
+        detail = f"{plays} plays &middot; {ctx_txt}" if ctx_txt else f"{plays} plays"
+        rows.append(
+            f'<div style="margin: 4px 0; font-size: 12.5px; line-height: 1.5; color: {theme["text_body"]};">'
+            f'<span style="{badge_style}">{badge}</span>'
+            f'<strong style="color: {theme["text_primary"]};">{artist}</strong> '
+            f'<span style="color: {theme["text_muted"]};">({detail})</span></div>'
+        )
+
+    for rep in repeats:
+        title = _escape(str(rep.get("title") or ""))
+        artist = _escape(str(rep.get("artist") or ""))
+        url = str(rep.get("url") or "").strip()
+        plays = int(rep.get("plays_7d") or 0)
+        title_html = (
+            f'<a href="{_escape(url)}" style="color: {theme["link"]}; text-decoration: none; border-bottom: 1px dotted {theme["link"]}; font-weight: 600;">{title}</a>'
+            if url
+            else f'<strong style="color: {theme["text_primary"]};">{title}</strong>'
+        )
+        rows.append(
+            f'<div style="margin: 4px 0; font-size: 12.5px; line-height: 1.5; color: {theme["text_body"]};">'
+            f'<span style="{badge_style}">LOOP</span>{title_html} &mdash; {artist} '
+            f'<span style="color: {theme["text_muted"]};">({plays}x / 7d)</span></div>'
+        )
+
+    for alb in binges:
+        album = _escape(str(alb.get("album") or ""))
+        artist = _escape(str(alb.get("artist") or ""))
+        plays = int(alb.get("plays_7d") or 0)
+        rows.append(
+            f'<div style="margin: 4px 0; font-size: 12.5px; line-height: 1.5; color: {theme["text_body"]};">'
+            f'<span style="{badge_style}">ALBUM</span>'
+            f'<strong style="color: {theme["text_primary"]};">{album}</strong> &mdash; {artist} '
+            f'<span style="color: {theme["text_muted"]};">({plays} plays / 7d)</span></div>'
+        )
+
+    if phases:
+        phase_parts = " &middot; ".join(
+            f'<strong style="color: {theme["text_primary"]};">{_escape(str(p.get("label") or ""))}</strong> '
+            f"({float(p.get('lift') or 0):.1f}x)"
+            for p in phases
+        )
+        rows.append(
+            f'<div style="margin: 4px 0; font-size: 12.5px; line-height: 1.5; color: {theme["text_body"]};">'
+            f'<span style="{badge_style}">PHASE</span>{phase_parts}</div>'
+        )
+
+    return f"""
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: {theme["obi_bg"]}; border-top: 1px solid {theme["border"]};">
+      <tr>
+        <td style="padding: 16px 24px 18px 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+          {header_html}
+          {"".join(rows)}
+        </td>
+      </tr>
+    </table>
+    """
+
+
 def _render_liner_notes(
     milestones: list[dict[str, Any]],
     almost_there: list[dict[str, Any]],
     theme: EmailTheme,
+    max_unlocked: int = 4,
 ) -> str:
     """Renders the compact bottom Liner Notes / On Deck OBI block for milestones and near-misses."""
     if not milestones and not almost_there:
         return ""
 
+    heading_title = "LINER NOTES  //  ON DECK" if almost_there else "LINER NOTES  //  MILESTONES"
     header_html = f"""
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 10px;">
         <tr>
           <td style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: {theme["secondary"]}; text-transform: uppercase;">
-            LINER NOTES  //  ON DECK
+            {heading_title}
           </td>
           <td align="right" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; letter-spacing: 0.06em;">
             <a href="{_MILESTONES_URL}" style="color: {theme["link"]}; text-decoration: none; text-transform: uppercase;">Full Ledger &#8599;</a>
@@ -250,14 +391,14 @@ def _render_liner_notes(
             "letter-spacing: 0.05em; margin-right: 6px;"
         )
         items_html = []
-        for entry in milestones[:4]:
+        for entry in milestones[:max_unlocked]:
             code, text = format_milestone_summary(entry)
             items_html.append(
                 f'<div style="margin: 4px 0; font-size: 12.5px; line-height: 1.5; color: {theme["text_body"]};">'
                 f'<span style="{badge_style}">{_escape(code)}</span>{_format_inline(text, theme)}'
                 "</div>"
             )
-        extra = len(milestones) - 4
+        extra = len(milestones) - max_unlocked
         if extra > 0:
             items_html.append(
                 f'<div style="margin-top: 4px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; color: {theme["text_muted"]};">+{extra} more unlocked</div>'
@@ -463,16 +604,44 @@ def markdown_to_email_html(
         if (context and context.get("telemetry"))
         else _extract_telemetry_from_lines(lines)
     )
-    obi_ledger_html = _render_obi_ledger(telemetry, theme=theme, playlist_url=playlist_url)
+    cadence = _infer_cadence(context, doc_title)
+    obi_ledger_html = _render_obi_ledger(
+        telemetry, theme=theme, playlist_url=playlist_url, cadence=cadence
+    )
+    obsessions = (context or {}).get("obsessions") or {}
+    obsessions_html = _render_obsessions_block(obsessions, theme=theme)
+    obsessions_tr = (
+        f'\n          <!-- Obsessions & Surges OBI Block -->\n          <tr><td style="padding: 0;">{obsessions_html}</td></tr>'
+        if obsessions_html
+        else ""
+    )
     milestones = (context or {}).get("milestones") or []
     almost_there = (context or {}).get("almost_there") or []
-    liner_notes_html = _render_liner_notes(milestones, almost_there, theme=theme)
+    max_unlocked = 6 if cadence in ("weekly", "monthly") else 4
+    liner_notes_html = _render_liner_notes(
+        milestones, almost_there, theme=theme, max_unlocked=max_unlocked
+    )
     liner_notes_tr = (
         f'\n          <!-- Liner Notes / On Deck OBI Block -->\n          <tr><td style="padding: 0;">{liner_notes_html}</td></tr>'
         if liner_notes_html
         else ""
     )
     masthead_headline = spin_headline or doc_title
+    preheader_html = _render_preheader(spin_headline, telemetry, doc_title)
+    edition_label = {"weekly": "WEEKLY EDITION", "monthly": "MONTHLY SPECIAL"}.get(cadence, "")
+    edition_badge_html = (
+        f'<span style="display: inline-block; margin-left: 8px; padding: 1px 6px; '
+        f"border: 1px solid {theme['secondary']}; border-radius: 3px; font-size: 9px; "
+        f'font-weight: 700; letter-spacing: 0.08em; color: {theme["secondary"]};">'
+        f"{edition_label}</span>"
+        if edition_label
+        else ""
+    )
+    monthly_rule_tr = (
+        f'\n          <tr><td style="height: 2px; line-height: 2px; font-size: 1px; background-color: {theme["secondary"]};">&nbsp;</td></tr>'
+        if cadence == "monthly"
+        else ""
+    )
     body_content = "".join(html_parts)
 
     return f"""<!DOCTYPE html>
@@ -484,11 +653,12 @@ def markdown_to_email_html(
   <title>{_escape(doc_title)}</title>
 </head>
 <body data-theme="{theme["id"]}" style="margin: 0; padding: 0; background-color: {theme["outer_bg"]}; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;">
+  {preheader_html}
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: {theme["outer_bg"]}; padding: 24px 10px;">
     <tr>
       <td align="center">
         <!-- Main Zine / Vinyl Sleeve Container -->
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width: 640px; background-color: {theme["card_bg"]}; border: 1px solid {theme["border"]}; border-top: 4px solid {theme["primary"]}; border-radius: 4px; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.6);">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width: 640px; background-color: {theme["card_bg"]}; border: 1px solid {theme["border"]}; border-top: 4px solid {theme["primary"]}; border-radius: 4px; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.6);">{monthly_rule_tr}
           <!-- Editorial Masthead -->
           <tr>
             <td style="padding: 24px 24px 18px 24px; background-color: {theme["card_bg"]};">
@@ -498,7 +668,7 @@ def markdown_to_email_html(
                     {_escape(kicker_label)}
                   </td>
                   <td align="right" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; letter-spacing: 0.08em; color: {theme["text_muted"]}; text-transform: uppercase;">
-                    {_escape(subtitle)}
+                    {_escape(subtitle)}{edition_badge_html}
                   </td>
                 </tr>
               </table>
@@ -520,7 +690,7 @@ def markdown_to_email_html(
             <td style="padding: 22px 24px 24px 24px;">
               {body_content}
             </td>
-          </tr>{liner_notes_tr}
+          </tr>{obsessions_tr}{liner_notes_tr}
 
           <!-- Colophon Footer -->
           <tr>
@@ -528,7 +698,7 @@ def markdown_to_email_html(
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; color: {theme["text_muted"]};">
-                    ytm-dl crate log · {_escape(theme["id"].replace("_", "-"))}
+                    ytm-dl {_escape(cadence)} log · {_escape(theme["id"].replace("_", "-"))}
                   </td>
                   <td align="right" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px;">
                     <a href="https://github.com/jwenerd/ytm-dl" style="color: {theme["link"]}; text-decoration: none;">archives &#8599;</a>
