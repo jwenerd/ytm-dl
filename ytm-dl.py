@@ -31,10 +31,16 @@ def do_search_suggestions():
 
 def do_updates(option):
     ChangeTracker.reset()
-    if option not in ["all", "frequent", "mixes", "home", "auth", "report", "mail"]:
-        print("Option must be all, frequent, mixes, home, auth, report, or mail")
+    if option not in ["all", "frequent", "mixes", "home", "auth", "report", "mail", "enrich"]:
+        print("Option must be all, frequent, mixes, home, auth, report, mail, or enrich")
         print("  given: " + str(option))
         sys.exit(1)
+
+    if option == "enrich":
+        from src.reports.artist_tags import run_enrich_cli
+
+        run_enrich_cli(sys.argv[2:])
+        return
 
     if option == "mail":
         from src.reports.mailer import ReportMailer
@@ -113,6 +119,19 @@ def do_updates(option):
             files_written.append(search_res)
         sync_all_mood_mixes()
         sync_all_home_shelves()
+        try:
+            from src.reports.artist_tags import enrich_artist_tags
+
+            tag_res = enrich_artist_tags(output_dir="output")
+            if tag_res["tagged"] > 0:
+                ChangeTracker.record(
+                    emoji="🏷️",
+                    label="Artist Tags",
+                    count=tag_res["tagged"],
+                    log_message=f"✨ Tagged {tag_res['tagged']} new artists",
+                )
+        except Exception as e:
+            print(f"Warning: Failed to enrich artist tags: {e}")
 
     files_written = set(filter(None, files_written))
 
