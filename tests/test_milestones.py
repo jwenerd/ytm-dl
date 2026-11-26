@@ -7,7 +7,9 @@ from src.reports.artist_tags import write_artist_tags
 from src.reports.milestones import (
     _crossed,
     _next_tier,
+    _prev_tier,
     _safe_duration,
+    _step_ratio,
     detect_obsessions,
     evaluate_milestones,
     get_period_milestones,
@@ -219,8 +221,8 @@ def test_evaluate_milestones_backfill_tiers_depth_and_almost_there(tmp_path):
         output_dir, reference_date=date(2026, 11, 20), backfill=False
     )
     assert sec_new == []
+    assert not any(item["tag"] == "HOT" and "Stale Artist" in item["label"] for item in almost)
     almost_labels = [item["label"] for item in almost]
-    assert not any("Stale Artist" in lbl for lbl in almost_labels)
     assert any("Ott" in lbl for lbl in almost_labels)
     assert any("Almost Track" in lbl for lbl in almost_labels)
 
@@ -456,6 +458,120 @@ def test_detect_obsessions_signals_and_low_activity_guards(tmp_path):
         updated_date="2026-11-26",
     )
     assert "[#########-] 149/150" in rendered
+    assert "| `HOT` |" in rendered
     assert "| 1 play |" in rendered
     assert "1,200 plays" in rendered
     assert "2,219 plays" in rendered
+
+
+def test_almost_there_hot_step_ratio_and_wildcards(tmp_path):
+    assert _prev_tier("artist_plays", 24) == 0
+    assert _prev_tier("artist_plays", 49) == 25
+    assert _prev_tier("artist_plays", 1140) == 1100
+    assert _prev_tier("catalog_hours", 6978) == 6900
+    assert _prev_tier("streak_days", 5) == 0
+    assert _prev_tier("streak_days", 10) == 7
+    assert _prev_tier("streak_days", 20) == 14
+    assert _prev_tier("streak_days", 45) == 30
+    assert _step_ratio("artist_plays", 24, 25) == 24 / 25
+    assert _step_ratio("artist_plays", 1140, 1150) == 40 / 50
+
+    output_dir = str(tmp_path)
+    write_artist_tags(
+        os.path.join(output_dir, "meta", "artist_tags.yaml"),
+        {
+            "artists": {
+                "popular band": {
+                    "primary_genre": "Rock",
+                    "subgenres": [],
+                    "era": "2000s",
+                    "is_uploader": False,
+                },
+                "era rare act": {
+                    "primary_genre": "Rock",
+                    "subgenres": [],
+                    "era": "1950s",
+                    "is_uploader": False,
+                },
+                "genre rare act": {
+                    "primary_genre": "Jazz",
+                    "subgenres": [],
+                    "era": "1970s",
+                    "is_uploader": False,
+                },
+            }
+        },
+    )
+
+    chrono: list[tuple[str, str, str, str, str, str]] = []
+    # Dominant Rock/2000s catalog (~240 plays -> >=5% share, not rare) near 250 plays
+    for i in range(240):
+        chrono.append((f"Pop {i}", "Popular Band", "", "200", f"pb{i}", "2026-11-18T00:00:00Z"))
+    # Huge artist at 1,089/1,100 played 19d ago -> lower step_ratio * decay than 24/25 played today
+    for i in range(1089):
+        chrono.append((f"Big {i}", "Hot Big Act", "", "200", f"hb{i}", "2026-11-01T00:00:00Z"))
+    # Small recent artist at 24/25 plays & 24/25 tracks today -> wins HOT #1
+    for i in range(24):
+        chrono.append((f"Sm {i}", "Hot Small Act", "", "200", f"hs{i}", "2026-11-20T00:00:00Z"))
+    # Mid recent artist at 48/50 plays today -> takes HOT artist_plays #2 (capping Hot Big Act out)
+    for i in range(48):
+        chrono.append((f"Mid {i}", "Hot Mid Act", "", "200", f"hm{i}", "2026-11-20T00:00:00Z"))
+    # Depth artists + extra SMALL depth artist + 60d-idle SMALL artist (>45d HOT cutoff)
+    for i in range(23):
+        chrono.append((f"Dp2 {i}", "Second Depth Act", "", "200", f"sd{i}", "2026-11-20T00:00:00Z"))
+    for i in range(22):
+        chrono.append((f"Dp3 {i}", "Third Depth Act", "", "200", f"td{i}", "2026-11-19T00:00:00Z"))
+    for i in range(24):
+        chrono.append((f"Warm {i}", "Sixty Day Act", "", "200", f"sx{i}", "2026-09-21T00:00:00Z"))
+    # Tracks near +10: Track Artist appears twice to verify 1-per-artist cap across tracks
+    for _ in range(9):
+        chrono.append(("Track One", "Track Artist", "", "200", "vt1", "2026-11-20T00:00:00Z"))
+    for _ in range(8):
+        chrono.append(("Track Two", "Track Artist", "", "200", "vt2", "2026-11-20T00:00:00Z"))
+    for _ in range(8):
+        chrono.append(("Track Three", "Other Artist", "", "200", "vt3", "2026-11-19T00:00:00Z"))
+    for _ in range(8):
+        chrono.append(("Nameless Cut", "", "", "200", "v_no_art", "2026-11-18T00:00:00Z"))
+    # DUSTY artist & track idle 142d (>= 90d), 1 away
+    for i in range(24):
+        chrono.append((f"Dusty {i}", "Dusty Act", "", "200", f"du{i}", "2026-07-01T00:00:00Z"))
+    for _ in range(9):
+        chrono.append(("Dusty Cut", "Oldies Act", "", "200", "vdu9", "2026-07-01T00:00:00Z"))
+    # RARE era (<3% era '1950s') & RARE genre (<3% genre 'Jazz') artists
+    for i in range(21):
+        chrono.append((f"OldRock {i}", "Era Rare Act", "", "200", f"er{i}", "2026-11-18T00:00:00Z"))
+    for i in range(21):
+        chrono.append(
+            (f"RareJazz {i}", "Genre Rare Act", "", "200", f"gr{i}", "2026-11-18T00:00:00Z")
+        )
+
+    _write_history(output_dir, list(reversed(chrono)))
+    sync_res = sync_milestones(
+        output_dir=output_dir, backfill=True, reference_date=date(2026, 11, 20)
+    )
+    assert sync_res["total_unlocked"] > 0
+
+    _, _, _, almost_w47 = evaluate_milestones(
+        output_dir, reference_date=date(2026, 11, 20), backfill=False
+    )
+    hot_items = [x for x in almost_w47 if x["tag"] == "HOT"]
+    wild_items = [x for x in almost_w47 if x["tag"] != "HOT"]
+    assert len(hot_items) == 6
+    assert len(wild_items) == 3
+    assert hot_items[0]["label"] == "**Hot Small Act** — 25 plays"
+    assert not any("Hot Big Act" in x["label"] for x in hot_items)
+    assert not any("Sixty Day Act" in x["label"] for x in hot_items)
+    assert not any("Track Two" in x["label"] for x in almost_w47)
+    assert len({x["entity_key"] for x in almost_w47}) == len(almost_w47)
+    assert all(x["tag"] in {"SMALL", "DUSTY", "RARE", "TRACK"} for x in wild_items)
+
+    # Verify deterministic stability within the same week & valid rendering
+    _, _, _, almost_w47_repeat = evaluate_milestones(
+        output_dir, reference_date=date(2026, 11, 20), backfill=False
+    )
+    assert [x["key"] for x in almost_w47_repeat] == [x["key"] for x in almost_w47]
+
+    with open(os.path.join(output_dir, "MILESTONES.md"), encoding="utf-8") as f:
+        md = f.read()
+    assert "| Target | Tag | Progress | Remaining |" in md
+    assert "| `HOT` |" in md

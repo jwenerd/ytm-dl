@@ -10,6 +10,7 @@ Automated YouTube Music data synchronization engine and continuous private libra
 - [Latest Ingestion Commit](https://github.com/jwenerd/ytm-dl/commit/main-output)
 - [AI Listening Reports & Discovery Radar](https://github.com/jwenerd/ytm-dl/blob/main-output/output/reports/README.md)
   - [daily](https://github.com/jwenerd/ytm-dl/blob/main-output/output/reports/daily.md) · [weekly](https://github.com/jwenerd/ytm-dl/blob/main-output/output/reports/weekly.md) · [monthly](https://github.com/jwenerd/ytm-dl/blob/main-output/output/reports/monthly.md) · [archive](https://github.com/jwenerd/ytm-dl/tree/main-output/output/reports/archive)
+- [Milestones & Obsessions](https://github.com/jwenerd/ytm-dl/blob/main-output/output/MILESTONES.md)
 - [Agent & Architecture Guide](AGENTS.md)
 - [Commit History](https://github.com/jwenerd/ytm-dl/commits/main-output/output)
   - [yesterday](https://github.com/jwenerd/ytm-dl/compare/main-output@%7Byesterday%7D..main-output?diff=unified&w=1) · [past 3 days](https://github.com/jwenerd/ytm-dl/compare/main-output@%7B3%20days%20ago%7D..main-output?diff=unified&w=1) · [past week](https://github.com/jwenerd/ytm-dl/compare/main-output@%7B1%20week%20ago%7D..main-output?diff=unified&w=1) · [past 2 weeks](https://github.com/jwenerd/ytm-dl/compare/main-output@%7B2%20weeks%20ago%7D..main-output?diff=unified&w=1) · [past month](https://github.com/jwenerd/ytm-dl/compare/main-output@%7B1%20month%20ago%7D..main-output?diff=unified&w=1)
@@ -41,6 +42,7 @@ All exported datasets reside on the dedicated `main-output` branch:
 | **Library Albums** | [`output/library_albums.csv`](https://github.com/jwenerd/ytm-dl/blob/main-output/output/library_albums.csv) | Saved library albums |
 | **Library Uploads** | [`output/library_upload_*.csv`](https://github.com/jwenerd/ytm-dl/tree/main-output/output) | Personal user uploads (songs, artists, albums) |
 | **AI Reports** | [`output/reports/`](https://github.com/jwenerd/ytm-dl/tree/main-output/output/reports) | Daily, weekly, and monthly musicological listening reports |
+| **Milestones & Obsessions** | [`output/MILESTONES.md`](https://github.com/jwenerd/ytm-dl/blob/main-output/output/MILESTONES.md) | Linear listening milestones, current obsessions, and upcoming targets |
 
 ---
 
