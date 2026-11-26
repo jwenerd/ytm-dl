@@ -39,14 +39,6 @@ function doPost(request) {
     const output = {
       sheets: saveCSVs()
     };
-    if (request.parameter.report === "daily") {
-      try {
-        output.email = sendDailyReportEmail();
-      } catch (err) {
-        console.error("Failed to dispatch daily report email: " + err);
-        output.email_error = String(err);
-      }
-    }
     return ContentService
       .createTextOutput(JSON.stringify(output))
       .setMimeType(ContentService.MimeType.JSON);
@@ -125,22 +117,6 @@ function dispatchEmailFromPayload(body, params) {
   };
   console.log("Email successfully dispatched via GmailApp:", successInfo);
   return successInfo;
-}
-
-function sendDailyReportEmail(options) {
-  const recipient = (options && options.recipient) || Session.getEffectiveUser().getEmail();
-  const url = `https://api.github.com/repos/${REPO}/contents/output/reports/daily.html?ref=main-output`;
-
-  let htmlBody = "";
-  try {
-    htmlBody = __gh_req(url);
-  } catch (err) {
-    const msg = `Could not fetch daily.html from GitHub repository: ${err}`;
-    console.error(msg);
-    return { status: "error", message: msg };
-  }
-
-  return dispatchEmailFromPayload({ html_body: htmlBody, recipient: recipient });
 }
 
 function testSendDailyEmail() {
