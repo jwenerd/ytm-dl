@@ -4,8 +4,10 @@ import argparse
 import json
 import logging
 import os
+import re
 import time
-from collections import Counter
+import unicodedata
+from collections import Counter, defaultdict
 from datetime import UTC, datetime
 from typing import Any
 
@@ -21,6 +23,7 @@ SCHEMA_VERSION = 1
 DEFAULT_MIN_PLAYS = 5
 DEFAULT_BATCH_SIZE = 50
 DEFAULT_MAX_ARTISTS_PER_RUN = 150
+MAX_CONSECUTIVE_FAILURES = 3
 
 CANONICAL_GENRES = (
     "Jazz",
@@ -103,8 +106,10 @@ def write_artist_tags(
     store: dict[str, Any],
     now_dt: datetime | None = None,
 ) -> None:
-    """Persists `output/meta/artist_tags.yaml` with updated summary metadata."""
-    os.makedirs(os.path.dirname(meta_path), exist_ok=True)
+    """Persists `output/meta/artist_tags.yaml` atomically with updated summary metadata."""
+    parent = os.path.dirname(meta_path)
+    if parent:
+        os.makedirs(parent, exist_ok=True)
     ts = (now_dt or datetime.now(UTC)).isoformat()
     artists = store.get("artists") or {}
     payload = {
@@ -115,8 +120,10 @@ def write_artist_tags(
         },
         "artists": artists,
     }
-    with open(meta_path, "w", encoding="utf-8") as f:
+    tmp_path = f"{meta_path}.tmp"
+    with open(tmp_path, "w", encoding="utf-8") as f:
         yaml.safe_dump(payload, f, sort_keys=True, indent=2, allow_unicode=True)
+    os.replace(tmp_path, meta_path)
 
 
 def collect_catalog_artists(
@@ -130,16 +137,18 @@ def collect_catalog_artists(
     """
     rows = read_csv_rows(os.path.join(output_dir, "history.csv"))
     counts: Counter[str] = Counter()
-    canonical_by_lower: dict[str, str] = {}
+    casing_counts: dict[str, Counter[str]] = defaultdict(Counter)
 
     for row in rows:
         for name in clean_and_split_artists(row.get("artists")):
             low = name.lower()
-            canonical_by_lower.setdefault(low, name)
             counts[low] += 1
+            casing_counts[low][name] += 1
 
     qualifying = [
-        (low, canonical_by_lower[low], count) for low, count in counts.items() if count >= min_plays
+        (low, casing_counts[low].most_common(1)[0][0], count)
+        for low, count in counts.items()
+        if count >= min_plays
     ]
     qualifying.sort(key=lambda item: (-item[2], item[1].lower()))
     return qualifying
@@ -163,13 +172,49 @@ def _build_batch_prompt(artist_names: list[str]) -> str:
     )
 
 
+def _normalize_country(raw: Any) -> str:
+    code = str(raw or "").strip().upper()
+    if code == "UK":
+        return "GB"
+    if len(code) == 2 and code.isalpha():
+        return code
+    return "Unknown"
+
+
+def _dedupe_str_list(values: Any, *, lower: bool = False, limit: int = 3) -> list[str]:
+    result: list[str] = []
+    seen: set[str] = set()
+    for val in values or []:
+        cleaned = str(val).strip()
+        if not cleaned:
+            continue
+        key = cleaned.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(key if lower else cleaned)
+        if len(result) >= limit:
+            break
+    return result
+
+
+def _normalize_artist_key(name: str) -> str:
+    cleaned = unicodedata.normalize("NFKC", name).lower()
+    cleaned = re.sub(r"[\u2018\u2019\u201b`´]", "'", cleaned)
+    cleaned = re.sub(r"[\u2010-\u2015\u2212]", "-", cleaned)
+    return re.sub(r"\s+", " ", cleaned).strip()
+
+
 def _normalize_tag_record(item: dict[str, Any]) -> dict[str, Any]:
     raw_genre = str(item.get("primary_genre") or "").strip()
     primary_genre = _CANONICAL_GENRE_BY_LOWER.get(raw_genre.lower(), "Other")
-    subgenres = [str(s).strip() for s in (item.get("subgenres") or []) if str(s).strip()][:3]
-    moods = [str(m).strip().lower() for m in (item.get("moods") or []) if str(m).strip()][:3]
+    subgenres = _dedupe_str_list(item.get("subgenres"), lower=False, limit=3)
+    moods = _dedupe_str_list(item.get("moods"), lower=True, limit=3)
     era = str(item.get("era") or "Unknown").strip() or "Unknown"
-    country = str(item.get("country") or "Unknown").strip() or "Unknown"
+    country = _normalize_country(item.get("country"))
+    is_uploader = bool(item.get("is_uploader", False)) or primary_genre == "Uploader / Channel"
+    if is_uploader:
+        primary_genre = "Uploader / Channel"
     return {
         "name": str(item.get("name") or "").strip(),
         "primary_genre": primary_genre,
@@ -177,7 +222,7 @@ def _normalize_tag_record(item: dict[str, Any]) -> dict[str, Any]:
         "era": era,
         "country": country,
         "moods": moods,
-        "is_uploader": bool(item.get("is_uploader", False)),
+        "is_uploader": is_uploader,
     }
 
 
@@ -220,6 +265,9 @@ def fetch_artist_tags_batch(
             if not isinstance(parsed, list):
                 return []
             return [_normalize_tag_record(item) for item in parsed if isinstance(item, dict)]
+        except requests.HTTPError as e:
+            logger.warning("Gemini artist tagging HTTP error: %s", e)
+            return []
         except (
             requests.RequestException,
             json.JSONDecodeError,
@@ -246,11 +294,17 @@ def enrich_artist_tags(
     api_key: str | None = None,
     delay_seconds: float = 0.5,
     now_dt: datetime | None = None,
+    max_consecutive_failures: int = MAX_CONSECUTIVE_FAILURES,
 ) -> dict[str, Any]:
     """
     Incrementally tags qualifying uncached artists into `output/meta/artist_tags.yaml`.
     Checkpoints YAML after every batch so large backfills are safely resumable.
     """
+    if min_plays < 1:
+        raise ValueError("min_plays must be >= 1")
+    if batch_size < 1:
+        raise ValueError("batch_size must be >= 1")
+
     if api_key is None:
         api_key = get_google_ai_api_key()
 
@@ -272,16 +326,19 @@ def enrich_artist_tags(
     tagged_date = (now_dt or datetime.now(UTC)).date().strftime("%Y-%m-%d")
     newly_tagged = 0
     total_batches = (len(targets) + batch_size - 1) // batch_size
+    consecutive_failures = 0
 
     for batch_idx, start in enumerate(range(0, len(targets), batch_size), start=1):
         batch = targets[start : start + batch_size]
         names = [name for _, name, _ in batch]
         results = fetch_artist_tags_batch(names, api_key=api_key)
         by_lower = {r["name"].lower(): r for r in results if r.get("name")}
+        by_norm = {_normalize_artist_key(r["name"]): r for r in results if r.get("name")}
 
         batch_added = 0
+        unmatched: list[str] = []
         for low, canonical, _ in batch:
-            tag = by_lower.get(low)
+            tag = by_lower.get(low) or by_norm.get(_normalize_artist_key(canonical))
             if tag:
                 artists_map[low] = {
                     "name": canonical,
@@ -296,6 +353,17 @@ def enrich_artist_tags(
                 }
                 newly_tagged += 1
                 batch_added += 1
+            else:
+                unmatched.append(canonical)
+
+        if results and unmatched:
+            logger.warning(
+                "[artist_tags] Batch %d/%d missed %d artist(s): %s",
+                batch_idx,
+                total_batches,
+                len(unmatched),
+                ", ".join(unmatched[:5]),
+            )
 
         if batch_added > 0:
             write_artist_tags(meta_path, store, now_dt=now_dt)
@@ -304,6 +372,18 @@ def enrich_artist_tags(
             f"  [artist_tags] Batch {batch_idx}/{total_batches}: "
             f"tagged {batch_added}/{len(batch)} (cached: {len(artists_map)})"
         )
+
+        if not results:
+            consecutive_failures += 1
+            if consecutive_failures >= max_consecutive_failures:
+                logger.warning(
+                    "Aborting artist_tags enrichment after %d consecutive failed batches.",
+                    consecutive_failures,
+                )
+                break
+        else:
+            consecutive_failures = 0
+
         if delay_seconds > 0 and batch_idx < total_batches:
             time.sleep(delay_seconds)
 
@@ -324,13 +404,28 @@ def run_enrich_cli(argv: list[str] | None = None) -> dict[str, Any]:
     parser.add_argument("--all", action="store_true", dest="run_all")
     args = parser.parse_args(argv)
 
+    if args.min_plays < 1:
+        parser.error("--min-plays must be >= 1")
+    if args.batch_size < 1:
+        parser.error("--batch-size must be >= 1")
+    if not args.run_all and args.limit < 1:
+        parser.error("--limit must be >= 1")
+
+    api_key = get_google_ai_api_key()
     max_artists = None if args.run_all else args.limit
     res = enrich_artist_tags(
         output_dir=args.output_dir,
         min_plays=args.min_plays,
         max_artists=max_artists,
         batch_size=args.batch_size,
+        api_key=api_key or "",
     )
+    if not api_key and res["remaining"] > 0:
+        print(
+            f"⚠ GOOGLE_AI_API_KEY not set: skipped {res['remaining']} uncached artist(s) "
+            f"({res['total_cached']} total cached)."
+        )
+        return res
     print(
         f"✓ Artist tags sync complete: +{res['tagged']} tagged, "
         f"{res['remaining']} remaining, {res['total_cached']} total cached."

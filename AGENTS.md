@@ -38,6 +38,7 @@ ytm-dl/
 │   ├── prepend.py               # Sequence alignment & deduplication logic for prepending
 │   ├── reports/                 # AI listening reports, Crate-Digger zine & rolling radar
 │   │   ├── aggregator.py        # Thin context-assembly orchestration facade
+│   │   ├── artist_tags.py       # Incremental artist genre, era & country enricher
 │   │   ├── candidates.py        # Radar, Liked & Forgotten, Full Album & Long Spin extractors
 │   │   ├── email_template.py    # Editorial Zine / Vinyl OBI dark-mode HTML email renderer
 │   │   ├── generator.py         # Lightweight Gemini REST client (requests)
@@ -52,6 +53,7 @@ ytm-dl/
 │       ├── main.py
 │       └── requirements.txt
 ├── tests/                       # Pytest test suite
+│   ├── test_artist_tags.py
 │   ├── test_branch_boundaries.py
 │   ├── test_coverage_formatter.py
 │   ├── test_dev_runner.py
@@ -209,6 +211,7 @@ source venv/bin/activate
 | **Rolling Daily Radar YTM playlist** | `src/reports/playlist.py` | `src/reports/rotator.py` | `sync_daily_radar_playlist`, `extract_playlist_video_ids` |
 | **Report HTML email & rotating palettes** | `src/reports/email_template.py` & `src/reports/palettes.py` | `src/reports/mailer.py` | `markdown_to_email_html`, `select_email_theme` |
 | **Report mailer & webhook dispatch** | `src/reports/mailer.py` | `ytm-dl.py mail` | `ReportMailer.send` |
+| **Artist genre, era & country tags** | `src/reports/artist_tags.py` | `ytm-dl.py enrich` | `enrich_artist_tags`, `collect_catalog_artists`, `run_enrich_cli` |
 | **Branch boundary & secret protection** | `scripts/check_boundaries.py` | `scripts/dev.py` | `is_boundary_violation`, `main` |
 | **Developer CLI runner & pre-flight** | `scripts/dev.py` | `scripts/dev.py` | `cmd_check`, `cmd_fix`, `cmd_lint`, `cmd_test` |
 | **PR coverage formatting & sticky comments**| `scripts/format_pr_coverage.py` | `.github/workflows/pr.yml` | `generate_pr_comment`, `main` |
