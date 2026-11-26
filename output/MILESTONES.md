@@ -2,7 +2,7 @@
 
 [<- README](README.md)
 
-`Updated: 2026-11-26` | `Plays: 69,094` | `Hours: 6,978.7h` | `Artists: 4,672` | `Unlocked: 4,754`
+`Updated: 2026-11-26` | `Plays: 69,104` | `Hours: 6,979.3h` | `Artists: 4,675` | `Unlocked: 4,755`
 
 ---
 
@@ -21,7 +21,7 @@
 - `ALBUM` **2026/10/04 Milwaukee, WI** — Octave Cat (14 plays, 14 tracks / 7d)
 - `ALBUM` **Distance in Static** — Bonobo (12 plays, 12 tracks / 7d)
 - `ALBUM` **Mystic Meltdown** — Acid Pauli (11 plays, 11 tracks / 7d)
-- `PHASE` **Nu Jazz** (8.2x baseline, 29 plays) · **Instrumental Hip-Hop** (6.5x baseline, 12 plays) · **Trip Hop** (5.4x baseline, 29 plays) · **Downtempo** (3.9x baseline, 93 plays)
+- `PHASE` **Nu Jazz** (7.9x baseline, 29 plays) · **Instrumental Hip-Hop** (6.3x baseline, 12 plays) · **Trip Hop** (5.2x baseline, 29 plays) · **Krautrock** (4.0x baseline, 17 plays)
 
 ---
 
@@ -30,12 +30,12 @@
 | Target | Tag | Progress | Remaining |
 |---|---|---|---:|
 | **Tim Hecker** — 25 plays | `HOT` | `[#########-] 24/25` | 1 play |
-| **Human Destiny — Ivan the Tolerable** — 10 plays | `HOT` | `[#########-] 9/10` | 1 play |
+| **Chuck Darwin & the Knuckle Draggers** — 250 plays | `HOT` | `[#########-] 248/250` | 2 plays |
+| **Ivan the Tolerable** — 200 tracks | `HOT` | `[#########-] 198/200` | 2 tracks |
 | **9 to 5 — Dolly Parton** — 30 plays | `HOT` | `[#########-] 29/30` | 1 play |
-| **Lagartijeando** — 25 plays | `HOT` | `[#########-] 22/25` | 3 plays |
+| **Six Days On The Road — Dave Dudley** — 10 plays | `HOT` | `[#########-] 9/10` | 1 play |
 | **El Búho** — 25 tracks | `HOT` | `[########--] 21/25` | 4 tracks |
-| **Pretty Lights The Hot Shit** — 25 tracks | `HOT` | `[#########-] 23/25` | 2 tracks |
-| **Furnace Mountain** — 50 plays | `SMALL` | `[#########-] 48/50` | 2 plays |
+| **Lagartijeando** — 25 plays | `SMALL` | `[#########-] 22/25` | 3 plays |
 | **Ultramarine — Loscil & Lawrence English** — 10 plays | `TRACK` | `[########--] 8/10` | 2 plays |
 | **& Mina Shankha** — 25 plays | `RARE` | `[#########-] 22/25` | 3 plays (World & Latin) |
 
@@ -45,6 +45,7 @@
 
 | Date | Type | Milestone |
 |---|---|---|
+| 2026-11-25 | `ALBUM` | **For Educational Purposes Only — Chuck Darwin & the Knuckle Draggers** — 75 plays |
 | 2026-11-25 | `ARTIST` | **Harold Budd** — 50 plays |
 | 2026-11-25 | `ARTIST` | **Green-House** — 50 plays |
 | 2026-11-25 | `DEPTH` | **Brian Eno** — 25 unique tracks |
@@ -74,7 +75,6 @@
 | 2026-10-25 | `ARTIST` | **Corn Potato String Band** — 100 plays |
 | 2026-10-25 | `ALBUM` | **2021/10/30 Las Vegas, NV — The Disco Biscuits** — 100 plays |
 | 2026-10-25 | `ARTIST` | **The Disco Biscuits** — 80 hours |
-| 2026-10-25 | `DEPTH` | **Corn Potato String Band** — 25 unique tracks |
 
 ---
 
@@ -82,9 +82,9 @@
 
 | Metric | Value | Date / Period |
 |---|---:|---|
-| Total Plays | 69,094 | Since 2024-01 |
-| Total Hours | 6,978.7h | Since 2024-01 |
-| Unique Artists | 4,672 | Since 2024-01 |
+| Total Plays | 69,104 | Since 2024-01 |
+| Total Hours | 6,979.3h | Since 2024-01 |
+| Unique Artists | 4,675 | Since 2024-01 |
 | Longest Streak | 153 days | Ended 2026-09-22 |
 | Peak Day | 502 plays | 2024-08-20 |
 | Peak Week | 2,219 plays | 2026-W27 |

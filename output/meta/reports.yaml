@@ -1,6 +1,6 @@
 daily:
   archive_file: reports/archive/daily/2026/2026-11-25.md
-  last_generated_at: '2026-11-26T10:14:41.137439+00:00'
+  last_generated_at: '2026-11-26T10:43:35.207545+00:00'
   last_period: '2026-11-25'
   live_file: reports/daily.md
 monthly:
@@ -12,32 +12,33 @@ playlist:
   daily_radar_id: PLd8VL-RVFUnw
   last_period_ids:
   - dpPLIx2PhHI
-  - kiDjxO3B398
-  - 9rD3zdscDRQ
+  - C9Ivq2bXUGA
+  - cHm_zL4azWU
   - 3mtVnACg53Y
-  track_count: 7
+  track_count: 8
   updated_period: '2026-11-25'
   url: https://music.youtube.com/playlist?list=PLd8VL-RVFUnw
   video_ids:
   - dpPLIx2PhHI
-  - kiDjxO3B398
-  - 9rD3zdscDRQ
+  - C9Ivq2bXUGA
+  - cHm_zL4azWU
   - 3mtVnACg53Y
+  - LuzL8AL9t_g
   - XuuL0rvMxOM
   - AGFeW3HOjZE
   - 6NeRnJMgAPI
 recent_radar_by_period:
   '2026-11-25':
   - dpPLIx2PhHI
-  - kiDjxO3B398
-  - 9rD3zdscDRQ
+  - C9Ivq2bXUGA
+  - cHm_zL4azWU
   - 3mtVnACg53Y
   - MPREb_YJnz7wBBmwa
   - fR2yPSTWhH4
 recent_radar_ids:
 - dpPLIx2PhHI
-- kiDjxO3B398
-- 9rD3zdscDRQ
+- C9Ivq2bXUGA
+- cHm_zL4azWU
 - 3mtVnACg53Y
 - MPREb_YJnz7wBBmwa
 - fR2yPSTWhH4

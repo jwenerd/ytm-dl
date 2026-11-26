@@ -3,27 +3,27 @@
 
 **[▶ Play Rolling Daily Radar Playlist](https://music.youtube.com/playlist?list=PLd8VL-RVFUnw)**
 
-- **Stats**: 40 plays · 2h 29m · 22 artists · 4 new artists
+- **Stats**: 50 plays · 3h 07m · 33 artists · 7 new artists
 
-**The Spin:** Lush modular botany gives way to avant-psych twilight and delicate modal keys across an expansive, meditative afternoon.
+**The Spin:** Lush ambient topiary dissolved into gritty cinematic funk before taking an unexpected detour through yacht-rock gaming scores.
 
-You spent today steeped in the quiet miracles of organic synthesis and spaced-out improv, anchored by Green-House's lush flora. Tape drifts carried naturally into Ivan the Tolerable’s hazy brass and Floating Points' meticulous electronic tensions—a pure deep-focus afternoon.
+You spent the morning steeped in restorative foliage courtesy of Green-House and Brian Eno before slipping into the dusty reel-to-reel soul of El Michels Affair. Just when the room settled into a warm, hypnotic meditation, a Michael McDonald video-game collaboration yanked the turntable into delightful, unhinged overdrive.
 
 ## On the Turntable
-- **Heavy Rotation:** Green-House (10) · Ivan the Tolerable (7) · Brian Eno (5) · Floating Points (2) · Harold Budd (2)
-- **First-Time Spins:** Other Nothing, You'll Never Get to Heaven, Meitei, David Satori
+- **Heavy Rotation:** Green-House (10) · Ivan the Tolerable (8) · Brian Eno (5) · El Michels Affair (2) · Floating Points (2)
+- **First-Time Spins:** Meitei · You'll Never Get to Heaven · Michael McDonald · Chris Watson
 - **Fresh Likes:** **[Leaves Hang](https://music.youtube.com/watch?v=FvUwONVhif0)** — Ivan the Tolerable · **[Dream Puppy](https://music.youtube.com/watch?v=k2D7txqmPaQ)** — The Sweet Enoughs
 
-> **🔗 Lineage & Personnel:** Hearing Harold Budd and Brian Eno alongside Floating Points traces a direct lineage of ambient minimalism. Budd’s soft-pedal touch on 1980's *The Plateaux of Mirror* laid the exact groundwork for Green-House’s gentle, plant-focused modular synth work on Leaving Records today.
-
-> **🌱 First-Timer Spotlight:** Hiroshima producer Meitei crafts sonic folklore, pitching cracked 78 RPM shellac and ghost-story field recordings against delicate micro-ambient motifs. It’s an evocative, hypnotic deep-dive for anyone drawn to the frayed edges of forgotten tape.
+> **🌱 First-Timer Spotlight:** Dipping into Hiroshima sound artist Meitei opens up an evocative world of *kankyo ongaku* (Japanese environmental music). His delicate layering of tape hiss, antique zithers, and ghostly vocal fragments pairs effortlessly with Olive Ardizoni's modular plant-synthesizer work in Green-House.
+> 
+> **🏅 Milestones & Obsessions:** Big bin milestone today: Chuck Darwin & the Knuckle Draggers crossed 75 career plays on *For Educational Purposes Only*. That gritty, tongue-in-cheek string band energy makes for a wild counterweight against the misty drones of Ivan the Tolerable.
 
 ## Today's Radar
-- **[#7](https://music.youtube.com/watch?v=dpPLIx2PhHI)** — Aphex Twin — *Beatless, spectral 1994 gold from Selected Ambient Works Volume II. It locks directly into the quiet room tone of today's Harold Budd and Brian Eno tracks.*
-- **[Parallel Jalebi](https://music.youtube.com/watch?v=kiDjxO3B398)** — Four Tet — *Kieran Hebden flips pitched vocal fragments over crisp, organic micro-beats. It continues the rhythmic electronic journey sparked by your Floating Points spins.*
-- **[So What (feat. John Coltrane, Cannonball Adderley & Bill Evans)](https://music.youtube.com/watch?v=9rD3zdscDRQ)** — Miles Davis — *The immortal 1959 modal touchstone recorded at Columbia's 30th Street Studio. Since you pulled Bill Evans' keys today, hear his iconic opening chords anchor this legendary walk.*
+- **[#7](https://music.youtube.com/watch?v=dpPLIx2PhHI)** — Aphex Twin — *Subtle prepared-piano ripples and microtonal decay straight out of Richard D. James's 1994 ambient landmark. A perfect minimalist bridge from your Harold Budd and Eno drift.*
+- **[Candle](https://music.youtube.com/watch?v=C9Ivq2bXUGA)** — Buck Meek — *Big Thief’s lead guitarist leans into warm Texan twang, tape-saturated telecasters, and intimate storytelling. It mirrors the rustic acoustic pluck of the Carter Family tracks in your history.*
+- **[Most High (feat. Libianca)](https://music.youtube.com/watch?v=cHm_zL4azWU)** — Ezra Collective — *London afrobeat brass locked to a tight, syncopated pocket and gorgeous soulful vocal harmonies. It matches the analog boom-bap pulse behind El Michels Affair's rhythm section.*
 
 ## Deep Cuts & Long Spins
-- **Liked & Forgotten:** **[The Carter Family No Depression In Heaven](https://music.youtube.com/watch?v=3mtVnACg53Y)** — The Carter Family — *Liked in May 2025 and shelved since September, this 1936 gospel-folk staple needs daylight. Maybelle’s patented scratch guitar provides a warm, historic counterpart to today's synthesizer bath.*
-- **Full Album:** **[New Energy](https://music.youtube.com/browse/MPREb_YJnz7wBBmwa)** — Four Tet — *Hebden’s 2017 LP weaves acoustic strings, vinyl warmth, and gentle club rhythms into one seamless arc. It pays off immensely when experienced from opening chime to closing drift.*
-- **Long Spin:** **[Neroli](https://music.youtube.com/watch?v=fR2yPSTWhH4)** — Brian Eno — *A continuous hour of algorithmic single-note piano suspensions composed in 1993 as "Thinking Music Part IV." Hit play, lower the lights, and let time stretch out completely.*
+- **Liked & Forgotten:** **[The Carter Family No Depression In Heaven](https://music.youtube.com/watch?v=3mtVnACg53Y)** — The Carter Family — *You banked this May 2025 and haven't spun it since September. Maybelle’s patented scratch picking sounds miraculous right now against your morning instrumental sessions.*
+- **Full Album:** **[New Energy](https://music.youtube.com/browse/MPREb_YJnz7wBBmwa)** — Four Tet — *Kieran Hebden stitches gentle dulcimers, ASMR field recordings, and supple garage rhythms across forty-six flawless minutes. It’s an essential bridge between club cadence and living-room ambient.*
+- **Long Spin:** **[Neroli](https://music.youtube.com/watch?v=fR2yPSTWhH4)** — Brian Eno — *Single-note piano tones suspended in cavernous reverb, designed as an aromatic study in emotional calm. Light some cedar and let this uninterrupted hour re-center the listening den.*

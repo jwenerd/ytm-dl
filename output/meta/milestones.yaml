@@ -1,8 +1,9 @@
 meta:
+  first_history_date: '2024-01-13'
   last_history_date: '2026-11-25'
   schema_version: 1
-  total_unlocked: 4754
-  updated_at: '2026-11-26T09:21:59.409176+00:00'
+  total_unlocked: 4755
+  updated_at: '2026-11-26T10:43:34.428822+00:00'
 records:
   longest_streak_days: 153
   longest_streak_end: '2026-09-22'
@@ -1933,6 +1934,12 @@ unlocked:
     date: '2026-06-19'
     entity: For Educational Purposes Only — Chuck Darwin & the Knuckle Draggers
     threshold: 50
+  album:for educational purposes only:chuck darwin & the knuckle draggers:75:
+    backfilled: false
+    category: album_plays
+    date: '2026-11-25'
+    entity: For Educational Purposes Only — Chuck Darwin & the Knuckle Draggers
+    threshold: 75
   album:for the good people:the stanley brothers:25:
     backfilled: true
     category: album_plays
