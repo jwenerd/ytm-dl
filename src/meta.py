@@ -121,7 +121,7 @@ def write_readme():
         markdown += [f"## ⚙️ [{GITHUB_META['job']} #{GITHUB_META['run_number']}]({href})"]
 
     markdown += [
-        "**Quick Links:** [📰 Listening Reports](reports/README.md) · [📁 Output Files](FILES.md)"
+        "**Quick Links:** [📰 Listening Reports](reports/README.md) · [Milestones](MILESTONES.md) · [📁 Output Files](FILES.md)"
     ]
 
     charts_md = build_readme_charts_markdown(output_path())

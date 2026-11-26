@@ -27,6 +27,12 @@ def build_report_prompt(context: dict) -> str:
     radar = context.get("radar_candidates") or []
     forgotten = context.get("forgotten_candidates") or []
     long_form = context.get("long_form_picks") or {"albums": [], "long_sets": []}
+    milestones = context.get("milestones") or []
+    obsessions = context.get("obsessions") or {}
+    has_obsessions = any(
+        obsessions.get(k)
+        for k in ("tracks_on_repeat", "artist_signals", "album_binges", "taste_phases")
+    )
 
     data_summary = {
         "cadence": cadence,
@@ -36,6 +42,10 @@ def build_report_prompt(context: dict) -> str:
         "forgotten_candidates": forgotten,
         "long_form_picks": long_form,
     }
+    if milestones:
+        data_summary["milestones"] = milestones
+    if has_obsessions:
+        data_summary["obsessions"] = obsessions
     raw_json = json.dumps(data_summary, indent=2)
 
     stats_line = (
@@ -112,6 +122,7 @@ Output MUST follow this exact Markdown layout (no extra H2 sections, no markdown
 - `> **⚡ Double-Take / Hard Left Turn:** ...` (Cover/standard `version_collisions`, wild genre whiplash, or repeat earworms)
 - `> **🌱 First-Timer Spotlight:** ...` (Quick record-clerk intro to the coolest brand-new artist in `new_artists`)
 - `> **📼 Tape & Soundtrack Check:** ...` (Concert bootleg dates/venues, live jams, or soundtrack/album deep dives)
+- `> **🏅 Milestones & Obsessions:** ...` (Highlight any newly crossed `milestones` or active `obsessions` surges/loops in this window, if present)
 Separate each blockquote card with a blank line!]
 
 {radar_heading}
@@ -225,6 +236,15 @@ def generate_fallback_report(context: dict) -> str:
         lines.append(
             f"> **📼 Tape & Stage Check:** {t['live_track_count']} live concert or archival stage recordings "
             f"cut through the studio queue, keeping improvisational energy in the mix."
+        )
+        lines.append("")
+
+    milestones = context.get("milestones") or []
+    if milestones:
+        ms = milestones[0]
+        lines.append(
+            f"> **🏅 Milestone Unlocked:** {ms['entity']} crossed {int(ms['threshold']):,} "
+            f"({ms['category'].replace('_', ' ')}) on {ms['date']}."
         )
         lines.append("")
 

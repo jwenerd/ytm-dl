@@ -43,6 +43,7 @@ ytm-dl/
 │   │   ├── email_template.py    # Editorial Zine / Vinyl OBI dark-mode HTML email renderer
 │   │   ├── generator.py         # Lightweight Gemini REST client (requests)
 │   │   ├── mailer.py            # Report mailer and webhook dispatcher
+│   │   ├── milestones.py        # Linear listening milestones, obsession surges & MILESTONES.md
 │   │   ├── palettes.py          # 10 rotating record-label color palettes (modulo day-of-month)
 │   │   ├── playlist.py          # Self-updating rolling 25-track YTM Daily Radar playlist sync
 │   │   ├── prompt.py            # Crate-Digger prompt engineering & deterministic fallback
@@ -59,6 +60,7 @@ ytm-dl/
 │   ├── test_dev_runner.py
 │   ├── test_history_partition.py
 │   ├── test_mapping.py
+│   ├── test_milestones.py
 │   ├── test_prepend.py
 │   ├── test_report_aggregator.py
 │   ├── test_report_candidates.py
@@ -212,6 +214,7 @@ source venv/bin/activate
 | **Report HTML email & rotating palettes** | `src/reports/email_template.py` & `src/reports/palettes.py` | `src/reports/mailer.py` | `markdown_to_email_html`, `select_email_theme` |
 | **Report mailer & webhook dispatch** | `src/reports/mailer.py` | `ytm-dl.py mail` | `ReportMailer.send` |
 | **Artist genre, era & country tags** | `src/reports/artist_tags.py` | `ytm-dl.py enrich` | `enrich_artist_tags`, `collect_catalog_artists`, `run_enrich_cli` |
+| **Milestones & obsession tracker** | `src/reports/milestones.py` | `ytm-dl.py milestones` | `evaluate_milestones`, `detect_obsessions`, `sync_milestones`, `run_milestones_cli` |
 | **Branch boundary & secret protection** | `scripts/check_boundaries.py` | `scripts/dev.py` | `is_boundary_violation`, `main` |
 | **Developer CLI runner & pre-flight** | `scripts/dev.py` | `scripts/dev.py` | `cmd_check`, `cmd_fix`, `cmd_lint`, `cmd_test` |
 | **PR coverage formatting & sticky comments**| `scripts/format_pr_coverage.py` | `.github/workflows/pr.yml` | `generate_pr_comment`, `main` |
