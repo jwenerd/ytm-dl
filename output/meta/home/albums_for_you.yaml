@@ -4,9 +4,9 @@ slug: albums_for_you
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 172
-new_items_latest_run: 1
+total_items: 175
+new_items_latest_run: 3
 latest_batch_size: 10
 first_captured: '2026-09-12T19:29:50Z'
-last_captured: '2026-11-26T09:34:05Z'
-run_id: gh-7112
+last_captured: '2026-11-26T10:14:31Z'
+run_id: gh-7113

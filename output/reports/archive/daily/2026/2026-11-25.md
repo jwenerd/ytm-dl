@@ -3,27 +3,27 @@
 
 **[▶ Play Rolling Daily Radar Playlist](https://music.youtube.com/playlist?list=PLd8VL-RVFUnw)**
 
-- **Stats**: 36 plays · 2h 04m · 20 artists · 4 new artists
+- **Stats**: 40 plays · 2h 29m · 22 artists · 4 new artists
 
-**The Spin:** A lush drift through fourth-world ambient electronics, modular plant music, and tape-hiss exotica that completely calmed the shop today.
+**The Spin:** Lush modular botany gives way to avant-psych twilight and delicate modal keys across an expansive, meditative afternoon.
 
-Green-House practically ran the turntable today, blending Olive Ardizoni's pastoral synth work into Brian Eno and Harold Budd’s collaborative glow. Add in some lush Japanese ambient and hazy boutique exotica, and the whole run felt like an overgrown greenhouse after dark.
+You spent today steeped in the quiet miracles of organic synthesis and spaced-out improv, anchored by Green-House's lush flora. Tape drifts carried naturally into Ivan the Tolerable’s hazy brass and Floating Points' meticulous electronic tensions—a pure deep-focus afternoon.
 
 ## On the Turntable
-- **Heavy Rotation:** Green-House (10) · Ivan the Tolerable (6) · Brian Eno (5) · Harold Budd (2) · The Sweet Enoughs (1)
+- **Heavy Rotation:** Green-House (10) · Ivan the Tolerable (7) · Brian Eno (5) · Floating Points (2) · Harold Budd (2)
 - **First-Time Spins:** Other Nothing, You'll Never Get to Heaven, Meitei, David Satori
-- **Fresh Likes:** **[Dream Puppy](https://music.youtube.com/watch?v=k2D7txqmPaQ)** — The Sweet Enoughs
+- **Fresh Likes:** **[Leaves Hang](https://music.youtube.com/watch?v=FvUwONVhif0)** — Ivan the Tolerable · **[Dream Puppy](https://music.youtube.com/watch?v=k2D7txqmPaQ)** — The Sweet Enoughs
 
-> **🔗 Lineage & Personnel:** Budd sliding next to Eno evokes their 1980 masterstroke *The Plateaux of Mirror*, cut at Daniel Lanois’ Grant Avenue Studio. That shimmering, pedal-drenched keyboard architecture established the exact ambient blueprint modern synthesizer explorers like Green-House build upon today.
+> **🔗 Lineage & Personnel:** Hearing Harold Budd and Brian Eno alongside Floating Points traces a direct lineage of ambient minimalism. Budd’s soft-pedal touch on 1980's *The Plateaux of Mirror* laid the exact groundwork for Green-House’s gentle, plant-focused modular synth work on Leaving Records today.
 
-> **🌱 First-Timer Spotlight:** Hiroshima’s Meitei is an essential discovery. Working in spectral Japanese folklore, he splices bamboo flute, rainfall field recordings, and crackling 78rpm shellac into haunting downtempo loops that linger long after the stylus leaves the wax.
+> **🌱 First-Timer Spotlight:** Hiroshima producer Meitei crafts sonic folklore, pitching cracked 78 RPM shellac and ghost-story field recordings against delicate micro-ambient motifs. It’s an evocative, hypnotic deep-dive for anyone drawn to the frayed edges of forgotten tape.
 
 ## Today's Radar
-- **[#7](https://music.youtube.com/watch?v=dpPLIx2PhHI)** — Aphex Twin — *Subterranean synth drones from Richard D. James’ seminal 1994 ambient double album. It’s an eerie, hypnotic complement to today's heavy Green-House focus.*
-- **[Minority](https://music.youtube.com/watch?v=Yevo49R1o4I)** — Bill Evans — *Swinging post-bop brilliance from Evans’ landmark Riverside years. When Harold Budd’s sustained chords leave you wanting acoustic jazz mastery, drop this needle.*
-- **[Most High (feat. Libianca)](https://music.youtube.com/watch?v=cHm_zL4azWU)** — Ezra Collective — *London jazz joy layered with Afropop brass and soulful vocal grooves. An upbeat palette cleanser that shakes the dust off an all-ambient morning.*
+- **[#7](https://music.youtube.com/watch?v=dpPLIx2PhHI)** — Aphex Twin — *Beatless, spectral 1994 gold from Selected Ambient Works Volume II. It locks directly into the quiet room tone of today's Harold Budd and Brian Eno tracks.*
+- **[Parallel Jalebi](https://music.youtube.com/watch?v=kiDjxO3B398)** — Four Tet — *Kieran Hebden flips pitched vocal fragments over crisp, organic micro-beats. It continues the rhythmic electronic journey sparked by your Floating Points spins.*
+- **[So What (feat. John Coltrane, Cannonball Adderley & Bill Evans)](https://music.youtube.com/watch?v=9rD3zdscDRQ)** — Miles Davis — *The immortal 1959 modal touchstone recorded at Columbia's 30th Street Studio. Since you pulled Bill Evans' keys today, hear his iconic opening chords anchor this legendary walk.*
 
 ## Deep Cuts & Long Spins
-- **Liked & Forgotten:** **[Peroration Six](https://music.youtube.com/watch?v=D1HA0QC2y-g)** — Floating Points — *Favorited in May 2025 and untouched since September. Sam Shepherd’s erupting modular-jazz finale delivers an electrifying burst of energy after a day of soft textures.*
-- **Full Album:** **[The 5th Exotic](https://music.youtube.com/browse/MPREb_kz5RuXqveev)** — Quantic — *Will Holland’s 2001 Tru Thoughts debut blends dusty trip-hop breaks with breezy bossa guitar. It flows seamlessly from start to finish on a lazy afternoon.*
-- **Long Spin:** **[Neroli](https://music.youtube.com/watch?v=fR2yPSTWhH4)** — Brian Eno — *An hour-long minimalist exercise in solitary synth tones echoing through warm reverb. Put this on when the shop closes and you just need room to breathe.*
+- **Liked & Forgotten:** **[The Carter Family No Depression In Heaven](https://music.youtube.com/watch?v=3mtVnACg53Y)** — The Carter Family — *Liked in May 2025 and shelved since September, this 1936 gospel-folk staple needs daylight. Maybelle’s patented scratch guitar provides a warm, historic counterpart to today's synthesizer bath.*
+- **Full Album:** **[New Energy](https://music.youtube.com/browse/MPREb_YJnz7wBBmwa)** — Four Tet — *Hebden’s 2017 LP weaves acoustic strings, vinyl warmth, and gentle club rhythms into one seamless arc. It pays off immensely when experienced from opening chime to closing drift.*
+- **Long Spin:** **[Neroli](https://music.youtube.com/watch?v=fR2yPSTWhH4)** — Brian Eno — *A continuous hour of algorithmic single-note piano suspensions composed in 1993 as "Thinking Music Part IV." Hit play, lower the lights, and let time stretch out completely.*
