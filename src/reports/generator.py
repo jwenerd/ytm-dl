@@ -11,9 +11,10 @@ from src.reports.prompt import build_report_prompt, generate_fallback_report
 logger = logging.getLogger(__name__)
 
 GEMINI_API_URL = (
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent"
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-4-hydrogen:generateContent"
 )
 DEFAULT_MAX_OUTPUT_TOKENS = 16384
+DEFAULT_THINKING_LEVEL = "medium"
 
 
 def get_google_ai_api_key(env_path: str = ".env") -> str | None:
@@ -59,7 +60,7 @@ def generate_report(
     timeout: int = 60,
 ) -> str:
     """
-    Generates a markdown report using Gemini Flash via REST API.
+    Generates a markdown report using Gemini 4 Hydrogen via REST API.
     Gracefully falls back to deterministic markdown generation if the API key
     is missing, truncated at MAX_TOKENS, or encounters an error.
     """
@@ -84,6 +85,7 @@ def generate_report(
         "generationConfig": {
             "temperature": 0.35,
             "maxOutputTokens": DEFAULT_MAX_OUTPUT_TOKENS,
+            "thinkingConfig": {"thinkingLevel": DEFAULT_THINKING_LEVEL},
         },
     }
 

@@ -10,6 +10,7 @@ import pytest
 import requests
 
 from src.reports.artist_tags import (
+    ARTIST_TAGS_GEMINI_URL,
     collect_catalog_artists,
     enrich_artist_tags,
     fetch_artist_tags_batch,
@@ -183,6 +184,8 @@ def test_fetch_artist_tags_batch_success_retry_and_errors(mock_post, mock_sleep)
     assert tags[2]["country"] == "FR"
     assert tags[3]["is_uploader"] is True
     assert tags[3]["country"] == "US"
+    assert "gemini-3.8-flash" in ARTIST_TAGS_GEMINI_URL
+    assert mock_post.call_args.args[0] == ARTIST_TAGS_GEMINI_URL
     mock_sleep.assert_called_once()
 
     # Non-retryable 403 HTTPError must fail immediately without retry or sleep

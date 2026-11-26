@@ -192,7 +192,7 @@ source venv/bin/activate
 - **Recommendation Shelves & Deep Cuts**: Correlates listening history against 5 song radar shelves (`your_daily_discover`, `discover_mix`, `new_releases`, `quick_picks`, `mixed_for_you`), surfaces **Liked & Forgotten** gems (`>=90d` old likes + `forgotten_favorites` / `archive_mix` unplayed in 60 days), and recommends a **Full Album** (`albums_for_you`) and **Long Spin** (`long_listens` / `live_performances`).
 - **Rolling Daily Radar Playlist**: `src/reports/playlist.py` automatically creates/updates a private `⚡ Daily Radar (ytm-dl)` playlist (rolling 25-track FIFO cap) on YouTube Music and tracks 7-day period exclusions in `output/meta/reports.yaml`.
 - **Editorial Zine Email & Rotating Palettes**: `src/reports/email_template.py` renders an Editorial Zine / Vinyl OBI Strip layout styled by 10 record-label palettes in `src/reports/palettes.py` rotating via `(day_of_month - 1) % 10`.
-- **Zero-Dependency Gemini Client**: Uses `requests` with `gemini-3.8-flash` via `GOOGLE_AI_API_KEY`. Gracefully falls back to deterministic markdown when offline.
+- **Zero-Dependency Gemini Client**: Uses `requests` with `gemini-4-hydrogen` (`thinkingLevel: "medium"`) for listening reports and `gemini-3.8-flash` for bulk artist tagging via `GOOGLE_AI_API_KEY`. Gracefully falls back to deterministic markdown when offline.
 - **CLI Commands**:
   - `python ytm-dl.py report` (checks lazy-man cadence)
   - `python ytm-dl.py report [daily|weekly|monthly|all]` (forces generation)

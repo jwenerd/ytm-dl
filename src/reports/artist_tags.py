@@ -14,10 +14,14 @@ from typing import Any
 import requests
 import yaml
 
-from src.reports.generator import GEMINI_API_URL, get_google_ai_api_key
+from src.reports.generator import get_google_ai_api_key
 from src.reports.telemetry import clean_and_split_artists, read_csv_rows
 
 logger = logging.getLogger(__name__)
+
+ARTIST_TAGS_GEMINI_URL = (
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent"
+)
 
 SCHEMA_VERSION = 1
 DEFAULT_MIN_PLAYS = 5
@@ -252,7 +256,9 @@ def fetch_artist_tags_batch(
 
     for attempt in range(max_retries + 1):
         try:
-            resp = requests.post(GEMINI_API_URL, headers=headers, json=payload, timeout=timeout)
+            resp = requests.post(
+                ARTIST_TAGS_GEMINI_URL, headers=headers, json=payload, timeout=timeout
+            )
             if resp.status_code in (429, 500, 502, 503, 504) and attempt < max_retries:
                 time.sleep(min(2 ** (attempt + 1), 8))
                 continue
