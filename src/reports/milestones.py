@@ -1,6 +1,7 @@
 """Deterministic Milestones & Obsession Tracker (`output/meta/milestones.yaml` & `output/MILESTONES.md`)."""
 
 import argparse
+import hashlib
 import os
 from collections import Counter, defaultdict
 from datetime import UTC, date, datetime, timedelta
@@ -89,6 +90,35 @@ def _crossed(tier: str, prev: int, curr: int) -> list[int]:
 def _next_tier(tier: str, curr: int) -> int:
     ramp, linear_start, step = _TIERS[tier]
     return _next_threshold(curr, ramp=ramp, linear_start=linear_start, step=step)
+
+
+def _prev_threshold(
+    curr: int,
+    *,
+    ramp: tuple[int, ...] = (),
+    linear_start: int,
+    step: int,
+) -> int:
+    if curr >= linear_start:
+        return linear_start + ((curr - linear_start) // step) * step
+    for t in reversed(ramp):
+        if curr >= t:
+            return t
+    return 0
+
+
+def _prev_tier(tier: str, curr: int) -> int:
+    ramp, linear_start, step = _TIERS[tier]
+    return _prev_threshold(curr, ramp=ramp, linear_start=linear_start, step=step)
+
+
+def _step_ratio(tier: str, curr: int, nxt: int) -> float:
+    prev = _prev_tier(tier, curr)
+    return (curr - prev) / max(1, nxt - prev)
+
+
+def _weekly_hash(week_seed: str, pool: str, key: str) -> str:
+    return hashlib.sha256(f"{week_seed}:{pool}:{key}".encode()).hexdigest()
 
 
 def _default_store() -> dict[str, Any]:
@@ -268,6 +298,25 @@ def _compute_streaks_and_unlock(
     return current_streak, longest_days, longest_end
 
 
+def _find_rare_tag(
+    low: str,
+    tags_map: dict[str, Any],
+    genre_plays: Counter[str],
+    era_plays: Counter[str],
+    total_plays: int,
+) -> str:
+    entry = tags_map.get(low)
+    if not isinstance(entry, dict):
+        return ""
+    pg = str(entry.get("primary_genre") or "")
+    if pg and pg not in ("Other", "Uploader / Channel") and genre_plays[pg] / total_plays < 0.03:
+        return pg
+    era = str(entry.get("era") or "")
+    if era and era != "Unknown" and era_plays[era] / total_plays < 0.03:
+        return era
+    return ""
+
+
 def _build_almost_there(
     *,
     ref_date: date,
@@ -282,85 +331,228 @@ def _build_almost_there(
     track_plays: Counter[str],
     track_last_date: dict[str, date],
     track_display_by_vid: dict[str, str],
+    track_artist_low_by_vid: dict[str, str],
+    tags_map: dict[str, Any],
+    genre_plays: Counter[str],
+    era_plays: Counter[str],
 ) -> list[dict[str, Any]]:
-    targets: list[dict[str, Any]] = []
+    hot_cands: list[dict[str, Any]] = []
+    small_cands: list[dict[str, Any]] = []
+    dusty_cands: list[dict[str, Any]] = []
+    rare_cands: list[dict[str, Any]] = []
+    track_cands: list[dict[str, Any]] = []
 
-    def _maybe_add(
+    def _make_cand(
+        *,
+        key: str,
+        entity_key: str,
+        category: str,
+        tier: str,
         label: str,
         curr: int,
         nxt: int,
         noun: str,
-        *,
-        min_ratio: float = 0.80,
-        max_rem: int | None = None,
-    ) -> None:
-        if curr <= 0 or nxt <= 0:
-            return
-        ratio = curr / nxt
+        days_since: int,
+    ) -> dict[str, Any] | None:
+        if curr <= 0:
+            return None
+        ratio = _step_ratio(tier, curr, nxt)
         rem = nxt - curr
-        if ratio >= min_ratio or (max_rem is not None and rem <= max_rem):
-            suffix = noun if rem == 1 else f"{noun}s"
-            prog_unit = noun if noun in ("h", "d") else ""
-            rem_display = f"{rem:,}{noun}" if noun in ("h", "d") else f"{rem:,} {suffix}"
-            targets.append(
-                {
-                    "label": label,
-                    "current": curr,
-                    "target": nxt,
-                    "remaining": rem,
-                    "ratio": ratio,
-                    "progress": f"{curr:,}/{nxt:,}{prog_unit}",
-                    "remaining_display": rem_display,
-                }
-            )
+        suffix = noun if rem == 1 else f"{noun}s"
+        prog_unit = noun if noun in ("h", "d") else ""
+        rem_display = f"{rem:,}{noun}" if noun in ("h", "d") else f"{rem:,} {suffix}"
+        return {
+            "key": key,
+            "entity_key": entity_key,
+            "category": category,
+            "label": label,
+            "current": curr,
+            "target": nxt,
+            "remaining": rem,
+            "ratio": ratio,
+            "score": ratio / (1.0 + days_since / 14.0),
+            "progress": f"{curr:,}/{nxt:,}{prog_unit}",
+            "remaining_display": rem_display,
+        }
 
-    nxt_cp = _next_tier("catalog_plays", total_plays)
-    _maybe_add(f"**Library** — {nxt_cp:,} plays", total_plays, nxt_cp, "play")
-
-    nxt_ch = _next_tier("catalog_hours", total_hours)
-    _maybe_add(f"**Library** — {nxt_ch:,}h", total_hours, nxt_ch, "h")
-
-    nxt_ca = _next_tier("catalog_artists", unique_artists_count)
-    _maybe_add(f"**Library** — {nxt_ca:,} artists", unique_artists_count, nxt_ca, "artist")
+    for tier, key, category, curr, fmt_label, noun in (
+        ("catalog_plays", "catalog:plays", "catalog", total_plays, "plays", "play"),
+        ("catalog_hours", "catalog:hours", "catalog", total_hours, "h", "h"),
+        (
+            "catalog_artists",
+            "catalog:artists",
+            "catalog",
+            unique_artists_count,
+            "artists",
+            "artist",
+        ),
+    ):
+        nxt = _next_tier(tier, curr)
+        lbl = (
+            f"**Library** — {nxt:,}h" if fmt_label == "h" else f"**Library** — {nxt:,} {fmt_label}"
+        )
+        cand = _make_cand(
+            key=key,
+            entity_key=key,
+            category=category,
+            tier=tier,
+            label=lbl,
+            curr=curr,
+            nxt=nxt,
+            noun=noun,
+            days_since=0,
+        )
+        if cand and cand["ratio"] >= 0.85:
+            hot_cands.append(cand)
 
     if current_streak > 0:
         nxt_st = _next_tier("streak_days", current_streak)
-        _maybe_add(f"**{nxt_st}d Streak**", current_streak, nxt_st, "d", min_ratio=0.50)
+        cand = _make_cand(
+            key="streak:days",
+            entity_key="streak:days",
+            category="streak",
+            tier="streak_days",
+            label=f"**{nxt_st}d Streak**",
+            curr=current_streak,
+            nxt=nxt_st,
+            noun="d",
+            days_since=0,
+        )
+        if cand and cand["ratio"] >= 0.50:
+            hot_cands.append(cand)
 
-    active_cutoff = ref_date - timedelta(days=180)
     for low, last_d in artist_last_date.items():
-        if last_d < active_cutoff:
-            continue
+        days_since = max(0, (ref_date - last_d).days)
         display = artist_display_by_low[low]
+
         ap = artist_plays[low]
         nxt_ap = _next_tier("artist_plays", ap)
-        _maybe_add(f"**{display}** — {nxt_ap:,} plays", ap, nxt_ap, "play", max_rem=10)
+        cand_ap = _make_cand(
+            key=f"artist_plays:{low}",
+            entity_key=f"artist:{low}",
+            category="artist_plays",
+            tier="artist_plays",
+            label=f"**{display}** — {nxt_ap:,} plays",
+            curr=ap,
+            nxt=nxt_ap,
+            noun="play",
+            days_since=days_since,
+        )
+        if cand_ap:
+            if days_since <= 45 and (cand_ap["ratio"] >= 0.75 or cand_ap["remaining"] <= 5):
+                hot_cands.append(cand_ap)
+            if days_since <= 180:
+                if cand_ap["target"] <= 50 and 1 <= cand_ap["remaining"] <= 3:
+                    small_cands.append(cand_ap)
+                if cand_ap["ratio"] >= 0.70 or cand_ap["remaining"] <= 5:
+                    rare_tag = _find_rare_tag(low, tags_map, genre_plays, era_plays, total_plays)
+                    if rare_tag:
+                        rare_cands.append(
+                            {
+                                **cand_ap,
+                                "remaining_display": f"{cand_ap['remaining_display']} ({rare_tag})",
+                            }
+                        )
+            if days_since >= 90 and 1 <= cand_ap["remaining"] <= 2:
+                dusty_cands.append(
+                    {
+                        **cand_ap,
+                        "remaining_display": f"{cand_ap['remaining_display']} ({days_since}d idle)",
+                    }
+                )
 
         depth = len(artist_tracks[low])
         nxt_at = _next_tier("artist_tracks", depth)
-        _maybe_add(
-            f"**{display}** — {nxt_at:,} tracks",
-            depth,
-            nxt_at,
-            "track",
-            max_rem=10,
+        cand_at = _make_cand(
+            key=f"artist_tracks:{low}",
+            entity_key=f"artist:{low}",
+            category="artist_tracks",
+            tier="artist_tracks",
+            label=f"**{display}** — {nxt_at:,} tracks",
+            curr=depth,
+            nxt=nxt_at,
+            noun="track",
+            days_since=days_since,
         )
+        if cand_at:
+            if days_since <= 45 and (cand_at["ratio"] >= 0.75 or cand_at["remaining"] <= 5):
+                hot_cands.append(cand_at)
+            if days_since <= 180 and cand_at["target"] == 25 and 1 <= cand_at["remaining"] <= 3:
+                small_cands.append(cand_at)
+            if days_since >= 90 and 1 <= cand_at["remaining"] <= 2:
+                dusty_cands.append(
+                    {
+                        **cand_at,
+                        "remaining_display": f"{cand_at['remaining_display']} ({days_since}d idle)",
+                    }
+                )
 
     for vid, last_d in track_last_date.items():
-        if last_d < active_cutoff:
-            continue
+        days_since = max(0, (ref_date - last_d).days)
         tp = track_plays[vid]
         nxt_tp = _next_tier("track_plays", tp)
-        _maybe_add(
-            f"**{track_display_by_vid[vid]}** — {nxt_tp:,} plays",
-            tp,
-            nxt_tp,
-            "play",
-            max_rem=5,
+        p_low = track_artist_low_by_vid.get(vid, "")
+        entity_key = f"artist:{p_low}" if p_low else f"track:{vid}"
+        cand_tp = _make_cand(
+            key=f"track_plays:{vid}",
+            entity_key=entity_key,
+            category="track_plays",
+            tier="track_plays",
+            label=f"**{track_display_by_vid[vid]}** — {nxt_tp:,} plays",
+            curr=tp,
+            nxt=nxt_tp,
+            noun="play",
+            days_since=days_since,
         )
+        if cand_tp:
+            if days_since <= 45 and (cand_tp["ratio"] >= 0.75 or cand_tp["remaining"] <= 5):
+                hot_cands.append(cand_tp)
+            if days_since <= 180 and 1 <= cand_tp["remaining"] <= 2:
+                track_cands.append(cand_tp)
+            if days_since >= 90 and 1 <= cand_tp["remaining"] <= 2:
+                dusty_cands.append(
+                    {
+                        **cand_tp,
+                        "remaining_display": f"{cand_tp['remaining_display']} ({days_since}d idle)",
+                    }
+                )
 
-    targets.sort(key=lambda item: (-item["ratio"], item["remaining"], item["label"].lower()))
-    return targets[:8]
+    hot_cands.sort(key=lambda item: (-item["score"], item["remaining"], item["label"].lower()))
+    hot_selected: list[dict[str, Any]] = []
+    cat_counts: Counter[str] = Counter()
+    used_entities: set[str] = set()
+    for cand in hot_cands:
+        cat = cand["category"]
+        cat_cap = 1 if cat == "catalog" else 2
+        if cand["entity_key"] in used_entities or cat_counts[cat] >= cat_cap:
+            continue
+        cat_counts[cat] += 1
+        used_entities.add(cand["entity_key"])
+        hot_selected.append({**cand, "tag": "HOT"})
+        if len(hot_selected) >= 6:
+            break
+
+    iso_year, iso_week, _ = ref_date.isocalendar()
+    week_seed = f"{iso_year}-W{iso_week:02d}"
+    wildcards_map: dict[str, list[dict[str, Any]]] = {
+        "SMALL": small_cands,
+        "DUSTY": dusty_cands,
+        "RARE": rare_cands,
+        "TRACK": track_cands,
+    }
+    pool_order = sorted(wildcards_map, key=lambda p: _weekly_hash(week_seed, "pool_order", p))
+    wildcard_selected: list[dict[str, Any]] = []
+    for pool in pool_order:
+        eligible = [c for c in wildcards_map[pool] if c["entity_key"] not in used_entities]
+        if not eligible:
+            continue
+        pick = min(eligible, key=lambda c: _weekly_hash(week_seed, pool, c["key"]))
+        used_entities.add(pick["entity_key"])
+        wildcard_selected.append({**pick, "tag": pool})
+        if len(wildcard_selected) >= 3:
+            break
+
+    return hot_selected + wildcard_selected
 
 
 def evaluate_milestones(
@@ -395,9 +587,12 @@ def evaluate_milestones(
     track_plays: Counter[str] = Counter()
     track_last_date: dict[str, date] = {}
     track_display_by_vid: dict[str, str] = {}
+    track_artist_low_by_vid: dict[str, str] = {}
     album_plays: Counter[tuple[str, str]] = Counter()
     daily_plays: Counter[date] = Counter()
     weekly_plays: Counter[str] = Counter()
+    genre_plays: Counter[str] = Counter()
+    era_plays: Counter[str] = Counter()
 
     for play_date, row in effective_rows:
         dur = _safe_duration(row.get("duration_seconds"))
@@ -455,10 +650,20 @@ def evaluate_milestones(
         artist_display = clean_artist_display(row.get("artists"))
         track_key = vid.lower() if vid else (f"title:{title.lower()}" if title else "")
 
+        row_genres: set[str] = set()
+        row_eras: set[str] = set()
         for name in split_artists:
             low = name.lower()
             if low in uploader_keys:
                 continue
+            tag_entry = effective_tags.get(low)
+            if isinstance(tag_entry, dict):
+                pg = str(tag_entry.get("primary_genre") or "")
+                era = str(tag_entry.get("era") or "")
+                if pg and pg not in ("Other", "Uploader / Channel"):
+                    row_genres.add(pg)
+                if era and era != "Unknown":
+                    row_eras.add(era)
             canonical = artist_casing[low].most_common(1)[0][0]
             artist_last_date[low] = play_date
 
@@ -506,9 +711,16 @@ def evaluate_milestones(
                         backfill=backfill,
                     )
 
+        for g in row_genres:
+            genre_plays[g] += 1
+        for e in row_eras:
+            era_plays[e] += 1
+
         if vid:
             label = f"{title} — {artist_display}" if title and artist_display else (title or vid)
             track_display_by_vid[vid] = label
+            if split_artists:
+                track_artist_low_by_vid[vid] = split_artists[0].lower()
             track_last_date[vid] = play_date
             prev_tp = track_plays[vid]
             track_plays[vid] = prev_tp + 1
@@ -596,6 +808,10 @@ def evaluate_milestones(
         track_plays=track_plays,
         track_last_date=track_last_date,
         track_display_by_vid=track_display_by_vid,
+        track_artist_low_by_vid=track_artist_low_by_vid,
+        tags_map=effective_tags,
+        genre_plays=genre_plays,
+        era_plays=era_plays,
     )
 
     summary_stats = {
@@ -994,14 +1210,15 @@ def render_milestones_markdown(
                 "",
                 "## Almost There",
                 "",
-                "| Target | Progress | Remaining |",
-                "|---|---|---:|",
+                "| Target | Tag | Progress | Remaining |",
+                "|---|---|---|---:|",
             ]
         )
         for item in almost_there:
             bar = _ascii_bar(item["ratio"])
+            tag = item.get("tag", "HOT")
             lines.append(
-                f"| {_escape_cell(item['label'])} | `{bar} {item['progress']}` | "
+                f"| {_escape_cell(item['label'])} | `{tag}` | `{bar} {item['progress']}` | "
                 f"{item['remaining_display']} |"
             )
         lines.append("")
