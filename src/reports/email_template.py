@@ -370,9 +370,6 @@ def _render_liner_notes(
         return ""
 
     heading_title = "LINER NOTES  //  ON DECK" if almost_there else "LINER NOTES  //  MILESTONES"
-    heading_title = (
-        "LINER NOTES  //  ON DECK" if almost_there else "LINER NOTES  //  MILESTONES"
-    )
     header_html = f"""
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 10px;">
         <tr>
@@ -635,21 +632,6 @@ def markdown_to_email_html(
     edition_badge_html = (
         f'<span style="display: inline-block; margin-left: 8px; padding: 1px 6px; '
         f"border: 1px solid {theme['secondary']}; border-radius: 3px; font-size: 9px; "
-        f'font-weight: 700; letter-spacing: 0.08em; color: {theme["secondary"]};">'
-        f"{edition_label}</span>"
-        if edition_label
-        else ""
-    )
-    monthly_rule_tr = (
-        f'\n          <tr><td style="height: 2px; line-height: 2px; font-size: 1px; background-color: {theme["secondary"]};">&nbsp;</td></tr>'
-        if cadence == "monthly"
-        else ""
-    )
-    preheader_html = _render_preheader(spin_headline, telemetry, doc_title)
-    edition_label = {"weekly": "WEEKLY EDITION", "monthly": "MONTHLY SPECIAL"}.get(cadence, "")
-    edition_badge_html = (
-        f'<span style="display: inline-block; margin-left: 8px; padding: 1px 6px; '
-        f'border: 1px solid {theme["secondary"]}; border-radius: 3px; font-size: 9px; '
         f'font-weight: 700; letter-spacing: 0.08em; color: {theme["secondary"]};">'
         f"{edition_label}</span>"
         if edition_label
