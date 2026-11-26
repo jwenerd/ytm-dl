@@ -6,6 +6,7 @@ from typing import ClassVar
 import yaml
 
 from .markdown import md_lines, md_table
+from .reports.charts import build_readme_charts_markdown
 from .util import (
     deep_merge,
     deep_sort_keys,
@@ -81,15 +82,7 @@ def file_list():
     return [{"file": f, **(file_sizes(f))} for f in csv_files]
 
 
-def write_readme():
-    markdown = ["# 📝  output "]
-    if IS_GITHUB:
-        href = (
-            f"https://github.com/{GITHUB_META['repository']}/actions/runs/{GITHUB_META['run_id']}"
-        )
-        markdown += [f"## ⚙️ [{GITHUB_META['job']} #{GITHUB_META['run_number']}]({href})"]
-
-    # file table
+def _build_files_table():
     path = output_path()
 
     def quote(v):
@@ -103,8 +96,38 @@ def write_readme():
 
     data = [{k: fmt_file(v) if k == "file" else v for k, v in d.items()} for d in file_list()]
     data = [{"" if k == "file" else k: v for k, v in d.items()} for d in data]
+    return md_table(data)
 
-    markdown += ["### 📁 Files", md_table(data)]
+
+def write_files_index():
+    table = _build_files_table()
+    markdown = [
+        "# 📁 Output Files",
+        "[← Back to README](README.md)",
+    ]
+    if table:
+        markdown.append(table)
+    write_output_file("FILES.md", md_lines(markdown))
+
+
+def write_readme():
+    write_files_index()
+
+    markdown = ["# 📝  output "]
+    if IS_GITHUB:
+        href = (
+            f"https://github.com/{GITHUB_META['repository']}/actions/runs/{GITHUB_META['run_id']}"
+        )
+        markdown += [f"## ⚙️ [{GITHUB_META['job']} #{GITHUB_META['run_number']}]({href})"]
+
+    markdown += [
+        "**Quick Links:** [📰 Listening Reports](reports/README.md) · [📁 Output Files](FILES.md)"
+    ]
+
+    charts_md = build_readme_charts_markdown(output_path())
+    if charts_md:
+        markdown.append(charts_md)
+
     write_output_file("README.md", md_lines(markdown))
 
 
