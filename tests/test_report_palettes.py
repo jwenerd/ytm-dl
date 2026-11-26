@@ -36,6 +36,13 @@ def test_select_email_theme_modulo_across_month():
     # Monthly YYYY-MM label modulo (2026-10 -> (10 - 1) % 10 == 9 -> tokyo_kissaten_olive)
     assert select_email_theme("2026-10")["id"] == EMAIL_THEMES[9 % total]["id"]
 
+    # Monthly full month-name label (October 2026 -> 9 -> tokyo_kissaten_olive, November 2026 -> 0 -> crimson_wax)
+    assert (
+        select_email_theme("Monthly Crate Retrospective: October 2026")["id"]
+        == EMAIL_THEMES[9 % total]["id"]
+    )
+    assert select_email_theme("November 2026")["id"] == EMAIL_THEMES[10 % total]["id"]
+
     # Default fallback
     assert select_email_theme("Unparsed Label")["id"] == EMAIL_THEMES[0]["id"]
 

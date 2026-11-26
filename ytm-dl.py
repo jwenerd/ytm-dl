@@ -62,21 +62,9 @@ def do_updates(option):
         return
 
     if option == "mail":
-        from src.reports.mailer import ReportMailer
+        from src.reports.mailer import run_mail_cli
 
-        cadence = "daily"
-        for arg in sys.argv[2:]:
-            if not arg.startswith("-"):
-                cadence = arg
-                break
-        dry_run = "--dry-run" in sys.argv
-        mailer = ReportMailer(cadence=cadence)
-        try:
-            res = mailer.send(dry_run=dry_run)
-            print(f"✓ Mailer result: {res}")
-        except Exception as e:
-            print(f"✗ Mailer error: {e}")
-            sys.exit(1)
+        run_mail_cli(sys.argv[2:])
         return
 
     if option == "report":

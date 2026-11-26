@@ -634,3 +634,69 @@ def test_almost_there_hot_step_ratio_and_wildcards(tmp_path):
         "MILESTONE",
         "**Item** — 5",
     )
+
+
+def test_get_period_milestones_priority_ranking(tmp_path):
+    output_dir = str(tmp_path)
+    meta_path = os.path.join(output_dir, "meta", "milestones.yaml")
+    store = {
+        "schema_version": 1,
+        "records": {},
+        "unlocked": {
+            "a1": {
+                "category": "artist_plays",
+                "entity": "Artist 1",
+                "threshold": 25,
+                "date": "2026-11-28",
+            },
+            "a2": {
+                "category": "artist_plays",
+                "entity": "Artist 2",
+                "threshold": 50,
+                "date": "2026-11-27",
+            },
+            "s14": {
+                "category": "streak_days",
+                "entity": "Streak",
+                "threshold": 14,
+                "date": "2026-11-26",
+            },
+            "s30": {
+                "category": "streak_days",
+                "entity": "Streak",
+                "threshold": 30,
+                "date": "2026-11-12",
+            },
+            "ca": {
+                "category": "catalog_artists",
+                "entity": "Library",
+                "threshold": 4800,
+                "date": "2026-11-08",
+            },
+            "cp": {
+                "category": "catalog_plays",
+                "entity": "Library",
+                "threshold": 70000,
+                "date": "2026-11-05",
+            },
+            "ch": {
+                "category": "catalog_hours",
+                "entity": "Library",
+                "threshold": 7000,
+                "date": "2026-11-02",
+            },
+        },
+        "meta": {},
+    }
+    write_milestones(meta_path, store)
+
+    ranked = get_period_milestones(output_dir, date(2026, 11, 1), date(2026, 11, 30), limit=5)
+    assert [m["category"] for m in ranked] == [
+        "catalog_hours",
+        "catalog_plays",
+        "catalog_artists",
+        "streak_days",
+        "streak_days",
+    ]
+    assert ranked[3]["threshold"] == 30
+    assert ranked[4]["threshold"] == 14

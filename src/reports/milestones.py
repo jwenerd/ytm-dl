@@ -1323,12 +1323,27 @@ def render_milestones_markdown(
     return "\n".join(lines)
 
 
+def _period_milestone_priority(entry: dict[str, Any]) -> int:
+    """Ranks major catalog and long-streak milestones ahead of individual unlocks."""
+    cat = str(entry.get("category") or "")
+    if cat == "catalog_hours":
+        return 4
+    if cat == "catalog_plays":
+        return 3
+    if cat == "catalog_artists":
+        return 2
+    if cat == "streak_days":
+        return 2 if int(entry.get("threshold") or 0) >= 30 else 1
+    return 0
+
+
 def get_period_milestones(
     output_dir: str,
     start_date: date,
     end_date: date,
+    limit: int = 6,
 ) -> list[dict[str, Any]]:
-    """Returns non-backfilled milestones crossed within [start_date, end_date]."""
+    """Returns non-backfilled milestones crossed within [start_date, end_date], ranked by significance."""
     store = read_milestones(os.path.join(output_dir, "meta", "milestones.yaml"))
     start_iso = start_date.isoformat()
     end_iso = end_date.isoformat()
@@ -1338,10 +1353,15 @@ def get_period_milestones(
         if not entry.get("backfilled") and start_iso <= str(entry.get("date", "")) <= end_iso
     ]
     matched.sort(
-        key=lambda x: (x.get("date", ""), int(x.get("threshold") or 0), str(x.get("entity", ""))),
+        key=lambda x: (
+            _period_milestone_priority(x),
+            int(x.get("threshold") or 0),
+            str(x.get("date", "")),
+            str(x.get("entity", "")),
+        ),
         reverse=True,
     )
-    return matched[:6]
+    return matched[:limit]
 
 
 def sync_milestones(

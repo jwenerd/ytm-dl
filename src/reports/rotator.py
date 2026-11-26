@@ -15,7 +15,7 @@ from src.reports.playlist import (
     inject_playlist_banner,
     sync_daily_radar_playlist,
 )
-from src.util import get_user_timezone
+from src.util import get_effective_listening_date, get_user_timezone
 
 logger = logging.getLogger(__name__)
 
@@ -40,7 +40,11 @@ def write_reports_meta(meta_path: str, meta: dict) -> None:
         yaml.safe_dump(meta, f, sort_keys=True, indent=2)
 
 
-def get_target_period_info(cadence: str, now_dt: datetime) -> tuple[str, date, str]:
+def get_target_period_info(
+    cadence: str,
+    now_dt: datetime,
+    use_effective_date: bool = False,
+) -> tuple[str, date, str]:
     """
     Computes the (period_key, target_date, archive_subpath) for a given cadence.
     - daily: target is yesterday in local time. Key: 'YYYY-MM-DD'. Archive: 'archive/daily/YYYY/YYYY-MM-DD.md'
@@ -52,16 +56,19 @@ def get_target_period_info(cadence: str, now_dt: datetime) -> tuple[str, date, s
 
     tz = get_user_timezone()
     now_local = now_dt.astimezone(tz)
+    anchor_date = (
+        get_effective_listening_date(now_dt, tz=tz) if use_effective_date else now_local.date()
+    )
     cadence = cadence.lower()
 
     if cadence == "daily":
-        target = now_local.date() - timedelta(days=1)
+        target = anchor_date - timedelta(days=1)
         period_key = target.strftime("%Y-%m-%d")
         archive_path = os.path.join("archive", "daily", str(target.year), f"{period_key}.md")
         return period_key, target, archive_path
 
     if cadence == "weekly":
-        monday_this_week = now_local.date() - timedelta(days=now_local.date().weekday())
+        monday_this_week = anchor_date - timedelta(days=anchor_date.weekday())
         target_day_in_prev_week = monday_this_week - timedelta(days=3)
         year, week, _ = target_day_in_prev_week.isocalendar()
         period_key = f"{year}-W{week:02d}"
@@ -69,7 +76,7 @@ def get_target_period_info(cadence: str, now_dt: datetime) -> tuple[str, date, s
         return period_key, target_day_in_prev_week, archive_path
 
     if cadence == "monthly":
-        first_of_this_month = now_local.date().replace(day=1)
+        first_of_this_month = anchor_date.replace(day=1)
         target_day_in_prev_month = first_of_this_month - timedelta(days=1)
         period_key = target_day_in_prev_month.strftime("%Y-%m")
         archive_path = os.path.join(
@@ -89,9 +96,13 @@ def should_run_cadence(
 ) -> tuple[bool, str, date]:
     """
     Evaluates whether the specified cadence is due to run.
+    Automatic weekly and monthly checks respect the 4 AM effective listening-day cutoff.
     Returns (should_run, period_key, target_date).
     """
-    period_key, target_date, _ = get_target_period_info(cadence, now_dt)
+    use_effective = cadence.lower() in ("weekly", "monthly")
+    period_key, target_date, _ = get_target_period_info(
+        cadence, now_dt, use_effective_date=use_effective
+    )
     cadence_meta = meta.get(cadence) or {}
     last_period = cadence_meta.get("last_period")
 
@@ -167,7 +178,10 @@ def rotate_and_write_report(
     with open(live_file, "w", encoding="utf-8") as f:
         f.write(content)
 
-    _, _, archive_rel_path = get_target_period_info(cadence, now_dt)
+    if len(period_key) >= 4 and period_key[:4].isdigit():
+        archive_rel_path = os.path.join("archive", cadence, period_key[:4], f"{period_key}.md")
+    else:
+        _, _, archive_rel_path = get_target_period_info(cadence, now_dt)
     archive_file = os.path.join(reports_dir, archive_rel_path)
     os.makedirs(os.path.dirname(archive_file), exist_ok=True)
     with open(archive_file, "w", encoding="utf-8") as f:
@@ -262,6 +276,10 @@ def run_reports(
         )
 
         if is_forced or should_run:
+            if is_forced:
+                period_key, computed_target, _ = get_target_period_info(
+                    cad, now_dt, use_effective_date=False
+                )
             use_date = target_date if target_date else computed_target
             effective_key = (
                 use_date.strftime("%Y-%m-%d") if (cad == "daily" and target_date) else period_key
