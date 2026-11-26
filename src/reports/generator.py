@@ -13,6 +13,7 @@ logger = logging.getLogger(__name__)
 GEMINI_API_URL = (
     "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent"
 )
+DEFAULT_MAX_OUTPUT_TOKENS = 16384
 
 
 def get_google_ai_api_key(env_path: str = ".env") -> str | None:
@@ -55,12 +56,12 @@ def clean_markdown_fences(text: str) -> str:
 def generate_report(
     context: dict,
     api_key: str | None = None,
-    timeout: int = 45,
+    timeout: int = 60,
 ) -> str:
     """
-    Generates a markdown report using Gemini 2.5 Flash via REST API.
+    Generates a markdown report using Gemini Flash via REST API.
     Gracefully falls back to deterministic markdown generation if the API key
-    is missing or if the API call encounters an error.
+    is missing, truncated at MAX_TOKENS, or encounters an error.
     """
     if api_key is None:
         api_key = get_google_ai_api_key()
@@ -82,7 +83,7 @@ def generate_report(
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.35,
-            "maxOutputTokens": 4096,
+            "maxOutputTokens": DEFAULT_MAX_OUTPUT_TOKENS,
         },
     }
 
@@ -97,10 +98,20 @@ def generate_report(
         data = resp.json()
         candidates = data.get("candidates") or []
         if candidates:
-            parts = candidates[0].get("content", {}).get("parts", [])
-            if parts and "text" in parts[0]:
-                raw_text = parts[0]["text"]
-                return clean_markdown_fences(raw_text)
+            candidate = candidates[0]
+            if candidate.get("finishReason") == "MAX_TOKENS":
+                logger.warning(
+                    "Gemini response truncated at MAX_TOKENS. Falling back to deterministic report."
+                )
+                return generate_fallback_report(context)
+            parts = candidate.get("content", {}).get("parts", [])
+            text_parts = [
+                p["text"]
+                for p in parts
+                if isinstance(p, dict) and p.get("text") and not p.get("thought")
+            ]
+            if text_parts:
+                return clean_markdown_fences("\n".join(text_parts))
 
         logger.warning(
             "Gemini response missing candidate parts. Falling back to deterministic report."
