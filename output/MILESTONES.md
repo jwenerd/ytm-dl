@@ -2,7 +2,7 @@
 
 [<- README](README.md)
 
-`Updated: 2026-11-27` | `Plays: 69,181` | `Hours: 6,984.1h` | `Artists: 4,689` | `Unlocked: 4,757`
+`Updated: 2026-11-27` | `Plays: 69,188` | `Hours: 6,984.5h` | `Artists: 4,689` | `Unlocked: 4,757`
 
 ---
 
@@ -13,16 +13,16 @@
 |---|---|---:|---:|---|
 | Acid Pauli | `BREAKOUT` | 43 | 34 | First 30d |
 | Bonobo | `SURGE` | 22 | 22 | 3.5x vs 90d |
+| The Country Gentlemen | `SURGE` | 17 | 17 | 8.4x vs 90d |
 | Octave Cat | `SURGE` | 14 | 14 | 5.7x vs 90d |
 | DJ Frane | `BREAKOUT` | 10 | 10 | First 30d |
-| The Country Gentlemen | `SURGE` | 10 | 10 | 5.1x vs 90d |
 | Mecánica Clásica | `BREAKOUT` | 9 | 9 | First 30d |
 
 ### Album Binges & Taste Phases
+- `ALBUM` **Live In Japan** — The Country Gentlemen (16 plays, 16 tracks / 7d)
 - `ALBUM` **2026/10/04 Milwaukee, WI** — Octave Cat (14 plays, 14 tracks / 7d)
 - `ALBUM` **Distance in Static** — Bonobo (12 plays, 12 tracks / 7d)
-- `ALBUM` **Mystic Meltdown** — Acid Pauli (11 plays, 11 tracks / 7d)
-- `PHASE` **Instrumental Hip-Hop** (6.4x baseline, 13 plays) · **Nu Jazz** (6.2x baseline, 29 plays) · **Trip Hop** (4.9x baseline, 29 plays) · **Hip-Hop** (4.0x baseline, 12 plays)
+- `PHASE` **Instrumental Hip-Hop** (6.2x baseline, 13 plays) · **Nu Jazz** (6.1x baseline, 29 plays) · **Trip Hop** (4.8x baseline, 29 plays) · **Hip-Hop** (3.9x baseline, 12 plays)
 
 ---
 
@@ -83,8 +83,8 @@
 
 | Metric | Value | Date / Period |
 |---|---:|---|
-| Total Plays | 69,181 | Since 2024-01 |
-| Total Hours | 6,984.1h | Since 2024-01 |
+| Total Plays | 69,188 | Since 2024-01 |
+| Total Hours | 6,984.5h | Since 2024-01 |
 | Unique Artists | 4,689 | Since 2024-01 |
 | Longest Streak | 153 days | Ended 2026-09-22 |
 | Peak Day | 502 plays | 2024-08-20 |
