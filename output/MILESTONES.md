@@ -2,7 +2,7 @@
 
 [<- README](README.md)
 
-`Updated: 2026-11-27` | `Plays: 69,165` | `Hours: 6,983.1h` | `Artists: 4,688` | `Unlocked: 4,757`
+`Updated: 2026-11-27` | `Plays: 69,180` | `Hours: 6,984.0h` | `Artists: 4,689` | `Unlocked: 4,757`
 
 ---
 
@@ -16,12 +16,13 @@
 | Octave Cat | `SURGE` | 14 | 14 | 5.7x vs 90d |
 | DJ Frane | `BREAKOUT` | 10 | 10 | First 30d |
 | Mecánica Clásica | `BREAKOUT` | 9 | 9 | First 30d |
+| The Country Gentlemen | `SURGE` | 9 | 9 | 4.6x vs 90d |
 
 ### Album Binges & Taste Phases
 - `ALBUM` **2026/10/04 Milwaukee, WI** — Octave Cat (14 plays, 14 tracks / 7d)
 - `ALBUM` **Distance in Static** — Bonobo (12 plays, 12 tracks / 7d)
 - `ALBUM` **Mystic Meltdown** — Acid Pauli (11 plays, 11 tracks / 7d)
-- `PHASE` **Instrumental Hip-Hop** (6.6x baseline, 13 plays) · **Nu Jazz** (6.5x baseline, 29 plays) · **Trip Hop** (5.1x baseline, 29 plays) · **Hip-Hop** (4.2x baseline, 12 plays)
+- `PHASE` **Instrumental Hip-Hop** (6.4x baseline, 13 plays) · **Nu Jazz** (6.2x baseline, 29 plays) · **Trip Hop** (4.9x baseline, 29 plays) · **Hip-Hop** (4.0x baseline, 12 plays)
 
 ---
 
@@ -29,11 +30,11 @@
 
 | Target | Tag | Progress | Remaining |
 |---|---|---|---:|
+| **Ivan the Tolerable** — 200 tracks | `HOT` | `[#########-] 198/200` | 2 tracks |
 | **RAYE** — 25 plays | `HOT` | `[#########-] 24/25` | 1 play |
-| **Library** — 4,700 artists | `HOT` | `[#########-] 4,688/4,700` | 12 artists |
+| **Library** — 4,700 artists | `HOT` | `[#########-] 4,689/4,700` | 11 artists |
 | **Parcels** — 25 tracks | `HOT` | `[#########-] 23/25` | 2 tracks |
 | **Tim Hecker** — 25 plays | `HOT` | `[#########-] 24/25` | 1 play |
-| **Ivan the Tolerable** — 200 tracks | `HOT` | `[#########-] 198/200` | 2 tracks |
 | **Not Gentle On My Mind — Chuck Darwin & the Knuckle Draggers** — 70 plays | `HOT` | `[#########-] 69/70` | 1 play |
 | **Lagartijeando** — 25 plays | `SMALL` | `[#########-] 22/25` | 3 plays |
 | **Ultramarine — Loscil & Lawrence English** — 10 plays | `TRACK` | `[########--] 8/10` | 2 plays |
@@ -82,9 +83,9 @@
 
 | Metric | Value | Date / Period |
 |---|---:|---|
-| Total Plays | 69,165 | Since 2024-01 |
-| Total Hours | 6,983.1h | Since 2024-01 |
-| Unique Artists | 4,688 | Since 2024-01 |
+| Total Plays | 69,180 | Since 2024-01 |
+| Total Hours | 6,984.0h | Since 2024-01 |
+| Unique Artists | 4,689 | Since 2024-01 |
 | Longest Streak | 153 days | Ended 2026-09-22 |
 | Peak Day | 502 plays | 2024-08-20 |
 | Peak Week | 2,219 plays | 2026-W27 |
