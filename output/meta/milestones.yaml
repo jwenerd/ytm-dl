@@ -1,9 +1,9 @@
 meta:
   first_history_date: '2024-01-13'
-  last_history_date: '2026-11-26'
+  last_history_date: '2026-11-27'
   schema_version: 1
-  total_unlocked: 4756
-  updated_at: '2026-11-27T20:54:31.539452+00:00'
+  total_unlocked: 4757
+  updated_at: '2026-11-27T21:04:27.847925+00:00'
 records:
   longest_streak_days: 153
   longest_streak_end: '2026-09-22'
@@ -4657,6 +4657,12 @@ unlocked:
     category: album_plays
     date: '2026-07-17'
     entity: Seeds, Roots & Fruits — Emapea
+    threshold: 25
+  album:selected ambient works volume ii:aphex twin:25:
+    backfilled: false
+    category: album_plays
+    date: '2026-11-27'
+    entity: Selected Ambient Works Volume II — Aphex Twin
     threshold: 25
   album:selected public works, vol. 4:lightbath:25:
     backfilled: true

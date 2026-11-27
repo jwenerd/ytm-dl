@@ -25502,6 +25502,22 @@ artists:
     - Pop Soul
     - Southern Soul
     tagged_at: '2026-11-26'
+  william tyler:
+    country: US
+    era: 2010s
+    is_uploader: false
+    moods:
+    - pastoral
+    - reflective
+    - atmospheric
+    name: William Tyler
+    primary_genre: Country & Americana
+    source: gemini
+    subgenres:
+    - American Primitive
+    - Instrumental Folk
+    - Americana
+    tagged_at: '2026-11-27'
   willie nelson:
     country: US
     era: 1970s
@@ -26026,5 +26042,5 @@ artists:
     tagged_at: '2026-11-26'
 meta:
   schema_version: 1
-  total_tagged: 1655
-  updated_at: '2026-11-27T12:24:53.005113+00:00'
+  total_tagged: 1656
+  updated_at: '2026-11-27T21:04:23.364383+00:00'

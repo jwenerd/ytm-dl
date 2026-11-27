@@ -2,7 +2,7 @@
 
 [<- README](README.md)
 
-`Updated: 2026-11-27` | `Plays: 69,160` | `Hours: 6,982.5h` | `Artists: 4,688` | `Unlocked: 4,756`
+`Updated: 2026-11-27` | `Plays: 69,165` | `Hours: 6,983.1h` | `Artists: 4,688` | `Unlocked: 4,757`
 
 ---
 
@@ -21,7 +21,7 @@
 - `ALBUM` **2026/10/04 Milwaukee, WI** — Octave Cat (14 plays, 14 tracks / 7d)
 - `ALBUM` **Distance in Static** — Bonobo (12 plays, 12 tracks / 7d)
 - `ALBUM` **Mystic Meltdown** — Acid Pauli (11 plays, 11 tracks / 7d)
-- `PHASE` **Nu Jazz** (6.7x baseline, 29 plays) · **Instrumental Hip-Hop** (5.9x baseline, 13 plays) · **Trip Hop** (5.0x baseline, 29 plays) · **New Age** (4.0x baseline, 14 plays)
+- `PHASE` **Instrumental Hip-Hop** (6.6x baseline, 13 plays) · **Nu Jazz** (6.5x baseline, 29 plays) · **Trip Hop** (5.1x baseline, 29 plays) · **Hip-Hop** (4.2x baseline, 12 plays)
 
 ---
 
@@ -30,9 +30,9 @@
 | Target | Tag | Progress | Remaining |
 |---|---|---|---:|
 | **RAYE** — 25 plays | `HOT` | `[#########-] 24/25` | 1 play |
+| **Library** — 4,700 artists | `HOT` | `[#########-] 4,688/4,700` | 12 artists |
 | **Parcels** — 25 tracks | `HOT` | `[#########-] 23/25` | 2 tracks |
 | **Tim Hecker** — 25 plays | `HOT` | `[#########-] 24/25` | 1 play |
-| **Library** — 4,700 artists | `HOT` | `[#########-] 4,688/4,700` | 12 artists |
 | **Ivan the Tolerable** — 200 tracks | `HOT` | `[#########-] 198/200` | 2 tracks |
 | **Not Gentle On My Mind — Chuck Darwin & the Knuckle Draggers** — 70 plays | `HOT` | `[#########-] 69/70` | 1 play |
 | **Lagartijeando** — 25 plays | `SMALL` | `[#########-] 22/25` | 3 plays |
@@ -45,6 +45,7 @@
 
 | Date | Type | Milestone |
 |---|---|---|
+| 2026-11-27 | `ALBUM` | **Selected Ambient Works Volume II — Aphex Twin** — 25 plays |
 | 2026-11-26 | `ARTIST` | **Justice** — 400 plays |
 | 2026-11-25 | `ALBUM` | **For Educational Purposes Only — Chuck Darwin & the Knuckle Draggers** — 75 plays |
 | 2026-11-25 | `ARTIST` | **Harold Budd** — 50 plays |
@@ -74,7 +75,6 @@
 | 2026-10-27 | `DEPTH` | **Boards of Canada** — 25 unique tracks |
 | 2026-10-26 | `CATALOG` | **4,500** unique artists |
 | 2026-10-25 | `ARTIST` | **Corn Potato String Band** — 100 plays |
-| 2026-10-25 | `ALBUM` | **2021/10/30 Las Vegas, NV — The Disco Biscuits** — 100 plays |
 
 ---
 
@@ -82,8 +82,8 @@
 
 | Metric | Value | Date / Period |
 |---|---:|---|
-| Total Plays | 69,160 | Since 2024-01 |
-| Total Hours | 6,982.5h | Since 2024-01 |
+| Total Plays | 69,165 | Since 2024-01 |
+| Total Hours | 6,983.1h | Since 2024-01 |
 | Unique Artists | 4,688 | Since 2024-01 |
 | Longest Streak | 153 days | Ended 2026-09-22 |
 | Peak Day | 502 plays | 2024-08-20 |

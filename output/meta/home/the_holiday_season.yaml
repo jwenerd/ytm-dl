@@ -4,9 +4,9 @@ slug: the_holiday_season
 browse_id: null
 thumbnail: null
 item_size: COLLECTION_STYLE_ITEM_SIZE_MEDIUM
-total_items: 10
-new_items_latest_run: 10
+total_items: 12
+new_items_latest_run: 2
 latest_batch_size: 10
 first_captured: '2026-11-27T12:24:37Z'
-last_captured: '2026-11-27T12:24:37Z'
-run_id: gh-7119
+last_captured: '2026-11-27T21:04:11Z'
+run_id: gh-7121

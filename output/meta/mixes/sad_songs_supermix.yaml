@@ -2,11 +2,11 @@ title: Sad Songs Supermix
 mood_chip: Sad
 playlist_id: RDTMAK5uy_mZvWCHQ-KwmUM_ZMeZNRF93nKrLafqFp0
 description: ''
-featured_artists: Grateful Dead, Radiohead, Nick Drake, Mazzy Star
+featured_artists: Nick Drake, Hank Williams, Ween, Margo Cilker
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3885
-new_tracks_latest_run: 6
+total_unique_tracks: 3978
+new_tracks_latest_run: 93
 latest_batch_size: 500
-last_updated: '2026-11-27T12:24:20Z'
-run_id: gh-7119
+last_updated: '2026-11-27T21:03:53Z'
+run_id: gh-7121
