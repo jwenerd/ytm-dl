@@ -1,29 +1,27 @@
-# Daily Listening Log: 2026-11-25
+# Daily Listening Log: 2026-11-26
 *Recorded via ytm-dl | Crate-Digger Daily*
 
 **[▶ Play Rolling Daily Radar Playlist](https://music.youtube.com/playlist?list=PLd8VL-RVFUnw)**
 
-- **Stats**: 55 plays · 3h 22m · 40 artists · 12 new artists
+- **Stats**: 1 plays · 2m · 1 artists · 0 new artists
 
-**The Spin:** Botanical ambient electronics anchor a three-hour drift that still detours through 1920s New Orleans and Justice-produced yacht rock.
+**The Spin:** A brief, sun-dappled psybient pit stop from Mystic Crock sets a meditative tone for today's crate-dig.
 
-Green-House and Ivan the Tolerable set a quiet, moss-covered pace today, backed by classic Brian Eno and Harold Budd ambient washes. You never stayed still for long, pivoting from dusty El Michels Affair breaks to Clarence Williams and a wild Michael McDonald cameo.
+Even a two-minute needle drop tells a story. Today's turntable belonged entirely to Mystic Crock's **[Solstice (Radio Edit)](https://music.youtube.com/watch?v=hHoIxhGXXiY)**, trading marathon listening for a quick hit of warm, dub-washed downtempo.
 
 ## On the Turntable
-- **Heavy Rotation:** Green-House (10) · Ivan the Tolerable (8) · Brian Eno (5) · El Michels Affair (2) · Floating Points (2) · Harold Budd (2)
-- **First-Time Spins:** Frank Solivan and Dirty Kitchen · Clarence Williams · Gas Lab · Chris Watson · You'll Never Get to Heaven
-- **Fresh Likes:** **[Leaves Hang](https://music.youtube.com/watch?v=FvUwONVhif0)** — Ivan the Tolerable · **[Dream Puppy](https://music.youtube.com/watch?v=k2D7txqmPaQ)** — The Sweet Enoughs
+- **Heavy Rotation:** Mystic Crock (1).
 
-> **🔗 Lineage & Personnel:** Five plays of Brian Eno alongside two of Harold Budd is pure 1980s ambient royalty—their *Plateaux of Mirror* and *The Pearl* collaborations practically wrote the playbook for Green-House's botanical synth work and Chris Watson's field-recording minimalism.
+> **🔗 Lineage & Personnel:** Mystic Crock's lush, mid-tempo electronics sit right in the slipstream of classic 2000s psybient—think the hypnotic pulse of Ultimae Records or Ott's dubwise studio wizardry. Even in a radio-edit snapshot, those rolling sub-basslines and echoing synth pads feel built for late-night headphone drift.
 
-> **🏅 Milestones & Obsessions:** Hats off—*For Educational Purposes Only* by Chuck Darwin & the Knuckle Draggers crossed the 75-play mark today. That steady, front-to-back loyalty is what keeps the good records warm on the shelf, even on a day packed with 1924 hot jazz and *GTAVI* soundtrack swerves.
+> **📼 Tape & Soundtrack Check:** Clocking in at just under three minutes, **[Solstice (Radio Edit)](https://music.youtube.com/watch?v=hHoIxhGXXiY)** acts like a teaser trailer for a much deeper ambient journey. It's the kind of pocket-sized groove that begs to be followed by a full-length, front-to-back LP.
 
 ## Today's Radar
-- **[#7](https://music.youtube.com/watch?v=dpPLIx2PhHI)** — Aphex Twin — *Beatless, tape-saturated pads from Warp's 1994 classic Selected Ambient Works Volume II. Slides effortlessly into the misty space between Eno and Green-House.*
-- **[Wisdom Eye](https://music.youtube.com/watch?v=shOfu810phM)** — Alice Coltrane — *Rippling solo harp and luminous spiritual-jazz phrasing from her early-'70s Impulse! era. A meditative acoustic counterweight to today's synth-heavy drift.*
-- **[Most High (feat. Libianca)](https://music.youtube.com/watch?v=cHm_zL4azWU)** — Ezra Collective — *Sun-baked London horns and a buoyant Afrobeat pocket that never rushes. Bridges Gas Lab's warm brass with El Michels Affair's cinematic soul.*
+- **[One Day I Wish To Have This Kind Of Time](https://music.youtube.com/watch?v=0JbGyw9dlhc)** — Ott — *Crisp UK psydub with elastic basslines, shimmering arpeggios, and sly vocal chops. It's the closest rhythmic cousin to Mystic Crock's sun-warmed electronic haze.*
+- **[Shrimp Dance](https://music.youtube.com/watch?v=AGFeW3HOjZE)** — Hiroshi Suzuki — *1975 Tokyo jazz-funk off *Cat*, driven by silky trombone and Rhodes electric piano. Swaps today's synth pads for analog horn-section swagger.*
+- **[Sligo River Blues (Original Recording)](https://music.youtube.com/watch?v=2iO3Md4hrWU)** — John Fahey — *Solo acoustic steel-string fingerpicking rooted in Takoma's American Primitive tradition. Strips the electronics bare for a meditative, wooden counterpoint.*
 
 ## Deep Cuts & Long Spins
-- **Liked & Forgotten:** **[The Carter Family No Depression In Heaven](https://music.youtube.com/watch?v=3mtVnACg53Y)** — The Carter Family — *Liked on 2025-05-02 and unspun since 2026-09-11. Its stark 1936 autoharp and harmony vocals are begging for a late-night return.*
-- **Full Album:** **[New Energy](https://music.youtube.com/browse/MPREb_YJnz7wBBmwa)** — Four Tet — *Kieran Hebden's 2017 LP weaves harp samples, dulcimer, and gentle club pulses into a seamless arc. Ideal for bridging Floating Points and Green-House.*
-- **Long Spin:** **[Neroli](https://music.youtube.com/watch?v=fR2yPSTWhH4)** — Brian Eno — *Subtitled "Thinking Music, Part IV," this hour-long 1993 drift of soft, unhurried synth tones barely raises its voice. Put it on when the room goes quiet.*
+- **Liked & Forgotten:** **[Gone Clear](https://music.youtube.com/watch?v=3mtQG05jwWY)** — William Tyler — *Liked 2025-04-26 and unplayed since, this Lambchop alum's cosmic country-folk guitar work unfolds with unhurried grace. Give its warm, open-tuned shimmer a fresh spin.*
+- **Full Album:** **[Movements](https://music.youtube.com/browse/MPREb_UvQC3HTMJdp)** — Solar Fields — *This Swedish Ultimae Records cornerstone stretches ambient dub into widescreen, cinematic territory. If Mystic Crock whet your appetite, this front-to-back LP is the destination.*
+- **Long Spin:** **[Discreet Music (Remastered 2004)](https://music.youtube.com/watch?v=tLZtnadL1s0)** — Brian Eno — *Thirty minutes of tape-looped synthesizer serenity that practically invented modern ambient. Drop the needle here when you want today's two-minute calm to last all afternoon.*

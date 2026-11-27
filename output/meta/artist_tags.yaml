@@ -5036,6 +5036,22 @@ artists:
     - Electro House
     - Dance-Pop
     tagged_at: '2026-11-26'
+  de wolfe music:
+    country: GB
+    era: Unknown
+    is_uploader: true
+    moods:
+    - vintage
+    - cinematic
+    - eclectic
+    name: De Wolfe Music
+    primary_genre: Uploader / Channel
+    source: gemini
+    subgenres:
+    - Library Music
+    - Soundtrack
+    - Easy Listening
+    tagged_at: '2026-11-27'
   de-phazz:
     country: DE
     era: 2000s
@@ -8487,6 +8503,22 @@ artists:
     - Bluegrass
     - Old-Time
     tagged_at: '2026-11-26'
+  hailu mergia:
+    country: ET
+    era: 1970s
+    is_uploader: false
+    moods:
+    - hypnotic
+    - soulful
+    - groove
+    name: Hailu Mergia
+    primary_genre: World & Latin
+    source: gemini
+    subgenres:
+    - Ethio-jazz
+    - Funk
+    - African Jazz
+    tagged_at: '2026-11-27'
   hajna:
     country: FR
     era: 2010s
@@ -10139,6 +10171,22 @@ artists:
     - Americana
     - Country Folk
     tagged_at: '2026-11-26'
+  jessi colter:
+    country: US
+    era: 1970s
+    is_uploader: false
+    moods:
+    - soulful
+    - reflective
+    - passionate
+    name: Jessi Colter
+    primary_genre: Country & Americana
+    source: gemini
+    subgenres:
+    - Outlaw Country
+    - Country Pop
+    - Honky Tonk
+    tagged_at: '2026-11-27'
   jet:
     country: AU
     era: 2000s
@@ -23701,6 +23749,22 @@ artists:
     - Americana
     - Bluegrass
     tagged_at: '2026-11-26'
+  the walias:
+    country: ET
+    era: 1970s
+    is_uploader: false
+    moods:
+    - funky
+    - groovy
+    - hypnotic
+    name: The Walias
+    primary_genre: World & Latin
+    source: gemini
+    subgenres:
+    - Ethio-jazz
+    - Afro-funk
+    - Instrumental Soul
+    tagged_at: '2026-11-27'
   the war on drugs:
     country: US
     era: 2010s
@@ -25962,5 +26026,5 @@ artists:
     tagged_at: '2026-11-26'
 meta:
   schema_version: 1
-  total_tagged: 1651
-  updated_at: '2026-11-26T08:07:29.844074+00:00'
+  total_tagged: 1655
+  updated_at: '2026-11-27T12:24:53.005113+00:00'

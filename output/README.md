@@ -1,20 +1,20 @@
 # 📝  output 
 
-## ⚙️ [run #7118](https://github.com/jwenerd/ytm-dl/actions/runs/45924292723)
+## ⚙️ [run #7119](https://github.com/jwenerd/ytm-dl/actions/runs/45998316600)
 
 **Quick Links:** [📰 Listening Reports](reports/README.md) · [Milestones](MILESTONES.md) · [📁 Output Files](FILES.md)
 
 ### 🔥 Listening Activity (Last 24 Weeks)
 
-**23,798 plays** · **151/165 active days** · Current streak: **11d** · Best streak: **100d**
+**23,798 plays** · **151/166 active days** · Current streak: **11d** · Best streak: **100d**
 
-| Day | 2026-06-15 → 2026-11-26 |
+| Day | 2026-06-15 → 2026-11-27 |
 | :--- | :--- |
 | Mon | 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟨🟥🟥🟨🟧🟨🟧🟨⬛🟨🟨 |
 | Tue | 🟥🟥🟥🟥🟥🟥🟥🟥🟧🟥🟥🟥🟥🟧🟥🟥🟨🟨🟧🟧🟨⬛🟧🟧 |
 | Wed | 🟥🟥🟥🟥🟥🟥🟥🟥🟩🟥🟥🟥🟥🟥⬛🟩⬛🟨🟧⬛🟩⬛🟩🟥 |
 | Thu | 🟥🟥🟥🟥🟥🟥🟥🟥🟨🟥🟥🟥🟥🟨🟥🟨🟥🟧🟨🟨🟨⬛🟨🟩 |
-| Fri | 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟧🟧🟨⬛🟨🟧🟧⬛⬛🟨▫️ |
+| Fri | 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟧🟧🟨⬛🟨🟧🟧⬛⬛🟨⬛ |
 | Sat | 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟧🟨🟧🟩🟨🟥🟨⬛🟨🟨▫️ |
 | Sun | 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟨🟨🟨🟨⬛🟨🟧🟨⬛⬛🟧▫️ |
 

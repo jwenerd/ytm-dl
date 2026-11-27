@@ -16,6 +16,7 @@ Automated crate-digger listening logs, resurfaced gems, and rolling radar picks 
 
 | Period | Report Link |
 | :--- | :--- |
+| 2026-11-26 | [2026-11-26](archive/daily/2026/2026-11-26.md) |
 | 2026-11-25 | [2026-11-25](archive/daily/2026/2026-11-25.md) |
 | 2026-11-24 | [2026-11-24](archive/daily/2026/2026-11-24.md) |
 | 2026-11-23 | [2026-11-23](archive/daily/2026/2026-11-23.md) |

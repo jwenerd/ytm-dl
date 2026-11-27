@@ -3,11 +3,11 @@ mood_chip: Focus
 playlist_id: RDTMAK5uy_l3TXw3uC_sIHl4m6RMGqCyKKd2D2_pv28
 description: Get in the zone with this mix of songs that span all your tastes. Always
   updating.
-featured_artists: GAKHED, Green-House, Ichiko Aoba, Naran Ratan
+featured_artists: Green-House, Bibio, Susumu Yokota, Domenique Dumont
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 5674
-new_tracks_latest_run: 50
+total_unique_tracks: 5745
+new_tracks_latest_run: 71
 latest_batch_size: 500
-last_updated: '2026-11-26T12:37:13Z'
-run_id: gh-7116
+last_updated: '2026-11-27T12:24:20Z'
+run_id: gh-7119
