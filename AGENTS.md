@@ -12,7 +12,7 @@ Welcome to `ytm-dl`! This document provides architectural context, development w
 - **Incremental Sync & Prepending**: Fetches recent activity and seamlessly prepends new items to existing CSV files without duplicating records.
 - **History Partitioning**: Organizes the continuous listening history (`output/history.csv`) into monthly archive files (`output/history/YYYY-MM.csv`).
 - **Data Provenance & Timestamps**: Snaps relative YouTube Music timestamps (`Today`, `Yesterday`, relative months) to UTC midnight ISO timestamps and tags rows with `run_id` (e.g. `gh-<run_number>` or local timestamps).
-- **Automated Workflow**: Runs on scheduled cron and webhook triggers via GitHub Actions (`.github/workflows/run.yml`), publishing data to the dedicated `main-output` branch and syncing to Google Sheets via Google Apps Script (`appscript/`).
+- **Automated Workflow**: Runs on schedule via Google Cloud Scheduler (`jwenerd-ytm-dl`, triggering `workflow_dispatch`) and webhook triggers via GitHub Actions (`.github/workflows/run.yml`), publishing data to the dedicated `main-output` branch and syncing to Google Sheets via Google Apps Script (`appscript/`).
 
 ---
 
@@ -76,7 +76,7 @@ ytm-dl/
 ├── .github/
 │   ├── pull_request_template.md # PR quality and verification checklist
 │   └── workflows/
-│       ├── run.yml              # Scheduled and manual sync extraction
+│       ├── run.yml              # Sync extraction (triggered by GCP Cloud Scheduler & manual dispatch)
 │       ├── pr.yml               # Automated PR CI validation & coverage commenting
 │       └── guard-main.yml       # Branch boundary and PR commit auditor
 ├── pyproject.toml               # Project metadata, Ruff, coverage, and Pytest configuration

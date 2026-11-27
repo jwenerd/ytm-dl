@@ -19,7 +19,7 @@ Automated YouTube Music data synchronization engine and continuous private libra
 
 ### ⚙️ Pipeline Status
 
-[![run](https://github.com/jwenerd/ytm-dl/actions/workflows/run.yml/badge.svg?branch=main&event=schedule)](https://github.com/jwenerd/ytm-dl/actions/workflows/run.yml)
+[![run](https://github.com/jwenerd/ytm-dl/actions/workflows/run.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/jwenerd/ytm-dl/actions/workflows/run.yml)
 [![pr-ci](https://github.com/jwenerd/ytm-dl/actions/workflows/pr.yml/badge.svg?branch=main)](https://github.com/jwenerd/ytm-dl/actions/workflows/pr.yml)
 
 `🎶 🎸 🎵 🎷 🎶 🪕 🎵 🎻 🎶 🎹 🎵 🔉 🎶`

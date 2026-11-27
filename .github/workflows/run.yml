@@ -15,9 +15,6 @@ on:
         options:
           - all
           - frequent
-  schedule:
-    - cron: '19 0,6,9,12,15,18,21 * * *'
-    - cron: '19 3 * * *'
 
 concurrency:
   group: ytm-output-sync
@@ -70,8 +67,7 @@ jobs:
         id: run
         env:
           INPUT_RUN_OPTION: ${{ inputs.run_option }}
-          SCHEDULE_RUN_OPTION: ${{ github.event.schedule != '19 3 * * *' && 'frequent' || 'all' }}
-          GITHUB_EVENT_SCHEDULE: ${{ github.event.schedule }}
+          DISPATCH_RUN_OPTION: ${{ github.event_name == 'repository_dispatch' && github.event.action || '' }}
           GH_TOKEN: ${{ secrets.YTM_GITHUB_TOKEN }}
           OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
           OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
@@ -81,13 +77,12 @@ jobs:
           echo "::group::RUN_OPTION"
 
           RUN_OPTION='all'
-          [[ -n $SCHEDULE_RUN_OPTION ]] && RUN_OPTION=$SCHEDULE_RUN_OPTION
+          [[ -n $DISPATCH_RUN_OPTION ]] && RUN_OPTION=$DISPATCH_RUN_OPTION
           [[ -n $INPUT_RUN_OPTION ]] && RUN_OPTION=$INPUT_RUN_OPTION
 
-          echo "github.event.schedule = $GITHUB_EVENT_SCHEDULE"
           echo "RUN_OPTION = $RUN_OPTION"
           echo "INPUT_RUN_OPTION = $INPUT_RUN_OPTION"
-          echo "SCHEDULE_RUN_OPTION = $SCHEDULE_RUN_OPTION"
+          echo "DISPATCH_RUN_OPTION = $DISPATCH_RUN_OPTION"
           echo "RUN_OPTION=$RUN_OPTION" >> $GITHUB_ENV
           echo "::endgroup::"
 
