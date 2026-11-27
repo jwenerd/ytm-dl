@@ -173,6 +173,56 @@ def test_records_from_response():
     assert meta2 == {}
 
 
+def test_apply_client_timezone_and_get_thread_client(monkeypatch):
+    from datetime import timedelta
+    from unittest.mock import patch
+
+    from src.api import apply_client_timezone, get_thread_client, thread_local
+
+    # Early return when client has no valid nested context dict
+    class NoCtx:
+        pass
+
+    apply_client_timezone(NoCtx())
+    apply_client_timezone(type("BadCtx", (), {"context": {"context": {"client": "invalid"}}})())
+
+    monkeypatch.setenv("YTM_TIMEZONE", "America/Denver")
+    client = type("FakeClient", (), {"context": {"context": {"client": {}}}})()
+
+    # MST winter (-07:00 == -420 minutes)
+    apply_client_timezone(client, now_dt=datetime(2026, 11, 27, 1, 44, 0, tzinfo=UTC))
+    assert client.context["context"]["client"]["timeZone"] == "America/Denver"
+    assert client.context["context"]["client"]["utcOffsetMinutes"] == -420
+
+    # MDT summer naive datetime (-06:00 == -360 minutes)
+    apply_client_timezone(client, now_dt=datetime(2026, 7, 15, 18, 0, 0))
+    assert client.context["context"]["client"]["timeZone"] == "America/Denver"
+    assert client.context["context"]["client"]["utcOffsetMinutes"] == -360
+
+    # Default now_dt=None works and populates integer offset
+    monkeypatch.setenv("YTM_TIMEZONE", "UTC")
+    apply_client_timezone(client)
+    assert client.context["context"]["client"]["timeZone"] == "UTC"
+    assert client.context["context"]["client"]["utcOffsetMinutes"] == int(
+        timedelta(0).total_seconds() // 60
+    )
+
+    # get_thread_client invokes apply_client_timezone automatically
+    if hasattr(thread_local, "ytmusic"):
+        del thread_local.ytmusic
+    monkeypatch.setenv("YTM_TIMEZONE", "America/Denver")
+    monkeypatch.setattr("os.path.exists", lambda path: path == "browser.json")
+    fake_ytm = type("FakeYTM", (), {"context": {"context": {"client": {}}}})()
+    with patch("src.api.YTMusic", return_value=fake_ytm):
+        res = get_thread_client()
+        assert res is fake_ytm
+        assert res.context["context"]["client"]["timeZone"] == "America/Denver"
+        assert isinstance(res.context["context"]["client"]["utcOffsetMinutes"], int)
+
+    if hasattr(thread_local, "ytmusic"):
+        del thread_local.ytmusic
+
+
 def test_get_thread_client_browser_json(monkeypatch):
     from src.api import get_thread_client, thread_local
 

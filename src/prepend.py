@@ -1,6 +1,26 @@
 import csv
 import difflib
 import os
+from datetime import date
+
+
+def get_existing_head_played_at(csv_file: str) -> date | None:
+    """Reads the played_at calendar date from the newest (first) data row of history.csv."""
+    if not os.path.exists(csv_file):
+        return None
+    with open(csv_file, newline="", encoding="utf-8") as f:
+        reader = csv.reader(f, delimiter=",")
+        header = next(reader, None)
+        first_row = next(reader, None)
+    if not header or not first_row or "played_at" not in header:
+        return None
+    idx = header.index("played_at")
+    if idx >= len(first_row) or not first_row[idx].strip():
+        return None
+    try:
+        return date.fromisoformat(first_row[idx].strip()[:10])
+    except ValueError:
+        return None
 
 
 def get_existing_ids(csv_file, key_index=None, limit=float("inf")):

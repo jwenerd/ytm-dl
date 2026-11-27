@@ -2,7 +2,7 @@ import json
 import os
 import sys
 import threading
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from time import strftime, time
 from types import MappingProxyType
 
@@ -10,7 +10,7 @@ import yaml
 from ytmusicapi import OAuthCredentials, YTMusic
 
 from .meta import MetaStore
-from .util import make_dict_readonly, write_file
+from .util import get_user_timezone, make_dict_readonly, write_file
 
 OAUTH_CLIENT_ID = os.environ.get("OAUTH_CLIENT_ID")
 OAUTH_CLIENT_SECRET = os.environ.get("OAUTH_CLIENT_SECRET")
@@ -152,6 +152,27 @@ def records_from_response(response):
 thread_local = threading.local()
 
 
+def apply_client_timezone(client, now_dt: datetime | None = None) -> None:
+    """Injects user timeZone and utcOffsetMinutes into the ytmusicapi InnerTube client context."""
+    context = getattr(client, "context", None)
+    client_ctx = (
+        context.get("context", {}).get("client")
+        if isinstance(context, dict) and isinstance(context.get("context"), dict)
+        else None
+    )
+    if not isinstance(client_ctx, dict):
+        return
+
+    tz = get_user_timezone()
+    ref_dt = now_dt or datetime.now(UTC)
+    if ref_dt.tzinfo is None:
+        ref_dt = ref_dt.replace(tzinfo=UTC)
+    offset = ref_dt.astimezone(tz).utcoffset() or timedelta()
+
+    client_ctx["timeZone"] = tz.key
+    client_ctx["utcOffsetMinutes"] = int(offset.total_seconds() // 60)
+
+
 def get_thread_client():
     if not hasattr(thread_local, "ytmusic"):
         if os.path.exists("browser.json"):
@@ -165,6 +186,7 @@ def get_thread_client():
             )
         else:
             raise RuntimeError("No valid authentication file found (browser.json or oauth.json)")
+        apply_client_timezone(thread_local.ytmusic)
     return thread_local.ytmusic
 
 
