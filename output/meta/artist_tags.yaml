@@ -17422,6 +17422,22 @@ artists:
     - Pop Rock
     - Funk Rock
     tagged_at: '2026-11-26'
+  prince buster:
+    country: JM
+    era: 1960s
+    is_uploader: false
+    moods:
+    - upbeat
+    - energetic
+    - swaggering
+    name: PRINCE BUSTER
+    primary_genre: Reggae & Dub
+    source: gemini
+    subgenres:
+    - Ska
+    - Rocksteady
+    - Early Reggae
+    tagged_at: '2026-11-27'
   project soul:
     country: US
     era: 1970s
@@ -18727,6 +18743,22 @@ artists:
     - Acoustic
     - New Acoustic
     tagged_at: '2026-11-26'
+  ry cooder:
+    country: US
+    era: 1970s
+    is_uploader: false
+    moods:
+    - rootsy
+    - laid-back
+    - soulful
+    name: Ry Cooder
+    primary_genre: Country & Americana
+    source: gemini
+    subgenres:
+    - Roots Rock
+    - Americana
+    - Delta Blues
+    tagged_at: '2026-11-27'
   röyksopp:
     country: 'NO'
     era: 2000s
@@ -21832,6 +21864,22 @@ artists:
     - Spiritual Jazz
     - Fusion
     tagged_at: '2026-11-26'
+  the country gentlemen:
+    country: US
+    era: 1960s
+    is_uploader: false
+    moods:
+    - acoustic
+    - harmonious
+    - spirited
+    name: The Country Gentlemen
+    primary_genre: Folk & Bluegrass
+    source: gemini
+    subgenres:
+    - Bluegrass
+    - Progressive Bluegrass
+    - Traditional Country
+    tagged_at: '2026-11-27'
   the covey band:
     country: US
     era: 2010s
@@ -26042,5 +26090,5 @@ artists:
     tagged_at: '2026-11-26'
 meta:
   schema_version: 1
-  total_tagged: 1656
-  updated_at: '2026-11-27T21:04:23.364383+00:00'
+  total_tagged: 1659
+  updated_at: '2026-11-27T21:59:38.867718+00:00'

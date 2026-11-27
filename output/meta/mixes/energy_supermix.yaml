@@ -3,11 +3,11 @@ mood_chip: Energize
 playlist_id: RDTMAK5uy_kskEGBYLWbdi3Z9IdjDoDEI8hEBvHEreM
 description: Get a boost with this mix of high-energy songs that span all your tastes.
   Always updating.
-featured_artists: Daft Punk, Floating Points, Hallucinogen, Shpongle
+featured_artists: Hallucinogen, Daft Punk, Justice, Shpongle
 author: YouTube Music
 year: '2026'
-total_unique_tracks: 3474
-new_tracks_latest_run: 17
+total_unique_tracks: 3493
+new_tracks_latest_run: 19
 latest_batch_size: 500
-last_updated: '2026-11-27T21:03:53Z'
-run_id: gh-7121
+last_updated: '2026-11-27T21:59:06Z'
+run_id: gh-7123

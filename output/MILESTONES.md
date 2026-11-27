@@ -2,7 +2,7 @@
 
 [<- README](README.md)
 
-`Updated: 2026-11-27` | `Plays: 69,180` | `Hours: 6,984.0h` | `Artists: 4,689` | `Unlocked: 4,757`
+`Updated: 2026-11-27` | `Plays: 69,181` | `Hours: 6,984.1h` | `Artists: 4,689` | `Unlocked: 4,757`
 
 ---
 
@@ -15,8 +15,8 @@
 | Bonobo | `SURGE` | 22 | 22 | 3.5x vs 90d |
 | Octave Cat | `SURGE` | 14 | 14 | 5.7x vs 90d |
 | DJ Frane | `BREAKOUT` | 10 | 10 | First 30d |
+| The Country Gentlemen | `SURGE` | 10 | 10 | 5.1x vs 90d |
 | Mecánica Clásica | `BREAKOUT` | 9 | 9 | First 30d |
-| The Country Gentlemen | `SURGE` | 9 | 9 | 4.6x vs 90d |
 
 ### Album Binges & Taste Phases
 - `ALBUM` **2026/10/04 Milwaukee, WI** — Octave Cat (14 plays, 14 tracks / 7d)
@@ -83,8 +83,8 @@
 
 | Metric | Value | Date / Period |
 |---|---:|---|
-| Total Plays | 69,180 | Since 2024-01 |
-| Total Hours | 6,984.0h | Since 2024-01 |
+| Total Plays | 69,181 | Since 2024-01 |
+| Total Hours | 6,984.1h | Since 2024-01 |
 | Unique Artists | 4,689 | Since 2024-01 |
 | Longest Streak | 153 days | Ended 2026-09-22 |
 | Peak Day | 502 plays | 2024-08-20 |
