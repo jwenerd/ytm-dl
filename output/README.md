@@ -1,18 +1,18 @@
 # 📝  output 
 
-## ⚙️ [run #7116](https://github.com/jwenerd/ytm-dl/actions/runs/45821288729)
+## ⚙️ [run #7118](https://github.com/jwenerd/ytm-dl/actions/runs/45924292723)
 
 **Quick Links:** [📰 Listening Reports](reports/README.md) · [Milestones](MILESTONES.md) · [📁 Output Files](FILES.md)
 
 ### 🔥 Listening Activity (Last 24 Weeks)
 
-**23,748 plays** · **151/165 active days** · Current streak: **11d** · Best streak: **100d**
+**23,798 plays** · **151/165 active days** · Current streak: **11d** · Best streak: **100d**
 
 | Day | 2026-06-15 → 2026-11-26 |
 | :--- | :--- |
 | Mon | 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟨🟥🟥🟨🟧🟨🟧🟨⬛🟨🟨 |
 | Tue | 🟥🟥🟥🟥🟥🟥🟥🟥🟧🟥🟥🟥🟥🟧🟥🟥🟨🟨🟧🟧🟨⬛🟧🟧 |
-| Wed | 🟥🟥🟥🟥🟥🟥🟥🟥🟩🟥🟥🟥🟥🟥⬛🟩⬛🟨🟧⬛🟩⬛🟩🟧 |
+| Wed | 🟥🟥🟥🟥🟥🟥🟥🟥🟩🟥🟥🟥🟥🟥⬛🟩⬛🟨🟧⬛🟩⬛🟩🟥 |
 | Thu | 🟥🟥🟥🟥🟥🟥🟥🟥🟨🟥🟥🟥🟥🟨🟥🟨🟥🟧🟨🟨🟨⬛🟨🟩 |
 | Fri | 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟧🟧🟨⬛🟨🟧🟧⬛⬛🟨▫️ |
 | Sat | 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟧🟨🟧🟩🟨🟥🟨⬛🟨🟨▫️ |
@@ -27,8 +27,8 @@ xychart-beta
     title "Monthly Listening Hours (2026+)"
     x-axis ["Apr 26", "May 26", "Jun 26", "Jul 26", "Aug 26", "Sep 26", "Oct 26", "Nov 26"]
     y-axis "Hours" 0 --> 856
-    bar [170.2, 743.1, 717.9, 743.7, 742.0, 379.1, 73.2, 37.9]
-    line [170.2, 743.1, 717.9, 743.7, 742.0, 379.1, 73.2, 37.9]
+    bar [170.2, 743.1, 717.9, 743.7, 742.0, 379.1, 73.2, 40.8]
+    line [170.2, 743.1, 717.9, 743.7, 742.0, 379.1, 73.2, 40.8]
 ```
 
 ```mermaid
@@ -36,7 +36,7 @@ xychart-beta
     title "Monthly Plays (2026+)"
     x-axis ["Apr 26", "May 26", "Jun 26", "Jul 26", "Aug 26", "Sep 26", "Oct 26", "Nov 26"]
     y-axis "Plays" 0 --> 9729
-    bar [2203, 8039, 5665, 8460, 5920, 4282, 960, 409]
+    bar [2203, 8039, 5665, 8460, 5920, 4282, 960, 459]
 ```
 
 <details>
@@ -51,6 +51,6 @@ xychart-beta
 | 2026-08 | 5,920 | 742.0h | 31 |
 | 2026-09 | 4,282 | 379.1h | 29 |
 | 2026-10 | 960 | 73.2h | 27 |
-| 2026-11 | 409 | 37.9h | 17 |
+| 2026-11 | 459 | 40.8h | 17 |
 
 </details>

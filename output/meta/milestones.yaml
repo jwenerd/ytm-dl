@@ -2,8 +2,8 @@ meta:
   first_history_date: '2024-01-13'
   last_history_date: '2026-11-26'
   schema_version: 1
-  total_unlocked: 4755
-  updated_at: '2026-11-26T12:37:41.055012+00:00'
+  total_unlocked: 4756
+  updated_at: '2026-11-27T01:44:52.757223+00:00'
 records:
   longest_streak_days: 153
   longest_streak_end: '2026-09-22'
@@ -10934,6 +10934,12 @@ unlocked:
     date: '2026-08-21'
     entity: Justice
     threshold: 350
+  artist:justice:plays:400:
+    backfilled: false
+    category: artist_plays
+    date: '2026-11-25'
+    entity: Justice
+    threshold: 400
   artist:justice:plays:50:
     backfilled: true
     category: artist_plays
