@@ -1,10 +1,10 @@
 import operator
 import os
-from datetime import UTC, datetime, timedelta
+from datetime import UTC, date, datetime, timedelta
 
 from marshmallow import Schema, fields
 
-from src.util import get_user_timezone
+from src.util import get_effective_listening_date, get_user_timezone
 
 
 class BaseSchema(Schema):
@@ -312,6 +312,67 @@ def enrich_history_records(records, run_time=None, run_id=None):
     return records
 
 
+def clamp_history_rows_played_at(
+    rows: list[list],
+    played_at_idx: int,
+    run_time: datetime | None = None,
+    prev_sync_at: datetime | None = None,
+    head_played_date: date | None = None,
+) -> list[list]:
+    """
+    Applies sync-window bracketing and reverse-chronological monotonicity guards
+    to newly prepended history rows (ordered newest-first).
+
+    - Upper bound: effective listening date of `run_time` (4 AM local cutoff).
+    - Lower bound: max(effective listening date of `prev_sync_at`, `head_played_date`),
+      capped at the upper bound so the clamp interval is always valid.
+    - Enforces monotonically non-increasing dates from newest (index 0) to oldest (index -1).
+    """
+    if not rows:
+        return rows
+
+    if run_time is None:
+        run_time = datetime.now(UTC)
+    elif run_time.tzinfo is None:
+        run_time = run_time.replace(tzinfo=UTC)
+
+    tz = get_user_timezone()
+    max_date = get_effective_listening_date(run_time, tz=tz)
+
+    lower_bounds: list[date] = []
+    if prev_sync_at is not None:
+        lower_bounds.append(get_effective_listening_date(prev_sync_at, tz=tz))
+    if head_played_date is not None:
+        lower_bounds.append(head_played_date)
+    min_date = min(max(lower_bounds), max_date) if lower_bounds else None
+
+    resolved_dates: list[date] = []
+    for row in rows:
+        raw_val = str(row[played_at_idx]).strip() if len(row) > played_at_idx else ""
+        try:
+            row_date = date.fromisoformat(raw_val[:10])
+        except ValueError:
+            row_date = max_date
+        if row_date > max_date:
+            row_date = max_date
+        if min_date is not None and row_date < min_date:
+            row_date = min_date
+        resolved_dates.append(row_date)
+
+    # Bottom-to-top pass guarantees newest >= ... >= oldest >= min_date
+    floor_date = min_date
+    for idx in range(len(resolved_dates) - 1, -1, -1):
+        if floor_date is not None and resolved_dates[idx] < floor_date:
+            resolved_dates[idx] = floor_date
+        floor_date = resolved_dates[idx]
+
+    for row, row_date in zip(rows, resolved_dates, strict=True):
+        if len(row) > played_at_idx:
+            row[played_at_idx] = f"{row_date.isoformat()}T00:00:00Z"
+
+    return rows
+
+
 def enrich_home_records(records, run_time=None, run_id=None):
     """
     Enriches home feed records with ISO UTC captured_at timestamp and run_id.
@@ -396,13 +457,13 @@ class Mapping:
             values += [row.get(col, "")]
         return values
 
-    def get_rows(self):
+    def get_rows(self, run_time=None):
         records = self.records
         if self.file == "history":
-            records = enrich_history_records(records)
+            records = enrich_history_records(records, run_time=run_time)
         elif self.file == "home":
-            records = enrich_home_records(records)
+            records = enrich_home_records(records, run_time=run_time)
         elif self.file == "liked_songs":
-            records = enrich_liked_songs_records(records)
+            records = enrich_liked_songs_records(records, run_time=run_time)
         rows = self.schema.dump(records, many=True)
         return [self._get_values(row) for row in rows]

@@ -1,4 +1,4 @@
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 
 from src.mapping import (
     AlbumSchema,
@@ -8,6 +8,7 @@ from src.mapping import (
     LikedSongSchema,
     Mapping,
     SongSchema,
+    clamp_history_rows_played_at,
     enrich_liked_songs_records,
     get_run_id,
     snap_relative_played_at,
@@ -196,3 +197,63 @@ def test_snap_relative_played_at_timezone_and_nocturnal(monkeypatch):
     run_morning = datetime(2026, 10, 20, 12, 0, 0, tzinfo=UTC)
     assert snap_relative_played_at("Today", run_morning) == "2026-10-20T00:00:00Z"
     assert snap_relative_played_at("Yesterday", run_morning) == "2026-10-19T00:00:00Z"
+
+
+def test_clamp_history_rows_played_at(monkeypatch):
+    monkeypatch.setenv("YTM_TIMEZONE", "America/Denver")
+
+    # Empty rows early return
+    assert clamp_history_rows_played_at([], played_at_idx=8) == []
+
+    # Exact #7118 reproduction: prev_sync at 9:54 AM MST, curr at 6:44 PM MST (01:44Z Nov 27)
+    # Both have effective date 2026-11-26 -> rows stamped 2026-11-25 clamp up to 2026-11-26
+    rows = [
+        ["Track 1", "vid1", "2026-11-25T00:00:00Z"],
+        ["Track 2", "vid2", "2026-11-25T00:00:00Z"],
+    ]
+    clamp_history_rows_played_at(
+        rows,
+        played_at_idx=2,
+        run_time=datetime(2026, 11, 27, 1, 44, 29, tzinfo=UTC),
+        prev_sync_at=datetime(2026, 11, 26, 16, 54, 51, tzinfo=UTC),
+        head_played_date=date(2026, 11, 26),
+    )
+    assert [r[2] for r in rows] == ["2026-11-26T00:00:00Z", "2026-11-26T00:00:00Z"]
+
+    # Multi-day / overnight window: enforces upper bound, lower bound, malformed fallback, and monotonicity
+    overnight_rows = [
+        ["Future", "v0", "2026-11-29T00:00:00Z"],  # clamped down to max_date (2026-11-27)
+        [
+            "Inverted",
+            "v1",
+            "2026-11-26T00:00:00Z",
+        ],  # bumped up to 2026-11-27 because v2 is 2026-11-27!
+        ["BadTS", "v2", "not-a-date"],  # falls back to max_date (2026-11-27)
+        ["ValidPrev", "v3", "2026-11-26T00:00:00Z"],  # preserved as 2026-11-26
+        ["TooOld", "v4", "2026-11-20T00:00:00Z"],  # clamped up to min_date (2026-11-26)
+    ]
+    clamp_history_rows_played_at(
+        overnight_rows,
+        played_at_idx=2,
+        run_time=datetime(2026, 11, 27, 12, 30, 0),  # naive UTC -> 5:30 AM MST Nov 27
+        prev_sync_at=datetime(2026, 11, 26, 20, 0, 0, tzinfo=UTC),
+        head_played_date=date(2026, 11, 25),
+    )
+    assert [r[2] for r in overnight_rows] == [
+        "2026-11-27T00:00:00Z",
+        "2026-11-27T00:00:00Z",
+        "2026-11-27T00:00:00Z",
+        "2026-11-26T00:00:00Z",
+        "2026-11-26T00:00:00Z",
+    ]
+
+    # When run_time is None and head_played_date exceeds max_date, min_date caps cleanly at max_date
+    future_head_rows = [["Track", "v1", "2020-01-01T00:00:00Z"]]
+    clamp_history_rows_played_at(
+        future_head_rows,
+        played_at_idx=2,
+        run_time=None,
+        head_played_date=date(2099, 12, 31),
+    )
+    assert future_head_rows[0][2].endswith("T00:00:00Z")
+    assert future_head_rows[0][2] != "2099-12-31T00:00:00Z"

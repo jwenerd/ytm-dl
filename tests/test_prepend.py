@@ -1,7 +1,9 @@
 import csv
+from datetime import date
 
 from src.prepend import (
     find_history_overlap,
+    get_existing_head_played_at,
     get_existing_ids,
     prepend_rows_for_file,
 )
@@ -161,3 +163,27 @@ def test_get_existing_ids(tmp_path):
     assert get_existing_ids(str(csv_file), key_index=0) == ["a", "d"]
     assert get_existing_ids(str(csv_file), key_index=1) == ["b", "e"]
     assert get_existing_ids(str(csv_file), key_index=2) == ["c", "f"]
+
+
+def test_get_existing_head_played_at(tmp_path):
+    missing = tmp_path / "missing.csv"
+    assert get_existing_head_played_at(str(missing)) is None
+
+    no_col = tmp_path / "no_col.csv"
+    no_col.write_text("title,videoId\nSong,v1\n", encoding="utf-8")
+    assert get_existing_head_played_at(str(no_col)) is None
+
+    empty_val = tmp_path / "empty_val.csv"
+    empty_val.write_text("title,played_at\nSong,\n", encoding="utf-8")
+    assert get_existing_head_played_at(str(empty_val)) is None
+
+    bad_val = tmp_path / "bad_val.csv"
+    bad_val.write_text("title,played_at\nSong,not-a-date\n", encoding="utf-8")
+    assert get_existing_head_played_at(str(bad_val)) is None
+
+    valid = tmp_path / "valid.csv"
+    valid.write_text(
+        "title,played_at\nNewest,2026-11-26T00:00:00Z\nOlder,2026-11-25T00:00:00Z\n",
+        encoding="utf-8",
+    )
+    assert get_existing_head_played_at(str(valid)) == date(2026, 11, 26)

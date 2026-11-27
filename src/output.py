@@ -1,19 +1,43 @@
 import csv
 import os.path
 import shutil
+from datetime import UTC, datetime
+
+import yaml
 
 from .changes import ChangeTracker
 from .history_partition import get_months_from_rows, partition_history_csv
-from .mapping import Mapping
+from .mapping import Mapping, clamp_history_rows_played_at
 from .meta import MetaOutput
-from .prepend import prepend_rows_for_file
+from .prepend import get_existing_head_played_at, prepend_rows_for_file
 from .util import (
     file_exists,
     file_hash,
+    get_effective_listening_date,
     output_path,
     read_output_yaml,
     write_output_yaml,
 )
+
+
+def read_last_history_sync_at(meta_file_path: str) -> datetime | None:
+    """Reads Sync.last_sync_at from output/meta/history YAML if present and valid."""
+    if not os.path.isfile(meta_file_path):
+        return None
+    try:
+        with open(meta_file_path, encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+        raw_ts = (data.get("Sync") or {}).get("last_sync_at") if isinstance(data, dict) else None
+        if isinstance(raw_ts, datetime):
+            dt = raw_ts
+        elif isinstance(raw_ts, str) and raw_ts.strip():
+            dt = datetime.fromisoformat(raw_ts.strip().replace("Z", "+00:00"))
+        else:
+            return None
+        return dt.replace(tzinfo=UTC) if dt.tzinfo is None else dt.astimezone(UTC)
+    except (OSError, yaml.YAMLError, ValueError, AttributeError):
+        return None
+
 
 PREPEND_FILES = [
     "history",
@@ -56,7 +80,7 @@ def get_file_display(file_name: str) -> tuple[str, str]:
 class Output:
     readme_written = False
 
-    def __init__(self, file, records, meta=None):
+    def __init__(self, file, records, meta=None, run_time=None):
         if meta is None:
             meta = {}
         self.file = file
@@ -69,6 +93,7 @@ class Output:
         self.mapping = Mapping(file, records)
         self.hash_before = file_hash(self.csv_file)
         self.meta = MetaOutput(file, meta)
+        self.run_time = run_time
         self.rows = []
 
     def write_csv(self):
@@ -105,9 +130,19 @@ class Output:
         )
 
     def write_files(self):
-        self.rows = self.mapping.get_rows()
+        run_time = self.run_time or datetime.now(UTC)
+        if run_time.tzinfo is None:
+            run_time = run_time.replace(tzinfo=UTC)
 
-        if self.file == "history":
+        self.rows = self.mapping.get_rows(run_time=run_time)
+
+        is_history = self.file == "history"
+        prev_sync_at = None
+        head_played_date = None
+        if is_history:
+            prev_sync_at = read_last_history_sync_at(output_path("meta/history"))
+            head_played_date = get_existing_head_played_at(self.csv_file_with_path)
+
             # remove the sleep noise tracks i use
             problems = {
                 "Sv0LwXYAVVg",
@@ -126,6 +161,20 @@ class Output:
 
         if use_prepend:
             self.update_rows_for_prepend()
+
+        if is_history:
+            if self.rows:
+                clamp_history_rows_played_at(
+                    self.rows,
+                    self.mapping.columns.index("played_at"),
+                    run_time=run_time,
+                    prev_sync_at=prev_sync_at,
+                    head_played_date=head_played_date,
+                )
+            sync_ts = run_time.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+            self.meta.add_meta("Sync", {"last_sync_at": sync_ts})
+
+        if use_prepend:
             new_rows_count = len(self.rows)
             self.meta.add_meta("CSV File", {"lines_added": new_rows_count})
 
@@ -137,6 +186,12 @@ class Output:
 
         emoji, label = get_file_display(self.file)
         if self.hash_before == file_hash(self.csv_file):
+            if is_history and (
+                prev_sync_at is None
+                or get_effective_listening_date(run_time)
+                > get_effective_listening_date(prev_sync_at)
+            ):
+                self.meta.write_files()
             print(f"{emoji} {label}: ☕ Up to date")
             return None
 
