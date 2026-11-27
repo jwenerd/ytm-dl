@@ -30,10 +30,10 @@
 | Target | Tag | Progress | Remaining |
 |---|---|---|---:|
 | **RAYE** — 25 plays | `HOT` | `[#########-] 24/25` | 1 play |
+| **Parcels** — 25 tracks | `HOT` | `[#########-] 23/25` | 2 tracks |
 | **Tim Hecker** — 25 plays | `HOT` | `[#########-] 24/25` | 1 play |
 | **Library** — 4,700 artists | `HOT` | `[#########-] 4,688/4,700` | 12 artists |
 | **Ivan the Tolerable** — 200 tracks | `HOT` | `[#########-] 198/200` | 2 tracks |
-| **Parcels** — 25 tracks | `HOT` | `[#########-] 23/25` | 2 tracks |
 | **Not Gentle On My Mind — Chuck Darwin & the Knuckle Draggers** — 70 plays | `HOT` | `[#########-] 69/70` | 1 play |
 | **Lagartijeando** — 25 plays | `SMALL` | `[#########-] 22/25` | 3 plays |
 | **Ultramarine — Loscil & Lawrence English** — 10 plays | `TRACK` | `[########--] 8/10` | 2 plays |
@@ -45,7 +45,7 @@
 
 | Date | Type | Milestone |
 |---|---|---|
-| 2026-11-25 | `ARTIST` | **Justice** — 400 plays |
+| 2026-11-26 | `ARTIST` | **Justice** — 400 plays |
 | 2026-11-25 | `ALBUM` | **For Educational Purposes Only — Chuck Darwin & the Knuckle Draggers** — 75 plays |
 | 2026-11-25 | `ARTIST` | **Harold Budd** — 50 plays |
 | 2026-11-25 | `ARTIST` | **Green-House** — 50 plays |
