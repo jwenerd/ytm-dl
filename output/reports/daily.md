@@ -1,30 +1,31 @@
-# Daily Listening Log: 2026-11-26
+# Daily Listening Log: 2026-11-27
 *Recorded via ytm-dl | Crate-Digger Daily*
 
 **[▶ Play Rolling Daily Radar Playlist](https://music.youtube.com/playlist?list=PLd8VL-RVFUnw)**
 
-- **Stats**: 51 plays · 2h 57m · 45 artists · 8 new artists
+- **Stats**: 28 plays · 1h 58m · 11 artists · 1 new artists
 
-**The Spin:** French electro crunch meets 1960s British library grooves, cosmic harp-jazz, and deep-woods Americana across 45 distinct artists.
+**The Spin:** High-lonesome D.C. bluegrass in Tokyo collides with Kingston ska, American primitive guitar, and an ambient milestone.
 
-Justice anchored the afternoon with six spins, but this near-three-hour session refused to sit in one bin. You pivoted effortlessly from vintage De Wolfe library-music curios and Ethiopian *tezeta* to West Virginia songwriting and Nairobi-born ambient textures, keeping the needle moving through eight brand-new discoveries.
+The Country Gentlemen commandeered the turntable for nearly two-thirds of this session, laying down a brisk bluegrass foundation. From there, the crate-digging swerved into Prince Buster's ska, Hiroshi Suzuki's Tokyo jazz-fusion, and Aphex Twin's drift.
 
 ## On the Turntable
-- **Heavy Rotation:** Justice (6) · John R. Miller (3) · Omni Gardens (2) · Chiara Celesia (2) · Phish (2)
-- **First-Time Spins:** Kmru · Ryuichi Sakamoto · Daphni · Roger Webb · Chiara Celesia
+- **Heavy Rotation:** The Country Gentlemen (17) · PRINCE BUSTER (2) · Ry Cooder (2) · Ivan the Tolerable (1) · Aphex Twin (1)
+- **First-Time Spins:** Barbara Nicole
+- **Fresh Likes:** **[He Will Set Your Fields On Fire (Live)](https://music.youtube.com/watch?v=ekINmAXNyaM)** — The Country Gentlemen
 
-> **🏅 Milestones & Obsessions:** Justice officially crossed the 400-play threshold today, cementing the Parisian duo's distorted slap-bass and stadium-sized synth crunch as your session's gravitational center even amid 44 other acts.
+> **🔗 Lineage & Personnel:** John Fahey birthed American primitive guitar on Takoma Records, and William Tyler (ex-Lambchop, Silver Jews) carries that open-tuned torch today. Pairing them with Ry Cooder makes for an unvarnished fretwork clinic.
 
-> **🔗 Lineage & Personnel:** Today's crate-digger streak ran straight through the library-music vaults: Roger Webb's De Wolfe cut "Moonbird" and David McCallum's David Axelrod-produced 1967 classic "The Edge" (famously sampled by Dr. Dre) set the table for modern analog revivalists Sven Wunder and Melbourne's Surprise Chef.
+> **📼 Tape & Soundtrack Check:** Sixteen plays came from The Country Gentlemen's *Live In Japan*, where D.C. bluegrass turned "Yesterday" and "Country Roads" into Tokyo barnburners—earning a fresh like on "He Will Set Your Fields On Fire (Live)."
 
-> **🌱 First-Timer Spotlight:** Eight newcomers hit the platter, led by Nairobi-born, Berlin-based sound artist Kmru—whose field-recording ambience on "Space of Uncertainty" pairs naturally with fellow first-timer Ryuichi Sakamoto and Nala Sinephro's Warp Records harp-jazz.
+> **🏅 Milestones & Obsessions:** Aphex Twin's *Selected Ambient Works Volume II* crossed 25 plays today. After 17 tracks of flatpicking and ska, sinking into Richard D. James's 1994 beatless monolith is the ultimate late-night reset.
 
 ## Today's Radar
-- **[Shrimp Dance](https://music.youtube.com/watch?v=AGFeW3HOjZE)** — Hiroshi Suzuki — *Slippery 1975 Japanese jazz-funk from the cult LP Cat, packed with Fender Rhodes shimmer and crisp horn stabs. It bridges David McCallum's sixties orchestral funk with Sven Wunder's cinematic groove.*
-- **[New York Herald Tribune (Bande originale du film "À bout de souffle")](https://music.youtube.com/watch?v=35ZI2pR5spw)** — Martial Solal — *Brisk, monochrome 1960 Parisian jazz piano written for Jean-Luc Godard's French New Wave landmark. A natural companion to Roger Webb's vintage soundtrack sensibility.*
-- **[Sligo River Blues (Original Recording)](https://music.youtube.com/watch?v=2iO3Md4hrWU)** — John Fahey — *Sparse, hypnotic American primitive acoustic fingerpicking recorded in 1959 for Takoma Records. It pulls the dusty roots thread straight out of your John R. Miller and Phish spins.*
+- **[Footin' It](https://music.youtube.com/watch?v=P3TjJby083g)** — George Benson — *Crisp 1970s jazz-guitar with greasy organ-trio pocket. Bridges Ry Cooder's fretwork and Hiroshi Suzuki's fusion.*
+- **[Slim and The Devil](https://music.youtube.com/watch?v=4NclXNcCTqM)** — Willie Watson — *Ex-Old Crow Medicine Show picker stripping folk to raw voice and strings. Pairs naturally with Fahey and The Country Gentlemen.*
+- **[Ladies and gentlemen we are floating in space](https://music.youtube.com/watch?v=-UGbOqadHb0)** — Spiritualized — *1997 gospel-shoegaze swelling with strings and fuzz. Orbits the same weightless headspace as your SAW II milestone.*
 
 ## Deep Cuts & Long Spins
-- **Liked & Forgotten:** **[Gone Clear](https://music.youtube.com/watch?v=3mtQG05jwWY)** — William Tyler — *Liked back on 2025-04-26 and unplayed since, this luminous acoustic guitar instrumental from the Lambchop and Silver Jews alum sits right between John R. Miller's folk grit and Omni Gardens' pastoral drift.*
-- **Full Album:** **[Hell on Church Street](https://music.youtube.com/browse/MPREb_0AQ7j2V2vjZ)** — Punch Brothers — *Chris Thile and crew reimagine Tony Rice's 1983 acoustic flatpicking benchmark track-for-track with chamber-grass precision. It rewards a front-to-back listen when you want virtuoso strings without the arena-jam sprawl.*
-- **Long Spin:** **[Discreet Music (Remastered 2004)](https://music.youtube.com/watch?v=tLZtnadL1s0)** — Brian Eno — *Eno's 1975 tape-delay landmark drifts across two tranquil synthesizer loops that practically invented modern ambient. Cue it up after Kmru and Ryuichi Sakamoto when you want the room to slow down.*
+- **Liked & Forgotten:** **[Black (feat. Norah Jones)](https://music.youtube.com/watch?v=OiKuW3xXwmA)** — Danger Mouse, Daniele Luppi — *Liked April 2025, untouched since September 10. Morricone-soaked Spaghetti Western noir pairing Norah Jones's smoky croon with desert-twang guitar.*
+- **Full Album:** **[Movements](https://music.youtube.com/browse/MPREb_UvQC3HTMJdp)** — Solar Fields — *2009 Ultimae psybient landmark of patient, shimmering synth architecture. Ideal front-to-back listening if you're chasing that Aphex Twin glow.*
+- **Long Spin:** **[Justice -  Cross (Full album)](https://music.youtube.com/watch?v=Yt0kHiRsnHA)** — Justice — *2007 Ed Banger electro-house classic packing distorted slap-bass and cathedral synths. Hit play to trade acoustic strings for club voltage.*
